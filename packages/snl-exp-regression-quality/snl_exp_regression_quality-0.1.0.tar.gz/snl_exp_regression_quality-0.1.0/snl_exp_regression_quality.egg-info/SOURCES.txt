@@ -1,0 +1,7 @@
+README.md
+setup.py
+snl_exp_regression_quality.egg-info/PKG-INFO
+snl_exp_regression_quality.egg-info/SOURCES.txt
+snl_exp_regression_quality.egg-info/dependency_links.txt
+snl_exp_regression_quality.egg-info/requires.txt
+snl_exp_regression_quality.egg-info/top_level.txt
