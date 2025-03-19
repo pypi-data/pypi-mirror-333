@@ -1,0 +1,14 @@
+selfpowerdecomposer/__init__.py,sha256=YrRZtE1eC8xxwmE-wZ60ijGmBbemlcdFJepTeSLZ5q0,1544
+selfpowerdecomposer/setup.py,sha256=3Yj7HW9FSjJZfUrMTt8Oh8HLB87KE1EAPeAyawo-fQk,1114
+selfpowerdecomposer/test_local_install.py,sha256=o5pxb3zyRzYlgopzCXQm5eIBRB5hq2Zy5ctobUPD7Es,1014
+selfpowerdecomposer/examples/basic_usage.py,sha256=WtU1Qp4JsXxMdIyRdjZNZwJ1jfStl-eLsj9tbQfdddQ,3503
+selfpowerdecomposer/examples/secure_example.py,sha256=T_iYnX2_oEQDn4tJganAB7ptwyyX0zVZ2vRmTNIRqe0,6209
+selfpowerdecomposer/selfpowerdecomposer/__init__.py,sha256=1dq2_4QGPDaolwtDiSSGK6H5JO8va5RiSu0jsK2Hhm0,1478
+selfpowerdecomposer/selfpowerdecomposer/core.py,sha256=cUUnh4sJT1BNpHrNL2T4kkQ_hJjktxlxjjfc0sjcmjE,16412
+selfpowerdecomposer/tests/__init__.py,sha256=K20N_ZGSEvpepQAqyc14s7gE-u2ZQ-mQj__WHpknyks,56
+selfpowerdecomposer/tests/test_selfpowerdecomposer.py,sha256=XFLRceoW3FVA49b71XVoCVFUQ-s-AhUdiMccXsOmIQ0,7296
+selfpowerdecomposer-0.1.1.dist-info/LICENSE,sha256=n_FDhPzkNzm_UDWPpza8m9IrU3mgZS2rzGwVCi6Act4,1071
+selfpowerdecomposer-0.1.1.dist-info/METADATA,sha256=i8J8KJ0cW9yncvBrlBojOXLrWLn4O_gqBgOw19ANztE,2829
+selfpowerdecomposer-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+selfpowerdecomposer-0.1.1.dist-info/top_level.txt,sha256=1ltKYeC4HdekhSdYgctgFbazp2qIsFkNdOxJ3yQYWso,20
+selfpowerdecomposer-0.1.1.dist-info/RECORD,,
