@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+logging_emr/__init__.py
+logging_emr/cloudwatch_logger.py
+logging_emr/emr_utils.py
+logging_emr.egg-info/PKG-INFO
+logging_emr.egg-info/SOURCES.txt
+logging_emr.egg-info/dependency_links.txt
+logging_emr.egg-info/requires.txt
+logging_emr.egg-info/top_level.txt
