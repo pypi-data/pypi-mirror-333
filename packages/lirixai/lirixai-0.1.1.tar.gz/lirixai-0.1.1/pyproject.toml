@@ -1,0 +1,16 @@
+[project]
+name = "lirixai"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "build>=1.2.2.post1",
+    "nest-asyncio>=1.6.0",
+    "pydantic-ai>=0.0.36",
+    "pydantic-settings>=2.8.1",
+    "setuptools>=76.0.0",
+    "tavily-python>=0.5.1",
+    "twine>=6.1.0",
+]
