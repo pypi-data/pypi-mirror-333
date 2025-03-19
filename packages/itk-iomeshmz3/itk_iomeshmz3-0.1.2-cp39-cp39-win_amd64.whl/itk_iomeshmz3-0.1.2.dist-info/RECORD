@@ -1,0 +1,13 @@
+itk/IOMeshMZ3Python.py,sha256=CXMcUR_qBSAsoIj3e_quRn_rA0rWRzcrGwPRH8aj3p8,2225
+itk/_IOMeshMZ3Python.pyd,sha256=9pP7TNbO1kalZu0alNGPCi_C4_mopD6Yvokp7tpD8c4,314880
+itk/__init_iomeshmz3__.py,sha256=eryUyXakJoOdUW-sip9zJSdGcwybtDm-jRosDRG1u4c,1585
+itk/itkMZ3MeshIOPython.py,sha256=UI1XCxoqFpxRH7-BIyYlOvG-SQYiZwxTg7LbQQJBAak,7038
+itk/Configuration/IOMeshMZ3Config.py,sha256=noXB6ZkyytwhaXrtiX7Y1MQRyjCa38gwqSl4aj8yj6E,254
+itk/Configuration/IOMeshMZ3_snake_case.py,sha256=9vod4cFmYt5kmtm1e6v9EGK_ZPA-PDivTkxICPlGqzM,27
+itk_iomeshmz3-0.1.2.dist-info/licenses/LICENSE,sha256=6N4ac5NFfpyIdot45rp5BiL777BAzkgZTCyw8bbU6f8,11562
+itk_iomeshmz3.libs/.load-order-itk_iomeshmz3-0.1.2,sha256=V_TEVm9CzQEzGW922sVvjfYgzdhz-JalPeA5-XCw76A,13
+itk_iomeshmz3.libs/msvcp140.dll,sha256=cDrXxV8uCWYH7Gp3qLX1LVNdvnH93wIel8vLvCP3SSo,576128
+itk_iomeshmz3-0.1.2.dist-info/DELVEWHEEL,sha256=hyA3hcyXaH-S0fQjqXIt4ABe3pBNaNG1PkZf50Jbn3g,275
+itk_iomeshmz3-0.1.2.dist-info/METADATA,sha256=sHSCH6AMBL-or2kCC1bO8BDHYEKc0X9-MX1dcNJpe90,15192
+itk_iomeshmz3-0.1.2.dist-info/WHEEL,sha256=pooLT1QVbVk6nok557X2Vsco_iAbZDeC7m-DyV9tczs,104
+itk_iomeshmz3-0.1.2.dist-info/RECORD,,
