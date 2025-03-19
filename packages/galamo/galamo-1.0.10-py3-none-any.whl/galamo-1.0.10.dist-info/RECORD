@@ -1,0 +1,10 @@
+galamo/__init__.py,sha256=ea3JQxeTxJ4hj6lbm8h9H1yfGENXNzAcE-ROp-QUMZY,38
+galamo/encoder.pkl,sha256=T4XepODsdSHiWo2h-kDzWQgOjMkWCfagRTFnv1f3LV8,5
+galamo/galaxy_morph.py,sha256=SZqZh_6wcReR_TfLfTAxjcPikR8mEkJ1wnfhDEfPB0Y,4539
+galamo/model.keras,sha256=ScwRvMTyIPRxMNr5Vgb_wynnjPSZZ_E9XWiYYoXN3Z0,78270665
+galamo/test.py,sha256=1iVm3xzWt6nKsUI2ImUSKeHXObT1H2_pIj1hsgSXBug,444
+galamo/test_lib.py,sha256=ZlYOrg4BhOcLBNTQaZJl1KSzmqcxZ5tkYsrmsoGWB4Y,160
+galamo-1.0.10.dist-info/METADATA,sha256=M4EBjCHvYTxoB4KGYth_1JO6agFeEAx4gt0wJkyIBhg,3685
+galamo-1.0.10.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+galamo-1.0.10.dist-info/top_level.txt,sha256=3fYAm-EZ0Lk8-SoRNZClWeyDNLpT5LiXdJQ8weYQdUY,7
+galamo-1.0.10.dist-info/RECORD,,
