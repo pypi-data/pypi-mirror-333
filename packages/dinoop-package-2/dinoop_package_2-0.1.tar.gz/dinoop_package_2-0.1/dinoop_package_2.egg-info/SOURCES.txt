@@ -1,0 +1,12 @@
+README.md
+setup.py
+app/__init__.py
+app/config.py
+app/database.py
+app/main.py
+dinoop_package_2/__init__.py
+dinoop_package_2/my_module.py
+dinoop_package_2.egg-info/PKG-INFO
+dinoop_package_2.egg-info/SOURCES.txt
+dinoop_package_2.egg-info/dependency_links.txt
+dinoop_package_2.egg-info/top_level.txt
