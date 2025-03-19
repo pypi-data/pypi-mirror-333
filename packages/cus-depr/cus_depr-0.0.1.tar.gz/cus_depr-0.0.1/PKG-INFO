@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: cus_depr
+Version: 0.0.1
+Summary: A simple deprecation decorator
+Author: Андрей
+Author-email: danya10121985@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6, <3.13
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary

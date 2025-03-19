@@ -1,0 +1,7 @@
+setup.py
+cus_depr/__init__.py
+cus_depr/cus_depr.py
+cus_depr.egg-info/PKG-INFO
+cus_depr.egg-info/SOURCES.txt
+cus_depr.egg-info/dependency_links.txt
+cus_depr.egg-info/top_level.txt
