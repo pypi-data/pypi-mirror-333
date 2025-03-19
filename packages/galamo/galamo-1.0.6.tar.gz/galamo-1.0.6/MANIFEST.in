@@ -1,0 +1,2 @@
+include galaxy_morph/model.keras
+include galaxy_morph/encoder.pkl
