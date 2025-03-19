@@ -1,0 +1,15 @@
+mcp_community/__init__.py,sha256=6vkk_8hUVOHU-U51iJ40XG0SdXWJL72HiiAF90eJHPA,381
+mcp_community/run.py,sha256=9sF98qBRKND23OEOMbPCqZlYIGzbp_lzp1PETAi0o1E,3490
+mcp_community/cli/__init__.py,sha256=dzJYRsWbY8NcT7hlxcTRvwmO3iTuwUrNKovhy8Nci9M,31
+mcp_community/cli/main.py,sha256=yBNwxZv8wqbY_1G6p8UcoGqk7T1O-X-pX9LOaI7LkJs,397
+mcp_community/cli/commands/__init__.py,sha256=0QoIevSszX5OmBTHe3GNrFomS7PRsmia83eguKpKNIY,97
+mcp_community/cli/commands/bot.py,sha256=Bd06m7PtEu5sGvPukgBTFyYwQdICnsHIZ2-Hxm5iosM,9300
+mcp_community/servers/README.md,sha256=-8ar3h25FZ2WvDsar7htgibZgOa1uG8aWdEDm0fTIzw,108
+mcp_community/servers/__init__.py,sha256=-mEWAUzDLmj3WhNlZvtYYWRGZGaeJ3V0UG3Nnnxzw18,236
+mcp_community/servers/calculator.py,sha256=Z931EojW-85XwOscDu37tUHOWVnoFyy6H8bvdmnvzno,675
+mcp_community/servers/duckduckgo.py,sha256=gxXwtlplV0u4e4FG7avLBkvI0dW7mro4VWtmioTJJhc,4772
+mcp_community-0.0.4.dist-info/METADATA,sha256=mc_E4TNVCIuk2KbLXfonIOZ0paqg-er364TbtkB7IVs,17362
+mcp_community-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_community-0.0.4.dist-info/entry_points.txt,sha256=DtZ3eDH8Kg1hORXC5S1aWjJK1hxPrfuUCJfrVNvuQWE,50
+mcp_community-0.0.4.dist-info/licenses/LICENSE,sha256=h0EvgT1TdS9kSAZK9_DCBCWkxNldkgn6jUj3wyvDI_8,11339
+mcp_community-0.0.4.dist-info/RECORD,,
