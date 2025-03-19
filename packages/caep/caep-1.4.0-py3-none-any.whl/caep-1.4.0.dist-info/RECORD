@@ -1,0 +1,11 @@
+caep/__init__.py,sha256=tXHhXRbctA3WBXB_KDtmCI57geFmi1hnLRakOYNLdSc,313
+caep/config.py,sha256=jXkwmvkA4PEADlD89IkSCmQpSSrMOO8pdh0lykxY37c,8490
+caep/example.py,sha256=ZTOBkh9F5gbO5lj8KePKMoB4yam9iw10i05lckmJV9Q,943
+caep/helpers.py,sha256=eMajSUllOUh3Okeb4fMNTEbGVmYSS3fRHCbDNG2e9ug,1811
+caep/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+caep/schema.py,sha256=XFHp1TZBR6VE-5VZQ4zNz34KDFac3dnYqMbhXtY73Oc,11630
+caep/xdg.py,sha256=Ai1-gHNnZbEKhPBLHC9r9ZY7bhywaPKjU2a7Ivmm7tI,1535
+caep-1.4.0.dist-info/METADATA,sha256=zz6DW2FfOc7bfQkVeuZsxuE2KmMMzntTj09OrxFXFy8,12145
+caep-1.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+caep-1.4.0.dist-info/licenses/LICENSE,sha256=WXYf8su-xlDAu0sjfRGDdeQp6d_vioJ5SSbmyU2H1nE,773
+caep-1.4.0.dist-info/RECORD,,
