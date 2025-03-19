@@ -1,0 +1,16 @@
+elf_inspector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elf_inspector/binary.py,sha256=VMdKxCed9X2luZkAvSwl8HQJz7___W-I73OgvtZOwqw,1259
+elf_inspector/dwarf.py,sha256=ZfvakTHyDUepyUoWzH7uIEQbvwd5Dnhm5HcOJmP0P24,6689
+elf_inspector/elf.py,sha256=ahcdG7q39IA0GYyi5PQ78qnAyD9u7ywR1tXNGm7yYvo,1383
+elf_inspector/plugin_dwarf.py,sha256=K5TfhHShCFbwyerRi4eiE-xyYSj9EI3dyAohXbhd_Zo,1571
+elf_inspector/plugin_elf.py,sha256=InfdSLv2jFXEmxK6hdcE-XULOCiczpZqFcIOrU9IAr8,1966
+elf_inspector-0.0.3.dist-info/AUTHORS.rst,sha256=_DK48BSomIjXdMy62kTsudJPZVkkaZs2-QxJjGslSXw,90
+elf_inspector-0.0.3.dist-info/CHANGELOG.rst,sha256=DO_PneKLgGogyGqoH36ty9XeboxvhrTBSREjgdr2noo,457
+elf_inspector-0.0.3.dist-info/CODE_OF_CONDUCT.rst,sha256=xXDTFpYY3Y7JoxrWADihieUvhGlwJc_oxsbmLJaBvE4,3422
+elf_inspector-0.0.3.dist-info/METADATA,sha256=9JxizGm8ho657C9QAMOLox1NSLfr_Wg3I12zJsEnXzg,6760
+elf_inspector-0.0.3.dist-info/NOTICE,sha256=fkLIlzyP8zWNnPbFSXkTInNgYl35THH5-J8vMKuNzhc,761
+elf_inspector-0.0.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+elf_inspector-0.0.3.dist-info/apache-2.0.LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+elf_inspector-0.0.3.dist-info/entry_points.txt,sha256=JFU26NFLzUYSkE8sIvzBQ3JdKAJbqKM8SXMawTArgqQ,126
+elf_inspector-0.0.3.dist-info/top_level.txt,sha256=NpEXk0iT6cNupQcJiw6FJUYu7gHrjs8Z-n-gjYqlDT8,14
+elf_inspector-0.0.3.dist-info/RECORD,,
