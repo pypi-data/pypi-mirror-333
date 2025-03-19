@@ -1,0 +1,16 @@
+LICENSE,sha256=81vrOxxO6c4aP61pAh_By7UfVaDnQizC7PG5UhEsFmY,1072
+jupyter_paint_segment/__init__.py,sha256=txOOzB4NV3GcLt8E7JtjmaY6DJRnGhELF1BmLbAcafc,34
+jupyter_paint_segment/postprocess.py,sha256=hCPYtZ7zHOA_aR2GsEecaCFL2-W9mYEUBHuW4D3XgF0,2495
+jupyter_paint_segment/static/icons/brush.svg,sha256=qkenuln1m_YfSK7I2k_Zk_bD-CrI3uLuqMB465F-wts,2769
+jupyter_paint_segment/static/icons/eraser.svg,sha256=H0mRK5n32NXUIzPehi7F6yIDiu02AgTcQqPaW_FL4WI,946
+jupyter_paint_segment/static/icons/rectangle.svg,sha256=4R1VTjv7BKtkmnD9_7UsJgzvtuXFbtlKlG0CzLS7Mwk,522
+jupyter_paint_segment/static/index.html,sha256=YMX11NZOV0bNyl6HASfwn5eU32TK2V2BrjBdtswMStA,1407
+jupyter_paint_segment/static/paint_widget.js,sha256=Q65IYpoxPWFJj6yOF-pYzg45z9IUBfkuqPGPgEFCtOU,17050
+jupyter_paint_segment/static/styles.css,sha256=xG08ei9-VwKCwg2NdeXtwbt2X2bLdsv0D3x-vZg6hjs,10384
+jupyter_paint_segment/types.py,sha256=e21KKiTSseHccqpIIVYuqJc_ZTMzEyJ5cz5P4m8zeac,428
+jupyter_paint_segment/utils.py,sha256=jR5eGomoaErxyAHFi6PL4TFea5j2deIhVuIzz1NaTqo,1862
+jupyter_paint_segment/widget.py,sha256=GYJeiTr5nh9b1r2OlltNE54tm6FKf6eQGkkzQs5qzdw,5618
+jupyter_paint_segment-0.1.0.dist-info/LICENSE,sha256=81vrOxxO6c4aP61pAh_By7UfVaDnQizC7PG5UhEsFmY,1072
+jupyter_paint_segment-0.1.0.dist-info/METADATA,sha256=R3JY1OlGETVchR6N_JKLq0XWkhx4e6KPLdU-wWKzZYA,2944
+jupyter_paint_segment-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+jupyter_paint_segment-0.1.0.dist-info/RECORD,,
