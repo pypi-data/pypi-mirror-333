@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+claude_cli/__init__.py
+claude_cli/cli.py
+claude_cli/config.py
+claude_cli/commands/__init__.py
+claude_cli/commands/chat.py
+claude_cli/commands/manage.py
+claude_cli/commands/query.py
+claude_cli/utils/__init__.py
+claudeshell.egg-info/PKG-INFO
+claudeshell.egg-info/SOURCES.txt
+claudeshell.egg-info/dependency_links.txt
+claudeshell.egg-info/entry_points.txt
+claudeshell.egg-info/requires.txt
+claudeshell.egg-info/top_level.txt
