@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: geospatial-toolkit
+Version: 0.0.0
+Summary: Python module to easily handle geospatial dataWritten by pedrohenriquecoimbra
+Home-page: https://github.com/pedrohenriquecoimbra/geospatial_toolkit
+Author: Pedro Henrique Coimbra
+Author-email: pedro-henrique.herig-coimbra@inrae.fr
+License: MIT
+Keywords: satellite,remote sensing,map
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Other/Nonlisted Topic
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: fiona
+Requires-Dist: shapely
+Requires-Dist: pyproj
+Requires-Dist: xarray
+Requires-Dist: rasterio
+Requires-Dist: requests
+
+# geospatial_tools
