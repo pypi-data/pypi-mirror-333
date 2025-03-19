@@ -1,0 +1,10 @@
+#!/bin/bash
+# WF 2019
+scriptdir=$(dirname $0)
+python=python
+if [ "$USER" = "travis" ]
+then
+  pytest -s
+else
+  $python -m pytest
+fi

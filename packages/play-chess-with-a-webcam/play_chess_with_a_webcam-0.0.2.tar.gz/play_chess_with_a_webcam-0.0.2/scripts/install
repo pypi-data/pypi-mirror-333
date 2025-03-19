@@ -1,0 +1,293 @@
+#!/bin/bash
+# WF 2019-07-27
+# install pre requisites
+
+scriptdir=$(dirname $0)
+# source the color message handling
+. $scriptdir/colormsg
+
+#
+# show the usage
+#
+usage() {
+  echo "usage: $0 [-h]"
+  echo "  -h: show this usage"
+  exit 1
+}
+
+#
+# autoinstall
+#
+#  check that l_prog is available by calling which
+#  if not available install from given package depending on Operating system
+#
+#  params:
+#    1: l_prog: The program that shall be checked
+#    2: l_linuxpackage: The apt-package to install from
+#    3: l_macospackage: The MacPorts package to install from
+#
+autoinstall() {
+  local l_prog=$1
+  local l_linuxpackage=$2
+  local l_macospackage=$3
+  os=$(uname)
+  color_msg $green "checking that $l_prog  is installed on os $os ..."
+  which $l_prog
+  if [ $? -eq 1 ]
+  then
+    case $os in
+      # Mac OS
+      Darwin)
+        which port >/dev/null
+        if [ $? -eq 0 ]
+        then
+          color_msg $blue "installing $l_prog from MacPorts package $l_macospackage"
+          sudo port install $l_macospackage
+        else
+          which brew >/dev/null
+          if [ $? -eq 0 ]
+          then
+            color_msg $blue "installing $l_prog from Homebrew package $l_macospackage"
+            sudo brew install $l_macospackage
+          else
+            error "python3 and pip3 are needed and neither Homebrew nor MacPorts are available for installation. \nYou might want to install the prerequisites yourself"
+          fi
+        fi
+      ;;
+      # e.g. Ubuntu/Fedora/Debian/Suse
+      Linux)
+        color_msg $blue "installing $l_prog from apt-package $l_linuxpackage"
+        sudo apt-get install $l_linuxpackage
+      ;;
+      # git bash (Windows)
+      MINGW32_NT-6.1)
+        error "$l_prog ist not installed"
+      ;;
+      *)
+        error "unknown operating system $os"
+    esac
+  fi
+}
+
+# download outputfile from the given url
+# param 1: url
+# param 2: outputfile
+download() {
+  local l_url="$1"
+  local l_output="$2"
+  local l_status=$(curl -Is "$l_url" | head -n 1 | tr -d '\r')
+  echo $l_status | grep -E "200|302" > /dev/null
+  if [ $? -ne 0 ]
+  then
+    color_msg $red "$l_status: $l_url"
+  else
+    curl -L "$l_url" -s -o "$l_output"
+  fi
+}
+
+# check given part to have been downloaded
+# param 1: targetdir  (create if not existing)
+# param 2: url
+# param 3: part
+checkPart() {
+  local l_targetdir="$1"
+  local l_url="$2"
+  local l_part="$3"
+  local l_target="$l_targetdir/$l_part"
+  if [ ! -f "$l_target" ]
+  then
+    local l_partdir=$(dirname $l_target)
+    if [ ! -d "$l_partdir" ]
+    then
+      mkdir -p "$l_partdir"
+    fi
+    color_msg $blue "downloading $l_part from $l_url/$l_part"
+    # echo curl -L $l_url/$l_part -s -o "$l_target"
+    download "$l_url/$l_part"  "$l_target"
+  else
+    color_msg  $green "$l_part already downloaded"
+  fi
+}
+
+# check parts specified in here document
+# param 1: check directory
+checkParts() {
+  local l_check="$1"
+  local l_done="false"
+  read l_target
+  read l_title
+  read l_home
+  read l_url
+  if [ "$l_check" = true ]
+  then
+    if [ ! -d "$l_target" ]
+    then
+      mkdir -p $l_target
+      color_msg $blue "downloading $l_title (see $l_home) from $l_url"
+    else
+      l_done=true
+      color_msg $green "$l_title already downloaded"
+    fi
+  fi
+  if [ ! "$l_done" = true ]
+  then
+    #curl -I $l_url
+    #echo $?
+    while read part
+    do
+      checkPart "$l_target" "$l_url" $part
+    done
+  fi
+}
+
+# get Material Design Lite
+materialDesign() {
+  local l_target="$1"
+  cat << EOF | checkParts true
+    $l_target
+    Material Design Lite
+    https://material.io
+    https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0
+    material.min.js
+    material.min.css
+EOF
+}
+
+# get Material Design Icons from github
+materialDesignIcons() {
+  local l_target="$1"
+  cat << EOF | checkParts true
+    $l_target
+    Material Design Icons
+    https://material.io/resources/icons
+    http://materialdesignicons.com/cdn/4.5.95
+    css/materialdesignicons.css
+    css/materialdesignicons.min.css
+    css/materialdesignicons.css.map
+    css/materialdesignicons.min.css.map
+    fonts/materialdesignicons-webfont.woff2
+    fonts/materialdesignicons-webfont.eot
+    fonts/materialdesignicons-webfont.woff
+    fonts/materialdesignicons-webfont.ttf
+EOF
+}
+
+# get CheckBoard.js
+chessBoardJs() {
+  local l_target="$1"
+  cat << EOF | checkParts true
+    $l_target/js
+    chessboard.js
+    https://chessboardjs.com
+    https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/
+    chessboard-1.0.0.min.js
+    chessboard-1.0.0.js
+EOF
+cat << EOF | checkParts false
+    $l_target/css
+    chessboard.js
+    https://chessboardjs.com
+    https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/
+    chessboard-1.0.0.css
+    chessboard-1.0.0.min.css
+EOF
+cat << EOF | checkParts false
+  $l_target
+  chessboard.js
+  https://chessboardjs.com
+  https://chessboardjs.com
+js/jquery-3.4.1.min.js
+EOF
+}
+
+# get chess.js
+chessJs() {
+  local l_target="$1"
+  cat << EOF | checkParts true
+    $l_target
+    chess.js
+    https://github.com/jhlywa/chess.js
+    https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2
+    chess.js
+EOF
+}
+
+# get Bootstrap
+bootstrap() {
+  local l_target="$1"
+  cat << EOF | checkParts true
+  $l_target
+  Bootstrap
+  https://getbootstrap.com
+  https://stackpath.bootstrapcdn.com/bootstrap/4.3.1
+css/bootstrap.min.css
+css/bootstrap-reboot.min.css.map
+css/bootstrap.css
+css/bootstrap-grid.css.map
+css/bootstrap-grid.min.css
+css/bootstrap.css.map
+css/bootstrap.min.css.map
+css/bootstrap-reboot.min.css
+css/bootstrap-reboot.css
+css/bootstrap-grid.css
+css/bootstrap-grid.min.css.map
+css/bootstrap-reboot.css.map
+js/bootstrap.bundle.js
+js/bootstrap.bundle.min.js.map
+js/bootstrap.bundle.js.map
+js/bootstrap.js
+js/bootstrap.bundle.min.js
+js/bootstrap.min.js
+js/bootstrap.js.map
+js/bootstrap.min.js.map
+EOF
+}
+
+# install required python modules
+pythonModules() {
+  os=$(uname)
+  case $os in
+    # Mac OS
+    Darwin)
+      cmd=pip
+      ;;
+    *)
+      pip=pip3
+      if [ "$USER" = "travis" ] || [ "$USER" = "runner" ]
+      then
+        echo "installing for user $USER ... in public CI Environment"
+        cmd=pip
+      else
+        autoinstall python3 python3.7 python37 python3-setuptools python3-wheel virtualenvwrapper python3-tk
+        autoinstall pip3 python3-pip py37-pip
+        cmd="sudo -H pip3"
+      fi
+  esac
+  $cmd install .[test]
+}
+
+# install large testMedia files
+testMedia() {
+  local l_target="$1"
+  for video in scholarsMate2019-12-18.avi
+  do
+    checkPart "$l_target" https://github.com/SteinscheisserKarl/Chess-Testmedia/raw/master $video
+  done
+}
+
+scriptdir=$(dirname $0)
+
+# get bootstrap
+bootstrap "$scriptdir/../web/bootstrap"
+# get Material materialDesign
+materialDesign "$scriptdir/../web/md"
+# get Material Design Icons from github
+materialDesignIcons "$scriptdir/../web/mdi"
+# get CheckBoard.js
+chessBoardJs "$scriptdir/../web/chessboard"
+# get chess.js
+chessJs "$scriptdir/../web/chess"
+# download large testMedia
+testMedia "$scriptdir/../testMedia"
+# install required python modules
+pythonModules

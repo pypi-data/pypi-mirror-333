@@ -1,0 +1,23 @@
+# see https://docs.travis-ci.com/user/languages/python/
+language: python
+# python versions to be tested
+python:
+#  - "2.7" # see https://github.com/WolfgangFahl/gremlin-python-tutorial/issues/7
+  - "3.7"
+# allow gui output
+services:
+  - xvfb
+before_install:
+  # install some chess engines
+  - sudo apt-get -y install gnuchess
+  - sudo apt-get -y install stockfish
+# command to install dependencies
+install:
+  - scripts/install
+# - pip install -r pcwawc/requirements.txt
+# command to run tests
+script:
+#  with print output
+   - python -m pytest -s .
+#  without print output
+#  - python -m pytest .

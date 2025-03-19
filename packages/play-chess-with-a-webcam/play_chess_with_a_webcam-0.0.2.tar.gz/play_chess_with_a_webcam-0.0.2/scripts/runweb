@@ -1,0 +1,121 @@
+#!/bin/bash
+# WF 2019-10-22
+
+scriptdir=$(dirname $0)
+# source the color message handling
+. $scriptdir/colormsg
+
+#
+# show the usage
+#
+usage() {
+  echo "usage: $0 [-h]"
+  echo "  -h: show this usage"
+}
+
+#
+# open the given url waiting for the given number of seconds
+#
+# param #1: the url to open
+# param #2: the number of loops to wait
+# param #3: the sleep time per loop
+openUrl() {
+  local l_url="$1"
+  local l_loops="$2"
+  local l_sleep="$3"
+  local l_count=1
+  local l_done=0
+  until [ $l_done -eq 1 ]
+  do
+    l_count=$((l_count+1))
+    if [ "$l_count" -ge "$l_loops" ]
+    then
+      echo "giving up to wait for $l_url"
+      l_done=1
+    else
+      sleep $l_sleep
+    fi
+    status=$(curl -Is $l_url | head -1)
+    echo "waiting $l_count/$l_loops for $l_url: $status"
+    case $status in
+      *200*OK*)
+	l_open="open"
+	os=$(uname)
+	case $os in
+	  Linux*)
+            l_open="xdg-open"
+	    ;;
+	esac
+	$l_open $l_url
+        l_done="1" ;;
+    esac
+  done
+}
+
+#
+# kill the given process by name if it is running
+#
+# param #1: l_name: the name to search for
+killifrunning() {
+  local l_name="$1"
+  pgrep -fl "$l_name"
+  if [ $? -eq 0 ]
+  then
+    color_msg $blue "killing running $l_name server"
+    sudo pkill -f "$l_name"
+  fi
+}
+
+# start the server
+startServer() {
+  local l_args="$1"
+  color_msg $blue "starting play chess with a webcam server with args $l_args"
+  if [ ! -d $logdir ]
+  then
+    sudo mkdir -p $logdir
+    sudo chmod 770 $logdir
+  fi
+  sudo chown $USER $logdir
+  #sudo chgrp users $logdir
+  nohup python3 $srcdir/$pyapp $l_args > $logdir/$logfile 2>&1 &
+  color_msg $green "log is at $logdir/$logfile"
+}
+
+# workaround issue with PYTHONPATH for 2.7 still being active
+echo $PYTHONPATH | grep 2.7 > /dev/null
+if [ $? -eq 0 ]
+then
+  export PYTHONPATH=""
+fi
+export PYTHONPATH=".:$PYTHONPATH"
+scriptdir=$(dirname $0)
+srcdir=$scriptdir/../pcwawc
+pyapp=webchesscam.py
+killifrunning $pyapp
+port=5003
+logdir=/var/log/webchesscam
+logfile=webchesscam.log
+
+args=$@
+# commandline option
+while [  "$1" != ""  ]
+do
+  option=$1
+  shift
+  case $option in
+    --port)
+      port=$option
+      ;;
+    -h|--help)
+      python3 $srcdir/$pyapp -h
+      exit 0;;
+    *)
+      ;;
+  esac
+done
+color_msg $blue "starting webchesscam"
+startServer "$args"
+url="http://localhost:$port"
+color_msg $blue "opening browser for $url"
+openUrl "$url" 10 1.0&
+tail -f $logdir/$logfile

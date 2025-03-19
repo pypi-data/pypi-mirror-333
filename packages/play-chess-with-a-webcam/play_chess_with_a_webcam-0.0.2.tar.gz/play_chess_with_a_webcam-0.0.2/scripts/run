@@ -1,0 +1,11 @@
+#!/bin/bash
+# workaround issue with PYTHONPATH for 2.7 still being active
+echo $PYTHONPATH | grep 2.7 > /dev/null
+if [ $? -eq 0 ]
+then
+  export PYTHONPATH=""
+fi
+export PYTHONPATH=".:$PYTHONPATH"
+scriptdir=$(dirname $0)
+srcdir=$scriptdir/../pcwawc
+python3 $srcdir/videoanalyze.py "$@"
