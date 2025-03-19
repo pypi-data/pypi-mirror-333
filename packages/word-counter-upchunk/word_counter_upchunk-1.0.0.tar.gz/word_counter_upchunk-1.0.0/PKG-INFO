@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: word_counter_upchunk
+Version: 1.0.0
+Summary: A drop-in-replacement for (discontinued) office-word-count
+Author-email: Habibul Rahman Qalbi <habi6799@gmail.com>
+Project-URL: Homepage, https://github.com/upchunk/office-word-count
+Project-URL: Issues, https://github.com/upchunk/office-word-count/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: regex
+
+# word-counter-upchunk
+Drop in Replacement for the discontinued `office-word-count` library

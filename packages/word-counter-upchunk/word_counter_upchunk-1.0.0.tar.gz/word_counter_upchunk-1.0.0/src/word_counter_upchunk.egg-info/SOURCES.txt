@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/word_counter_upchunk/__init__.py
+src/word_counter_upchunk/counter.py
+src/word_counter_upchunk/patterns.py
+src/word_counter_upchunk/stats.py
+src/word_counter_upchunk/text.py
+src/word_counter_upchunk.egg-info/PKG-INFO
+src/word_counter_upchunk.egg-info/SOURCES.txt
+src/word_counter_upchunk.egg-info/dependency_links.txt
+src/word_counter_upchunk.egg-info/requires.txt
+src/word_counter_upchunk.egg-info/top_level.txt
