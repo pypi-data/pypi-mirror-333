@@ -1,0 +1,10 @@
+fastapi_scaffold/__init__.py,sha256=NweNHpa8wVuNGMcswygAjOhxaEu9WZYwf5wEBHgyG0c,43
+fastapi_scaffold/cli.py,sha256=MoAKmK0iXCUuP89nvfzbyfWkB36-EmJlRJclilTTcqA,1971
+fastapi_scaffold/templates.py,sha256=iU0UOpNfaRt1102uqCQdQgMXarBgaD4rUgrz-zFpsTI,4666
+fastapi_scaffold/utils.py,sha256=UjXAXbppGajlYQrYjgQPtN1rxq5jsurw7xSf7zNr_oc,477
+fastapi_scaffold-0.1.0.dist-info/LICENSE,sha256=wRKg1XEHVdQHwZNSzoDq68Q_Qzh3kvtg2pigAZ3TmrU,1088
+fastapi_scaffold-0.1.0.dist-info/METADATA,sha256=hano3Aa9Kw7b9vkgj0Pe3EmnulCVIDa3WDRG7WN3x60,628
+fastapi_scaffold-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+fastapi_scaffold-0.1.0.dist-info/entry_points.txt,sha256=EC-1e0nKgHB8_qf2-tCBmPm24B08NzJ-Ymznk02m2PQ,62
+fastapi_scaffold-0.1.0.dist-info/top_level.txt,sha256=Galog9LS46lopb9IOH-kxC0XsAySbMEEl27VuA0CQS4,17
+fastapi_scaffold-0.1.0.dist-info/RECORD,,
