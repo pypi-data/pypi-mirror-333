@@ -1,0 +1,2 @@
+[console_scripts]
+process_program = jwst_rogue_path_tool.scripts.output_results:main
