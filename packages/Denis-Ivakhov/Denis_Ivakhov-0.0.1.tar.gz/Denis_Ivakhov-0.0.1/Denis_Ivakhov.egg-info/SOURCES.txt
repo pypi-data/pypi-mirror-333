@@ -1,0 +1,8 @@
+README.md
+setup.py
+Denis_Ivakhov/__init__.py
+Denis_Ivakhov/my_module.py
+Denis_Ivakhov.egg-info/PKG-INFO
+Denis_Ivakhov.egg-info/SOURCES.txt
+Denis_Ivakhov.egg-info/dependency_links.txt
+Denis_Ivakhov.egg-info/top_level.txt
