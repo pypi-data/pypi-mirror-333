@@ -1,0 +1,9 @@
+configurable/__init__.py,sha256=umPU8faedRb04ZgK4hIJhI25xrR7IDr-K2_XgEfhJmk,258
+configurable/configurable.py,sha256=WO0DPmh919V9yWAjWbbaJHzZHG0RccKzIafj2YbAS6k,18202
+configurable/schema.py,sha256=eyrBCmFszW-ay5R4vPrw4EnhnBSXmU_42YrMCx-5dLw,8388
+configurable/utils.py,sha256=Cg1gli9e0_ZN2Aw8huYd_SLut9ioEnto2VD9f6zrRNY,3544
+configurable_cl-0.1.6.1.dist-info/LICENSE,sha256=Mxyv-8s39H70vCdNcPY1eIV0rmRuPkucXzhtMKvhHeQ,1315
+configurable_cl-0.1.6.1.dist-info/METADATA,sha256=S9ZkHPxuATHHKfYYOt8VIroQopqmhb9N3AT3xD3UoVo,8031
+configurable_cl-0.1.6.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+configurable_cl-0.1.6.1.dist-info/top_level.txt,sha256=C93zmOJf2OVGvBMdYV8-VUWqLUzzb-GukCnrGP9GsBY,13
+configurable_cl-0.1.6.1.dist-info/RECORD,,
