@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+graphsense/__init__.py
+graphsense/graphsense.py
+graphsense.egg-info/PKG-INFO
+graphsense.egg-info/SOURCES.txt
+graphsense.egg-info/dependency_links.txt
+graphsense.egg-info/requires.txt
+graphsense.egg-info/top_level.txt
