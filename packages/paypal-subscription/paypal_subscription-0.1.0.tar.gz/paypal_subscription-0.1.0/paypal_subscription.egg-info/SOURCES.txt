@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+readme.md
+setup.py
+paypal_subscription/__init__.py
+paypal_subscription/paypal.py
+paypal_subscription.egg-info/PKG-INFO
+paypal_subscription.egg-info/SOURCES.txt
+paypal_subscription.egg-info/dependency_links.txt
+paypal_subscription.egg-info/top_level.txt
