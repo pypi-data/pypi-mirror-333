@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: ECOv003-granules
+Version: 0.1.1
+Summary: ECOSTRESS Collection 3 Data Product Granule Encapsulation Classes
+Author-email: "Gregory H. Halverson" <gregory.h.halverson@jpl.nasa.gov>
+Project-URL: Homepage, https://github.com/ECOSTRESS-Collection-3/ECOv003-granules
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colored-logging
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: rasters
+Requires-Dist: python-dateutil
+Requires-Dist: shapely
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: jupyter; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# ECOv003-granules
+ECOSTRESS Collection 2 Data Product Granule Encapsulation Classes
