@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "choco-get"  # This is the name on PyPI
+version = "1.0.0-1"
+description = "A fast file download manager."
+authors = ["Chocolate Loves You"]
+license = "MIT"
+readme = "README.md"  # Specify the README.md file here
+
+# Specify the package directory
+packages = [
+    { include = "cget" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+rich = "^10.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
