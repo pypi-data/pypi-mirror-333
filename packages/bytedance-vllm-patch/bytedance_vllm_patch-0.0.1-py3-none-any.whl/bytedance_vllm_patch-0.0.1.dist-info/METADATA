@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bytedance-vllm-patch
+Version: 0.0.1
+Summary: A simple package named bytedance_vllm_patch
+Home-page: https://github.com/artifact/bytedance_vllm_patch.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
+
