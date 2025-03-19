@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/ipyprogress/__init__.py
+src/ipyprogress.egg-info/PKG-INFO
+src/ipyprogress.egg-info/SOURCES.txt
+src/ipyprogress.egg-info/dependency_links.txt
+src/ipyprogress.egg-info/top_level.txt
