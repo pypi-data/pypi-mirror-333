@@ -1,0 +1,8 @@
+medicalimageanalysis/__init__.py,sha256=VXK12TRxVdr5gzPFFna5zWfRTyIsONs8r7Qrv0UR-38,200
+medicalimageanalysis/data.py,sha256=M4RsyMQkNhoRgmUtuL-_Zm0xh0DgE1r_jSoi79CyXps,109
+medicalimageanalysis/reader.py,sha256=8WcIrJiGgRpySyciQuUi6auomyj5VgzcGAuXmK1rzwE,8463
+medicalimageanalysis-2.1.77.dist-info/LICENSE.txt,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+medicalimageanalysis-2.1.77.dist-info/METADATA,sha256=eoDZfzRQLZd3cL_DWraGLNEtIGY5HJEG8Y07K5hI3pE,7821
+medicalimageanalysis-2.1.77.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+medicalimageanalysis-2.1.77.dist-info/top_level.txt,sha256=Av-KDgBPvTgP4tm8kyES2IuseUM99X9xrEumPhFWsyQ,21
+medicalimageanalysis-2.1.77.dist-info/RECORD,,
