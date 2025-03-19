@@ -1,0 +1,16 @@
+unicorn
+angr
+capstone
+lief
+pyhidra
+pypcode
+
+[development]
+black
+isort
+flake8
+mypy
+pip-tools
+pre-commit
+sphinx
+sphinxcontrib-programoutput
