@@ -1,0 +1,13 @@
+purecpp/RagPUREAI_chuncks_clean.cpython-311-x86_64-linux-gnu.so,sha256=cJ0c5OZEuOoy0BhpP2trpT5ahIk2Qm6LlhWMac44--0,50993497
+purecpp/RagPUREAI_embed.cpython-311-x86_64-linux-gnu.so,sha256=e4rZ7difEO60bffLn7RDWy6CdvYgQ6x6OHyEeK7qic8,14198417
+purecpp/RagPUREAI_extract.cpython-311-x86_64-linux-gnu.so,sha256=DovtdDoxTyfN8nIgVuDpC1OGpjpKLb6KaSQEnqznAeE,25670289
+purecpp/RagPUREAI_libs.cpython-311-x86_64-linux-gnu.so,sha256=4WldHa68rAqOlt01HkRotIwl0TVPRGBnovnQ--apOoc,3068753
+purecpp/RagPUREAI_meta.cpython-311-x86_64-linux-gnu.so,sha256=xuRkAuqb5SjfnvZiCSh2UKGEa3ollwuD5yi5dafF8CM,41830145
+purecpp/__init__.py,sha256=JM4TmV-svGdwZAzH2dc8b2SyJhAMnA3LNbz2B5TiY6w,4495
+purecpp.libs/libc10-9487ca8f.so,sha256=R4v-KpBkGk1DJZELbhlNJyccW7K7yBZxL4p2iEzBARE,1394001
+purecpp.libs/libgomp-14f972ab.so.1.0.0,sha256=IHLwCI9uVbeP__qWWABlIyI1_zz-Yv1Zrbmr0x298Wo,311841
+purecpp.libs/libtorch-52708eda.so,sha256=jd_FqObSIwpOAbV_mm7bVXk2B3qfuRwfYIt_wIdJ5Ns,12985
+purecpp-0.0.4.dist-info/METADATA,sha256=s5S2HMfN5i-h22-yZtzVlNNV5YfcOlSmNJxLaFwJYco,574
+purecpp-0.0.4.dist-info/WHEEL,sha256=rETPtva5rluiDZ0szlc1coQSD-f8epVnV-xjVMXlVj4,132
+purecpp-0.0.4.dist-info/top_level.txt,sha256=qHlioHpJArH9GfRCfT7XDDnh8aMxphdL2J_18sV9uSU,8
+purecpp-0.0.4.dist-info/RECORD,,
