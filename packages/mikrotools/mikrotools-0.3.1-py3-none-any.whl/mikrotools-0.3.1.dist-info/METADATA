@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mikrotools
+Version: 0.3.1
+Summary: Mikrotik tools
+Author-Email: Maksim Kachur <me@maksimkachur.ru>
+License: MIT
+Project-URL: Homepage, https://github.com/mcdebugger/mikrotools
+Project-URL: Issues, https://github.com/mcdebugger/mikrotools/issues
+Requires-Python: >=3.11
+Requires-Dist: click>=8.1.8
+Requires-Dist: packaging>=24.2
+Requires-Dist: paramiko>=3.3.1
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: PyYAML>=6.0.1
+Requires-Dist: rich>=13.9.4
+Description-Content-Type: text/markdown
+
+# mikrotools
+
+A set of tools to automate operation with Mikrotik devices
