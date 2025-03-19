@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: bytedance-simple-rc-sampls-manage
+Version: 0.0.1
+Summary: A simple package named bytedance_simple_rc_sampls_manage
+Home-page: https://github.com/artifact/bytedance_simple_rc_sampls_manage.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
