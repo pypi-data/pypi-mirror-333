@@ -1,0 +1,7 @@
+setup.py
+heuvera.egg-info/PKG-INFO
+heuvera.egg-info/SOURCES.txt
+heuvera.egg-info/dependency_links.txt
+heuvera.egg-info/requires.txt
+heuvera.egg-info/top_level.txt
+tests/test.py
