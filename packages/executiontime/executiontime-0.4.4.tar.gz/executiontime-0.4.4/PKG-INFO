@@ -1,0 +1,98 @@
+Metadata-Version: 2.3
+Name: executiontime
+Version: 0.4.4
+Summary: A simple function decorator to display its execution time on the console or in the logs.
+License: MIT
+Keywords: testing,logging,time,performance,execution
+Author: Timokasse
+Author-email: Timokasse@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Description-Content-Type: text/markdown
+
+# executiontime
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Timokasse/executiontim/blob/master/LICENSE)
+
+This module provides a simple function decorator to display its execution time on the console or in the logs.
+
+## Installation
+
+Simply install the package with `pip`:
+
+```bash
+pip install executiontime
+```
+
+## Usage
+
+You simply need to decorate the function and specify a message template.
+If you do not provide a message, one will be created for you based on the names of the decorated function and its module.
+
+```python
+from executiontime import printexecutiontime
+
+@printexecutiontime("My function's execution took {0}")
+def my_function():
+    pass
+
+if __name__ == '__main__':
+    my_function()
+```
+
+By default, the message will be displayed on the console. But it is also possible to specify a log function, for example.
+
+```python
+from logging import info, INFO, basicConfig
+from executiontime import printexecutiontime
+
+@printexecutiontime("My function's execution took {0}", display=info)
+def my_function():
+    pass
+
+if __name__ == '__main__':
+    basicConfig(level=INFO)
+    my_function()
+
+```
+
+It is also easy to add a little bit of color:
+
+```python
+from executiontime import printexecutiontime, LIGHTBLUE
+
+@printexecutiontime("My function's execution took {0}", color=LIGHTBLUE)
+def my_function():
+    pass
+
+if __name__ == '__main__':
+    my_function()
+```
+
+## Changelog
+
+- v0.4.4
+  - No need of a time zone to calculate an elapsed time.
+- v0.4.3
+  - Improve `publish.sh` script to get current PyPI version.
+- v0.4.2
+  - Update dependencies
+- v0.4.1
+  - The message is now optional and a default one is provided, based on the names of the decorated function and its module.
+- v0.4.0
+  - Refresh the dependencies
+  - Replace deprecated datetime.utcnow()
+
