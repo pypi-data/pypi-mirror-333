@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "linux_workload_execution"
+version = "0.0.5"
+description = "linux_workload_execution is a Python package designed to take details like, lpar, ipaddress, script directory and script command as the input, and perform below activities"
+authors = [
+{ name="Girija", email="girija.golla@ibm.com" },
+{ name="Vaishnavi", email="sriva011@in.ibm.com" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+gitdb = "^4.0.12"
+GitPython = "^3.1.44"
+pytest = "^8.3.4"
+paramiko = "^3.5.1"
+requests = "^2.32.3"
+setuptools = "^75.8.0"
+zhmccli = "^1.12.0"
+twine = "^6.1.0"
+build = "^1.2.2"
+pipreqs = "^0.4.13"
