@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: vhd
+Version: 1.0.0
+Summary: VHD操作库
+Home-page: https://gitee.com/yangyingyun/vhd
+Author: ZhongYang
+Author-email: 19865697458@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: summary
