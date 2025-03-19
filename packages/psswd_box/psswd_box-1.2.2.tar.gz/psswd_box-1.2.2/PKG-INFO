@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: psswd_box
+Version: 1.2.2
+Summary: Password generator that never leaves your machine.
+Author-email: Melvin Quick <melvinquick@proton.me>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: pyside6>=6.8.2.1
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+<p align="center"> <img src="src/psswd_box/resources/images/psswd_box-256.png" /> </p>
+
+## Donations
+
+- [Buy Me A Coffee](https://www.buymeacoffee.com/KingKairos)
+- [GitHub Sponsors](https://github.com/sponsors/melvinquick)
+
+## Purpose
+
+The general purpose of this app is to give people an easy way to generate passwords completely locally on their machine. This doesn't rely on a cloud service, or any information leaving the local machine whatsoever.
+
+## App Showcase
+
+![app_showcase.gif](src/psswd_box/resources/gifs/app_showcase.gif)
+
+## Useful Information
+
+- [Project Goals](https://codeberg.org/melvinquick/psswd_box/projects/12633)
+- [Latest Release](https://codeberg.org/melvinquick/psswd_box/releases/latest)
+- [Releases](https://codeberg.org/melvinquick/psswd_box/releases)
