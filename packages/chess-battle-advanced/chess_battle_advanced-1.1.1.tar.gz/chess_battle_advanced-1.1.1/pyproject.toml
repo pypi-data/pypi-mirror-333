@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "chess-battle-advanced"
+version = "1.1.1"
+authors = [
+  { name="unnamed7353", email="unnamed7353@gmail.com" },
+]
+description = "chess battle advanced"
+readme = "README.md"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["chess", "battle", "advanced", "cba", "chessbattleadvanced"]
+dependencies = ["pygame", "pygvideo"]
+[tool.setuptools.package-data]
+"chess_battle_advanced"=["chessbattleadvanced.mp4", "cba.png"]
+
+
+[project.scripts]
+chess-battle-advanced = "chess_battle_advanced:cba"

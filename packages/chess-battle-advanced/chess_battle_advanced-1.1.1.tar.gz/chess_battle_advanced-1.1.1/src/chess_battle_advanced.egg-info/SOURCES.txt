@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/chess_battle_advanced/__init__.py
+src/chess_battle_advanced/cba.png
+src/chess_battle_advanced/chessbattleadvanced.mp4
+src/chess_battle_advanced.egg-info/PKG-INFO
+src/chess_battle_advanced.egg-info/SOURCES.txt
+src/chess_battle_advanced.egg-info/dependency_links.txt
+src/chess_battle_advanced.egg-info/entry_points.txt
+src/chess_battle_advanced.egg-info/requires.txt
+src/chess_battle_advanced.egg-info/top_level.txt
