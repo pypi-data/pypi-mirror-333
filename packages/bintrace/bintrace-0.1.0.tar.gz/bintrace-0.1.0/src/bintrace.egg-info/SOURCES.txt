@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/bintrace/__init__.py
+src/bintrace.egg-info/PKG-INFO
+src/bintrace.egg-info/SOURCES.txt
+src/bintrace.egg-info/dependency_links.txt
+src/bintrace.egg-info/top_level.txt
