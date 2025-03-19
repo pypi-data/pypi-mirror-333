@@ -1,0 +1,11 @@
+local_zebra_printer/__init__.py,sha256=VR6KyHhnik0IcvZ7uPZbS2fRRreKBbuJXmG7W-XNU7g,128
+local_zebra_printer/local_zebra_printer.py,sha256=SmDxf38_dE8dGaCf9IR-7Fe5WKX9YB_0VWO-XXdstYE,5479
+local_zebra_printer/run_zebra_printer_script.py,sha256=rWxpMx46H2BZHWppvmjJAWR_9gpC3-PWHkBLChMERaI,822
+local_zebra_printer/socket_listener.py,sha256=qUe-E59VSWv3cyYQholxrVt8WVFPFs0LQa6uuQGu84s,1568
+local_zebra_printer/zpl_methods.py,sha256=j1Cq6yLairaKLQ8DTiLoa_hH_BUaV2QvxjP6zhTzI2M,2079
+local_zebra_printer-0.0.3.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+local_zebra_printer-0.0.3.dist-info/METADATA,sha256=AN98autCWVQeUUWR3vots9mUWvHS46PLZXxeVnpCWOo,578
+local_zebra_printer-0.0.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+local_zebra_printer-0.0.3.dist-info/entry_points.txt,sha256=ea3DnAio0J7YXQWaDAHUSjhXCKqBcf2E5i2jniQjmq4,163
+local_zebra_printer-0.0.3.dist-info/top_level.txt,sha256=YhV5JUZqtbZl-7rrySJozsxxlWB8OLOeXZe3bfwRMUo,20
+local_zebra_printer-0.0.3.dist-info/RECORD,,
