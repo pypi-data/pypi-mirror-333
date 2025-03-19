@@ -1,0 +1,2 @@
+[console_scripts]
+entry_point = linux_workload_execution.__main__:main
