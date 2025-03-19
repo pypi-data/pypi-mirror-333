@@ -1,0 +1,8 @@
+dstack_sdk-0.1.8.dist-info/METADATA,sha256=suWRKEYMhDT3TRMBHfGkUIk0Apmoj70AKrYgXTULRog,6775
+dstack_sdk-0.1.8.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+dstack_sdk-0.1.8.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+dstack_sdk/__init__.py,sha256=TL6QaTjNvuWNCAMtEcZusVVpWlM3tASta-tRgavW6Vk,181
+dstack_sdk/ethereum.py,sha256=q5oXIGEAJ5GUtuu0Ryh5lN8vILjiGLRgJDBQKmXR8o8,206
+dstack_sdk/solana.py,sha256=lxu60XrjQKiSsQ7pGhEx6GTZpqZBrzmLI-0se56N8EM,210
+dstack_sdk/tappd_client.py,sha256=j9JYMapB70A5e9D-c8_4vaFjt85QRUExw-Dy7B8xDxY,7961
+dstack_sdk-0.1.8.dist-info/RECORD,,
