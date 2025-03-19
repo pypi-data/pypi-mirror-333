@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "jupyter_paint_segment"
+version = "0.1.0"
+description = "A jupyter widget for manual image segmantation"
+authors = ["adusachev <adusachev@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/adusachev/jupyter-paint-segment"
+repository = "https://github.com/adusachev/jupyter-paint-segment"
+keywords = ["jupyter", "widget", "segmentation", "image"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Framework :: Jupyter",
+]
+include = [
+    "LICENSE",
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+anywidget = "^0.9.15"
+matplotlib = "^3.7.5"
+pillow = "^10.4.0"
+opencv-python = "^4.11.0.86"
+pandas = "^2.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+nbstripout = "0.8.0"
+pre-commit = "3.5.0"
+isort = "5.13.2"
+black = "24.8.0"
+mypy = "1.14.1"
+plotly = "5.20.0"
+ipykernel = "6.29.5"
+notebook = "7.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+py_version=39
