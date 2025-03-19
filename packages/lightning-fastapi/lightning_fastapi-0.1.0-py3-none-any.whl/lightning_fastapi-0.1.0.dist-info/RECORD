@@ -1,0 +1,8 @@
+lightning_fastapi/__init__.py,sha256=EavfEl9M3oooVZ_NX0pdFYHEZSTPer2eI7eI8NQESlM,100
+lightning_fastapi/cli.py,sha256=NhIfMW1pcbqpJEzha9NCzJ59rwaw2X-HCkaLxnpCe3s,703
+lightning_fastapi/generator.py,sha256=raEAU03t02_7T1Et5457dDEEp6Wc-CYQqwgTI8Zxyz4,13104
+lightning_fastapi-0.1.0.dist-info/LICENSE,sha256=jZu0h5mJpw7Ck1VtwDofRKGkIIg8Vw4xhQwhQwiNvWA,1951
+lightning_fastapi-0.1.0.dist-info/METADATA,sha256=7Se9qOMzZnKNXTAgvwLpGD3jqTe_icm9sOiikQsC2Fw,17932
+lightning_fastapi-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+lightning_fastapi-0.1.0.dist-info/entry_points.txt,sha256=-4Lzooa68IQDQeD-WXROsjmAYmSS9JGYneKXcPxlE-E,64
+lightning_fastapi-0.1.0.dist-info/RECORD,,

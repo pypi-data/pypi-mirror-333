@@ -1,0 +1,3 @@
+[console_scripts]
+lightning-fastapi=lightning_fastapi.cli:main
+
