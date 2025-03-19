@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: ztfcosmo
+Version: 1.3.2
+Summary: Simulating Transient in the sky and how to observe them
+Home-page: https://github.com/ZwickyTransientFacility/ztfcosmo
+Author: Mickael Rigault
+Author-email: m.rigault@ipnl.in2p3.fr
+License: Apache Software License
+Keywords: astronomy,astrophysics
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: importlib_resources; python_version < "3.10"
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: astropy
+Requires-Dist: sncosmo
+Requires-Dist: extinction
+Requires-Dist: fastparquet
+Provides-Extra: docs
+Requires-Dist: nbsphinx; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: coverage; extra == "tests"

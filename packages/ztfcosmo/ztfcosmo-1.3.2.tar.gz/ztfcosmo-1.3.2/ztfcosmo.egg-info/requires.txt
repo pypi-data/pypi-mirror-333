@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+astropy
+sncosmo
+extinction
+fastparquet
+
+[:python_version < "3.10"]
+importlib_resources
+
+[docs]
+nbsphinx
+
+[tests]
+pytest
+coverage
