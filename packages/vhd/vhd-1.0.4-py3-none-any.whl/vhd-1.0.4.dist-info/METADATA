@@ -1,0 +1,63 @@
+Metadata-Version: 2.2
+Name: vhd
+Version: 1.0.4
+Summary: VHD操作库
+Home-page: https://gitee.com/yangyingyun/vhd
+Author: ZhongYang
+Author-email: 19865697458@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# vhd
+
+## 介绍
+
+`vhd` 是一个用于创建和读取固定大小 VHD (Virtual Hard Disk) 文件的 Python 库。
+
+## 安装
+
+你可以通过以下命令安装 `vhd`：
+
+```sh
+pip install vhd
+```
+
+## 代码例程
+### 创建VHD文件
+```python
+import vhd
+if vhd.create("example.vhd", 512):
+    print(f"VHD 文件已创建")
+```
+
+
+### 读取 VHD 文件信息
+```python
+import vhd
+filename = "example.vhd"
+vhd_info = vhd.read(filename)
+print("VHD 文件信息:")
+print(f"Cookie: {vhd_info['cookie']}")
+print(f"特性: {vhd_info['features']}")
+print(f"文件格式版本: {vhd_info['file_format_version']}")
+print(f"数据偏移量: {vhd_info['data_offset']}")
+print(f"时间戳: {format_timestamp(vhd_info['timestamp'])}")
+print(f"创建者应用程序: {vhd_info['creator_application']}")
+print(f"创建者版本: {vhd_info['creator_version']}")
+print(f"创建者主机操作系统: {vhd_info['creator_host_os']}")
+print(f"原始大小: {vhd_info['original_size']} 字节 ({vhd_info['original_size'] / (1024 * 1024):.2f} MB)")
+print(f"当前大小: {vhd_info['current_size']} 字节 ({vhd_info['current_size'] / (1024 * 1024):.2f} MB)")
+print(f"柱面数: {vhd_info['cylinders']}")
+print(f"磁头数: {vhd_info['heads']}")
+print(f"每磁道扇区数: {vhd_info['sectors_per_track']}")
+print(f"磁盘类型: {vhd_info['disk_type']}")
+print(f"校验和: {vhd_info['checksum']}")
+```
