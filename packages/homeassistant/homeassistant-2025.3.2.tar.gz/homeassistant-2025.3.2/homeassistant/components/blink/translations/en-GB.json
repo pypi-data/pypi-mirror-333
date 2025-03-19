@@ -1,0 +1,25 @@
+{
+    "config": {
+        "step": {
+            "2fa": {
+                "data": {
+                    "pin": "Two-factor code"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "failed_arm": {
+            "message": "Blink failed to arm camera."
+        },
+        "failed_arm_motion": {
+            "message": "Blink failed to arm camera motion detection."
+        },
+        "failed_disarm": {
+            "message": "Blink failed to disarm camera."
+        },
+        "failed_disarm_motion": {
+            "message": "Blink failed to disarm camera motion detection."
+        }
+    }
+}

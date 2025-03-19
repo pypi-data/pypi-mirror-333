@@ -1,0 +1,13 @@
+{
+    "entity": {
+        "select": {
+            "input": {
+                "name": "Input",
+                "state": {
+                    "hdmi1": "HDMI 1",
+                    "hdmi2": "HDMI 2"
+                }
+            }
+        }
+    }
+}

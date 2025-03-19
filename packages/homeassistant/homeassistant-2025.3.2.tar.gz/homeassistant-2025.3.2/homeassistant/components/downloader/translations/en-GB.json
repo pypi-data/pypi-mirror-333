@@ -1,0 +1,7 @@
+{
+    "config": {
+        "error": {
+            "directory_does_not_exist": "The directory could not be reached. Please check your settings."
+        }
+    }
+}

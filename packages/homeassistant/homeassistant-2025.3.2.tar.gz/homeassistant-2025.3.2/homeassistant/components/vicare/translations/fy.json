@@ -1,0 +1,12 @@
+{
+    "entity": {
+        "number": {
+            "dhw_hysteresis_switch_off": {
+                "name": "SWW-hysterese \u00fatskeakelje"
+            },
+            "dhw_hysteresis_switch_on": {
+                "name": "SWW-hysterese ynskeakelje"
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "entity": {
+        "switch": {
+            "emergency_heat": {
+                "name": "Emergency heat"
+            }
+        }
+    },
+    "exceptions": {
+        "switch_failed_off": {
+            "message": "Honeywell could turn off emergency heat mode."
+        },
+        "switch_failed_on": {
+            "message": "Honeywell could not set system mode to emergency heat mode."
+        },
+        "temp_failed_value": {
+            "message": "Honeywell set temperature failed: invalid temperature {temperature}"
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheten \u00e4r redan konfigurerad",
+            "ipv6_not_supported": "IPv6 st\u00f6ds inte."
+        },
+        "error": {
+            "cannot_connect": "Det gick inte att ansluta",
+            "unknown": "Ov\u00e4ntat fel"
+        },
+        "flow_title": "{name} - {model} ( {ip_address} )",
+        "step": {
+            "discovery_confirm": {
+                "description": "Vill du st\u00e4lla in {name} - {model} ({ip_address})?"
+            },
+            "user": {
+                "data": {
+                    "ip_address": "IP-adress"
+                }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "baf": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "auto": "Auto"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "current_rpm": {
+                "name": "Nuvarande varvtal"
+            },
+            "ip_address": {
+                "name": "IP-adress"
+            },
+            "target_rpm": {
+                "name": "M\u00e5l f\u00f6r varvtal"
+            },
+            "wifi_ssid": {
+                "name": "Wifi-SSID"
+            }
+        },
+        "switch": {
+            "comfort_heat_assist_enable": {
+                "name": "Autokomfort v\u00e4rmeassistans"
+            },
+            "fan_beep_enable": {
+                "name": "Ljudsignal"
+            },
+            "light_dim_to_warm_enable": {
+                "name": "Dim-to-warm"
+            },
+            "return_to_auto_enable": {
+                "name": "\u00c5terg\u00e5 till Auto"
+            },
+            "whoosh_enable": {
+                "name": "Whoosh"
+            }
+        }
+    }
+}

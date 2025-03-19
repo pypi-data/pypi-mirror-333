@@ -1,0 +1,39 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "diaspora": "Outside of Israel?",
+                    "language": "Language for Holidays and Dates"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "hebrew_date": {
+                "state_attributes": {
+                    "hebrew_day": {
+                        "name": "Hebrew Day"
+                    },
+                    "hebrew_month_name": {
+                        "name": "Hebrew Month Name"
+                    },
+                    "hebrew_year": {
+                        "name": "Hebrew Year"
+                    }
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data_description": {
+                    "havdalah_minutes_after_sunset": "Setting this to 0 means 36 minutes as fixed degrees (8.5\u00b0) will be used instead"
+                },
+                "title": "Configure options for Jewish Calendar"
+            }
+        }
+    }
+}

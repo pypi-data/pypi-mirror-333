@@ -1,0 +1,16 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "closed": "\u0417\u0430\u0442\u0432\u043e\u0440\u0435\u043d\u043e",
+                "open": "\u041e\u0442\u0432\u043e\u0440\u0435\u043d\u043e",
+                "opening": "\u041e\u0442\u0432\u043e\u0440\u0430\u045a\u0435"
+            }
+        }
+    },
+    "services": {
+        "open_valve": {
+            "name": "\u041e\u0442\u0432\u043e\u0440\u0435\u043d\u043e"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "config": {
+        "abort": {
+            "already_configured_device": "Prietaisas jau sukonfig\u016bruotas",
+            "cannot_connect": "Nepavyko prisijungti",
+            "no_devices_found": "Tinkle nerasta joki\u0173 prietais\u0173",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "error": {
+            "linking": "Nepavyko susieti, bandykite dar kart\u0105. Ar \u201eMicroBot\u201c veikia poravimo re\u017eimu?"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "init": {
+                "data": {
+                    "address": "Prietaiso adresas",
+                    "name": "Vardas"
+                },
+                "title": "Nustatykite \u201eMicroBot\u201c prietais\u0105"
+            },
+            "link": {
+                "description": "Paspauskite \u201eMicroBot Push\u201c mygtuk\u0105, kai \u0161viesos diodas \u0161vie\u010dia ro\u017ein\u0117s arba \u017ealios spalvos, kad u\u017esiregistruotum\u0117te \u201eHome Assistant\u201c.",
+                "title": "Poravimas"
+            }
+        }
+    },
+    "entity": {
+        "switch": {
+            "push": {
+                "name": "Spausti"
+            }
+        }
+    },
+    "services": {
+        "calibrate": {
+            "fields": {
+                "depth": {
+                    "name": "Gylis"
+                },
+                "duration": {
+                    "name": "Trukm\u0117"
+                },
+                "entity_id": {
+                    "description": "Kalibruojamo subjekto pavadinimas.",
+                    "name": "Subjektas"
+                },
+                "mode": {
+                    "name": "Re\u017eimas"
+                }
+            },
+            "name": "Kalibruoti"
+        }
+    }
+}
