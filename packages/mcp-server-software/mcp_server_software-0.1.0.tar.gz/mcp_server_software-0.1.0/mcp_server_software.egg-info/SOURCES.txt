@@ -1,0 +1,8 @@
+README.md
+mcp_server_software.py
+pyproject.toml
+mcp_server_software.egg-info/PKG-INFO
+mcp_server_software.egg-info/SOURCES.txt
+mcp_server_software.egg-info/dependency_links.txt
+mcp_server_software.egg-info/requires.txt
+mcp_server_software.egg-info/top_level.txt
