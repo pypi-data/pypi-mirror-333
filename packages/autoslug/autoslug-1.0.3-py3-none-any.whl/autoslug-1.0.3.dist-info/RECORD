@@ -1,0 +1,17 @@
+autoslug/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autoslug/__main__.py,sha256=L0IjrQKvLgDEtF0u4pRW1D1QAJX82g-0h7hfD4ZU3D4,73
+autoslug/__version__.py,sha256=jESq7ftlDB8Kg0mmAcsPtQSIA_t3PZO7335uh0WruS4,23
+autoslug/autoslug.py,sha256=Yx9vp_oj8737z7xyOJeYFxgQE_75Rmwtq7pera40UqY,9254
+autoslug/cli.py,sha256=AnVUMU_SDH4mZ1yoiiLwOOBlOB84I10-9Bg8w3piFgg,3691
+autoslug/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autoslug/config/arguments.py,sha256=z63Cowl7V7ORl8LYJ2FHZ6eBDBI32fX2bbBPM-uP_FE,5507
+autoslug/config/defaults.py,sha256=HihtvzhgvyXC9TTlLk_YvkYNT9U3pHy4tJ1y-5W4xJg,829
+autoslug/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autoslug/utils/filesystem.py,sha256=TRt93ATy02qZxa0w88MgkBD54krFwDo3IRVhPsddqU0,2857
+autoslug/utils/logging.py,sha256=KMh9dF7Y_lCnT4HS3KExhx5JLCjHYlctnX_K2clh7iQ,1292
+autoslug/utils/parser.py,sha256=bE9EA9pQY6pJRikJM4rajNKcWidbUQClN_K6iy-EeY8,3184
+autoslug-1.0.3.dist-info/METADATA,sha256=7VkY9b6h8jaSl-dQvjW5r2-gPrIhXFRbGEgYsLWPOcc,4731
+autoslug-1.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+autoslug-1.0.3.dist-info/entry_points.txt,sha256=jwoD_hV9EOgHzfa4mZdSJMr7m-upERYcHorVBq44WfU,47
+autoslug-1.0.3.dist-info/licenses/LICENSE.txt,sha256=Lo9nxiQuTJbt7nLPtX_LywWkGlPvfPcFRWiEc8Fru5g,1094
+autoslug-1.0.3.dist-info/RECORD,,
