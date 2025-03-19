@@ -1,0 +1,9 @@
+aws_solutions_constructs/aws_cloudfront_apigateway/__init__.py,sha256=gNcIyLYJ-st2ApBOomtUV4jfviN6eRZT1POKwS_MMFg,22312
+aws_solutions_constructs/aws_cloudfront_apigateway/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_solutions_constructs/aws_cloudfront_apigateway/_jsii/__init__.py,sha256=IiHSk4ZOUsxSndQ6LTjaXw5M-s4GdjPbtV8qxwPl2zU,1545
+aws_solutions_constructs/aws_cloudfront_apigateway/_jsii/aws-cloudfront-apigateway@2.78.1.jsii.tgz,sha256=FHWyTZPZfF9m58P7QOFKJmjMw-zsqj3uDGRoC-ucN8E,143150
+aws_solutions_constructs.aws_cloudfront_apigateway-2.78.1.dist-info/LICENSE,sha256=wnT4A3LZDAEpNzcPDh8VCH0i4wjvmLJ86l3A0tCINmw,10279
+aws_solutions_constructs.aws_cloudfront_apigateway-2.78.1.dist-info/METADATA,sha256=QukNg6jxkzW7NQz-pNmpPZF-7xJnLWM_7UPNfbABm-I,8088
+aws_solutions_constructs.aws_cloudfront_apigateway-2.78.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+aws_solutions_constructs.aws_cloudfront_apigateway-2.78.1.dist-info/top_level.txt,sha256=hi3us_KW7V1ocfOqVsNq1o3w552jCEgu_KsCckqYWsg,25
+aws_solutions_constructs.aws_cloudfront_apigateway-2.78.1.dist-info/RECORD,,
