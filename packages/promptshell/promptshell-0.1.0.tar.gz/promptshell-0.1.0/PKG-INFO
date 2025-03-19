@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: promptshell
+Version: 0.1.0
+Summary: LLM-powered Terminal Assistant
+Author-email: Kirti Rathi <kirtirathi282@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: openai>=1.12.0
+Requires-Dist: anthropic>=0.18.0
+Requires-Dist: google-generativeai>=0.3.0
+Requires-Dist: python-dotenv>=0.19.0
+Requires-Dist: grpcio==1.60.1
+Requires-Dist: groq
+Requires-Dist: pyperclip
+Requires-Dist: pyreadline3
+Requires-Dist: questionary
