@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+*.py[cod]
+*.egg
+*.egg-info
+*.tar.gz
+build
+htmlcov
+# setup.py build output dir
+dist/
+# stdeb output dir
+deb_dist/
