@@ -1,0 +1,1 @@
+This package is desing to be used in data evaluation of machine learning models. It is a python package that provides functions to evaluate the performance of machine learning models. The package is designed to be easy to use and to provide a wide range of evaluation metrics.
