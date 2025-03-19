@@ -1,0 +1,2 @@
+[console_scripts]
+ipv6offset = ipv6offset:main
