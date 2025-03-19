@@ -1,0 +1,67 @@
+Metadata-Version: 2.2
+Name: choco-get
+Version: 2
+Summary: A fast replacement for wget.
+Author: Chocolateisfr
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+
+# Custom Download Script
+
+This Python script is designed to download files with a progress bar, support for resuming downloads, and logs metadata about the download. The script can handle multiple downloads at once and displays real-time download speed and ETA.
+
+## Requirements
+
+To install the required package, use:
+
+```bash
+pip install choco-get
+```
+
+## Usage
+
+### Single Download
+
+To download a single file:
+
+```bash
+cget <url> <output_path>
+```
+
+### Multiple Downloads
+
+To download multiple files:
+
+```bash
+cget <url1> <output_path1> <url2> <output_path2> ...
+```
+
+### Proxy Support
+
+To use a proxy server:
+
+```bash
+cget <url> <output_path> --proxy <proxy_address>
+```
+
+## Features
+
+- Supports resuming downloads.
+- Displays a progress bar with percentage, download speed, and ETA.
+- Logs download metadata including URL, file name, size, and time taken.
+- Multi-threaded download for multiple files.
+- Handles retries in case of failures.
+
+## Dependencies
+
+- requests
+- rich
+
+## License
+
+MIT License

@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+cget/__main__.py
+choco_get.egg-info/PKG-INFO
+choco_get.egg-info/SOURCES.txt
+choco_get.egg-info/dependency_links.txt
+choco_get.egg-info/entry_points.txt
+choco_get.egg-info/requires.txt
+choco_get.egg-info/top_level.txt
