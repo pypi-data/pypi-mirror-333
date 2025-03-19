@@ -1,0 +1,11 @@
+open_deep_research/__init__.py,sha256=7s-wwvt9YfCWVuRkdK948IwFfbNRUJNAyKNGyCAJiAA,72
+open_deep_research/configuration.py,sha256=TYCtzRrnr0HHuBxtIKUZE-fxKBravuUxFRpPTGgytog,2253
+open_deep_research/graph.py,sha256=-Gsj0p_VUFpmcimxTUn0beB9X7Z0HblTrK_OJlE3sQw,19640
+open_deep_research/prompts.py,sha256=9lOr0S8NIvkNzDM4eMTYmNDQQI4MPdmcT5E3ID39BL0,7188
+open_deep_research/state.py,sha256=bVZEH-xU7vfk7SXUsbW2NAt_zCDJO4hh_m_udXY-KLI,2410
+open_deep_research/utils.py,sha256=7uBkBNMWTot2-vJBDYgp4w6zVE4arbumlKQodbKqMOY,36432
+open_deep_research-0.0.10.dist-info/LICENSE,sha256=NATLZpNZaO3v4RScm_y0S9hTLEN8AawJXsU7bhlc4RA,1065
+open_deep_research-0.0.10.dist-info/METADATA,sha256=gsRXDD9bMrfozksHwvT0EBnH62YY9XYeWKFIoKDKEt4,13007
+open_deep_research-0.0.10.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+open_deep_research-0.0.10.dist-info/top_level.txt,sha256=NfYDHX88uPHQxVy7YKx_wBLU7y19dIYF3oYYVFaBfW8,19
+open_deep_research-0.0.10.dist-info/RECORD,,
