@@ -1,0 +1,8 @@
+boto3
+mutagen
+certifi
+charset-normalizer
+idna
+redis
+requests
+markdown
