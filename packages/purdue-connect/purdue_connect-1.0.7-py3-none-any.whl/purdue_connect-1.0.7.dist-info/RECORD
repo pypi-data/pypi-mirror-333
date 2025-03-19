@@ -1,0 +1,12 @@
+purdue_connect/__init__.py,sha256=CbFUQLo4cPcBoEgBoLDw8pTW_NxV2E-Y5pGlebtH478,48
+purdue_connect/cli.py,sha256=Qlj19l453GgV3zxwGEUUakJb98_HU4URkZ6OYScgLbQ,2637
+purdue_connect/config.py,sha256=UWRzRcRIG_t90bvBUyjtY8pMKeyWADs-Ve3ScBwnFuY,414
+purdue_connect/connection.py,sha256=uiM-fDTt_ISiyYufwK5kjgebxOHNxAwaAKnFH39r980,7316
+purdue_connect/hotp_activation.py,sha256=OCAhgFNQ4rJ_RtGNTameWKw1BnlEBLlI6hBnTFj_it8,4180
+purdue_connect/otp.py,sha256=jc3UDX0m42atAO3-wU-GRZonGcPkXC2-Un7GxaIzi4Q,1746
+purdue_connect-1.0.7.dist-info/LICENSE,sha256=RafAM3-LvDzrjLzYYOk0SnMZ6cDUUJ0BATtT3_ZiPyI,1433
+purdue_connect-1.0.7.dist-info/METADATA,sha256=Jhj91GHLB67C6qpLeL_oQkEAI_UIYOqClSuSf2EU7T8,634
+purdue_connect-1.0.7.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+purdue_connect-1.0.7.dist-info/entry_points.txt,sha256=kpmiaZjz9rLWdnPXKA6I9XL4v_28Lu9S-rr-RFatZ2o,59
+purdue_connect-1.0.7.dist-info/top_level.txt,sha256=L1Z285q9IPWjFPSezHPWb723dIqPYU9qm-GYEbOcFco,15
+purdue_connect-1.0.7.dist-info/RECORD,,
