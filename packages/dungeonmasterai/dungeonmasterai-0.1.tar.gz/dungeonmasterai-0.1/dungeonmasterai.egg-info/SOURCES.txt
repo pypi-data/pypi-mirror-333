@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+dungeonmasterai/__init__.py
+dungeonmasterai.egg-info/PKG-INFO
+dungeonmasterai.egg-info/SOURCES.txt
+dungeonmasterai.egg-info/dependency_links.txt
+dungeonmasterai.egg-info/top_level.txt
