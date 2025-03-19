@@ -1,0 +1,1 @@
+loki_django_logger
