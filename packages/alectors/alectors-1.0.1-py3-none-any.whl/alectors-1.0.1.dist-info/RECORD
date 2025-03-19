@@ -1,0 +1,16 @@
+alectors/__init__.py,sha256=aGqsoiNb3bmLObzbJVpZjse-wVRsMtAGTuf5CT5p6Rg,18
+alectors/networks/__init__.py,sha256=qtWBSmbun-5_5yEanvRJRnd74e-mX2vBVKF2YVPPpQA,66
+alectors/networks/policy.py,sha256=c6CD2JjH_IrlaUJwezvzKQ0KKSP0FRIwpcSTPBQogCQ,2453
+alectors/networks/transformer.py,sha256=kPXyj_hM4VeTv5Sik8T3y3NKEJZcQ8CRRAmfRex5pZU,5553
+alectors/networks/value.py,sha256=ImVdESKNBOSuVPMgBTjC3AVV5hbF1Hn5_OfmvP9L15A,2239
+alectors/optimizers/__init__.py,sha256=Byd7rjukbsUCfCnRP5WGR1n9ASbW6d0RhFpPtfGFams,46
+alectors/optimizers/adam.py,sha256=ALIzOXBL70T4h4Rr4twjPuWmmTPCAFpPU7kw-msM8SA,775
+alectors/optimizers/upgd.py,sha256=ncDLbfqFN9Rndaq-q3_15a_yxoMKpyEDpjPdnXY7Sdo,2721
+alectors/ppo.py,sha256=vikz-LDaYM_xitv1IPsnIRTnvJacJeQ8JDyPHGcZrxg,7482
+alectors/utils/__init__.py,sha256=5z-xwagiydqZX9o-_PliCRFSAxiBbWqi1Rn7dvC9CaM,78
+alectors/utils/layer_generator.py,sha256=CTEJd3BDERrQSI_ubP7fheRhOirmkOcCXftjqovuUfE,767
+alectors/utils/ppomemory.py,sha256=8Lbc0rK5cKzK_7diSb2voSYZnHtiFzmX30SZ6ZuhVf4,1184
+alectors-1.0.1.dist-info/LICENSE.md,sha256=Qgz8MfgGnVXc8nY6iA3Wlg__Hhy8869aKJ2Rv_kCfGU,3911
+alectors-1.0.1.dist-info/METADATA,sha256=3SwHKb9QKQVSH1q-TnvPW70f3kDQzM_7IeZJTbqgguA,2922
+alectors-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+alectors-1.0.1.dist-info/RECORD,,
