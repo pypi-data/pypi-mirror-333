@@ -1,0 +1,10 @@
+tests/api.feature,sha256=zzeQc1GX9eIgUNa6maoq-a6hdg6RfYSecE5NufxFqIg,2057
+tests/behave.ini,sha256=DIiCeXNFXk_8amjLgGJ3AAh1XPtmfKqyBT_IqAIi_90,68
+tests/environment.py,sha256=xAVoNTDqQGMftaOOhZkwiOeLE0wrjZG_nMEexupWeA8,1048
+tests/single.feature,sha256=AOhB0FlKvUm-XDFHCjPyi9F9boiDr6Ib418ACUw-kpk,134
+tests/steps/api_insert.py,sha256=XcwxQeAduLG9XOdAuazbnheA21AD56wtqLUzv9NpzA0,15373
+tests/steps/test_data.py,sha256=x2cMFApDf0j2Ne_xOvfh31eDhpRShbsDfM7U9y6J-CE,865
+semantic_api-0.0.3.dist-info/METADATA,sha256=Ezy5VuibHpRZ6r3BD8u38bh40mkBaAOMaFjN4dBa2iA,1526
+semantic_api-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+semantic_api-0.0.3.dist-info/licenses/LICENSE,sha256=hQNdSQ5JD3TmzgScnDLFrwFybIj5bZgwHXXoz4sDX-w,10801
+semantic_api-0.0.3.dist-info/RECORD,,
