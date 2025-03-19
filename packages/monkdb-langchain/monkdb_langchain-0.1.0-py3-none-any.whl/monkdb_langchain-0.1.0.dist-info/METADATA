@@ -1,0 +1,89 @@
+Metadata-Version: 2.3
+Name: monkdb-langchain
+Version: 0.1.0
+Summary: MonkDB's integration with LangChain framework to work on use cases like Bots, RAG, Agentic AI, etc.
+License: MIT
+Keywords: ai,artificial intelligence,monkdb,embedding vectors,fulltext search,langchain,llm,machine learning,ml,rag,semantic search,vdbms,vector embeddings,vector database,vector search,vector store,bots,agentic ai
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: ML
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Communications
+Classifier: Topic :: Database
+Classifier: Topic :: Documentation
+Classifier: Topic :: Education :: Computer Aided Instruction (CAI)
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Printing
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Topic :: System :: Archiving
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Utilities
+Requires-Dist: langchain-community (<0.4)
+Requires-Dist: langchain-core (<0.4)
+Requires-Dist: langchain-postgres (==0.0.13)
+Requires-Dist: monk-orm (==1.0.1)
+Project-URL: Repository, https://bitbucket.org/atomstatedev/monkdb_langchain
+Project-URL: Source Code, https://bitbucket.org/atomstatedev/monkdb_langchain
+Description-Content-Type: text/markdown
+
+# MonkDB Integration with LangChain
+
+## Introduction
+
+This is MonkDB's intergation with `langchain` framework. 
+
+MonkDB vector datastore has a roadmap of adding support for dot product and cosine similarity. 
+
+We will be adding more flesh to document retriever system that's written on top of LangChain's base retriever class.
+
+It currently has features such as storing chat history, caches, and reading multiple collections of langchain. It leverages SQL Alchemy as its underlying base layer.
+
+## Installation
+
+One can use the regular pip to install monkdb's integration with langchain.
+
+```sh
+pip install monkdb-langchain
+```
+
+One can also use other python package managers. For example, below is the command to install with `Poetry`.
+
+```sh
+poetry add monkdb-langchain
+```
+
+
