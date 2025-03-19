@@ -1,0 +1,8 @@
+README.md
+setup.py
+vhd/__init__.py
+vhd/_vhd.py
+vhd.egg-info/PKG-INFO
+vhd.egg-info/SOURCES.txt
+vhd.egg-info/dependency_links.txt
+vhd.egg-info/top_level.txt
