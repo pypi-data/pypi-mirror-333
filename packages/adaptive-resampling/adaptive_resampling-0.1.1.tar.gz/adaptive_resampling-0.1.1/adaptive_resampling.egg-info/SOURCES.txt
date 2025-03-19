@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+adaptive_resampling/__init__.py
+adaptive_resampling/border_detection.py
+adaptive_resampling.egg-info/PKG-INFO
+adaptive_resampling.egg-info/SOURCES.txt
+adaptive_resampling.egg-info/dependency_links.txt
+adaptive_resampling.egg-info/requires.txt
+adaptive_resampling.egg-info/top_level.txt
