@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/geochemseek/__init__.py
+src/geochemseek/calculate_closure_T.py
+src/geochemseek/calculate_zr_in_rutile_T.py
+src/geochemseek/error_ellipse.py
+src/geochemseek.egg-info/PKG-INFO
+src/geochemseek.egg-info/SOURCES.txt
+src/geochemseek.egg-info/dependency_links.txt
+src/geochemseek.egg-info/requires.txt
+src/geochemseek.egg-info/top_level.txt

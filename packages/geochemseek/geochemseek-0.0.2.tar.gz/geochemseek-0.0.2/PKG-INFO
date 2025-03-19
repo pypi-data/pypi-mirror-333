@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: geochemseek
+Version: 0.0.2
+Summary: A python package for geochemical toolkit
+Home-page: https://github.com/QingFengMei/geochemseek
+Author: QingFengMei
+Author-email: qingfengmei@foxmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# geochemseek
+A python tool package for Geochemistry
