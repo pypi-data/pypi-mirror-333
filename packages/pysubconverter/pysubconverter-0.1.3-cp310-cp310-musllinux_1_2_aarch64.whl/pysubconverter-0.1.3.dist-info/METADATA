@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: pysubconverter
+Version: 0.1.3
+Summary: A wrapper from subconverter
+Author-Email: "l.feng" <msclock@126.com>
+License: MIT
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Project-URL: Homepage, https://github.com/msclock/pysubconverter
+Project-URL: Bug Tracker, https://github.com/msclock/pysubconverter/issues
+Project-URL: Discussions, https://github.com/msclock/pysubconverter/discussions
+Project-URL: Changelog, https://github.com/msclock/pysubconverter/releases
+Requires-Python: >=3.8
+Requires-Dist: typing-extensions>=3.10.0; python_version < "3.9"
+Requires-Dist: importlib_metadata>=1.4
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: appdirs==1.4.4
+Requires-Dist: filelock
+Provides-Extra: test
+Requires-Dist: pytest>=6; extra == "test"
+Requires-Dist: pytest-cov>=3; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest>=6; extra == "dev"
+Requires-Dist: pytest-cov>=3; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.6.0; extra == "docs"
+Requires-Dist: mkdocs-git-revision-date-localized-plugin>=1.2.6; extra == "docs"
+Requires-Dist: mkdocs-material>=9.5.29; extra == "docs"
+Requires-Dist: mkdocs-minify-plugin>=0.8.0; extra == "docs"
+Requires-Dist: mkdocs-same-dir>=0.1.3; extra == "docs"
+Description-Content-Type: text/markdown
+
+# pysubconverter
+
+<!-- SPHINX-START -->
+
+A wrapper from subconverter
+
+[![Documentation](https://img.shields.io/badge/Documentation-mkdocs-blue)](https://msclock.github.io/pysubconverter)
+[![License](https://img.shields.io/github/license/msclock/pysubconverter)](https://github.com/msclock/pysubconverter/blob/master/LICENSE)
+[![SS Badge](https://img.shields.io/badge/Serious%20Scaffold-pybind11-blue)](https://github.com/serious-scaffold/ss-pybind11)
+
+[![CI](https://github.com/msclock/pysubconverter/actions/workflows/ci.yml/badge.svg)](https://github.com/msclock/pysubconverter/actions/workflows/ci.yml)
+[![CD](https://github.com/msclock/pysubconverter/actions/workflows/cd.yml/badge.svg)](https://github.com/msclock/pysubconverter/actions/workflows/cd.yml)
+[![Renovate](https://github.com/msclock/pysubconverter/actions/workflows/renovate.yml/badge.svg)](https://github.com/msclock/pysubconverter/actions/workflows/renovate.yml)
+[![Semantic Release](https://github.com/msclock/pysubconverter/actions/workflows/semantic-release.yml/badge.svg)](https://github.com/msclock/pysubconverter/actions/workflows/semantic-release.yml)
+[![codecov](https://codecov.io/gh/msclock/pysubconverter/branch/master/graph/badge.svg?token=123456789)](https://codecov.io/gh/msclock/pysubconverter)
+
+[![Release](https://img.shields.io/github/v/release/msclock/pysubconverter)](https://github.com/msclock/pysubconverter/releases)
+[![PyPI](https://img.shields.io/pypi/v/pysubconverter)](https://pypi.org/project/pysubconverter/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pysubconverter)](https://pypi.org/project/pysubconverter/)
+
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![clang-format](https://img.shields.io/badge/clang--format-enabled-blue)](https://github.com/pre-commit/mirrors-clang-format)
+[![cmake-format](https://img.shields.io/badge/cmake--format-enabled-blue)](https://github.com/cheshirekow/cmake-format-precommit)
+[![codespell](https://img.shields.io/badge/codespell-enabled-blue)](https://github.com/codespell-project/codespell)
+[![markdownlint](https://img.shields.io/badge/markdownlint-enabled-blue)](https://github.com/igorshubovych/markdownlint-cli)
+[![shellcheck](https://img.shields.io/badge/shellcheck-enabled-blue)](https://github.com/shellcheck-py/shellcheck-py)
+
+<!-- writes more things here -->
+
+## Usage
+
+```python
+from pysubconverter import config_context, subconverter
+
+with config_context():
+    fake_sub = [
+        "ss://YWVzLTI1Ni1nY206VEV6amZBWXEySWp0dW9T@127.0.0.1:0123#fake 1",
+        "ss://YWVzLTI1Ni1nY206VEV6amZBWXEySWp0dW9T@127.0.0.1:0123#fake 2",
+        "ss://YWVzLTI1Ni1nY206VEV6amZBWXEySWp0dW9T@127.0.0.1:0123#fake 3",
+    ]
+    arguments: dict[str, str] = {
+        "target": "clash",
+        "url": "|".join(fake_sub),
+    }
+    result = subconverter(arguments)
+```
+
+
+## License
+
+MIT License, for more details, see the [LICENSE](https://github.com/msclock/pysubconverter/blob/master/LICENSE) file.
