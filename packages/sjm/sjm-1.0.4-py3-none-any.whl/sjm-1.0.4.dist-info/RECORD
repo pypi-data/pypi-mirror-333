@@ -1,0 +1,12 @@
+sjm/__init__.py,sha256=A-OMKrtvbbJtaouDk92VNCd2pKJpASl6JjKadnXuSMQ,1737
+sjm/cli.py,sha256=W2KLF_E_sjjSetARhX-EgSY7EJnGSRlpq7Yvh70E-ts,11691
+sjm/client.py,sha256=tIu77DUnACII4xC4dNL8Fe6v8CgMkNH9mvFeby1zONM,12979
+sjm/exceptions.py,sha256=OpAcUO5qxXy9QPfNHr8Om6g5c5GQEwBlVXac69q_d_A,7358
+sjm/models.py,sha256=fTDLHdo3nwEPScZ28lcEOmno62Af0mAwj1_-2eS7nCo,469
+sjm/utils.py,sha256=DCGndT9Gis72s37F5jHMv90GsvrbPXwHc4eDp5Hv88M,1239
+sjm-1.0.4.dist-info/LICENSE,sha256=2uTOysg7PoObGlSdMoZ7i0ugUt09hdEQ6e7rnBN25Dc,1068
+sjm-1.0.4.dist-info/METADATA,sha256=SpBVaRKEcdAU6h7vkJ2CUjQuP9DMU9ekLKmZCYRHJuA,7864
+sjm-1.0.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sjm-1.0.4.dist-info/entry_points.txt,sha256=mQeBb2qmG0t8MbRqMmqPucjGUP-fIiKy7KT7HeqwVMA,37
+sjm-1.0.4.dist-info/top_level.txt,sha256=_3KlFtfdTfis0WYYuuK0bENdlqxgN-lrJttDALe7vX0,4
+sjm-1.0.4.dist-info/RECORD,,
