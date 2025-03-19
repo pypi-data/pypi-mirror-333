@@ -1,0 +1,11 @@
+odoo/addons/crm_metadata/__init__.py,sha256=Ax4qLxdb9ATk05MF7cSQ0BdpYCpGVYFy9n4U4zODf9o,46
+odoo/addons/crm_metadata/__manifest__.py,sha256=6AHhWl9x-Zx5_hptDFVzUiTPettV0SQ68joOEexaeP4,452
+odoo/addons/crm_metadata/models/__init__.py,sha256=xplpCjqlnjDWWeOd_N7xEgdZfljRf6Ggtliz346dDqg,85
+odoo/addons/crm_metadata/models/crm_lead.py,sha256=_SeHE3nOzriEgdDL-clFmEJD8d-VgnKCbVtixe8JvPM,242
+odoo/addons/crm_metadata/models/crm_lead_metadata_line.py,sha256=1NBrVTo9Tk4DUHYMpK6k9wq1pjiYmw36hqJ3HBlCHV0,272
+odoo/addons/crm_metadata/security/ir.model.access.csv,sha256=0_k_ZFuF_2CGWBuPXEFXGTAK58MHUDu1WK4JZis2wk0,168
+odoo/addons/crm_metadata/views/crm_lead.xml,sha256=SbUc-Q60Ijn1iGEju23cjYyKt9lO8_VJ72rO0moa6eU,950
+odoo_addon_crm_metadata-16.0.0.1.1.dist-info/METADATA,sha256=WOJuOIbH8vRjnVvFZEdAmjKfs5U1bXigkSw3faPEMSM,375
+odoo_addon_crm_metadata-16.0.0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+odoo_addon_crm_metadata-16.0.0.1.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_crm_metadata-16.0.0.1.1.dist-info/RECORD,,
