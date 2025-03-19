@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "llm-to-cli"
+version = "0.1.5"
+description = "simple llm based tools to access from cli"
+authors = ["tikendraw <tikendraksahu1029@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "cli" },
+    { include = "core" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+litellm = "^1.59.9"
+click = "^8.1.8"
+rich = "^13.9.4"
+
+#[project.optional-dependencies]
+#agents = ["smolagents>=0.1.0"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+llm-cli = 'cli.main:cli'
