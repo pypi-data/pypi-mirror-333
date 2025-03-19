@@ -1,0 +1,14 @@
+claude_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claude_cli/cli.py,sha256=kvg3vJNc-csJSHyWe9MUuoLQUjHwBgaCs5Qgy3In-fg,3488
+claude_cli/config.py,sha256=l6b2Sf8JAd3VfZrlQq7_E3Njdy5Zrxi-uPHzdbb7128,1034
+claude_cli/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claude_cli/commands/chat.py,sha256=Xld3wr1xNqm_sND_GER05Z4HMaJoAKFMsX0OYg-tx6E,4705
+claude_cli/commands/manage.py,sha256=KinIsYo_EaLS3qT4afpKaUP5TowywdwTiyERYUctYjE,4416
+claude_cli/commands/query.py,sha256=ZVh4XReZbqhtVQkVwcQrpWksKpxkqC-lnnmNxb2g4mc,1507
+claude_cli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+claudeshell-0.1.0.dist-info/LICENSE,sha256=idlx7x5XV7fgYyDGog89J15_fdebrQxuHiJNsbgmXR0,1066
+claudeshell-0.1.0.dist-info/METADATA,sha256=hn_axrgOytWW3AYYB5u2XmkF9rcD-VDDhhZxmUWNGfk,3878
+claudeshell-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+claudeshell-0.1.0.dist-info/entry_points.txt,sha256=qXAZd7tafq0C5c47622S4T4XziexOt6yvZHTDvaygak,47
+claudeshell-0.1.0.dist-info/top_level.txt,sha256=3PsL4GUN_1bag7z4H1VzQeB-OQygtF5o3vRrREy2ju8,11
+claudeshell-0.1.0.dist-info/RECORD,,
