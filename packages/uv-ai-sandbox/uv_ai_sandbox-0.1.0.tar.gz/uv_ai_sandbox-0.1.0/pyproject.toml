@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel>=0.37.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uv-ai-sandbox"
+version = "0.1.0"
+description = "Sandboxed environment for running AI models with strict security boundaries"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "AI Sandbox Team" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    # Security and sandboxing
+    "restrictedpython>=8.0", # For restricting Python code execution
+    "pydantic>=2.0.0",       # For data validation and schema enforcement
+
+    # Path validation and security
+    "pathvalidate>=3.0.0", # For validating and sanitizing paths
+    "pathlib2>=2.3.7",     # Enhanced path operations (safer than os.path)
+    "path>=17.1.0",        # Path manipulation with safety features
+
+    # Process isolation
+    "psutil>=7.0.0", # For monitoring and managing processes
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "black>=25.1.0",
+    "bandit>=1.7.5", # Security-oriented static analyzer
+    "safety>=3.0.0", # Checks dependencies for vulnerabilities
+    "ruff>=0.9.10",
+    "build>=1.0.0",  # For building packages
+    "twine>=4.0.0",  # For uploading packages to PyPI
+]
+
+linux = [
+    "python-prctl>=1.8.1", # Linux process capabilities control
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ngmisl/uv-ai-sandbox"
+"Bug Tracker" = "https://github.com/ngmisl/uv-ai-sandbox/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["ai_sandbox"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
