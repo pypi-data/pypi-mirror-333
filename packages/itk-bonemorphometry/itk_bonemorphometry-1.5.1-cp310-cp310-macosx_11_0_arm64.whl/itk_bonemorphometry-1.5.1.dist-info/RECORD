@@ -1,0 +1,12 @@
+itk/BoneMorphometryPython.py,sha256=Qvpe1vDBQpw952ybr4-uOexBkD3lJ9c71FS0v-tkJK0,2430
+itk/Configuration/BoneMorphometryConfig.py,sha256=4XhRE8hIQkLLRBBGsuGYd6a2-eiXwVQ5QFVpEy4ulbY,4823
+itk/Configuration/BoneMorphometry_snake_case.py,sha256=QAVtt3LtRvjjlWdUqeHYO_dB1RtWHXbx6eGFjnS7Poo,231
+itk/_BoneMorphometryPython.so,sha256=W35WjY5ZEyV4n-zI3d6dgIY0t7T9Y9w1NZrCCNgUGhI,3198424
+itk/itkBoneCommonPython.py,sha256=7kj0ulWU6_xpFNs0RtIQh5nmoR9tImGY64Oje4-tqEo,53561
+itk/itkBoneMorphometryFeaturesFilterPython.py,sha256=txYeVbUTjj9OVFfcvxbEQd9n4jr_93GqugQ3cODRL7c,32138
+itk/itkBoneMorphometryFeaturesImageFilterPython.py,sha256=SreaJ3MZNdoG_-RK87hlbsdIwN3RwomrNmBFC7SwyKM,68423
+itk/itkReplaceFeatureMapNanInfImageFilterPython.py,sha256=Skrgw9ADexHgcsNnvbhyTeaisSj2YItJhn0Ox4hnMN4,14666
+itk_bonemorphometry-1.5.1.dist-info/METADATA,sha256=CKkzZZyI-Rc_rSPntluYzP16aQDTyJaGCuT5p7_IOc4,16169
+itk_bonemorphometry-1.5.1.dist-info/WHEEL,sha256=rOJaAfyDeYqpyZcvF2uMKwvjCoDaR0tVOjIX1nCiRq8,114
+itk_bonemorphometry-1.5.1.dist-info/licenses/LICENSE,sha256=qsc7MUj20dcRHbyjIJn2jSbGRMaBOuHk8F9leaomY_4,11360
+itk_bonemorphometry-1.5.1.dist-info/RECORD,,
