@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+medicalimageanalysis/__init__.py
+medicalimageanalysis/data.py
+medicalimageanalysis/reader.py
+medicalimageanalysis.egg-info/PKG-INFO
+medicalimageanalysis.egg-info/SOURCES.txt
+medicalimageanalysis.egg-info/dependency_links.txt
+medicalimageanalysis.egg-info/requires.txt
+medicalimageanalysis.egg-info/top_level.txt
