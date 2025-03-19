@@ -1,0 +1,15 @@
+peter_explains/__init__.py,sha256=nXtqu2rQhbzElVkmfRnvbp6-Bzz8xJ-87ANpMhNmDAw,148
+peter_explains/api_key.py,sha256=itkCsvGuqqemke14o-G_cIfty26oCiXIRJgY5NcXgK0,2648
+peter_explains/cache.py,sha256=HHK8wUmtnGnTtaYU9Ix490ybZJ7FGeLz3_2kbbBz1rE,2895
+peter_explains/format.py,sha256=5ACyD4iEbU5b3bWQ7xhczjIrDwuv_w9Jla4uFJIjpXA,1423
+peter_explains/main.py,sha256=K0CfZqW7913zxe5OIXIWnwKxVRbhBVB7tl2iJSf2n-s,2805
+peter_explains/messages.py,sha256=BodypMVGC2Gt-_GnMPlUzzVzyiaBaE6M_5QB4U4nc9M,2170
+peter_explains/peter_ai.py,sha256=uxPAXcmSKAM30qoK2xe8YlbimI1pA8n4iswCJfNyTuE,5232
+peter_explains/prompts.py,sha256=G6v0W4tewZhK_GCFGgmSulr9p0-spEVFQpZnm1GwWug,4276
+peter_explains/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+peter_explains/schema.py,sha256=BYaVSqJ-YkyLKGO8M8TREhT9Pcpmyzs-3ZrTSJmFu_4,2371
+peter_explains/utils.py,sha256=nt4o5jSS_6IvzFJ_kv8qVFtHzKcNl8ZGrFkEdaxL0k0,3442
+peter_explains-0.0.12.dist-info/METADATA,sha256=PQ7LhU4hKJrdRN4Jx1LMt4gfg_MNu2_9suKjIpJQ5Gk,5770
+peter_explains-0.0.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+peter_explains-0.0.12.dist-info/entry_points.txt,sha256=azXsXY2aWQ4-GSbHvT1xDo4o3J0GMEl_MVjLZnv1vB0,52
+peter_explains-0.0.12.dist-info/RECORD,,
