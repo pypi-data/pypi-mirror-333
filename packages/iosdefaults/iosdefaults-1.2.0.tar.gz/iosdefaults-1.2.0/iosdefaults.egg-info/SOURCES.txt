@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+iOSDefaults/__init__.py
+iOSDefaults/cli.py
+iosdefaults.egg-info/PKG-INFO
+iosdefaults.egg-info/SOURCES.txt
+iosdefaults.egg-info/dependency_links.txt
+iosdefaults.egg-info/entry_points.txt
+iosdefaults.egg-info/requires.txt
+iosdefaults.egg-info/top_level.txt
