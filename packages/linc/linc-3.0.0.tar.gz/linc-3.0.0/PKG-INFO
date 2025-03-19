@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: linc
+Version: 3.0.0
+Summary: A package to handle LICEL Binary format
+Author-email: Juan Diego <jdlar@eafit.edu.co>
+License: MIT
+Requires-Python: <3.14,>=3.10
+Requires-Dist: netcdf4<2,>=1.6.2
+Requires-Dist: numpy<2,>=1.23.1
+Requires-Dist: pydantic<2,>=1.10.2
+Requires-Dist: tomli<3,>=2.0.1
+Requires-Dist: typer<1,>=0.15.1
+Description-Content-Type: text/markdown
+
+# Linc
+---
+Linc is a fast way to convert [Licel Raw Format](https://licel.com/raw_data_format.html) into netCDF4 to handle data easier.
