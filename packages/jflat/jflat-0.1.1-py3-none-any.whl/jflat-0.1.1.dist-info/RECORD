@@ -1,0 +1,11 @@
+jflat/__about__.py,sha256=0yK8Nnw1wqSIqJkZUMVyX6yRjP0fd6k2zH3XEw0OGII,23
+jflat/__init__.py,sha256=8KVuuiEAnCBJ26eV8j_9Gc3J3RlER5PT0foa88MsIeE,144
+jflat/flatten.py,sha256=idAR7j642eoClJc_QMTZQVp7NoX8rVPa8dwnJ10W6x0,1769
+jflat/unflatten.py,sha256=XT_NCzvFU_Kpy-8MnMc0O-XKKttyY4edQbFJ4LN7w1g,3963
+jflat/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jflat/tests/test_flatten.py,sha256=wWcykRKbz8iWfD4Q5jUjhiFJS-Acb1nQd6EWyToh5wM,2600
+jflat/tests/test_unflatten.py,sha256=KygPP2kgSufSld5FCslXmzhanxytyK9rqwMz2kmKq14,2736
+jflat-0.1.1.dist-info/METADATA,sha256=KFHjZ0ELBwj2sPm6Sd0WsCVncBvsNKwy24ARTghDB9I,2698
+jflat-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jflat-0.1.1.dist-info/licenses/LICENSE,sha256=5oc3fYmanF8vrDh_sr9HgCxwsJv2sUvGvBIocbfwk08,1077
+jflat-0.1.1.dist-info/RECORD,,
