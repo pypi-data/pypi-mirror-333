@@ -1,0 +1,100 @@
+@startuml
+hide empty members
+skinparam class {
+    BackgroundColor<<BlankNodeOrIRI>> white
+}
+
+class "dcat:Dataset" as dataset {
+    dcterms:identifier xsd:string 1..1
+    dcterms:description xsd:string 1..1
+    dcat:version xsd:str
+    dcterms:temporal xsd:any
+    dcterms:spatial xsd:any
+    dcterms:modified xsd:date
+}
+
+class "dcat:DatasetSeries" as series
+
+class "dcat:Catalog" as catalog{
+    dcterms:title xsd:string 1..1
+    dcterms:identifier xsd:string 1..1
+    dcterms:description xsd:string
+}
+
+class "foaf:Agent" as agent <<BlankNodeOrIRI>>{
+    foaf:name xsd:string
+
+}
+
+class "dcterms:License" as license <<BlankNodeOrIRI>>{
+    dcterms:title xsd:string
+}
+
+class "vcard:Kind" as kind <<BlankNodeOrIRI>>{
+    vcard:hasEmail xsd:any
+}
+
+class "dcterms:Location" as location <<BlankNodeOrIRI>>{
+    skos:prefLabel xsd:string
+}
+
+class "dcat:Distribution" as distribution {
+    dcterms:identifier xsd:string 1..1
+    dcat:accessURL rdf:Resource 1..1
+    dcterms:format xsd:any
+    dcat:version xsd:string
+    dcterms:modified xsd:date
+
+}
+
+class "skos:Concept" as concept {
+    dcterms:identifier xsd:string 1..1
+    skos:prefLabel xsd:string 1..1
+    skos:definition xsd:string
+    skos:example xsd:string
+    skos:altLabel xsd:string
+
+}
+
+class "dqv:Metric" as metric {
+    dcterms:identifier xsd:string 1..1
+    skos:prefLabel xsd:string 1..1
+    skos:definition xsd:string
+    dqv:expectedDataType rdf:Resource
+    dqv:inDimension rdf:Resource
+}
+
+class "dcterms:PeriodOfTime" as periodoftime <<BlankNodeOrIRI>>{
+    time:hasBeginning xsd:any
+    time:hasEnd xsd:any
+}
+
+class "dqv:QualityMeasurement" as qualitymeasurement {
+    dcterms:identifier xsd:string 1..1
+    dqv:value xsd:any
+    prov:generatedAtTime xsd:dateTime
+
+}
+
+dataset --> distribution : "dcat:distribution"
+dataset --> dataset : "prov:wasDerivedFrom"
+dataset --> concept : "dcat:theme"
+dataset --> agent :"dcat:publisher"
+dataset --> kind : "dcat:contactPoint"
+dataset --> license :"dcterms:License"
+dataset -->periodoftime : "dcterms:temporal"
+dataset --> location : "dcterms:spatial"
+
+dataset <|-- series
+
+dataset --> series : "dcat:inSeries"
+
+qualitymeasurement --> dataset : "dqv:computedOn"
+qualitymeasurement --> metric : "dqv:inDimension"
+
+catalog --> license :"dcterms:License"
+catalog --> agent :"dcat:publisher"
+catalog --> dataset : "dcat:resource"
+
+
+@enduml
