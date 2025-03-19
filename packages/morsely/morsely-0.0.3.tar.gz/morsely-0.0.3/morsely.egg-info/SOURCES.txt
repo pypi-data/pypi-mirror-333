@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+morsely/__init__.py
+morsely/morse_decoder.py
+morsely/morse_encoder.py
+morsely/morse_utils.py
+morsely.egg-info/PKG-INFO
+morsely.egg-info/SOURCES.txt
+morsely.egg-info/dependency_links.txt
+morsely.egg-info/requires.txt
+morsely.egg-info/top_level.txt
+tests/__init__.py
+tests/t_utility.py
+tests/test_decoder.py
+tests/test_encoder.py
