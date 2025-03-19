@@ -1,0 +1,5 @@
+fcio-0.7.2.dev3.dist-info/RECORD,,
+fcio-0.7.2.dev3.dist-info/WHEEL,sha256=G_dfdI4VdFFEoV4o13vwbe2p3zT46AbukmXzkfYuyPI,122
+fcio-0.7.2.dev3.dist-info/METADATA,sha256=zWgMy8A5_IcOWw9HdPN3gjnqBVgEhEbDd6sHDzIyGXc,3345
+fcio/__init__.py,sha256=v2hTPUAB-iK3eBZrUNLzcEcnIvj1BI8cnLCCQP0DJ4k,649
+fcio/fcio.cpython-311-darwin.so,sha256=JM0RLzy1z9BXXBTA15XZ-NGYo1H4-CFzzp1h3ruBV1Y,661560
