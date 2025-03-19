@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/loopstructuralviusualisation/__init__.py
+src/loopstructuralviusualisation.egg-info/PKG-INFO
+src/loopstructuralviusualisation.egg-info/SOURCES.txt
+src/loopstructuralviusualisation.egg-info/dependency_links.txt
+src/loopstructuralviusualisation.egg-info/top_level.txt
