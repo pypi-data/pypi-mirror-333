@@ -1,0 +1,5 @@
+setup.py
+termoscart.egg-info/PKG-INFO
+termoscart.egg-info/SOURCES.txt
+termoscart.egg-info/dependency_links.txt
+termoscart.egg-info/top_level.txt
