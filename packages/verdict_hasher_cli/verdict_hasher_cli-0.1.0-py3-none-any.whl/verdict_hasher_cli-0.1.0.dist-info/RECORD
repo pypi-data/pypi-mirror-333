@@ -1,0 +1,10 @@
+verdict_hasher/__init__.py,sha256=n24kSoeEQVHpuaQx9i1aGznhzdQVllNy1ztfz2xn__c,123
+verdict_hasher/__main__.py,sha256=2kRiTwwV2I2npODFtLfyfAS_pEkMhTcm3NZg2Gsm9no,369
+verdict_hasher/file_config.py,sha256=rmRWHDiGvfEAmm6U1XzpGgFll49Qy2-KHTlZcUdjDzY,518
+verdict_hasher/hash_file.py,sha256=Q7J3D9wbF21_5BbEu_Zds7oiGLe1HZY1Q0STXaojvoI,3234
+verdict_hasher/main.py,sha256=Yfpx09sHmsvt_A7Q1xaAeLrGU_zicE4DMFBY7qd2SzI,976
+verdict_hasher/path_config.py,sha256=VHJXa26oYhGpYPGFJLWfyNoi9FtHySuwUDlxDQlGiq0,639
+verdict_hasher_cli-0.1.0.dist-info/METADATA,sha256=7gqQGmumzc_1OpOTLDTPhvB-pj8J7prfWxp0RiQkBow,1757
+verdict_hasher_cli-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+verdict_hasher_cli-0.1.0.dist-info/top_level.txt,sha256=TWstFSM7SBLMzirsaBoE-t88JwEQjcDncB2eDbqZc3U,15
+verdict_hasher_cli-0.1.0.dist-info/RECORD,,
