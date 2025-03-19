@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: minitraceback
+Version: 0.1.2
+Summary: A minimal traceback formatter for Python.
+Project-URL: Homepage, https://github.com/methane/minitraceback
+Author-email: Inada Naoki <songofacandy@gmail.com>
+License: MIT
+License-File: LICENSE.txt
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# minitraceback
+
+A minimal traceback formatter for Python.
