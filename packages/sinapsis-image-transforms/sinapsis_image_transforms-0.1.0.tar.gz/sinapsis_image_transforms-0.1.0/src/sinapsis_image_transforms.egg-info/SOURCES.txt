@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/sinapsis_image_transforms/__init__.py
+src/sinapsis_image_transforms.egg-info/PKG-INFO
+src/sinapsis_image_transforms.egg-info/SOURCES.txt
+src/sinapsis_image_transforms.egg-info/dependency_links.txt
+src/sinapsis_image_transforms.egg-info/requires.txt
+src/sinapsis_image_transforms.egg-info/top_level.txt
+src/sinapsis_image_transforms/templates/__init__.py
+src/sinapsis_image_transforms/templates/albumentations_transforms.py
