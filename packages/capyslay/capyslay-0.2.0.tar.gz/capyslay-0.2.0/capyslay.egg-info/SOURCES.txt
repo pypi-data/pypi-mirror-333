@@ -1,0 +1,8 @@
+pyproject.toml
+capyslay/__init__.py
+capyslay/module1.py
+capyslay/module2.py
+capyslay.egg-info/PKG-INFO
+capyslay.egg-info/SOURCES.txt
+capyslay.egg-info/dependency_links.txt
+capyslay.egg-info/top_level.txt
