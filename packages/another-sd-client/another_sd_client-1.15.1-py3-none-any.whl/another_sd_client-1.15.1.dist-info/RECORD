@@ -1,0 +1,10 @@
+sdclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdclient/client.py,sha256=KUrTIq703svq-GxHiHtIIMMK8vIb8hhnTHbZSckTkZQ,8794
+sdclient/date_utils.py,sha256=o5Bp8d--7cmB0W5scGfZ5bVn2Yv3sBN33814dkBe-q0,1548
+sdclient/exceptions.py,sha256=ODnFErE_eEN372Oiuypfpy92HSO9C7kB7xyyXNuibR4,408
+sdclient/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdclient/requests.py,sha256=VGMEEGKUj0MwszcwvGj_HZrImmdXKWftnDjztiugy1E,8178
+sdclient/responses.py,sha256=kUj7xarNME8frNbmvZO-ID5VLHpwzlVZ8n7G5oPCocU,6525
+another_sd_client-1.15.1.dist-info/METADATA,sha256=Qe2R0FCmn-Gxs17kvJZEByhwbfFQ45yosTwZuv2Qe3Q,7097
+another_sd_client-1.15.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+another_sd_client-1.15.1.dist-info/RECORD,,
