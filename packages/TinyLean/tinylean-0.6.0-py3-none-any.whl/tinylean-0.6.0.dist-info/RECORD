@@ -1,0 +1,16 @@
+TinyLean/__init__.py,sha256=za89iH5BI-vH_o73N_22tYVzbZwNR9TUXD609wQ-Qgw,1618
+TinyLean/__main__.py,sha256=eWvMK3m89b5OUaG8YaFIBMnX1LAHX_RqhRS1-VLc60k,2308
+TinyLean/ast.py,sha256=nDuKBUwY9ywToYjwbw0rThYir4DC_8Ekf6GnLkonZ3E,20877
+TinyLean/grammar.py,sha256=Kb1pDjEvddEadwZa50d6ZEkjdJ31oORJfISaM_dd0GE,2977
+TinyLean/ir.py,sha256=wv_xVvRI8Kh4NW1ntwdGmBrcWEjZMJFudLqLhcS7Z0I,11824
+TinyLean/tests/__init__.py,sha256=uZFlnVYeZVrPEY-S1R_h34nI8zd1n9R_VUTAERRoZCM,396
+TinyLean/tests/test_checker.py,sha256=WEB61xbb3hi1xil2Ashc6C66a54JVvkW1vOS2uqDDYc,24926
+TinyLean/tests/test_main.py,sha256=FjFS-GmcUbg93wZwVYV7ZRldPLP6DcVRh_OL9dCppgU,4532
+TinyLean/tests/test_parser.py,sha256=902lzfHYwt8yP_zesZagKI7-2mW_1KHbCFgePxpBV2A,15803
+TinyLean/tests/test_resolver.py,sha256=WBRfyOWl_DAu68pYMT7utoPbZq0ld892d8gMPqI7Vc4,6041
+tinylean-0.6.0.dist-info/LICENSE,sha256=J1lFqWR4tbHH6fvDvB1i7XvdnuDa6xwnZU-FoGaWWHM,1062
+tinylean-0.6.0.dist-info/METADATA,sha256=NSGwCtlfpOe6sH40JBsD_R84hks-K_pCiCaFOPD-2xk,3554
+tinylean-0.6.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+tinylean-0.6.0.dist-info/entry_points.txt,sha256=Xmpo7KQWcdXxvPpZmEqKZF5fzbGNX60tVAaR0zGveEU,52
+tinylean-0.6.0.dist-info/top_level.txt,sha256=nMazVHL98eUS-sSMEavARhZSaF7Wg0kKLW0gqlnL7kw,9
+tinylean-0.6.0.dist-info/RECORD,,
