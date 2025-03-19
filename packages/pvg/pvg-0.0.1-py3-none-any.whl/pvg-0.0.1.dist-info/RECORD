@@ -1,0 +1,8 @@
+pvg/__about__.py,sha256=Uzgh71FkbgS9gNQ1_dkgEu0bNAqT4cTVaZ73mB2d9bA,120
+pvg/__init__.py,sha256=MWstLG5-qfbxrQzI6WzsiBb7hiLwPLyUARztsL29MLA,191
+pvg/cli.py,sha256=UhWSm5xnfUVGXrsxSeAigF9cnhUHrztKIT92lxowNvE,6502
+pvg-0.0.1.dist-info/METADATA,sha256=_qjorexK9FDWGdSWZKK9qNHuKQ-XhRXKRnxF0i7x7QI,4240
+pvg-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pvg-0.0.1.dist-info/entry_points.txt,sha256=JYPuGlmXJer-yLLYrB755SAljLo2tFsTiDmK5teWCSg,36
+pvg-0.0.1.dist-info/licenses/LICENSE.txt,sha256=ZOZ8BCu8Z3M-tdmivS7pusVxfPSBfPDpCQ5J-qOe8P4,1090
+pvg-0.0.1.dist-info/RECORD,,
