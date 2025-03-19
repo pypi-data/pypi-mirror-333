@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: lifestay
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: chengyin
+Author-email: ycheng_sjtu@foxmail.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: ipykernel (>=6.29.5,<7.0.0)
+Requires-Dist: jinja2 (>=3.1.5,<4.0.0)
+Requires-Dist: lifelines (>=0.30.0,<0.31.0)
+Requires-Dist: mypy (>=1.15.0,<2.0.0)
+Requires-Dist: nbformat (>=5.10.4,<6.0.0)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: scikit-learn (>=1.6.1,<2.0.0)
+Project-URL: Homepage, https://github.com/yinsn/LifeStay
+Project-URL: Repository, https://github.com/yinsn/LifeStay.git
+Description-Content-Type: text/markdown
+
+# LifeStay
+
