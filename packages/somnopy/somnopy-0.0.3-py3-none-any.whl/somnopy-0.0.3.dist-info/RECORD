@@ -1,0 +1,12 @@
+somnopy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+somnopy/event_detection.py,sha256=FmQbMYbA1u0C9A1QwydvfZEvwH8i_GZ66-zOicCdr-s,41219
+somnopy/metrics.py,sha256=M8Hp0xuM9340arzMSS-WmwX9rzU6e5nz5f_JMWi3Aio,37217
+somnopy/preprocessing.py,sha256=QNXaWF9ziCdhchGnZguBnRo79cUx7QQT2xg_PGtG_qI,4969
+somnopy/somnopy.py,sha256=iALw-zMR4BbwN9zlZuwQuTzdOO9CyPROYuO6UyF_s18,4651
+somnopy/utils.py,sha256=UtX3DLX3vBlC0SBWKERrKLHykoUZqSjQdepO4HGYLRs,7270
+somnopy/tests/test_somnopy.py,sha256=pgpm6Cri0euzJMFubCwCTvwFSKe-aztFUb2iQENsae4,429
+somnopy-0.0.3.dist-info/LICENSE,sha256=DgKQjOr7TiW3JNubZMAxw-Txb9_86FPsaAs5_SCAw78,246
+somnopy-0.0.3.dist-info/METADATA,sha256=TaL_w-m8DBY_b45sXe5M2Gi3wJnN807oH6lsv0WNylU,659
+somnopy-0.0.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+somnopy-0.0.3.dist-info/top_level.txt,sha256=0uHx-2GvXB7f6XsrPTTphuUTNtaPjjIYWfEdTrE5hZ4,8
+somnopy-0.0.3.dist-info/RECORD,,
