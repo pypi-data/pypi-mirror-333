@@ -1,0 +1,19 @@
+[project]
+name = "bayes-sizer"
+version = "0.0.2"
+description = "A Bayesian sample size calculator"
+readme = "README.md"
+requires-python = ">=3.12.0"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pytest",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.7.5",
+    "seaborn>=0.13.2",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/allanbutler/bayes-sizer"
+Issues = "https://github.com/allanbutler/bayes-sizer/issues"
