@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "numpy", "lmdb", "msgpack", "pymongo", "onnxruntime", "onnxruntime_extensions"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatmemorydb-lmdb-onnx"
+version = "1.1"
+authors = [
+  { name="Carlo Moro", email="cnmoro@gmail.com" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+  "lmdb",
+  "msgpack",
+  "pymongo",
+  "onnxruntime",
+  "onnxruntime_extensions"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cnmoro/ChatMemory"
+"Bug Tracker" = "https://github.com/cnmoro/ChatMemory/issues"
