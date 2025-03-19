@@ -1,0 +1,7 @@
+ktxo/scraper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ktxo/scraper/_about.py,sha256=6550rcZvXsBE40nomJc_BSk0bjeLcZUMnI89lZJyrQc,314
+ktxo/scraper/base_scraper.py,sha256=Tc8GUv74LlGyp6U_Hcr0nrX75vRzs1r8HLcBczwBVsI,24606
+base_scraper-1.0.2.dist-info/METADATA,sha256=3oJP-VesUutYR83Gl2KXjgyYRKLl-Us-aPWaU_l4yVc,449
+base_scraper-1.0.2.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+base_scraper-1.0.2.dist-info/top_level.txt,sha256=x-MoXr4XM0ZjbIf5aWwi254NDIPa2vjJAw5KKLMzuEE,5
+base_scraper-1.0.2.dist-info/RECORD,,
