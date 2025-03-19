@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: fssnap
+Version: 0.8.1
+Project-URL: Homepage, https://anvilsecure.com
+Description-Content-Type: text/markdown
+
+# File System Snapper
+
+fs-snapper consists of two tools. The first is a Rust-written CLI tool that enables one to create databases with filesystem path trees and their accompanying UNIX permission related information. This allows one to diff the databases to easily identify changes over time for systems. The second tool is a Python GUI (Qt/PySide6) tool which allows one for easier navigation of filesystem trees and examining UNIX permissions.
+
+# Installation
+
+This assumes you have Python as well as a Rust toolchain installed. The easiest is to build within a python virtual environment as follows:
+
+```
+$ python3 -m venv env
+$ source env/bin/activate
+(env) $ python3 -m pip install .
+Processing /home/gvb/fs-snapper
+  Installing build dependencies ... \
+...
+Successfully installed fssnap-0.1.0
+```
+
+You can then run both tools by executing `fssnap-cli` and `fssnap-gui` respectively:
+
+```
+(env) $ fssnap-cli
+Usage: fssnap-cli [OPTIONS] <COMMAND>
+....
+(env) $ fssnap-gui
+...
+```
+
+# Usage
+
+```
+$ fssnap-cli index --db test.db --paths /etc
+$ fssnap-cli calc-perms --db test.db --user gvb --output test_gvb.db
+$ fssnap-gui test_gvb.db
+```
+
+# Building portable cli
+
+The project is structured as a backend library that is used as a Python extension for the GUI using PyO3. This means that if you want a portable build to dump the binary on a target Linux machine without having to deal with potential GLIBC versioning errors you should build against musl libc. Just blindly running `cargo build` then will fail as musl does not support dynamically linked libraries so the Python extension module cannot be built then. To just build the cli for the musl target use the following:
+
+```
+cargo build --release --target x86_64-unknown-linux-musl --bin fssnap-cli
+```
+
+The resulting static binary will be found at `./target/x86_64-unknown-linux-musl/release/fssnap-cli`.

@@ -1,0 +1,6 @@
+graft python
+graft rust
+include Cargo.toml build.rs
+include target/release-lto/fssnap-cli
+global-exclude */__pycache__/*
+global-exclude *.pyc
