@@ -1,0 +1,27 @@
+[build-system]
+requires = ["maturin>=1.8,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "vegalib"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+authors = [
+  { name="jmishin"},
+]
+description = "A small library for derivatives pricing"
+readme = "README.md"
+
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "python"
