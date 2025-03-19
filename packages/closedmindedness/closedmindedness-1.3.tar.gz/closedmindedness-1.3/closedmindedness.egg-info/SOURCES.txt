@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+closedmindedness.py
+setup.py
+closedmindedness.egg-info/PKG-INFO
+closedmindedness.egg-info/SOURCES.txt
+closedmindedness.egg-info/dependency_links.txt
+closedmindedness.egg-info/requires.txt
+closedmindedness.egg-info/top_level.txt
