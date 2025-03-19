@@ -1,0 +1,11 @@
+torch
+torchvision
+rsp-common>=0.0.29
+numpy
+opencv-python
+pandas
+seaborn
+googledriver
+huggingface-hub
+datasets
+gdown
