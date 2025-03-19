@@ -1,0 +1,10 @@
+mcp_openapi_proxy/__init__.py,sha256=-zjSHRiaWNT-C2v_ejpT6UHB4Ke9V790p5r7-8tHuss,1537
+mcp_openapi_proxy/server_fastmcp.py,sha256=IUr3Q9O_bOhoa3TYpJ5AC5V7lTlulckSq6pakAwkz_o,11342
+mcp_openapi_proxy/server_lowlevel.py,sha256=k6zvWx5DjnPW9q3GNnJngBP6jteazPvCgC4MPGwkx1Q,12933
+mcp_openapi_proxy/utils.py,sha256=2UQUcoDeW2xmfXXW0GizzyR2TtMC2woJ1_b6FocxGjM,9557
+mcp_openapi_proxy-0.1.1741722658.dist-info/LICENSE,sha256=PjkyMZfBImLXpO5eKb_sI__W1JMf1jL51n1O7H4a1I0,1062
+mcp_openapi_proxy-0.1.1741722658.dist-info/METADATA,sha256=94s-latybRc6q2_nJ2btMeo4kq-KefPfPSHRuaPfHks,15753
+mcp_openapi_proxy-0.1.1741722658.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mcp_openapi_proxy-0.1.1741722658.dist-info/entry_points.txt,sha256=JaJ7mFCz9Id44LHQG0PWqfhhN8queWpUalkuSdi7XMY,61
+mcp_openapi_proxy-0.1.1741722658.dist-info/top_level.txt,sha256=oLvmu0l9_s8gAkTCT5921baWF27hlPDr1i2SIopuOc8,18
+mcp_openapi_proxy-0.1.1741722658.dist-info/RECORD,,
