@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: imuthes-crypt
+Version: 0.0.0a2
+Summary: Crypt Tools
+Author: Bernhard Radermacher
+Author-email: bernhard.radermacher@netlink-consulting.com
+Requires-Python: >=3.13,<3.14
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click-default-group (>=1.2.4)
+Requires-Dist: cryptography (>=44.0.2)
+Requires-Dist: imuthes (>=0.0.0a0)
+Description-Content-Type: text/markdown
+
+# imuthes-crypt
+
+**Warning - very ALPHA!!**
+
+
