@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: odrivein
+Version: 0.0.2
+Summary: Easier and more user friendly interface to the Odrive
+Author: Jouke de Jong
+Author-email: jouke@stil-technology.com
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: odrive
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+## Create package
+Step one:
+python -m pip install -U pip setuptools wheel
+
+Step two:
+python setup.py bdist_wheel
+
+Step three:
+pip install .
+
+## Upload to testPyPi
