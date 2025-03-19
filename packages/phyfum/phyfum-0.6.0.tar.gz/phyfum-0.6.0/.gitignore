@@ -1,0 +1,7 @@
+todo.md
+dist/
+.snakemake
+__pycache__
+.pytest_cache
+.DS_Store
+tests/data/test
