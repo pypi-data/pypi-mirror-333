@@ -1,0 +1,13 @@
+YokAPI/__init__.py,sha256=BUl9vDx3uAH2FsYKU7azGvv1fZG74bQ3GpbpcFJU2Ks,84
+YokAPI/models/__init__.py,sha256=XGnLMrd5POxAn9DL0sfKRPOLc6kXLPVhXsAylP4P7-A,1402
+YokAPI/models/data_model.py,sha256=DawOeMDSlBmPJna3Fbx4EyE4eL-6KMeaqyY1nOwinio,12535
+YokAPI/scraper/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+YokAPI/scraper/fetcher.py,sha256=cZee022Z7cBDLJgqqwvYc0nqGDktDKewXzYkxR9VyhA,2159
+YokAPI/scraper/parser.py,sha256=z2iMXfCOVypCDcZlAiLgyCPGfxsGTMPL8yakl7yfVBg,60710
+YokAPI/scraper/programs.py,sha256=IFco9859IfkHQkz9L_VIY2i8nBxwuFsRckE3ae8j3aI,15964
+YokAPI/scraper/selectors.py,sha256=e7fTwqJgyM-waCXHt_2hP5c5U2c5J1rZMgNqve4VG6U,32191
+yokapi-1.1.0.dist-info/LICENSE,sha256=apeOOPJBPub8l5OLRs0N6q0UF5hzs5Py-vRkjzZ-onY,1082
+yokapi-1.1.0.dist-info/METADATA,sha256=p8W-wSmlqd33Nleg56y6WBFi7-yU52H-Zlvs27jnR9U,46150
+yokapi-1.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+yokapi-1.1.0.dist-info/top_level.txt,sha256=B6FXWH5UtxihU7wZX9TPFG0JMtQ1ppAZQXaFedeLkdU,7
+yokapi-1.1.0.dist-info/RECORD,,
