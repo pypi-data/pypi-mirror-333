@@ -1,0 +1,3 @@
+[console_scripts]
+post_install=post_install:compile_typescript
+
