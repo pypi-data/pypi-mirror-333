@@ -1,0 +1,19 @@
+[project]
+name = "pandoras"
+version = "0.1.1"
+description = "Undo/Redo functionality for Pandas DataFrames using Apache Arrow"
+authors = [
+    {name = "al2m4n",email = "al2m4n@gmail.com"}
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/al2m4n/pandoras"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)",
+    "pyarrow (>=19.0.1,<20.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
