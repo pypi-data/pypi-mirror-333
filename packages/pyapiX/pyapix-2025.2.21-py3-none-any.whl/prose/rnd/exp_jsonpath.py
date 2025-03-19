@@ -1,0 +1,97 @@
+# https://github.com/h2non/jsonpath-ng
+
+from copy import deepcopy
+from jsonpath_ng import jsonpath, parse, Fields, Slice
+
+from pyapix.osdu import crs_catalog_api, crs_conversion_api
+from pyapix.tool.tools import parsed_file_or_url
+
+
+def test_it_on_osdu():
+  try:
+    """
+    """
+    jdoc = parsed_file_or_url(crs_conversion_api.config.swagger_path)
+    ps = jdoc['paths']
+    p = jdoc['paths']['/v4/convert']
+    for path in ps:
+        keys = list(ps[path])
+        print(path, keys)
+    assert len(jdoc['paths']) == 4
+
+    target_doc = jdoc
+    search_for = 'paths'                    # OK
+    jsonpath_expr = parse('paths.*.get')    #  OK
+    jsonpath_expr = parse('paths.*.post')   #  OK
+    matches = jsonpath_expr.find(target_doc)
+
+    assert matches
+    for i, match in enumerate(matches):
+        pass
+#        assert i == 0
+#        assert match.value == ps
+    vs = [match.value for match in matches]
+    assert vs
+    for j, thing in enumerate(vs):
+        pass
+#        assert i == 0
+  finally:
+    globals().update(locals())
+
+
+def test_it():
+  try:
+    search_for = 'foo[*].baz'
+    target_doc = {'foo': [{'baz': 1}, {'baz': 2}]}
+
+    # A robust parser, not just a regex. (Makes powerful extensions possible; see below)
+    jsonpath_expr = parse(search_for)
+
+    # Extracting values is easy
+    vs = [match.value for match in jsonpath_expr.find(target_doc)]
+    assert vs == [1, 2]
+
+    # Matches remember where they came from
+    x = [str(match.full_path) for match in jsonpath_expr.find(target_doc)]
+    assert x == ['foo.[0].baz', 'foo.[1].baz']
+
+    # Modifying values matching the path
+    x = jsonpath_expr.update( deepcopy(target_doc), 3)
+    assert x == {'foo': [{'baz': 3}, {'baz': 3}]}
+
+    # Modifying one of the values matching the path
+    matches = jsonpath_expr.find(target_doc)
+    y = matches[0].full_path.update( deepcopy(target_doc), 3)
+    assert y == {'foo': [{'baz': 3}, {'baz': 2}]}
+
+    # Removing all values matching a path
+    x = jsonpath_expr.filter(lambda d: True, deepcopy(target_doc))
+    assert x == {'foo': [{}, {}]}
+
+    # Removing values containing particular data matching path
+    z = jsonpath_expr.filter(lambda d: d == 2, deepcopy(target_doc))
+    assert z == {'foo': [{'baz': 1}, {}]}
+
+    # And this can be useful for automatically providing ids for bits of data that do not have them (currently a global switch)
+    jsonpath.auto_id_field = 'id'
+    jp2 = parse('foo[*].id')
+    jd2 = {'foo': [{'id': 'bizzle'}, {'baz': 3}]}
+    s = [match.value for match in jp2.find(jd2)]
+    assert s == ['foo.bizzle', 'foo.[1]']
+
+    # A handy extension: named operators like `parent`
+    search2 = 'a.*.b.`parent`.c'
+    doc2 = {'a': {'x': {'b': 1, 'c': 'number one'}, 'y': {'b': 2, 'c': 'number two'}}}
+    w = [match.value for match in parse(search2).find(doc2)]
+    assert w == ['number one', 'number two']
+
+    # You can also build expressions directly quite easily
+    jsonpath_expr_direct = Fields('foo').child(Slice('*')).child(Fields('baz'))  
+    # This is equivalent
+    # NO.  It aint.
+    assert jsonpath_expr_direct != jsonpath_expr
+    # And it doesn't work the same.
+    # Close but no cigar.
+  finally:
+    globals().update(locals())
+

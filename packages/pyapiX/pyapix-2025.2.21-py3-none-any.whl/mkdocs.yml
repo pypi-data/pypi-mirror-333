@@ -1,0 +1,15 @@
+theme:
+ name: readthedocs
+
+site_name: pyapiX
+
+nav:
+  - Home: index.md
+  - Using it: using_it.md
+  - Creating Clients: defining_clients.md
+  - Design: design.md
+  - Postman Alternative: peemish.md
+  - Leveraging Postman: leverage_postman.md
+
+
+# site_url: !ENV READTHEDOCS_CANONICAL_URL
