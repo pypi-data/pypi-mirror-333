@@ -1,0 +1,97 @@
+[tool.poetry]
+name = "retro-game-engine"
+version = "0.2.2"
+description = "A retro-style game engine built with Pygame"
+authors = ["Ahmed Mohamed <ahmedmohmaed200354@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ahmed5145/retro_game_engine"
+documentation = "https://retro-game-engine.readthedocs.io"
+keywords = ["game", "engine", "pygame", "retro", "2d"]
+packages = [
+    { include = "src", from = "." },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries :: pygame",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pygame = "^2.5.2"
+numpy = "1.26.3"
+pillow = "^10.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+black = "^23.9.1"
+isort = "^5.12.0"
+mypy = "^1.5.1"
+pylint = "^3.0.3"
+pre-commit = "^3.4.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.3"
+mkdocstrings = "^0.24.0"
+mkdocstrings-python = "^1.7.5"
+pymdown-extensions = "^10.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = [
+    "missing-docstring",
+    "invalid-name",
+    "too-many-instance-attributes",
+    "too-few-public-methods",
+    "too-many-arguments",
+    "too-many-locals",
+    "duplicate-code",
+    "line-too-long",
+    "no-member",  # Disabled due to dynamic pygame attributes
+    "no-name-in-module",  # Disabled due to dynamic pygame attributes
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=src --cov-report=term-missing"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/ahmed5145/retro_game_engine/issues"
+"Documentation" = "https://retro-game-engine.readthedocs.io"
+"Source Code" = "https://github.com/ahmed5145/retro_game_engine"
+
+[tool.poetry.scripts]
+retro-game = "src.cli:main"
