@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyft232h/__init__.py
+src/pyft232h/ft232h.py
+src/pyft232h.egg-info/PKG-INFO
+src/pyft232h.egg-info/SOURCES.txt
+src/pyft232h.egg-info/dependency_links.txt
+src/pyft232h.egg-info/requires.txt
+src/pyft232h.egg-info/top_level.txt
+tests/test_spi_fd.py
+tests/test_spi_hd.py
