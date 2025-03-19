@@ -1,0 +1,2 @@
+[console_scripts]
+iosdefaults = iOSDefaults.cli:main
