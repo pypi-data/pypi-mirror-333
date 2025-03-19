@@ -1,0 +1,5 @@
+Deps
+Examples
+Testsuite
+dist
+pyLOM
