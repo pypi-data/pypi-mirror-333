@@ -1,0 +1,7 @@
+README.md
+setup.py
+my_tiny_library/__init__.py
+my_tiny_library.egg-info/PKG-INFO
+my_tiny_library.egg-info/SOURCES.txt
+my_tiny_library.egg-info/dependency_links.txt
+my_tiny_library.egg-info/top_level.txt
