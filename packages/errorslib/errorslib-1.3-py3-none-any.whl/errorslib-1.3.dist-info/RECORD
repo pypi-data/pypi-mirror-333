@@ -1,0 +1,13 @@
+elib/__init__.py,sha256=TftwYYKwHFxI5-GO7otPQav63I0ZzpqrUBnbm2AiC6s,2210
+elib/absexc.py,sha256=E1ZTMW91LxpeSfvo63OhocpuWKlNqaQNPsAKZthOl_g,109
+elib/codeerror.py,sha256=vzQS2Fjb66HRqImjVdEXkv3wYK4tsUzZxA7TwvOsKV8,659
+elib/deverror.py,sha256=g2D4V1qN62X-elgqXH4ERGwtN2Zbc4nPqiUqQAn8hhk,637
+elib/dunnoerror.py,sha256=VlhglaBjzlZnlKL7mQLlhcNMeWypyLSHK-MEIZHMK9Y,374
+elib/hardwareerror.py,sha256=XI4GTT0VWeS0HVtmpjZlexNljqaopRSSa01vQv7J85k,586
+elib/logicerror.py,sha256=qUckWOhW62PoHbpY77E-Jp3DHFFht7UEdSYaBA3DqYQ,526
+elib/usererror.py,sha256=RCpqh5zeCNqmztJKVt--P1ykD7BuxTqDooUXWHtYPtQ,924
+errorslib-1.3.dist-info/LICENSE,sha256=Y_TWNudK9z0GnLzwkKrJpUHtexvZfuJdsYVduzbC4Ak,1080
+errorslib-1.3.dist-info/METADATA,sha256=N4UNoUoY4YVKP7rbJjwEqpz9MH8kaS3gK8h-QnbBcPo,2754
+errorslib-1.3.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+errorslib-1.3.dist-info/top_level.txt,sha256=mnlN1Acao8i492nbGjlrUOXMHwMdeH9k5T9JJxwlJ8s,5
+errorslib-1.3.dist-info/RECORD,,
