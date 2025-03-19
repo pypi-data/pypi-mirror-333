@@ -1,0 +1,94 @@
+site_name: Eunomia
+
+repo_name: whataboutyou-ai/eunomia
+repo_url: https://github.com/whataboutyou-ai/eunomia
+
+copyright: Copyright &copy; 2025 - Eunomia authors
+
+theme:
+  name: material
+  logo: assets/logo-owl.png
+  favicon: assets/logo-owl.png
+  palette:
+    primary: white
+  font:
+    text: Inter
+    code: Source Code Pro
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.sections
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - content.code.copy
+    - announce.dismiss
+  custom_dir: docs/overrides
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      noclasses: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/whataboutyou-ai/eunomia
+      name: eunomia on GitHub
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/TyhGZtzg3G
+      name: community on Discord
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/eunomia-ai/
+      name: eunomia on PyPi
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_root_heading: true
+            heading_level: 3
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - get_started/index.md
+      - Installation: get_started/installation.md
+      - Quickstart: get_started/quickstart.md
+      - License: get_started/license.md
+  - Docs:
+      - server/index.md
+      - APIs: server/apis.md
+      - Config: server/config.md
+      - DB: server/db.md
+      - Engine: server/engine.md
+      - Server: server/server.md
+  - SDKs:
+      - sdks/index.md
+      - Python SDK: sdks/python.md
+      - LangChain SDK: sdks/langchain.md
+  - Community:
+      - community/index.md
+      - How to Contribute: community/contribute.md
