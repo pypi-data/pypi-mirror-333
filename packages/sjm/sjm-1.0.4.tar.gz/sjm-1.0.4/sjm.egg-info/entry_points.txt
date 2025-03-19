@@ -1,0 +1,2 @@
+[console_scripts]
+sjm = sjm.cli:main
