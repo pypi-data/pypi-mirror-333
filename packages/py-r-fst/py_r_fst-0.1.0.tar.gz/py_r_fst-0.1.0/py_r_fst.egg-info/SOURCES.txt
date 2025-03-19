@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+py_r_fst.egg-info/PKG-INFO
+py_r_fst.egg-info/SOURCES.txt
+py_r_fst.egg-info/dependency_links.txt
+py_r_fst.egg-info/requires.txt
+py_r_fst.egg-info/top_level.txt
+pyfst/__init__.py
+pyfst/fst.py
+tests/test_fst.py

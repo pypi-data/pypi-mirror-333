@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-r-fst"
+version = "0.1.0"
+description = "Python wrapper for the R fst package"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "Apache 2.0"}
+authors = [
+    {name = "msdavid", email = "mauro@sauco.net"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pandas>=1.0.0",
+    "rpy2>=3.4.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/msdavid/py-fst"
+"Bug Tracker" = "https://github.com/msdavid/py-fst/issues"
