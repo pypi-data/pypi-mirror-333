@@ -1,0 +1,2 @@
+[console_scripts]
+branchtree = branchtree:cli.main
