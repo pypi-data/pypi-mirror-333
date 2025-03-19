@@ -1,0 +1,13 @@
+{
+    "toolchain": {
+        "compiler": "gcc",
+        "compiler_version": "11.4.0"
+    },
+    "libraries": {
+        "sapphirerapids": "sapphirerapids",
+        "icelake": "icelake",
+        "cascadelake": "cascadelake",
+        "skylake_avx512": "skylake_avx512",
+        "x86_64_v3": "x86_64_v3"
+    }
+}
