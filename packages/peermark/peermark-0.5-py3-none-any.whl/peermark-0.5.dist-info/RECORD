@@ -1,0 +1,14 @@
+PeerMark/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PeerMark/_version.py,sha256=1vWii7ZOLjKUtZl0P7w-wmgOs9yTqTM8vjFTwUNpdjI,495
+PeerMark/extract_peer.py,sha256=ymBqc35hgjTzm9oOosO0ztVxTuZtw1gBVZBTE66PYaw,3303
+PeerMark/generate_peer_review.py,sha256=LpJlN7N7Zgkjxc0cHHtxYdPPo0a098Km622UiuarI6A,2190
+PeerMark/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PeerMark/data/team_of_3.xlsx,sha256=dXxPOwUFX0rRsSa8XqhooaoO0dT1b-ORfnVFnV6BtxY,10712
+PeerMark/data/team_of_4.xlsx,sha256=BBUTyr7mB3dhiWSRNkO1ZeuUrOI8y7lfTSP6Ptq7kzk,10668
+PeerMark/data/team_of_5.xlsx,sha256=cXjNQCnroMZfrEvJJg67I7R-UDk7xk-uhfQsJ-PaBS8,10692
+peermark-0.5.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+peermark-0.5.dist-info/METADATA,sha256=QJL6pGIZvIsFw746OmIW-mX1C70mYH6i8aHEezQ5bCc,815
+peermark-0.5.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+peermark-0.5.dist-info/entry_points.txt,sha256=WQZcc81L5YlbM_DAyanO9gXC7ZEjlrJzC_kkq0NNZAU,112
+peermark-0.5.dist-info/top_level.txt,sha256=oTQ-yRTq5IkOiDvTiS4265Eex244mK1ivMoemImdfhM,9
+peermark-0.5.dist-info/RECORD,,

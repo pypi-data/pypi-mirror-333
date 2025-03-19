@@ -1,0 +1,4 @@
+[console_scripts]
+extract_peer = PeerMark.extract_peer:main
+generate_peer = PeerMark.generate_peer_review:main
+
