@@ -1,0 +1,84 @@
+Metadata-Version: 2.2
+Name: opensarlab_lib
+Version: 0.0.11
+Summary: A Python library to support ASF OpenSARlab's Jupyter Notebook repository https://github.com/ASFOpenSARlab/opensarlab-notebooks
+Home-page: https://github.com/ASFOpenSARlab/opensarlab-lib
+Author: ASF OpenSARlab Team
+Author-email: uaf-jupyterhub-asf@alaska.edu
+License: BSD
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asf_search
+Requires-Dist: cartopy
+Requires-Dist: contextily
+Requires-Dist: gdal
+Requires-Dist: hyp3_sdk
+Requires-Dist: ipywidgets
+Requires-Dist: IPython
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyproj
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# The future home of opensarlab-lib
+
+[![PyPI license](https://img.shields.io/pypi/l/opensarlab_lib.svg)](https://pypi.python.org/pypi/opensarlab_lib/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/opensarlab_lib.svg)](https://pypi.python.org/pypi/opensarlab_lib/)
+[![PyPI version](https://img.shields.io/pypi/v/opensarlab_lib.svg)](https://pypi.python.org/pypi/opensarlab_lib/)
+
+[comment]: <> ([![Conda version]&#40;https://img.shields.io/conda/vn/conda-forge/opensarlab_lib&#41;]&#40;https://anaconda.org/conda-forge/opensarlab_lib&#41;)
+
+[comment]: <> ([![Conda platforms]&#40;https://img.shields.io/conda/pn/conda-forge/opensarlab_lib&#41;]&#40;https://anaconda.org/conda-forge/opensarlab_lib&#41;)
+
+A python library to support [ASF OpenSARlab's Jupyter Notebook repository](https://github.com/ASFOpenSARlab/opensarlab-notebooks)
+
+## Install
+
+In order to easily manage dependencies, we recommend using dedicated project environments with
+[Anaconda/Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html). or
+[Python virtual environments](https://docs.python.org/3/tutorial/venv.html). 
+
+The opensarlab_lib can be installed with 
+
+[comment]: <> (into a conda environment with)
+
+[comment]: <> (```)
+
+[comment]: <> (conda install -c conda-forge opensarlab_lib)
+
+[comment]: <> (```)
+
+[comment]: <> (or into a virtual environment with)
+
+```
+python -m pip install opensarlab_lib
+```
+
+## Contact Us
+
+Found a bug? Want to request a feature?
+[open an issue](https://github.com/ASFOpenSARlab/opensarlab-lib/issues/new)
