@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+freeapihub/__init__.py
+freeapihub.egg-info/PKG-INFO
+freeapihub.egg-info/SOURCES.txt
+freeapihub.egg-info/dependency_links.txt
+freeapihub.egg-info/requires.txt
+freeapihub.egg-info/top_level.txt
+tests/test.py
