@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/gitignore_gen/__init__.py
+src/gitignore_gen/cli.py
+src/gitignore_gen/main.py
+src/gitignore_gen.egg-info/PKG-INFO
+src/gitignore_gen.egg-info/SOURCES.txt
+src/gitignore_gen.egg-info/dependency_links.txt
+src/gitignore_gen.egg-info/entry_points.txt
+src/gitignore_gen.egg-info/top_level.txt
+src/gitignore_gen/caching/__init__.py
+src/gitignore_gen/caching/core.py
+src/gitignore_gen/template_management/__init__.py
+src/gitignore_gen/template_management/base.py
