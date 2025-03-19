@@ -1,0 +1,17 @@
+LICENSE
+README.MD
+pyproject.toml
+taskmesh/__init__.py
+taskmesh/config.py
+taskmesh/core.py
+taskmesh.egg-info/PKG-INFO
+taskmesh.egg-info/SOURCES.txt
+taskmesh.egg-info/dependency_links.txt
+taskmesh.egg-info/requires.txt
+taskmesh.egg-info/top_level.txt
+taskmesh/providers/__init__.py
+taskmesh/providers/core.py
+taskmesh/providers/aws/__init__.py
+taskmesh/providers/aws/provider.py
+taskmesh/providers/gcp/__init__.py
+taskmesh/providers/gcp/provider.py

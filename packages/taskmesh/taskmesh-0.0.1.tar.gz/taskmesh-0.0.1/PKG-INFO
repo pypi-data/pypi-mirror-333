@@ -1,0 +1,76 @@
+Metadata-Version: 2.2
+Name: taskmesh
+Version: 0.0.1
+Summary: TaskMesh is a cloud-agnostic task processing framework starting with Google Cloud Pub/Sub.
+Author-email: "Amrit K. Chhetri" <kshetriamrit@gmail.com>
+License: GNU
+Project-URL: Homepage, https://github.com/bunkdeath/taskmesh
+Project-URL: Documentation, https://github.com/bunkdeath/taskmesh/wiki
+Project-URL: Source, https://github.com/bunkdeath/taskmesh
+Project-URL: Issues, https://github.com/bunkdeath/taskmesh/issues
+Keywords: task queue,pubsub,sqs,gcp,aws,cloud,distributed processing
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3==1.37.9
+Requires-Dist: google-cloud-pubsub==2.28.0
+Requires-Dist: python-dotenv==1.0.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+
+# TaskMesh  
+
+**TaskMesh** is a cloud-agnostic task processing framework designed to integrate seamlessly with various cloud messaging services. The initial release supports **Google Cloud Pub/Sub**, with planned support for **AWS SQS** and **Azure Service Bus**. TaskMesh simplifies distributed task execution, ensuring scalability and reliability across multiple cloud providers.
+
+The idea behind this project is to mimic some level level of celery tasks.
+
+The limitation: this only works for a function not on the class methods.
+
+## Features  
+✅ Google Cloud Pub/Sub\
+✅ AWS SQS\
+🚧 Azure Service Bus (Ongoing development)\
+⬜ RabbitMQ (Planned)\
+⬜ Kafka (Planned)
+
+## Usage
+
+This package is used specially on micro-service architecture, where we need to pass message between services.
+
+
+In the examples folder, there are files for each provider. The file accept argument in command line. `--subscribe <topic>` and no argument.
+
+Providing `--subscribe <topic>` will subscribe to the topic provided in command line and will process messages and call the desired function.
+
+The no argument will call the function directly and delayed. The delayed call will utilize message broker for the respective provider
+
+
+### Publisher Instance
+
+```bash
+python examples/aws.py
+python examples/gcp.py
+```
+
+### Listener Instance
+
+```bash
+python examples/gcp.py taskmesh-sub
+python examples/aws.py taskmesh
+```
+
+Note: gcp uses subscription id and aws use topic name
+
+This will create instance that listens to the messages on the message broker and process it by calling the desired function.
