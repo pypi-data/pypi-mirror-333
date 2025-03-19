@@ -1,0 +1,6 @@
+setup.py
+byted_overpass_lab_image_text_match_douyin/__init__.py
+byted_overpass_lab_image_text_match_douyin.egg-info/PKG-INFO
+byted_overpass_lab_image_text_match_douyin.egg-info/SOURCES.txt
+byted_overpass_lab_image_text_match_douyin.egg-info/dependency_links.txt
+byted_overpass_lab_image_text_match_douyin.egg-info/top_level.txt
