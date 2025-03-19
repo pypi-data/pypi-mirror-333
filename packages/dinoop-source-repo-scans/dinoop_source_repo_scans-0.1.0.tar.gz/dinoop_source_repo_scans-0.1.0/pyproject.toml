@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["dinoop_syftscan", "dinoop_cdxgenscan"]
+
+[project]
+name = "dinoop_source_repo_scans"
+version = "0.1.0"
+description = "package for source repo"
+authors = [{name = "dinoop", email = "dinoop@example.com"}]
+dependencies = []
