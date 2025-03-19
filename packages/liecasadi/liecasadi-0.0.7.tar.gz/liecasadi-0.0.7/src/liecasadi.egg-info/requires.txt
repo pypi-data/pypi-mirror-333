@@ -1,0 +1,7 @@
+numpy>=1.21
+casadi
+
+[test]
+pytest
+manifpy
+scipy
