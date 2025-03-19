@@ -1,0 +1,11 @@
+odoo/addons/sale_order_metadata/__init__.py,sha256=Ax4qLxdb9ATk05MF7cSQ0BdpYCpGVYFy9n4U4zODf9o,46
+odoo/addons/sale_order_metadata/__manifest__.py,sha256=4Q0koyrNsenwyaIIQ5u60auf0xwG4VOYOLfX8d-ua24,465
+odoo/addons/sale_order_metadata/models/__init__.py,sha256=O8SsNvXdGlgfof1HFSfqBfYhYE9wao2MDats45xCAK4,89
+odoo/addons/sale_order_metadata/models/sale_order.py,sha256=pxGXcDwWVRDHdp8NprZAvjnYaRUTm9EmQmyIn4QMJm0,390
+odoo/addons/sale_order_metadata/models/sale_order_metadata_line.py,sha256=_OjHA4sKkr_qt-as-b0kxnAc1ZILJ95qphnH6UVk-FI,281
+odoo/addons/sale_order_metadata/security/ir.model.access.csv,sha256=klgh0CyQCTYWpMA7sFkAK7pYMNxlIkc92f7D2-_jN1o,174
+odoo/addons/sale_order_metadata/views/sale_order.xml,sha256=821Lw5J2VHCcocMiyIt4VRYnD6g5NnIqPGVqUwaQVl4,934
+odoo_addon_sale_order_metadata-16.0.0.1.0.dist-info/METADATA,sha256=CGA_iUHuLZ4nr-GvJf7ErJiElLLfvfVLC61AIU0IvFw,384
+odoo_addon_sale_order_metadata-16.0.0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+odoo_addon_sale_order_metadata-16.0.0.1.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_sale_order_metadata-16.0.0.1.0.dist-info/RECORD,,
