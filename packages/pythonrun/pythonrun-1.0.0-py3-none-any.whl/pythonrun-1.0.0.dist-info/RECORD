@@ -1,0 +1,11 @@
+pythonrun/__init__.py,sha256=mRlf4Q6AovL-e4HdVmwJxQNYjqlewC33GKLZVE99hKA,240
+pythonrun/_version.py,sha256=8SfZh63Z_hOFskpDIcsSZohIt9U7r5hErJflLHTBX58,565
+pythonrun/cli.py,sha256=SKwxtaWcA_u4tPV6jv8Tg7XYdX87GUkXSgbt1Zdn03E,139
+pythonrun/main.py,sha256=OrR_dSbDSa4S1aEOMUgX6ckrdD0HWCc--QJh3cXcG0g,4111
+pythonrun/utils.py,sha256=roJkyEcEmfpl5vLrQcepWaKqkpQRFvBBl8mn3pFIFRk,5999
+pythonrun-1.0.0.dist-info/LICENSE,sha256=WtAe4h08a6cuWEgB2RFPLu5DDqSVrTX78isQvlKTkXU,1064
+pythonrun-1.0.0.dist-info/METADATA,sha256=u-qlVWG_Td5ovI4WQNpbJjGmRbNGeqHaTUDH5Qm7GE4,3835
+pythonrun-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pythonrun-1.0.0.dist-info/entry_points.txt,sha256=qBcEV0YQjvWzmbKF0ZAgFkwmhGdSCbbUh4rERVAvZkg,50
+pythonrun-1.0.0.dist-info/top_level.txt,sha256=awqSZeykGaxGG5VqsCJoeOQFoPRQ3NK7YGyPaqXXllo,10
+pythonrun-1.0.0.dist-info/RECORD,,
