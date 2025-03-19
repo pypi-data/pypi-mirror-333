@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: yoptapy
+Version: 0.1.1
+Summary: Йоптапай, инструмент для реальных пацанов
+Author-email: Dickson <hhatedme@gmail.com>
+License-Expression: MIT
+Keywords: gopnik,python,translator
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# yoptapy
+
+Гоп-язык для Python, пацан, йопта! Переводит гоп-код в нормальный Python, чтобы ты мог писать код как настоящий пацан.
+
+## Установка
+
+Установи библиотеку через pip:
+
+```bash
+pip install yoptapy
