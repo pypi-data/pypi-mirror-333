@@ -1,0 +1,8 @@
+scio_generate_cdxgen_sbom_pipeline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scio_generate_cdxgen_sbom_pipeline/generate_cdxgen_sbom.py,sha256=IbdRqV14jZ8S6V4SlWcut5HCrv4qYo81g7pmmJtHVzA,6273
+scio_generate_cdxgen_sbom_pipeline-0.0.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+scio_generate_cdxgen_sbom_pipeline-0.0.0.dist-info/METADATA,sha256=Ikg18zuA3Ru40icYQ043dc8O-Ez8kE5gBvSfDat88vU,688
+scio_generate_cdxgen_sbom_pipeline-0.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+scio_generate_cdxgen_sbom_pipeline-0.0.0.dist-info/entry_points.txt,sha256=a04Zx-dRlccFgEiPTQYSmLlp-6MkBVCQWsXd_yDmIDc,165
+scio_generate_cdxgen_sbom_pipeline-0.0.0.dist-info/top_level.txt,sha256=JUlwIBl-ahiM7FWy4Tm-1OG92leWMLDWen8NImY-7cE,35
+scio_generate_cdxgen_sbom_pipeline-0.0.0.dist-info/RECORD,,
