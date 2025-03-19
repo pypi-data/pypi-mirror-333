@@ -1,0 +1,10 @@
+word_counter_upchunk/__init__.py,sha256=ovRN2eKNFBFkHcrT5hxOp3ccHOa8AH8bBUWQZ2ypfnU,149
+word_counter_upchunk/counter.py,sha256=fhzMz6SxljYD83ggv4PzORCJm79Ka9teglmjcy90yfc,1398
+word_counter_upchunk/patterns.py,sha256=AZU_csFehf4Okj4uczxCk9-LFq9KKExUpo1IKa8fxPw,1156
+word_counter_upchunk/stats.py,sha256=L-64yEcqtaNNkC4gJ0meyy7nizauQgv9ygd2stNN6uU,214
+word_counter_upchunk/text.py,sha256=Omgh5EowTR8AFoJUXGye13JnUAG6jrTw0ISNl4Eccpw,1343
+word_counter_upchunk-1.0.0.dist-info/LICENSE,sha256=JaK3H1D7QOpiBYfPYGgHHC7ONqvzvdcDXSgK789ISLY,1098
+word_counter_upchunk-1.0.0.dist-info/METADATA,sha256=cBN9GCYyQUydztm_ZjkRxd7BlJd5LYFXCbbL7-t2JzU,691
+word_counter_upchunk-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+word_counter_upchunk-1.0.0.dist-info/top_level.txt,sha256=127-vf6SQSl9cZXZzKIh5sAhnwoykF7ZtvgwPOEQ8cA,21
+word_counter_upchunk-1.0.0.dist-info/RECORD,,
