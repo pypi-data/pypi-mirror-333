@@ -1,0 +1,52 @@
+[project]
+name = "pepyno"
+version = "1.0.2"
+description = "A tool to convert Behave tests into Cucumber format."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["click>=8.1.8"]
+keywords = ["setuptools", "development", "cucumber", "behave", "json"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Testing",
+]
+
+[tool.uv]
+package = true
+required-version = "0.6.4"
+
+[dependency-groups]
+dev = [
+  "pre-commit>=4.1.0",
+  "pylint>=3.3.5",
+  "pytest>=8.3.5",
+  "pytest-cov>=6.0.0",
+  "pytest-mock>=3.14.0",
+]
+
+[project.scripts]
+pepyno = "pepyno.cli:main"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pylint.master]
+ignore-paths = ["tests/"]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = [
+  "C0114",
+  "C0115",
+  "C0116",
+  "C0411",
+  "R0903",
+  "W0511",
+  "W0718",
+  "E1120",
+  "R0913",
+  "R0917",
+]
