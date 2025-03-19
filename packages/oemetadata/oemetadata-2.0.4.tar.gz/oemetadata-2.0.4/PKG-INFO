@@ -1,0 +1,163 @@
+Metadata-Version: 2.4
+Name: oemetadata
+Version: 2.0.4
+Summary: Open Energy Metadata (OEMetadata) - The energy metadata standard
+Author-email: Ludwig Hülk <datenzentrum@rl-institut.de>
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.txt
+Requires-Dist: stringcase ~=1.2.0
+Project-URL: Documentation, https://openenergyplatform.github.io/oemetadata/latest/
+Project-URL: Homepage, https://github.com/OpenEnergyPlatform/oemetadata
+Project-URL: Source, https://github.com/OpenEnergyPlatform/oemetadata
+
+..
+  SPDX-FileCopyrightText: 2024 Ludwig Hülk <https://github.com/Ludee> © Reiner Lemoine Institut
+  SPDX-FileCopyrightText: oemetadata <https://github.com/OpenEnergyPlatform/oemetadata>
+  SPDX-License-Identifier: MIT
+
+.. figure:: https://user-images.githubusercontent.com/14353512/245271998-794e9d73-e728-4993-9ecf-4d0d08d96827.png
+    :align: left
+    :target: https://github.com/OpenEnergyPlatform/oemetadata
+    :alt: Repo logo
+
+=================================
+Open Energy Metadata (OEMetadata)
+=================================
+
+**The energy metadata standard including a metadata schema, templates, and examples.**
+
+.. list-table::
+   :widths: auto
+
+   * - License
+     - |badge_license| |badge_reuse|
+   * - Documentation
+     - |badge_documentation| |badge_mkdocs|
+   * - Tests
+     - |badge_tox| |badge_codecov|
+   * - Publication
+     - |badge_pypi| |badge_python| |badge_pypi_downloads|
+   * - Development
+     - |badge_issue_open| |badge_issue_closes| |badge_pr_open| |badge_pr_closes|
+   * - Community
+     - |badge_contributions| |badge_contributors| |badge_repo_counts|
+
+.. contents::
+    :depth: 2
+    :local:
+    :backlinks: top
+
+Introduction
+============
+| Open Energy Metadata (OEMetadata) is a metadata standard for the energy domain.
+| It is an extensive set of metadata based on the tabular data package specifications and the FAIR principles.
+| The metadata contains multiple fields (keys) in a nested JSON structure.
+
+You can find the latest version right here:
+
+- `template.json <https://github.com/OpenEnergyPlatform/oemetadata/blob/production/oemetadata/latest/template.json>`_ contains an empty metadata string
+- `example.json <https://github.com/OpenEnergyPlatform/oemetadata/blob/production/oemetadata/latest/example.json>`_ contains a basic metadata example
+- `metadata_key_description.md <https://github.com/OpenEnergyPlatform/oemetadata/blob/production/oemetadata/latest/metadata_key_description.md>`_ contains a description of each metadata key
+
+Documentation
+=============
+| The documentation is created with Markdown using `MkDocs <https://www.mkdocs.org/>`_.
+| All files are stored in the ``docs`` folder of the repository.
+| A **GitHub Actions** deploys the ``production`` branch on a **GitHub Page**.
+| The documentation page is `openenergyplatform.github.io/oemetadata/ <https://openenergyplatform.github.io/oemetadata/>`_
+
+Collaboration
+=============
+| Everyone is invited to develop this repository with good intentions.
+| Please follow the workflow described in the `CONTRIBUTING.md <CONTRIBUTING.md>`_.
+| Development work that aims to extend the oemetadata specification is added to the build_source/schemas/ directory for each release.
+| To generate the schema, template & example JSON files see your script based `tooling <.metadata/latest/build_source/>`_
+
+Contributors:
+
+.. figure:: https://contrib.rocks/image?repo=OpenEnergyPlatform/oemetadata
+    :align: left
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/graphs/contributors
+    :alt: [contrib.rocks](https://contrib.rocks)
+
+License and Citation
+====================
+| The code of this repository is licensed under the **MIT License** (MIT).
+| See `LICENSE.txt <LICENSE.txt>`_ for rights and obligations.
+| See the *Cite this repository* function or `CITATION.cff <CITATION.cff>`_ for citation of this repository.
+| Copyright: `OEMetadata <https://github.com/OpenEnergyPlatform/oemetadata/>`_ © `Reiner Lemoine Institut <https://reiner-lemoine-institut.de/>`_ | `MIT <LICENSE.txt>`_
+| The OEMetadata schema is licensed under `Creative Commons Zero v1.0 Universal <https://creativecommons.org/publicdomain/zero/1.0/>`_.
+| The OEMetadata examples and templates are licensed under `Creative Commons Zero v1.0 Universal <https://creativecommons.org/publicdomain/zero/1.0/>`_.
+
+
+.. |badge_license| image:: https://img.shields.io/github/license/OpenEnergyPlatform/oemetadata
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/blob/production/LICENSE.txt
+    :alt: License
+
+.. |badge_reuse| image:: https://api.reuse.software/badge/github.com/OpenEnergyPlatform/oemetadata
+    :target: https://api.reuse.software/info/github.com/OpenEnergyPlatform/oemetadata
+    :alt: REUSE
+
+.. |badge_documentation| image:: https://img.shields.io/github/actions/workflow/status/OpenEnergyPlatform/oemetadata/documentation.yml?branch=develop&label=documentation
+    :target: https://openenergyplatform.github.io/oemetadata/
+    :alt: Documentation
+
+.. |badge_mkdocs| image:: https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=flat&logo=MaterialForMkDocs&logoColor=white&color=grey
+    :target: https://squidfunk.github.io/mkdocs-material/
+    :alt: MkDocs
+
+.. |badge_tox| image:: https://img.shields.io/github/actions/workflow/status/OpenEnergyPlatform/oemetadata/tox.yml?label=tox
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/actions/workflows/tox.yml
+    :alt: Tox Tests
+
+.. |badge_codecov| image:: https://codecov.io/gh/OpenEnergyPlatform/oemetadata/graph/badge.svg?token=HY4TZGSG4N
+    :target: https://codecov.io/gh/OpenEnergyPlatform/oemetadata
+    :alt: Codecov
+
+.. |badge_pypi| image:: https://img.shields.io/pypi/v/oemetadata
+    :target: https://pypi.org/project/oemetadata/
+    :alt: PyPI Version
+
+.. |badge_python| image:: https://img.shields.io/pypi/pyversions/oemetadata
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/blob/production/pyproject.toml
+    :alt: PyPI Python Version
+
+.. |badge_pypi_downloads| image:: https://img.shields.io/pypi/dm/oemetadata
+    :target: https://pypi.org/project/oemetadata/
+    :alt: PyPI Downloads
+
+.. |badge_issue_open| image:: https://img.shields.io/github/issues-raw/OpenEnergyPlatform/oemetadata
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/issues
+    :alt: Open Issues
+
+.. |badge_issue_closes| image:: https://img.shields.io/github/issues-closed-raw/OpenEnergyPlatform/oemetadata
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/issues?q=is%3Aissue+is%3Aclosed
+    :alt: Closed Issues
+
+.. |badge_pr_open| image:: https://img.shields.io/github/issues-pr-raw/OpenEnergyPlatform/oemetadata
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/pulls
+    :alt: Open PR
+
+.. |badge_pr_closes| image:: https://img.shields.io/github/issues-pr-closed-raw/OpenEnergyPlatform/oemetadata
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/pulls?q=is%3Apr+is%3Aclosed
+    :alt: Closed PR
+
+.. |badge_contributions| image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/blob/production/CONTRIBUTING.md
+    :alt: Contributions
+
+.. |badge_contributors| image:: https://img.shields.io/github/contributors/OpenEnergyPlatform/oemetadata
+    :target: https://github.com/OpenEnergyPlatform/oemetadata/graphs/contributors
+    :alt: Contributors
+
+.. |badge_repo_counts| image:: https://hits.sh/github.com/OpenEnergyPlatform/oemetadata.svg
+    :target: https://hits.sh/github.com/OpenEnergyPlatform/oemetadata/
+    :alt: Hits
+
