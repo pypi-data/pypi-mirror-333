@@ -1,0 +1,14 @@
+django_interval/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_interval/fields.py,sha256=d-ajPr_tV45dgsymFgAORLwGm1LSnhOgmeNs1mSW1Ss,5465
+django_interval/urls.py,sha256=oFD7Bzc6aUnlvMqXENUkZhbDj-Rvc5Ghwbj62mBDMjI,223
+django_interval/utils.py,sha256=JBdN4lVO4Rlnsz-9XR2oVrOkC2DbPEvWQl9QECw-IEQ,5718
+django_interval/views.py,sha256=zSBjpBKvD6_6NDn1H3PYyXTbcFnOmGUv3Q6ZW8XEWGg,954
+django_interval/widgets.py,sha256=pRwqbPzGwe1vCC1GYnjkOjGZHp1ri3SqXx-BnlYxbIU,403
+django_interval/static/css/intervalwidget.css,sha256=z_N-HJhFivXicsP0nWyytWWJUbSd1xUPOxmOcfE4bB8,56
+django_interval/static/js/intervalwidget.js,sha256=tuLc01QScM8_PLkI0QRWkp2hwIyCiwXQXOdGnhbuYlw,902
+django_interval/templates/django_interval/inline_interval.html,sha256=jzRCfUj2v4btFtqE8f7NEiZO2RqzgS35jkvavEUPaVY,144
+django_interval/templates/django_interval/interval.html,sha256=7_j123a4axDlfwPOxTbzhzR9D8JX6Mh7sNbrnW7jeks,75
+django_interval/templatetags/django_interval.py,sha256=eWvqHxQvg0mxiSPbb_waFYUeXrooUB1s4p8TX_303bc,270
+django_interval-0.4.0.dist-info/METADATA,sha256=CxS4nxaWd5D52jSXuT07e8cNGzOBuv_f4c6Z3JnqK14,1196
+django_interval-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_interval-0.4.0.dist-info/RECORD,,
