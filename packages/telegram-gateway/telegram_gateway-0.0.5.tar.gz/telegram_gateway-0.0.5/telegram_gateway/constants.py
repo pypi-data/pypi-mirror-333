@@ -1,0 +1,5 @@
+BASE_URL = "https://gatewayapi.telegram.org/"
+SEND_VERIFICATION_MESSAGE_URL = BASE_URL + "sendVerificationMessage"
+CHECK_SEND_ABILITY_URL = BASE_URL + "checkSendAbility"
+CHECK_VERIFICATION_STATUS_URL = BASE_URL + "checkVerificationStatus"
+REVOKE_VERIFICATION_STATUS_URL = BASE_URL + "revokeVerificationMessage"

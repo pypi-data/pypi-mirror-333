@@ -1,0 +1,19 @@
+[project]
+name = "telegram-gateway"
+authors = [
+    {name = "GEOEGII555", email = "geoegii2001555@gmail.com"},
+]
+version = "0.0.5"
+description = "Interact with the Telegram Gateway API."
+dependencies = [
+    "requests"
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Typing :: Typed"
+]
+
+[project.urls]
+Repository = "https://github.com/GEOEGII555/telegram-gateway.git"
