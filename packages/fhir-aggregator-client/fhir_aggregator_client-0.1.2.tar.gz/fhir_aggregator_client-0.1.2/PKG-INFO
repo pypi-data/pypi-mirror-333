@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fhir_aggregator_client
+Version: 0.1.2
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: pyyaml
+Requires-Dist: halo
+Requires-Dist: httpx
+Requires-Dist: fhir.resources==8.0.0b4
+Requires-Dist: dotty-dict
+Requires-Dist: pyvis
+Requires-Dist: click_default_group
+Requires-Dist: inflection
+Requires-Dist: pandas
+Provides-Extra: dtale
+Requires-Dist: dtale; extra == "dtale"
