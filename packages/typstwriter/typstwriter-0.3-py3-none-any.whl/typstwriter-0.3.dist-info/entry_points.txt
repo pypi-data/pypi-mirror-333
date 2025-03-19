@@ -1,0 +1,3 @@
+[gui_scripts]
+typstwriter=typstwriter.typstwriter:main
+
