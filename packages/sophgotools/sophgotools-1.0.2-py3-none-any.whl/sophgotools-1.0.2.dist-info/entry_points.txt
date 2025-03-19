@@ -1,0 +1,3 @@
+[console_scripts]
+zy = sophgotools.cmdline:main
+
