@@ -1,0 +1,47 @@
+Metadata-Version: 2.2
+Name: streamlit-vis-network
+Version: 0.1.2
+Summary: Network graph visualization in Streamlit using vis.js
+Home-page: https://github.com/q-maze/streamlit-vis-network
+Author: Q
+Author-email: qmazedev@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools>=75.8.0
+Requires-Dist: streamlit>=1.41.1
+Requires-Dist: twine>=6.0.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-python
+
+# streamlit-vis-network
+
+Streamlit component that allows you to visualize networks using vis.js
+
+## Installation instructions
+
+```sh
+pip install streamlit-vis-network
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from streamlit_vis_network import streamlit_vis_network
+
+nodes = [{"id": 1, "label": "node 1"}, {"id": 2, "label": "node 2"}]
+edges = [{"from": 1, "to": 2, "label": "edge"}]
+
+# display network visualization
+value = streamlit_vis_network(nodes=nodes, edges=edges)
+
+# display selected node
+st.write(value)
+```
+
+## Demo
+![til](function.gif)
