@@ -1,0 +1,3 @@
+[console_scripts]
+imuthes-crypt=imuthes.crypt.cli:main
+
