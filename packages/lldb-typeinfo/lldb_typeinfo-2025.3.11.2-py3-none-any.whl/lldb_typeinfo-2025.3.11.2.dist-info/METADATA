@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: lldb-typeinfo
+Version: 2025.3.11.2
+Summary: Additional type information for lldb
+Project-URL: Repository, https://github.com/soda92/gdb-visualizer-1/tree/main/lldb_typeinfo
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# lldb-typeinfo
+
+Additional type info for lldb.
+
+Original:
+
+```python
+def GetChildAtIndex(self, *args):
+    r"""
+    GetChildAtIndex(SBValue self, uint32_t idx) -> SBValue
+    GetChildAtIndex(SBValue self, uint32_t idx, lldb::DynamicValueType use_dynamic, bool can_create_synthetic) -> SBValue
+```
+
+fixed:
+
+```python
+def GetChildAtIndex(self, idx: int) -> SBValue: ...
+```
+
+## note
+
+Work in progress
