@@ -1,0 +1,10 @@
+savepip/__init__.py,sha256=oqHMxTNbGtK28uW-yRwxiKhS7k5jEWbVz2Yh2_xQJeQ,78
+savepip/cli.py,sha256=I-o4--HMewul0KQ3KxfhoyUKDzIYFHfg7RHD3JH3no8,2782
+savepip/core.py,sha256=pvADD22sk7e89QkvTvE0a76q_KBws_mbe3nWZI9Zx_c,8947
+savepip/memory_manager.py,sha256=EtruuJt0L47aPX7vZ8WyRhS7tPaobVc1zVDabIvelWE,6245
+savepip-0.1.1.dist-info/LICENSE,sha256=k6NkpPCJeXjJYKFwmtVQLy0MzOeR9z3gKsb4YkQL21E,1067
+savepip-0.1.1.dist-info/METADATA,sha256=Wf-Vss8NpA9KZVQ1Zdcw3InI3IDIhIIBqkinn9UG8ug,1345
+savepip-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+savepip-0.1.1.dist-info/entry_points.txt,sha256=a9QQwZeebJtmVWUriQGkh_CkOaZWDTd2I3WLAGJQn5E,45
+savepip-0.1.1.dist-info/top_level.txt,sha256=9-uDP211HJR1dNSuys89RHQxEmtFe5nPlJsxMOVOyhY,8
+savepip-0.1.1.dist-info/RECORD,,

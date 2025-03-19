@@ -1,0 +1,206 @@
+#!/usr/bin/env python
+import argparse
+import os
+import subprocess
+import sys
+import json
+import re
+from datetime import datetime
+from .memory_manager import MemoryManager
+
+
+class DependencySaver:
+    def __init__(self, output_file=None, manager="pip", memory_manager=None):
+        self.manager = manager.lower()
+        self.output_file = output_file or self._get_default_output_file()
+        self.packages = []  # Add this line to store packages
+        self.memory_manager = memory_manager or MemoryManager()
+
+    def _get_default_output_file(self):
+        if self.manager == "pip":
+            return "requirements.txt"
+        elif self.manager == "conda":
+            return "environment.yml"
+        else:
+            raise ValueError(f"Unsupported package manager: {self.manager}")
+    
+    def install_and_save(self, packages, upgrade=False, dev=False):
+        """Install packages and save dependencies to file"""
+        if not packages:
+            print("No packages specified for installation.")
+            return False
+            
+        self.packages = packages  # Add this line to store packages
+        # Install the packages
+        success = self._install_packages(packages, upgrade)
+        if not success:
+            return False
+            
+        # Save dependencies
+        for package in packages:
+            self.memory_manager.add_dependency(package)
+        return self._save_dependencies(dev)
+
+    def _install_packages(self, packages, upgrade=False):
+        """Install packages using the specified package manager"""
+        try:
+            if self.manager == "pip":
+                cmd = [sys.executable, "-m", "pip", "install"]
+                if upgrade:
+                    cmd.append("--upgrade")
+                cmd.extend(packages)
+            elif self.manager == "conda":
+                cmd = ["conda", "install"]
+                if upgrade:
+                    cmd.append("--update-all")
+                cmd.extend(packages)
+                cmd.append("-y")
+            else:
+                raise ValueError(f"Unsupported package manager: {self.manager}")
+                
+            print(f"Running: {' '.join(cmd)}")
+            subprocess.check_call(cmd)
+            return True
+        except subprocess.CalledProcessError as e:
+            print(f"Error installing packages: {e}")
+            return False
+    
+    def _save_dependencies(self, dev=False, categories=None):
+        """Save dependencies to file"""
+        try:
+            if self.manager == "pip":
+                target_packages = {pkg.lower() for pkg in self.memory_manager.get_dependencies(categories)}
+                return self._save_pip_dependencies(dev, target_packages)
+            elif self.manager == "conda":
+                return self._save_conda_dependencies(categories)
+            else:
+                raise ValueError(f"Unsupported package manager: {self.manager}")
+        except Exception as e:
+            print(f"Error saving dependencies: {e}")
+            return False
+    
+    def _save_pip_dependencies(self, dev=False, target_packages=None):
+        """Save pip dependencies to requirements.txt"""
+        try:
+            # Delete the previous requirements.txt if it exists
+            if os.path.exists(self.output_file):
+                os.remove(self.output_file)
+
+            # Load existing requirements if file exists
+            existing_packages = set()
+            if os.path.exists(self.output_file):
+                with open(self.output_file, 'r') as f:
+                    for line in f:
+                        line = line.strip()
+                        if line and not line.startswith('#'):
+                            existing_packages.add(line.lower())
+
+            # Get list of installed packages
+            cmd = [sys.executable, "-m", "pip", "freeze"]
+            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            requirements = result.stdout.strip().split('\n')
+            
+            # Clean up the requirements
+            cleaned_requirements = []
+            
+            for req in requirements:
+                # Get package name (everything before ==)
+                pkg_name = req.split('==')[0].lower()
+                
+                # Include if it's one of our target packages or was in existing file
+                if pkg_name in target_packages or req.lower() in existing_packages:
+                    # Remove version specifiers like +dev, etc.
+                    req = re.sub(r'(==\d+\.\d+\.\d+)\+.*', r'\1', req)
+                    cleaned_requirements.append(req)
+            
+            # Remove duplicates
+            cleaned_requirements = list(set(cleaned_requirements))
+            
+            # Sort requirements alphabetically
+            cleaned_requirements.sort(key=lambda x: x.lower())
+            
+            # Add header comment
+            header = f"# Requirements generated by pipsave on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+            
+            # Write to file
+            with open(self.output_file, 'w') as f:
+                f.write(header)
+                f.write('\n'.join(cleaned_requirements))
+                f.write('\n')
+                
+            print(f"Dependencies saved to {self.output_file}")
+            return True
+        except Exception as e:
+            print(f"Error saving pip dependencies: {e}")
+            return False
+    
+    def _save_conda_dependencies(self, categories=None):
+        try:
+            # Load existing environment if file exists
+            existing_deps = set()
+            if os.path.exists(self.output_file):
+                with open(self.output_file, 'r') as f:
+                    existing_env = yaml.safe_load(f)
+                    if existing_env and 'dependencies' in existing_env:
+                        for dep in existing_env['dependencies']:
+                            if isinstance(dep, str):
+                                existing_deps.add(dep.lower())
+                            elif isinstance(dep, dict) and 'pip' in dep:
+                                for pip_dep in dep['pip']:
+                                    existing_deps.add(pip_dep.lower())
+            
+            # Get environment info
+            cmd = ["conda", "env", "export"]
+            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            env_data = result.stdout
+            
+            # Parse YAML content
+            import yaml
+            env_dict = yaml.safe_load(env_data)
+            
+            # Keep only essential info and target packages
+            cleaned_dict = {
+                'name': env_dict.get('name', 'base'),
+                'channels': ['defaults'],
+                'dependencies': []
+            }
+            
+            # Convert packages list to lowercase for case-insensitive comparison
+            target_packages = {pkg.lower() for pkg in self.memory_manager.get_dependencies(categories)}
+            
+            if 'dependencies' in env_dict:
+                for dep in env_dict['dependencies']:
+                    if isinstance(dep, str):
+                        pkg_name = dep.split('=')[0].lower()
+                        if pkg_name in target_packages or dep.lower() in existing_deps:
+                            # Remove build hash if present
+                            dep = re.sub(r'=\d+\.\d+\.\d+=.*', lambda m: m.group(0).split('=')[0] + '=' + m.group(0).split('=')[1], dep)
+                            cleaned_dict['dependencies'].append(dep)
+                    elif isinstance(dep, dict) and 'pip' in dep:
+                        # Handle pip dependencies
+                        pip_deps = []
+                        for pip_dep in dep['pip']:
+                            pkg_name = pip_dep.split('==')[0].lower()
+                            if pkg_name in target_packages:
+                                pip_dep = re.sub(r'(==\d+\.\d+\.\d+)\+.*', r'\1', pip_dep)
+                                pip_deps.append(pip_dep)
+                        if pip_deps:
+                            pip_deps.sort(key=lambda x: x.lower())
+                            cleaned_dict['dependencies'].append({'pip': pip_deps})
+            
+            # Add header comment
+            header = f"# Environment generated by pipsave on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+            
+            # Write to file
+            with open(self.output_file, 'w') as f:
+                f.write(header)
+                yaml.dump(cleaned_dict, f, default_flow_style=False)
+                
+            print(f"Dependencies saved to {self.output_file}")
+            return True
+        except ImportError:
+            print("Error: PyYAML is required for conda dependency saving. Install with 'pip install pyyaml'")
+            return False
+        except Exception as e:
+            print(f"Error saving conda dependencies: {e}")
+            return False
