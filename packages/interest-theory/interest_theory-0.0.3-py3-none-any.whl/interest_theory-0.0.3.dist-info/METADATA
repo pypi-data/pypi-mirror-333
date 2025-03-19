@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: interest-theory
+Version: 0.0.3
+Summary: Useful tools for interest theory
+Home-page: https://github.com/alejandro77palacios/interest_theory
+Author: Alejandro Prieto Palacios
+Author-email: "Alejandro" <alex_palacios77@icloud.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Interest theory
+
+Interest rates conversion and bonds
+
+## Installation
+
+```shell
+$ python -m pip install interest-theory
+```
