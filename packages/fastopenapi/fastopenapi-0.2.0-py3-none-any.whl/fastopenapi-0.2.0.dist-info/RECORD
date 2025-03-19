@@ -1,0 +1,11 @@
+fastopenapi/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+fastopenapi/base_router.py,sha256=I3knQtrEDl2ao2azgEZIcJPeSD8m3QoQtC0G4VHqVao,12136
+fastopenapi/routers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastopenapi/routers/falcon.py,sha256=KMKkIMKv6ETj161mtP7-YqnwJmFtjK6vU3umcLS7o4Q,4216
+fastopenapi/routers/flask.py,sha256=23l4RvWo8qElYJEZhZ5ARE_11ZyDfKxxvZ0Fl4o8ZOY,2212
+fastopenapi/routers/sanic.py,sha256=q5OGcXQlj-t5BlO7kt_Mk-m3CDHkFU_x5nAFetivw2U,2677
+fastopenapi/routers/starlette.py,sha256=lm3jaakfbF6stcq_Z0kYxTwGMtF2AeThkDCRUtd3Y08,2924
+fastopenapi-0.2.0.dist-info/LICENSE,sha256=SXHEoXp8JhyTAsuEh8x5EqyLWRlGw8Y_Qxxuh1qoHGs,1073
+fastopenapi-0.2.0.dist-info/METADATA,sha256=6Fmi_hpgkd7FcAAwm71i-RPcgpV5pCL4IkIcPXUAslI,6354
+fastopenapi-0.2.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+fastopenapi-0.2.0.dist-info/RECORD,,
