@@ -1,0 +1,77 @@
+Metadata-Version: 2.2
+Name: robot_simulator
+Version: 1.0.0.dev1
+Summary: Simulator robot
+Author-email: LupinDental <contact@lupindental.com>
+Maintainer-email: LupinDental <contact@lupindental.com>
+Project-URL: Repository, https://gitlab.com/lupindental/arsene/software/simulators/robot_simulator
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: typer==0.15.2
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+
+# Robot Simulator
+
+## Description  
+
+Robot Simulator is a project that simulates a robot using asynchronous sockets. It manages three types of connections:  
+
+- **Framework**: Handles settings and response updates.
+- **Main Commands**: Receives and processes main commands.
+- **Trajectory Commands**: Manages trajectory-related commands.
+
+The project uses `asyncio` for asynchronous connection management and a logging system to track events.
+
+## Features  
+
+- **Command Management**:  
+  - Decodes and executes commands received via sockets.
+  - Provides appropriate responses through `Responses`.
+- **Dynamic Updates**:  
+  - Settings and responses can be updated in real-time via framework socket.
+- **Latency Simulation**:  
+  - Introduces a configurable delay.
+
+## Project Structure  
+
+```
+robot-simulator/
+│── ci/
+│   ├── templates/
+│   │   ├── .gitlab-ci-defaults.yml
+│   │   ├── .gitlab-ci-grognard.yml
+│   │   ├── .gitlab-ci-pytest.yml
+│── src/
+│   ├── robot_simulator/
+│   │   ├── core/
+│   │   │   ├── __init__.py
+│   │   │   ├── commands.py
+│   │   │   ├── constants.py
+│   │   │   ├── decoder.py
+│   │   │   ├── encoder.py
+│   │   │   ├── logger_manager.py
+│   │   │   ├── responses_manager.py
+│   │   │   ├── responses.py
+│   │   │   ├── robot_simulator_server.py
+│   │   │   ├── settings_manager.py
+│   │   │   ├── settings.py
+│   │   │   ├── utils.py
+│   │   ├── main.py
+│── tests/
+│── .flake8
+│── .gitignore
+│── .gitlab-ci.yml
+│── LICENSE
+│── pyproject.toml
+│── README.md
+│── requirements.txt
+```
