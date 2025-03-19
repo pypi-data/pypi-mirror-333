@@ -1,0 +1,7 @@
+pyotp
+qrcode
+pycryptodome
+requests
+paramiko
+opencv-python
+pyzbar

@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: purdue-connect
+Version: 1.0.7
+Summary: Command line tool for Purdue VPN and SSH connections using HOTP-based OTP
+Author: Umberto Maria Puddu
+Author-email: upuddu@purdue.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pyotp
+Requires-Dist: qrcode
+Requires-Dist: pycryptodome
+Requires-Dist: requests
+Requires-Dist: paramiko
+Requires-Dist: opencv-python
+Requires-Dist: pyzbar
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
