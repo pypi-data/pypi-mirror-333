@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: byted-aurora-notebook-tool
+Version: 0.0.1
+Summary: A simple package named byted_aurora_notebook_tool
+Home-page: https://github.com/artifact/byted_aurora_notebook_tool.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
+
