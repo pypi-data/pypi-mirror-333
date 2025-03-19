@@ -1,0 +1,10 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/config.py,sha256=B2ybMwJI_XdcL0LUs48oKYD1BySWgPEUQa-ruYm4AKU,192
+app/database.py,sha256=GN0-DixjwmIXM1NZ4vC7NKMDWjSN92q5-B50kzGq5vo,406
+app/main.py,sha256=byoQZ6U4JCJcJ_pDMqk8tZtYnnxdWaVbEuIZNQXFBz4,236
+my_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_package/my_module.py,sha256=eOBPfUMzM2MZZW2BKiuSh5HqMtu7-tQdryCrHf9pw44,72
+dinoop_package_1-0.1.dist-info/METADATA,sha256=tbFqzUtZ1SAB298RB1tGBK5Q7icpWvBdMYZGULD7_uc,419
+dinoop_package_1-0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+dinoop_package_1-0.1.dist-info/top_level.txt,sha256=WXEV-Q3bJ9KpuJ7OGLjbfxU1bbQ2jxHjh5q8dkggQLg,15
+dinoop_package_1-0.1.dist-info/RECORD,,

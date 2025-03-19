@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: dinoop_package_1
+Version: 0.1
+Summary: A simple example package
+Home-page: https://github.com/yourusername/my_package
+Author: Dinoop
+Author-email: dinoop@example.com
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# My Python Package
+
+This is a simple example package.
