@@ -1,0 +1,13 @@
+meme_generator-0.2.0b11.dist-info/METADATA,sha256=Vulz04GUfFqRrYqatPkHaiwo4ecMjUT-iZ6xbTfynHk,3458
+meme_generator-0.2.0b11.dist-info/WHEEL,sha256=R8ZEnni7m2eO5M7FTZ3FjvjlbxsclsOWT9kw6XK1Agc,94
+meme_generator/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meme_generator/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meme_generator/resources/__init__.pyi,sha256=PfRLCZ6_rjJDroDi_BqYx2dE9mPXyvjGIymSfXEePWg,86
+meme_generator/tools/image_operations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meme_generator/tools/image_operations/__init__.pyi,sha256=zJk60MHaBuFEQIzWVbpAlm4_NwSXsqWWfVuf_z4JWd0,1904
+meme_generator/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+meme_generator/tools/__init__.pyi,sha256=MB3R82fnn9or_023orkX7qldIRjk-iuMoENz5M5xGZc,890
+meme_generator/__init__.py,sha256=odHXOh9e_NPYDhBetNFGjFIRZXFKFIe3AIeLWuVP_Io,145
+meme_generator/__init__.pyi,sha256=LeO3aToIta_H4I2BsXiXiFHQLiLJcWSsgdpLMojmac4,2926
+meme_generator/meme_generator.pyd,sha256=zYtkGK7a5peSxjf_q-54KDVFN5vlFY-6GVupTyZC5WI,27127296
+meme_generator-0.2.0b11.dist-info/RECORD,,
