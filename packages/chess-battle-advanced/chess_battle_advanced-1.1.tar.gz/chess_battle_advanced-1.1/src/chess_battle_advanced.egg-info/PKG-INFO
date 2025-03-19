@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: chess-battle-advanced
+Version: 1.1
+Summary: chess battle advanced
+Author-email: unnamed7353 <unnamed7353@gmail.com>
+Keywords: chess,battle,advanced,cba,chessbattleadvanced
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame
+Requires-Dist: pygvideo
+
+chess battle advanced
+
+installs the `chess-battle-advanced` command-line tool when installed.
+if it doesn't work you can use the `cba` function.
