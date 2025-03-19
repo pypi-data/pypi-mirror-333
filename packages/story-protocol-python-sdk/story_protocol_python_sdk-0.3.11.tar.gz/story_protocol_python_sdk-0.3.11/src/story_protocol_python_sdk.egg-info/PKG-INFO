@@ -1,0 +1,141 @@
+Metadata-Version: 2.2
+Name: story_protocol_python_sdk
+Version: 0.3.11
+Summary: A Python SDK for interacting with Story Protocol.
+Author-email: Andrew Chung <andrew@storyprotocol.xyz>
+License: MIT License
+        
+        Copyright (c) 2024 Story Protocol
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: documentation, https://docs.story.foundation/docs/python-sdk
+Project-URL: download, https://pypi.org/project/story-protocol-python-sdk/#files
+Project-URL: homepage, https://www.story.foundation/
+Project-URL: release notes, https://github.com/storyprotocol/python-sdk/releases
+Project-URL: source, https://github.com/storyprotocol/python-sdk/tree/main
+Project-URL: tracker, https://github.com/storyprotocol/python-sdk/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: web3>=7.0.0
+Requires-Dist: pytest
+Requires-Dist: python-dotenv
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/storyprotocol/python-sdk/andrew/update-release-and-pypi/story_logo.png" width="100" alt="Story Protocol Logo">
+</div>
+
+# Story SDK
+
+[![PyPI version](https://badge.fury.io/py/story-protocol-python-sdk.svg)](https://badge.fury.io/py/story-protocol-python-sdk)
+[![Documentation](https://img.shields.io/badge/docs-latest-blue.svg)](https://docs.story.foundation/docs/sdk-overview)
+[![GitHub license](https://img.shields.io/github/license/storyprotocol/python-sdk.svg)](https://github.com/storyprotocol/python-sdk/blob/main/LICENSE)
+
+Welcome to the documents for Story Python SDK. The Python SDK provides the APIs for developers to build applications with Story. By using the SDK, developers can create the resources like IP assets and perform actions to interact with the resource.
+
+## How to use Story Protocol SDK in Your Project
+
+### Install Story Protocol core SDK
+
+Suppose you already have a node project or created a new node project. First, you need to install `story_protocol_python_sdk` in your project. You can use one of the following command to install the package:
+
+Use `pip`:
+
+```
+pip install story_protocol_python_sdk web3
+```
+
+Besides the Story Protocol SDK package `story_protocol_python_sdk`, we also require the package `web3` (https://pypi.org/project/web3/) to access the DeFi wallet accounts.
+
+# Initiate SDK Client
+
+Next we can initiate the SDK Client by first setting up our wallet and then the client itself.
+
+## Set up your wallet
+
+The SDK supports using `web3` for initiating SDK client. Create a Python file and write the following code to initiate the client with a private key:
+
+> :information-source: Make sure to have WALLET_PRIVATE_KEY set up in your .env file.
+
+```Python main.py
+import os
+from dotenv import load_dotenv
+from web3 import Web3
+
+load_dotenv()
+private_key = os.getenv('WALLET_PRIVATE_KEY')
+rpc_url = os.getenv('RPC_PROVIDER_URL')
+
+# Initialize Web3
+web3 = Web3(Web3.HTTPProvider(rpc_url))
+
+# Set up the account with the private key
+account = web3.eth.account.from_key(private_key)
+```
+
+The preceding code created the `account` object for creating the SDK client.
+
+## Set up SDK client
+
+To set up the SDK client, import `StoryClient` from `story_protocol_python_sdk`. Write the following code, utilizing the `account` we created previously.
+
+> :information-source: Make sure to have RPC_PROVIDER_URL for your desired chain set up in your .env file. We recommend using the public default one with `RPC_PROVIDER_URL=https://aeneid.storyrpc.io`.
+
+```Python main.py
+from story_protocol_python_sdk import StoryClient
+
+# Create StoryClient instance
+aeneid_chain_id = 1315
+story_client = StoryClient(web3, account, aeneid_chain_id)
+```
+
+## Running test cases
+
+- Integration Tests
+
+```
+pytest
+```
+
+- Unit Tests
+
+```
+pytest tests/unit/resources -v -ra -q
+```
+
+## Release
+
+| Package                         | Description                                    |
+| :------------------------------ | :--------------------------------------------- |
+| [story_protocol_python_sdk](./src/story_protocol_python_sdk) | A Python SDK for interacting with the Story Protocol. |
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change. Details see: [CONTRIBUTING](/CONTRIBUTING.md)
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT License](/LICENSE.md)
