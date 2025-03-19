@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "pysubconverter",
+  "description": "A wrapper from subconverter",
+  "builtin-baseline": "65be7019941e1401e02daaba0738cab2c8a4a355",
+  "homepage": "https://github.com/msclock/pysubconverter",
+  "dependencies": [
+    "openssl",
+    "subconverter",
+    "pybind11",
+    "cmake-modules",
+    "robotology-cmake-ycm"
+  ],
+  "overrides": [
+    {
+      "name": "openssl",
+      "version": "3.3.2",
+      "port-version": 1
+    },
+    {
+      "name": "subconverter",
+      "version": "92f66bf5b58be5b3e605bb481db5f5ffd6b2aa78"
+    },
+    {
+      "name": "pybind11",
+      "version": "2.13.5"
+    },
+    {
+      "name": "cmake-modules",
+      "version": "1.6.14"
+    },
+    {
+      "name": "robotology-cmake-ycm",
+      "version": "0.16.3"
+    }
+  ],
+  "features": {
+    "test": {
+      "description": "Dependencies for testing",
+      "dependencies": [
+        {
+          "name": "gtest",
+          "version>=": "1.15.2"
+        }
+      ]
+    }
+  },
+  "vcpkg-configuration": {
+    "registries": [
+      {
+        "kind": "git",
+        "baseline": "c3cfb0b40f90841672b7f9a6ca4415839a6f2703",
+        "repository": "https://github.com/msclock/cmake-registry",
+        "packages": [
+          "cmake-modules",
+          "robotology-cmake-ycm",
+          "vcpkg-cmake-module"
+        ]
+      }
+    ],
+    "overlay-ports": [
+      "cmake/vcpkg/ports"
+    ],
+    "overlay-triplets": [
+      "cmake/vcpkg/triplets"
+    ]
+  }
+}

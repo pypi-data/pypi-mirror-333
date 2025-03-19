@@ -1,0 +1,28 @@
+{
+  "name": "subconverter",
+  "version-string": "92f66bf5b58be5b3e605bb481db5f5ffd6b2aa78",
+  "description": "Utility to convert between various subscription format.",
+  "homepage": "https://github.com/tindy2013/subconverter",
+  "license": "GPL-3.0",
+  "supports": "!uwp & !xbox",
+  "dependencies": [
+    "yaml-cpp",
+    "rapidjson",
+    "pcre2",
+    "toml11",
+    "curl",
+    "inja",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    {
+      "name": "pkgconf",
+      "host": true
+    }
+  ]
+}
