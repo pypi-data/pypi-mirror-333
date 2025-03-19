@@ -1,0 +1,11 @@
+[console_scripts]
+binary_to_semantic = recon3d.utility:main_binary_to_semantic
+downscale = recon3d.downscale:main
+hello = recon3d.command_line:hello
+image_to_voxel = recon3d.hdf_io:image_to_voxel_command_line
+instance_analysis = recon3d.instance_analysis:main
+recon3d = recon3d.command_line:recon3d
+semantic_to_binary = recon3d.utility:main_semantic_to_binary
+void_descriptor = recon3d.void_descriptor:main
+voxel_to_image = recon3d.hdf_io:voxel_to_image_command_line
+voxel_to_mesh = recon3d.voxel_to_mesh:main

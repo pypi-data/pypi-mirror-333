@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: recon3d
+Version: 2.0.3
+Author-email: Andrew Polonsky <apolon@sandia.gov>, Chad Hovey <chovey@sandia.gov>, John Emery <jmemery@sandia.gov>, Paul Chao <pchao@sandia.gov>
+Project-URL: Documentation, http://structmechtools.cee-gitlab.lan/recon3d
+Project-URL: Repository, https://cee-gitlab.sandia.gov/structMechTools/recon3d
+Requires-Python: <3.12,>=3.11
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: automesh==0.2.9
+Requires-Dist: connected-components-3d==3.18.0
+Requires-Dist: fastremap==1.14.1
+Requires-Dist: h5py==3.11.0
+Requires-Dist: matplotlib==3.9.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: scipy==1.14.0
+Requires-Dist: scikit-image==0.24.0
+Requires-Dist: scikit-learn==1.5.1
+Requires-Dist: pillow==10.4.0
+Requires-Dist: pyevtk==1.6.0
+Requires-Dist: pyyaml==6.0.1
+Provides-Extra: dev
+Requires-Dist: black==24.8.0; extra == "dev"
+Requires-Dist: docstr-coverage==2.2.0; extra == "dev"
+Requires-Dist: docutils<0.18,>=0.14; extra == "dev"
+Requires-Dist: flake8==7.1.1; extra == "dev"
+Requires-Dist: pre-commit==4.1.0; extra == "dev"
+Requires-Dist: pdbp==1.5.4; extra == "dev"
+Requires-Dist: pytest==8.3.2; extra == "dev"
+Requires-Dist: pytest-cov==5.0.0; extra == "dev"
+Requires-Dist: pdoc; extra == "dev"
