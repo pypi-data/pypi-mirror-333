@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: taskiq-aws
+Version: 0.4.0
+Summary: 
+License: LICENSE
+Keywords: taskiq,tasks,distributed,async
+Author: Taskiq team
+Author-email: taskiq@no-reply.com
+Maintainer: Taskiq team
+Maintainer-email: taskiq@no-reply.com
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System :: Networking
+Classifier: Typing :: Typed
+Requires-Dist: aiobotocore (>=2.13.1,<3.0.0)
+Requires-Dist: taskiq (>=0,<1)
+Requires-Dist: wait-for-it (>=2.2.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+# TaskIQ-AWS
+
+taskiq-aws is a plugin for taskiq that adds a new broker based on amazonm's sqs.
+
+# Installation
+
+To use this project you must have installed core taskiq library:
+```bash
+pip install taskiq
+```
+This project can be installed using pip:
+```bash
+pip install taskiq-aws
+```
+
+# Usage
+
+Let's see the example with the sqs broker:
+
+```python
+# broker.py
+import asyncio
+
+from taskiq_aws import SQSBroker
+
+broker = SQSBroker(queue_url=http://localhost:4566)
+
+
+@broker.task
+async def best_task_ever() -> None:
+    """Solve all problems in the world."""
+    await asyncio.sleep(5.5)
+    print("All problems are solved!")
+
+
+async def main():
+    task = await best_task_ever.kiq()
+    print(await task.wait_result())
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+Launch the workers:
+`taskiq worker broker:broker`
+Then run the main code:
+`python3 broker.py`
+
+Brokers parameters:
+* `queue_url` - url to the sqs.
+* `aws_region` - aws region of the queue.
+* `task_id_generator` - custom task_id genertaor.
+* `result_backend` - custom result backend.
+
