@@ -1,0 +1,15 @@
+numpy
+pandas
+tomli
+toml
+plotly
+parse
+geopandas
+duckdb
+validators
+pydantic
+pillow
+
+[tests]
+pytest
+pytest-cov
