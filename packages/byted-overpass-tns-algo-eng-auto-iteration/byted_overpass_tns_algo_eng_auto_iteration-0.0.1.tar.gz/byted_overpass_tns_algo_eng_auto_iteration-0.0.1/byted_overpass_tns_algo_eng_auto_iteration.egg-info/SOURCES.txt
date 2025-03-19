@@ -1,0 +1,6 @@
+setup.py
+byted_overpass_tns_algo_eng_auto_iteration/__init__.py
+byted_overpass_tns_algo_eng_auto_iteration.egg-info/PKG-INFO
+byted_overpass_tns_algo_eng_auto_iteration.egg-info/SOURCES.txt
+byted_overpass_tns_algo_eng_auto_iteration.egg-info/dependency_links.txt
+byted_overpass_tns_algo_eng_auto_iteration.egg-info/top_level.txt
