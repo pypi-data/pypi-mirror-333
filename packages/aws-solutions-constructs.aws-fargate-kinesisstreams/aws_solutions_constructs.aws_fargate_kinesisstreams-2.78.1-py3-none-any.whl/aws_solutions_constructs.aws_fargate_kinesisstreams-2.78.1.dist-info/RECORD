@@ -1,0 +1,9 @@
+aws_solutions_constructs/aws_fargate_kinesisstreams/__init__.py,sha256=AVIOMWEoBt4WhEg-oC3ZT51AYMWP_wGOUJw86_mrNG0,38081
+aws_solutions_constructs/aws_fargate_kinesisstreams/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_solutions_constructs/aws_fargate_kinesisstreams/_jsii/__init__.py,sha256=CGnmd1SGYlxm-plGImu8ihC1xbfbO3fhAKlRcIY7xyk,1547
+aws_solutions_constructs/aws_fargate_kinesisstreams/_jsii/aws-fargate-kinesisstreams@2.78.1.jsii.tgz,sha256=wn9KwE9UBnwqZ6IqEN1x7cV9VUg9emXFwL3vO_zAjBY,118761
+aws_solutions_constructs.aws_fargate_kinesisstreams-2.78.1.dist-info/LICENSE,sha256=wnT4A3LZDAEpNzcPDh8VCH0i4wjvmLJ86l3A0tCINmw,10279
+aws_solutions_constructs.aws_fargate_kinesisstreams-2.78.1.dist-info/METADATA,sha256=mD4ps8nukz9UMuW1ppO3NmkMsfq6UyCb0_dTHzKzMEE,10099
+aws_solutions_constructs.aws_fargate_kinesisstreams-2.78.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+aws_solutions_constructs.aws_fargate_kinesisstreams-2.78.1.dist-info/top_level.txt,sha256=hi3us_KW7V1ocfOqVsNq1o3w552jCEgu_KsCckqYWsg,25
+aws_solutions_constructs.aws_fargate_kinesisstreams-2.78.1.dist-info/RECORD,,
