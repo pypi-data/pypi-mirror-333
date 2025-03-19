@@ -1,0 +1,64 @@
+Metadata-Version: 2.2
+Name: sam_plot_extraction
+Version: 0.2.4
+Summary: Plot extraction using segment anything model
+Home-page: https://github.com/breadnbutter0/sam-plot-extraction
+Author: Hansae Kim
+Author-email: kim4012@purdue.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10, <3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: d2spy
+Requires-Dist: fiona
+Requires-Dist: geojson
+Requires-Dist: geopandas
+Requires-Dist: jupyter
+Requires-Dist: leafmap
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pandas
+Requires-Dist: pyproj
+Requires-Dist: rasterio
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: shapely
+Requires-Dist: segment_anything
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# sam-plot-extraction
+plot extraction using segment anything model
+
+
+# install virtual environment
+```bash
+conda create -n spet python=3.10 -y
+conda activate spet
+```
+
+# install sam plot extraction tool
+```bash
+pip install sam-plot-extraction
+```
+
+# install dependencies
+```bash
+pip install d2spy openrs-python git+https://github.com/facebookresearch/segment-anything.git
+
+(CPU)
+pip install torch torchvision
+(GPU)
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+conda install gdal -y
+```
