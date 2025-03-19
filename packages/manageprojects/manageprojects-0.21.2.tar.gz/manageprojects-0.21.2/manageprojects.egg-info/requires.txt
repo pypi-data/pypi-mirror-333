@@ -1,0 +1,17 @@
+cookiecutter>=2.4.0
+tomlkit
+EditorConfig
+darker[color,flynt,isort]
+autoflake
+pyflakes
+autopep8
+flake8
+flake8-bugbear
+pyupgrade
+refurb
+codespell
+mypy
+cli-base-utilities
+click
+rich-click
+rich
