@@ -1,0 +1,59 @@
+site_name: Mantis Documentation
+site_description: Audio Processing with Large Language Models
+repo_url: https://github.com/paulelliotco/mantis-ai
+docs_dir: docs
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: black
+      accent: white
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch mode
+    - scheme: slate
+      primary: black
+      accent: white
+      toggle:
+        icon: material/lightbulb
+        name: Switch mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [mantis]
+          options:
+            show_source: true
+            show_root_heading: true
+  - autorefs
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Tutorials:
+      - Basic Transcription: tutorials/basic-transcription.md
+      - Batch Transcription: tutorials/batch-transcription.md
+      - Content Highlights: tutorials/content-highlights.md
+      - Hate Speech Detection: tutorials/hate-speech-detection.md
+      - Podcast Chapter Summary: tutorials/podcast-chapter-summary.md
+      - Virtual Meeting Summary: tutorials/virtual-meeting-summary.md
+      - YouTube Transcripts: tutorials/youtube-transcripts.md
+  - Contributing: contributing.md
