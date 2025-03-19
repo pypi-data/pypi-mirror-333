@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recipe_extractor_tools"
+version = "0.0.2"
+authors = [
+    {name = "Sebastien Hamel", email = "sebhamel09@gmail.com"},
+]
+description = "Models and tools for a recipe extractors"
+readme = "README.md"
+requires-python = ">3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "pydantic",
+    "sqlalchemy",
+    "loguru",
+    "mysql-connector-python"
+]
+keywords = ["recipe", "models", "ingredients", "methods"]
+
+[project.urls]
+Documentation = "https://recipe-extractor-tools.readthedocs.io/en/latest/"
+Homepage = "https://github.com/sebastienhamel/basic_recipe_extrator_tools"
+Repository = "https://github.com/sebastienhamel/basic_recipe_extrator_tools"
+Issuses = "https://github.com/sebastienhamel/basic_recipe_extrator_tools/issues"
