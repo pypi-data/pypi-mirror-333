@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+src/elan.egg-info/PKG-INFO
+src/elan.egg-info/SOURCES.txt
+src/elan.egg-info/dependency_links.txt
+src/elan.egg-info/top_level.txt
