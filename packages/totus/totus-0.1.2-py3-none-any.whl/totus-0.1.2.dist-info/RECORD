@@ -1,0 +1,11 @@
+totus/__init__.py,sha256=uG9lOCc0JnGhwasgQkt2gvqekvaBFJoPFrh7g-xWahE,25
+totus/errors.py,sha256=CIfSrevvjZixdytxY0SBEhO6uvatLQv4wuzK39FRT20,827
+totus/reference.py,sha256=2snwDxUh34_M4M1-7BIebuQh0Zn6ZDi0UY3hwdqqmhM,1383
+totus/totus.py,sha256=CoQ6Eqcnz5AP-JvbZUXjX8MmJmTxumFHUzxeWz-o0sE,2557
+totus/validate.py,sha256=RplnqKskDolAPH1lxIYHs9nXwqkNLdLxXUeskbnXGaA,383
+totus/dto/POI.py,sha256=g_1HNoi2RQfpiezaPhbktEeFG0XHuowFi2HN15vSPYg,1266
+totus/dto/ValidatedEmail.py,sha256=Ai9T0cjOUS0kHC1CWDLD08ghP6lo9NJ4M1L9hPuB7oA,1106
+totus-0.1.2.dist-info/METADATA,sha256=Qd65QgxmYmT4jfCKslACt6-7QlSfF3chOa8khsZKZo8,2019
+totus-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+totus-0.1.2.dist-info/licenses/LICENSE.md,sha256=DsNGm-94-hP_U6SzIkEEWZlD3N0RSciekhcgZF7bF2U,1619
+totus-0.1.2.dist-info/RECORD,,
