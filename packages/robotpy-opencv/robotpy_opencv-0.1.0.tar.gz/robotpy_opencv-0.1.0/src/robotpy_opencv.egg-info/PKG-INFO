@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: robotpy-opencv
+Version: 0.1.0
+Summary: A minimal example Python package
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# robotpy-opencv
+
+This is a minimal Python package named **robotpy-opencv**. 
+
+It contains a simple function `hello()` that returns a greeting string.
