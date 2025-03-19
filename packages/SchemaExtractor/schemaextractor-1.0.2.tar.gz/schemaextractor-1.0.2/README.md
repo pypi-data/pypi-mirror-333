@@ -1,0 +1,175 @@
+# Schema Extractor
+
+A python library for extracting and analyzing schema from knowledge graphs represented in turtle representation using multi-autonomous agents.
+
+## Features
+
+- Extract schema components from TTL files
+- Provide technical and semantic analysis
+- Merge insights using different strategies
+- Multiple output formats (text/JSON)
+- Command-line interface 
+- Example script for quick start 
+
+## Installation
+
+Install this package via :
+
+```sh
+pip install SchemaExtractor
+```
+
+Or get the newest development version via:
+
+```sh
+pip install git+https://github.com/sensein/SchemaExtractor.git
+```
+
+## Important
+Copy the default configuration file and update the OPEN ROUTER API key. The rest can be used default. 
+```bash
+
+# Copy and customize config
+cp src/configuration/config.yaml my_config.yaml 
+```
+
+
+## Configuration
+
+The library uses a YAML configuration file to manage settings for all agents. You have two options:
+
+Use Configuration:
+   - Create your own YAML file with the same structure
+   - Pass it using the `--config` option
+   - Allows customization of all agent settings
+
+Example Configuration Structure:
+```yaml
+openrouter:
+  base_url: "https://openrouter.ai/api/v1"
+  api_key: "your-api-key"
+  headers:
+    HTTP-Referer: "https://brainkb.org"
+    X-Title: "Schema Extractor MultiAutonomous Agents"
+
+base_config:
+  temperature: 0.7
+  top_p: 0.9
+  presence_penalty: 0.0
+  frequency_penalty: 0.0
+
+agent_configs:
+  executor:
+    name: "SPARQLExecutorAgent"
+    system_message: "..."
+    model: "openai/gpt-4o-2024-11-20"
+    temperature: 0.5
+  prompt:
+    name: "PromptAgent"
+    system_message: "..."
+    model: "openai/gpt-4o-2024-11-20"
+    temperature: 0.7
+  merger:
+    name: "MergerAgent"
+    system_message: "..."
+    model: "openai/gpt-4o-2024-11-20"
+    temperature: 0.6
+```
+
+## Usage
+
+### 1. Example Script (Quick Start)
+
+```bash
+
+python experiment/example.py --config my_config.yaml
+
+
+python experiment/example.py \
+    --ttl-file experiment/schema.ttl \
+    --config my_config.yaml \
+    --strategy comprehensive \
+    --format json \
+    --output analysis.json
+```
+
+script Options:
+- `--ttl-file`: Path to TTL file (default: tests/sample.ttl)
+- `--config`: Path to config YAML file (optional)
+- `--strategy`: Analysis strategy (comprehensive, selective, conflict_resolution)
+- `--format`: Output format (text, json)
+- `--output`: Output file path (optional)
+
+### 2. Command Line Interface
+
+```bash
+# Basic usage with default config
+schema-extract extract data/schema.ttl
+
+# With custom config
+schema-extract extract data/schema.ttl --config my_config.yaml
+
+# Full example with all options
+schema-extract extract data/schema.ttl \
+    --config my_config.yaml \
+    --strategy comprehensive \
+    --format json \
+    --output results.json
+
+# Show version
+schema-extract version
+
+# Show help
+schema-extract --help
+schema-extract extract --help
+```
+
+### 3. Python Library
+
+```python
+from SchemaExtractor.app import SchemaExtractorApp
+
+app = SchemaExtractorApp()
+
+app = SchemaExtractorApp(config_file="my_config.yaml")
+
+# Process  
+result = app.extract_schema(
+    ttl_file_path="data/schema.ttl",
+    merge_strategy="comprehensive",
+    output_format="text"
+)
+
+
+if result["status"] == "success":
+    if result.get("output"):  # text format
+        print(result["output"])
+    else:  # json format
+        print(f"Technical Analysis: {result['technical_analysis']}")
+        print(f"Semantic Analysis: {result['semantic_analysis']}")
+        print(f"Merged Analysis: {result['merged_analysis']}")
+        print(f"Insights: {result['insights']}")
+```
+
+Output Sample for `experiment/sample.ttl` data:
+
+![output_snapshot_1.png](output_snapshot_1.png)
+![output_snapshot_2.png](output_snapshot_2.png)
+![output_snapshot_3.png](output_snapshot_3.png)
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE.txt](LICENSE.txt) file for details.
+
+## Authors
+
+- Tek Raj Chhetri <tekraj@mit.edu>
+
+## Acknowledgments
+
+- This work is part of the [BrainKB](https://beta.brainkb.org/) project.
