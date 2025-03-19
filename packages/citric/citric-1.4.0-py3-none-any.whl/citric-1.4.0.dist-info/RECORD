@@ -1,0 +1,17 @@
+citric/__init__.py,sha256=R_Uny-UPN5Irq0eehibQBRozXzSsnK34uMCTMp8kHUA,299
+citric/_compat.py,sha256=a4NqWBbjereEJQpV1J3fkKQe-doT9Crr8myEKuagGDM,2440
+citric/client.py,sha256=Vyl082StUsJIu74c74ZFw9qa_wtgRw7zB5R-maN099s,52501
+citric/enums.py,sha256=IiLAZ8haR4WTl9d_GLcFVRy66kdcWaNSfs7mA360eS8,3115
+citric/exceptions.py,sha256=BPCmccgz2gPYSPn9goeAyRzNihc-2G9iVgh4DQ2963k,1192
+citric/method.py,sha256=qX-5uTKQCpl8YTeFbZvV93lTHWamY7qc3Uk-FATxdzo,1147
+citric/objects.py,sha256=3TmmmRQWEOzX5G5wFsYKudvWh1JaQo_N1Gw_ZjOsGxY,1212
+citric/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+citric/session.py,sha256=-wi4Q9m7yDe9ALBwefKd352Dc_e-nXdJIBbSqZUMnTw,7264
+citric/types.py,sha256=c_A_TPS2wtOCeQgbQVrGNvEp8W4Ts9P2KEnS6FCgGQM,15194
+citric/_rest/__init__.py,sha256=TkqZVkrgbaNB2oVlR--mSR3Xib0E8g9qkiu_b8Bm5sk,128
+citric/_rest/client.py,sha256=4cz03Jlam-aJ5iZwTelvYI7Fxq--CsE6tmKJTEaunpM,5581
+citric-1.4.0.dist-info/METADATA,sha256=74vxoenaAgKteWUTEs1_N8O3sr4iMYflFCYPSIyRaok,7426
+citric-1.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+citric-1.4.0.dist-info/licenses/AUTHORS.md,sha256=kzwwaXp4Kx5hgvla5KsHHDpukYEZE3sipDonQMnCB70,131
+citric-1.4.0.dist-info/licenses/LICENSE,sha256=gLnGgBQCs6EYHnKpg7Cs1mH8XJEZdL3khPhCjZSR8Ec,1083
+citric-1.4.0.dist-info/RECORD,,
