@@ -1,0 +1,6 @@
+setup.py
+byted_cairo/__init__.py
+byted_cairo.egg-info/PKG-INFO
+byted_cairo.egg-info/SOURCES.txt
+byted_cairo.egg-info/dependency_links.txt
+byted_cairo.egg-info/top_level.txt
