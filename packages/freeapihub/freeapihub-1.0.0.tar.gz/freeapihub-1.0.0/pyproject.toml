@@ -1,0 +1,37 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[project]
+authors = [{name = "Rehan", email = "rehanalire52@email.com"}]
+dependencies = ["httpx", "python-dotenv"]
+description = "A Python SDK for FreeApiHub, providing simple access to free APIs with support for data retrieval and integration."
+keywords = ["api", "sdk", "freeapihub", "data-retrieval", "python-sdk"]
+license = {text = "Apache-2.0"}
+name = "freeapihub"
+readme = "README.md"
+requires-python = ">=3.7"
+version = "1.0.0"
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Documentation = "https://freeapi-hub.vercel.app/docs"
+Homepage = "https://github.com/rehan-adi/freeapihub-python-sdk"
+Repository = "https://github.com/rehan-adi/freeapihub-python-sdk"
+
+[tool.setuptools]
+packages = ["freeapihub"]
