@@ -1,0 +1,10 @@
+PDBNucleicAcids/BasePairRules.py,sha256=6Qi-4ZPb8k6ZXsTvbClv0OHr7S89kdaXlG2SmOnzAgM,9930
+PDBNucleicAcids/Geometry.py,sha256=suM1ydZ-ao_Nmkr2cbs_vMD1OXQbhL7FuC-OSqOgfjE,1761
+PDBNucleicAcids/NucleicAcid.py,sha256=F9QuTEl48s4ONkrAqwU8REYDAmzrzAUrsEd2jOq1v04,23240
+PDBNucleicAcids/__init__.py,sha256=pnPQxV-5O4JYSAAPLqt2ZGgbvB7B9nAtlIJFj2yXP_s,155
+pdbnucleicacids-0.3.3.dist-info/AUTHORS.rst,sha256=PlS91A-GkfHib1OMvyWWkRdgjalaZgkJ5_abeMyqhQk,179
+pdbnucleicacids-0.3.3.dist-info/LICENSE,sha256=g0xhrf6BGhO9KNaJ7TfXCBISj77BRi7mKeRSmWr9mfM,1078
+pdbnucleicacids-0.3.3.dist-info/METADATA,sha256=X6pZrxCsCsarXX_ztIRsXkapBjon8foC16ydU8rKalM,4416
+pdbnucleicacids-0.3.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pdbnucleicacids-0.3.3.dist-info/top_level.txt,sha256=k4JWNkQjEJSCs5bsSrn0zGbS8ZdTzWPt94S_K86gVl8,16
+pdbnucleicacids-0.3.3.dist-info/RECORD,,
