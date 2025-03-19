@@ -1,0 +1,14 @@
+Moral88/__init__.py,sha256=Z7iEZUqslxRyJU2to6iX6a5Ak1XBZxU3VT4RvOCjsEU,196
+Moral88/classification.py,sha256=eVm3kvLw0G4mx5oAX9rxlv2itn6-2mNbDIcMk8-dMfY,4916
+Moral88/clustering.py,sha256=vMHkv1Z8hvN4CGiEyOBGrgatAlm3itosL2IK6-wGBw8,7139
+Moral88/regression.py,sha256=evdfwAA2KCQz-S6MeAKath_Lkv5jKqXZGypnf0xSOHw,10207
+Moral88/utils.py,sha256=rjDCHXoqCO_X32xXBupQWKXKC9jeU9lhkIilzMG31yE,3327
+Test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Test/test_classification.py,sha256=9JSL5xZvFHMAQdD4PBYJvryFeT8eetzMS0_7SWdZcS0,2747
+Test/test_clustering.py,sha256=NBcM7UnofKGGE8zMrXIAhOz4b1x4S5kudlbEXvXId9Y,2011
+Test/test_regression.py,sha256=rzAk5Pja01QigunfaCyd1XCI3Xs6B3CLIvINmCpTQQA,4896
+Moral88-0.13.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Moral88-0.13.0.dist-info/METADATA,sha256=lOabRubXWAz3uQUwah1JcaeL0nwUJZ2BYIg9h-x6XCg,408
+Moral88-0.13.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+Moral88-0.13.0.dist-info/top_level.txt,sha256=-fC4somdxhr26-qFmeG9jny3GcRXqXlcJz9fy2fxGQs,13
+Moral88-0.13.0.dist-info/RECORD,,
