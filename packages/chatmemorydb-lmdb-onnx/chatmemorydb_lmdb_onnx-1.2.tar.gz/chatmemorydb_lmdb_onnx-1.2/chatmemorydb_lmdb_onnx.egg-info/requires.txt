@@ -1,0 +1,7 @@
+numpy
+lmdb
+msgpack
+pymongo
+onnxruntime
+onnxruntime_extensions
+faiss-cpu
