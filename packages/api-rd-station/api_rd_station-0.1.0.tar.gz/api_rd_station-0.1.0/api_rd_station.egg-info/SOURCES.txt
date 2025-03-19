@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+RDStation/CRM.py
+RDStation/Erros.py
+RDStation/__init__.py
+api_rd_station.egg-info/PKG-INFO
+api_rd_station.egg-info/SOURCES.txt
+api_rd_station.egg-info/dependency_links.txt
+api_rd_station.egg-info/requires.txt
+api_rd_station.egg-info/top_level.txt
