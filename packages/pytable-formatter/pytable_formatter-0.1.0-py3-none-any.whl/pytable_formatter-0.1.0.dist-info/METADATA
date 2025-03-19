@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: pytable-formatter
+Version: 0.1.0
+Summary: Advanced table formatting for terminal output
+Home-page: https://github.com/biswanathroul/pytable-formatter
+Author: Biswanath Roul
+Author-email: authorbiswanath@gmail.com
+Project-URL: Bug Tracker, https://github.com/biswanathroul/pytable-formatter/issues
+Keywords: table,terminal,cli,formatting,console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
+
+# PyTable-Formatter
+
+Advanced table formatting for terminal output with support for styling, nested tables, and custom layouts.
+
+## Features
+
+- 🎨 **Rich Styling**: Apply colors, text styles (bold, italic, underline), and background colors to individual cells
+- 📏 **Flexible Layouts**: Control alignment, padding, and column widths
+- 📊 **Nested Tables**: Create complex table structures with tables inside cells
+- 📝 **Custom Formatters**: Apply custom formatting to cell values
+- 🖼️ **Borders and Titles**: Add titles, footers, and customize border styles
+- 📱 **Responsive Design**: Tables automatically adapt to terminal width
+
+## Installation
+
+```bash
+pip install pytable-formatter
