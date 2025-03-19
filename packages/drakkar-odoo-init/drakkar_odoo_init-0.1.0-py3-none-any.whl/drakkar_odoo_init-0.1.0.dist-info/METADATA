@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: drakkar-odoo-init
+Version: 0.1.0
+Summary: Outil d'initialisation de projets Odoo pour Drakkar
+Author: Drakkar Team
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Drakkar Odoo Init
+
+Outil d'initialisation de projets Odoo pour Drakkar.
+
+## Installation
+
+```bash
+pip install drakkar-odoo-init
+```
+
+## Utilisation
+
+Pour initialiser un nouveau projet Odoo :
+
+```bash
+drakkar-init
+```
+
+Pour initialiser dans un dossier spécifique :
+
+```bash
+drakkar-init --path /chemin/vers/projet
+```
+
+## Structure créée
+
+L'outil crée la structure suivante :
+
+```
+.
+├── config/
+│   └── odoo.conf
+├── drakkar-addons/
+└── extra-addons/
+```
+
+## Configuration
+
+Le fichier `odoo.conf` est configuré avec les paramètres par défaut pour un environnement de développement. 
