@@ -1,0 +1,2 @@
+from iris_embedded_python import *
+from iris_embedded_python import __getattr__
