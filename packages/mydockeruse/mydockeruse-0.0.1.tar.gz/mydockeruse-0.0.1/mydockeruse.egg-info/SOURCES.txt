@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+mydockeruse/__init__.py
+mydockeruse/__main__.py
+mydockeruse/install.py
+mydockeruse/uninstall.py
+mydockeruse.egg-info/PKG-INFO
+mydockeruse.egg-info/SOURCES.txt
+mydockeruse.egg-info/dependency_links.txt
+mydockeruse.egg-info/requires.txt
+mydockeruse.egg-info/top_level.txt
