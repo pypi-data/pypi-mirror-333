@@ -1,0 +1,79 @@
+project:
+  title: Behaverse Data Loader
+  type: website
+  execute-dir: project
+
+execute:
+  enabled: false
+
+website:
+  navbar:
+    title: Behaverse Data Loader
+    left:
+      - getting_started.qmd
+      - reference/index.qmd
+      - text: Data Model
+        href: https://behaverse.org/data-model/
+    right:
+      - icon: github
+        href: https://github.com/behaverse/data-loader/
+
+
+interlinks:
+  fast: true
+  sources:
+    pandas:
+      url: https://pandas.pydata.org/docs/
+    python:
+      url: https://docs.python.org/3/
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+filters:
+  - interlinks
+
+# tell quarto to read the generated sidebar
+metadata-files:
+  - reference/_sidebar.yml
+
+quartodoc:
+  package: behaverse.data
+  dir: reference
+  source_dir: ../src
+  parser: 'google'
+  title: "Reference"
+  render_interlinks: true
+
+  # # write sidebar data to this file
+  sidebar: reference/_sidebar.yml
+
+  sections:
+    - title: Datasets API
+    - subtitle: Object-Oriented
+      package: behaverse.data
+      contents:
+        - name: Dataset
+          children: separate
+          members:
+            - open
+            - where
+            - describe
+            - load
+            - validate
+        - name: DatasetDescription
+          children: separate
+    - subtitle: Functional
+      package: behaverse.data
+      contents:
+        - list_datasets
+        - open_dataset
+        - load_dataset
+        - describe_dataset
+        - validate_dataset
+    - subtitle: Utilities
+      package: behaverse.data.utils
+      contents:
+        - extract_dataset

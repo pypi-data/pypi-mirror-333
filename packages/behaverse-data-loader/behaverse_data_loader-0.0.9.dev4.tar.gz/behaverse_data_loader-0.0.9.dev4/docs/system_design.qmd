@@ -1,0 +1,59 @@
+# Behaverse Datasets Package: System Design Document
+
+Behaverse Datasets is a Python package that provides access to a collection of datasets for cognitive research. The package is designed to be easy to use, with a focus on providing high-quality datasets that are in well-documented standard format ([BDM]()). The package is intended for use by researchers in the fields of psychology, neuroscience, and related disciplines who are interested in studying human behavior.
+
+This document provides an overview of the system design for the package. It describes the requirements, architecture of the package, and the API. The document also outlines the key features of the package and the technical requirements for using it.
+
+## Requirements
+
+The package should provide access to a collection of datasets for cognitive research. The main audience for the package is researchers in the fields of psychology, neuroscience, and related disciplines. The package should be easy to use and provide high-quality datasets that are in a well-documented standard BDM format.
+
+### Version 1
+
+- [x] Support BDM L1 formatted datasets
+- [x] General API to list available datasets, download a dataset, select a subset of a dataset, and load a dataset into memory.
+- Documentation
+  - [x] API reference
+  - [x] GitHub pages website for documentation
+  - [x] Pipeline to automatically generate documentation
+  - [ ] Integrated website for all the Behaverse-related projects
+  - [ ] Host website on UniLU GitLab
+- Storage
+  - http(s), e.g., on OneDrive
+  - DVC
+  - HPC
+- [x] Datasets registery including list of datasets, metadata, and download links.
+- [x] Pipeline to automatically update the package on PyPI when a new release is created.
+- Performance
+  - [x] Partially load a dataset into memory
+  - [ ] Partially download a dataset
+- Security and access
+  - [x] Access control to datasets via http
+  - [x] Access control to datasets via DVC/HPC
+- Testing
+  - [x] Unit tests
+  - [ ] CI/CD pipeline for testing
+- Deployment
+  - [x] PyPI package
+  - [x] DevOps (e.g., automatic release to PyPI and GitHub Pages)
+- Additional datasets in BDM-L1m format
+  - [ ] Stroop
+  - [ ] N-back
+- P500 datasets in BDM-L1m format
+  - [x] P500_9subjects
+  - [ ] Toy synthetic dataset
+  - [ ] Full P500
+
+
+### Version 2
+
+- Add support for more datasets
+- Partially download a dataset: version 1 supports partially loading a dataset into a memory. but downloads the entire dataset. Instead of downloading the entire dataset, which can be time-consuming for large datasets, allow users to download only a subset of the data.
+- Support local datasets
+
+### Version 3
+
+- Dataset manipulation: version 1 and 2 provide access to datasets in read-only format but do not support manipulation of the data. Provide support for manipulating the data, such as changing or updating data/metadata, adding new data, or removing data.
+
+- Add support for more data types (e.g., neuroimaging data)
+- Support L2 datasets.

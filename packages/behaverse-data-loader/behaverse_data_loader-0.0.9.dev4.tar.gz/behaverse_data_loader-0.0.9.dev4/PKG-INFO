@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: behaverse-data-loader
+Version: 0.0.9.dev4
+Summary: Behaverse package.
+Author-email: xCIT Development Team <contact@xcit.org>
+Maintainer-email: Morteza Ansarinia <ansarinia@me.com>, Hoorieh Afkari <hoorieh.afkari@uni.lu>, Pedro Cardoso-Leite <pedro.cardosoleite@uni.lu>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: dvc>3 ; extra == "dvc"
+Requires-Dist: dvc-ssh ; extra == "dvc"
+Requires-Dist: pytest ; extra == "test"
+Project-URL: Documentation, https://behaverse.org/data-loader
+Project-URL: Homepage, https://behaverse.org/data-loader
+Project-URL: Repository, https://github.com/behaverse/data-loader
+Provides-Extra: dvc
+Provides-Extra: test
+
+# Behaverse Data Loader
+
+`behaverse-data-loader` is a Python package to seamlessly access [BDM](https://behaverse.org/data-model)-formatted behavioral datasets.
+
+## Installation
+
+To install the package, run:
+
+```bash
+pip install -U behaverse-data-loader
+```
+
+## Usage
+
+See [behaverse.org/data-loader](https://behaverse.org/data-loader) for more information on how to use the package.
+
+## License
+
+TODO
+
+## Contributing
+
+
+### Development
+
+Before starting development, you need [`uv`](https://github.com/astral-sh/uv) to install the dependencies:
+
+
+```bash
+uv sync
+source .venv/bin/activate
+```
+
+### Documentations
+
+To generate documentations, run the following commands from the project root directory:
+
+```bash
+cd docs
+quartodoc build && quartodoc interlinks && quarto preview
+```
+
+The documentations will be available in the `docs/_site/` directory.
+
+
+
+## Acknowledgements
+
+TODO
+
+## Citation
+
+TODO
+

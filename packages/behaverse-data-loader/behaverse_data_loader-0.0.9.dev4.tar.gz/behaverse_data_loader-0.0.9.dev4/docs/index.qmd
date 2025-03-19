@@ -1,0 +1,8 @@
+
+# Behaverse Data Loader
+
+Behaverse data loader is a Python package to access behavioral datasets in standard [Behaverse Data Model](https://behaverse.org/data/model/) format.
+
+## System Design
+
+See [System Design Document](system_design.qmd) for more details.
