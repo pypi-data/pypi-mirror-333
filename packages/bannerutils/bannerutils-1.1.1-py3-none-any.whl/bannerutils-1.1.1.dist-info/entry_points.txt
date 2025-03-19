@@ -1,0 +1,2 @@
+[console_scripts]
+banner = banner.bannerutils:main
