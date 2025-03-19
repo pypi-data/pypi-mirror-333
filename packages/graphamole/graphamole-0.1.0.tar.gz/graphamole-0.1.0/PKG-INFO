@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: graphamole
+Version: 0.1.0
+Summary: Pretrained amino acid residue embeddings using masked graph modeling
+Project-URL: homepage, https://github.com/compomics/graphamole
+Requires-Python: >=3.9
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: torch-geometric
+Requires-Dist: lightning
+Requires-Dist: typer
+Requires-Dist: jsonschema
+Requires-Dist: rdkit
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: numpydoc<2,>=1; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinx-autobuild; extra == "docs"
+Requires-Dist: sphinx_mdinclude; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: toml; extra == "docs"

@@ -1,0 +1,52 @@
+[project]
+name = "graphamole"
+description = "Pretrained amino acid residue embeddings using masked graph modeling"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "torch",
+    "torch-geometric",
+    "lightning",
+    "typer",
+    "jsonschema",
+    "rdkit",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "black", "pytest"]
+docs = [
+    "numpydoc>=1,<2",
+    "sphinx_rtd_theme",
+    "sphinx-autobuild",
+    "sphinx_mdinclude",
+    "sphinx",
+    "toml",
+]
+
+[project.scripts]
+graphamole = 'graphamole.__main__:main'
+
+[project.urls]
+homepage = "https://github.com/compomics/graphamole"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "graphamole.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["graphamole*"]
+
+[tool.ruff]
+line-length = 99
+target-version = 'py39'
+select = ["I"]
+
+[tool.ruff.lint.isort]
+known-third-party = ["wandb"]
+
+[tool.ruff.format]
+docstring-code-format = true
