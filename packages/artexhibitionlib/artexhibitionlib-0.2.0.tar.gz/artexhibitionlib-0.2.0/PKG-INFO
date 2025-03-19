@@ -1,0 +1,35 @@
+Metadata-Version: 2.2
+Name: artexhibitionlib
+Version: 0.2.0
+Summary: This is a simple Python package that prints the bus pass details of user.
+Home-page: 
+Author: Nithin Bonagiri
+Author-email: x24137430@student.ncirl.ie
+Keywords: artexhibitionlib
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: requires-python
+Dynamic: summary
+
+This is a simple Python package that returns a message after sending enquiry.
+
+Change Log
+==========
+
+0.1.0 (11/03/2025)
+-------------------
+- First Release
+
+
+0.2.0 (11/03/2025)
+-------------------
+- Second Release
