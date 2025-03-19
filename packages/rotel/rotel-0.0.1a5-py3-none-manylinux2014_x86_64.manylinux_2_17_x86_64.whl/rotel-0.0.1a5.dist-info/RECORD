@@ -1,0 +1,11 @@
+rotel/__about__.py,sha256=J4KkZh1kA5tLOHyUK6LDBTqwBgoEkanMtwE8bSXx8Ak,63
+rotel/__init__.py,sha256=THVrTCi8iXgMyrqJGa3ydMiCm4fZ4LW_mtoYfSdJMpk,326
+rotel/agent.py,sha256=aloKj5R_ncAhY_dEaZYDSqpjLtqV4o8btvNoNcp_nQw,2434
+rotel/client.py,sha256=OMg9b6nwacECWXNJxqBiqk9xnWOnmK-wQ45322oGRL4,664
+rotel/config.py,sha256=yv8Xtf6zHrtBlbUm2gcIwiGMjF1o4uoSWerDiKsrPfc,9948
+rotel/error.py,sha256=ioGHvymGlpzKH33Q2HRFg5gEaRu0nMeZXkdO_zrD_JE,230
+rotel/rotel-agent,sha256=hMmkkxz5S1J-kfEm4QPIpF3L6itZWl_8TyQ7wh7b84U,10098456
+rotel-0.0.1a5.dist-info/METADATA,sha256=SijsAYKKywEQjosSHeTr3hz7hRB_EGcnhQq9Y8NqBdM,11334
+rotel-0.0.1a5.dist-info/WHEEL,sha256=M9lVvkWqAsEccH2tGT8CfCZG5vMauLLC8bbbH29IvdM,141
+rotel-0.0.1a5.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rotel-0.0.1a5.dist-info/RECORD,,
