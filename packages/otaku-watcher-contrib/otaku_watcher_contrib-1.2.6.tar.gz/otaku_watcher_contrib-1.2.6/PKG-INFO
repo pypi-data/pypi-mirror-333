@@ -1,0 +1,80 @@
+Metadata-Version: 2.2
+Name: otaku-watcher-contrib
+Version: 1.2.6
+Summary: A mov-cli plugin for watching anime and more!
+License:             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                            Version 2, December 2004
+        
+         Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+        
+         Everyone is permitted to copy and distribute verbatim or modified
+         copies of this license document, and changing it is allowed as long
+         as the name is changed.
+        
+                    DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+           TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+        
+          0. You just DO WHAT THE FUCK YOU WANT TO.
+Project-URL: GitHub, https://github.com/GDjkhp/otaku-watcher-contrib
+Project-URL: BugTracker, https://github.com/GDjkhp/otaku-watcher-contrib/issues
+Keywords: amazing mov-cli plugin
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Requires-Dist: mov-cli>=4.4
+Requires-Dist: thefuzz
+Requires-Dist: pydantic
+Requires-Dist: quickjs
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: build; extra == "dev"
+
+<div align="center">
+
+  # otaku-watcher-contrib
+  <img src="https://gdjkhp.github.io/img/kagura-merge-avatar.gif" width=64>
+
+  <sub>A mov-cli plugin for watching anime and more!</sub>
+
+  [![Pypi Version](https://img.shields.io/pypi/v/otaku-watcher-contrib?style=flat)](https://pypi.org/project/otaku-watcher-contrib)
+
+  <img src="https://gdjkhp.github.io/img/gintama.png">
+</div>
+
+## ⛑️ Support
+| Scraper | Status | Films | TV | Mobile support |
+| ------- | ------ | --- | --- | ---------------------- |
+| [`tokyo`](https://www.tokyoinsider.com) | 🔵 Experimental | ✅ | ✅ | ✅ |
+| [`hianime`](https://hianime.to) | 🔵 Experimental | ✅ | ✅  | ❓ |
+| [`animepahe`](https://animepahe.ru) | 🔵 Experimental | ✅ | ✅  | ❓ |
+| [`kisskh`](https://kisskh.id) | 🔵 Experimental | ✅ | ✅  | ❓ |
+
+## Installation
+Here's how to install and add the plugin to mov-cli.
+
+1. Install the pip package.
+```sh
+pip install otaku-watcher-contrib
+```
+2. Then add the plugin to your mov-cli config.
+```sh
+mov-cli -e
+```
+```toml
+[mov-cli.plugins]
+anime = "otaku-watcher-contrib"
+```
+## Usage
+```sh
+mov-cli lycoris recoil
+```
