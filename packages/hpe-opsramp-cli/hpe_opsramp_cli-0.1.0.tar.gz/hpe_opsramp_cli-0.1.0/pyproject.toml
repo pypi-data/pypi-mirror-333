@@ -1,0 +1,17 @@
+[project]
+name = "hpe-opsramp-cli"
+version = "0.1.0"
+description = "CLI for HPE OpsRamp"
+readme = "README.md"
+authors = [
+    { name = "BalaSubramanian-Vetrivel", email = "balasubramanian.vetrivel@opsramp.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+hpe-opsramp-cli = "hpe_opsramp_cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
