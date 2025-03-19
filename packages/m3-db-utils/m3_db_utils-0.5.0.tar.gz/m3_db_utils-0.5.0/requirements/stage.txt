@@ -1,0 +1,4 @@
+-r dependencies/system_packages.txt
+-r dependencies/production_packages.txt
+-r dependencies/testing_packages.txt
+-r dependencies/development_packages.txt
