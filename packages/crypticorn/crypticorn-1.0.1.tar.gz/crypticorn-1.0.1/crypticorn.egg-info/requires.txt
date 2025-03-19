@@ -1,0 +1,9 @@
+pandas<3.0.0,>=2.2.0
+requests<3.0.0,>=2.32.0
+tqdm<5.0.0,>=4.67.0
+pydantic<3.0.0,>=2.0.0
+
+[dev]
+black
+twine
+build
