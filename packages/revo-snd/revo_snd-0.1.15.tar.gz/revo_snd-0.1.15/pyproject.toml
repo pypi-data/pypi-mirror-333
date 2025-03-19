@@ -1,0 +1,42 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revo-snd"
+version = "0.1.15"
+description = "Your entire toolset for editing Nintendo Wii sound files"
+readme = "README.md"
+license = {text = "MIT License"}
+authors = [
+    { name="Ogu99" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "numba",
+    "sounddevice"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[tool.setuptools]
+packages = [
+    "revo_snd",
+    "revo_snd.adpcm",
+    "revo_snd.engine",
+    "revo_snd.engine.wav",
+    "revo_snd.engine.seq",
+    "revo_snd.rbnk",
+    "revo_snd.rsar",
+    "revo_snd.rseq",
+    "revo_snd.rstm",
+    "revo_snd.rwar",
+    "revo_snd.rwav",
+    "revo_snd.rwsd"
+]
