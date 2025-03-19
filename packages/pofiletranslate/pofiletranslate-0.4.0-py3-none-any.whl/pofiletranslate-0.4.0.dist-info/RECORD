@@ -1,0 +1,11 @@
+po_translate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+po_translate/cli.py,sha256=Oh6RfvNq4qB5aEouO4_INm6Dc0AgRpWZ7_HXsOCIH6U,1171
+po_translate/translate.py,sha256=2FQ9pI-zqF3btKo3_ts9heFDoDYBmyy9MigG7SuYE40,3695
+tests/__init__.py,sha256=Na8tK1X41Cu83HMfIpImxbb4q62FSaSyRiMVQ2puF_c,31
+tests/test_po_translate.py,sha256=fMU5N7n6s0-ia1jp4JBtX_4TqGJkGtWKs04cXhd2RuU,1536
+pofiletranslate-0.4.0.dist-info/LICENCE,sha256=nfr_HcIjBGCQln2x6oIfbBleLwbko1ukkpARYdglh6U,1075
+pofiletranslate-0.4.0.dist-info/METADATA,sha256=hfS5KzeK4UmpB3Z4mlfHatrKumE9fMZVrVnYab7BkhI,1918
+pofiletranslate-0.4.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pofiletranslate-0.4.0.dist-info/entry_points.txt,sha256=saNh2Go5IbRrkFKPLknTgNq0FHWy8Vtb6_K8Owoq_5s,58
+pofiletranslate-0.4.0.dist-info/top_level.txt,sha256=OrNG_NnzfPUGTRX7hqjP9PYUk5GEq-gi4vWEWaXrOP8,19
+pofiletranslate-0.4.0.dist-info/RECORD,,
