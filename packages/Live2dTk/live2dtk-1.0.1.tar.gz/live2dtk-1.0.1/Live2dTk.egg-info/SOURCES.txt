@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+Live2dTK/__init__.py
+Live2dTk.egg-info/PKG-INFO
+Live2dTk.egg-info/SOURCES.txt
+Live2dTk.egg-info/dependency_links.txt
+Live2dTk.egg-info/requires.txt
+Live2dTk.egg-info/top_level.txt

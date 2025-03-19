@@ -1,0 +1,4 @@
+live2d-py>=0.4.2
+PyOpenGL
+pyopengltk>=0.0.4
+pyautogui
