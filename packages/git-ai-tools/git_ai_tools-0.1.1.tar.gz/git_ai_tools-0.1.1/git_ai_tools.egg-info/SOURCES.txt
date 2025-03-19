@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+git_ai_tools/__init__.py
+git_ai_tools/cli.py
+git_ai_tools/core.py
+git_ai_tools.egg-info/PKG-INFO
+git_ai_tools.egg-info/SOURCES.txt
+git_ai_tools.egg-info/dependency_links.txt
+git_ai_tools.egg-info/entry_points.txt
+git_ai_tools.egg-info/requires.txt
+git_ai_tools.egg-info/top_level.txt
