@@ -1,0 +1,5 @@
+build
+dist
+docs
+seiz_eeg
+tests
