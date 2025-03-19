@@ -1,0 +1,102 @@
+name: Python
+on:
+  push:
+    branches: main
+  release:
+    types: published
+jobs:
+  test:
+    if: github.event_name != 'release'
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - uses: actions-rs/toolchain@v1
+      with:
+        components: clippy
+        default: true
+        toolchain: stable
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: clippy
+      run: cargo clippy --features python -- -D warnings
+    - name: automesh
+      run: pip install .[dev]
+    - name: pycodestyle
+      run: pycodestyle --verbose .
+    - name: pytest
+      run: pytest --verbose
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          default: true
+          toolchain: stable
+      - name: python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.13
+      - name: requirements
+        run: pip install build maturin twine
+      - name: source
+        run: python -m build . --sdist
+      - name: check
+        run: twine check dist/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+  wheel:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions-rs/toolchain@v1
+      with:
+        default: true
+        toolchain: stable
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: requirements
+      run: pip install build maturin twine
+    - name: foo
+      if: matrix.os == 'macos-latest'
+      run: brew uninstall --ignore-dependencies xz
+    - name: wheel
+      run: maturin build --release --features python
+    - name: check
+      run: twine check target/wheels/*
+    - uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.os }}-${{ matrix.python-version }}-dist
+        path: target/wheels
+  twine:
+    needs: [source, wheel]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/download-artifact@v4
+    - uses: actions/setup-python@v5
+      with:
+        check-latest: true
+        python-version: 3.13
+    - name: requirements
+      run: pip install twine
+    - name: wheels
+      run: mv ./*-dist*/*.whl dist/
+    - name: upload
+      run: twine upload -u __token__ -p ${{ secrets.PYPI_TOKEN }} dist/*
