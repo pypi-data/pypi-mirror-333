@@ -1,0 +1,80 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python package
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install pytest pytest-cov ruff hatchling
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install -e .
+    - name: Lint with ruff
+      run: |
+        # Check code style and lint
+        ruff format --check .
+        ruff check .
+    - name: Test with pytest
+      env:
+        RUNNING_TESTS: "1"
+        ALOHA_CLIENT_ID: "test_client_id"
+        ALOHA_SECRET_KEY: "test_secret_key"
+      run: |
+        pytest -v --cov=. --cov-report=xml -k "not Integration"
+
+  increment-build:
+    needs: build
+    # Skip if the commit is from our bot or if it's not a push to main
+    if: |
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    - name: Increment build number
+      id: build
+      run: |
+        # Read and increment build number
+        BUILD_NUM=$(cat .buildnum)
+        NEW_BUILD_NUM=$((BUILD_NUM + 1))
+        echo $NEW_BUILD_NUM > .buildnum
+        echo "new_build_num=$NEW_BUILD_NUM" >> "$GITHUB_OUTPUT"
+        
+        # Extract version from pyproject.toml
+        VERSION=$(grep '^version = ' pyproject.toml | cut -d'"' -f2)
+        echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+    - name: Update version files
+      run: |
+        # Commit and push the changes
+        git add .buildnum
+        git commit -m "chore: increment build number to ${{ steps.build.outputs.new_build_num }}"
+        git push
