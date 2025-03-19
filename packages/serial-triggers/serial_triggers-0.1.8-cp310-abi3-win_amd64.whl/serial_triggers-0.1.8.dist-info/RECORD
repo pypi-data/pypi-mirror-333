@@ -1,0 +1,5 @@
+serial_triggers-0.1.8.dist-info/METADATA,sha256=sR2kynf-odBamfaxcNFZLJdafPy4yCT7MFUPxQ61mJY,722
+serial_triggers-0.1.8.dist-info/WHEEL,sha256=md9qofgGs0CN4-5nDhVd0IzxxzM8cFGCnkeRThUNGbI,95
+serial_triggers/__init__.py,sha256=Lz4UdaOMKDXq51h303fDk-IyXDMX7ON0aoTiGwB4sP0,143
+serial_triggers/serial_triggers.pyd,sha256=RBqgDzp3yf03ukqnn5QFCcwQny5UXBEggPyvi_7Mu78,420864
+serial_triggers-0.1.8.dist-info/RECORD,,
