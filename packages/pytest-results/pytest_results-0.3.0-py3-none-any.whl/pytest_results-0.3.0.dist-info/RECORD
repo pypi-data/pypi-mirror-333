@@ -1,0 +1,17 @@
+pytest_results/__init__.py,sha256=DmJi3sAKIAgJcubKkuLGLAJce5iyRrFUGfr8zRfPFtg,355
+pytest_results/exceptions.py,sha256=78vjEIk_gWF2fl5_oH0lLEgjssO1lsmT6i-PDGuRxCc,1394
+pytest_results/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_results/_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_results/_core/regression.py,sha256=ENHPMiCMEITC3zfbU2YqF2wrjpV9DSMhP27DCOsiS4o,2942
+pytest_results/_core/dump_functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_results/_core/dump_functions/json.py,sha256=qyuHb2tq9-NOfzO1jDtBgByygFz7Zos9GMXLgl6L8ek,416
+pytest_results/_core/storages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_results/_core/storages/abc.py,sha256=Cl1yDa9ySJe2okFyRLlu4UmaUytT8izmAzpxMKx0bYs,839
+pytest_results/_core/storages/local.py,sha256=9R47caGzlNhT3G73k_7BGjD8ooEG5H-5-JxN_4Hbc5A,1306
+pytest_results/contrib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_results/contrib/pytest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_results/contrib/pytest/plugin.py,sha256=z8USeh5UWfir86RuPrnL1wRQsOZbIsJEslJSB9X4M68,5908
+pytest_results-0.3.0.dist-info/METADATA,sha256=8e9oUrO2hYRaw64k_xnh8fjPWv8MQJoC98T1z-KPgDg,2152
+pytest_results-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_results-0.3.0.dist-info/entry_points.txt,sha256=iOHso0eGj305_uM2hcsLwSKhrJKEytoIlso7Qaoey20,65
+pytest_results-0.3.0.dist-info/RECORD,,
