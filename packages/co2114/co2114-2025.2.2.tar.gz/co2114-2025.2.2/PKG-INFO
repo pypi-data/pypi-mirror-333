@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: co2114
+Version: 2025.2.2
+Summary: codebase for co2114
+Author: wil ward
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: pygame>=2.6
+Requires-Dist: numpy
+Requires-Dist: ipython
+Requires-Dist: matplotlib
+Requires-Dist: jupyter
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
