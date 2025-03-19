@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: byted-operators-test
+Version: 0.0.1
+Summary: A simple package named byted_operators_test
+Home-page: https://github.com/artifact/byted_operators_test.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
