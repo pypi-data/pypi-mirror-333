@@ -1,0 +1,10 @@
+hnp_codebuddy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hnp_codebuddy/api_client.py,sha256=Abiey2oK9zfkuffnxbfa5Al67xkyx07qcbGW7h-_f5g,712
+hnp_codebuddy/bitbucket.py,sha256=9py5O5gLI6TjpQIAUKtAZcwVABeunZoVF398iyZmBaQ,1629
+hnp_codebuddy/cli.py,sha256=vKCx-q_2jOKHNurRUthVzyp9uPvBbsDpezhE72wZ5Ig,766
+hnp_codebuddy/config.py,sha256=6JK6S_PkDoOqpzuS1TplnYs0Ts-dfJ-sDZAOF9EDSuQ,139
+hnp_codebuddy-0.1.dist-info/METADATA,sha256=22xZignTwLk_CAiqCgGP039QwjNs0iGrjJhvAgG_2W4,137
+hnp_codebuddy-0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+hnp_codebuddy-0.1.dist-info/entry_points.txt,sha256=PLujDClHwWOlFO3xTAs_UbiKwKOWDOdUhSgbLI5B1OY,55
+hnp_codebuddy-0.1.dist-info/top_level.txt,sha256=X1QdKb4lZaonQjMej8f7mKP-GbYoVRH0E6a0zKoqSjU,14
+hnp_codebuddy-0.1.dist-info/RECORD,,

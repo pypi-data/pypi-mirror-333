@@ -1,0 +1,2 @@
+[console_scripts]
+cr-bot = hnp_codebuddy.cli:review_pr
