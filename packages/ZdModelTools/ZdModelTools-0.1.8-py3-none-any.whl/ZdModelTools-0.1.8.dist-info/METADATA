@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ZdModelTools
+Version: 0.1.8
+Summary: This package provides tools for data evaluation and model.
+Home-page: http://gitlab.baimaodai.cn/wangzhiyu/modelcode
+Author: ZhiYu Wang
+Author-email: 17853133113@163.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: numpy>=1.19.5
+Requires-Dist: pandas>=1.1.5
+Requires-Dist: datetime>=4.3
+Requires-Dist: matplotlib>=3.4.3
+Requires-Dist: scikit-learn>=0.24.2
+Requires-Dist: toad>=0.0.5
+
+This package is desing to be used in data evaluation of machine learning models. It is a python package that provides functions to evaluate the performance of machine learning models. The package is designed to be easy to use and to provide a wide range of evaluation metrics.
