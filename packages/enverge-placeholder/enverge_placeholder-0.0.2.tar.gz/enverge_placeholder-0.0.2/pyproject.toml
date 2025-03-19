@@ -1,0 +1,105 @@
+[build-system]
+requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version"]
+build-backend = "hatchling.build"
+
+[project]
+name = "enverge_placeholder"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "jupyterlab>=4.0.0,<5",
+]
+dynamic = ["version", "description", "authors", "urls", "keywords"]
+
+[tool.hatch.version]
+source = "nodejs"
+
+[tool.hatch.metadata.hooks.nodejs]
+fields = ["description", "authors", "urls"]
+
+[tool.hatch.build.targets.sdist]
+artifacts = ["enverge_placeholder/labextension"]
+exclude = [".github", "binder"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"enverge_placeholder/labextension" = "share/jupyter/labextensions/enverge_placeholder"
+"install.json" = "share/jupyter/labextensions/enverge_placeholder/install.json"
+
+[tool.hatch.build.hooks.version]
+path = "enverge_placeholder/_version.py"
+
+[tool.hatch.build.hooks.jupyter-builder]
+dependencies = ["hatch-jupyter-builder>=0.5"]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = [
+    "enverge_placeholder/labextension/static/style.js",
+    "enverge_placeholder/labextension/package.json",
+]
+skip-if-exists = ["enverge_placeholder/labextension/static/style.js"]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+build_cmd = "build:prod"
+npm = ["jlpm"]
+
+[tool.hatch.build.hooks.jupyter-builder.editable-build-kwargs]
+build_cmd = "install:extension"
+npm = ["jlpm"]
+source_dir = "src"
+build_dir = "enverge_placeholder/labextension"
+
+[tool.jupyter-releaser.options]
+version_cmd = "hatch version"
+
+[tool.jupyter-releaser.hooks]
+before-build-npm = [
+    "python -m pip install 'jupyterlab>=4.0.0,<5'",
+    "jlpm",
+    "jlpm build:prod"
+]
+before-build-python = ["jlpm clean:all"]
+
+[tool.check-wheel-contents]
+ignore = ["W002"]
+
+# tbump is used to simplify and standardize the release process when updating
+# the version, making a git commit and tag, and pushing changes.
+#
+# ref: https://github.com/your-tools/tbump#readme
+#
+[tool.tbump]
+github_url = "https://github.com/Enverge-Labs/enverge_placeholder"
+
+[tool.tbump.version]
+current = "0.0.2"
+regex = '''
+    (?P<major>\d+)
+    \.
+    (?P<minor>\d+)
+    \.
+    (?P<patch>\d+)
+    (?P<pre>((a|b|rc)\d+)|)
+    \.?
+    (?P<dev>(?<=\.)dev\d*|)
+'''
+
+[tool.tbump.git]
+message_template = "Bump to {new_version}"
+tag_template = "{new_version}"
+
+[[tool.tbump.file]]
+src = "setup.py"
