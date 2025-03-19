@@ -1,0 +1,29 @@
+[project]
+name = "verdict_hasher_cli"
+version = "0.1.0"
+description = "A project for file configuration and hashing"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "questionary>=2.1.0",
+    "tqdm>=4.67.1",
+]
+authors = [
+    { name = "Sigireddy Balasai", email = "SigireddyBalasai@gmail.com" },
+    { name = "Ella Hart AKA Cyncrovee", email= "86919717+Cyncrovee@user.noreply.github.com" }
+]
+
+[tool.setuptools]
+packages = { find = { include = ["verdict_hasher"] } }
+license-files = []
+
+[dependency-groups]
+dev = [
+    "markdown-exec>=1.10.0",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.5.50",
+    "mkdocstrings-python>=1.13.0",
+    "pytest>=8.3.4",
+    "uv>=0.5.25",
+]
+
