@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+fewsats/__init__.py
+fewsats/_modidx.py
+fewsats/core.py
+fewsats/l402.py
+fewsats_python.egg-info/PKG-INFO
+fewsats_python.egg-info/SOURCES.txt
+fewsats_python.egg-info/dependency_links.txt
+fewsats_python.egg-info/entry_points.txt
+fewsats_python.egg-info/not-zip-safe
+fewsats_python.egg-info/requires.txt
+fewsats_python.egg-info/top_level.txt
