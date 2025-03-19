@@ -1,0 +1,14 @@
+attr>=0.3.2
+fastapi>=0.115.8
+geojson-pydantic>=1.2.0
+pydantic>=2.10.4
+stac-fastapi-api>=5.0.2
+stac-fastapi-extensions>=5.0.2
+stac-fastapi-types>=5.0.2
+stacrs==0.5.9
+
+[lambda]
+mangum==0.19.0
+
+[serve]
+uvicorn>=0.34.0
