@@ -1,0 +1,6 @@
+biopython
+pandas
+tqdm
+fastcore
+
+[dev]
