@@ -1,0 +1,64 @@
+# bayesNestor
+
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+
+## Overview
+**bayesNestor** is a Bayesian Network implementation designed to dynamically generate personalized learning paths tailored to the unique psychological traits of each learner, aiming to optimize educational outcomes.
+
+## Installation
+Ensure you are using **Python 3.10 or above**.
+
+Install **bayesNestor** using pip:
+```bash
+pip install bayesnestor
+```
+
+Alternatively, install from the source
+```bash
+git clone https://github.com/yourusername/bayesnestor.git
+cd bayesnestor
+python setup.py install
+```
+
+## Usage
+```bash
+import bayesnestor
+
+# Provide evidence for a query
+QUERY_EVIDENCE = {
+    "Active_Reflective_Dim": "Active",
+    "Sensory_Intuitive_Dim": "Intuitive",
+    "Visual_Verbal_Dim": "Visual",
+    "Sequential_Global_Dim": "Global",
+    "cs": "agree",
+    "bfia": "disagree"}
+
+# Example usage: generate learning paths
+model = bayesnestor.generate(evidence=QUERY_EVIDENCE)
+```
+
+## Examples
+The "examples/" directory contains five example scripts demonstrating key functionalities of bayesNestor:
+- **example_acces_backend_objs.py**: Demonstrates how to access and utilize different backend objects.
+- **example_load_xmlbif.py**: Provides a step-by-step guide on loading Bayesian Networks saved in XMLBIF format, ensuring model restoration and compatibility.
+- **example_nestor_generate_lepath.py**: Walks through the process of generating personalized learning paths by using bayesNestor's inference capabilities.
+- **examples_model_manager.py**: Illustrates how to manage and configure models by defining the network structure and parameters, enabling efficient customization and tuning.
+- **examples_reporting.py**: Shows how to generate reports that analyze model outputs, interpret results.
+
+Feel free to run these examples to better understand how to implement and use the package.
+
+## Authors
+- Vamsi Krishna Nadimpalli - [vamsi.nadimpalli@oth-regensburg.de](mailto:vamsi.nadimpalli@oth-regensburg.de)
+- Robert Maier - [robert.maier@oth-regensburg.de](mailto:robert.maier@oth-regensburg.de)
+
+## How to Cite
+If you find bayesNestor useful in your research or projects, please consider citing it as follows:
+
+``` bibtex
+@inproceedings{nadimpalli2025nestor,
+  title={Nestor: A Personalized Learning Path Recommendation Algorithm for Adaptive Learning Environments},
+  author={Nadimpalli, Vamsi Krishna and Maier, Robert and Ezer, Timur and Staufer, Susanne and Röhrl, Simon and Hauser, Florian and Grabinger, Lisa and Mottok, J{\"u}rgen},
+  booktitle={Proceedings of the 6th European Conference on Software Engineering Education},
+  pages={t.b.p},
+  year={2025}}
+  ```
