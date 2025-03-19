@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: mlop
+Version: 0.0.0rc8
+Summary: mlop
+Author-email: jqssun <jqssun+git@googlemail.com>, lakeesiv <lakeesivaraya@gmail.com>
+Requires-Dist: GitPython
+Requires-Dist: httpx[http2]
+Requires-Dist: keyring
+Requires-Dist: pillow
+Requires-Dist: psutil
+Provides-Extra: insecure
+Requires-Dist: keyrings.alt; extra == "insecure"
