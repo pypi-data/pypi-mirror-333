@@ -1,0 +1,100 @@
+Metadata-Version: 2.2
+Name: meditation-script-generator
+Version: 1.0.0
+Summary: A meditation script generator with GUI and timer functionality
+Home-page: https://github.com/yourusername/meditation-script-generator
+Author: Your Name
+Author-email: Your Name <your.email@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 Your Name
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+Project-URL: Homepage, https://github.com/yourusername/meditation-script-generator
+Project-URL: Repository, https://github.com/yourusername/meditation-script-generator.git
+Keywords: meditation,mindfulness,wellness,timer
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Meditation Script Generator
+
+A Python-based tool that generates personalized meditation scripts with affirmations based on your specific needs.
+
+## Features
+
+- Generates customized meditation scripts
+- Supports multiple meditation needs:
+  - Stress relief
+  - Anxiety management
+  - Self-confidence building
+  - Sleep improvement
+- Includes personalized affirmations
+- Adjustable meditation duration
+
+## Usage
+
+1. Run the script:
+```bash
+python meditation_generator.py
+```
+
+2. Select your meditation needs from the available options (comma-separated):
+- stress
+- anxiety
+- self_confidence
+- sleep
+
+3. Enter your desired meditation duration (in minutes)
+
+4. Your personalized meditation script will be generated!
+
+## Example
+
+Input:
+```
+Enter your meditation needs: stress, anxiety
+Enter meditation duration: 15
+```
+
+The program will generate a personalized meditation script combining stress relief and anxiety management techniques with relevant affirmations.
+
+## Future Enhancements
+
+- Text-to-speech functionality
+- Background meditation music
+- GUI interface
+- More meditation categories
+- Save scripts to file
+- Timer functionality
+- Breathing exercise integration 

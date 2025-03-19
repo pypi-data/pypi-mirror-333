@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+meditation_script_generator/__init__.py
+meditation_script_generator/meditation_generator.py
+meditation_script_generator/meditation_gui.py
+meditation_script_generator.egg-info/PKG-INFO
+meditation_script_generator.egg-info/SOURCES.txt
+meditation_script_generator.egg-info/dependency_links.txt
+meditation_script_generator.egg-info/entry_points.txt
+meditation_script_generator.egg-info/top_level.txt

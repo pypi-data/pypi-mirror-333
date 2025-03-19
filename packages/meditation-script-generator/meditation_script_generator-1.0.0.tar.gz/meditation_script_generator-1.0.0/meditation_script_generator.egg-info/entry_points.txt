@@ -1,0 +1,3 @@
+[console_scripts]
+meditation-cli = meditation_script_generator.meditation_generator:main
+meditation-gui = meditation_script_generator.meditation_gui:main
