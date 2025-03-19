@@ -1,0 +1,2 @@
+[console_scripts]
+fssnap-gui = fssnap.gui:main

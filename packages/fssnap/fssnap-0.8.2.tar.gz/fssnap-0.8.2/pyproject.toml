@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "setuptools-rust"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fssnap"
+version = "0.8.2"
+readme = { file="README.md", content-type="text/markdown" }
+requires-python = ">= 3.8"
+dependencies = [
+	"pyside6"
+]
+
+[project.scripts]
+fssnap-gui = "fssnap.gui:main"
+
+[project.urls]
+Homepage = "https://anvilsecure.com"
+
+[tool.setuptools.packages]
+find = { where = ["python"] }
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[[tool.setuptools-rust.ext-modules]]
+target = "fssnap._lib"  # The last part of the name (e.g. "_lib") has to match lib.name in Cargo.toml,
+                             # but you can add a prefix to nest it inside of a Python package.
+py-limited-api = "auto"  # Default value, can be omitted
+binding = "PyO3"  # Default value, can be omitted
+
+[[tool.setuptools-rust.bins]]
+target = "fssnap-cli"
+args = ["--profile", "release-lto"]
