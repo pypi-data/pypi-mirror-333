@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: streamlit-extent
+Version: 0.1.1
+Summary: My package with all files
+Author-email: Voronov Andrey <email@example.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
