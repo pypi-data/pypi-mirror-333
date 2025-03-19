@@ -1,0 +1,9 @@
+pubmed_fetcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubmed_fetcher/__main__.py,sha256=q1AmoDEb26RfR6zq61t1dyuGU710moC_WI3D9xW0Ws0,75
+pubmed_fetcher/_init_.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubmed_fetcher/cli.py,sha256=zNyiok4m2KD3k8dqP5sgrXISb3Gijptza6QpvLPPtr4,833
+pubmed_fetcher/fetcher.py,sha256=DJhoJNSmlv8oQCODWy9-P9krjmfsm7fGHcHT6CDzkHY,2580
+pubmedfetcher-0.1.0.dist-info/entry_points.txt,sha256=TjyMMEhGy9CzwhMIHQJqYvzu-kuuRF1lJxMpbOGlN3Y,57
+pubmedfetcher-0.1.0.dist-info/METADATA,sha256=Xkr11LsBwnk3IIzVkZ0jT_059NhvS2zQlhGiEgAORws,605
+pubmedfetcher-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pubmedfetcher-0.1.0.dist-info/RECORD,,
