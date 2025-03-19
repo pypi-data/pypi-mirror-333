@@ -1,0 +1,2 @@
+[opsbox.plugins]
+opsbox_elb_provider = elb_provider.elb_provider:elbProvider

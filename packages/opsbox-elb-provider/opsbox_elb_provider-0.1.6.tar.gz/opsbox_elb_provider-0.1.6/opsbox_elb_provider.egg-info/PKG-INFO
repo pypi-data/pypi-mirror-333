@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: opsbox-elb-provider
+Version: 0.1.6
+Summary: Opsbox provider for ELB checks
+Requires-Python: ==3.11.*
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+Requires-Dist: boto3>=1.35.71
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: pluggy>=1.5.0
+Requires-Dist: opsbox-general-handler>=0.1.2
