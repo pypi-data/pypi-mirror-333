@@ -1,0 +1,6 @@
+requests
+fake-useragent
+beautifulsoup4
+
+[browser]
+selenium
