@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+aimsg/__init__.py
+aimsg/cli.py
+aimsg/config.py
+aimsg/git_utils.py
+aimsg/openai_utils.py
+aimsg/utils.py
+aimsg.egg-info/PKG-INFO
+aimsg.egg-info/SOURCES.txt
+aimsg.egg-info/dependency_links.txt
+aimsg.egg-info/entry_points.txt
+aimsg.egg-info/requires.txt
+aimsg.egg-info/top_level.txt
