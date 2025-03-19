@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: hpe-opsramp-cli
+Version: 0.1.0
+Summary: CLI for HPE OpsRamp
+Author-email: BalaSubramanian-Vetrivel <balasubramanian.vetrivel@opsramp.com>
+Requires-Python: >=3.12

@@ -1,0 +1,2 @@
+[console_scripts]
+hpe-opsramp-cli = hpe_opsramp_cli:main
