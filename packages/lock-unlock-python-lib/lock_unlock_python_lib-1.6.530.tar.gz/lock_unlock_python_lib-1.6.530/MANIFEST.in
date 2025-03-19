@@ -1,0 +1,7 @@
+include Readme-en.md
+include Readme-tr.md
+include LICENSE
+include req.txt
+include lock-unlock-python-lib/lock.py
+include lock-unlock-python-lib/unlock.py
+include lock-unlock-python-lib/__init__.py
