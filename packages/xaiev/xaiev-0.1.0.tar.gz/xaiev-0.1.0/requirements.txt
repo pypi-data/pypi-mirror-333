@@ -1,0 +1,19 @@
+torch
+torchvision
+tabulate
+urllib3
+python-dotenv
+opencv-python
+ipydex
+matplotlib
+numpy
+Pillow
+tabulate
+
+# for xai algorithm
+torchprism
+scikit-image
+icecream
+lime
+saliency
+captum
