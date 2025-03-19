@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: tinyprint
+Version: 0.1.0
+Summary: ui & cli to print zines with esc/pos printer
+Author-email: Levin Eric Zimmermann <levin.eric.zimmermann@posteo.eu>
+License: GPL
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-escpos>=3.1
+Requires-Dist: dataclasses-json>=0.6.0
+Requires-Dist: marko>=2.1.2
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: types-six; extra == "dev"
+Requires-Dist: types-pillow; extra == "dev"
+
+# tinyprint
+
+Software for printing tiny zines with ESC/POS printer.
