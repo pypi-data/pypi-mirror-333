@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+cpplogger/__init__.py
+cpplogger/cpplogger.py
+cpplogger.egg-info/PKG-INFO
+cpplogger.egg-info/SOURCES.txt
+cpplogger.egg-info/dependency_links.txt
+cpplogger.egg-info/top_level.txt
