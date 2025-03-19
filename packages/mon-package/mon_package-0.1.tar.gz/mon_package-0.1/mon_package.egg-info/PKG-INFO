@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: mon_package
+Version: 0.1
+Summary: Un exemple de package Python
+Dynamic: summary

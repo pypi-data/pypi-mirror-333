@@ -1,0 +1,4 @@
+mon_package.egg-info/PKG-INFO
+mon_package.egg-info/SOURCES.txt
+mon_package.egg-info/dependency_links.txt
+mon_package.egg-info/top_level.txt
