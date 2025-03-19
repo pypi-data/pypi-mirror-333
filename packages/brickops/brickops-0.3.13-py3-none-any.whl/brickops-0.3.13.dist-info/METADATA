@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: brickops
+Version: 0.3.13
+Summary: Knowit's dataops library - simplifying building data pipelines in Databricks, for both testing and production use cases. The package enables a workflow where users write their code in notebooks, and then deploy them to a Databricks workspace without stepping on each other's toes.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: requests>=2.32.3
+
+[![Code checks and tests](https://github.com/paalvibe/bricksops/actions/workflows/check-and-test.yaml/badge.svg)](https://github.com/paalvibe/bricksops/actions/workflows/check-and-test.yaml)
+# bricksops
+DataOps framework for Databricks
+
+## Getting started
+This project uses [uv](https://docs.astral.sh/uv/), to begin, follow the installation instructions for your platform on the project homepage.
+
+Next, make sure you are in the project root and run the following command in the terminal:
+
+```shell
+uv sync
+```
+
+This will create a virtual environment and install the required packages in it.
+The project configuration can be found in [`pyproject.toml`](./pyproject.toml).
+
+You can now run the tests with
+```shell
+uv run pytest
+```
