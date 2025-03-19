@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: pysdot
+Version: 0.2.34
+Summary: Semi-discrete operationnal transport
+Home-page: https://github.com/sd-ot/pysdot
+Author: Hugo Leclerc
+Author-email: hugal.leclerc@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+
+        Semi-discrete operationnal transport for the masses...
+    
