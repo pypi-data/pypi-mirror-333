@@ -1,0 +1,2 @@
+[console_scripts]
+test-a-ble = test_a_ble.cli:main
