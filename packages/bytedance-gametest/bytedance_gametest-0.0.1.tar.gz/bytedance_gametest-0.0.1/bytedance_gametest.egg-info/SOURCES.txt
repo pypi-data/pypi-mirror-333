@@ -1,0 +1,6 @@
+setup.py
+bytedance_gametest/__init__.py
+bytedance_gametest.egg-info/PKG-INFO
+bytedance_gametest.egg-info/SOURCES.txt
+bytedance_gametest.egg-info/dependency_links.txt
+bytedance_gametest.egg-info/top_level.txt
