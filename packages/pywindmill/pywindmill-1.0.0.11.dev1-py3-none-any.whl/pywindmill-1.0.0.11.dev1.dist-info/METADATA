@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pywindmill
+Version: 1.0.0.11.dev1
+Summary: sdk in python for windmill client
+Home-page: http://www.ai.com
+Author: yangtingyu01
+License: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: bce-python-sdk==0.8.87
+Requires-Dist: multidict==6.0.4
+Requires-Dist: windmill-artifact
+Requires-Dist: windmill-train
+Requires-Dist: windmill-workspace
+Requires-Dist: windmill-model==1.0.0.58.dev11
+Requires-Dist: windmill-compute
+Requires-Dist: windmill-endpoint
+Requires-Dist: windmill-usersetting
+Requires-Dist: windmill-device
+Requires-Dist: jobv1
+Requires-Dist: graph-service
+Requires-Dist: bce-internal-sdk
+Requires-Dist: pydantic
+Requires-Dist: pyyaml
+Requires-Dist: bcelogger
+Requires-Dist: flask
+
