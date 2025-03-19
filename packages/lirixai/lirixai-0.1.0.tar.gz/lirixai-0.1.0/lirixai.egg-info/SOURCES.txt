@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+lirixai.egg-info/PKG-INFO
+lirixai.egg-info/SOURCES.txt
+lirixai.egg-info/dependency_links.txt
+lirixai.egg-info/requires.txt
+lirixai.egg-info/top_level.txt
