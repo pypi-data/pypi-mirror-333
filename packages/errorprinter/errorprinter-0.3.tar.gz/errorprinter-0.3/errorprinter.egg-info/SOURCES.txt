@@ -1,0 +1,6 @@
+README.md
+setup.py
+errorprinter.egg-info/PKG-INFO
+errorprinter.egg-info/SOURCES.txt
+errorprinter.egg-info/dependency_links.txt
+errorprinter.egg-info/top_level.txt
