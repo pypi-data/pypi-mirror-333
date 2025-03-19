@@ -1,0 +1,8 @@
+setup.py
+RPA-HUB/__init__.py
+RPA-HUB/auth.py
+RPA-HUB/send_log.py
+rpa_hub.egg-info/PKG-INFO
+rpa_hub.egg-info/SOURCES.txt
+rpa_hub.egg-info/dependency_links.txt
+rpa_hub.egg-info/top_level.txt
