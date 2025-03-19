@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+aitokencount/__init__.py
+aitokencount/cli.py
+aitokencount/core.py
+aitokencount.egg-info/PKG-INFO
+aitokencount.egg-info/SOURCES.txt
+aitokencount.egg-info/dependency_links.txt
+aitokencount.egg-info/entry_points.txt
+aitokencount.egg-info/requires.txt
+aitokencount.egg-info/top_level.txt
