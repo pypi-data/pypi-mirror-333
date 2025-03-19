@@ -1,0 +1,10 @@
+gigasmol/__init__.py,sha256=PpcMzJyWdr7F73tJgFEtfdV4FmRtzEQMKY6yRSnyASE,800
+gigasmol/models.py,sha256=XsL4b4b4zrvpsedH3pXDh3iTU6gUXs-KEe1YlvQ3RbM,9861
+gigasmol/gigachat_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gigasmol/gigachat_api/api_model.py,sha256=40yKJQxyCRiY1Olup0vXGg-SjiXkFqehE-hiDveeL_s,20855
+gigasmol/gigachat_api/auth.py,sha256=J68lnrDojNzJ3lQXqEytfZ1kZUGyWpRXAf7cgbkL6m0,8580
+gigasmol-0.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gigasmol-0.0.4.dist-info/METADATA,sha256=IEXMusSiuWjSasLlFRovAiC1b2YRMMR3ELGyc8ZsAYg,5623
+gigasmol-0.0.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+gigasmol-0.0.4.dist-info/top_level.txt,sha256=Q4NTYOeqjLdDYW9jkoxipaIWGPiDG2K17cKXsnrbvBE,9
+gigasmol-0.0.4.dist-info/RECORD,,
