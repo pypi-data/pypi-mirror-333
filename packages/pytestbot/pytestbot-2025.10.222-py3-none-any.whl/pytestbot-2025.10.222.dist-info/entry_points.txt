@@ -1,0 +1,2 @@
+[console_scripts]
+pytestbot = testbot.cli:main

@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+TCLTVDevice设备原子接口模块类列表
+"""
+
+__copyright__ = "Copyright (c) 2024 Nuanguang Gu(Sunny) Reserved"
+__author__ = "Nuanguang Gu(Sunny)"
+__email__ = "nuanguang.gu@aliyun.com"
+
+from testbot_tcl.resources.devices.TCLTVDevice.TCLTVDeviceAtomModuleBase import TCLTVDeviceAtomModuleBase
+
+
+class AdbAtomModule(TCLTVDeviceAtomModuleBase):
+    """
+    TCLTVDevice测试设备原子接口ADB连接模块类
+    """
+    pass
