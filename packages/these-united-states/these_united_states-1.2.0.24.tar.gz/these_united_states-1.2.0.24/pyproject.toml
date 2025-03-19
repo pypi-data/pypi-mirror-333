@@ -1,0 +1,92 @@
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+
+[project]
+name = 'these-united-states'
+version = '1.2.0.24'
+description = 'Utility library for performing reverse geocoding of states in the United States of America'
+readme = 'README.md'
+requires-python = '>=3.9'
+license = 'BSD-3-clause'
+authors = [
+    {name = 'Brandon Carpenter', email = 'brandon@avantus.com'},
+]
+keywords = [
+    'geocoding',
+    'reverse',
+    'states',
+]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Topic :: Scientific/Engineering :: GIS',
+    'Typing :: Typed',
+]
+dependencies = [
+    # pyshp v2.1.1 enabled logging of all warnings for all packages
+    # See https://github.com/GeospatialPython/pyshp/issues/203
+    'pyshp ~= 2.0, != 2.1.1',
+]
+
+
+[project.urls]
+'Source Code' = 'https://github.com/avantus-tech/these-united-states'
+
+
+[project.optional-dependencies]
+cli = [
+    'click ~= 8.0',
+]
+plot = [
+    'matplotlib ~= 3.2',
+    'pyqt6 ~= 6.8',
+]
+
+[dependency-groups]
+dev = [
+    "mypy ~= 1.15",
+]
+
+
+[tool.hatch.build]
+exclude = [
+    '.*',
+    '*.pyc',
+    '__pycache__/',
+]
+
+
+[tool.hatch.build.targets.sdist]
+include = [
+    '/src/united_states/*.py',
+    '/src/united_states/py.typed',
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ['src/united_states']
+zip-safe = false  # Allow mypy to perform type checking using py.typed marker
+
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+year = 2024  # Note: Update last component of version when changing the year
+dependencies = [
+    'requests',
+]
+
+
+[tool.mypy]
+mypy_path = "src"
+strict = true
+ignore_missing_imports = true
