@@ -1,0 +1,10 @@
+chocolate/__init__.py,sha256=hnyLtddZHQ8ecDtf0hznbJTiK1QNN1-qzgugYsNyzX0,22
+chocolate/__main__.py,sha256=zWBiBas3_k4ZnKPXHdkAE34R45HmVdnvtNHxq1atTig,5866
+chocolate/config.py,sha256=MOUhgeBQR3xo8fni_paRXhol2EU327dJ6W5f9loMpy0,371
+chocolate/path.py,sha256=rqdu8ESFJT-XAUnbhfPIUggvWZUwq_uAjKUwbgFwO9E,1825
+chocolate/project_manager.py,sha256=-9xxaeR1h1tkjCcWkoHlP21Ch8i3Ao_vSK9-Jo7qSE4,3668
+gochocolatego-1.0.dist-info/METADATA,sha256=jvZNsnUEg888F25IBFlQU7YKxttFqGQcRP6WDUtbpHo,1605
+gochocolatego-1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+gochocolatego-1.0.dist-info/entry_points.txt,sha256=sMz7Q1X4qoJXUlQPFaYHq5qyvmulW8qFubKSU5N1kkw,54
+gochocolatego-1.0.dist-info/top_level.txt,sha256=GrV7pIV1X6TtOCQklf-3Mn6fGYXEveMohjKn3Z2gMXI,10
+gochocolatego-1.0.dist-info/RECORD,,
