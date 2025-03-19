@@ -1,0 +1,16 @@
+promptshell/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+promptshell/ai_terminal_assistant.py,sha256=SowMrGUsy39yaIm74GLOoPlzZ3BMQY6RtPbC0ffXRKQ,15860
+promptshell/ansi_support.py,sha256=Ibysu_waUYUT_0rMQsyL5IX5sJ6JXuvDQzvyo7Q4OSs,780
+promptshell/data_gatherer.py,sha256=q617ZzkorTxvg_BsqTiLa6m3ypPby0GbPElC9O9Zc6w,817
+promptshell/format_utils.py,sha256=TXiHA--QwVy7iVB10uhpczMl66eIeELX6VPTyELF8Wk,2152
+promptshell/main.py,sha256=xFCPtuy4RBiGWKx1XBkK-rIissUmmE26X130WpiB1AY,2531
+promptshell/node.py,sha256=BpO6C_tTIJAoEF4J3yuxVcnCoiuxj1jTPz3GMfPkpRU,6892
+promptshell/readline_setup.py,sha256=58GgBAst6psjeQiqLBHlR67lDnMCOdtK9uC6XMWFEhQ,1312
+promptshell/setup.py,sha256=YfcCMgFUC2vdmdqG3medlQS-O7N2tDQuO9Gd2LAqMdY,10230
+promptshell/system_info.py,sha256=PJ60dO6n27WS7MZy9fIRC7rw5xFDIQAH_VVcsmy66nI,713
+promptshell-0.1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+promptshell-0.1.0.dist-info/METADATA,sha256=6pm4-Vb4w5QOBSZWciZ2So9A6qk_VFVa_nR5nCZXxZQ,661
+promptshell-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+promptshell-0.1.0.dist-info/entry_points.txt,sha256=3S6shGEvwACGuQKCO4WR4q8l2x3rZ2wpvCaEEnhh8NM,54
+promptshell-0.1.0.dist-info/top_level.txt,sha256=5n73AxHgkR4oz_Y0M2Xx68fy19uJ76KSgd9knGlz0J4,12
+promptshell-0.1.0.dist-info/RECORD,,
