@@ -1,0 +1,3 @@
+[console_scripts]
+k3m=k3m.console:cli
+
