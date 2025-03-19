@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: leist_converter
+Version: 0.1.2
+Summary: Eine Python-Bibliothek zur Umwandlung von Texten in altdeutsche Schreibweise, inklusive französischer Lehnwörter.
+Author: Jonah Wendel
+License: MIT License
+        
+        Copyright (c) 2025 Jonah Wendel
+        
+        Hiermit wird jedem, der eine Kopie dieser Software und der zugehörigen Dokumentation erhält, die Erlaubnis erteilt, sie ohne Einschränkungen zu verwenden, zu kopieren, zu ändern, zu vereinen, zu veröffentlichen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, unter der Bedingung, dass der oben stehende Copyright-Hinweis und dieser Lizenzhinweis in allen Kopien oder wesentlichen Teilen der Software enthalten sind.
+        
+        DIE SOFTWARE WIRD "WIE BESEHEN" BEREITGESTELLT, OHNE JEDE GARANTIE, AUSDRÜCKLICH ODER IMPLIZIT, EINSCHLIESSLICH DER GARANTIEN FÜR MARKTGÄNGIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHT-INHABER FÜR ANSPRÜCHE, SCHÄDEN ODER SONSTIGE HAFTUNGEN VERANTWORTLICH, OB IN EINER HANDLUNG DES VERTRAGS, DER DELIKTE ODER SONSTIGEN RECHTSTATBESTÄNDEN, AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE ODER DER NUTZUNG DER SOFTWARE ODER SONSTIGEN HANDLUNGEN MIT DER SOFTWARE.
+        
+        ---
+        
+        Gutes Koden ⌨
+        
+Project-URL: Homepage, https://github.com/w-jonah/leist_converter.git
+Project-URL: Repository, https://github.com/w-jonah/leist_converter.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 📝 leist_converter
+
+**leist_converter** ist ein Python-Modul, das modernen Text automatisch in eine **altdeutsche Schreibweise** umwandelt. Zusätzlich bietet es die Option, moderne Begriffe durch **französische Lehnwörter** zu ersetzen. Es eignet sich perfekt für kreative Schreibprojekte, historische Simulationen oder einfach nur zum Spaß!
+
+---
+
+## 🚀 Features
+
+- ✅ Ersetzt moderne Rechtschreibung durch altdeutsche Formen  
+- ✅ Optionale Ersetzung moderner Begriffe durch französische Lehnwörter  
+- ✅ Automatische Anpassung an Groß- und Kleinschreibung  
+- ✅ Konfigurierbar: einfache Aktivierung/Deaktivierung von Zusatzfunktionen  
+- ✅ Erweiterbar durch eigene Wörterlisten  
+
+Keine lust auf ein README und Chat GPT ist zu blöd um eins zu erstellen

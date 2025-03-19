@@ -1,0 +1,25 @@
+[project]
+name = "leist_converter"
+version = "0.1.2"
+description = "Eine Python-Bibliothek zur Umwandlung von Texten in altdeutsche Schreibweise, inklusive französischer Lehnwörter."
+readme = "README.md"
+authors = [
+    { name = "Jonah Wendel" }
+]
+license = { file = "LICENSE" }
+dependencies = []
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/w-jonah/leist_converter.git"
+Repository = "https://github.com/w-jonah/leist_converter.git"
+
+[tool.setuptools]
+packages = ["leist_converter"]
+
+[tool.setuptools.package-data]
+altdeutsche_schreibweise = ["resources/*.json"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

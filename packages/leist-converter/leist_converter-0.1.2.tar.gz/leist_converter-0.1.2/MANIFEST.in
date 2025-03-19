@@ -1,0 +1,3 @@
+include leist_converter/resources/*.json
+include README.md
+include LICENSE
