@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.3.2
+-----
+
+* policy controllers: listing may give us RA's filters instead of raw params
