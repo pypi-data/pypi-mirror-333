@@ -1,0 +1,4 @@
+churneval
+pandas
+scikit-learn
+matplotlib
