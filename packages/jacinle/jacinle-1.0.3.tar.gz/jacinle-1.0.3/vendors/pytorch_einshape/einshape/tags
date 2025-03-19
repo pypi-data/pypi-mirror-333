@@ -1,0 +1,172 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AbstractOpsTest	einshape/tests/abstract_ops_test.py	/^class AbstractOpsTest(absltest.TestCase):$/;"	c
+Backend	einshape/src/backend.py	/^class Backend(Generic[T], metaclass=abc.ABCMeta):$/;"	c
+Broadcast	einshape/src/abstract_ops.py	/^class Broadcast(ShapeOp):$/;"	c
+EXTRA_PACKAGES	setup.py	/^EXTRA_PACKAGES = {$/;"	v
+EinshapeTest	einshape/tests/tensorflow/tf_ops_test.py	/^class EinshapeTest(tf.test.TestCase):$/;"	c
+EngineTest	einshape/tests/engine_test.py	/^class EngineTest(absltest.TestCase):$/;"	c
+EngineTest	einshape/tests/jax/jax_ops_test.py	/^class EngineTest(absltest.TestCase):$/;"	c
+EngineTest	einshape/tests/pytorch/pytorch_ops_test.py	/^class EngineTest(absltest.TestCase):$/;"	c
+Indices	einshape/src/engine.py	/^Indices = str$/;"	v
+OptimizerTest	einshape/tests/optimizer_test.py	/^class OptimizerTest(absltest.TestCase):$/;"	c
+PreprocessingTest	einshape/tests/tensorflow/preprocessing_test.py	/^class PreprocessingTest(absltest.TestCase):$/;"	c
+REQUIRED_PACKAGES	setup.py	/^REQUIRED_PACKAGES = [$/;"	v
+Reshape	einshape/src/abstract_ops.py	/^class Reshape(ShapeOp):$/;"	c
+ShapeOp	einshape/src/abstract_ops.py	/^class ShapeOp(metaclass=abc.ABCMeta):$/;"	c
+T	einshape/src/abstract_ops.py	/^T = TypeVar('T')$/;"	v
+T	einshape/src/backend.py	/^T = TypeVar('T')$/;"	v
+T	einshape/src/tensorflow/preprocessing.py	/^T = TypeVar('T')$/;"	v
+Tile	einshape/src/tensorflow/preprocessing.py	/^class Tile(abstract_ops.ShapeOp):$/;"	c
+Transpose	einshape/src/abstract_ops.py	/^class Transpose(ShapeOp):$/;"	c
+_JaxBackend	einshape/src/jax/jax_ops.py	/^class _JaxBackend(backend.Backend[jnp.ndarray]):$/;"	c
+_JaxBackend	einshape/src/pytorch/pytorch_ops.py	/^class _JaxBackend(backend.Backend[torch.Tensor]):$/;"	c
+_ShapeExpr	einshape/tests/engine_test.py	/^class _ShapeExpr(object):$/;"	c
+_TFBackend	einshape/src/tensorflow/tf_ops.py	/^class _TFBackend(backend.Backend[tf.Tensor]):$/;"	c
+__add__	einshape/tests/engine_test.py	/^  def __add__(self, x):$/;"	m	class:_ShapeExpr	file:
+__floordiv__	einshape/tests/engine_test.py	/^  def __floordiv__(self, x):$/;"	m	class:_ShapeExpr	file:
+__mod__	einshape/tests/engine_test.py	/^  def __mod__(self, x):$/;"	m	class:_ShapeExpr	file:
+__mul__	einshape/tests/engine_test.py	/^  def __mul__(self, x):$/;"	m	class:_ShapeExpr	file:
+__radd__	einshape/tests/engine_test.py	/^  def __radd__(self, x):$/;"	m	class:_ShapeExpr	file:
+__rfloordiv__	einshape/tests/engine_test.py	/^  def __rfloordiv__(self, x):$/;"	m	class:_ShapeExpr	file:
+__rmod__	einshape/tests/engine_test.py	/^  def __rmod__(self, x):$/;"	m	class:_ShapeExpr	file:
+__rmul__	einshape/tests/engine_test.py	/^  def __rmul__(self, x):$/;"	m	class:_ShapeExpr	file:
+__rsub__	einshape/tests/engine_test.py	/^  def __rsub__(self, x):$/;"	m	class:_ShapeExpr	file:
+__sub__	einshape/tests/engine_test.py	/^  def __sub__(self, x):$/;"	m	class:_ShapeExpr	file:
+_are_contiguous_reshapes	einshape/src/optimizer.py	/^def _are_contiguous_reshapes(ops):$/;"	f
+_elide_intermediate_reshapes	einshape/src/optimizer.py	/^def _elide_intermediate_reshapes(ops):$/;"	f
+_elide_noop_reshapes	einshape/src/optimizer.py	/^def _elide_noop_reshapes(ops, input_shape):$/;"	f
+_expand_wildcard	einshape/src/engine.py	/^def _expand_wildcard(expr: str, num_wildcard_dims: int) -> str:$/;"	f
+_group_dimensions	einshape/src/engine.py	/^def _group_dimensions(expr: str) -> Sequence[str]:$/;"	f
+_is_noop_reshape	einshape/src/optimizer.py	/^def _is_noop_reshape(op, input_shape):$/;"	f
+_is_static	einshape/src/optimizer.py	/^def _is_static(seq):$/;"	f
+_preprocess	einshape/src/backend.py	/^  def _preprocess($/;"	m	class:Backend
+_preprocess	einshape/src/tensorflow/tf_ops.py	/^  def _preprocess($/;"	m	class:_TFBackend
+alphabetical	einshape/src/engine.py	/^  def alphabetical(group: Indices) -> Indices:$/;"	f	function:generate_ops
+author	setup.py	/^    author='DeepMind',$/;"	v
+author_email	setup.py	/^    author_email='noreply@google.com',$/;"	v
+broadcast	einshape/src/backend.py	/^  def broadcast(self, x: T, op: abstract_ops.Broadcast) -> T:$/;"	m	class:Backend
+broadcast	einshape/src/jax/jax_ops.py	/^  def broadcast($/;"	m	class:_JaxBackend
+broadcast	einshape/src/pytorch/pytorch_ops.py	/^  def broadcast($/;"	m	class:_JaxBackend
+broadcast	einshape/src/tensorflow/tf_ops.py	/^  def broadcast(self, x: tf.Tensor, op: abstract_ops.Broadcast) -> tf.Tensor:$/;"	m	class:_TFBackend
+description	setup.py	/^    description='DSL-based reshaping library for JAX and other frameworks',$/;"	v
+einshape	einshape/src/jax/jax_ops.py	/^def einshape($/;"	f
+einshape	einshape/src/pytorch/pytorch_ops.py	/^def einshape($/;"	f
+einshape	einshape/src/tensorflow/tf_ops.py	/^def einshape($/;"	f
+einshape_test_suite	setup.py	/^def einshape_test_suite():$/;"	f
+exec	einshape/src/backend.py	/^  def exec($/;"	m	class:Backend
+execute	einshape/src/abstract_ops.py	/^  def execute(self, backend, x: T) -> T:$/;"	m	class:Broadcast
+execute	einshape/src/abstract_ops.py	/^  def execute(self, backend, x: T) -> T:$/;"	m	class:Reshape
+execute	einshape/src/abstract_ops.py	/^  def execute(self, backend, x: T) -> T:$/;"	m	class:ShapeOp
+execute	einshape/src/abstract_ops.py	/^  def execute(self, backend, x: T) -> T:$/;"	m	class:Transpose
+execute	einshape/src/tensorflow/preprocessing.py	/^  def execute(self, backend, x: T) -> T:$/;"	m	class:Tile
+extras_require	setup.py	/^    extras_require=EXTRA_PACKAGES,$/;"	v
+generate_ops	einshape/src/engine.py	/^def generate_ops($/;"	f
+group_size	einshape/src/engine.py	/^  def group_size(group):$/;"	f	function:generate_ops
+install_requires	setup.py	/^    install_requires=REQUIRED_PACKAGES,$/;"	v
+is_static	einshape/src/tensorflow/preprocessing.py	/^  def is_static(self) -> bool:$/;"	m	class:Tile
+license	setup.py	/^    license='Apache 2.0',$/;"	v
+name	setup.py	/^    name='einshape',$/;"	v
+optimize	einshape/src/optimizer.py	/^def optimize($/;"	f
+packages	setup.py	/^    packages=find_packages(),$/;"	v
+platforms	setup.py	/^    platforms=['any'],$/;"	v
+preprocess	einshape/src/tensorflow/preprocessing.py	/^def preprocess($/;"	f
+reshape	einshape/src/backend.py	/^  def reshape(self, x: T, op: abstract_ops.Reshape) -> T:$/;"	m	class:Backend
+reshape	einshape/src/jax/jax_ops.py	/^  def reshape(self, x: jnp.ndarray, op: abstract_ops.Reshape) -> jnp.ndarray:$/;"	m	class:_JaxBackend
+reshape	einshape/src/pytorch/pytorch_ops.py	/^  def reshape(self, x: torch.Tensor, op: abstract_ops.Reshape) -> torch.Tensor:$/;"	m	class:_JaxBackend
+reshape	einshape/src/tensorflow/tf_ops.py	/^  def reshape(self, x: tf.Tensor, op: abstract_ops.Reshape) -> tf.Tensor:$/;"	m	class:_TFBackend
+test_accepts_python_list	einshape/tests/jax/jax_ops_test.py	/^  def test_accepts_python_list(self):$/;"	m	class:EngineTest
+test_accepts_python_list	einshape/tests/pytorch/pytorch_ops_test.py	/^  def test_accepts_python_list(self):$/;"	m	class:EngineTest
+test_accepts_python_list	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_accepts_python_list(self):$/;"	m	class:EinshapeTest
+test_broadcast_expands_to_tile_then_reshape	einshape/tests/tensorflow/preprocessing_test.py	/^  def test_broadcast_expands_to_tile_then_reshape(self):$/;"	m	class:PreprocessingTest
+test_broadcast_multiple_dimensions	einshape/tests/tensorflow/preprocessing_test.py	/^  def test_broadcast_multiple_dimensions(self):$/;"	m	class:PreprocessingTest
+test_broadcast_trailing_dimension_generates_initial_reshape	einshape/tests/tensorflow/preprocessing_test.py	/^  def test_broadcast_trailing_dimension_generates_initial_reshape(self):$/;"	m	class:PreprocessingTest
+test_broadcast_transform	einshape/tests/abstract_ops_test.py	/^  def test_broadcast_transform(self):$/;"	m	class:AbstractOpsTest
+test_expand_dim	einshape/tests/engine_test.py	/^  def test_expand_dim(self):$/;"	m	class:EngineTest
+test_expand_multiple_dims	einshape/tests/engine_test.py	/^  def test_expand_multiple_dims(self):$/;"	m	class:EngineTest
+test_group_dims	einshape/tests/engine_test.py	/^  def test_group_dims(self):$/;"	m	class:EngineTest
+test_group_unknown_input_shape	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_group_unknown_input_shape(self):$/;"	m	class:EinshapeTest
+test_nchw_transpose	einshape/tests/engine_test.py	/^  def test_nchw_transpose(self):$/;"	m	class:EngineTest
+test_nonredundant_reshape_retained	einshape/tests/optimizer_test.py	/^  def test_nonredundant_reshape_retained(self):$/;"	m	class:OptimizerTest
+test_nonstatic_reshape_retained	einshape/tests/optimizer_test.py	/^  def test_nonstatic_reshape_retained(self):$/;"	m	class:OptimizerTest
+test_noop_reshape_after_broadcast_skipped	einshape/tests/optimizer_test.py	/^  def test_noop_reshape_after_broadcast_skipped(self):$/;"	m	class:OptimizerTest
+test_noop_reshape_after_tanspose_skipped	einshape/tests/optimizer_test.py	/^  def test_noop_reshape_after_tanspose_skipped(self):$/;"	m	class:OptimizerTest
+test_noop_reshape_skipped	einshape/tests/optimizer_test.py	/^  def test_noop_reshape_skipped(self):$/;"	m	class:OptimizerTest
+test_op_reshape_retained	einshape/tests/optimizer_test.py	/^  def test_op_reshape_retained(self):$/;"	m	class:OptimizerTest
+test_rank_four_noop	einshape/tests/engine_test.py	/^  def test_rank_four_noop(self):$/;"	m	class:EngineTest
+test_rank_one_noop	einshape/tests/engine_test.py	/^  def test_rank_one_noop(self):$/;"	m	class:EngineTest
+test_rank_zero_noop	einshape/tests/engine_test.py	/^  def test_rank_zero_noop(self):$/;"	m	class:EngineTest
+test_redundant_reshape_skipped	einshape/tests/optimizer_test.py	/^  def test_redundant_reshape_skipped(self):$/;"	m	class:OptimizerTest
+test_regroup_with_transpose	einshape/tests/engine_test.py	/^  def test_regroup_with_transpose(self):$/;"	m	class:EngineTest
+test_rejcts_unknown_tile_multiples	einshape/tests/engine_test.py	/^  def test_rejcts_unknown_tile_multiples(self):$/;"	m	class:EngineTest
+test_rejects_input_sizes_conflicting_with_input_shapes	einshape/tests/engine_test.py	/^  def test_rejects_input_sizes_conflicting_with_input_shapes(self):$/;"	m	class:EngineTest
+test_rejects_lhs_mismatch_with_input_shape	einshape/tests/engine_test.py	/^  def test_rejects_lhs_mismatch_with_input_shape(self):$/;"	m	class:EngineTest
+test_rejects_lhs_with_duplicated_index	einshape/tests/engine_test.py	/^  def test_rejects_lhs_with_duplicated_index(self):$/;"	m	class:EngineTest
+test_rejects_rhs_with_duplicated_index	einshape/tests/engine_test.py	/^  def test_rejects_rhs_with_duplicated_index(self):$/;"	m	class:EngineTest
+test_rejects_rhs_with_missing_index	einshape/tests/engine_test.py	/^  def test_rejects_rhs_with_missing_index(self):$/;"	m	class:EngineTest
+test_rejects_squeezing_non_unitary	einshape/tests/engine_test.py	/^  def test_rejects_squeezing_non_unitary(self):$/;"	m	class:EngineTest
+test_rejects_underspecified_ungroup_dimensions	einshape/tests/engine_test.py	/^  def test_rejects_underspecified_ungroup_dimensions(self):$/;"	m	class:EngineTest
+test_rejects_ungroup_with_non_divisor_dimension_size	einshape/tests/engine_test.py	/^  def test_rejects_ungroup_with_non_divisor_dimension_size(self):$/;"	m	class:EngineTest
+test_rejects_ungrouping_wildcard	einshape/tests/engine_test.py	/^  def test_rejects_ungrouping_wildcard(self):$/;"	m	class:EngineTest
+test_rejects_wildcard_lhs_mismatch_with_input_shape	einshape/tests/engine_test.py	/^  def test_rejects_wildcard_lhs_mismatch_with_input_shape(self):$/;"	m	class:EngineTest
+test_reshape_transform	einshape/tests/abstract_ops_test.py	/^  def test_reshape_transform(self):$/;"	m	class:AbstractOpsTest
+test_reshape_unknown_index_size	einshape/tests/engine_test.py	/^  def test_reshape_unknown_index_size(self):$/;"	m	class:EngineTest
+test_reshape_unknown_index_size	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_reshape_unknown_index_size(self):$/;"	m	class:EinshapeTest
+test_reshape_unknown_input_shape	einshape/tests/engine_test.py	/^  def test_reshape_unknown_input_shape(self):$/;"	m	class:EngineTest
+test_reshape_unknown_input_shape	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_reshape_unknown_input_shape(self):$/;"	m	class:EinshapeTest
+test_reshapes_and_transposes_preserved	einshape/tests/tensorflow/preprocessing_test.py	/^  def test_reshapes_and_transposes_preserved(self):$/;"	m	class:PreprocessingTest
+test_simple_reshape	einshape/tests/jax/jax_ops_test.py	/^  def test_simple_reshape(self):$/;"	m	class:EngineTest
+test_simple_reshape	einshape/tests/pytorch/pytorch_ops_test.py	/^  def test_simple_reshape(self):$/;"	m	class:EngineTest
+test_simple_reshape	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_simple_reshape(self):$/;"	m	class:EinshapeTest
+test_simple_transpose	einshape/tests/engine_test.py	/^  def test_simple_transpose(self):$/;"	m	class:EngineTest
+test_simple_transpose	einshape/tests/jax/jax_ops_test.py	/^  def test_simple_transpose(self):$/;"	m	class:EngineTest
+test_simple_transpose	einshape/tests/pytorch/pytorch_ops_test.py	/^  def test_simple_transpose(self):$/;"	m	class:EngineTest
+test_simple_transpose	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_simple_transpose(self):$/;"	m	class:EinshapeTest
+test_smart_shape_inference	einshape/tests/engine_test.py	/^  def test_smart_shape_inference(self):$/;"	m	class:EngineTest
+test_squeeze	einshape/tests/engine_test.py	/^  def test_squeeze(self):$/;"	m	class:EngineTest
+test_squeeze_transpose_expand	einshape/tests/engine_test.py	/^  def test_squeeze_transpose_expand(self):$/;"	m	class:EngineTest
+test_suite	setup.py	/^    test_suite='setup.einshape_test_suite',$/;"	v
+test_tile_leading_dim	einshape/tests/engine_test.py	/^  def test_tile_leading_dim(self):$/;"	m	class:EngineTest
+test_tile_leading_dim	einshape/tests/jax/jax_ops_test.py	/^  def test_tile_leading_dim(self):$/;"	m	class:EngineTest
+test_tile_leading_dim	einshape/tests/pytorch/pytorch_ops_test.py	/^  def test_tile_leading_dim(self):$/;"	m	class:EngineTest
+test_tile_leading_dim	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_tile_leading_dim(self):$/;"	m	class:EinshapeTest
+test_tile_leading_dim_and_flatten	einshape/tests/engine_test.py	/^  def test_tile_leading_dim_and_flatten(self):$/;"	m	class:EngineTest
+test_tile_rank_two_one_dim	einshape/tests/engine_test.py	/^  def test_tile_rank_two_one_dim(self):$/;"	m	class:EngineTest
+test_tile_rank_two_one_dim_and_flatten	einshape/tests/engine_test.py	/^  def test_tile_rank_two_one_dim_and_flatten(self):$/;"	m	class:EngineTest
+test_tile_rank_two_one_dim_with_transpose	einshape/tests/engine_test.py	/^  def test_tile_rank_two_one_dim_with_transpose(self):$/;"	m	class:EngineTest
+test_tile_rank_two_two_dims	einshape/tests/engine_test.py	/^  def test_tile_rank_two_two_dims(self):$/;"	m	class:EngineTest
+test_tile_trailing_dim	einshape/tests/engine_test.py	/^  def test_tile_trailing_dim(self):$/;"	m	class:EngineTest
+test_tile_trailing_dim	einshape/tests/jax/jax_ops_test.py	/^  def test_tile_trailing_dim(self):$/;"	m	class:EngineTest
+test_tile_trailing_dim	einshape/tests/pytorch/pytorch_ops_test.py	/^  def test_tile_trailing_dim(self):$/;"	m	class:EngineTest
+test_tile_trailing_dim	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_tile_trailing_dim(self):$/;"	m	class:EinshapeTest
+test_tile_trailing_dim_and_flatten	einshape/tests/engine_test.py	/^  def test_tile_trailing_dim_and_flatten(self):$/;"	m	class:EngineTest
+test_transpose_and_expand_dim	einshape/tests/engine_test.py	/^  def test_transpose_and_expand_dim(self):$/;"	m	class:EngineTest
+test_transpose_same_shape_retained	einshape/tests/optimizer_test.py	/^  def test_transpose_same_shape_retained(self):$/;"	m	class:OptimizerTest
+test_transpose_transform	einshape/tests/abstract_ops_test.py	/^  def test_transpose_transform(self):$/;"	m	class:AbstractOpsTest
+test_transpose_unknown_input_shape	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_transpose_unknown_input_shape(self):$/;"	m	class:EinshapeTest
+test_ungroup	einshape/tests/jax/jax_ops_test.py	/^  def test_ungroup(self):$/;"	m	class:EngineTest
+test_ungroup	einshape/tests/pytorch/pytorch_ops_test.py	/^  def test_ungroup(self):$/;"	m	class:EngineTest
+test_ungroup	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_ungroup(self):$/;"	m	class:EinshapeTest
+test_ungroup_dims	einshape/tests/engine_test.py	/^  def test_ungroup_dims(self):$/;"	m	class:EngineTest
+test_ungroup_dims_with_inferred_size	einshape/tests/engine_test.py	/^  def test_ungroup_dims_with_inferred_size(self):$/;"	m	class:EngineTest
+test_ungroup_unknown_index_size	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_ungroup_unknown_index_size(self):$/;"	m	class:EinshapeTest
+test_ungroup_unknown_input_shape	einshape/tests/tensorflow/tf_ops_test.py	/^  def test_ungroup_unknown_input_shape(self):$/;"	m	class:EinshapeTest
+test_wildcard_flatten	einshape/tests/engine_test.py	/^  def test_wildcard_flatten(self):$/;"	m	class:EngineTest
+test_wildcard_identity	einshape/tests/engine_test.py	/^  def test_wildcard_identity(self):$/;"	m	class:EngineTest
+test_wildcard_transpose	einshape/tests/engine_test.py	/^  def test_wildcard_transpose(self):$/;"	m	class:EngineTest
+tile	einshape/src/tensorflow/tf_ops.py	/^  def tile(self, x: tf.Tensor, op: preprocessing.Tile) -> tf.Tensor:$/;"	m	class:_TFBackend
+transform_shape	einshape/src/abstract_ops.py	/^  def transform_shape(self, input_shape: Sequence[Any]) -> Sequence[Any]:$/;"	m	class:Broadcast
+transform_shape	einshape/src/abstract_ops.py	/^  def transform_shape(self, input_shape: Sequence[Any]) -> Sequence[Any]:$/;"	m	class:Reshape
+transform_shape	einshape/src/abstract_ops.py	/^  def transform_shape(self, input_shape: Sequence[Any]) -> Sequence[Any]:$/;"	m	class:ShapeOp
+transform_shape	einshape/src/abstract_ops.py	/^  def transform_shape(self, input_shape: Sequence[Any]) -> Sequence[Any]:$/;"	m	class:Transpose
+transform_shape	einshape/src/tensorflow/preprocessing.py	/^  def transform_shape(self, input_shape: Sequence[Any]) -> Sequence[Any]:$/;"	m	class:Tile
+transpose	einshape/src/backend.py	/^  def transpose(self, x: T, op: abstract_ops.Transpose) -> T:$/;"	m	class:Backend
+transpose	einshape/src/jax/jax_ops.py	/^  def transpose($/;"	m	class:_JaxBackend
+transpose	einshape/src/pytorch/pytorch_ops.py	/^  def transpose($/;"	m	class:_JaxBackend
+transpose	einshape/src/tensorflow/tf_ops.py	/^  def transpose(self, x: tf.Tensor, op: abstract_ops.Transpose) -> tf.Tensor:$/;"	m	class:_TFBackend
+url	setup.py	/^    url='https:\/\/github.com\/deepmind\/einshape',$/;"	v
+version	setup.py	/^    version='1.0',$/;"	v

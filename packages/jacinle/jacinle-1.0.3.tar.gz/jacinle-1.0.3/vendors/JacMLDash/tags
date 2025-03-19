@@ -1,0 +1,204 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+APISearchListHandler	mldash/web/app/index.py	/^class APISearchListHandler(JacRequestHandler):$/;"	c
+CannotDeleteException	mldash/plugins/trashbin/manager.py	/^class CannotDeleteException(Exception):$/;"	c
+CustomPageHandler	mldash/web/app/experiment.py	/^class CustomPageHandler(JacRequestHandler):$/;"	c
+Desc	mldash/orm/experiment.py	/^class Desc(ModelWithCUTime):$/;"	c
+DescHandler	mldash/web/app/experiment.py	/^class DescHandler(JacRequestHandler):$/;"	c
+Experiment	mldash/orm/experiment.py	/^class Experiment(ModelWithCUTime):$/;"	c
+ExprHandler	mldash/web/app/experiment.py	/^class ExprHandler(JacRequestHandler):$/;"	c
+FileViewerHandler	mldash/plugins/viewer/handler.py	/^class FileViewerHandler(StaticFileHandler):$/;"	c
+IndexHandler	mldash/web/app/index.py	/^class IndexHandler(JacRequestHandler):$/;"	c
+MLDashClient	mldash/client/client.py	/^class MLDashClient(object):$/;"	c
+Meta	mldash/orm/experiment.py	/^    class Meta:$/;"	c	class:Experiment
+Meta	mldash/orm/experiment.py	/^    class Meta:$/;"	c	class:Run
+ModelWithCUTime	mldash/orm/experiment.py	/^class ModelWithCUTime(peewee.Model):$/;"	c
+ProjectMetainfo	mldash/orm/project.py	/^class ProjectMetainfo(peewee.Model):$/;"	c
+PythonSysPath	.ycm_extra_conf.py	/^def PythonSysPath(**kwargs):$/;"	f
+Run	mldash/orm/experiment.py	/^class Run(ModelWithCUTime):$/;"	c
+RunHandler	mldash/web/app/experiment.py	/^class RunHandler(JacRequestHandler):$/;"	c
+StarHandler	mldash/plugins/star/handler.py	/^class StarHandler(JacRequestHandler):$/;"	c
+TensorboardHandler	mldash/plugins/tensorboard/handler.py	/^class TensorboardHandler(JacRequestHandler):$/;"	c
+TensorboardManager	mldash/plugins/tensorboard/manager.py	/^class TensorboardManager(object):$/;"	c
+TrashbinDeleteHandler	mldash/plugins/trashbin/handler.py	/^class TrashbinDeleteHandler(JacRequestHandler):$/;"	c
+UIMethods	examples/demo/jacmldash.py	/^class UIMethods(object):$/;"	c
+UnstarHandler	mldash/plugins/star/handler.py	/^class UnstarHandler(JacRequestHandler):$/;"	c
+UpdateTextHandler	mldash/web/app/experiment.py	/^class UpdateTextHandler(JacRequestHandler):$/;"	c
+__all__	mldash/client/client.py	/^__all__ = ['MLDashClient']$/;"	v
+__all__	mldash/orm/database.py	/^__all__ = ['init_database', 'get_database', 'register_model', 'migrate_database', 'migrate_1_1', 'get_latest_version']$/;"	v
+__all__	mldash/orm/experiment.py	/^__all__ = ['ModelWithCUTime', 'Desc', 'Experiment', 'Run']$/;"	v
+__all__	mldash/orm/project.py	/^__all__ = ['ProjectMetainfo', 'init_project']$/;"	v
+__all__	mldash/plugins/tensorboard/manager.py	/^__all__ = ['tensorboard_manager']$/;"	v
+__all__	mldash/web/custom_pages/config.py	/^__all__ = ['register_custom_pages', 'get_custom_pages']$/;"	v
+__all__	mldash/web/run_methods/config.py	/^__all__ = ['register_run_methods', 'get_run_methods']$/;"	v
+__all__	mldash/web/ui_methods/config.py	/^__all__ = ['register_ui_methods', 'get_ui_methods']$/;"	v
+__init__	mldash/client/client.py	/^    def __init__(self, dump_dir):$/;"	m	class:MLDashClient
+__init__	mldash/plugins/tensorboard/manager.py	/^    def __init__(self):$/;"	m	class:TensorboardManager
+_check_port_usage	mldash/plugins/tensorboard/manager.py	/^def _check_port_usage(port):$/;"	f
+_clean_up_running_tensorboards	mldash/plugins/tensorboard/manager.py	/^    def _clean_up_running_tensorboards(self):$/;"	m	class:TensorboardManager
+_custom_custom_pages	mldash/web/custom_pages/config.py	/^_custom_custom_pages = []$/;"	v
+_custom_run_methods	mldash/web/run_methods/config.py	/^_custom_run_methods = []$/;"	v
+_custom_ui_methods	mldash/web/ui_methods/config.py	/^_custom_ui_methods = None$/;"	v
+_database	mldash/orm/database.py	/^_database = None$/;"	v
+_extra_info_dict_cache	mldash/orm/experiment.py	/^    _extra_info_dict_cache = None$/;"	v	class:ModelWithCUTime
+_find_custom_custom_pages	mldash/web/custom_pages/config.py	/^def _find_custom_custom_pages(cls):$/;"	f
+_find_custom_run_methods	mldash/web/run_methods/config.py	/^def _find_custom_run_methods(cls):$/;"	f
+_kill_all	mldash/plugins/tensorboard/manager.py	/^    def _kill_all(self):$/;"	m	class:TensorboardManager
+_log_metric_dist	mldash/client/client.py	/^    def _log_metric_dist(self, key, value, desc, expr, update_func=None):$/;"	m	class:MLDashClient
+_log_metric_inner	mldash/client/client.py	/^    def _log_metric_inner(self, key, value, target, update_func=None):$/;"	m	class:MLDashClient
+_refresh	mldash/client/client.py	/^    def _refresh(self):$/;"	m	class:MLDashClient
+_tables	mldash/orm/database.py	/^_tables = list()$/;"	v
+allow_custom_ui_method	mldash/web/ui_methods/config.py	/^def allow_custom_ui_method(func):$/;"	f
+args	examples/demo/demo.py	/^args = parser.parse_args()$/;"	v
+args	mldash/orm/experiment.py	/^    args = peewee.TextField()$/;"	v	class:Run
+args	scripts/web-server.py	/^args = parser.parse_args()$/;"	v
+check_empty_record	mldash/plugins/trashbin/manager.py	/^def check_empty_record(model, key, name):$/;"	f
+command	mldash/orm/experiment.py	/^    command = peewee.TextField()$/;"	v	class:Run
+configs	examples/demo/demo.py	/^configs = dict($/;"	v
+configs	mldash/orm/experiment.py	/^    configs = peewee.TextField()$/;"	v	class:Run
+create_time	mldash/orm/experiment.py	/^    create_time = peewee.DateTimeField("%Y-%m-%d %H:%M:%S", default=datetime.now)$/;"	v	class:ModelWithCUTime
+ctx	mldash/web/_static/js/dashboard.js	/^    var ctx = document.getElementById("metric-plot");$/;"	v
+data.datasets	mldash/web/_static/js/dashboard.js	/^        datasets: [{$/;"	p
+data.labels	mldash/web/_static/js/dashboard.js	/^        labels: xaxis,$/;"	p
+deleteDescs	mldash/web/_static/js/dashboard.js	/^function deleteDescs(elem) {$/;"	f
+deleteExperiments	mldash/web/_static/js/dashboard.js	/^function deleteExperiments(elem) {$/;"	f
+deleteRuns	mldash/web/_static/js/dashboard.js	/^function deleteRuns(elem) {$/;"	f
+desc	mldash/orm/experiment.py	/^    desc = peewee.ForeignKeyField(Desc, backref='exprs')$/;"	v	class:Experiment
+desc_description	mldash/orm/experiment.py	/^    desc_description = peewee.TextField(default='')$/;"	v	class:Desc
+desc_name	mldash/orm/experiment.py	/^    desc_name = peewee.CharField(unique=True)$/;"	v	class:Desc
+desc_notes	mldash/orm/experiment.py	/^    desc_notes = peewee.TextField(default='')$/;"	v	class:Desc
+enablePreURL	mldash/web/_static/js/dashboard.js	/^function enablePreURL(elem) {$/;"	f
+escape_desc_name	mldash/web/ui_methods/ui_methods.py	/^def escape_desc_name(handler, x):$/;"	f
+escape_tensorboard_name	mldash/plugins/tensorboard/manager.py	/^def escape_tensorboard_name(key):$/;"	f
+expr	mldash/orm/experiment.py	/^    expr = peewee.ForeignKeyField(Experiment, backref='runs')$/;"	v	class:Run
+expr_description	mldash/orm/experiment.py	/^    expr_description = peewee.TextField(default='')$/;"	v	class:Experiment
+expr_name	mldash/orm/experiment.py	/^    expr_name = peewee.CharField()$/;"	v	class:Experiment
+expr_notes	mldash/orm/experiment.py	/^    expr_notes = peewee.TextField(default='')$/;"	v	class:Experiment
+extra_info	mldash/orm/experiment.py	/^    extra_info = peewee.TextField(null=True)$/;"	v	class:ModelWithCUTime
+extra_info_dict	mldash/client/client.py	/^    def extra_info_dict(self):$/;"	m	class:MLDashClient
+extra_info_dict	mldash/orm/experiment.py	/^    def extra_info_dict(self):$/;"	m	class:ModelWithCUTime
+finUpdateText	mldash/web/_static/js/dashboard.js	/^function finUpdateText(elem) {$/;"	f
+find_port	mldash/plugins/tensorboard/manager.py	/^def find_port(start=8081, max_tries=40):$/;"	f
+format_extra_items	examples/demo/jacmldash.py	/^    def format_extra_items(self, handler, run):$/;"	m	class:UIMethods
+format_extra_items	mldash/web/ui_methods/ui_methods.py	/^def format_extra_items(handler, run):$/;"	f
+format_extra_summary_items	mldash/web/ui_methods/ui_methods.py	/^def format_extra_summary_items(handler, run):$/;"	f
+format_fpath	mldash/web/ui_methods/ui_methods.py	/^def format_fpath(handler, path):$/;"	f
+format_kv	mldash/web/ui_methods/ui_methods.py	/^def format_kv(handler, kvs):$/;"	f
+format_kv_inline	mldash/web/ui_methods/ui_methods.py	/^def format_kv_inline(handler, kvs, html=True):$/;"	f
+format_kv_inline_tb	mldash/web/ui_methods/ui_methods.py	/^def format_kv_inline_tb(handler, kvs):$/;"	f
+format_kv_recursive	mldash/web/ui_methods/ui_methods.py	/^def format_kv_recursive(handler, kvs):$/;"	f
+format_kv_recursive_flat	mldash/web/ui_methods/ui_methods.py	/^def format_kv_recursive_flat(handler, kvs):$/;"	f
+format_log_fpath	mldash/web/ui_methods/ui_methods.py	/^def format_log_fpath(handler, path):$/;"	f
+format_tb_link	mldash/web/ui_methods/ui_methods.py	/^def format_tb_link(handler, port):$/;"	f
+format_viewer_link	mldash/web/ui_methods/ui_methods.py	/^def format_viewer_link(handler, s):$/;"	f
+get	mldash/plugins/star/handler.py	/^    def get(self):$/;"	m	class:StarHandler
+get	mldash/plugins/star/handler.py	/^    def get(self):$/;"	m	class:UnstarHandler
+get	mldash/plugins/tensorboard/handler.py	/^    def get(self):$/;"	m	class:TensorboardHandler
+get	mldash/plugins/trashbin/handler.py	/^    def get(self):$/;"	m	class:TrashbinDeleteHandler
+get	mldash/web/app/experiment.py	/^        def get():$/;"	f	function:UpdateTextHandler.get
+get	mldash/web/app/experiment.py	/^    def get(self):$/;"	m	class:CustomPageHandler
+get	mldash/web/app/experiment.py	/^    def get(self):$/;"	m	class:DescHandler
+get	mldash/web/app/experiment.py	/^    def get(self):$/;"	m	class:ExprHandler
+get	mldash/web/app/experiment.py	/^    def get(self):$/;"	m	class:RunHandler
+get	mldash/web/app/experiment.py	/^    def get(self):$/;"	m	class:UpdateTextHandler
+get	mldash/web/app/index.py	/^    def get(self):$/;"	m	class:APISearchListHandler
+get	mldash/web/app/index.py	/^    def get(self):$/;"	m	class:IndexHandler
+get_all	mldash/orm/project.py	/^    def get_all(cls):$/;"	m	class:ProjectMetainfo
+get_content_type	mldash/plugins/viewer/handler.py	/^    def get_content_type(self) -> str:$/;"	m	class:FileViewerHandler
+get_custom_pages	mldash/web/custom_pages/config.py	/^def get_custom_pages():$/;"	f
+get_custom_ui_method	mldash/web/ui_methods/config.py	/^def get_custom_ui_method(name):$/;"	f
+get_database	mldash/orm/database.py	/^def get_database():$/;"	f
+get_default_value_in_parser	mldash/client/client.py	/^def get_default_value_in_parser(parser, key):$/;"	f
+get_highlight_args	mldash/client/client.py	/^def get_highlight_args(args, parser):$/;"	f
+get_highlight_configs	mldash/client/client.py	/^def get_highlight_configs(args):$/;"	f
+get_highlight_configs_raw	mldash/client/client.py	/^def get_highlight_configs_raw(args):$/;"	f
+get_latest_version	mldash/orm/database.py	/^def get_latest_version():$/;"	f
+get_run_methods	mldash/web/run_methods/config.py	/^def get_run_methods():$/;"	f
+get_running_tensorboards	mldash/plugins/tensorboard/manager.py	/^    def get_running_tensorboards(self, desc_name=None, expr_name=None):$/;"	m	class:TensorboardManager
+get_search_list	mldash/web/app/index.py	/^    def get_search_list(self):$/;"	m	class:APISearchListHandler
+get_static_path	mldash/web/path.py	/^def get_static_path():$/;"	f
+get_template_path	mldash/web/path.py	/^def get_template_path():$/;"	f
+get_ui_methods	mldash/web/ui_methods/config.py	/^def get_ui_methods():$/;"	f
+git_recent_logs	mldash/web/ui_methods/ui_methods.py	/^def git_recent_logs(handler, rh):$/;"	f
+git_remote_url	mldash/web/ui_methods/ui_methods.py	/^def git_remote_url(handler):$/;"	f
+group_descs	mldash/web/app/index.py	/^    def group_descs(self, descs):$/;"	m	class:IndexHandler
+highlight_args	mldash/orm/experiment.py	/^    highlight_args = peewee.TextField()$/;"	v	class:Run
+highlight_configs	mldash/orm/experiment.py	/^    highlight_configs = peewee.TextField()$/;"	v	class:Run
+indexes	mldash/orm/experiment.py	/^        indexes = [(('desc', 'expr_name'), True)]$/;"	v	class:Experiment.Meta
+indexes	mldash/orm/experiment.py	/^        indexes = [(('expr', 'run_name'), True)]$/;"	v	class:Run.Meta
+init	mldash/client/client.py	/^    def init(self, desc_name, expr_name, run_name, args=None, highlight_args=None, configs=None):$/;"	m	class:MLDashClient
+init_database	mldash/orm/database.py	/^def init_database(root):$/;"	f
+init_project	mldash/orm/project.py	/^def init_project():$/;"	f
+initialize	mldash/plugins/viewer/handler.py	/^    def initialize(self, path=None, default_filename='index.html'):$/;"	m	class:FileViewerHandler
+is_deleted	mldash/web/ui_methods/ui_methods.py	/^def is_deleted(handler, run):$/;"	f
+is_master	mldash/orm/experiment.py	/^    is_master = peewee.BooleanField(default=True)$/;"	v	class:Run
+is_stared	mldash/plugins/star/manager.py	/^def is_stared(run):$/;"	f
+is_stared	mldash/web/ui_methods/ui_methods.py	/^def is_stared(handler, run):$/;"	f
+is_trash	mldash/plugins/trashbin/manager.py	/^def is_trash(run):$/;"	f
+key	mldash/orm/project.py	/^    key = peewee.CharField(unique=True)$/;"	v	class:ProjectMetainfo
+loadHash	mldash/web/_static/js/dashboard.js	/^function loadHash() {$/;"	f
+loadMetric	mldash/web/_static/js/dashboard.js	/^function loadMetric(key) {$/;"	f
+loadPage	mldash/web/_static/js/dashboard.js	/^function loadPage(elem) {$/;"	f
+loadPageWithURI	mldash/web/_static/js/dashboard.js	/^function loadPageWithURI(anchor) {$/;"	f
+loadPageWithURI.updateMain	mldash/web/_static/js/dashboard.js	/^    function updateMain(data) {$/;"	f
+load_retry	mldash/client/client.py	/^def load_retry(cls, default, max_retries=5, wait=(10, 200)):$/;"	f
+log_file	mldash/orm/experiment.py	/^    log_file = peewee.TextField(null=True)$/;"	v	class:Run
+log_metric	mldash/client/client.py	/^    def log_metric(self, key, value, desc=True, expr=True):$/;"	m	class:MLDashClient
+log_metric_max	mldash/client/client.py	/^    def log_metric_max(self, key, value, desc=True, expr=True):$/;"	m	class:MLDashClient
+log_metric_min	mldash/client/client.py	/^    def log_metric_min(self, key, value, desc=True, expr=True):$/;"	m	class:MLDashClient
+logger	mldash/client/client.py	/^logger = jacinle.get_logger(__file__)$/;"	v
+logger	mldash/orm/database.py	/^logger = jacinle.get_logger(__file__)$/;"	v
+logger	mldash/plugins/tensorboard/manager.py	/^logger = get_logger(__file__)$/;"	v
+logger	scripts/web-server.py	/^logger = get_logger(__file__)$/;"	v
+main	examples/database/main.py	/^def main():$/;"	f
+main	examples/demo/demo.py	/^def main():$/;"	f
+main	scripts/web-server.py	/^def main():$/;"	f
+mark_as_stared	mldash/plugins/star/manager.py	/^def mark_as_stared(run, value=True):$/;"	f
+mark_as_stared_by_spec	mldash/plugins/star/manager.py	/^def mark_as_stared_by_spec(specs, value=True):$/;"	f
+mark_as_trash	mldash/plugins/trashbin/manager.py	/^def mark_as_trash(run):$/;"	f
+mark_as_trash_by_spec	mldash/plugins/trashbin/manager.py	/^def mark_as_trash_by_spec(specs):$/;"	f
+metainfo_file	mldash/orm/experiment.py	/^    metainfo_file = peewee.TextField(null=True)$/;"	v	class:Run
+meter_file	mldash/orm/experiment.py	/^    meter_file = peewee.TextField(null=True)$/;"	v	class:Run
+metrics	mldash/orm/experiment.py	/^    metrics = peewee.TextField(null=True)$/;"	v	class:Desc
+metrics	mldash/orm/experiment.py	/^    metrics = peewee.TextField(null=True)$/;"	v	class:Experiment
+metrics	mldash/orm/experiment.py	/^    metrics = peewee.TextField(null=True)$/;"	v	class:Run
+migrate_1_1	mldash/orm/database.py	/^def migrate_1_1(db):$/;"	f
+migrate_database	mldash/orm/database.py	/^def migrate_database(db, path):$/;"	f
+mldash	examples/demo/demo.py	/^mldash = MLDashClient('.\/dumps')$/;"	v
+parser	examples/demo/demo.py	/^parser = argparse.ArgumentParser()$/;"	v
+parser	scripts/web-server.py	/^parser = JacArgumentParser()$/;"	v
+refer	mldash/orm/experiment.py	/^    refer = peewee.ForeignKeyField('self', null=True, backref='referee')$/;"	v	class:Run
+register_custom_pages	mldash/web/custom_pages/config.py	/^def register_custom_pages(cls):$/;"	f
+register_model	mldash/orm/database.py	/^def register_model(cls):$/;"	f
+register_run_methods	mldash/web/run_methods/config.py	/^def register_run_methods(cls):$/;"	f
+register_ui_methods	mldash/web/ui_methods/config.py	/^def register_ui_methods(cls):$/;"	f
+runCustomizedCommand	mldash/web/_static/js/dashboard.js	/^function runCustomizedCommand(elem) {$/;"	f
+runTensorboard	mldash/web/_static/js/dashboard.js	/^function runTensorboard(elem) {$/;"	f
+run_description	mldash/orm/experiment.py	/^    run_description = peewee.TextField(default='')$/;"	v	class:Run
+run_name	mldash/orm/experiment.py	/^    run_name = peewee.CharField(index=True)$/;"	v	class:Run
+run_notes	mldash/orm/experiment.py	/^    run_notes = peewee.TextField(default='')$/;"	v	class:Run
+save	mldash/orm/experiment.py	/^    def save(self, *args, **kwargs):$/;"	m	class:ModelWithCUTime
+save_retry	mldash/client/client.py	/^def save_retry(model, max_retries=5, wait=(10, 200)):$/;"	f
+set_all	mldash/orm/project.py	/^    def set_all(cls, metainfo):$/;"	m	class:ProjectMetainfo
+split_group_name	mldash/web/ui_methods/ui_methods.py	/^def split_group_name(handler, desc_name):$/;"	f
+starRun	mldash/web/_static/js/dashboard.js	/^function starRun(elem) {$/;"	f
+start	mldash/plugins/tensorboard/manager.py	/^    def start(self, specs):$/;"	m	class:TensorboardManager
+tb_dir	mldash/orm/experiment.py	/^    tb_dir = peewee.TextField(null=True)$/;"	v	class:Run
+tensorboard_manager	mldash/plugins/tensorboard/manager.py	/^tensorboard_manager = TensorboardManager()$/;"	v
+termTensorboard	mldash/web/_static/js/dashboard.js	/^function termTensorboard(elem) {$/;"	f
+terminate	mldash/plugins/tensorboard/manager.py	/^    def terminate(self, index):$/;"	m	class:TensorboardManager
+ui_methods	examples/demo/jacmldash.py	/^ui_methods = UIMethods()$/;"	v
+unstarRun	mldash/web/_static/js/dashboard.js	/^function unstarRun(elem) {$/;"	f
+update	mldash/client/client.py	/^    def update(self, **kwargs):$/;"	m	class:MLDashClient
+update	mldash/orm/project.py	/^    def update(cls, key, value):$/;"	m	class:ProjectMetainfo
+updateText	mldash/web/_static/js/dashboard.js	/^function updateText(elem) {$/;"	f
+update_extra_info	mldash/client/client.py	/^    def update_extra_info(self):$/;"	m	class:MLDashClient
+update_extra_info	mldash/orm/experiment.py	/^    def update_extra_info(self):$/;"	m	class:ModelWithCUTime
+update_parent	mldash/client/client.py	/^    def update_parent(self, parent, is_master=False):$/;"	m	class:MLDashClient
+update_time	mldash/orm/experiment.py	/^    update_time = peewee.DateTimeField("%Y-%m-%d %H:%M:%S", default=datetime.now)$/;"	v	class:ModelWithCUTime
+value	mldash/orm/project.py	/^    value = peewee.TextField()$/;"	v	class:ProjectMetainfo
+wrapped	mldash/web/ui_methods/config.py	/^    def wrapped(*args, **kwargs):$/;"	f	function:allow_custom_ui_method
