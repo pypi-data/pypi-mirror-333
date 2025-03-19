@@ -1,0 +1,13 @@
+noop.cpython-313-x86_64-linux-gnu.so,sha256=Bfz0HmavKu4CbdSus7zB5JejZeJ_T6E7WwCS6_ObALk,16832
+bin/gather,sha256=eybIu8aEV-nlh8vQbHmPoIrJF7LkhAgbtWQM-bTV8WM,1015
+bin/klr,sha256=AA3JO2bJvGwD5LdNIYxgI3jHo-yhS8CtmyxvbDXIrN4,112882040
+klr/__init__.py,sha256=KjyAhga1k3acCo2sVXgG07fhSZJGIHpHnIbBlb_IncE,223
+klr/__main__.py,sha256=oD6FhKTZQDnZVX81oCdfu56AvGtTrR6DfvTtGCs0Z1g,400
+klr/kernel.py,sha256=Y4SSxMcjFctazUNlQKdnNbLId1rAwK5cQbzU4n3Ugv0,2709
+klr/parser.py,sha256=rfnqiqbBLrxip-Fo7UykYgE7zjAB6DLIEA82s2d8ZVc,6497
+nki/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+klr_lang-0.0.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+klr_lang-0.0.8.dist-info/METADATA,sha256=VVOTX0FBN4dCUF4i20vP9Nl9uWufft8U1jKM8VL8ipo,14408
+klr_lang-0.0.8.dist-info/WHEEL,sha256=G1pB0fJ31b7Qf3rE7jUZ4UqO8j1cQwJ3_qHTuwfVmM0,152
+klr_lang-0.0.8.dist-info/top_level.txt,sha256=P3H-dKEn-xEba39IFeUoDwkjWyBI3hodJlEcelK-L8U,17
+klr_lang-0.0.8.dist-info/RECORD,,
