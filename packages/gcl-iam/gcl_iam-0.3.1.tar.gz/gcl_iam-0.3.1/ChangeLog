@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.3.1
+-----
+
+* DummyGenesisCoreTestRESTClient: use new parent interface
