@@ -1,0 +1,3 @@
+[pytest11]
+lighthousellmm_plugin=lighthousellmm.pytest_plugin
+
