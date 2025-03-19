@@ -1,0 +1,8 @@
+torch
+lightning-utilities
+filelock
+numpy
+boto3
+requests
+tifffile
+s5cmd
