@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+kotok/__init__.py
+kotok/__main__.py
+kotok/data.py
+kotok/data_dl.py
+kotok/inference.py
+kotok/labels.py
+kotok/lemmatize.py
+kotok/train.py
+kotok.egg-info/PKG-INFO
+kotok.egg-info/SOURCES.txt
+kotok.egg-info/dependency_links.txt
+kotok.egg-info/requires.txt
+kotok.egg-info/top_level.txt
