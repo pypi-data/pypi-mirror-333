@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: giorgio
+Version: 0.1.1
+Summary: A lightweight micro-framework for script automation with a GUI.
+Home-page: https://github.com/officinaMusci/giorgio
+Author: Danilo Musci
+Author-email: officina@musci.ch
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: summary
