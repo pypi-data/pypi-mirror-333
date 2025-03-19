@@ -1,0 +1,3 @@
+[console_scripts]
+retro-game=src.cli:main
+
