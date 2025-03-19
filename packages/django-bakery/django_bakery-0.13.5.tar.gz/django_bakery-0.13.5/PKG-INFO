@@ -1,0 +1,57 @@
+Metadata-Version: 2.2
+Name: django-bakery
+Version: 0.13.5
+Summary: A set of helpers for baking your Django site out as flat files
+Home-page: http://www.github.com/palewire/django-bakery/
+Author: Ben Welsh
+Author-email: b@palewi.re
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: six>1.5.2
+Requires-Dist: boto3>=1.4.4
+Requires-Dist: fs>=2.0.17
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+<pre><code>                   
+                # # # # #
+              __#_#_#_#_#__
+             {_` ` ` ` ` `_}
+            _{_._._._._._._}_
+           {_  D J A N G O  _}
+          _{_._._._._._._._._}_
+         {_    B A K E R Y    _}
+     .---{_._._._._._._._._._._}---.
+    (   `"""""""""""""""""""""""`   )
+     `~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`</code></pre>
+
+A set of helpers for baking your Django site out as flat files
+
+* Documentation: [palewi.re/docs/django-bakery](https://palewi.re/docs/django-bakery/)
+* Issues: [https://github.com/datadesk/django-bakery/issues](https://github.com/datadesk/django-bakery/issues)
+* Packaging: [https://pypi.python.org/pypi/django-bakery](https://pypi.python.org/pypi/django-bakery)
+* The dream, in Powerpoint form: [palewi.re/docs/django-bakery/_static/the-dream.pdf](https://palewi.re/docs/django-bakery/_static/the-dream.pdf)
+
+## Features
+
+* Models, views and management commands that will build your site as flat files.
+* Management commands to sync your flat files with a bucket on Amazon S3.
+* Optional integration of a Celery job queue to automatically build and publish model objects when they are saved
