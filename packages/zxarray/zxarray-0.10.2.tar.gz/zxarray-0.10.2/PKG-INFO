@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: zxarray
+Version: 0.10.2
+Summary: Interface to 'zarr' similar to 'xarray'
+Home-page: https://github.com/yrobink/zxarray
+Author: Yoann Robin
+Author-email: yoann.robin.k@gmail.com
+License: GNU-GPL3
+Platform: linux
+Platform: macosx
+Requires: numpy
+Requires: xarray
+Requires: zarr
+Requires: netCDF4
+Requires: cftime
+License-File: LICENSE
+
+zxarray is an interface of zarr similar to xarray.  The
+idea is to benefit from the advantages of xarray (coordinate access, parallel
+apply), while keeping memory usage low by storing data in zarr. To achieve
+this:
+
+- zxarray.ZXArray have accessors similar to those of xarray, such as '.loc',
+  '.sel', '.isel'.
+- an apply_ufunc function calling the xarray function enables parallel
+  calculation via dask.
