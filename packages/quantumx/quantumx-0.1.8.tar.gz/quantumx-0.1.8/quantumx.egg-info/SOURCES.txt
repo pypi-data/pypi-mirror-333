@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+quantumx/__init__.py
+quantumx/analyze.py
+quantumx/icon.ico
+quantumx/interpreter.py
+quantumx/post_install.py
+quantumx/quantumx_builtins.py
+quantumx.egg-info/PKG-INFO
+quantumx.egg-info/SOURCES.txt
+quantumx.egg-info/dependency_links.txt
+quantumx.egg-info/entry_points.txt
+quantumx.egg-info/requires.txt
+quantumx.egg-info/top_level.txt
