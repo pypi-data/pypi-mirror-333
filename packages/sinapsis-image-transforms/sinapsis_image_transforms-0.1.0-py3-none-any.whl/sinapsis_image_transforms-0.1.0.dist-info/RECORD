@@ -1,0 +1,7 @@
+sinapsis_image_transforms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sinapsis_image_transforms/templates/__init__.py,sha256=d8YnAxpUhEXqqOqeRr-_8ud8-jZm8V3FJB2sHMKQEQ0,699
+sinapsis_image_transforms/templates/albumentations_transforms.py,sha256=20Za18oe6fNADI1LeeC5WW3x3nry7ZbjZExrhg_CmQk,14756
+sinapsis_image_transforms-0.1.0.dist-info/METADATA,sha256=Z5T7yfJhq_a0TIzuvwDm3YgehOJLuC0jeNBkJRfXd1c,49045
+sinapsis_image_transforms-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sinapsis_image_transforms-0.1.0.dist-info/top_level.txt,sha256=2H9C_mTJTv2yiZqbi1Bcp657CiNgu138fYTuuCTkRgo,26
+sinapsis_image_transforms-0.1.0.dist-info/RECORD,,
