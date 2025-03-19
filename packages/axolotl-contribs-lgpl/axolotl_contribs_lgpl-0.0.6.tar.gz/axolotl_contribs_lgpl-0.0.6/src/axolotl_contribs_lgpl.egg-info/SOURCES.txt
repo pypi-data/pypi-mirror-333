@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/axolotl/contribs/lgpl/__init__.py
+src/axolotl/contribs/lgpl/unsloth.py
+src/axolotl_contribs_lgpl.egg-info/PKG-INFO
+src/axolotl_contribs_lgpl.egg-info/SOURCES.txt
+src/axolotl_contribs_lgpl.egg-info/dependency_links.txt
+src/axolotl_contribs_lgpl.egg-info/requires.txt
+src/axolotl_contribs_lgpl.egg-info/top_level.txt
