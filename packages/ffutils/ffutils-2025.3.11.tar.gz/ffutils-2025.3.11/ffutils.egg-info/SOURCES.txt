@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ffutils/__init__.py
+ffutils/binaries.py
+ffutils/download.py
+ffutils/execute.py
+ffutils.egg-info/PKG-INFO
+ffutils.egg-info/SOURCES.txt
+ffutils.egg-info/dependency_links.txt
+ffutils.egg-info/requires.txt
+ffutils.egg-info/top_level.txt
