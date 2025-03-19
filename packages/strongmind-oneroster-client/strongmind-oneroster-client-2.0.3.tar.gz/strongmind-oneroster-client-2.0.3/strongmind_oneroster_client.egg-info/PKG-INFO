@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: strongmind-oneroster-client
+Version: 2.0.3
+Summary: OneRoster Client
+Home-page: UNKNOWN
+Author: Team Platform
+Author-email: platform@strongmind.com
+License: UNKNOWN
+Keywords: Swagger,OneRoster OpenAPI (JSON) Definition
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+
+    The OneRoster service binding is available in WSDL/XSD and REST/JSON. The model is based upon the IMS PSM modelling approach.  # noqa: E501
+    
+
