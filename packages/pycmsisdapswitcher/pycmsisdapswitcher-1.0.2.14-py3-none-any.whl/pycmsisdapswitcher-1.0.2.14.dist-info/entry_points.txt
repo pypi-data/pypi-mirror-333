@@ -1,0 +1,2 @@
+[console_scripts]
+pycmsisdapswitcher = pycmsisdapswitcher.cli_parser:main

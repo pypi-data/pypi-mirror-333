@@ -1,0 +1,154 @@
+Metadata-Version: 2.2
+Name: pycmsisdapswitcher
+Version: 1.0.2.14
+Summary: Switches firmware on Microchip PICkit Basic and other Microchip evaluation boards
+Author-email: Microchip Technology <support@microchip.com>
+License: MIT
+Project-URL: Homepage, https://microchip.com
+Keywords: Microchip
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: docopt-ng
+Requires-Dist: pyusb
+Requires-Dist: IntelHex
+Requires-Dist: requests
+Requires-Dist: packaging
+Provides-Extra: dev
+Requires-Dist: pylint>=2.15; extra == "dev"
+Provides-Extra: test
+Requires-Dist: mock; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Provides-Extra: doc
+Requires-Dist: mock; extra == "doc"
+Requires-Dist: sphinx; extra == "doc"
+
+# pycmsisdapswitcher
+pycmsisdapswitcher switches firmware on various Microchip&reg; tools
+
+## Introduction 
+pycmsisdapswitcher is a command line Python utility to switch the firmware on a PICkit&trade;  Basic tool or on evaluation board/kit between the Microchip implementation and the Arm&reg; CMSIS-DAP v2 implementation.
+
+## Limitations
+* Only one PICkit Basic tool or one evaluation board/kit at the time is supported.
+
+## Installation via pypi
+```bash
+pip install pycmsisdapswitcher
+```
+
+## Usage
+```bash
+pycmsisdapswitcher target --source=<firmware source> --fwtype=<firmware type> --version --help
+```
+
+**target**: either the tool name or the kit name
+
+Values currently supported:
+* pickitbasic
+* evalboard
+
+#### Optional arguments:
+**-h --help** Shows the command line help
+
+**--version** Shows the pycmsisdapswitcher version
+
+**--source** Specifies the source of the firmware (default: server)
+
+Values currently supported:
+* server: (default) latest firmware downloaded from Microchip tool packs public server
+* firmware file name with relative or absolute path
+* cache: firmware retrieved from a user directory, created and updated from server usage
+
+**--fwtype** Specifies the firmware type (default: cmsis)
+
+Values currently supported:
+* mplab: Microchip implementation
+* cmsis: Arm CMSIS-DAP v2 implementation
+
+### Usage examples
+
+Example: switches the PICkit Basic firmware to the latest CMSIS-DAP v2 implementation using the Microchip server
+```bash
+pycmsisdapswitcher pickitbasic
+```
+
+Example: switches the PICkit Basic firmware to the one in pickit_basic_app.hex file
+```bash
+pycmsisdapswitcher pickitbasic --source=pickit_basic_app.hex
+```
+
+Example switches the PICkit Basic firmware to the Microchip implementation available in the cache:
+```bash
+pycmsisdapswitcher pickitbasic --source=cache --fwtype=mplab
+```
+
+### Note for Linux® users
+
+USB devices need udev rules to be added to a .rules file in /etc/udev/rules.d  
+Example, file pycmsisdapswitcher.rules content: 
+
+```h
+# PICkit Basic (bootloader)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="9057", MODE="0666"
+# PICkit Basic (app,  vendor)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="9054", MODE="0666"
+# PICkit Basic (app,  vendor + CDC)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="9055", MODE="0666"
+# PICkit Basic (app,  vendor + CDC + vendor)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="9056", MODE="0666"
+# PICkit Basic (cmsis2, vendor)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="90ab", MODE="0666"
+# PICkit Basic (cmsis2,  vendor + CDC)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="90ac", MODE="0666"
+# PICkit Basic (cmsis2,  vendor + CDC + DGI)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="90ad", MODE="0666"
+# PICkit Basic (cmsis2,  vendor + CDC + DGI + MSD)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="90ae", MODE="0666"
+
+# Eval board (bootloader)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="810a", MODE="0666"
+# Eval board (app)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="8109", MODE="0666"
+# Eval board (app, vendor + CDC)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="810b", MODE="0666"
+# Eval board (app, vendor + MSD)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="810c", MODE="0666"
+# Eval board (app, vendor + CDC + DGI)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="810d", MODE="0666"
+# Eval board (cmsis2, vendor)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="904a", MODE="0666"
+# Eval board (cmsis2, vendor + CDC)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="904b", MODE="0666"
+# Eval board (cmsis2, vendor + CDC + DGI)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="904c", MODE="0666"
+# Eval board (cmsis2, vendor + CDC + DGI + MSD)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="904d", MODE="0666"  
+```
+### Note for Windows® users  
+
+If the output shows an error message such as  
+```The device has no langid (permission issue, no string descriptors supported or device error)```
+please double check in the Device Manager that the target (PICKit Basic or evaluation board) has been bound to WinUSB&trade;
+If it hasn't, you can manually bind the target to WinUSB by using either
+* [Zadig](https://zadig.akeo.ie/), or
+* [Microchip USB installer](https://shelf.download.microchip.com/shelf/38d86b7d2dda2fdc5b46d00a4ee962c9c7c405925a4eef0ee181e6547348dc6e/MPLABCOMM-v6.25-installers.zip)
+
+# Changelog
+
+
+## [1.0] - March 2025
+
+### Initial release
