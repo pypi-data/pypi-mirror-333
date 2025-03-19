@@ -1,0 +1,2 @@
+[console_scripts]
+head_of_apache = head_of_apache.main:main

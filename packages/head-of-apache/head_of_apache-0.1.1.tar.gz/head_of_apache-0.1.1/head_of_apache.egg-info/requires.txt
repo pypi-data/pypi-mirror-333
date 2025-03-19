@@ -1,0 +1,6 @@
+
+[dev]
+build
+pytest
+pytest-cov
+pre-commit
