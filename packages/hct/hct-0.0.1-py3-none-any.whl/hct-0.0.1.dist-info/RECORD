@@ -1,0 +1,11 @@
+hct/__init__.py,sha256=VNBQhr_9HXrbOO4VmaPQi8Z1r9v3HxkgEpQ-EU4gBno,237
+hct/cooling_system.py,sha256=t4LnbnJpVWjPKhResI3qrWhLPwhi3ILPrqHeT4JpCfU,17143
+hct/fan_data.py,sha256=y_x6OZQdvc2yfk9D2dbySM-bZXATUN7ATAuq9M2rKFc,6686
+hct/generalplotsettings.py,sha256=QBsVkvyxiowlfxfl3pbJkMxgG_YtR0vDp9SX9mRs3fE,1568
+hct/heat_spreading.py,sha256=PudrFIHR1myc6RCLTwVOEe7zebHDJAzgn8otPCa4pFY,5182
+hct/hydrodynamic.py,sha256=sUofbO3PsgntS7HH1o_hNdc8pCtjHXfCMD6ZTMx2cF4,14366
+hct/optimization.py,sha256=yker2M1QPoU-eajXh-dc8fLfynY68DQMocRJUSv0KW8,11307
+hct/thermal_dataclasses.py,sha256=V_IRVBKvSRqirWLa-IULSH7NhDTlAC7aHe8JGOrDK_U,1792
+hct-0.0.1.dist-info/METADATA,sha256=k7fWDn5H2xVaDdbA6sjKZdS-AewqdlFg-m8VNZRPaKQ,2408
+hct-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hct-0.0.1.dist-info/RECORD,,
