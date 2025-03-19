@@ -1,0 +1,6 @@
+pandas
+requests
+XlsxWriter
+tqdm
+inquirer
+python-pptx==0.6.21
