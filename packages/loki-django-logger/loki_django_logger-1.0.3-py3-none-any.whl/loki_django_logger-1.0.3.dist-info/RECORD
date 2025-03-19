@@ -1,0 +1,8 @@
+loki_django_logger/__init__.py,sha256=PEqX-8AmeqDruxUB_5YvHUnpO0jV4QD6FtCnchZuNNc,177
+loki_django_logger/logger.py,sha256=cUCaEbBJMmeaLU6Eru-C0mQvr6bucOn9EAi3g3cAMhA,1449
+loki_django_logger/middleware.py,sha256=Q0LA3qVDS-2YK-U4H004-wOHY2Tx1An6QhfJfnU0w4k,2075
+loki_django_logger-1.0.3.dist-info/LICENSE,sha256=BM3s7uG12IifyOyKhWRvXQ-uh9-aKFkSRZMZFPfkAP8,1065
+loki_django_logger-1.0.3.dist-info/METADATA,sha256=u2RjexU4xiNjsQuaXxrS2Vzqv_pdArP0j2RKmLNUZ8k,3586
+loki_django_logger-1.0.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+loki_django_logger-1.0.3.dist-info/top_level.txt,sha256=sc9cUClsdJa_Fm1ksefu7yRHXKy1NeYa84cbW9fqDrM,19
+loki_django_logger-1.0.3.dist-info/RECORD,,
