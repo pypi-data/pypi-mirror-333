@@ -1,0 +1,6 @@
+google-cloud-bigquery==3.30.0
+singer-python==5.12.2
+
+[dev]
+pylint
+ipdb
