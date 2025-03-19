@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: pynpc
+Version: 0.4.0
+Summary: Generate simple NPCs for table top role playing games
+Home-page: https://github.com/kierun/pynpc
+License: MIT
+Keywords: ttrpg,rpg,generate,NPC
+Author: Dr Yann Golanski
+Author-email: github@kierun.org
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: click-help-colors (>=0.9.4,<0.10.0)
+Requires-Dist: mimesis (>=14.0.0,<15.0.0)
+Requires-Dist: orjson (>=3.10.15,<4.0.0)
+Requires-Dist: pendulum (>=3.0.0,<4.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: structlog (>=23.3,<25.0)
+Requires-Dist: typer-config[all] (>=1.4.2,<2.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Requires-Dist: types-requests (>=2.32.0.20250306,<3.0.0.0)
+Requires-Dist: unidecode (>=1.3.8,<2.0.0)
+Project-URL: Repository, https://github.com/kierun/pynpc
+Description-Content-Type: text/markdown
+
+# pynpc
+
+[![PyPi status](https://img.shields.io/pypi/status/pynpc)](https://img.shields.io/pypi/status/pynpc)
+[![PyPi version](https://img.shields.io/pypi/v/pynpc)](https://img.shields.io/pypi/v/pynpc)
+[![PyPi python versions](https://img.shields.io/pypi/pyversions/pynpc)](https://img.shields.io/pypi/pyversions/pynpc)
+[![PyPi downloads](https://img.shields.io/pypi/dm/pynpc)](https://img.shields.io/pypi/dm/pynpc)
+
+[![Release](https://img.shields.io/github/v/release/kierun/pynpc)](https://img.shields.io/github/v/release/kierun/pynpc)
+[![Build status](https://img.shields.io/github/actions/workflow/status/kierun/pynpc/codeql.yml?branch=main)](https://img.shields.io/github/actions/workflow/status/kierun/pynpc/codeql.yml?branch=main)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/kierun/pynpc)](https://img.shields.io/github/commit-activity/m/kierun/pynpc)
+[![Code style with black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports with isort](https://img.shields.io/badge/%20imports-isort-%231674b1)](https://pycqa.github.io/isort/)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+
+---
+
+![A nice d20 icon](docs/assets/d20-icon.png "d20 icon")
+
+## Documentation
+
+- [Installation](docs/installation.md)
+- [Usage](docs/usage.md)
+- [Development](docs/development.md)
+
+---
+
+## What is this?
+
+A simple NPC generator for all your table top role playing games.
+
+## Thanks
+
+- [Tarot card data taken from E Kelen](https://github.com/ekelen/tarot-api).
+
