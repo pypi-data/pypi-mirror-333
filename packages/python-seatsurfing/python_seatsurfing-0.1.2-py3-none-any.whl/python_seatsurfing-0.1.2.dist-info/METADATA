@@ -1,0 +1,45 @@
+Metadata-Version: 2.2
+Name: python-seatsurfing
+Version: 0.1.2
+Summary: Python client to interface with Seatsurfing
+Author: Zoltán Fraknói
+Project-URL: Homepage, https://github.com/Vogete/python-seatsurfing
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# python-seatsurfing
+
+A Python client and library to interact with the Seatsurfing API.
+
+> [!IMPORTANT]
+> The library is a work in progress, not all functionality is available yet, or finalized.
+
+## Installation
+
+TBD
+
+## Usage
+
+Basic usage:
+
+```py
+from datetime import datetime
+import seatsurfing
+
+# Create client by authenticating with username/password
+client = seatsurfing.Client(
+    base_url="https://seatsurfing.example.com",
+    username="admin@seatsurfing.local",
+    password="12345678",
+)
+
+# Get bookings for the next 30 days
+from_date = datetime.today()
+to_date = datetime.today() + timedelta(days=30)
+bookings = client.booking.get_filtered_org_bookings(from_date, to_date)
+
+print(bookings)
+```
