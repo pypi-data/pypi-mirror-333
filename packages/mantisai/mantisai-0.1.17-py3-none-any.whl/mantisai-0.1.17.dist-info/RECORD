@@ -1,0 +1,12 @@
+mantis/__init__.py,sha256=jNpDf4y-RU3CXuZZs5DrdrT-5pR7eGmVY-A_naf-9gg,2955
+mantis/cli.py,sha256=K3UZ9mVDjia6K8W5AaN-LBwdrrAnaVopZRWAONTc4jw,7847
+mantis/extract.py,sha256=ljkj4_0o8XBt4VNxSVjlmYPhm2HJ59JoyXyZAblwD_c,3549
+mantis/models.py,sha256=zFFZRwGQ23vUCM3xmWrLGJ6N7w7I5F-peUu2h8K00ss,4892
+mantis/summarize.py,sha256=tzhb1CilL-f9xQeSt9JO6JUVhqFBINIqgFG7bR9bc_U,4236
+mantis/transcription.py,sha256=a2ZtOT-rIZwlSu2dibiNRnXP8bS36o2_Qx09Mfc4sRs,3498
+mantis/utils.py,sha256=IA_u_0agPtA0eZbnwTyX8UmZ6jzzffy7KIP5v5zfnNc,12617
+mantisai-0.1.17.dist-info/METADATA,sha256=vtxsolgMqS4fTDfGuaWLOiC5LWHL-PYIpEGOzalbWk0,5638
+mantisai-0.1.17.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mantisai-0.1.17.dist-info/entry_points.txt,sha256=eLPq6RGkY6QHBofA7IuEXtFbTobzF0xYthyOiyuwY_Y,43
+mantisai-0.1.17.dist-info/licenses/LICENSE,sha256=ye8l0P06pyO3SIm4tDXhvv-JgpH78dT8fZ_utzKwyOs,8037
+mantisai-0.1.17.dist-info/RECORD,,
