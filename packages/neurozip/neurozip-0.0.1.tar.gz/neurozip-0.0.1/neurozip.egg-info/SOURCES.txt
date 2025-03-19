@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+neurozip/__init__.py
+neurozip.egg-info/PKG-INFO
+neurozip.egg-info/SOURCES.txt
+neurozip.egg-info/dependency_links.txt
+neurozip.egg-info/requires.txt
+neurozip.egg-info/top_level.txt
