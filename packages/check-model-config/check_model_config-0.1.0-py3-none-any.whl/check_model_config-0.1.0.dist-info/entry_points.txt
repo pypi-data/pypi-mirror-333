@@ -1,0 +1,2 @@
+[console_scripts]
+check-model-config = check_model_config.cli:main
