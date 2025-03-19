@@ -1,0 +1,2 @@
+[console_scripts]
+webchesscam = pcwawc.webchesscam:main
