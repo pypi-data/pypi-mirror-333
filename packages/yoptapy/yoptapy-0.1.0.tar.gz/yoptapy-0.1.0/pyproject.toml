@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "yoptapy"
+version = "0.1.0"
+authors = [
+  { name = "Dickson", email = "hhatedme@gmail.com" },
+]
+description = "Йоптапай, инструмент для реальных пацанов"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = []
+license = "MIT"
+keywords = ["python", "gopnik", "translator"]
