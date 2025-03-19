@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Home</title>
+    {{ page.head_imports|safe }}
+  </head>
+  <body>
+    {{ page.pre_body_imports|safe }}
+    {% block body %}
+    {% endblock body %}
+    {{ page.post_body_imports|safe }}
+  </body>
+</html>
