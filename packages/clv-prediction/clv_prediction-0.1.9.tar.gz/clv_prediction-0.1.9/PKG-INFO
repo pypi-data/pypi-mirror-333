@@ -1,0 +1,80 @@
+Metadata-Version: 2.3
+Name: clv-prediction
+Version: 0.1.9
+Summary: 
+Author: caglanakpinar
+Author-email: cakpinar23@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: dash (>=2.18.2,<3.0.0)
+Requires-Dist: google (>=3.0.0,<4.0.0)
+Requires-Dist: keras-tuner (>=1.4.7,<2.0.0)
+Requires-Dist: mkdocs-material (>=9.6.7,<10.0.0)
+Requires-Dist: mkdocs-material-extensions (>=1.3.1,<2.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: plotly (>=6.0.0,<7.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.10,<3.0.0)
+Requires-Dist: pyarrow (>=19.0.1,<20.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: schedule (>=1.2.2,<2.0.0)
+Requires-Dist: scipy (>=1.15.2,<2.0.0)
+Requires-Dist: statsmodels (>=0.14.4,<0.15.0)
+Requires-Dist: tensorflow (>=2.18.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Customer Lifetime Value Prediction
+
+---------------------------
+
+[![PyPI version](https://badge.fury.io/py/clv-prediction.svg)](https://badge.fury.io/py/clv-prediction)
+[![GitHub license](https://img.shields.io/github/license/caglanakpinar/clv_prediction)](https://github.com/caglanakpinar/clv_prediction/blob/master/LICENSE)
+
+----------------------------
+
+[CLV Prediction Documents](https://caglanakpinar.github.io/clv_prediciton/)
+
+
+
+This framework we generate 2 main predictive model per customer. 
+First, Next Purchase (Frequency) Model will be trained. 
+This model will help us to predict the day of nex purchases per customer
+Second, Customer Value Model will be trained. 
+THis model will help us to predict what will be the amount of next purchases per customer.
+There will be customers can not be predicted by those models above because of lack historical informations. 
+Those customers are NewComers.
+This platform allows us to predict NewComers' total lifetime values as well.
+
+## Installation
+
+Tool can be used any other package by install it via pypi or git command
+
+```bash
+poetry add clv_prediction
+```
+OR
+
+```bash
+poetry add git+https://github.com/caglanakpinar/clv_prediction.git
+```
+
+## Project layout
+
+    clv/
+        docs/   
+            - configs.yaml
+            - test_parameters.yaml
+        confgis.py
+        dashboard.py
+        data_access.py
+        executor.py
+        functions.py
+        main.py
+        newcomers.py
+        next_purchase_model.py
+        next_purchase_prediction.py
+        purchase_amount_model.py
+        utils.py
+
