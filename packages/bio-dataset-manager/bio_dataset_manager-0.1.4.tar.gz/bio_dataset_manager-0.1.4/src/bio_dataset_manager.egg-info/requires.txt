@@ -1,0 +1,16 @@
+numpy<2.0.0,>=1.0.0
+pandas>=2.2.3
+tqdm>=4.67.1
+scipy>=1.15.2
+biopython~=1.84
+viennarna>=2.6.4
+rdkit>=2024.9.5
+torch>=2.3.1
+
+[cuda]
+torch==2.3.1+cu121
+
+[test]
+pytest>=7.3.2
+pytest-cov>=5.0.0
+pytest-mock>=3.14.0
