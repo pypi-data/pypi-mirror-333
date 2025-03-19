@@ -1,0 +1,12 @@
+yta_voice_assistant/__init__.py,sha256=XTpH3AKyD0sGn0Dha2-a1QN6F8YtFPC8iZ5f6p_oGhk,3668
+yta_voice_assistant/wit.py,sha256=rhYSDdqGaBhmLLB3xAJGrOqKo8YQ9suR8XcvnLly9bc,937
+yta_voice_assistant/audio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yta_voice_assistant/audio/narration.py,sha256=Ea-eimv7KiZ3DsnbdS1bfvB8PivSHGNI296-m_tquq8,941
+yta_voice_assistant/audio/sound.py,sha256=tp_V1dCbkyvk65Ee_WMrFBGZ4mQf4hMLftaEEcsR-VY,1508
+yta_voice_assistant/audio/speech/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yta_voice_assistant/audio/speech/detector.py,sha256=Di9yEPh76E6TJTXOIuQpPFsw1DoEoSSLCwXG1WcD63Q,2815
+yta_voice_assistant-0.0.4.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+yta_voice_assistant-0.0.4.dist-info/METADATA,sha256=_KDhlAuWn19aMUkqphZy3NYG2eh7faGlNz4VliBuPh8,675
+yta_voice_assistant-0.0.4.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+yta_voice_assistant-0.0.4.dist-info/top_level.txt,sha256=kwhqYGzvQxS3J3uEsA74OCpN_bzp6k38wGRQVXKNSuw,20
+yta_voice_assistant-0.0.4.dist-info/RECORD,,
