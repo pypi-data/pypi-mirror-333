@@ -1,0 +1,10 @@
+src/__init__.py,sha256=ugtYYds0hi1hKmfTP4s_4z-fqj5AAUoqZWvThLsqJf0,89
+src/linux_workload_execution/__init__.py,sha256=ugtYYds0hi1hKmfTP4s_4z-fqj5AAUoqZWvThLsqJf0,89
+src/linux_workload_execution/__main__.py,sha256=QKAxcHtu1WXkjq5NWYjoaoM7a4d4-u0c9YTimKiIZw8,597
+src/linux_workload_execution/activation.py,sha256=vrBOongp-Y0XQOg9y67R0IefUP2AhnhGJ-7_HLjbKTI,9641
+linux_workload_execution-0.0.8.dist-info/LICENSE,sha256=q7KJbcPCqUAvkBuI1QNc8Kg9XPfBfnNkLN9WKwudO8U,11
+linux_workload_execution-0.0.8.dist-info/METADATA,sha256=Oz8cNT-z7DPCFBmyL94XQIrCE5Y6CtK5rxrjrAFZEYs,2632
+linux_workload_execution-0.0.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+linux_workload_execution-0.0.8.dist-info/entry_points.txt,sha256=fri--6L39_oGApYCzZwZHqt_IGocHsUJiFikPSTtC9A,71
+linux_workload_execution-0.0.8.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+linux_workload_execution-0.0.8.dist-info/RECORD,,
