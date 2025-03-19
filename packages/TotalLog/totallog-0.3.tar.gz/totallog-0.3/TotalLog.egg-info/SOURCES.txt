@@ -1,0 +1,12 @@
+setup.py
+TotalLog/Decorator.py
+TotalLog/Print.py
+TotalLog/TotalLog.py
+TotalLog/__init__.py
+TotalLog/test.py
+TotalLog/utils.py
+TotalLog.egg-info/PKG-INFO
+TotalLog.egg-info/SOURCES.txt
+TotalLog.egg-info/dependency_links.txt
+TotalLog.egg-info/requires.txt
+TotalLog.egg-info/top_level.txt
