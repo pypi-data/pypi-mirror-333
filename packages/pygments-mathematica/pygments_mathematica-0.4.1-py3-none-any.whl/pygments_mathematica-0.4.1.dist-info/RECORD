@@ -1,0 +1,10 @@
+mathematica/__init__.py,sha256=m_qvD-z1xw18q8APq-PQHq7usHGWrJaAsTTQ9BTO6dw,245
+mathematica/builtins.py,sha256=gf9XHynwmSdDak7zIOo5gRNWL9UN86YYWPtlPsGFWNE,188053
+mathematica/lexer.py,sha256=TyRUYonbqd31s74PIwldoo1luc051puhrqyL3onhHiI,11928
+mathematica/style.py,sha256=I_obsgbouQxVtSYcUEDt0zDGzv7u6n2-4yx9RaTkIBM,1353
+pygments_mathematica-0.4.1.dist-info/LICENSE,sha256=H_qqlYi_xlzVbEPbaqA5z1LsJwPCyfXZnjOfiSMr-YI,1051
+pygments_mathematica-0.4.1.dist-info/METADATA,sha256=-LqsXzZzEDMicS2kjDPQlJ6wrVB_WUtv3HHwWntfCsQ,2144
+pygments_mathematica-0.4.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pygments_mathematica-0.4.1.dist-info/entry_points.txt,sha256=JBtXsgU7map_SbKJCFe7K8gVQbQdxGrLC_UzirPRXik,187
+pygments_mathematica-0.4.1.dist-info/top_level.txt,sha256=69TzuGj5559Wdlh8IiHDkJ0FSsrBbGmryxzt-nX724Y,12
+pygments_mathematica-0.4.1.dist-info/RECORD,,
