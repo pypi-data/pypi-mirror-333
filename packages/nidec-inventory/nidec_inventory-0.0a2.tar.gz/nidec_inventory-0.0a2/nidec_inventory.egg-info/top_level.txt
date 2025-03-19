@@ -1,0 +1,2 @@
+nidec-inventory
+tests
