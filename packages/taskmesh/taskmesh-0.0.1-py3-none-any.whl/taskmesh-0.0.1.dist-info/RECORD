@@ -1,0 +1,14 @@
+taskmesh/__init__.py,sha256=w2KE50WL0nqjptuSnLQ-LErnXfgNo65qTEVO7Et089k,843
+taskmesh/config.py,sha256=uxKyxPS977FvefFK6CKGQP059jFXzhcwD1R83ZYxcd8,286
+taskmesh/core.py,sha256=XVmRN3oyNzAc5i4QOzS_k-LgNE797QMP7qmPfUW9v3M,380
+taskmesh/providers/__init__.py,sha256=UOrokNq6KumGxEMvnGcUmDvn0AvEHu95yKr0OW-GOYU,143
+taskmesh/providers/core.py,sha256=0z3mY_N8whFeJ8l4FZ8fei5YWkBoCbLcaRS09z3LM8E,796
+taskmesh/providers/aws/__init__.py,sha256=PAosR51rLKld8dFdxMjx6tA_HZdMrXaPxKA70f7kvXo,61
+taskmesh/providers/aws/provider.py,sha256=pwmlR2ln7mDGtFRHWIyoOLWNLi3AROaiP4HYz_YJbGM,3306
+taskmesh/providers/gcp/__init__.py,sha256=_8_kTV6JaxldR-64rRsTXpYkf38Da-veyjToZDsd8S0,87
+taskmesh/providers/gcp/provider.py,sha256=8IB8glSuCZAJaJZ2dkOBrKP6Ul5yt8SMCSAJJhUQgP0,3665
+taskmesh-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+taskmesh-0.0.1.dist-info/METADATA,sha256=xpRbYxvANHduJ3rH3M7nygGY8ipL_8k3gEZUOQ9jdcI,3005
+taskmesh-0.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+taskmesh-0.0.1.dist-info/top_level.txt,sha256=fm67FFUjx64zj0hgWseaPMUsmch3bdfIfwo1Jqe4V4c,9
+taskmesh-0.0.1.dist-info/RECORD,,
