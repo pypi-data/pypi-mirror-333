@@ -1,0 +1,10 @@
+itk/_IOMeshMZ3Python.abi3.so,sha256=Hwwwt9SSFpKOFACMXX4ZCUhU5IvKheckqFenqzjZYOg,913337
+itk/itkMZ3MeshIOPython.py,sha256=rEqMk-ZrWEDb8UK2fmrbw7ac5SRaAjPeqrSK0lcg4f8,6814
+itk/IOMeshMZ3Python.py,sha256=6V1gGH4e-N27B2BC-QRHdGJt8ZjZGeCY5h9qP9ARiFE,2155
+itk/Configuration/IOMeshMZ3Config.py,sha256=bYZO6pB29mEwN5V6uxQNbmNEsiacNM9eP7YCanCBF6o,249
+itk/Configuration/IOMeshMZ3_snake_case.py,sha256=WRnLlen2jxLU1s5GGArPufZ1-DR4D7SdRd25VYoBFXE,26
+itk_iomeshmz3.libs/libtbb-e046f41a.so.12.9,sha256=VsCTHOeMiuITalkapwfZlLuploLjggiR7Ytz_bvBQ_M,3876241
+itk_iomeshmz3-0.1.2.dist-info/RECORD,,
+itk_iomeshmz3-0.1.2.dist-info/WHEEL,sha256=rXDul5XpFOGuTM1ynQQ9SSCl9HjrMzfOupR_lXZP3ls,118
+itk_iomeshmz3-0.1.2.dist-info/METADATA,sha256=H2MB39rS7gX1OM4Ao_RNbfgCuZ8CNudFep4uFNY35JQ,14972
+itk_iomeshmz3-0.1.2.dist-info/licenses/LICENSE,sha256=qsc7MUj20dcRHbyjIJn2jSbGRMaBOuHk8F9leaomY_4,11360
