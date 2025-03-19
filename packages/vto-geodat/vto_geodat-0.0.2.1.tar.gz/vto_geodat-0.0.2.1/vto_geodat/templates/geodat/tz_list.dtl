@@ -1,0 +1,28 @@
+{% extends 'base_site.dtl' %}
+{% block title %}TZ List{% endblock %}
+{% block content %}
+
+<table id="jsData" class="display">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Src File</th>
+        <th>Aliases</th>
+        <th>STD</th>
+        <th>DST</th>
+    </thead>
+
+<tbody>
+    {% for object in object_list %}
+        <tr>
+            <td>{{ object.identifier }}</td>
+            <td>{{ object.get_tz_type_display }}</td>
+            <td>{{ object.get_src_file_display }}</td>
+            <td>{{ object.aliases }}</td>
+            <td>{{ object.std }}</td>
+            <td>{{ object.dst }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+{% endblock %}
