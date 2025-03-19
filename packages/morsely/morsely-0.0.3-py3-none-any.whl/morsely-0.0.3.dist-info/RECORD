@@ -1,0 +1,13 @@
+morsely/__init__.py,sha256=E8BTt6gDJnPqp--GquxTrje2Bpa7TKP--e3eN1IGiY0,656
+morsely/morse_decoder.py,sha256=WpH30F-byCnCwyoY-9CHTkm9cMLdw1Z3D2OHV6pOzvk,15032
+morsely/morse_encoder.py,sha256=h9XRxNXX09yad__q2dx9xVw5YxaB1e1R__3CfDFvdKs,7997
+morsely/morse_utils.py,sha256=MMgZ9Mkk9FW3x_Q3BxhiMHwU6qsp4aeRUB8pwzQ7T80,12304
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/t_utility.py,sha256=mxCUV23J0spUCeZ6zxABnIO86wUdYiiYEQKIuPlRsCs,317
+tests/test_decoder.py,sha256=Z9hAMhLiyKaem1Eq64jDmCet7uNzl9o4FO3urH4sKqw,2220
+tests/test_encoder.py,sha256=M9gPI1xdxsJC68fUUdY3ru_lnhJ1sywcntfHf2LQHaQ,2918
+morsely-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+morsely-0.0.3.dist-info/METADATA,sha256=ICqAflUkxdp0ee3RgkcO-mj4UKXnmi3iJ7p6yoNNYB8,2347
+morsely-0.0.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+morsely-0.0.3.dist-info/top_level.txt,sha256=s6Rj5OcDpo7HRP7LM-eUqzO2sEqpHmt5dqgPI27JP3U,14
+morsely-0.0.3.dist-info/RECORD,,
