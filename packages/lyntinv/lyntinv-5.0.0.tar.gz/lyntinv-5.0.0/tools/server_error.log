@@ -1,0 +1,74 @@
+2025-03-07 11:53:09,512 - ERROR - OS error occurred
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 350, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 107, in startup
+    self._ms.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 207, in startup
+    s.bind((host, port))
+OSError: [Errno 98] Address already in use
+2025-03-07 12:06:11,488 - ERROR - OS error occurred
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 349, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 107, in startup
+    self._ms.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 207, in startup
+    s.bind((host, port))
+OSError: [Errno 98] Address already in use
+2025-03-07 12:06:35,306 - ERROR - OS error occurred
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 349, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 107, in startup
+    self._ms.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 207, in startup
+    s.bind((host, port))
+OSError: [Errno 98] Address already in use
+2025-03-07 12:21:25,767 - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 350, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 107, in startup
+    self._ms.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 207, in startup
+    s.setsockopt(socket.SQL_SOCKET, socket.SO_REUSEADDR, 1)
+AttributeError: module 'socket' has no attribute 'SQL_SOCKET'
+2025-03-07 12:22:55,414 - ERROR - OS error occurred
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 350, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 107, in startup
+    self._ms.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 208, in startup
+    s.bind((host, port))
+OSError: [Errno 98] Address already in use
+2025-03-07 12:23:05,279 - ERROR - OS error occurred
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 350, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 107, in startup
+    self._ms.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 208, in startup
+    s.bind((host, port))
+OSError: [Errno 98] Address already in use
+2025-03-07 12:23:40,717 - ERROR - OS error occurred
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 350, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 107, in startup
+    self._ms.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 208, in startup
+    s.bind((host, port))
+OSError: [Errno 98] Address already in use
+2025-03-07 12:49:13,109 - ERROR - Unhandled exception
+Traceback (most recent call last):
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 350, in <module>
+    testserver.my_world.startup()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 120, in startup
+    self._ms.networkLoop()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/testserver.py", line 260, in networkLoop
+    conn.killConn()
+  File "/home/wasabi/PycharmProjects/portlyntintopython3/tools/connection.py", line 49, in killConn
+    self._world._ms.close()
+AttributeError: 'MasterServer' object has no attribute 'close'
