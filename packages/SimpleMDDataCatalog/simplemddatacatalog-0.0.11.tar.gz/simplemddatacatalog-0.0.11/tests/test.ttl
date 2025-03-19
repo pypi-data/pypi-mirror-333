@@ -1,0 +1,551 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.test.com#ghqwerhubst> a dcat:Catalog ;
+    dcterms:description "This data catalog contains the metadata of all relevant datasets produced durng the AI-EFFECT Horizon Europe project" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by-sa 4.0" ] ;
+    dcterms:title "AI-EFFECT Data Catalog" ;
+    dcat:resource <https://www.test.com#afjhfsdfb>,
+        <https://www.test.com#cewjlkmbnqerw>,
+        <https://www.test.com#dhsbfgf>,
+        <https://www.test.com#gsdgserg>,
+        <https://www.test.com#gsfjjbvgvfc>,
+        <https://www.test.com#hlrlhka>,
+        <https://www.test.com#hshstjngarejbkl>,
+        <https://www.test.com#iqurenerq>,
+        <https://www.test.com#jnvflkbaer>,
+        <https://www.test.com#jqerlqgwe>,
+        <https://www.test.com#jrghgkjaf>,
+        <https://www.test.com#jsttusg>,
+        <https://www.test.com#kaehmadfb>,
+        <https://www.test.com#kfjhfkzcvljkb>,
+        <https://www.test.com#mbfwqhkgl>,
+        <https://www.test.com#mvfaglgkvdd>,
+        <https://www.test.com#oiuhkhbcvz>,
+        <https://www.test.com#qwercerc>,
+        <https://www.test.com#reahhsveg>,
+        <https://www.test.com#rintuituny>,
+        <https://www.test.com#sadfasdfh>,
+        <https://www.test.com#sfbugafe>,
+        <https://www.test.com#sfdcgwaef>,
+        <https://www.test.com#sfhcgafg>,
+        <https://www.test.com#strjgdfsvva>,
+        <https://www.test.com#svdculkhre>,
+        <https://www.test.com#wlkeurweqor>,
+        <https://www.test.com#zvfduharlj> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#afjhfsdfb> a dcat:Dataset ;
+    dcterms:description "Regulatory Compliance Strategy" ;
+    dcterms:identifier "afjhfsdfb" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "Regulatory Compliance Strategy for UC1" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#adskfugelbf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#cewjlkmbnqerw> a dcat:Dataset ;
+    dcterms:description "Regulatory Compliance Strategy" ;
+    dcterms:identifier "cewjlkmbnqerw" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "Regulatory Compliance Strategy  for UC3" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrfhnelcwfhwf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#dhsbfgf> a dcat:Dataset ;
+    dcterms:description "Regulatory Compliance Strategy" ;
+    dcterms:identifier "dhsbfgf" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "Regulatory Compliance Strategy for UC2" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#gfsdfgi> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#gsdgserg> a dcat:Dataset ;
+    dcterms:description "Validation data set" ;
+    dcterms:identifier "gsdgserg" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "Validation data set for UC2" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#gfsdfgi> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#gsfjjbvgvfc> a dcat:Dataset ;
+    dcterms:description "Test and Validation Procedures" ;
+    dcterms:identifier "gsfjjbvgvfc" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "Test and Validation Procedures for UC4" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrerfcwkhul> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#hlrlhka> a dcat:Dataset ;
+    dcterms:description "Training data set" ;
+    dcterms:identifier "hlrlhka" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "Training data set  for UC3" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrfhnelcwfhwf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#hshstjngarejbkl> a dcat:Dataset ;
+    dcterms:description "Training Data Collection and Processing  Procedures" ;
+    dcterms:identifier "hshstjngarejbkl" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "Training Data Collection and Processing  Procedures for UC2" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#gfsdfgi> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#iqurenerq> a dcat:Dataset ;
+    dcterms:description "Validation data set" ;
+    dcterms:identifier "iqurenerq" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "Validation data set for UC3" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrfhnelcwfhwf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#jnvflkbaer> a dcat:Dataset ;
+    dcterms:description "Prompt Response Log" ;
+    dcterms:identifier "jnvflkbaer" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "Prompt Response Log  for UC3" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrfhnelcwfhwf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#jqerlqgwe> a dcat:Dataset ;
+    dcterms:description "AI System for UC1" ;
+    dcterms:identifier "jqerlqgwe" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "AI System for UC1" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#adskfugelbf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#jrghgkjaf> a dcat:Dataset ;
+    dcterms:description "AI System for UC3" ;
+    dcterms:identifier "jrghgkjaf" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "AI System for UC3" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrfhnelcwfhwf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#jsttusg> a dcat:Dataset ;
+    dcterms:description "Prompt Response Log" ;
+    dcterms:identifier "jsttusg" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "Prompt Response Log for UC2" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#gfsdfgi> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#kaehmadfb> a dcat:Dataset ;
+    dcterms:description "Test and Validation Procedures" ;
+    dcterms:identifier "kaehmadfb" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "Test and Validation Procedures for UC2" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#gfsdfgi> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#kfjhfkzcvljkb> a dcat:Dataset ;
+    dcterms:description "Training Data Collection and Processing  Procedures" ;
+    dcterms:identifier "kfjhfkzcvljkb" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "Training Data Collection and Processing  Procedures  for UC3" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrfhnelcwfhwf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#mbfwqhkgl> a dcat:Dataset ;
+    dcterms:description "Training data set" ;
+    dcterms:identifier "mbfwqhkgl" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "Training data set  for UC4" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrerfcwkhul> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#mvfaglgkvdd> a dcat:Dataset ;
+    dcterms:description "Regulatory Compliance Strategy" ;
+    dcterms:identifier "mvfaglgkvdd" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "Regulatory Compliance Strategy for UC4" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrerfcwkhul> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#oiuhkhbcvz> a dcat:Dataset ;
+    dcterms:description "Test and Validation Procedures" ;
+    dcterms:identifier "oiuhkhbcvz" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "Test and Validation Procedures  for UC3" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrfhnelcwfhwf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#qwercerc> a dcat:Dataset ;
+    dcterms:description "AI System for UC2" ;
+    dcterms:identifier "qwercerc" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "AI System for UC2" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#gfsdfgi> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#reahhsveg> a dcat:Dataset ;
+    dcterms:description "Training data set" ;
+    dcterms:identifier "reahhsveg" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "Training data set for UC2" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#gfsdfgi> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#rintuituny> a dcat:Dataset ;
+    dcterms:description "Training Data Collection and Processing  Procedures" ;
+    dcterms:identifier "rintuituny" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "Training Data Collection and Processing  Procedures for UC1" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#adskfugelbf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#sadfasdfh> a dcat:Dataset ;
+    dcterms:description "Test and Validation Procedures" ;
+    dcterms:identifier "sadfasdfh" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "Test and Validation Procedures for UC1" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#adskfugelbf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#sfbugafe> a dcat:Dataset ;
+    dcterms:description "Prompt Response Log" ;
+    dcterms:identifier "sfbugafe" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "Prompt Response Log" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrerfcwkhul> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#sfdcgwaef> a dcat:Dataset ;
+    dcterms:description "Prompt Response Log" ;
+    dcterms:identifier "sfdcgwaef" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "Prompt Response Log for UC1" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#adskfugelbf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#sfhcgafg> a dcat:Dataset ;
+    dcterms:description "Training data set" ;
+    dcterms:identifier "sfhcgafg" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "Training data set for UC1" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#adskfugelbf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#strjgdfsvva> a dcat:Dataset ;
+    dcterms:description "Training Data Collection and Processing  Procedures" ;
+    dcterms:identifier "strjgdfsvva" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "Training Data Collection and Processing  Procedures for UC4" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrerfcwkhul> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#svdculkhre> a dcat:Dataset ;
+    dcterms:description "Validation data set" ;
+    dcterms:identifier "svdculkhre" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "Validation data set for UC4" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrerfcwkhul> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#wlkeurweqor> a dcat:Dataset ;
+    dcterms:description "Validation data set" ;
+    dcterms:identifier "wlkeurweqor" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "Validation data set" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#adskfugelbf> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#zvfduharlj> a dcat:Dataset ;
+    dcterms:description "AI System for UC4" ;
+    dcterms:identifier "zvfduharlj" ;
+    dcterms:license [ a dcterms:LicenseDocument ;
+            dcterms:title "cc-by 4.0" ] ;
+    dcterms:modified "nan"^^xsd:date ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "AI System for UC4" ;
+    adms:status "Planned" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:inSeries <https://www.test.com#qrerfcwkhul> ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#adskfugelbf> a dcat:DatasetSeries ;
+    dcterms:description "This series contains all the datasets related to the creation of AI systems for the  multi-energy and sector coupling usecase of the AI-EFFECT project." ;
+    dcterms:identifier "adskfugelbf" ;
+    dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "DTU" ] ;
+    dcterms:title "Multi Energy and Sector Coupling" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#gfsdfgi> a dcat:DatasetSeries ;
+    dcterms:description "This series contains all the datasets related to the creation of AI systems for the  transmission congestion management  usecase of the AI-EFFECT project." ;
+    dcterms:identifier "gfsdfgi" ;
+    dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "TU Delft" ] ;
+    dcterms:title "Transmission Congestion Management" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#qrerfcwkhul> a dcat:DatasetSeries ;
+    dcterms:description "This series contains all the datasets related to the creation of AI systems for the  Energy efficiency, management and sharing for local energy communities usecase of the AI-EFFECT project." ;
+    dcterms:identifier "qrerfcwkhul" ;
+    dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "INESC-TEC" ] ;
+    dcterms:title "Energy efficiency, management and sharing for local energy communities" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#qrfhnelcwfhwf> a dcat:DatasetSeries ;
+    dcterms:description "This series contains all the datasets related to the creation of AI systems for the  DER integration into Distribution Systems usecase of the AI-EFFECT project." ;
+    dcterms:identifier "qrfhnelcwfhwf" ;
+    dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Fraunhofer" ] ;
+    dcterms:title "DER integration into Distribution Systems" ;
+    dcat:contactPoint [ a vcard:Kind ;
+            vcard:hasEmail "NaN"^^xsd:double ] ;
+    dcat:theme <https://www.test.com#cqweuhtvqqet>,
+        <https://www.test.com#vqweelhnvqe> .
+
+<https://www.test.com#cqweuhtvqqet> a skos:Concept ;
+    dcterms:identifier "cqweuhtvqqet" ;
+    skos:definition "Energy" ;
+    skos:example "electricity" ;
+    skos:prefLabel "Energy" .
+
+<https://www.test.com#vqweelhnvqe> a skos:Concept ;
+    dcterms:identifier "vqweelhnvqe" ;
+    skos:definition " the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making." ;
+    skos:prefLabel "AI" .
+
