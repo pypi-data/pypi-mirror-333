@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+migmanager/__init__.py
+migmanager/monitor.py
+migmanager/run_jobs.py
+migmanager/scheduler.py
+migmanager/utils.py
+migmanager.egg-info/PKG-INFO
+migmanager.egg-info/SOURCES.txt
+migmanager.egg-info/dependency_links.txt
+migmanager.egg-info/entry_points.txt
+migmanager.egg-info/requires.txt
+migmanager.egg-info/top_level.txt
