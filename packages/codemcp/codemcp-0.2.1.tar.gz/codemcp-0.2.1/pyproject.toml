@@ -1,0 +1,67 @@
+[project]
+name = "codemcp"
+version = "0.2.1"
+description = "MCP server for file operations"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "ruff>=0.9.10",
+    "toml>=0.10.2",
+    "tomli>=2.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "expecttest>=0.1.4",
+    "ruff>=0.1.5",
+    "pyright>=1.1.350",
+    "tomli_w>=1.0.0",
+]
+
+[project.scripts]
+codemcp = "codemcp:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+# uv-specific settings can go here
+
+[tool.ruff]
+# Enable the formatter
+target-version = "py312"
+line-length = 88
+indent-width = 4
+
+[tool.ruff.format]
+# Formatter settings
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.pyright]
+# Pyright configuration with strict settings
+include = ["codemcp"]
+exclude = ["**/node_modules", "**/__pycache__", "dist"]
+venvPath = "."
+venv = ".venv"
+reportMissingImports = true
+reportMissingTypeStubs = true
+pythonVersion = "3.12"
+pythonPlatform = "All"
+typeCheckingMode = "strict"
+reportUnknownMemberType = true
+reportUnknownParameterType = true
+reportUnknownVariableType = true
+reportUnknownArgumentType = true
+reportPrivateImportUsage = true
+reportUntypedFunctionDecorator = true
+reportFunctionMemberAccess = true
+reportIncompatibleMethodOverride = true
