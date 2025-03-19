@@ -1,0 +1,12 @@
+pyqsync/__doc__.py,sha256=pUoYGFdXhxuSDTxTujPJxZ9I55bRcNiG-N5YFivz_RU,72
+pyqsync/__init__.py,sha256=CP5-Fb9vL5ithG4a4lGYxuLAboDCLzzFA_sTKXePz2Y,121
+pyqsync/base.py,sha256=gi5xi7kZVudHbK_xsNT4-ZzUDHHu3cBypq7cYL4BGCY,4318
+pyqsync/client_adb.py,sha256=t6AjXWQB_4Spt7DO0XG4wW0vkmo-8P8sXRAwt4xx3Co,4388
+pyqsync/client_lft.py,sha256=rRpX9qiNurFjchdmrM6pM6PRFBNQ-fPweQ5oGoNCwxY,3974
+pyqsync/client_sftp.py,sha256=ldX1t-lqVuoBatp8akLNavRLuetOXF4lKgkiGcqr9_g,8096
+pyqsync/syncer.py,sha256=x-7ig20x4M7mntBh-WOiN4v49gRCOHF2pWvZXIUem1s,16853
+pyqsync-0.0.1.dist-info/LICENCE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+pyqsync-0.0.1.dist-info/METADATA,sha256=4-iBvc1VYfnidZwxejT2jOkXcn_QvRSnLhGwBhjxK5A,780
+pyqsync-0.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pyqsync-0.0.1.dist-info/top_level.txt,sha256=EyVTDeGZ7pUOJTMEyCdGWhppaaafS18Zq0dXtrPvROg,8
+pyqsync-0.0.1.dist-info/RECORD,,
