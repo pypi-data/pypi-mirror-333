@@ -1,0 +1,29 @@
+[project]
+name = "fewsats-python"
+version = "0.0.15"
+description = "CLI for Fewsats operations using MCP server tooling"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Jordi Montes", email = "jordi@fewsats.com" },
+  { name = "Pol Alvarez", email = "pol@fewsats.com" }
+]
+keywords = ["cli", "fewsats", "sdk"]
+license = { text = "MIT" }
+dependencies = [
+    "mcp[cli]",
+    "fewsats",
+]
+
+[project.scripts]
+fewsats-python =  "main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+py-modules = ["main"]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["fewsats"]
