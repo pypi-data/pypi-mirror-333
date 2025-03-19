@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/GradeAnalysisTool.egg-info/PKG-INFO
+src/GradeAnalysisTool.egg-info/SOURCES.txt
+src/GradeAnalysisTool.egg-info/dependency_links.txt
+src/GradeAnalysisTool.egg-info/entry_points.txt
+src/GradeAnalysisTool.egg-info/top_level.txt
+src/grade_analysis/dictionary.py
+src/grade_analysis/gradeAnalysisFunc.py
+src/grade_analysis/gradeAnalysisGUI.py
+src/grade_analysis/gradeAnalysisWidgets.py
