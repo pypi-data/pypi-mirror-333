@@ -1,0 +1,56 @@
+Metadata-Version: 2.2
+Name: bb84_crypto
+Version: 1.0.0
+Summary: A simple implementation of the BB84 quantum key distribution protocol.
+Home-page: https://github.com/yourusername/bb84_crypto
+Author: Amir
+Author-email: ak2testspace@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# bb84_crypto
+I developed this package for crypto messagaing
+
+it's easy to use. You would just need to install the package between your partner and go on :)
+
+```
+pip install bb84_crypto
+```
+
+```
+from bb84_crypto import bb84_protocol, encrypt_message, decrypt_message
+```
+
+Here, generate a secret key using BB84 and share it with your partner<br>
+
+```
+key = bb84_protocol(n=128)
+```
+
+Then, write your message and encrypt it, then also can be decrypted
+```
+message = "Hi Bob! Wassuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuup ?"
+encrypted = encrypt_message(message, key)
+decrypted = decrypt_message(encrypted, key)
+```
+
+Of course you would need to print the magic
+
+```
+print(f"Decrypted: {decrypted}")
+Hi Bob! Wassuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuup ?
+```
