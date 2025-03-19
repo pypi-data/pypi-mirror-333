@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+galamo/__init__.py
+galamo/encoder.pkl
+galamo/galaxy_morph.py
+galamo/model.keras
+galamo/test.py
+galamo/test_lib.py
+galamo.egg-info/PKG-INFO
+galamo.egg-info/SOURCES.txt
+galamo.egg-info/dependency_links.txt
+galamo.egg-info/requires.txt
+galamo.egg-info/top_level.txt
