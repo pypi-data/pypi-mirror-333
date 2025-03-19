@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: vb-downloader
+Version: 1.0.0
+Summary: Aplicativo para download automático do programa 'A Voz do Brasil'
+Home-page: https://github.com/seu-usuario/vb-downloader
+Author: Erik Rocha
+Author-email: e.lucasrocha@gmail.com
+License: CC BY-NC 4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: appdirs>=1.4.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# VB Downloader
+
+Um aplicativo para download automático do programa "A Voz do Brasil" para emissoras de rádio.
+
+This application is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+You may not use this application for commercial purposes.
