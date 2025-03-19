@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/libsegmenter/AsymmetricWindowSelector.py
+src/libsegmenter/Segmenter.py
+src/libsegmenter/TransformSelector.py
+src/libsegmenter/Window.py
+src/libsegmenter/WindowSelector.py
+src/libsegmenter/__init__.py
+src/libsegmenter.egg-info/PKG-INFO
+src/libsegmenter.egg-info/SOURCES.txt
+src/libsegmenter.egg-info/dependency_links.txt
+src/libsegmenter.egg-info/requires.txt
+src/libsegmenter.egg-info/top_level.txt
