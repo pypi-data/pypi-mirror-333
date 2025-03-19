@@ -1,0 +1,58 @@
+{
+    "config": {
+        "abort": {
+            "authorize_url_timeout": "Timeout generating authorise URL.",
+            "oauth_unauthorized": "OAuth authorisation error while obtaining access token."
+        }
+    },
+    "entity": {
+        "button": {
+            "preferred_position": {
+                "name": "Preferred position"
+            }
+        },
+        "climate": {
+            "thermostat": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "frost_guard": "Frost guard",
+                            "manual": "Manual",
+                            "schedule": "Schedule"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "gust_direction": {
+                "state": {
+                    "se": "South-east",
+                    "sw": "South-west",
+                    "w": "West"
+                }
+            },
+            "health_idx": {
+                "state": {
+                    "fair": "Fair",
+                    "fine": "Fine",
+                    "healthy": "Healthy",
+                    "poor": "Poor",
+                    "unhealthy": "Unhealthy"
+                }
+            },
+            "wind_direction": {
+                "state": {
+                    "e": "East",
+                    "n": "North",
+                    "ne": "North-east",
+                    "nw": "North-west",
+                    "s": "South",
+                    "se": "South-east",
+                    "sw": "South-west",
+                    "w": "West"
+                }
+            }
+        }
+    }
+}

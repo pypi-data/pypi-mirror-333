@@ -1,0 +1,48 @@
+{
+    "config": {
+        "abort": {
+            "unique_id_mismatch": "The identifier does not match the previous identifier"
+        }
+    },
+    "exceptions": {
+        "authentication_failed": {
+            "message": "Authentication failed for {title} ({host})"
+        },
+        "connection_failed": {
+            "message": "A connection error occurred for {title} ({host})"
+        },
+        "device_not_found": {
+            "message": "Could not find device {device}"
+        },
+        "no_data_received": {
+            "message": "No data received from {host}"
+        },
+        "timeout": {
+            "message": "A timeout occurred for {title} ({host})"
+        },
+        "unsupported_version": {
+            "message": "You are not running a supported version of System Bridge for {title} ({host}). Please upgrade to the latest version."
+        }
+    },
+    "services": {
+        "send_keypress": {
+            "fields": {
+                "key": {
+                    "description": "Key to press. List available here: http://robotjs.io/docs/syntax#keys.",
+                    "name": "Key"
+                }
+            },
+            "name": "Send keyboard keypress"
+        },
+        "send_text": {
+            "description": "Sends text for the server to type.",
+            "fields": {
+                "text": {
+                    "description": "Text to type.",
+                    "name": "Text"
+                }
+            },
+            "name": "Send keyboard text"
+        }
+    }
+}

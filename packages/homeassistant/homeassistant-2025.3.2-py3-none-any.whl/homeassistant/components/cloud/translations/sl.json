@@ -1,0 +1,24 @@
+{
+    "issues": {
+        "legacy_subscription": {
+            "title": "Zaznana podedovana naro\u010dnina"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Omogo\u010da dostop do uporabni\u0161kega vmesnika namestitve zunaj lokalnega omre\u017eja, tako da omogo\u010di va\u0161o povezavo Home Assistant Cloud.",
+            "name": "Omogo\u010di oddaljeni dostop"
+        },
+        "remote_disconnect": {
+            "description": "Prekine povezavo med uporabni\u0161kim vmesnikom namestitve in Home Assistant Cloud. To onemogo\u010di dostop do njega zunaj va\u0161ega lokalnega omre\u017eja.",
+            "name": "Onemogo\u010di oddaljeni dostop"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa omogo\u010dena",
+            "google_enabled": "Google omogo\u010den",
+            "logged_in": "Prijavljen kot"
+        }
+    }
+}

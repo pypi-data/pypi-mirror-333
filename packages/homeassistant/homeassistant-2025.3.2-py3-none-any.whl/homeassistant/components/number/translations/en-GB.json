@@ -1,0 +1,24 @@
+{
+    "device_automation": {
+        "extra_fields": {
+            "value": "Value"
+        }
+    },
+    "entity_component": {
+        "area": {
+            "name": "Area"
+        },
+        "blood_glucose_concentration": {
+            "name": "Blood glucose concentration"
+        },
+        "conductivity": {
+            "name": "Conductivity"
+        },
+        "ph": {
+            "name": "pH"
+        },
+        "wind_direction": {
+            "name": "Wind direction"
+        }
+    }
+}
