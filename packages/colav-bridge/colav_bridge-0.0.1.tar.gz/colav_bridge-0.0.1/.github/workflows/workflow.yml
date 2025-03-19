@@ -1,0 +1,105 @@
+# name: colav_bridge CI/CD
+# run-name: ${{ github.actor }} is testing colav_bridge pypi pkg 🚀
+
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#     branches: [main]
+#   release:
+#     types: [published]
+
+# jobs:
+#   build:
+#     name: Build Package
+#     runs-on: ubuntu-latest
+#     container: ros:humble-ros-core
+#     steps:
+#       - name: Install dependencies
+#         run: |
+#           apt update && apt install -y ros-humble-desktop python3-rosdep
+#           rosdep update
+      
+#       - name: Clone colav_interfaces, build and source for ROS2
+#         run: |
+#           mkdir -p /home/ros2_ws/src
+#           cd /home/ros2_ws/src
+#           git clone https://github.com/Artemis-QUB-COLAV/colav-interfaces.git
+#           cd /home/ros2_ws
+#           colcon build
+#           source install/setup.bash
+
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: "3.10"
+
+#       - name: Install Build Tools
+#         run: |
+#           pip install --upgrade pip
+#           pip install hatch protobuf>=5.29.3
+
+#       - name: Build colav-bridge Package
+#         run: hatch build
+
+#       - name: Upload Build Artifacts
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: dist-files
+#           path: dist/
+
+#   test:
+#     name: Run Tests
+#     needs: build
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: "3.10"
+
+#       - name: Install Dependencies
+#         run: |
+#           pip install --upgrade pip
+#           pip install -r requirements.txt
+
+#       - name: Run Tests
+#         run: hatch test
+
+#   deploy:
+#     name: Publish to PyPI if Release
+#     needs: test
+#     if: github.event_name == 'release'
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: "3.10"
+
+#       - name: Download Build Artifacts
+#         uses: actions/download-artifact@v4
+#         with:
+#           name: dist-files
+#           path: dist/
+
+#       - name: Install Twine
+#         run: pip install twine
+
+#       - name: Publish to PyPI
+#         env:
+#           TWINE_USERNAME: __token__
+#           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+#         run: |
+#           twine upload dist/* --username "${TWINE_USERNAME}" --password "${TWINE_PASSWORD}" --non-interactive --verbose
