@@ -1,0 +1,9 @@
+telegram_gateway/__init__.py,sha256=mEL7Vzy8VLE94UMGKwFrPdYOZllJ_GaTeCKfliCLqC4,75
+telegram_gateway/constants.py,sha256=0U94GuFZAbqxCgQwmbwXBr3eWHejuP-hpM4hMHx28Es,314
+telegram_gateway/enums.py,sha256=O96bSRQm-JHgpUP3APulsodxDjjoSbq23aPCNtRhaY4,674
+telegram_gateway/gateway.py,sha256=bjn3OzVYXXe5eDBn2HHu_aZ-63MpxZfzAYUmE3y6qtg,8997
+telegram_gateway/types.py,sha256=N8VPS_eK_mICltXI2FtIAAjQQxH_ln_m7V4lfob3UF8,1515
+telegram_gateway-0.0.5.dist-info/METADATA,sha256=I6QKjmIGsF6LSBQ8IPBHZFC7hLAHRGJKkggX7O1F8rM,4144
+telegram_gateway-0.0.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+telegram_gateway-0.0.5.dist-info/top_level.txt,sha256=bV8nNSodcSgfs7ujl2g0mtfYGUeoMQL1qzToJplLfAk,17
+telegram_gateway-0.0.5.dist-info/RECORD,,
