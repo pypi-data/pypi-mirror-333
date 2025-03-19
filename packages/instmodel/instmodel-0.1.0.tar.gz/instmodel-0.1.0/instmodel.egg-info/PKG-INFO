@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: instmodel
+Version: 0.1.0
+Summary: A package that provides advanced coding tools for training and deploying AI
+Home-page: 
+Author: Joao Ferreira
+Author-email: joaoprcf@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow==2.17.0
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+
+This package allow the easy creation of training models with keras backend and deploy them directly as instruction model
