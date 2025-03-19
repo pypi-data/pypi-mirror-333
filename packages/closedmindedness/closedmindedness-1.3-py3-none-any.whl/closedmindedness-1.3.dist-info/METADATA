@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: closedmindedness
+Version: 1.3
+Summary: Text classifier of closed-mindedness
+Home-page: https://huggingface.co/mamakos/CMClassifier/
+Author: Michalis Mamakos
+Author-email: mamakos@u.northwestern.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: bitsandbytes
+Requires-Dist: transformers
+Requires-Dist: peft
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+
