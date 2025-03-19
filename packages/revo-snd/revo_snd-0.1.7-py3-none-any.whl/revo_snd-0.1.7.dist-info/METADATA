@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: revo-snd
+Version: 0.1.7
+Summary: Your entire toolset for editing Nintendo Wii sound files
+Author: Ogu99
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: sounddevice
+
+# revo_snd
+The best library to handle NW4R sound files.
