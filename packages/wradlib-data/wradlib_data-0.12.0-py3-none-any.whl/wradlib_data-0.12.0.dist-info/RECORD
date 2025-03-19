@@ -1,0 +1,10 @@
+wradlib_data/__init__.py,sha256=OqcQMGF9c8rYGaT59P8Bdit7tiVA0MdnOdYLMh-CceM,387
+wradlib_data/dataset.py,sha256=YZ3DRDgwWvH5v4VhP3dW899fWW0QZSgu-Q2J_bENJHE,1540
+wradlib_data/registry.txt,sha256=jlBYYZz1S0pBH1TlBqpFRVQxQYR1ezVYMe_V7jL3jgE,31524
+wradlib_data/version.py,sha256=MzIo18wy7DMt4bO6hDNzASQ2GwerF91Xd0bFMTS3VKA,513
+wradlib_data/tests/test_dataset.py,sha256=pkMqq0tMsX--hp_ZiH5LmzLutnUnN0dRVNYB4sdt2ls,239
+wradlib_data-0.12.0.dist-info/LICENSE,sha256=zYPe98-HrfuiGHtn7rM45PzgxgLKuTtw107h83DTpV0,1068
+wradlib_data-0.12.0.dist-info/METADATA,sha256=mtM1FUNeaBy9e4E_YMqFUo45PQ3r_u_EljZN2qLALgs,4241
+wradlib_data-0.12.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+wradlib_data-0.12.0.dist-info/top_level.txt,sha256=UOxw2ciY5SCRr6Bghzi-WUoLQojwlqk5HF4oC5fYSpA,13
+wradlib_data-0.12.0.dist-info/RECORD,,
