@@ -1,0 +1,4 @@
+[nomad.plugin]
+catalysis = nomad_catalysis.schema_packages:catalysis
+catalysis_app = nomad_catalysis.apps:catalysis
+example_catalysis = nomad_catalysis.example_uploads:catalysis
