@@ -1,0 +1,5 @@
+include makefile READ.txt LICENSE.txt INSTALLATION.txt make_version.py
+include setup.py setup.cfg pyproject.toml 
+exclude src/*.egg-info
+exclude build
+exclude src/dummy/*.c
