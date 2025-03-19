@@ -1,0 +1,54 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "ivory"
+version = "0.5.0"
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Rust",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = ["polars>=1.24.0"]
+
+[dependency-groups]
+dev = [
+  "maturin[patchelf]>=1.8.2",
+  "pytest-clarity>=1.0.1",
+  "pytest-cov>=6.0.0",
+  "pytest-randomly>=3.16.0",
+  "pytest-xdist>=3.6.1",
+]
+
+[tool.maturin]
+manifest-path = "crates/python/Cargo.toml"
+module-name = "ivory"
+python-source = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--doctest-modules", "--cov=ivory", "--cov-report=lcov:lcov.info"]
+
+[tool.coverage.report]
+exclude_lines = ["if TYPE_CHECKING:", "raise NotImplementedError"]
+skip_covered = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+unfixable = ["F401"]
+ignore = ["A005", "D", "PD", "T"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ANN", "ARG", "D", "FBT", "PLR", "RUF", "S"]
+
+[tool.pyright]
+include = ["src", "tests"]
+strictDictionaryInference = true
+strictListInference = true
+strictSetInference = true
