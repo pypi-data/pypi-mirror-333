@@ -1,0 +1,3 @@
+[console_scripts]
+extra-local-zebra-printer = local_zebra_printer.run_zebra_printer_script:main
+local-zebra-printer = local_zebra_printer.local_zebra_printer:main
