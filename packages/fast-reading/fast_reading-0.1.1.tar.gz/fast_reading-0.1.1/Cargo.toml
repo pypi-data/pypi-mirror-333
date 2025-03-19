@@ -1,0 +1,11 @@
+[package]
+name = "fast_reading"
+version = "0.1.1"
+edition = "2021"
+
+[lib]
+name = "_core"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.24.0", features = ["extension-module"] }
