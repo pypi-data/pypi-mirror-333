@@ -1,0 +1,5 @@
+pandasai_litellm/__init__.py,sha256=0B0Ja4tG5N6gSdpwWQMvL8Wfy02dsFQP6ssWSQg8Nco,52
+pandasai_litellm/litellm.py,sha256=5CLSnFtBhdjtG8PN57oRK3-Eo-ppmacwCaTk4EU89QY,2529
+pandasai_litellm-0.0.1.dist-info/METADATA,sha256=S5-WmyMqiUTV9l1ndF64EclSbzJ41E0G6qdf5chsXx4,894
+pandasai_litellm-0.0.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pandasai_litellm-0.0.1.dist-info/RECORD,,
