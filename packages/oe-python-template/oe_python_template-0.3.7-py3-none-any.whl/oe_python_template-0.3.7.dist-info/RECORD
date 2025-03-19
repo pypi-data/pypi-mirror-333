@@ -1,0 +1,10 @@
+oe_python_template/__init__.py,sha256=XJAycUgDI2K8T0jVcXbaGfx2UAQJZbYcvJ_SYSqFyDA,315
+oe_python_template/api.py,sha256=NbjvA9_VWzOASi31SY62DFQBrzcMpwxzWoqcuiQ6LZs,2179
+oe_python_template/cli.py,sha256=t6nV6jHzYmrwz_PkNDj7njSElqd3jeQc0wqELBxxuBw,2351
+oe_python_template/constants.py,sha256=Z1c06l5DeRuFxYVLHihHHTYvr8_Qh0nyzVKOe5X3ZNs,350
+oe_python_template/service.py,sha256=p59ch0g81LpsRvL-m-vLPuk0Rf6EYsZfZJ_OCA9vWzQ,500
+oe_python_template-0.3.7.dist-info/METADATA,sha256=qBlv1KLbMAUOKncNmBHsVoS0nOg9iiSGm1POexk5JTY,19227
+oe_python_template-0.3.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+oe_python_template-0.3.7.dist-info/entry_points.txt,sha256=IroSSWhLGxus9rxcashkYQda39TTvf7LbUMYtOKXUBE,66
+oe_python_template-0.3.7.dist-info/licenses/LICENSE,sha256=5H409K6xzz9U5eUaoAHQExNkoWJRlU0LEj6wL2QJ34s,1113
+oe_python_template-0.3.7.dist-info/RECORD,,
