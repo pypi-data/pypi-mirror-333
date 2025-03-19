@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: ytils
+Version: 0.0.3
+Summary: Private utils package
+Author-email: Roman Smolnyk <poma23324@gmail.com>
+Project-URL: Homepage, https://gitlab.com/roman-smolnyk/python-roman-utils
+Keywords: private,utils
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# Python personal set of utils
+
+My set of custom utils that I'm going to use in my projects
+
+## Package name in PyPi is ytils
+
+[ytils](https://pypi.org/project/ytils/#description)
+
+
+```bash
+pip install ytils --upgrade
+```
