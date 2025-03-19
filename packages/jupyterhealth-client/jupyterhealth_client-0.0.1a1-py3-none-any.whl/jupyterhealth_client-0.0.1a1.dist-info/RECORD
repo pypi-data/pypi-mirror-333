@@ -1,0 +1,7 @@
+jupyterhealth_client/__init__.py,sha256=KYqfRMIjS2ifgpK0sIF8shQ3E1hOrbI_AH_G1__kl2E,177
+jupyterhealth_client/_client.py,sha256=2p3jH4SxLALdoAP6RlxtplRa9U8GnBVQuv0Y7lPGYns,8158
+jupyterhealth_client/_utils.py,sha256=5U9MvoquHuC8FiiyFLuQsQHY9_VGucwElCfZZaPF2_0,2787
+jupyterhealth_client-0.0.1a1.dist-info/METADATA,sha256=Wefm5NeIxTnxzpyUnWFO5xlZK922cWEcixxEWX_YL7A,2816
+jupyterhealth_client-0.0.1a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyterhealth_client-0.0.1a1.dist-info/licenses/LICENSE,sha256=KFgzd4VhKnNoagBKLjhmam0KtUkF09pVjxkXT4YGbe8,1501
+jupyterhealth_client-0.0.1a1.dist-info/RECORD,,
