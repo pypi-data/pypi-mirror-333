@@ -1,0 +1,12 @@
+quantumx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quantumx/analyze.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quantumx/icon.ico,sha256=g6nY9OfkvnfT4hBIZ64X_oMsIpprAQRX9_B5T8e3t3M,3230
+quantumx/interpreter.py,sha256=VxrpTGhA6i2KZFugbyLLnOv4Q-vjFqQ9PLrQoiC2tGk,19736
+quantumx/post_install.py,sha256=U90ITRUd4tR4kZyb4lfGWuN250mbhWspvxNc0mxgzoo,5112
+quantumx/quantumx_builtins.py,sha256=XD8EXYQlbelr61wLtx80woq65fGqbXiHFDKB_6tjrj0,6726
+quantumx-0.1.4.dist-info/LICENSE,sha256=_6HCgglM0zCGC7tEIHtpMq9oawxFC3zfEzciMbBwrow,1057
+quantumx-0.1.4.dist-info/METADATA,sha256=2BiR8v2i2-Ypws_mtJtaIEeSS_HbLsRWXI2pYqQYZgY,1751
+quantumx-0.1.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+quantumx-0.1.4.dist-info/entry_points.txt,sha256=IptNiHSPp02N3HzZq6FgCKGyx5nNyzmpWf7UV9fipb0,55
+quantumx-0.1.4.dist-info/top_level.txt,sha256=VIVaTj8DStYMXtFeFcPe2OD6--lwrd2XlV4NKjQX0C8,9
+quantumx-0.1.4.dist-info/RECORD,,
