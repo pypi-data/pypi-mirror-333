@@ -1,0 +1,11 @@
+
+twine
+build
+pytest
+pytest-cov
+flake8
+
+geopy
+peewee
+questionary
+requests
