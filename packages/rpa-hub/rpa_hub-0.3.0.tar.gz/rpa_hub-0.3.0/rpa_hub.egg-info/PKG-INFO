@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: rpa-hub
+Version: 0.3.0
+Summary: Biblioteca em python para a integração dos RPAs com o sistema RPA-HUB
+Home-page: https://github.com/creditoreal-hub/RPA-Hub-Biblioteca
+Author: Christian Schmitz Barbosa
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
