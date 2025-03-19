@@ -1,0 +1,11 @@
+matplotlib>=3.9.1
+numpy>=2.0.1
+scipy>=1.14.0
+
+[docs]
+sphinx
+sphinxawesome-theme
+
+[interactive]
+jupyter
+ipython>=8.12.3
