@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: gnparser
+Version: 0.1.3
+Summary: Python wrapper for the gnparser Go library
+Home-page: https://github.com/pieterprovoost/gnparser-python
+Author: Pieter Provoost
+Author-email: pieterprovoost@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# gnparser-python
+
+Python wrapper for the gnparser Go library.
