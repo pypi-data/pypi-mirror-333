@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: blockchain-utils
+Version: 0.0.1
+Summary: crypto utils
+Author: BadDevilZ
+Author-email: mazda266@gmail.com
+License: EULA
+Keywords: crypto blockchain
+Requires-Python: >=3.8,<4
+Dynamic: author
+Dynamic: author-email
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
