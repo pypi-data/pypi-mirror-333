@@ -1,0 +1,58 @@
+Metadata-Version: 2.2
+Name: savepip
+Version: 0.1.1
+Summary: A tool to install and save clean package dependencies
+Home-page: https://github.com/Aeidle/savepip
+Author: ADIL ALAMI
+Author-email: adilalami707@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=5.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SavePip
+
+A tool to install and save clean package dependencies for both pip and conda environments.
+
+## Installation
+
+```bash
+pip install savepip
+```
+
+## Usage
+```bash
+# Install packages with pip
+savepip install pandas numpy
+
+# Install packages with conda
+savepip -m conda numpy pandas
+
+# Save current environment
+savepip save
+
+# Upgrade packages
+savepip -u requests pandas
+
+# Save to custom file
+savepip -o custom_requirements.txt requests pandas
+ ```
+
+## Features
+- Supports both pip and conda package managers
+- Cleans up dependency specifications
+- Preserves existing dependencies
+- Sorts dependencies alphabetically
+- Removes build hashes and unnecessary information
