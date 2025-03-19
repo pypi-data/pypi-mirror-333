@@ -1,0 +1,3 @@
+[scancode_scan]
+dwarf-inspector = elf_inspector.plugin_dwarf:DwarfScanner
+elf-inspector = elf_inspector.plugin_elf:ElfScanner

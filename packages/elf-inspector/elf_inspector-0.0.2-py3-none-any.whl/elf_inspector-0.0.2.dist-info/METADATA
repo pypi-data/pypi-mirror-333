@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: elf_inspector
+Version: 0.0.2
+Summary: A utility to inspect ELF binary files. Designed as a ScanCode plugin.
+Home-page: https://github.com/aboutcode-org/elf-inspector
+Author: nexB. Inc. and others
+Author-email: info@aboutcode.org
+License: Apache-2.0
+Keywords: utilities,elf,dwarf,debug-symbols,scancode
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: apache-2.0.LICENSE
+License-File: NOTICE
+License-File: AUTHORS.rst
+License-File: CHANGELOG.rst
+License-File: CODE_OF_CONDUCT.rst
+Requires-Dist: attrs
+Requires-Dist: pyelftools
+Requires-Dist: commoncode
+Requires-Dist: typecode[full]
+Provides-Extra: docs
+Requires-Dist: Sphinx>=5.0.2; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+Requires-Dist: sphinx-reredirects>=0.1.2; extra == "docs"
+Requires-Dist: doc8>=0.11.2; extra == "docs"
+Provides-Extra: full
+Requires-Dist: scancode-toolkit>=32.0.0; extra == "full"
+Provides-Extra: testing
+Requires-Dist: scancode-toolkit>=32.0.0; extra == "testing"
+Requires-Dist: pytest!=7.0.0,>=6; extra == "testing"
+Requires-Dist: pytest-xdist>=2; extra == "testing"
+Requires-Dist: aboutcode-toolkit>=7.0.2; extra == "testing"
+Requires-Dist: pycodestyle>=2.8.0; extra == "testing"
+Requires-Dist: twine; extra == "testing"
+Requires-Dist: black; extra == "testing"
+Requires-Dist: isort; extra == "testing"
+
+elf-inspector
+=============
+
+elf-inspector is a set of utilities to inspect binary ELF files and collect
+interesting data from them. This is also a ScanCode-toolkit plugin.
