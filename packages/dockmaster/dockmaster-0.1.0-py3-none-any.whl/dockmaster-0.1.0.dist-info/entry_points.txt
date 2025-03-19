@@ -1,0 +1,2 @@
+[console_scripts]
+dm = docker_manager.cli:main
