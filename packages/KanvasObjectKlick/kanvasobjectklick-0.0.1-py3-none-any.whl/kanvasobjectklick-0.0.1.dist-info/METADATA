@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: KanvasObjectKlick
+Version: 0.0.1
+Summary: Allows you to visualize objects with html on a 2D plane with the desired color, caption (on hover), and image of the object (on click). 
+Author-email: The220th <The220th@gmail.com>
+Project-URL: Homepage, https://github.com/The220th/KanvasObjectKlick
+Project-URL: Issues, https://github.com/The220th/KanvasObjectKlick/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+Requires-Dist: ksupk
+Requires-Dist: numpy
+
+# KanvasObjectKlick
+
