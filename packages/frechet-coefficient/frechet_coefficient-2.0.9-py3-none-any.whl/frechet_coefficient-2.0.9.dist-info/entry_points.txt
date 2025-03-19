@@ -1,0 +1,2 @@
+[console_scripts]
+frechet-coefficient = frechet_coefficient.cli:main
