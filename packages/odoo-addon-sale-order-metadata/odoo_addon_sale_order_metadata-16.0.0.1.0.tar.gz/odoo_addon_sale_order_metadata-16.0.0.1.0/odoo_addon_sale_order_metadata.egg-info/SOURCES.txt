@@ -1,0 +1,14 @@
+setup.py
+odoo/addons/sale_order_metadata/__init__.py
+odoo/addons/sale_order_metadata/__manifest__.py
+odoo/addons/sale_order_metadata/models/__init__.py
+odoo/addons/sale_order_metadata/models/sale_order.py
+odoo/addons/sale_order_metadata/models/sale_order_metadata_line.py
+odoo/addons/sale_order_metadata/security/ir.model.access.csv
+odoo/addons/sale_order_metadata/views/sale_order.xml
+odoo_addon_sale_order_metadata.egg-info/PKG-INFO
+odoo_addon_sale_order_metadata.egg-info/SOURCES.txt
+odoo_addon_sale_order_metadata.egg-info/dependency_links.txt
+odoo_addon_sale_order_metadata.egg-info/not-zip-safe
+odoo_addon_sale_order_metadata.egg-info/requires.txt
+odoo_addon_sale_order_metadata.egg-info/top_level.txt
