@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/keypad/__init__.py
+src/keypad/keypad.py
+src/keypad/py.typed
+src/keypad_io.egg-info/PKG-INFO
+src/keypad_io.egg-info/SOURCES.txt
+src/keypad_io.egg-info/dependency_links.txt
+src/keypad_io.egg-info/top_level.txt
+tests/test_keypad.py
