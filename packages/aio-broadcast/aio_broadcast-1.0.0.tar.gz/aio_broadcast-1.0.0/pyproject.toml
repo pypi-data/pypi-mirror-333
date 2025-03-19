@@ -1,0 +1,17 @@
+[project]
+name = "aio-broadcast"
+dynamic=["version"]
+description = "Multi consumers asyncio compatible queue"
+authors = [
+    { name = "fdv1", email = "francois@pytek.io" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+packages = [{include = "src"}]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
