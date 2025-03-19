@@ -1,0 +1,9 @@
+python-escpos>=3.1
+dataclasses-json>=0.6.0
+marko>=2.1.2
+
+[dev]
+pytest
+mypy
+types-six
+types-pillow
