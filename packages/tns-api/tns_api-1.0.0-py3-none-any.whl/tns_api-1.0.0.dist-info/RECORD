@@ -1,0 +1,11 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_properties.py,sha256=Kw-uCRiUSFjD_KwsszLqaRbmGzF7-ZeHDplCLJbNOHg,1899
+tns_api/__init__.py,sha256=2W-Fgup2tcEHcVIjRbdlrov-aJjMldKXAsBYrx2POCc,99
+tns_api/_version.py,sha256=9A2sojmE3CSRnfy9rHAbhjObYh383AN-40rwXL7FOBQ,46
+tns_api/api.py,sha256=L-tdfvxHhCZpiExzp-yKqcwsrpaF77n6kJU2uQiYbNg,4110
+tns_api/utils.py,sha256=7gTDUF2uMb3fQeIUiOs3kF992M_ZEB9eDC6JH7hxWII,2704
+tns_api-1.0.0.dist-info/LICENSE,sha256=h691I3mSnXHpwTSk21ylpkBYa0zoyJZ_aTeJVjL8_J4,1080
+tns_api-1.0.0.dist-info/METADATA,sha256=xXiWo2D2f5a7R3QiPhjFuj6PRdN76HibJtmH_W2Xjms,4383
+tns_api-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+tns_api-1.0.0.dist-info/top_level.txt,sha256=iPQM8hOXeT3D3-R3eXBhrHXd5LXl_6tjd08RmaQ8oEM,14
+tns_api-1.0.0.dist-info/RECORD,,
