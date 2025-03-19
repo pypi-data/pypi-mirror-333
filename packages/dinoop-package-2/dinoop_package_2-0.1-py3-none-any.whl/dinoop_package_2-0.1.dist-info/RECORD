@@ -1,0 +1,14 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/config.py,sha256=B2ybMwJI_XdcL0LUs48oKYD1BySWgPEUQa-ruYm4AKU,192
+app/database.py,sha256=GN0-DixjwmIXM1NZ4vC7NKMDWjSN92q5-B50kzGq5vo,406
+app/main.py,sha256=byoQZ6U4JCJcJ_pDMqk8tZtYnnxdWaVbEuIZNQXFBz4,236
+dinoop_package_1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dinoop_package_1/my_module.py,sha256=eOBPfUMzM2MZZW2BKiuSh5HqMtu7-tQdryCrHf9pw44,72
+dinoop_package_2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dinoop_package_2/my_module.py,sha256=eOBPfUMzM2MZZW2BKiuSh5HqMtu7-tQdryCrHf9pw44,72
+my_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_package/my_module.py,sha256=eOBPfUMzM2MZZW2BKiuSh5HqMtu7-tQdryCrHf9pw44,72
+dinoop_package_2-0.1.dist-info/METADATA,sha256=klixs75exOM3bXxkeScmUbMKvzfey5EZGFMtps2uT80,419
+dinoop_package_2-0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+dinoop_package_2-0.1.dist-info/top_level.txt,sha256=G1t0FP41ieY3-e5KnuEcfpUINZf_d1UoZZsby_m3g7Q,21
+dinoop_package_2-0.1.dist-info/RECORD,,
