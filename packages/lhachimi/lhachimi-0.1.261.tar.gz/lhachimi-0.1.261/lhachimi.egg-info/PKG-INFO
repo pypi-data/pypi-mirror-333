@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: lhachimi
+Version: 0.1.261
+Summary: A basic science package
+Home-page: UNKNOWN
+Author: Mohamed Lhachimi
+Author-email: mohamedyoutu123@gmail.com
+License: UNKNOWN
+Keywords: python,science,math,analysis,simplify science,programming
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+![Logo](https://drive.google.com/uc?id=1Ifnzt6ZbOUZU4Qm9USpHvYkbvbUrP9F9)
+
+**Lhachimi Library** provides a collection of utility functions for various tasks, including mathematical operations, text formatting, and data manipulation.
+
+

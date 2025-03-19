@@ -1,0 +1,8 @@
+README.md
+setup.py
+lhachimi/__init__.py
+lhachimi.egg-info/PKG-INFO
+lhachimi.egg-info/SOURCES.txt
+lhachimi.egg-info/dependency_links.txt
+lhachimi.egg-info/requires.txt
+lhachimi.egg-info/top_level.txt
