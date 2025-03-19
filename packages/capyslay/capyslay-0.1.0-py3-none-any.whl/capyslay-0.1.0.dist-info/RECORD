@@ -1,0 +1,7 @@
+my_package/__init__.py,sha256=oh9BhCstjIDobqfi5EuakpbZZxipUuapq17EcVizEpk,99
+my_package/module1.py,sha256=j7YitZCkAs450r9SUG5VTRKach6HZANrstEclcU-ZMc,40
+my_package/module2.py,sha256=UoxELgEIUuD0JvP8IacQ7yrf4fOGIIXeU6DlLlOPF6w,35
+capyslay-0.1.0.dist-info/METADATA,sha256=RllhIS98Rzahb09I0XWgTlShGd9O99PxtN44SkLIHkI,178
+capyslay-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+capyslay-0.1.0.dist-info/top_level.txt,sha256=4OyEe7aVmevjXrMpt_mY6srrUUjZGHyUPvlu5sUpLn4,11
+capyslay-0.1.0.dist-info/RECORD,,
