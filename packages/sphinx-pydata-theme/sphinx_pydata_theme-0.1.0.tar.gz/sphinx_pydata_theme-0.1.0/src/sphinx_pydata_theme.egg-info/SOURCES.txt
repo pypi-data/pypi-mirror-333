@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/sphinx_pydata_theme/__init__.py
+src/sphinx_pydata_theme.egg-info/PKG-INFO
+src/sphinx_pydata_theme.egg-info/SOURCES.txt
+src/sphinx_pydata_theme.egg-info/dependency_links.txt
+src/sphinx_pydata_theme.egg-info/top_level.txt
