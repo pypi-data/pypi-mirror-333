@@ -1,0 +1,2 @@
+[console_scripts]
+serial_port_change = serial_port_change:monitor_serial_ports
