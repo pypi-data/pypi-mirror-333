@@ -1,0 +1,6 @@
+README.md
+setup.py
+minha_biblioteca.egg-info/PKG-INFO
+minha_biblioteca.egg-info/SOURCES.txt
+minha_biblioteca.egg-info/dependency_links.txt
+minha_biblioteca.egg-info/top_level.txt
