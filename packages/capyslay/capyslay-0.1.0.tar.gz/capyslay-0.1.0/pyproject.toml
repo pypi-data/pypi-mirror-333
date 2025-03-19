@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capyslay"
+version = "0.1.0"
+description = "A sample Python package"
+readme = "README.md"
+authors = [{ name = "Capy Bara", email = "ajay200457@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = []  # List any dependencies
+
+[tool.setuptools]
+packages = ["my_package"]
