@@ -1,0 +1,9 @@
+setup.py
+user_manual/__init__.py
+user_manual/user_manual.py
+user_manual.egg-info/PKG-INFO
+user_manual.egg-info/SOURCES.txt
+user_manual.egg-info/dependency_links.txt
+user_manual.egg-info/entry_points.txt
+user_manual.egg-info/requires.txt
+user_manual.egg-info/top_level.txt
