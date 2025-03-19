@@ -1,0 +1,2 @@
+[console_scripts]
+cogzen = cogzen.cli.cogzen:main
