@@ -1,0 +1,13 @@
+biopython
+numpy
+pandas
+requests
+scikit-learn
+matplotlib
+logomaker
+seaborn
+
+[dev]
+unittest
+
+[docs]

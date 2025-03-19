@@ -1,0 +1,9 @@
+exclude rrmscorer/main_testing.py
+recursive-exclude test *
+include rrmscorer/alignment_data/*
+include rrmscorer/alignment_data/precalculated_scores/*
+include precalculated_scores/*
+include precalculated_scores/pkl_files/*
+include precalculated_scores/png_files/*
+include rrmscorer/output_files/*\
+include README_pip.md
