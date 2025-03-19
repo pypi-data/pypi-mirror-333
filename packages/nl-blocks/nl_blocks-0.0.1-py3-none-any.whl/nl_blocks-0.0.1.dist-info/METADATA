@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: nl_blocks
+Description-Content-Type: text/markdown
+Requires-Dist: alembic<2,>=1.15.1
+Requires-Dist: black<25,>=24.4.2
+Requires-Dist: bleak<1,>=0.22.3
+Requires-Dist: dotenv<1,>=0.9.9
+Requires-Dist: inquirerpy<1,>=0.3.4
+Requires-Dist: ipython<9,>=8.27.0
+Requires-Dist: isort<6,>=5.13.2
+Requires-Dist: matplotlib<4,>=3.10.0
+Requires-Dist: numpy<3,>=1.26.4
+Requires-Dist: portpicker<2,>=1.6.0
+Requires-Dist: psycopg2-binary<3,>=2.9.10
+Requires-Dist: PyQt6<7,>=6.8.0
+Requires-Dist: pyserial<4,>=3.5
+Requires-Dist: pytest<9,>=8.3.2
+Requires-Dist: pyzmq<27,>=26.2.0
+Requires-Dist: requests<3,>=2.32.3
+Requires-Dist: responses<1,>=0.25.7
+Requires-Dist: rich<14,>=13.8.1
+Requires-Dist: rich-click<2,>=1.8.3
+Requires-Dist: scipy<2,>=1.15.1
+Requires-Dist: SQLAlchemy<3,>=2.0.38
+Requires-Dist: stonesoup<2,>=1.5.0
+Version: 0.0.1
+
+Hello, nlb!
+
