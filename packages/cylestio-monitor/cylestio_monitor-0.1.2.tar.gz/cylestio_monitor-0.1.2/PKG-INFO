@@ -1,0 +1,158 @@
+Metadata-Version: 2.4
+Name: cylestio-monitor
+Version: 0.1.2
+Summary: A monitoring tool for LLM API calls
+Project-URL: Homepage, https://github.com/cylestio/cylestio-monitor
+Project-URL: Bug Tracker, https://github.com/cylestio/cylestio-monitor/issues
+Project-URL: Documentation, https://cylestio.github.io/cylestio-monitor/
+Project-URL: Changelog, https://github.com/cylestio/cylestio-monitor/blob/main/CHANGELOG.md
+Project-URL: Source, https://github.com/cylestio/cylestio-monitor
+Author-email: "Cylestio.com" <contact@Cylestio.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: api,compliance,database,llm,monitoring,security,sqlite
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=3.11
+Requires-Dist: anthropic>=0.18.0
+Requires-Dist: mcp>=1.3.0
+Requires-Dist: platformdirs>=4.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: structlog>=24.1.0
+Requires-Dist: tomli; python_version < '3.11'
+Provides-Extra: dev
+Requires-Dist: black>=24.2.0; extra == 'dev'
+Requires-Dist: isort>=5.13.0; extra == 'dev'
+Requires-Dist: mypy>=1.8.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.6.0; extra == 'dev'
+Requires-Dist: ruff>=0.3.0; extra == 'dev'
+Provides-Extra: security
+Requires-Dist: bandit>=1.7.0; extra == 'security'
+Requires-Dist: ruff>=0.3.0; extra == 'security'
+Requires-Dist: safety>=3.0.0; extra == 'security'
+Provides-Extra: test
+Requires-Dist: coverage>=7.4.0; extra == 'test'
+Requires-Dist: pytest-asyncio>=0.23.0; extra == 'test'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'test'
+Requires-Dist: pytest-mock>=3.12.0; extra == 'test'
+Requires-Dist: pytest>=8.0.0; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Cylestio Monitor
+
+A lightweight, drop-in security and performance monitoring SDK for AI agents, Multi-Component Programs (MCPs), and LLM API calls.
+
+[![PyPI version](https://badge.fury.io/py/cylestio-monitor.svg)](https://badge.fury.io/py/cylestio-monitor)
+[![CI](https://github.com/cylestio/cylestio-monitor/actions/workflows/ci.yml/badge.svg)](https://github.com/cylestio/cylestio-monitor/actions/workflows/ci.yml)
+[![Security](https://github.com/cylestio/cylestio-monitor/actions/workflows/security.yml/badge.svg)](https://github.com/cylestio/cylestio-monitor/actions/workflows/security.yml)
+[![Documentation](https://github.com/cylestio/cylestio-monitor/actions/workflows/deploy_docs.yml/badge.svg)](https://cylestio.github.io/cylestio-monitor/)
+
+## For Agent Developers
+
+### Why Cylestio Monitor?
+
+Cylestio Monitor provides essential oversight for AI agents by intercepting MCP and LLM API calls, logging critical parameters, and detecting security threats. Our monitoring solution helps you:
+
+- **Secure your AI systems** by detecting and blocking dangerous prompts
+- **Track performance metrics** with detailed call duration and response time data
+- **Meet compliance requirements** with structured, audit-ready logging
+- **Debug interactions** with comprehensive event data
+
+All with minimal configuration and zero code changes to your existing agents.
+
+### Installation
+
+```bash
+pip install cylestio-monitor
+```
+
+### Quick Start
+
+```python
+from cylestio_monitor import enable_monitoring
+from anthropic import Anthropic
+
+# Create your LLM client
+client = Anthropic()
+
+# Enable monitoring
+enable_monitoring(
+    agent_id="my_agent",
+    llm_client=client
+)
+
+# Use your client as normal
+response = client.messages.create(
+    model="claude-3-sonnet-20240229",
+    max_tokens=1000,
+    messages=[{"role": "user", "content": "Hello, Claude!"}]
+)
+```
+
+### Key Features
+
+- **Zero-configuration setup**: Import and enable with just two lines of code
+- **Automatic framework detection**: Works with MCP and popular LLM clients
+- **Security monitoring**: Detects and blocks dangerous prompts
+- **Performance tracking**: Monitors call durations and response times
+- **Structured logging**: Events stored in SQLite with optional JSON output
+- **Dashboard integration**: View your monitoring data with our open source [visualization dashboard](https://github.com/cylestio/cylestio-dashboard)
+
+### Visualization Dashboard
+
+For an interactive visualization of your monitoring data, check out our separate [Cylestio Dashboard](https://github.com/cylestio/cylestio-dashboard) repository. This open source dashboard provides real-time metrics, alert views, and detailed event analysis.
+
+## For Contributors
+
+We welcome contributions to the Cylestio Monitor project! Whether you're fixing bugs, improving documentation, or adding new features, your help is appreciated.
+
+### Development Setup
+
+1. Ensure you have Python 3.11+ installed
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/cylestio/cylestio-monitor.git
+   cd cylestio-monitor
+   ```
+
+3. Create and activate virtual environment:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+
+4. Install dependencies:
+   ```bash
+   pip install -e ".[dev,test,security]"
+   ```
+
+5. Install pre-commit hooks:
+   ```bash
+   pre-commit install
+   pre-commit install --hook-type pre-push
+   ```
+
+### Contribution Guidelines
+
+- **Code Style**: We use Black, isort, and ruff for code formatting
+- **Testing**: All new features and bug fixes must include tests
+- **Documentation**: Update relevant docs for any changes you make
+- **Security**: Follow security best practices in all code
+- **Commit Messages**: Use conventional commits format (`type(scope): message`)
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
+
+## Documentation
+
+For full documentation, visit [cylestio.github.io/cylestio-monitor](https://cylestio.github.io/cylestio-monitor/).
+
+## License
+
+MIT

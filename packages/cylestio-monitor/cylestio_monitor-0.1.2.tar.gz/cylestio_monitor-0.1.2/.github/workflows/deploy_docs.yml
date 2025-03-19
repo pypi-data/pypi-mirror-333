@@ -1,0 +1,63 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/deploy_docs.yml'
+  # Allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material
+          pip install pymdown-extensions
+          pip install "mkdocstrings[python]"
+          pip install -e .
+      
+      - name: Configure Git user
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+      
+      - name: Create .nojekyll files
+        run: |
+          touch ./docs/.nojekyll
+          touch ./.nojekyll
+      
+      - name: Clean gh-pages branch if it exists
+        run: |
+          if git ls-remote --heads origin gh-pages | grep gh-pages; then
+            git branch -D gh-pages || true
+            git push origin --delete gh-pages || true
+          fi
+      
+      - name: Deploy documentation directly to gh-pages branch root
+        run: |
+          # Use mkdocs gh-deploy to deploy directly to the root of gh-pages branch
+          mkdocs gh-deploy --force
+          
+      - name: Verify deployment
+        run: |
+          echo "Documentation deployed to GitHub Pages"
+          echo "If the documentation is not visible, please check the GitHub Pages settings in the repository" 
