@@ -1,0 +1,145 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+        exclude: data
+      - id: check-executables-have-shebangs
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: name-tests-test
+      - id: trailing-whitespace
+        exclude: data
+      - id: end-of-file-fixer
+        exclude: data
+      - id: check-symlinks
+      - id: destroyed-symlinks
+      - id: fix-byte-order-marker
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 3.2.0
+    hooks:
+      - id: editorconfig-checker
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0
+    hooks:
+      - id: mypy
+        additional_dependencies:
+          - "array_api_compat>=1.9"
+          - "typing-extensions>=4.12.2"
+          - "numpy>=1.21.0,<3"
+          - "scipy>=1.6.0"
+          - "typing-extensions>=4.12.2"
+          - "pytest>=7.2.0"
+          - "hypothesis>=6.127.1"
+          - "lark>=1.2.2"
+          - "cyclopts>=3.9.1"
+          - "httpx>=0.28.1"
+          - "tqdm>=4.67.1"
+
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.396
+    hooks:
+      - id: pyright
+        additional_dependencies:
+          - "array_api_compat>=1.9"
+          - "typing-extensions>=4.12.2"
+          - "numpy>=1.21.0,<3"
+          - "scipy>=1.6.0"
+          - "pytest>=7.2.0"
+          - "typing-extensions>=4.12.2"
+          - "hypothesis>=6.127.1"
+          - "lark>=1.2.2"
+          - "cyclopts>=3.9.1"
+          - "httpx>=0.28.1"
+          - "tqdm>=4.67.1"
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.10
+    hooks:
+      - id: ruff
+      - id: ruff-format
+
+  - repo: https://github.com/fpgmaas/deptry.git
+    rev: 0.23.0
+    hooks:
+      - id: deptry
+
+  - repo: https://github.com/jendrikseipp/vulture
+    rev: v2.14
+    hooks:
+      - id: vulture
+
+  - repo: https://github.com/regebro/pyroma
+    rev: "4.2"
+    hooks:
+      - id: pyroma
+
+  - repo: https://github.com/sourcery-ai/sourcery
+    rev: v1.35.0
+    hooks:
+      - id: sourcery
+        args: [--no-summary]
+
+  - repo: https://github.com/numpy/numpydoc
+    rev: v1.8.0
+    hooks:
+      - id: numpydoc-validation
+
+  - repo: https://github.com/dzhu/rstfmt
+    rev: v0.0.14
+    hooks:
+      - id: rstfmt
+        # rstfmt does not support all directives, including 'autosummary'.
+        # See https://github.com/dzhu/rstfmt/issues/30.
+        exclude: overview.rst|ppft.rst
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.6.5
+    hooks:
+      - id: uv-lock
+      - id: uv-export
+
+  - repo: https://github.com/adamchainz/blacken-docs
+    rev: 1.19.1
+    hooks:
+      - id: blacken-docs
+        additional_dependencies:
+          - black
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v4.0.0-alpha.8"
+    hooks:
+      - id: prettier
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.44.0
+    hooks:
+      - id: markdownlint
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.7
+    hooks:
+      - id: actionlint
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.31.3
+    hooks:
+      - id: check-github-workflows
+
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v9.21.0
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]

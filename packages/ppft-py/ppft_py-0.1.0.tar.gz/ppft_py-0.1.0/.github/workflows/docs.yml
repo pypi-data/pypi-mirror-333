@@ -1,0 +1,27 @@
+---
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up the environment
+        uses: ./.github/actions/setup-python-env
+        with:
+          python-version: 3.13
+
+      - name: Install Python dependencies for sphinx docs
+        run: uv venv && uv pip install -r docs/requirements.txt
+
+      - name: Run doctest
+        run: source .venv/bin/activate && cd docs && make doctest
