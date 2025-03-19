@@ -1,0 +1,8 @@
+LICENSE
+README.md
+lyyak.py
+setup.py
+lyyak.egg-info/PKG-INFO
+lyyak.egg-info/SOURCES.txt
+lyyak.egg-info/dependency_links.txt
+lyyak.egg-info/top_level.txt
