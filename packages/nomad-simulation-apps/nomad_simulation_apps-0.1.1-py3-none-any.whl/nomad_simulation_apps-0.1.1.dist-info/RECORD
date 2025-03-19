@@ -1,0 +1,10 @@
+nomad_simulation_apps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nomad_simulation_apps/apps/__init__.py,sha256=XB8A9j3sCgJm8X_gd1IyfIhCdVL2mf5qWEUmSUOi5b0,290
+nomad_simulation_apps/apps/alexandria_app.py,sha256=tFwtn5_h7Eh7wI2_mUzfKZO6Av7vuDanUmZC4urYCC0,7007
+nomad_simulation_apps/apps/alexandria_dashboard.yaml,sha256=PfDvlCUAi49vY1QQ9v1A7vDiVZnJSO1RbY7Cyjuf9P0,5192
+nomad_simulation_apps-0.1.1.dist-info/LICENSE,sha256=CUvt2ilcBwKAfRAnoA4RNPTLcdUj3En21LPK9YkFMGg,11358
+nomad_simulation_apps-0.1.1.dist-info/METADATA,sha256=yTOiDMdqUKqG6lPswYx9chzPhBxdd7rL86mxbgVM3Uc,19886
+nomad_simulation_apps-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+nomad_simulation_apps-0.1.1.dist-info/entry_points.txt,sha256=SH6eDQSVUO8E3iVA6ZtLQD5_x1Me9wiGwX3JJDROtMg,82
+nomad_simulation_apps-0.1.1.dist-info/top_level.txt,sha256=aKZJIyLT0bRVL0nxTZPHb7DoG2-R2ogG9r0SavaE_UE,22
+nomad_simulation_apps-0.1.1.dist-info/RECORD,,
