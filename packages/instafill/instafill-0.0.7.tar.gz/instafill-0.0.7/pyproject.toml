@@ -1,0 +1,21 @@
+[project]
+name = "instafill"
+version = "0.0.7"
+authors = [
+  { name="instafill-ai", email="api@instafill.ai" },
+]
+description = "A tool to automatically fill PDF forms"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://instafill.ai"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

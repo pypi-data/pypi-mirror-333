@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/instafill/__init__.py
+src/instafill/client.py
+src/instafill.egg-info/PKG-INFO
+src/instafill.egg-info/SOURCES.txt
+src/instafill.egg-info/dependency_links.txt
+src/instafill.egg-info/top_level.txt
