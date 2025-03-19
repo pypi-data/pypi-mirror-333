@@ -1,0 +1,3 @@
+[console_scripts]
+convert_jsondoc = jsondoc.bin.convert_jsondoc:main
+validate_jsondoc = jsondoc.bin.validate_jsondoc:main

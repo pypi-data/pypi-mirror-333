@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: python-jsondoc
+Version: 0.1.0
+Author-email: TextCortex Dev Team <dev@textcortex.com>
+Requires-Python: ~=3.12
+Requires-Dist: bs4<0.0.3,>=0.0.2
+Requires-Dist: ipdb<0.14,>=0.13.13
+Requires-Dist: jsonschema<5,>=4.23.0
+Requires-Dist: pillow<11,>=10.3.0
+Requires-Dist: pydantic<3,>=2.7.2
+Requires-Dist: pypandoc~=1.13
+Requires-Dist: python-dotenv<2,>=1.0.1
+Requires-Dist: requests<3,>=2.32.2
+Requires-Dist: thefuzz<0.23,>=0.22.1
+Description-Content-Type: text/markdown
+
+# JSON-DOC
+
+JSON-DOC is a simple and flexible format for storing structured content in JSON files. It is designed to support a wide variety of content types and use cases, such as paragraphs, headings, lists, tables, images, code blocks, HTML and more.
+
+JSON-DOC is an attempt to standardize the data model used by [Notion](https://notion.so).
+
+## Installation
+
+Install the package from PyPI:
+
+```bash
+pip install python-jsondoc
+```
+
+## Features
+
+- Documents are represented as a list of blocks
+- Each block is a JSON object
+- A unique identifier for each block by hashing RFC 8785 Canonical JSON
+- Support for nested blocks
+
+## Motivation
+
+TBD
