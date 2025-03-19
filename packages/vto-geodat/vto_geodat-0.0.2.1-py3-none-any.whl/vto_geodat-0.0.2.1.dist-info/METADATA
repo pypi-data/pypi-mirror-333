@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: vto-geodat
+Version: 0.0.2.1
+Summary: Just a personal test app, not intended for use by anyone else
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# vto_geodat
+Just a personal test app, not intended for use by anyone else
