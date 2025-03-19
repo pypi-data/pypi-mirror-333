@@ -1,0 +1,61 @@
+Metadata-Version: 2.2
+Name: jwst_rogue_path_tool
+Version: 1.0.0
+Summary: Placeholer
+Author: Mario Gennaro, Mees Fix
+Keywords: astronomy,python
+Classifier: Programming Language :: Python
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: astropy>=5.3.1
+Requires-Dist: astroquery>=0.4.7
+Requires-Dist: jupyter>=1.0.0
+Requires-Dist: jwst_backgrounds>=1.2.0
+Requires-Dist: matplotlib>=3.7.2
+Requires-Dist: notebook>=7.2.1
+Requires-Dist: numpy>=1.25.1
+Requires-Dist: pandas>=2.0.3
+Requires-Dist: pip>=23.1.2
+Requires-Dist: pysiaf>=0.22.0
+Requires-Dist: scipy>=1.12.0
+Requires-Dist: sphinx>=8.0.2
+Requires-Dist: sphinx-rtd-theme>=3.0.2
+Requires-Dist: stsci_rtd_theme>=1.0.1
+Requires-Dist: tqdm>=4.66.2
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: stsci_rtd_theme; extra == "docs"
+
+# The JWST Rogue Path Tool
+
+Module to predict the presence of the stray-light artifacts know as claws in NIRCam Imaging observations.
+
+## Installation for Users
+
+To install `jwst_rogue_path_tool`, simply use `pip`:
+
+```
+pip install jwst_rogue_path_tool
+```
+
+To install from source:
+1. Clone Git Repository
+```
+git clone git@github.com:spacetelescope/jwst_rogue_path_tool.git
+```
+2. Install requirements
+```
+pip install .
+```
+
+## Outputs
+
+<img src="docs/_static/exposure_plot_program_0_obs_id_3.png">
+
+<img src="docs/_static/0_1_ALL_100.png">
+
+<img src="docs/_static/v3pa_vs_flux_0_5_B.png">
