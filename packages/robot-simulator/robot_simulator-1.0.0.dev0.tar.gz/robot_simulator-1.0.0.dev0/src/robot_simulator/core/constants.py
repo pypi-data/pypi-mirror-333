@@ -1,0 +1,5 @@
+DOUBLE_FORMAT = "1d"  # 8 bytes
+HEADER_SIZE = 13
+USIGNED_INT = "1I"  # 4 bytes
+UNSIGNED_CHAR_FORMAT = "1B"  # 1 byte
+UNSIGNED_SHORT_FORMAT = "1H"  # 2 bytes
