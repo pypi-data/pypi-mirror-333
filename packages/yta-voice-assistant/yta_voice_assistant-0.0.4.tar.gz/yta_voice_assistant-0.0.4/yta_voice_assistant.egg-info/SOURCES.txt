@@ -1,0 +1,14 @@
+README.md
+setup.py
+yta_voice_assistant/__init__.py
+yta_voice_assistant/wit.py
+yta_voice_assistant.egg-info/PKG-INFO
+yta_voice_assistant.egg-info/SOURCES.txt
+yta_voice_assistant.egg-info/dependency_links.txt
+yta_voice_assistant.egg-info/requires.txt
+yta_voice_assistant.egg-info/top_level.txt
+yta_voice_assistant/audio/__init__.py
+yta_voice_assistant/audio/narration.py
+yta_voice_assistant/audio/sound.py
+yta_voice_assistant/audio/speech/__init__.py
+yta_voice_assistant/audio/speech/detector.py

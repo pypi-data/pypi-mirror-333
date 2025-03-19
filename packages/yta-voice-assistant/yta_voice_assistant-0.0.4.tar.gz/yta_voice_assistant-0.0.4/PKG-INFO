@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: yta_voice_assistant
+Version: 0.0.4
+Summary: Youtube Autonomous Voice Assitant.
+Home-page: UNKNOWN
+Author: Daniel Alcalá
+Author-email: <danielalcalavalera@gmail.com>
+License: UNKNOWN
+Description: This is the Youtube Autonomous Voice Assitant
+Keywords: youtube autonomous voice assistant software
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
