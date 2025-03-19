@@ -1,0 +1,5 @@
+httpx
+websockets
+
+[:python_version < "3.12"]
+typing_extensions>=4.5.0
