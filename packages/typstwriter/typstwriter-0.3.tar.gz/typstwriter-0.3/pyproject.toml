@@ -1,0 +1,69 @@
+[project]
+name = "typstwriter"
+description = "An integrated editor for the typst typesetting system."
+authors = [{name = "Bzero", email = "B_0@posteo.net"}]
+readme = "README.md"
+license = {text = "MIT License"}
+requires-python = ">=3.10"
+keywords = ["typst"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Text Editors",
+    "Topic :: Text Editors :: Word Processors",
+]
+dependencies = [
+"qtpy >= 2.3",
+"pyside6 >= 6.4.0",
+"pygments >= 2.18",
+"platformdirs >= 4.0"
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = [
+  "pytest",
+  "pytest-qt",
+  "fpdf"
+]
+
+[project.urls]
+Repository = "https://github.com/Bzero/typstwriter"
+
+[project.gui-scripts]
+typstwriter = "typstwriter.typstwriter:main"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.ruff]
+line-length = 128
+indent-width = 4
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "N", "D", "Q", "PL", "R", "C", "B", "C4", "G", "PT", "RET", "RUF", "SIM", "UP"]
+ignore = ["D212", "D203", "D400", "RET505", "D100", "PLR0915", "RET504", "PLE1205", "UP015", "PLC2401", "PLR0913", "PT001"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = false
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["N802"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+pythonpath = "."
+testpaths = "tests"
+log_cli_level = "INFO"
+xfail_strict = true
+addopts = ["-r all", "--strict-config", "--strict-markers"]
+filterwarnings = ["error",
+                  "ignore:Failed to disconnect .* from signal:RuntimeWarning",
+                  "ignore:GObject.GError is deprecated; use GLib.GError instead"]
