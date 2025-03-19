@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: omkarbhosale-upi-qr
+Version: 1.1.0
+Summary: Generate UPI QR codes with specified amounts
+Home-page: https://github.com/0mkarBhosale07/python-upi-qr
+Author: Omkar Bhosale
+Author-email: omkarbhosale5484@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: qrcode[pil]>=7.4.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# UPI QR Generator
+
+Python package to generate UPI payment QR codes with specified amounts.
+
+## Installation
+
+```bash
+pip install omkarbhosale-upi-qr
+```
+
+### Usage
+
+```python
+from upi_qr import omkarbhosale_upi_qr
+
+# Basic usage
+qr_image = omkarbhosale_upi_qr(
+    upi_id="omkarb@example",
+    amount=500.75
+)
+
+# With error handling
+try:
+    qr_data = omkarbhosale_upi_qr("test@upi", 50)
+    print(f"QR Code: {qr_data[:50]}...")  # Show partial output
+except ValueError as e:
+    print(f"Error: {e}")
+```

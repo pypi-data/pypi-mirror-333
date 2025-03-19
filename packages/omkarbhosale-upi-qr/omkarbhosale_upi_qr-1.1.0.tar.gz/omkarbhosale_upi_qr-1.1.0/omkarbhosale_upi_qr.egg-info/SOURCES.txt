@@ -1,0 +1,10 @@
+README.md
+setup.py
+omkarbhosale_upi_qr/__init__.py
+omkarbhosale_upi_qr/generator.py
+omkarbhosale_upi_qr.egg-info/PKG-INFO
+omkarbhosale_upi_qr.egg-info/SOURCES.txt
+omkarbhosale_upi_qr.egg-info/dependency_links.txt
+omkarbhosale_upi_qr.egg-info/requires.txt
+omkarbhosale_upi_qr.egg-info/top_level.txt
+test/test.py
