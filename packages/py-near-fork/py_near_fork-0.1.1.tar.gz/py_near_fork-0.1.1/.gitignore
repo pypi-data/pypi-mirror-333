@@ -1,0 +1,8 @@
+venv
+build
+dist
+.idea
+tests
+py_near.egg-info
+env
+.env
