@@ -1,0 +1,9 @@
+h5py
+Pillow
+
+[:python_version >= "3.10"]
+packaging
+
+[all]
+tifffile[all]
+pycbf[all]

@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: scisoftpy
+Version: 2.37.1
+Summary: DAWN Python Extensions
+Author: Peter Chang
+Maintainer-email: Data Analysis group <dataanalysis@diamond.ac.uk>
+License: Apache-2.0
+Project-URL: source, https://github.com/DawnScience/scisoft-core
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: h5py
+Requires-Dist: Pillow
+Requires-Dist: packaging; python_version >= "3.10"
+Provides-Extra: all
+Requires-Dist: tifffile[all]; extra == "all"
+Requires-Dist: pycbf[all]; extra == "all"
