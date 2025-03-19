@@ -1,0 +1,8 @@
+quark/__main__.py,sha256=dL-b92QuDqFHfOVgFefQEDgR1S0EYmwpJmZ6I5PmNSA,3853
+quark/protocols.py,sha256=iAYo1MLAxLJqBfwp-J4K3Q6PM44_zLliZOj99IAPx_M,6376
+quark/plugin_manager/factory.py,sha256=HBDYB1HcY8WWGCMfUqMtHgfQMK0ICdByBzO7m4TwSJw,698
+quark/plugin_manager/loader.py,sha256=5W8Ayj7J7HwEd-Ckd_uMDnTMf_WIJHj5Dq59f9qMsOw,418
+quark_framework-0.1.2.dist-info/METADATA,sha256=U68RE70hrDNDg1O7UwMYv3TZZK3GavkKw274o3oQqDc,851
+quark_framework-0.1.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+quark_framework-0.1.2.dist-info/top_level.txt,sha256=7SspgYXMW_50_NVkPj0EbFg4jFlGVsaIDfpqNsA1IMY,6
+quark_framework-0.1.2.dist-info/RECORD,,
