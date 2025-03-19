@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "char_art"
+version = "0.1.0"
+description = "方便地制作字符画与字符视频 ~"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.6.0"
+authors = [
+    { name = "Liu Wei", email = "23S112099@stu.hit.edu.cn" }
+]
+maintainers = [
+    { name = "Liu Wei", email = "23S112099@stu.hit.edu.cn" }
+]
+license = { file = "LICENSE" }
+keywords = ["char_art", "character image", "character video"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "opencv-python",
+    "numpy"
+]
+
+[project.optional-dependencies]
+save = ["pygame"]
+
+[project.urls]
+Homepage = "https://github.com/AomandeNiuma/char_art"
