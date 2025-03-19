@@ -1,0 +1,13 @@
+zxarray/__DMUnit.py,sha256=1X_Yf1Qw1F5ezAaqHaRqYohLmtSCoLS7sZ3Up-Mc06I,16893
+zxarray/__ZXArray.py,sha256=6Fm-iKTKvIXkhs9YufFdCnqb7s9Ydyl1x5ydLe71Wc8,25807
+zxarray/__apply_ufunc.py,sha256=j4RwR9LJ5oq3HDvMIWlYJR4V4zqCRJtARfbah6egUUw,10283
+zxarray/__init__.py,sha256=n4IHCLoWc5BzssmH52I_PxNlYC8bUdIImHVsE-nnMPI,1054
+zxarray/__map_ufunc.py,sha256=Bpc388D6og_w0AopT6DvKIFRIumfzjJ8xmNovWReHmw,8925
+zxarray/__release.py,sha256=RzRtwojAQlERn0cAyBcaHrQM0NHtyw1OqWIMTxA8X-g,2243
+zxarray/__sys.py,sha256=D7bkjdxurfbm6kVzRt9jPDbrjF0r2sQEyXVfAxg3W20,1719
+zxarray/__zxParams.py,sha256=1lIoCO4pIaZT8DzqmuDrM5gshRHbLmSplZGIlw62e_E,1413
+zxarray-0.10.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+zxarray-0.10.2.dist-info/METADATA,sha256=vfXJ6XLKS5t2TWpbHdkM5bfYBZk4xiiq99Y8TCdyRxI,769
+zxarray-0.10.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+zxarray-0.10.2.dist-info/top_level.txt,sha256=Auqv3_XVweHpI3hsVGygh42o9dui_0u5RQKfuNvDrvg,8
+zxarray-0.10.2.dist-info/RECORD,,
