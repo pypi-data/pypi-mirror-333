@@ -1,0 +1,2 @@
+[console_scripts]
+wflite = wflite.cli.workflow_cli:main
