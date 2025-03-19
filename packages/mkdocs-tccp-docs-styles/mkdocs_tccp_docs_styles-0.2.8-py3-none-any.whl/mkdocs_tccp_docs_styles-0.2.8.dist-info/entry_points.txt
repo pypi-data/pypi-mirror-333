@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+tccp-docs-styles = mkdocs_tccp_docs_styles:TCCPDocsStylesPlugin
