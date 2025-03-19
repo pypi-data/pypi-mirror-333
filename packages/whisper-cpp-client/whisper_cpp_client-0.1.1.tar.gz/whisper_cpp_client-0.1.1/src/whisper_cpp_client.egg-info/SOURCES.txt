@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/whisper_cpp_client/WhisperCppClient.py
+src/whisper_cpp_client/__init__.py
+src/whisper_cpp_client.egg-info/PKG-INFO
+src/whisper_cpp_client.egg-info/SOURCES.txt
+src/whisper_cpp_client.egg-info/dependency_links.txt
+src/whisper_cpp_client.egg-info/requires.txt
+src/whisper_cpp_client.egg-info/top_level.txt
