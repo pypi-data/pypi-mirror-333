@@ -1,0 +1,9 @@
+README.md
+ai_screenshot.py
+setup.py
+ai_screenshooter.egg-info/PKG-INFO
+ai_screenshooter.egg-info/SOURCES.txt
+ai_screenshooter.egg-info/dependency_links.txt
+ai_screenshooter.egg-info/entry_points.txt
+ai_screenshooter.egg-info/requires.txt
+ai_screenshooter.egg-info/top_level.txt

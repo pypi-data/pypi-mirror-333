@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ai-screenshooter
+Version: 1.0.0
+Summary: A CLI tool to capture and send AI-powered screenshots
+Home-page: https://github.com/tech4vision/ai-screenshoter
+Author: Victor Oliveira
+Author-email: victor.soares@live.it
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: pynput
+Requires-Dist: requests
+Requires-Dist: Pillow
+Requires-Dist: pygetwindow
