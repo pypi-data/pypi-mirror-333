@@ -1,0 +1,16 @@
+exclude_dirs:
+  [
+    "psswd_box/.venv/",
+    "psswd_box/dist/",
+    "psswd_box/src/psswd_box/__pycache__",
+    "psswd_box/src/psswd_box/resources/",
+    ".gitignore",
+    ".python-version",
+    "bandit.yaml",
+    "LICENSE",
+    "pyproject.toml",
+    "README.md",
+    "uv.lock",
+  ]
+tests: []
+skips: []
