@@ -1,0 +1,53 @@
+{% extends 'admin_panel/base.html' %}
+{% import "macros/form.html" as form %}
+{% block breadcrumb_content %}
+    <li>{% link_for _(breadcrum_label), request.endpoint %}</li>
+{% endblock breadcrumb_content %}
+
+{% block ap_content %}
+    <h1>{{ _(page_title) }}</h1>
+
+    {% block before_form %}{% endblock %}
+
+    {% block form %}
+        <div>
+            {% for schema, items in overrides.items() %}
+                <ul>
+                    <strong>{{ schema }}</strong>
+                    {% for item in items %}
+                        <li>{{ item.data | tojson }}
+                            <form method="POST">
+                                <input name="flake_id" type="hidden" value="{{ item.id }}"/>
+                                <input name="remove" type="submit" value="Remove"/>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+
+        <form method="POST">
+
+            {{ form.select("schema", label=_("Schema"), options=schema_options, is_required=true) }}
+
+            {{ form.select("type", label=_("Type"), options=[
+                {"text": "Remove", "value": "remove"},
+                {"text": "Add", "value": "add"},
+                {"text": "Patch", "value": "patch"},
+            ], is_required=true) }}
+
+            {{ form.input("field", label=_("Field"), is_required=true) }}
+            {{ form.input("label", label=_("Label")) }}
+            {{ form.checkbox("required", label=_("Required"), value="yes") }}
+            {{ form.input("help_text", label=_("Help text")) }}
+
+
+            {% block form_buttons %}
+                <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
+            {% endblock %}
+
+        </form>
+    {% endblock %}
+
+    {% block after_form %}{% endblock %}
+{% endblock ap_content %}
