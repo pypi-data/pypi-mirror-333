@@ -1,0 +1,12 @@
+elib/__init__.py,sha256=d05Aw0W4HG1KaWx0H9Bmg1BGNnDlPfmW7j40a6AJS9s,2150
+elib/codeerror.py,sha256=9M4LcecNaebOwOdjtZVuy2hmTymkJRTMzohMSZHH_wA,614
+elib/deverror.py,sha256=lKpiSZQ8ZsWUVcly67kdG6h9wPrz5x9DlgcFxbCNLOA,592
+elib/dunnoerror.py,sha256=D7DYaOO_DEydPwir-utLC7UF2mBHggBPtt7k7wDLxIg,329
+elib/hardwareerror.py,sha256=5RWPNOUH1jqV510OQL9xegwe5ddUaKB43o2WDiM3mHI,541
+elib/logicerror.py,sha256=I2bqkobV3Gpl2ObZGMfgk38AbMx0_kUlfduXTdxY8ZA,481
+elib/usererror.py,sha256=5rxBN-YKumEpESN6HB_VscS9SE6SHOMTn8G5eECZaW8,879
+errorslib-1.2.dist-info/LICENSE,sha256=Y_TWNudK9z0GnLzwkKrJpUHtexvZfuJdsYVduzbC4Ak,1080
+errorslib-1.2.dist-info/METADATA,sha256=GmJhAMnx8S9kVvswzrlYfALb6nCFyI2mXif1fCTqHW0,2754
+errorslib-1.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+errorslib-1.2.dist-info/top_level.txt,sha256=mnlN1Acao8i492nbGjlrUOXMHwMdeH9k5T9JJxwlJ8s,5
+errorslib-1.2.dist-info/RECORD,,
