@@ -1,0 +1,79 @@
+Metadata-Version: 2.2
+Name: HealpixML
+Version: 1.0.0
+Summary: Package adapted for Machine Learning on the Healpix grid.
+Author-email: Jean-Marc DELOUIS <jean.marc.delouis@ifremer.fr>
+Maintainer-email: Theo Foulquier <theo.foulquier@ifremer.fr>
+License: BSD-3-Clause
+Project-URL: Repository, https://github.com/jmdelouis/HealpixML.git
+Project-URL: Issues, https://github.com/jmdelouis/HealpixML/issues
+Project-URL: Documentation, https://healpixml-documentation.readthedocs.io/en/latest/index.html
+Keywords: scattering transform,component separation,denoising
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: imageio
+Requires-Dist: imagecodecs
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: healpy
+Requires-Dist: spherical
+
+# HealpixML
+
+## the concept
+
+The HealpixML genesis has been built to synthesise data (2D or Healpix) using Cross Scattering Transform. For a detailed method description please refer to https://arxiv.org/abs/2207.12527. This algorithm could be effectively usable for component separation (e.g. denoising).
+
+## Authors
+J.-M. Delouis, T. Foulquier, L. Mousset, T. Odaka,  P. Campeti, E. Allys,  F. Paul,
+
+# Short tutorial
+
+## Exemple of synthesis
+
+https://github.com/jmdelouis/HealpixML/blob/main/Notebooks/Demo_Synthesis.ipynb
+
+A more complete exemple of what is doable with HealpixML is here https://github.com/pcampeti/CMBSCAT
+
+# Install HealpixML library
+
+Before installing, make sure you have python installed in your enviroment.
+The last version of the HealpixML library can be installed using PyPi:
+
+```
+pip install HealpixML
+```
+
+## Recommended installing procedures for mac users
+
+It is recomended to use python=3.9\*.
+It is recomended to install tensorflow in advance.
+
+```
+micromamba create -n HEALPIXML
+micromamba install -n HEALPIXML ‘python==3.9*’
+micromamba install -n HEALPIXML ‘tensorflow’
+micromamba activate HEALPIXML
+pip install HealpixML
+
+```
+
+## Recommended installing procedures HPC users
+
+It is recomended to install tensorflow in advance. For [DATARMOR](https://pcdm.ifremer.fr/Equipement) for using GPU ;
+
+```
+micromamba create -n HEALPIXML
+micromamba install -n HEALPIXML ‘python==3.9*’
+micromamba install -n HEALPIXML ‘tensorflow==2.11.0’
+micromamba activate HEALPIXML
+pip install HealpixML
+
+```
