@@ -1,0 +1,16 @@
+odoo/addons/quality_control_wait_approval/README.rst,sha256=Nw7alP5L4URcqKzEnaLswKxGN6NyrNTgSOeQZDOUSXg,2973
+odoo/addons/quality_control_wait_approval/__init__.py,sha256=eShEGRadAlxopoLqIQ4-N42FM7MWPSuBe0h_l1cXTPM,87
+odoo/addons/quality_control_wait_approval/__manifest__.py,sha256=wY4f9KGH-UQ58HSO3uy-k4YuPqEfBdb_IDC-wpDIM1Y,585
+odoo/addons/quality_control_wait_approval/models/__init__.py,sha256=zDA_WOpdUMhAmzf_tQK7dmklx9AqBsaXN0mocskf7co,94
+odoo/addons/quality_control_wait_approval/models/qc_inspection.py,sha256=vGqmpgPt6-3zOFXZEBcZluA2IpQ_6SBiEEuVwNZFm0U,350
+odoo/addons/quality_control_wait_approval/readme/CONTRIBUTORS.md,sha256=vdTcwM0_6IuPK1jIEMuLS9tYXVdeqoRcW38GgFp2UV8,136
+odoo/addons/quality_control_wait_approval/readme/DESCRIPTION.md,sha256=T1ojnU6zaEhHEu9ioKYu_DF3oVXnrjziUlg9o7kLBt8,322
+odoo/addons/quality_control_wait_approval/readme/USAGE.md,sha256=CD7eAtxIOGD1SN8AIFa3QJvp5JT_EzgFwfQa39hVrY8,457
+odoo/addons/quality_control_wait_approval/static/description/icon.png,sha256=bVbNdnyk7PXHuZ3ye_Aqh1M9tbfPJ5zU5W1VnoO8mBQ,35820
+odoo/addons/quality_control_wait_approval/static/description/index.html,sha256=Ryfll50-4YwZOMMZDTP6z7MZ9v-4SxK_KY40x-2ws58,12497
+odoo/addons/quality_control_wait_approval/tests/__init__.py,sha256=PEyprlhL4vFPDo2pJE4_Y7ca1Il4b8irpg0h9T4LJuU,115
+odoo/addons/quality_control_wait_approval/tests/test_quality_control_wait_approval.py,sha256=tchwtsTO8Ia5t72ZsJGqBK8LYrYf7tdVQS0uMpO844c,999
+odoo_addon_quality_control_wait_approval-17.0.1.0.0.1.dist-info/METADATA,sha256=5t8Tr7nPbWhADIkXOmfwAiXQsjeyNmDPSqOSPO3VYt0,3621
+odoo_addon_quality_control_wait_approval-17.0.1.0.0.1.dist-info/WHEEL,sha256=9fEMia4zL7ZuZbnCOrcYogUhmn4XFIVaJ8G4YGI31xc,81
+odoo_addon_quality_control_wait_approval-17.0.1.0.0.1.dist-info/top_level.txt,sha256=QE6RBQ0QX5f4eFuUcGgU5Kbq1A_qJcDs-e_vpr6pmfU,4
+odoo_addon_quality_control_wait_approval-17.0.1.0.0.1.dist-info/RECORD,,
