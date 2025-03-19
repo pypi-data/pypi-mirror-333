@@ -1,0 +1,16 @@
+obspec/__init__.py,sha256=VJcWZy8CxefWaTqVPOFUoQlu69PWR49l006pqXj1XBw,693
+obspec/_attributes.py,sha256=RNJRLUJ-xcXTgnhvbeG5zJkLYs4CxhAA1wAJDrzhLpA,1614
+obspec/_copy.py,sha256=g6YbkxRtZla31RcvPO_5ooN6f5sSMftKKP2GxcveVc0,1135
+obspec/_delete.py,sha256=wbJmJYrOCSC9Vnnh3qikTaFFrt-DtRxm3M6Gd8kquLc,1041
+obspec/_get.py,sha256=LdmCfrx4TY7wIE9W1vDUnziH968FolgnP-sTMVG91wE,10504
+obspec/_head.py,sha256=Ko7D3LcMYEnzV-XvzpKw4-vq81iPhd17WGmrBWyffQ8,610
+obspec/_list.py,sha256=j2AE3ReqSKR3fdXSOqK8U83YL2k-CsZDrIxrywxia1g,9240
+obspec/_meta.py,sha256=-z2qRqIU0nhhDgX5514oNCFx2PgBqiI1kQ46Eoc1h0E,594
+obspec/_put.py,sha256=EEFOyTjVvQaPPazGubMrtXXzIdlKep8N4h1B5HUEWCo,6799
+obspec/_rename.py,sha256=WfG4pibhv3P3Mnig-M73HXkFdupg0JJ8_G2y-CI1JMk,1042
+obspec/arrow.py,sha256=fGFtB32ZedgAGveHKOa3muy3VNbD4pEC3uCPzax-lmk,1949
+obspec/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+obspec-0.1.0b1.dist-info/METADATA,sha256=gxVRscrVHuc0yRYXrDR2YebM6eeWEVD9LANiuf4zcRw,950
+obspec-0.1.0b1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+obspec-0.1.0b1.dist-info/licenses/LICENSE,sha256=O7KqsO8oJSUZItfUY1pf1myvaXnmm_UKCCorFcQc8a4,1073
+obspec-0.1.0b1.dist-info/RECORD,,

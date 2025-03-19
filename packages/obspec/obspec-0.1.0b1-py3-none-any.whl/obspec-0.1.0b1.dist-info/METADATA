@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: obspec
+Version: 0.1.0b1
+Summary: Object storage interface definitions for Python.
+Project-URL: homepage, https://developmentseed.org/obstore/latest/
+Project-URL: documentation, https://developmentseed.org/obstore/latest/
+Project-URL: repository, https://github.com/developmentseed/obstore
+Project-URL: issues, https://github.com/developmentseed/obstore/issues
+Project-URL: changelog, https://github.com/developmentseed/obstore/blob/main/obspec/CHANGELOG.md
+Author-email: Kyle Barron <kyle@developmentseed.org>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# obspec
+Object storage interface definitions for Python
