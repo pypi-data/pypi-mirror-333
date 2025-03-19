@@ -1,0 +1,11 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/ultrasmtp/__init__.py
+src/ultrasmtp/sendemail.py
+src/ultrasmtp.egg-info/PKG-INFO
+src/ultrasmtp.egg-info/SOURCES.txt
+src/ultrasmtp.egg-info/dependency_links.txt
+src/ultrasmtp.egg-info/top_level.txt
