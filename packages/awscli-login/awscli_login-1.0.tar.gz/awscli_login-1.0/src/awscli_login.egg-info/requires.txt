@@ -1,0 +1,10 @@
+botocore
+keyring
+lxml
+requests
+
+[test]
+awscli
+tblib
+wurlitzer
+vcrpy
