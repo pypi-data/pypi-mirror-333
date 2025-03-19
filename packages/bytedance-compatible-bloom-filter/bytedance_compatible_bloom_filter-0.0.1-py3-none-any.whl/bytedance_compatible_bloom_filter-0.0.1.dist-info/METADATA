@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bytedance-compatible-bloom-filter
+Version: 0.0.1
+Summary: A simple package named bytedance_compatible_bloom_filter
+Home-page: https://github.com/artifact/bytedance_compatible_bloom_filter.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
+
