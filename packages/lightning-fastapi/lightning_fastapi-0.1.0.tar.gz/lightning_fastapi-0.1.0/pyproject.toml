@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "lightning-fastapi"
+version = "0.1.0"
+description = "Lightning FastAPI - A containerised quick starter template for FastAPI backends with pre-configured authentication, database connections, and Docker support."
+authors = ["JY"]
+readme = "README.md"
+packages = [{include = "lightning_fastapi"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.111.0"
+sqlmodel = "^0.0.19"
+tenacity = "^8.5.0"
+alembic = "^1.13.2"
+psycopg2-binary = "^2.9.9"
+sqlalchemy = "^2.0.29"
+watchfiles = "^0.22.0"
+pydantic-settings = "^2.3.4"
+psycopg = {version = "^3.2.1", extras = ["binary", "pool"]}
+passlib = "^1.7.4"
+python-jose = "^3.3.0"
+psycopg2 = "^2.9.9"
+openai = "^1.63.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "lightning-fastapi"
+version = "0.1.0"
+description = "Lightning FastAPI - A containerised quick starter template for FastAPI backends with pre-configured authentication, database connections, and Docker support."
+readme = "README.md"
+authors = [
+    {name = "JY"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "inquirer>=3.1.0",
+]
+
+[project.scripts]
+lightning-fastapi = "lightning_fastapi.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/yiyuan9/lightning-fastapi"
+"Bug Tracker" = "https://github.com/yiyuan9/lightning-fastapi/issues"
