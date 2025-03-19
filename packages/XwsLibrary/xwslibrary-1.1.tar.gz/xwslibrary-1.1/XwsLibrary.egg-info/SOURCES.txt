@@ -1,0 +1,11 @@
+README.md
+license.txt
+setup.py
+XwsLibrary/FontChoose.py
+XwsLibrary/InputBox.py
+XwsLibrary/__init__.py
+XwsLibrary/setup.py
+XwsLibrary.egg-info/PKG-INFO
+XwsLibrary.egg-info/SOURCES.txt
+XwsLibrary.egg-info/dependency_links.txt
+XwsLibrary.egg-info/top_level.txt
