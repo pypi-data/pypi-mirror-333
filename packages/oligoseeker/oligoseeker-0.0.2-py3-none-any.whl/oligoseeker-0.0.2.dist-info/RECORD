@@ -1,0 +1,14 @@
+OligoSeeker/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+OligoSeeker/_modidx.py,sha256=L0B0uI7kZF7mlDzeT_k9G9W1TJ8x2JoHhDUyasuFIsM,9677
+OligoSeeker/cli.py,sha256=k3t1k11ZdduAemRWCSfSZeVL_g-IO3QBej5218UETqw,7795
+OligoSeeker/core.py,sha256=9ircRLSoEek6-XxWEPloC1YPYsHA-UPTzuKdbwIAru0,5244
+OligoSeeker/dna_utils.py,sha256=c4yffm6DKGmkiC2EUqHMpBkOXLL0dRQvu7T1z7p5RxY,3064
+OligoSeeker/fastq.py,sha256=qPEXy8rB0GUeTjo3SUGdXdh2YbfzIDI92laWZB1mtBI,4862
+OligoSeeker/output.py,sha256=P5nIdoTKFuy3dTjhJtFO7DAZ2PmJFj9IsXGHcxLoQ8c,8218
+OligoSeeker/pipeline.py,sha256=eMR16zOg753_uEo8unviX9miMiXYZmH6ODe6-ZvSgKo,10188
+oligoseeker-0.0.2.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+oligoseeker-0.0.2.dist-info/METADATA,sha256=eSfRw3JA2xDMR1AqWEmvWKAeWHO9ULRDdIVC6nwq0Bc,10146
+oligoseeker-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+oligoseeker-0.0.2.dist-info/entry_points.txt,sha256=mS1fHAUyxWKXqQ42OHyzX2BT5-fzCi-za1l1ofKctJA,98
+oligoseeker-0.0.2.dist-info/top_level.txt,sha256=Bm1K0Qh1DirVz000ZF4G00G55h-KK2vLVMMygC7uy8E,12
+oligoseeker-0.0.2.dist-info/RECORD,,
