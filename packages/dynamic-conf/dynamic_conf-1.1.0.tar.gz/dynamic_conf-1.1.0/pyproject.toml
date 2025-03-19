@@ -1,0 +1,51 @@
+[project]
+name = "dynamic-conf"
+dynamic = ["version"]
+description = "Easy to manage Config variables separate from App code. Useful while developing and deploying( CI/CD) django web-apps"
+authors = [{ name = "Noortheen Raja", email = "jnoortheen@gmail.com" }]
+requires-python = ">=3.8"
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "django",
+    "configuration",
+    "12 factor settings",
+]
+classifiers = [
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["arger>=1.0.10,<2"]
+
+[project.urls]
+Homepage = "https://github.com/jnoortheen/dynamic-conf"
+Repository = "https://github.com/jnoortheen/dynamic-conf"
+
+[project.scripts]
+dynamic-conf = "dynamic_conf:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "tox",
+    "sniffer",
+    # "pyinotify>=0.9.6,<0.10",
+    "ipython",
+    "better-exceptions",
+]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
