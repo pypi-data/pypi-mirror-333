@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: langchain-zotero-retriever
+Version: 0.1.1
+Summary: A retriever for the langchain framework, connecting to the zotero API. Utilizes pyzotero.
+Author: Tim König
+Author-email: 32549063+TimBMK@users.noreply.github.com
+Requires-Python: >=3.9, <4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: langchain-core (>=0.3.41,<0.4.0)
+Description-Content-Type: text/markdown
+
+A retriever for the langchain framework, connecting to the zotero API. Utilizes pyzotero.
+
