@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+fastapi_scaffold/__init__.py
+fastapi_scaffold/cli.py
+fastapi_scaffold/templates.py
+fastapi_scaffold/utils.py
+fastapi_scaffold.egg-info/PKG-INFO
+fastapi_scaffold.egg-info/SOURCES.txt
+fastapi_scaffold.egg-info/dependency_links.txt
+fastapi_scaffold.egg-info/entry_points.txt
+fastapi_scaffold.egg-info/requires.txt
+fastapi_scaffold.egg-info/top_level.txt
