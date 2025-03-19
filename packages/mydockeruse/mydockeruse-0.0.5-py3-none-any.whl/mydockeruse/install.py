@@ -1,0 +1,1 @@
+default_docker_environment_manager.install(input('docker img : '))
