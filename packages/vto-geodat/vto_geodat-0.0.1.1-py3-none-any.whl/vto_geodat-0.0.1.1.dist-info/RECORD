@@ -1,0 +1,17 @@
+vto_geodat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vto_geodat/admin.py,sha256=09CQDLsvxlGLkFImcVqpWBMXxAxrPTfyePO5TYHr6vM,817
+vto_geodat/apps.py,sha256=lTZokHwYmvYFCxeHVIc8yANSeinCEk2coT3Le1G0szE,151
+vto_geodat/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+vto_geodat/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+vto_geodat/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+vto_geodat/admin2/__init__.py,sha256=z6dO-LvewGvzbqsJ2oWFvpbQ4o48gpIc0-gQMZTzA7Y,44
+vto_geodat/admin2/time_a.py,sha256=09CQDLsvxlGLkFImcVqpWBMXxAxrPTfyePO5TYHr6vM,817
+vto_geodat/migrations/0001_initial.py,sha256=6hmolMHHHFBPBFSTUmGw5indmvUqu-D2fAich2C2_Dc,2148
+vto_geodat/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vto_geodat/models/__init__.py,sha256=EXSI9FZtU9ZslCO7JbB4rsmYlW8tP0dqPTx60dsr4GU,44
+vto_geodat/models/time_m.py,sha256=sb1HRU2nmi_O5PxzRiIz78Ltica9UEfRW_6Ja2HqKhY,1893
+vto_geodat/models/xyz_m.py,sha256=-RIVIOrmwsL6M8I9JwX42wFG8hK4fWAAEcjoa5klvI4,1839
+vto_geodat-0.0.1.1.dist-info/METADATA,sha256=7wvg0VKzoXDy5wV8EXD-l6QAcvJvqJtUHml6H0Sreg8,250
+vto_geodat-0.0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vto_geodat-0.0.1.1.dist-info/licenses/LICENSE,sha256=ObKz2Ts26RpIqtTMhHd5Vi4NY4e3Lvl7b81TvoQWqa4,1059
+vto_geodat-0.0.1.1.dist-info/RECORD,,
