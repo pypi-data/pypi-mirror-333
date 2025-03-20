@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: grape2spectrogram
+Version: 3.2
+Summary: Generates spectrograms from Digital RF files created by Grape 2 receivers
+Home-page: https://github.com/hopper19/grape-drf-plotter.git
+License: GPL-3.0
+Author: hopper19
+Author-email: cuongvnus2001@gmail.com
+Requires-Python: >=3.12.7,<4.0.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: astropy (>=7.0.1,<8.0.0)
+Requires-Dist: digital-rf (>=2.6.11,<3.0.0)
+Requires-Dist: matplotlib (>=3.10.1,<4.0.0)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: pvlib (>=0.11.2,<0.12.0)
+Requires-Dist: scipy (>=1.15.2,<2.0.0)
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Project-URL: Repository, https://github.com/hopper19/grape-drf-plotter.git
+Description-Content-Type: text/markdown
+
+# Grape2 Spectrogram Generator
+
+```
+Usage: spectrogram.py [-h] -i INPUT_DIR -o OUTPUT_DIR [-v]
+
+Grape2 Spectrogram Generator
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT_DIR, --input_dir INPUT_DIR
+                        Path to the directory containing a ch0 subdirectory
+  -o OUTPUT_DIR, --output_dir OUTPUT_DIR
+                        Output directory for plot
+  -v, --version         show program version
+```
+
