@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: DigiCoreOdbc
+Version: 1.0.0
+Summary: DigiCoreOdbc是一个基于Python的数字化支持部数据库连接使用的第三方库，旨在为数据处理和开发提供完备的工具集和服务。
+Author: yarm
+Author-email: yangyang@doocn.com
+License: MIT License
+Keywords: DigiCoreOdbc是服务于道诚集团数字化支持部的自建第三方库项目
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: async-timeout>=5.0.1
+Requires-Dist: DBUtils>=3.1.0
+Requires-Dist: dnspython>=2.7.0
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: pymongo>=4.11.1
+Requires-Dist: PyMySQL>=1.1.1
+Requires-Dist: redis>=5.2.1
