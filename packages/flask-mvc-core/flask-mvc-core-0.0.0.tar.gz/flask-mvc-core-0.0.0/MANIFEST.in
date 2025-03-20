@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+recursive-include flask_mvc_core *
+recursive-include exceptions *
+recursive-include helps *
