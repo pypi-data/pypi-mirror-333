@@ -1,0 +1,50 @@
+[project]
+name = "predpca-py"
+version = "0.1.1"
+description = "PredPCA: Predictive Principal Component Analysis"
+authors = [{ name = "Takuya Isomura", email = "takuya.isomura@riken.jp" }]
+maintainers = [
+    { name = "Araya Research DX", email = "araya-researchdx-service@araya.org" },
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "ffmpeg-python", # need ffmpeg
+    "moviepy",       # need ffmpeg
+    "scikit-image",
+    "tqdm",
+]
+
+[project.urls]
+"Repository" = "https://github.com/takuyaisomura/predpca-py"
+"Bug Tracker" = "https://github.com/takuyaisomura/predpca-py/issues"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = { find = {} }
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]
