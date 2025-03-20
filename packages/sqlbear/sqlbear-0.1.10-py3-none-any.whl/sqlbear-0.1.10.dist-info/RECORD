@@ -1,0 +1,10 @@
+sqlbear/__init__.py,sha256=g2dH7kylo3H6WKZVIxG44yB8Yv-oqyGI2UqVbvnMaTM,327
+sqlbear/_version.py,sha256=jLGuFdEwhMvHvklOJPvsqvbHQj9TW5k2grc-tedu-YE,22
+sqlbear/bson_connector.py,sha256=m25uMYZVDZS7OPhpgcqpOBX3BQXzCKUaUVX2aPo6LHw,773
+sqlbear/core.py,sha256=j6emZ8Bj_xR9H0XIp9Fn5H7J7CqbBq0UVMM3ABw-ukU,2342
+sqlbear/sql_helpers.py,sha256=ESIWVUiLM1gFsEVgBLzxJpFOhKkIC-KdmaP5IP14LiU,14729
+sqlbear-0.1.10.dist-info/LICENSE,sha256=ZpPJm_hp_K2C13xiHQU0O8p2T0jstamyumiDjr6TnVY,1084
+sqlbear-0.1.10.dist-info/METADATA,sha256=mxEyuOkXcn1iq6dEqOV9WTixnPuFi5rN7s3QafhLuuE,2137
+sqlbear-0.1.10.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sqlbear-0.1.10.dist-info/top_level.txt,sha256=QTbi0ZwV0bB4GD6CKl2sS3w1fe3W9yT4MXIMmLPSBzE,8
+sqlbear-0.1.10.dist-info/RECORD,,
