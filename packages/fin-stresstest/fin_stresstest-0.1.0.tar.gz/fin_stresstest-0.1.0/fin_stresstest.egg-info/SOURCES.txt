@@ -1,0 +1,7 @@
+README.md
+setup.py
+fin_stresstest.egg-info/PKG-INFO
+fin_stresstest.egg-info/SOURCES.txt
+fin_stresstest.egg-info/dependency_links.txt
+fin_stresstest.egg-info/requires.txt
+fin_stresstest.egg-info/top_level.txt

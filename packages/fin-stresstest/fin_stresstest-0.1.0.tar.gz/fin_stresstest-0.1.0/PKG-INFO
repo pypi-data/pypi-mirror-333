@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: fin-stresstest
+Version: 0.1.0
+Summary: Herramienta para análisis de escenarios de estrés financiero
+Home-page: https://github.com/tuusuario/StressTest
+Author: Luis Humberto Calderon Baldeón
+Author-email: luis.calderon.b@uni.pe
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: seaborn>=0.11.0
+Requires-Dist: statsmodels>=0.12.0
+
+# fin-stresstest
+
+fin-stresstest es una biblioteca Python especializada en anÃ¡lisis de escenarios de estrÃ©s para modelos financieros. Proporciona herramientas para generar escenarios de estrÃ©s realistas, evaluar portafolios bajo estos escenarios y analizar los resultados con mÃ©tricas avanzadas de riesgo.
+
+## CaracterÃ­sticas
+
+- GeneraciÃ³n de escenarios basados en datos histÃ³ricos estresados
+- Modelado de eventos extremos con teorÃ­a de valores extremos (EVT)
+- SimulaciÃ³n de escenarios correlacionados con modelos de cÃ³pulas
+- CÃ¡lculo de mÃ©tricas de riesgo como VaR, Expected Shortfall y sensibilidades
+- Visualizaciones especializadas para anÃ¡lisis de resultados
+
+## InstalaciÃ³n
+
+```bash
+pip install fin-stresstest
+
