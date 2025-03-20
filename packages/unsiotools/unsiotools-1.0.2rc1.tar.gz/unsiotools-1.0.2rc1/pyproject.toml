@@ -1,0 +1,57 @@
+#
+[build-system]
+requires = [
+    "oldest-supported-numpy; python_version<='3.8'",
+    "numpy>=1.25,<3; python_version>'3.8'",
+    "scikit-build-core","build"
+]
+build-backend = "scikit_build_core.build"
+
+# 
+[project]
+name = "unsiotools"
+version = "1.0.2rc1"
+description = "A collection of unsio based programs"
+authors = [{ name="Jean-Charles Lambert", email = "Jean-Charles.Lambert@lam.fr"}]
+
+license =  { file = "LICENSE" }
+readme = "README.md"
+keywords = ["astrophysics","computing"]
+dependencies = [
+    "numpy","unsio","matplotlib","scipy"
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: C",
+    "Programming Language :: C++",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+[project.scripts]
+uns_2dpgplot     = "unsiotools.simulations.c2dpgplot:commandLine"
+uns_2dplot       = "unsiotools.simulations.c2dplot:commandLine"
+merging_time     = "unsiotools.simulations.ccod:commandLineMT"
+uns_cod          = "unsiotools.simulations.ccod:commandLine"
+uns_inert        = "unsiotools.simulations.cinert:commandLine"
+uns_plot_inert   = "unsiotools.simulations.cplotinert:commandLine"
+post_build_movie = "unsiotools.simulations.cmovie:commandLine"
+post_build_movie2= "unsiotools.simulations.c2dplot:commandLinePbm2"
+process_analysis = "unsiotools.simulations.cuns_analysis:commandLine"
+remove_sim_halo  = "unsiotools.simulations.creducesim:commandLine"
+ramses2gadget    = "unsiotools.simulations.cramses2gadget:commandLine"
+test_cfalcon     = "unsiotools.examples.test_cfalcon:commandLine"
+
+[tool.scikit-build]
+cmake.version = "CMakeLists.txt"
+sdist.exclude = [".vscode",".gitignore",".gitlab-ci.yml","CI","template"]
+#wheel.packages =["python/unsiotools"]
+#build.verbose = true
+#logging.level = "DEBUG"
