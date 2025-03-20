@@ -1,0 +1,14 @@
+dummy_text_generator/__init__.py,sha256=kpvGvb6gdFmqqk5Ro4ugzuoYtHoPScb1vswq0vPFhqw,7227
+dummy_text_generator/actions.py,sha256=lTUqsZ-fYrr5U1DqhksmaIE1m4bO-zkfhkxLkX9Nzrs,4832
+dummy_text_generator/comments.py,sha256=xkgOr8Yt4QFYHOcx_oznALitqfsppf2D8Ki3GdjQBPg,10822
+dummy_text_generator/details.py,sha256=W2b7IS3h9Fg5zONTeehgoSQ8hvjSA12lphgbTSmlLYc,5261
+dummy_text_generator/hashtags.py,sha256=0CTgLZwxIZ5tuHfCIt8tEVhj0t_esu-yGdHd0wV_lt4,3188
+dummy_text_generator/mail_domains.py,sha256=K_GEWNy1NtM3px0UybO92upr29k-kHoCrrhGtXzox60,717
+dummy_text_generator/names.py,sha256=JHQcZiKACLWL0rSSU3rgkfL91i7U4x1EttdYzCb6dGc,4055
+dummy_text_generator/starts.py,sha256=VtqnohWLVaig3UzTrmOj3xk0aFzycUwPswFlMtbdiyM,5833
+dummy_text_generator/topics.py,sha256=eaZZKiftFP-wlGcVp4e3VJPHujZE_HGQ6k0AiCFzNts,2897
+dummy_text_generator-0.1.0.dist-info/LICENSE,sha256=eRojZc7xDZyAzVODZGMDaa5QzgUjbTbR8-JsB7cnDuY,1071
+dummy_text_generator-0.1.0.dist-info/METADATA,sha256=TXUKdr9q06Jl67TmD0x1xio8stEpWkJAscldR_EpH6M,5799
+dummy_text_generator-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+dummy_text_generator-0.1.0.dist-info/top_level.txt,sha256=bFfvygD1o9Ge5awNO-jRp_MDlqxZ9tBKK8Rz7Rnmpvo,21
+dummy_text_generator-0.1.0.dist-info/RECORD,,
