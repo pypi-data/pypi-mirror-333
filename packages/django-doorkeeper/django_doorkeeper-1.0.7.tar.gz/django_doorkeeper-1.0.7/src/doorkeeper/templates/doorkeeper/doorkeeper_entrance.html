@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Doorkeeper</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Doorkeeper</h1>
+        <form method="post" action="{% url 'doorkeeper:entrance' %}?{{ next_url_param_name }}={{ next_url }}">
+            {% csrf_token %} {{ form.as_div }}
+            <button type="submit">Enter</button>
+        </form>
+    </body>
+</html>
