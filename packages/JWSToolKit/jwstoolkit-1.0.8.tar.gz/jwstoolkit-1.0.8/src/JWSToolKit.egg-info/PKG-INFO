@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: JWSToolKit
+Version: 1.0.8
+Summary: A python package for handling JWST observations
+Author-email: Valentin Delabrosse <valentin.delabrosse@univ-grenoble-alpes.fr>
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: astropy
+Requires-Dist: tqdm
+Requires-Dist: scipy
+
+# JWSTools
+A python package for handling JWST observations 
+
