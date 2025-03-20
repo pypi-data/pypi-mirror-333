@@ -1,0 +1,81 @@
+[project]
+name = "jupyterhealth-client"
+description = "JupyterHealth client library"
+authors = [
+    {name = "Jupyter", email = "benjaminrk@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Framework :: Jupyter",
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "requests",
+    "yarl",
+]
+
+[project.urls]
+Documentation = "https://jupyterhealth-client.readthedocs.org"
+Issues = "https://github.com/jupyterhealth/jupyterhealth-client/issues"
+Source = "https://github.com/jupyterhealth/jupyterhealth-client"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# hatch ref: https://hatch.pypa.io
+#
+[tool.hatch.version]
+path = "jupyterhealth_client/__init__.py"
+
+# ruff is our linter and formatter
+[tool.ruff.format]
+
+[tool.ruff.lint]
+ignore = [
+    # "F841", # unused variable
+]
+select = [
+    "E9", # syntax
+    "D1", # missing docstrings
+    "I", # isort
+    "UP", # pyupgrade
+    "F", # flake8
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+"docs/*" = ["D"]
+[tool.tbump]
+# this will eventually be in its own repo
+github_url = "https://github.com/jupyterhealth/jupyterhealth-client"
+
+[tool.tbump.version]
+current = "0.0.1a2"
+
+regex = '''
+  (?P<major>\d+)
+  \.
+  (?P<minor>\d+)
+  \.
+  (?P<patch>\d+)
+  (?P<pre>((a|b|rc)\d+)|)
+  \.?
+  (?P<dev>(?<=\.)dev\d*|)
+  '''
+
+[tool.tbump.git]
+message_template = "Bump to {new_version}"
+tag_template = "{new_version}"
+
+[[tool.tbump.file]]
+src = "jupyterhealth_client/__init__.py"
