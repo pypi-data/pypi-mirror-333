@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pranav_indian_states_25
+Version: 0.1
+Summary: A Django app that provides Indian states choices as a model and form field.
+Author: Pranav
+Author-email: pranavgaikwadmt12@gmail.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: django
