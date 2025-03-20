@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: rainHub_python_driver
+Version: 0.1.0
+Summary: RainHub python driver SDK
+Author-email: RainHub <rainhub@rainhub.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
