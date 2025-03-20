@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: speedyPort
+Version: 1.0.0
+Summary: A simple web-based terminal interface using Flask.
+Home-page: 
+Author: Error
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Flask>=2.0.0
+
+# SpeedyPort
+
+SpeedyPort is a simple web-based terminal interface built using Flask.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install speedyPort
