@@ -1,0 +1,2 @@
+[console_scripts]
+ungrab = Ungrabber.cli:ungrab
