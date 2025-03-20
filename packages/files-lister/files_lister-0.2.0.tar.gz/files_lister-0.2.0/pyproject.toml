@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "files_lister"
+version = "0.2.0"
+description = "A utility for recursively listing and saving the content of source code files"
+readme = "README-PyPI.md"
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = [
+    "flake8>=7.1.1",
+    "pytest>=8.3.4",
+    "pytest-mock>=3.14.0" ,
+    "ruff>=0.9.2",
+    "coverage==7.6.10",
+    "pytest-cov"
+]
+
+[tool.pytest.ini_options]
+addopts = "--log-cli-level=INFO"
+testpaths = ["tests"]
+pythonpath = [
+    "src"
+]
+
+[project.scripts]
+files-lister = "lister.main:main"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lister"]
