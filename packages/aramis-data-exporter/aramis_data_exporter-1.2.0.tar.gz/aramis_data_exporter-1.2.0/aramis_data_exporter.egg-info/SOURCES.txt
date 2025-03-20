@@ -1,0 +1,15 @@
+.gitignore
+CITATION.cff
+LICENSE
+README.md
+pyproject.toml
+aramis_data_exporter.egg-info/PKG-INFO
+aramis_data_exporter.egg-info/SOURCES.txt
+aramis_data_exporter.egg-info/dependency_links.txt
+aramis_data_exporter.egg-info/requires.txt
+aramis_data_exporter.egg-info/top_level.txt
+aramis_exporter/__init__.py
+aramis_exporter/utils.py
+example_images/Aramis_interface.png
+test_scripts/equivalent_strain.py
+test_scripts/nodemap_export.py
