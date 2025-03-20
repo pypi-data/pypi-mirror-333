@@ -1,0 +1,2 @@
+[console_scripts]
+currency = currency_converter_wolf_skullcave.main:app

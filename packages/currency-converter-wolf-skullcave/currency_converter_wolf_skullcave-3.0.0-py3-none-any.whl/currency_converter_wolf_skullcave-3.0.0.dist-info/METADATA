@@ -1,0 +1,74 @@
+Metadata-Version: 2.4
+Name: currency-converter-wolf-skullcave
+Version: 3.0.0
+Summary: Convert USD and EUR to ZAR
+Project-URL: Documentation, https://github.com/wolfSkullCave/currency-converter-wolf-skullcave#readme
+Project-URL: Issues, https://github.com/wolfSkullCave/currency-converter-wolf-skullcave/issues
+Project-URL: Source, https://github.com/wolfSkullCave/currency-converter-wolf-skullcave
+Author-email: wolf_skullcave <7805222+wolfSkullCave@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: beautifulsoup4
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# currency_converter_wolf_skullcave
+
+[![PyPI - Version](https://img.shields.io/pypi/v/currency-converter-wolf-skullcave.svg)](https://pypi.org/project/currency-converter-wolf-skullcave)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/currency-converter-wolf-skullcave.svg)](https://pypi.org/project/currency-converter-wolf-skullcave)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Uninstall](#uninstall)
+- [License](#license)
+
+
+## Installation
+
+```console
+pip install currency-converter-wolf-skullcave
+```
+
+## Usage
+
+To view the exchange rate (USD to ZAR)
+```console
+currency
+```
+
+To convert an amount from USD to ZAR
+```console
+currency <amount>
+```
+
+Convert from EUR to ZAR
+```console
+currency --currency eur <amount>
+```
+OR
+```console
+currency -e eur <amount>
+```
+
+## Uninstall
+```console
+pip uninstall currency-converter-wolf-skullcave
+```
+
+## License
+
+`currency-converter-wolf-skullcave` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
