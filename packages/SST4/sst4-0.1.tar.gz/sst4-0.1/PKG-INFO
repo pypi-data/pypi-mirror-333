@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: SST4
+Version: 0.1
+Summary: *
+Author: HUSSAIN-HAEDER
+Author-email: reco9678785@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: user_agent
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
