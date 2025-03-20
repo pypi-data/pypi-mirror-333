@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: vcf-contact-generator
+Version: 0.2.0
+Summary: A simple package to create vCard (.vcf) files
+Home-page: https://github.com/qmpel22/vcf_contact_generator
+Author: Szymon Małachowski
+Author-email: szymonmalachowski.1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: license
+
+# vcf_contact_generator
+
+`vcf_contact_generator` to prosta biblioteka do tworzenia kontaktów telefonicznych za pomocą plikow vCard (`.vcf`).
+
+## Instalacja
+```bash
+pip install vcf_contact_generator
