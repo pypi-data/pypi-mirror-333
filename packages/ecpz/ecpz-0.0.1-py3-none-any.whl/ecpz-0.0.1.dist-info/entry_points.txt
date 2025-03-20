@@ -1,0 +1,3 @@
+[console_scripts]
+ecpz=ecpz.cli:app
+
