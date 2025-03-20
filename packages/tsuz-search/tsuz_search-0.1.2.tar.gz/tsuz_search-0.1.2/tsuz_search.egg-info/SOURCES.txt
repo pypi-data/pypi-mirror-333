@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+tsuz_search/__init__.py
+tsuz_search/client.py
+tsuz_search.egg-info/PKG-INFO
+tsuz_search.egg-info/SOURCES.txt
+tsuz_search.egg-info/dependency_links.txt
+tsuz_search.egg-info/requires.txt
+tsuz_search.egg-info/top_level.txt
