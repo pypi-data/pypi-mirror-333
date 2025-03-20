@@ -1,0 +1,8 @@
+setup.py
+trashtra/__init__.py
+trashtra/one.py
+trashtra/two.py
+trashtra.egg-info/PKG-INFO
+trashtra.egg-info/SOURCES.txt
+trashtra.egg-info/dependency_links.txt
+trashtra.egg-info/top_level.txt
