@@ -1,0 +1,9 @@
+refgenDetector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+refgenDetector/reference_genome_dictionaries.py,sha256=SvmxOWkKph5f0Ytm4APwl_j9odQttOOsj6iDTwHbwPg,101203
+refgenDetector/refgenDetector_main.py,sha256=eklJ8JFFHcjK-IMPRXI08ryobDlFylEVTzvoSFMZaRs,17939
+refgendetector-2.0.0.dist-info/LICENSE,sha256=ySMfRX8AnJLOguZ1EGBdF2LJFzsbb6O7FGY7j5aS4Tg,208
+refgendetector-2.0.0.dist-info/METADATA,sha256=-Thm0Miy5qQ5REcrdkynE80rh5j93umRRxsoa1rhmoY,6317
+refgendetector-2.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+refgendetector-2.0.0.dist-info/entry_points.txt,sha256=mbBKoXaWR42EY_0IgOYVeq11kkUXFPaFi_DgJELOJOA,75
+refgendetector-2.0.0.dist-info/top_level.txt,sha256=Ot_TUbT1WK6R_5CYDJfntg-_Rd5ZUy-dnyP-xDI_o3U,15
+refgendetector-2.0.0.dist-info/RECORD,,
