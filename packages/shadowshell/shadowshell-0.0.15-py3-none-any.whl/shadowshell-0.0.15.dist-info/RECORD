@@ -1,0 +1,11 @@
+shadowshell/__init__.py,sha256=vgAPKodebTdKNmoT8PASBqG2lGNOVLqs5dMFwTBTu4c,349
+shadowshell/git_shell.py,sha256=6QKrAWlrAV-H72FY7zljD-YctHsGACHx0H4mrwO-hho,338
+shadowshell/shadowshell.py,sha256=Sc2R9l0FirVFqDBr-DyqEj9g2wLfhPTCh-j1i7I7wrI,364
+shadowshell/logutil/__init__.py,sha256=XeFV5eYfs8gwmjQLBcKf0gitf6qs-EDi1fqt_24KL0E,246
+shadowshell/logutil/console_logger.py,sha256=4J1fcbAYJ9MarwqEe0iuTACbqRqOkoUKalvC_aDumXA,466
+shadowshell/logutil/logger.py,sha256=yazr8pcaDoFBSELcxLzLp1fjsBWbEsASM14d6r-9-eo,416
+shadowshell/logutil/logger_factory.py,sha256=zOnMkU5djZx5SXjGazKNi67ZA7M2vCOP9oH9hD1lFt0,327
+shadowshell-0.0.15.dist-info/METADATA,sha256=BR5DNT--aN9vlCVxE3OQjDxd4wzfiFxNqadD7WS_PGA,554
+shadowshell-0.0.15.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+shadowshell-0.0.15.dist-info/top_level.txt,sha256=p1bzsWGOKTHFpI6pOtBOqVzMXSR52HfYyyRw_Zb-S7w,12
+shadowshell-0.0.15.dist-info/RECORD,,
