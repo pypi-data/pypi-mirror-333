@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/xaccount-route53-domain/__init__.py
+src/xaccount-route53-domain/py.typed
+src/xaccount-route53-domain/_jsii/__init__.py
+src/xaccount-route53-domain/_jsii/xaccount-route53-domain@0.0.9.jsii.tgz
+src/xaccount_route53_domain.egg-info/PKG-INFO
+src/xaccount_route53_domain.egg-info/SOURCES.txt
+src/xaccount_route53_domain.egg-info/dependency_links.txt
+src/xaccount_route53_domain.egg-info/requires.txt
+src/xaccount_route53_domain.egg-info/top_level.txt
