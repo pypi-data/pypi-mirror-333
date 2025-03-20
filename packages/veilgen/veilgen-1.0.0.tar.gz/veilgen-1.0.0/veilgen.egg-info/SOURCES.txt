@@ -1,0 +1,10 @@
+README.md
+setup.py
+veilgen/__init__.py
+veilgen/veilgen.py
+veilgen.egg-info/PKG-INFO
+veilgen.egg-info/SOURCES.txt
+veilgen.egg-info/dependency_links.txt
+veilgen.egg-info/entry_points.txt
+veilgen.egg-info/requires.txt
+veilgen.egg-info/top_level.txt
