@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "paracopy"
+authors = [{ name = "Pierre-Yves Genest" }]
+description = "ParaCopy is a software that aims to facilitate the parallel copy of a folder to multiple destinations (USB disks or SD cards)."
+readme = "README.md"
+license = { file = "COPYING.md" }
+keywords = ["parallel copy", "copy", "sd card", "flet"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Natural Language :: English",
+    "Natural Language :: French",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Hardware",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "babel>=2.17.0",
+    "distro>=1.9.0",
+    "flet[all]>=0.27.6",
+    "packaging>=24.2",
+    "pathvalidate>=3.2.3",
+    "pydantic>=2.10.6",
+    "pyperclip>=1.9.0",
+    "pyudev>=0.24.3",
+]
+dynamic = ["version"]
+
+[project.gui-scripts]
+paracopy = "main:run"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/_version.py"
+
+[tool.ruff]
+include = ["pyproject.toml", "paracopy/**/*.py", "tasks/**/*.py"]
+target-version = "py310"
+line-length = 88
+select = ["ALL"]
+ignore = ["ANN002", "ANN003", "PLR2004", "RUF001", "S603"]
+
+[tool.flet]
+org = "com.paracopy"
+product = "ParaCopy"
+company = "Pierre-Yves Genest"
+copyright = "Copyright (C) 2025 Pierre-Yves Genest"
+
+[tool.flet.app]
+path = "src"

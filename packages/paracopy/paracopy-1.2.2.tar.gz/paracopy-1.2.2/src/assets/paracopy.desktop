@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=ParaCopy
+Comment[fr]=Parallel copy of a source to multiple USB devices
+Comment[en]=Copie parallèle d'une source vers de multiples périphériques USB
+Icon=$icon_path
+Exec=$python_path -m paracopy
+Path=$paracopy_folder
+Terminal=true
+Categories=Utility;Archiving
+Keywords[en]=copy;parallel;usb
+Keywords[fr]=copie;parallèle;usb
+SingleMainWindow=true

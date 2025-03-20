@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Gettext: Update Translations",
+            "type": "process",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "${workspaceFolder}/tasks/update_translations.py",
+                "--locales-directory=${workspaceFolder}/src/locales",
+                "--locales=${config:paracopy.locales}",
+                "--source-directory=${workspaceFolder}/src",
+            ],
+            "presentation": {
+                "focus": false,
+                "showReuseMessage": true,
+                "clear": true,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Gettext: Compile Translations",
+            "type": "process",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "${workspaceFolder}/tasks/compile_translations.py",
+                "--locales-directory=${workspaceFolder}/src/locales",
+            ],
+            "presentation": {
+                "focus": false,
+                "showReuseMessage": true,
+                "clear": true,
+            },
+            "problemMatcher": []
+        }
+    ]
+}
