@@ -1,0 +1,10 @@
+streamlit_indexed_db/__init__.py,sha256=lyL3jQVgyfMcGHkMhwtvFG5elROwZWuJVOJjZuGGBdk,1966
+streamlit_indexed_db/frontend/index.html,sha256=KjVvfAnNbPJU_pO5sh0ZOjXbsAsS_dq8mtV_trMyI-k,660
+streamlit_indexed_db/frontend/main.js,sha256=fcg5pCCd-V5FXQCsgemrbBRM681ixJODWTzo2Grqr8s,3799
+streamlit_indexed_db/frontend/streamlit-component-lib.js,sha256=b4RmDnVw1sXI27d4_P6qMrxEIEqsUtmuociIQ0DAawg,230931
+streamlit_indexed_db/frontend/style.css,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamlit_indexed_db-0.1.1.dist-info/LICENSE,sha256=6c96ZD-URFZkYa79J01LXsyESDz4hcuJQuqxUKtfXtc,1074
+streamlit_indexed_db-0.1.1.dist-info/METADATA,sha256=g0QV9-BYZkbBzFCe32rJ9MP4CB-66-V4J9kEv4SVl3c,860
+streamlit_indexed_db-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+streamlit_indexed_db-0.1.1.dist-info/top_level.txt,sha256=-8KaIwcaUFRVNNYt6VB2K2PmhFNa0S5aXr2JloS4vhM,21
+streamlit_indexed_db-0.1.1.dist-info/RECORD,,
