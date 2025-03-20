@@ -1,0 +1,8 @@
+primitive_metadata/__init__.py,sha256=OkS_noWvCishxVoSD8RtEXUJLbpkDmtMCW5-MIS9Xg0,96
+primitive_metadata/gather.py,sha256=P1j5TFhzPELE7pndKaDV9neVe2TEA7VD38pCWG9CNwQ,25416
+primitive_metadata/namespaces.py,sha256=m7Kvdw8oLV0YEv_H6FSMRX-KSLsbugK8JZkSRZwCRM0,1537
+primitive_metadata/primitive_rdf.py,sha256=owTO2KbvSaVuu2r7sd0QRSshRbWfSVAABtUqA1ELVIY,60083
+primitive_metadata-0.2025.1.dist-info/licenses/LICENSE,sha256=It_91NjlqJgn3e4Hn3K6fzwtrSF0lP0Nd77UOsLXzbI,1073
+primitive_metadata-0.2025.1.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+primitive_metadata-0.2025.1.dist-info/METADATA,sha256=zy386nDewI6dm36JtgMZBszvHMAOlP-CMFfv1GvN0jc,1109
+primitive_metadata-0.2025.1.dist-info/RECORD,,
