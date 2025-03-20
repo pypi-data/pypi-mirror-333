@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/coslab/"]
+
+[project]
+name = "coslab-core"
+version = "0.9.5"
+authors = [
+  { name="Matti Nelimarkka", email="matti.nelimarkka@helsinki.fi" },
+]
+description = "Automating social science work around image tagging via various online services."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/uh-soco/coslab-core"
+Issues = "https://github.com/uh-soco/coslab-core/issues"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]

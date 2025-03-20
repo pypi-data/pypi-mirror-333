@@ -1,0 +1,17 @@
+.image_testdataset/
+.imageresults/
+.vscode/
+.idea/
+secrets.yaml
+__pycache__
+*.db
+*.sql
+*.pickle
+*.pyc
+.DS_Store
+congig.ini
+
+.venv
+dist/*
+build/*
+*.sh
