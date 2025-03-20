@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: django-template-reports
+Version: 0.2.2
+Summary: Generates reports (PPTX) from template files that are flexibly populated using the Django ORM, without hard-coding.
+Project-URL: Homepage, https://github.com/gaussian/django-template-reports
+Project-URL: Issues, https://github.com/gaussian/django-template-reports/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django<6,>=5
+Requires-Dist: swapper<2,>=1
+Requires-Dist: python-pptx<2,>=1
+Provides-Extra: xlsx
+Requires-Dist: openpyxl<4,>=3; extra == "xlsx"
+
+# Django Template Reports
+
+A Django library for generating parameterized PowerPoint (PPTX) reports from template files.
+
+## Overview
+
+Django Template Reports provides a powerful templating system that allows you to create reusable report templates with dynamic content placeholders. These templates can be populated with data from your Django models, enabling seamless report generation without hard-coding the report structure.
+
+The library separates presentation design from data logic. This separation of concerns makes it easy to maintain and update reports over time.
+
+## Key Features
+
+- **Dynamic Template System**: Use expression syntax (`{{ variable }}`) to insert model data into PowerPoint slides
+- **Data Manipulation**: Apply filters, access nested properties, and format values like dates
+- **Permission Controls**: Security-aware templating that respects user access permissions
+- **Complex Elements Support**: Handles text boxes, dynamically expanding tables, and data-driven charts
+- **Admin Integration**: Built-in Django admin views to manage report definitions and generation history
+- **Reusable Architecture**: Designed as a modular Django app that integrates with your existing projects
