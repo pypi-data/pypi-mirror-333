@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+aimat = ["docker-compose.yml"]
+
+[project]
+name = "aimat"
+version = "0.1.0"
+description = "AIMAT: AI Music Artist Toolkit - Simplified AI Music workflows."
+authors = [
+    { name = "Eric Browne" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "python-osc",
+    "docker",
+    "psutil"
+]
+
+[project.scripts]
+aimat = "aimat.cli:main"
