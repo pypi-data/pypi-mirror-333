@@ -1,0 +1,44 @@
+Metadata-Version: 2.2
+Name: grayscalelib.napari
+Version: 0.0.1
+Summary: View grayscalelib Pixels with Napari.
+Author: Marco Heisig
+License: GPL-3.0-or-later
+Project-URL: Repository, https://github.com/SandoghdarLab/grayscalelib.matplotlib.git
+Keywords: grayscale,video,image,pixel,napari
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: grayscalelib.core
+Requires-Dist: numpy
+Requires-Dist: napari[pyqt5]
+Provides-Extra: dev
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# grayscalelib.napari
+
+This project is an optional module for
+[grayscalelib](https://pypi.org/project/grayscalelib.core/) to visualize data
+with napari.
+
+## Installation
+
+All releases are published on [PyPi](https://pypi.org), so all the popular
+installation methods should just work
+
+```sh
+python -m pip install grayscalelib.napari
+```
+
+## Usage
+
+```python
+from grayscalelib.napari import view
+
+px = Pixels(np.linspace(0, 1, 64*64).reshape((64,64)))
+
+view(px)
+```

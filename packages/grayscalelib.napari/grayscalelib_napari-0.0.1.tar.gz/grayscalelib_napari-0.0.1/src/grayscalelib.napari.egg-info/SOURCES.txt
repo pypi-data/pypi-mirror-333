@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/grayscalelib.napari.egg-info/PKG-INFO
+src/grayscalelib.napari.egg-info/SOURCES.txt
+src/grayscalelib.napari.egg-info/dependency_links.txt
+src/grayscalelib.napari.egg-info/requires.txt
+src/grayscalelib.napari.egg-info/top_level.txt
+src/grayscalelib/napari/__init__.py
+src/grayscalelib/napari/view.py
+src/grayscalelib/napari/tests/test_view.py
