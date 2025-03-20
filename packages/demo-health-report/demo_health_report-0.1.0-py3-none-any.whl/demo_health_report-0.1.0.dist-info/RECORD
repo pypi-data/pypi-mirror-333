@@ -1,0 +1,10 @@
+health_report/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+health_report/asgi.py,sha256=gaCO1NAttyd8-T594axWOr7dpB0ImvKE19NQ3Wg4qtc,403
+health_report/settings.py,sha256=gKwkDuDld0z85j6rkapomx0MUOtf_ndWFPcY8LL-utc,3717
+health_report/urls.py,sha256=31mnDc-xmxHmMNw-0f90FE7qvPsUXaSaaJZtxHbDs9Q,812
+health_report/views.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+health_report/wsgi.py,sha256=dbT9Jf7uQ3kALCQZ6zMCm0P4-VdrBFZnF60VUSYad20,403
+demo_health_report-0.1.0.dist-info/METADATA,sha256=rwM5s5mVEawFGjG69y25JsLDtSwBOz-E7NCtv-WsQ1E,1262
+demo_health_report-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+demo_health_report-0.1.0.dist-info/entry_points.txt,sha256=tSJxS717_ANW9rbGjnM523dMblexoL2wlaDLlGTiaBk,45
+demo_health_report-0.1.0.dist-info/RECORD,,

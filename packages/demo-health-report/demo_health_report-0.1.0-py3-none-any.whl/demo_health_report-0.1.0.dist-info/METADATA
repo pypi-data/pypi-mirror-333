@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: demo-health-report
+Version: 0.1.0
+Summary: demo
+License: MIT
+Author: Amrutha
+Author-email: amamrutha04@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: django (>=4.0,<5.0)
+Requires-Dist: djangorestframework (>=3.14,<4.0)
+Description-Content-Type: text/markdown
+
+# Health Report - Django Project
+
+## 📌 Introduction
+Health Report is a Django-based web application for managing health-related reports. It includes API services, database reporting, login authentication, and system monitoring.
+
+This project is packaged using **Poetry**, making it easy to install and deploy.
+
+---
+
+## 🚀 Installation
+
+### **1️⃣ Prerequisites**
+Ensure you have the following installed:
+- Python 3.8+
+- Poetry
+- Pip
+
+### **2️⃣ Clone the Repository**
+```bash
+git clone https://github.com/yourusername/health_report.git
+cd health_report
+
