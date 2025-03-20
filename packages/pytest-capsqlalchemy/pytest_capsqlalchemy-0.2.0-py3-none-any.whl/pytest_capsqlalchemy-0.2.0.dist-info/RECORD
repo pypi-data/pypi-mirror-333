@@ -1,0 +1,11 @@
+pytest_capsqlalchemy/__init__.py,sha256=rA_J1ZkOYvnixFowq_q95CohUYNA5UcMUJyR9Xb2-A0,406
+pytest_capsqlalchemy/capturer.py,sha256=ofUUs3OURe5ot1-u7pP6x0ZshXc9xyaFA0HNsltTRPk,7469
+pytest_capsqlalchemy/context.py,sha256=JbJFWunAjDx1bawnQXk7TLIj_YrR0oHLHcASQHhe0u0,3118
+pytest_capsqlalchemy/expression.py,sha256=pgsjU-o43R07LlDWYJ-oMIJwiIJN5mK4bEqMmdB6wHE,2182
+pytest_capsqlalchemy/plugin.py,sha256=SoEyQP9Bs-8rQYmt7zVj5Id3xFiEScwsUtzIzZX5v80,577
+pytest_capsqlalchemy/utils.py,sha256=pxq5d1ozoKxbPrut-eqgabSVqvnpoh-WbnI1Ye7Tc04,450
+pytest_capsqlalchemy-0.2.0.dist-info/METADATA,sha256=Y9Mtp6zkXk2rfqg9sN5COvxkuCUTp0U0h04VxM8I20Y,4572
+pytest_capsqlalchemy-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_capsqlalchemy-0.2.0.dist-info/entry_points.txt,sha256=zMB1nrx_wcKt20I6nqZkrquQwVR2aFuvCONDxmU-v5c,62
+pytest_capsqlalchemy-0.2.0.dist-info/licenses/LICENSE,sha256=h27LMJCdnlCqlrmpt3fluOJryF5pkXirSS7WOHz7G3E,11344
+pytest_capsqlalchemy-0.2.0.dist-info/RECORD,,
