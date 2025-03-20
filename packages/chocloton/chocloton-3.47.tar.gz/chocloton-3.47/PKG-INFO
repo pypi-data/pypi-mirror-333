@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: chocloton
+Version: 3.47
+Summary: generalized machine learning algorithm for complex loss functions and non-linear coefficients
+Home-page: https://github.com/Freedomtowin/chocloton
+Author: Rohan Kotwani
+License: MIT
+Keywords: machine learning nonlinear
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: cython
+Requires-Dist: numba
+Requires-Dist: tensorflow
