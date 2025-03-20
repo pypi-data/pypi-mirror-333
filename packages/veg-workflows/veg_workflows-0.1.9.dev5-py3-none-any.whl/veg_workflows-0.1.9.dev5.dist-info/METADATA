@@ -1,0 +1,341 @@
+Metadata-Version: 2.3
+Name: veg-workflows
+Version: 0.1.9.dev5
+Summary: VEG workflows
+Author: VITO RS Vegetation team
+Requires-Python: <3.12,>=3.10
+Requires-Dist: boto3==1.35.29
+Requires-Dist: catboost==1.2.7
+Requires-Dist: cloudpickle==3.0.0
+Requires-Dist: dask-image==2024.5.3
+Requires-Dist: dask==2024.9.1
+Requires-Dist: elogs>=0.2.8
+Requires-Dist: evotrain==0.0.13
+Requires-Dist: fastparquet==2024.11.0
+Requires-Dist: fiona==1.10.1
+Requires-Dist: geopandas==1.0.1
+Requires-Dist: h5netcdf==1.3.0
+Requires-Dist: importlib-resources==6.5.2
+Requires-Dist: joblib==1.4.2
+Requires-Dist: loguru==0.7.2
+Requires-Dist: mepsy==0.0.7
+Requires-Dist: numba==0.60.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: oauthlib==3.2.2
+Requires-Dist: pandas==2.2.3
+Requires-Dist: psutil>=7.0
+Requires-Dist: pyproj==3.7.0
+Requires-Dist: pyspark==3.5.3
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: rasterio>=1.4.0
+Requires-Dist: requests-oauthlib==2.0.0
+Requires-Dist: rio-cogeo==5.3.4
+Requires-Dist: rio-tiler==7.3.0
+Requires-Dist: rioxarray>=0.18
+Requires-Dist: satio-pc>=0.0.14
+Requires-Dist: satio<2.0.0,>=1.2.1
+Requires-Dist: scikit-image==0.24.0
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: scipy==1.14.1
+Requires-Dist: shapely==2.0.6
+Requires-Dist: smart-open[s3]>=7.1.0
+Requires-Dist: torch==2.5.1
+Requires-Dist: torchvision==0.20.1
+Requires-Dist: tqdm==4.66.5
+Requires-Dist: watchdog==6.0.0; sys_platform != 'win_ia64'
+Requires-Dist: xarray==2025.1.1
+Provides-Extra: catalog
+Requires-Dist: sentinelhub==3.11.1; extra == 'catalog'
+Provides-Extra: jupyter
+Requires-Dist: ipykernel==6.29.5; extra == 'jupyter'
+Requires-Dist: ipywidgets==8.1.5; extra == 'jupyter'
+Requires-Dist: jupyter>=1.1; extra == 'jupyter'
+Requires-Dist: jupyterlab==4.2.5; extra == 'jupyter'
+Requires-Dist: panel==1.5.5; extra == 'jupyter'
+Provides-Extra: plot
+Requires-Dist: matplotlib==3.9.2; extra == 'plot'
+Requires-Dist: pyproj>=3.7; extra == 'plot'
+Requires-Dist: tabulate==0.9.0; extra == 'plot'
+Description-Content-Type: text/markdown
+
+# VITO RS VEG Workflows
+
+Repository to organize and collect workflows data processing.
+
+## Documentation
+
+### Products Naming
+
+There are 3 main kind of products produced:
+
+- s2 blocks
+- s2 tiles
+- 3 deg latlon tiles.
+
+
+These products can be produced for different time extents:
+
+- Annual
+- Monthly (or Quarterly, Dekad, 5-daily, a generic time interval...)
+- Single Observation (Products derived from a single S2 product)
+
+The file paths follow this folder structure:
+`<BASE_PATH>/<PROJECT_NAME>/<PRODUCT_NAME>/<VERSION>/<TILE_SEPARATOR>/<DATE_SEPARATOR>/<LAYER_SEPARATOR>/<BASENAME>`
+
+where `<BASENAME>` is:
+`<PROJECT_NAME>_<PRODUCT_NAME>_<VERSION>_<DATE_ID>_<TILE_ID>_<LAYER>.tif`
+
+`<BASENAME>` is capitalized, except for the extension.
+
+
+For S2 Blocks:
+
+```
+TILE_ID = TILE_BLOCK-ID
+TILE_SEPARATOR = "blocks/31/U/FS" # (for tile 31UFS)
+LAYER_SEPARATOR = "B02"
+```
+
+For UTM Tiles:
+
+```
+TILE_ID = TILE
+TILE_SEPARATOR = "tiles_utm/31/U/FS" # (for tile 31UFS)
+LAYER_SEPARATOR = ""  # no splitting on layer
+```
+
+For LatLon 3deg tiles:
+
+```
+TILE_ID = TILE
+TILE_SEPARATOR = "tiles_latlon_3deg/N03" # (for tile N03W003)
+LAYER_SEPARATOR = "MAP"  # layer name
+```
+
+For UTM Blocks and Tiles:
+- Annual: `DATE_SEPARATOR = YEAR, DATE_ID = YEAR`
+- Monthly: `DATE_SEPARATOR = YEAR/MONTH:02d, DATE_ID = START-DATE_END-DATE`
+- SingleObs: `DATE_SEPARATOR = S2_PRODUCT_ID, DATE_ID = ACQUISITION-DATE_INGESTION-DATE`
+
+For LatLon 3Deg Tiles:
+- Annual: `DATE_SEPARATOR = YEAR, DATE_ID = YEAR`
+- Monthly: `DATE_SEPARATOR = YEAR/MONTH:02d, DATE_ID = START-DATE_END-DATE`
+- SingleObs: `DATE_SEPARATOR = ACQUISITION-DAY_RELATIVE-ORBIT, DATE_ID = ACQUISITION-DAY_RELATIVE-ORBIT`
+
+### Examples
+
+Using the following variables we obtain the examples below:
+
+```
+tile_utm = '31UFS'
+block_id = 0
+year = 2020
+month = 5
+tile_ll = 'N00E000'
+layer = 'MAP'
+s2_product_id = "S2A_MSIL2A_20200501T105031_N0214_R051_T31UFS_20230501T124853"
+```
+
+The layer can be used also to indicate a resolution, e.g. 'B02_10M' or 'B09_60M'.
+
+
+#### S2 Block Products (Annual, Monthly, SingleObs)
+
+```
+/data/products_base_path/LCFM/LCM-10/v001/blocks/31/U/FS/2020/MAP/LCFM_LCM-10_V001_2020_31UFS_000_MAP.tif
+
+/data/products_base_path/LCFM/LCM-10/v001/blocks/31/U/FS/2020/05/MAP/LCFM_LCM-10_V001_20200501_20200531_31UFS_000_MAP.tif
+
+/data/products_base_path/LCFM/LCM-10/v001/blocks/31/U/FS/2020/S2A_MSIL2A_20200501T105031_N0214_R051_T31UFS_20230501T124853/MAP/LCFM_LCM-10_V001_20200501T105031_20230501T124853_31UFS_000_MAP.tif
+```
+
+#### S2 Tile UTM Products (Annual, Monthly, SingleObs)
+
+```
+/data/products_base_path/LCFM/LCM-10/v001/tiles_utm/31/U/FS/2020/LCFM_LCM-10_V001_2020_31UFS_MAP.tif
+
+/data/products_base_path/LCFM/LCM-10/v001/tiles_utm/31/U/FS/2020/05/LCFM_LCM-10_V001_20200501_20200531_31UFS_MAP.tif
+
+/data/products_base_path/LCFM/LCM-10/v001/tiles_utm/31/U/FS/2020/S2A_MSIL2A_20200501T105031_N0214_R051_T31UFS_20230501T124853/LCFM_LCM-10_V001_20200501T105031_20230501T124853_31UFS_MAP.tif
+```
+
+
+#### S2 LatLon3Deg Products (Annual, Monthly, SingleObs)
+
+```
+/data/products_base_path/LCFM/LCM-10/v001/tiles_latlon_3deg/N00/2020/MAP/LCFM_LCM-10_V001_2020_N00E000_MAP.tif
+
+/data/products_base_path/LCFM/LCM-10/v001/tiles_latlon_3deg/N00/2020/05/MAP/LCFM_LCM-10_V001_20200501_20200531_N00E000_MAP.tif
+
+/data/products_base_path/LCFM/LCM-10/v001/tiles_latlon_3deg/N00/20200501_R051/MAP/LCFM_LCM-10_V001_20200501_R051_N00E000_MAP.tif
+```
+
+For single observations latlon tiles we group by day and orbit so that observations
+which determine a unique orbit which aggregates tiles of the same orbit in the
+same folder.
+
+### Examples of package tools
+
+#### v0.0.1dev8 Update
+
+dev8 introduces a set of objects in `src/veg_wokflows/products.py` which
+standardize Annual and Monthly products names.
+
+Usage:
+```python
+from veg_workflows.products import (Lsc10MonthlyCollection,
+                                    Lcm10Collection)
+from veg_workflows.tiles import lcfm_tiles_10percent, lcfm_tiles_1percent
+
+
+blocks = lcfm_tiles_1percent.blocks
+block = blocks.iloc[0]
+
+
+# Monthly products
+lsc_version = 'v001'
+lsc_coll = Lsc10MonthlyCollection(version=lsc_version)
+
+lsc_block_product = lsc_coll.block(block.tile, block.block_id, year=2020, month=3)
+print(lsc_block_product.path('MAP'))
+>>> /vitodata/vegteam_vol2/data/lcfm/prototypes/LSC-10-MONTHLY/v001/blocks/54/H/VG/2020/03/MAP/LCFM_LSC-10-MONTHLY_20200301_20200331_54HVG_000_V001_MAP.tif
+
+print(lsc_block_product.path('PROB'))
+>>> /vitodata/vegteam_vol2/data/lcfm/prototypes/LSC-10-MONTHLY/v001/blocks/54/H/VG/2020/03/PROB/LCFM_LSC-10-MONTHLY_20200301_20200331_54HVG_000_V001_PROB.tif
+
+lsc_utm_tile_product = lsc_coll.utm_tile(block.tile, year=2020, month=3)
+print(lsc_utm_tile_product.path('MAP'))
+>>> /vitodata/vegteam_vol2/data/lcfm/prototypes/LSC-10-MONTHLY/v001/utm_tiles/2020/03/MAP/LCFM_LSC-10-MONTHLY_20200301_20200331_54HVG_V001_MAP.tif
+
+lsc_ll_tile_product = lsc_coll.latlon_3deg_tile('N03W003', year=2020, month=3)
+print(lsc_ll_tile_product.path('MAP'))
+>>> /vitodata/vegteam_vol2/data/lcfm/prototypes/LSC-10-MONTHLY/v001/latlon_3deg_tiles/2020/03/MAP/LCFM_LSC-10-MONTHLY_20200301_20200331_N03W003_V001_MAP.tif
+
+
+# Annual products
+lcm_version = 'v001'
+lcm_volume = '/vitodata/vegteam_vol3/data/lcfm/prototypes'
+
+lcm10_coll = Lcm10Collection(version=lcm_version, product_base_path=lcm_volume)
+
+lcm_block_product = lcm10_coll.block(block.tile, block.block_id, year=2020)
+print(lcm_block_product.path('MAP'))
+>>> /vitodata/vegteam_vol3/data/lcfm/prototypes/LCM-10/v001/blocks/54/H/VG/2020/MAP/LCFM_LCM-10_2020_54HVG_000_V001_MAP.tif
+
+print(lcm_block_product.path('PROB'))
+>>> /vitodata/vegteam_vol3/data/lcfm/prototypes/LCM-10/v001/blocks/54/H/VG/2020/PROB/LCFM_LCM-10_2020_54HVG_000_V001_PROB.tif
+
+lcm_utm_tile_product = lcm10_coll.utm_tile(block.tile, year=2020)
+print(lcm_utm_tile_product.path('MAP'))
+>>> /vitodata/vegteam_vol3/data/lcfm/prototypes/LCM-10/v001/utm_tiles/2020/MAP/LCFM_LCM-10_2020_54HVG_V001_MAP.tif
+
+lcm_ll_tile_product = lcm10_coll.latlon_3deg_tile('N03W003', year=2020)
+print(lcm_ll_tile_product.path('MAP'))
+>>> /vitodata/vegteam_vol3/data/lcfm/prototypes/LCM-10/v001/latlon_3deg_tiles/2020/MAP/LCFM_LCM-10_2020_N03W003_V001_MAP.tif
+
+
+```
+The structure is as follow:
+
+`{volume}/{product_project_id}/{version}/`
+
+Below we split based on the product type `{blocks/utm_tiles/latlon_3deg_tiles}/{other...}/`
+
+If the product type is `blocks` we also have the slashed tiles split `31/U/FS`
+
+Below that the date ids, for annual `{year}` and for monthly we have `{year}/{month:02d}/`
+For dekad we will have `{year}/{month:02d}/{dekad_id or start day}`
+
+After the date id, we have the `layer`, `MAP/PROB/B02/B02_10M`, this can be arbitrary, convention for classification
+products is to use`MAP/PROB`. For `LSF-MONTHLY` we will use a combination of band and resolution for the layer name.
+
+for the tif names we have `{project_id}_{project_product_id}_{date_id}_{tile_id}_{version}_{layer}.tif`
+
+where `project_id` here is `LCFM`, `project_product_id` can be `LSC-10-MONTHLY/LCM-10/etc...`,
+`date_id` is the `year` for annual products or `starddate_enddate` for monthly/dekad, will be the single date for NRT,
+`tile_id` is the `utm/latlon tile` or `tile_block_id` for blocks, `version` with capital `V` this is always capitalized
+in the code with `.upper()`, so there are no small letters in the tif version name, and finally `layer` and `.tif`
+
+
+The tile/block products generated from the collections also enable reading/writing of data:
+
+`block.read(bounds=None)` or `tile.read(bounds=None)` can be used to read
+arbitrary bounds.
+In at tile product the additional `tile.read_block(block_id)` function enables
+reading a certain block from the tile.
+
+For mepsy/spark, wheel is available at on cluster: `/tapdata/worldcover/dist/veg_workflows-0.0.1.dev8-py3-none-any.whl`
+
+##### Satio collections
+
+Load lcfm_10percent, lcfm_1percent, sen4ldn satio collections
+```python
+from veg_workflows.collections import veg_collections
+
+lcfm_coll = veg_collection.lcfm_10percent
+```
+
+
+#### LCFM 10/1 percent tiles and blocks
+
+```python
+from veg_workflows.tiles import lcfm_tiles_1percent, lcfm_tiles_10percent
+
+tiles_gdf = lcfm_tiles_10percent.tiles_gdf  # geodataframe of the 1 percent tiles
+tiles = lcfm_tiles_10percent.tiles  # np array of the 1 percent tiles
+
+blocks = lcfm_tiles_10percent.blocks  # 10% blocks geodataframe
+```
+
+
+## Guidelines
+
+When implementing your workflows please keep in mind the following:
+
+1. Workflows should be re-usable by team colleagues with little or no adaptation
+2. Workflows should have a brief description either as a docstring or in a README inside a relevant folder structure. 
+For example if we are implementing training scripts for a given dataset/project, we will have several training scripts. Either a README.md in that subfolder should list the experiments and give a bit of context or a brief docstring in the script should be present. This will allow colleagues to understand the scope and we will have extra metadata to search for keywords when we are looking back in time to find something. Docstrings can also be automatically assembled into docs with certain tools.
+3. When developing workflows these can be tracked with issues. each issue can be associated to dev branch.
+For example, when we start working on a new set of workflows for training, we can create a branch `git checkout -b dev/training_lcm_v0`. This branch can be associated with 1 or several issues. Once the workflows are completed, and the issue can be closed, the branch can be merged to main (after adding minimal documentation for the tasks covered). This will be tracked in the closed issues and we will be able to track back to relevant commits and files when searching particular issues.
+
+
+## Development cycle and separation of Tooling and Workflow
+
+Proposed idea:
+
+Development of workflows is tracked by this repository.
+By worklow we intend any data processing, running on the VMs, HPC, or Terrascope clusters. These are associated to tasks. Having them organized in one place will make it easier to track them, find them and re-use them.
+
+Code/Tooling that is developed to support these workflows will live in the respective repositories. These repositories will only contain functional code and sample scripts, but internal workflows should not be tracked there. We don't want to open source those and clutter the repositories.
+For example, if we develop some functions or objects that can be re-used across different workflows, then those should be integrated in tooling repositories and version tracked.
+On the other end, if we develop a script to process a batch of products, this should not be tracked in a tooling repository. We track this in the `veg-workflows` repository instead (we might create additional workflows repos if needed). 
+Workflows can be re-used across different projects, so rather than having multiple copies of the scripts scattered across several projects specific repositories, we centralize them. Also, in case we decide (or are required to do so) to open source certain packages, we don't want to have to move out our workflows later and/or expose them publicly, with the git history.
+
+
+## Data
+
+Datasets and collections can be tracked as well as in the source of this repository, which can be installed and used to import data from the internal Terrascope storage.
+For example instead of having in our workflows:
+```
+data_path = '/vitodata/vegteam_vol2/data/'
+```
+we should have:
+```
+from veg_workflows.paths import DATA_PATH
+```
+where in the relevant module we'll then have:
+```
+DATA_PATH = '/vitodata/vegteam_vol2/data/'
+```
+
+In this way it will be easier to organize our data, and the responsible person can move or restructure the data, he then updates the package, releases a new version and all depending workflows will keep working without breaking, as no explicit reference to data on the network storage is done.
+
+In the same way we can organize shapefiles, collections, auxiliary datasets, etc. without need of passing explicit paths between users via teams/issues/mails.
+
+
+## Notebooks
+
+The notebooks will contain a `notebooks/dev` subfolder which can be used to store the development notebooks that are usually created to quickly run little experiments or doing R&D. Each user can have its subfolder there, and can store notebooks used for development or debugging while implementing a workflow or doing R&D exploration.
+
+The parent folder `notebooks` will generally contain notebooks that can be shared between users, to run small workflows or demonstrate tools and similar.
+
