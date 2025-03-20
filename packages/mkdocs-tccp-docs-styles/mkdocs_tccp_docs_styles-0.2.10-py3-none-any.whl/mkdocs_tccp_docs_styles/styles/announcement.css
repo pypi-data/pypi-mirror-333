@@ -1,0 +1,34 @@
+/* Announcements
+  Announcements appear as a banner at the top of the page. 
+  They are used to communicate important information to users.
+  See main.html
+*/
+@import url(colors.css);
+
+
+
+.custom-announcement {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-announcement-text {
+  margin-right: 0.75rem;
+}
+
+.custom-announcement-anchor {
+  height: 100%;
+  border: 2px solid;
+  border-radius: 0.75rem;
+  color: var(--modus-blue-lite); 
+  padding: 0.25rem 0.75rem;
+}
+
+/* .custom-announcement-anchor:hover {
+  --announcement-button-color: var(--modus-blue-lite);
+  --md-accent-fg-color: var(--modus-blue-lite);
+  --md-typeset-a-color: var(--modus-blue-pale);
+} */
+
