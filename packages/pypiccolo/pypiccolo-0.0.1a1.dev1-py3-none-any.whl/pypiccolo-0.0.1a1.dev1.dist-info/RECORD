@@ -1,0 +1,13 @@
+pypiccolo/__init__.py,sha256=XendKPJiJuDRhS5dc6eax_NM7L9u6C-_NcbcOy2JrOk,32
+pypiccolo/__main__.py,sha256=bI9SSsTqBmoA6Q161pIC_lJ0NPnPIYujzL5YllWj9f0,95
+pypiccolo/hello.py,sha256=LLg5S3_dSq6x2W_EWq0_7JWyhFaGG6jmyqTnPaGCg84,79
+pypiccolo/math.py,sha256=YzeXWAVYezeBHC2IlensPALCmzn_p7WvZmSE85Ad2Dk,91
+pypiccolo/math_utils.py,sha256=xv4n2_QtztSmH_J9ey8siDrgPyeKKq7q_K-FBUsoE2c,79
+pypiccolo/sub_hello/__init__.py,sha256=XendKPJiJuDRhS5dc6eax_NM7L9u6C-_NcbcOy2JrOk,32
+pypiccolo/sub_hello/__main__.py,sha256=O8E_PkqDEzSMkHEF8dD061wcBv42njD-k7J-PZBl9xk,97
+pypiccolo/sub_hello/hello.py,sha256=9sdGzWwo3JHbQ7sd2axX78VCXk9BAE4Sgzb_dkuasSM,214
+pypiccolo-0.0.1a1.dev1.dist-info/LICENSE,sha256=B8XoniWc8cpjydJLzcSKJoTSmQyEgxJLVDvcg-Sgpjw,1069
+pypiccolo-0.0.1a1.dev1.dist-info/METADATA,sha256=tT_-nEpmU6G2KHZKDqxvetFE0Wn2MC0vWdrzYj6BhX8,7391
+pypiccolo-0.0.1a1.dev1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pypiccolo-0.0.1a1.dev1.dist-info/top_level.txt,sha256=81DqZGT57t60PjkBVm3zC04T3NySjFfxtp-cf0mU-6E,10
+pypiccolo-0.0.1a1.dev1.dist-info/RECORD,,
