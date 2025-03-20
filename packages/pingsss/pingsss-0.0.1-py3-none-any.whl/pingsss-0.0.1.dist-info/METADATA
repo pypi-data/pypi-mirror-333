@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: pingsss
+Version: 0.0.1
+Summary: A tool to ping multiple hosts concurrently
+Author-email: Ervan Kurniawan <ervankurniawan41@gmail.com>
+Project-URL: Homepage, https://github.com/karvanpy/PingSSS
+Project-URL: Issues, https://github.com/karvanpy/PingSSS/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
