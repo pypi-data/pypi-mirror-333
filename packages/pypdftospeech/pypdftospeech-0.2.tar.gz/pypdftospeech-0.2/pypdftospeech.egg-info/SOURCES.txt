@@ -1,0 +1,9 @@
+README.md
+setup.py
+pdftospeech/__init__.py
+pdftospeech/main.py
+pypdftospeech.egg-info/PKG-INFO
+pypdftospeech.egg-info/SOURCES.txt
+pypdftospeech.egg-info/dependency_links.txt
+pypdftospeech.egg-info/requires.txt
+pypdftospeech.egg-info/top_level.txt
