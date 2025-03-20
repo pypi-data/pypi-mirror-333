@@ -1,0 +1,7 @@
+requests
+filelock
+progress
+twine>=3.8.0
+
+[test]
+pytest
