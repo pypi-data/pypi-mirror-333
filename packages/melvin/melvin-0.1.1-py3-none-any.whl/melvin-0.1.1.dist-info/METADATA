@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: melvin
+Version: 0.1.1
+Summary: [private preview] Tecton Melvin
+Project-URL: Homepage, https://tecton.ai
+Project-URL: Documentation, https://docs.tecton.ai
+Author-email: "Tecton, Inc." <support@tecton.ai>
+License: Tecton Proprietary
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: black>=24.1.0
+Requires-Dist: cloudpickle>=2.0.0
+Requires-Dist: diskcache>=5.6.3
+Requires-Dist: ipywidgets>=8.1.5
+Requires-Dist: lancedb==0.18.0
+Requires-Dist: langchain-community>=0.3.0
+Requires-Dist: langchain-core>0.3
+Requires-Dist: langchain-openai>=0.1.23
+Requires-Dist: langchain>=0.3
+Requires-Dist: llama-index>=0.1.0
+Requires-Dist: logfire>=0.1.1
+Requires-Dist: matplotlib>=3.8.0
+Requires-Dist: openai>=1.1.0
+Requires-Dist: pandas>=2.2.1
+Requires-Dist: plotly>=5.22.0
+Requires-Dist: snowflake-connector-python>=3.11.0
+Requires-Dist: streamlit-flow-component>=0.0.1
+Requires-Dist: streamlit>=1.43.0
+Requires-Dist: tecton-client>=0.3.0
+Requires-Dist: tecton-runtime==1.1.5
+Requires-Dist: tecton==1.1.5
+Requires-Dist: tecton[rift]==1.1.5
+Requires-Dist: typing-extensions>=4.5
+Requires-Dist: watchdog>=0.10.0
+Description-Content-Type: text/markdown
+
+![logo](https://s3.us-west-2.amazonaws.com/tecton.ai.public/documentation/pypi/tecton-logo.svg)
+
+Tecton is the fastest way to build operational AI applications.
+
+# Melvin - Tecton Copilot
+
+Melvin is Tecton's AI-powered copilot for feature engineering and feature store operations. It is currently in private preview.
+
+With Melvin, you can:
+- Get assistance with feature engineering tasks
+- Explore your feature store using natural language
+- Generate feature definitions and transformations
+- Debug and optimize your feature pipelines
+- Leverage LLM transformations and feature extraction in Batch, Streaming, and Realtime
+
+# Installation
+
+```bash
+pip install melvin
+```
+
+# Usage
+
+After installation, you can start Melvin with:
+
+```bash
+melvin --port 3000
+```
+
+Options:
+- `--port`: Specify the port (default: 3000)
+- `--host`: Specify the host (default: localhost)
+- `--browser`: Open the browser automatically
+
+# License
+
+Copyright (2023) Tecton, Inc. This library (the "Software") may not be used except in connection with the Licensee's use
+of the Tecton Platform Services (defined below) pursuant to an Agreement (defined below) between Licensee (defined
+below) and Tecton, Inc. ("Tecton"). This Software shall be deemed part of the "Services" under the Agreement, or if the
+Agreement does not define Services, then the term in such Agreement that refers to the applicable Tecton Platform
+Services (as defined below) shall be substituted herein for "Services." Licensee's use of the Software must comply at
+all times with any restrictions applicable to the Services, generally, and must be used in accordance with any
+applicable documentation. If you have not agreed to an Agreement or otherwise do not agree to these terms, you may not
+use the Software. This license terminates automatically upon the termination of the Agreement or Licensee's breach of
+these terms. Agreement: the agreement between Tecton and Licensee governing the use of the Tecton Platform Services,
+which shall be, with respect to Tecton, the Tecton Platform-as-a-Service Agreement located
+at https://www.tecton.ai/tecton_online-tos/, unless Licensee has entered into a separate written agreement with Tecton
+governing the use of the Tecton Platform Services. Tecton Platform Services: the Tecton services according to where the
+Software is used. Licensee: the user of the Software, or, if the Software is being used on behalf of a company, the
+company.
