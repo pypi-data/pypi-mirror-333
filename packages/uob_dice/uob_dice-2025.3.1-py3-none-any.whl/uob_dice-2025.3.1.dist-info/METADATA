@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: uob_dice
+Version: 2025.3.1
+Summary: Python Packages for DICE
+Author-email: UoB DICE team <lcg-admin@bristol.ac.uk>
+Maintainer-email: The UoB DICE Team <lcg-admin@bristol.ac.uk>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# uob-dice
