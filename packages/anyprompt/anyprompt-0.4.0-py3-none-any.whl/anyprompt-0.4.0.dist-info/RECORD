@@ -1,0 +1,11 @@
+anyprompt/__init__.py,sha256=Fy6szouzq_SYhbLfkWajh2ZuG0V-NZnTBAz0W4_45YY,15364
+anyprompt/cli.py,sha256=R-DqRZ9rcFjjjWYCtajr3D5tjAEh3NqGPEcqT4JAzXA,2333
+anyprompt/server.py,sha256=X05EYasnHM8fY9rJvFG88eiML3lxpj59iNBkWMFu5fU,2624
+anyprompt/static/styles.css,sha256=vfDzCON6a7G0dQuw-7vbfkaRQtjWorc1OHDsuxjX9JI,54
+anyprompt/templates/index.html,sha256=0Pr8ZJECKuWCPA4ItDQsRlDbYtK-G_YZP1CuE3wc-bc,35217
+anyprompt-0.4.0.dist-info/LICENSE,sha256=F0O9nFG_gUOoNK5MAH1oDYKbXWP4a-KYCC2EZyOM_Lo,1066
+anyprompt-0.4.0.dist-info/METADATA,sha256=aZvLHbIEt3b8Ju0OCMlaAmWLnZUHEE4B1iYBAuKnr8Q,3981
+anyprompt-0.4.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+anyprompt-0.4.0.dist-info/entry_points.txt,sha256=7cLTYqpe-C9iLl9flWVUVr9ER_sFx4L3s9L0CDcQIdI,49
+anyprompt-0.4.0.dist-info/top_level.txt,sha256=WcM3sAf_ZpH6myQfJM-nTCYaGdnGO4mwOtcLSlxgD1U,10
+anyprompt-0.4.0.dist-info/RECORD,,
