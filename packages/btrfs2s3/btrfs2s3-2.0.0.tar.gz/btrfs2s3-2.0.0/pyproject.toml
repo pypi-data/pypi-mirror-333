@@ -1,0 +1,158 @@
+# btrfs2s3 - maintains a tree of differential backups in object storage.
+#
+# Copyright (C) 2024-2025 Steven Brudenell and other contributors.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools>=70,<71",
+  "setuptools-scm>=8,<9",
+]
+
+[project]
+name = "btrfs2s3"
+description = "Snapshot btrfs volumes and back them up to s3"
+readme = "README.md"
+authors = [
+  { name = "Steven Brudenell", email = "steven.brudenell@gmail.com" },
+]
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dynamic = [
+  "version",
+]
+dependencies = [
+  "arrow>=1,<2",
+  "boto3[crt]>=1,<2",
+  "cfgv>=3,<4",
+  "pyyaml>=6,<7",
+  "rich>=13,<14",
+  "typing-extensions>=4.4,<5",
+  "tzdata",
+]
+urls.homepage = "https://github.com/sbrudenell/btrfs2s3"
+scripts.btrfs2s3 = "btrfs2s3._internal.main:main"
+
+[tool.setuptools_scm]
+
+[tool.ruff]
+format.skip-magic-trailing-comma = true
+lint.select = [
+  "ALL",
+]
+lint.ignore = [
+  # COM812 requires trailing commas. docs say this is not recommended for use
+  # with ruff-format.
+  "COM812",
+  # ISC001 concatenates adjacent strings. ruff-formatter asks for this to be
+  # disabled.
+  "ISC001",
+  # PLR0911 checks for excessive return statements. Too chatty to be useful for
+  # an experienced dev.
+  "PLR0911",
+  # PLR0913 checks for excessive function arguments. Too chatty to be useful
+  # for an experienced dev.
+  "PLR0913",
+  # S101 forids assert. Unconditional alerts are not useful.
+  "S101",
+  # S311 forbids randrange. Unconditional alerts are not useful.
+  "S311",
+  # S603 forbids Popen. Unconditional alerts are not useful.
+  "S603",
+  # S607 forbids check_call with relative path. Unconditional alerts are not
+  # useful.
+  "S607",
+  # SIM117 requires combining nested with statements. In my experience this
+  # frequently leads to long, less-readable multi-line with statements.
+  "SIM117",
+]
+lint.per-file-ignores."tests/*" = [
+  # D checks docstrings. I'm not going to require these in tests.
+  "D",
+  # PLR2004 checks for magic numbers. This is explicitly desired with tests.
+  "PLR2004",
+  # S105 checks against hardcoded values being assigned to AWS_* environment
+  # variables. We explicitly do this to shadow any real credentials.
+  "S105",
+  # SLF001 checks for private member access. This is explicitly desired with
+  # whitebox testing.
+  "SLF001",
+]
+lint.isort.force-single-line = true
+lint.isort.force-sort-within-sections = true
+lint.isort.order-by-type = false
+lint.pydocstyle.convention = "google"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+  "error",
+  "ignore::DeprecationWarning:botocore.crt.auth",
+]
+
+[tool.coverage.paths]
+source = [
+  "src/btrfs2s3",
+  "*/.tox/*/lib/python*/site-packages/btrfs2s3",
+]
+
+[tool.coverage.run]
+plugins = [
+  "covdefaults",
+]
+source = [
+  "btrfs2s3",
+  "tests",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+  [tox]
+  requires =
+      tox>=4.2
+      tox<5
+  env_list =
+      py
+
+  [testenv]
+  system_site_packages = true
+  deps =
+      -r test-requirements.txt
+  commands =
+      coverage erase
+      coverage run -m pytest {posargs}
+      coverage report
+"""
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = "cfgv"
+ignore_missing_imports = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "semver2"
+version_provider = "scm"
+update_changelog_on_bump = true

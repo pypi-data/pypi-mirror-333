@@ -1,0 +1,7 @@
+arrow<2,>=1
+boto3[crt]<2,>=1
+cfgv<4,>=3
+pyyaml<7,>=6
+rich<14,>=13
+typing-extensions<5,>=4.4
+tzdata

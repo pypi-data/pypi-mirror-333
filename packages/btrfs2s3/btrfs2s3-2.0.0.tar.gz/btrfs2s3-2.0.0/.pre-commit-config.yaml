@@ -1,0 +1,73 @@
+repos:
+- repo: https://github.com/Lucas-C/pre-commit-hooks
+  rev: v1.5.5
+  hooks:
+  - id: insert-license
+    args: [--license-filepath, license-header.txt, --allow-past-years]
+    files: (^pyproject.toml|\.py)$
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: check-byte-order-marker
+  - id: check-case-conflict
+  - id: check-executables-have-shebangs
+  - id: check-json
+  - id: check-merge-conflict
+  - id: check-shebang-scripts-are-executable
+  - id: check-toml
+  - id: debug-statements
+  - id: detect-private-key
+  - id: end-of-file-fixer
+    exclude: '.*\.golden$'
+  - id: mixed-line-ending
+  - id: name-tests-test
+  - id: trailing-whitespace
+    exclude: '.*\.golden$'
+- repo: https://github.com/tox-dev/pyproject-fmt
+  rev: v2.5.0
+  hooks:
+  - id: pyproject-fmt
+- repo: https://github.com/google/yamlfmt
+  rev: v0.16.0
+  hooks:
+  - id: yamlfmt
+- repo: https://github.com/adrienverge/yamllint
+  rev: v1.35.1
+  hooks:
+  - id: yamllint
+- repo: https://github.com/executablebooks/mdformat
+  rev: 0.7.22
+  hooks:
+  - id: mdformat
+    additional_dependencies:
+    - mdformat-config
+    - mdformat-toc
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.9.9
+  hooks:
+  - id: ruff
+    args: [--fix, --exit-non-zero-on-fix]
+  - id: ruff-format
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.15.0
+  hooks:
+  - id: mypy
+    additional_dependencies:
+    # primary dependencies (corresponds to pyproject.toml)
+    - arrow>=1,<2
+    - boto3-stubs[boto3,s3]>=1,<2
+    - cfgv>=3,<4
+    - types-pyyaml>=6,<7
+    - rich>=13,<14
+    - typing-extensions>=4.4,<5
+    # test dependencies (corresponds to test-requirements.txt)
+    - moto[s3]>=5,<6
+    - pytest>=8,<9
+    args: []
+- repo: https://github.com/commitizen-tools/commitizen
+  rev: v4.3.0
+  hooks:
+  - id: commitizen
+  - id: commitizen-branch
+    stages:
+    - pre-push

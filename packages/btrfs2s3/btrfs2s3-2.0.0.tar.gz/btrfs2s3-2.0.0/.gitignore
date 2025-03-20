@@ -1,0 +1,8 @@
+*.egg-info
+*.py[co]
+/.coverage
+/.tox
+/dist
+/build
+.vscode/
+.*.swp
