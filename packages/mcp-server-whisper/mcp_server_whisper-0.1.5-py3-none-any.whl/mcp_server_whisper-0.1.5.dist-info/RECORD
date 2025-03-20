@@ -1,0 +1,9 @@
+mcp_server_whisper/__init__.py,sha256=AmVaaOK1toFQMfg4-qH6Dl2qAQGL68wcepPzRPwxMZY,80
+mcp_server_whisper/__main__.py,sha256=LTeWvk4HhdAV9psv6soScBgnM0ZlI1tb318O-v6SxTw,103
+mcp_server_whisper/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp_server_whisper/server.py,sha256=tBX2nD_taH1JOE7zX70lUxb-frCfyw9NaNgWtVDd-dw,30919
+mcp_server_whisper-0.1.5.dist-info/METADATA,sha256=0SRP7fq6X6lsWDmPbhTIacilelvUAWG-Wh3-2QfV0hE,10362
+mcp_server_whisper-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_whisper-0.1.5.dist-info/entry_points.txt,sha256=cgA5vHkwgHzn3ytVNq7dTMdhN6eeK7OuQl0JZdi5otc,63
+mcp_server_whisper-0.1.5.dist-info/licenses/LICENSE,sha256=nwn6nCu3dr8mzFuXseMgtzE09eIm1ga7zPaY9Xu1tDM,1069
+mcp_server_whisper-0.1.5.dist-info/RECORD,,
