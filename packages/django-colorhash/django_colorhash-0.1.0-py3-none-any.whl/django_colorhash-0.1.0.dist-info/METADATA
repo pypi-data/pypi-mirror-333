@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: django-colorhash
+Version: 0.1.0
+Summary: color-hash templatetag for Django
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: colorhash>=2.0.0
+Requires-Dist: django>=4.2
+
+# django-colorhash
+
+Provide a [Django](https://www.djangoproject.com/) templatetag to generate [colorhash](https://github.com/dimostenis/color-hash-python) values from strings
