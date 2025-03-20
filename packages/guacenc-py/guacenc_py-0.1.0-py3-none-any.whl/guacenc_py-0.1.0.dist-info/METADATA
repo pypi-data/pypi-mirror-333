@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: guacenc-py
+Version: 0.1.0
+Summary: Prue python version of guacenc
+Author-email: Eric <xplzv@126.com>
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pillow>=11.1.0
+Requires-Dist: pycairo>=1.27.0
