@@ -1,0 +1,94 @@
+trigger:
+  tags:
+    include:
+    - /^([0-9]+)\.([0-9]+)\.([0-9]+)$/ # this matches tags like 1.2.3, 4.5.6, etc.
+
+parameters:
+- name: dry_run
+  displayName: 'Dry run (does not publish to ESRP)'
+  type: boolean
+  default: true
+
+variables:
+  CDP_DEFINITION_BUILD_COUNT: $[counter('', 0)]
+  LinuxContainerImage: 'mcr.microsoft.com/onebranch/cbl-mariner/build:2.0'
+  DEBIAN_FRONTEND: noninteractive
+  ob_outputDirectory: '$(Build.SourcesDirectory)/out'
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: OneBranch.Pipelines/GovernedTemplates
+      ref: refs/heads/main
+
+extends:
+  template: v2/OneBranch.NonOfficial.CrossPlat.yml@templates
+  parameters:
+    globalSdl:
+      tsa:
+        enabled: false
+      credscan:
+        enabled: true
+      policheck:
+        break: true
+
+    stages:
+    - stage: Build
+      jobs:
+      - job: Build
+        timeoutInMinutes: 120
+        cancelTimeoutInMinutes: 0
+
+        pool:
+          type: linux
+
+        variables:
+          ob_outputDirectory: '$(Build.SourcesDirectory)/out'
+
+        steps:
+        - checkout: self
+
+        - task: PipAuthenticate@1
+          displayName: 'Private Conda Feed Authentication'
+          inputs:
+            artifactFeeds: 'A365/Synapse-Conda'
+
+        - bash: |
+            python3.9 -m pip install build
+          workingDirectory: SynapseML-Agent-SDK
+          displayName: 'Install Build'
+
+        - bash: |
+            python3.9 -m build
+          workingDirectory: SynapseML-Agent-SDK
+          displayName: 'Build SynapseML-Agent-SDK'
+
+        - task: CopyFiles@2
+          displayName: 'Copy Wheels'
+          inputs:
+            Contents: '$(System.DefaultWorkingDirectory)/SynapseML-Agent-SDK/dist/*.whl'
+            TargetFolder: ${{ variables['ob_outputDirectory'] }}
+
+        - task: EsrpRelease@7
+          ${{ if eq(parameters.dry_run, false) }}:
+            condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          ${{ else }}:
+            condition: false
+          inputs:
+            ConnectedServiceName: 'DataScienceESRPRelease2024'
+            keyvaultname: 'synapseml-esrp-kv'
+            authcertname: 'ReleaseAutomation'
+            signcertname: 'ESRPReqSignCA'
+            clientid: '1fc1c0d1-5a85-4081-8f1e-12a8c225b9a6'
+            Intent: 'PackageDistribution'
+            ContentType: 'PyPI'
+            contentsource: 'Folder'
+            folderlocation: '$(System.DefaultWorkingDirectory)/SynapseML-Agent-SDK/dist'
+            Owners: 'marcozo@microsoft.com'
+            Approvers: 'markus.weimer@microsoft.com,negust@microsoft.com'
+            ServiceEndpointUrl: 'https://api.esrp.microsoft.com'
+            MainPublisher: 'synapseml'
+            DomainTenantId: '72f988bf-86f1-41af-91ab-2d7cd011db47'
+            waitforreleasecompletion: true
+          displayName: 'ESRP Publish SynapseML Agent SDK'
