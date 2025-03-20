@@ -1,0 +1,6 @@
+README.md
+setup.py
+korede_data_validator_tool.egg-info/PKG-INFO
+korede_data_validator_tool.egg-info/SOURCES.txt
+korede_data_validator_tool.egg-info/dependency_links.txt
+korede_data_validator_tool.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: korede-data-validator-tool
+Version: 0.1
+Summary: A simple data validation package
+Author: Oluwakorede Oyewole
+Author-email: damisonoyewole@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
