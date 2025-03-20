@@ -1,0 +1,3 @@
+[pytest11]
+langlight_plugin=langlight.pytest_plugin
+
