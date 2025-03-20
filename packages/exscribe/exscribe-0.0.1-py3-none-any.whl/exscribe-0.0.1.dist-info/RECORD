@@ -1,0 +1,14 @@
+exscribe/__init__.py,sha256=lQk1QqbIaKcigD2Pdk8VhT5WeNc7O5ut23j5IWNrqN8,537
+exscribe/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+exscribe/cli.py,sha256=Yx9rsno2HpdHDa6SeslUA_LK5QLQ38vL2aWqE62wcFQ,8800
+exscribe/frame_processing.py,sha256=oUZUR5gfX-HirWifzNVl1LpK0RnpBjWvjQ-8RAmnHSA,4128
+exscribe/models.py,sha256=TAWKqVR5_TYXFA8GhupWAQBsDQUyP9boPmyoRQwunbs,1562
+exscribe/subtitle.py,sha256=mKFbtM7Gvt3CFzbkd14fZOc_AMohott5Q89vYrrtE4Q,3235
+exscribe/transcription.py,sha256=0EytO05CLyBU8S3Src0G4HT9kiR2GtwNwnGwg7CYUw4,5039
+exscribe/providers/__init__.py,sha256=N6FB8pD9snC-zjEfZXd_iY8nkTgyJhga8zpJWYaLI28,130
+exscribe/providers/base.py,sha256=MeHP3tPCfbcRsJRHilEfmuCqT3l5Qi55gF1djx86GLk,968
+exscribe/providers/gemini.py,sha256=vXhnst3u3_GSMCqwnYXA0Pm6mCPwTWLWeh3FOolh1qg,2966
+exscribe-0.0.1.dist-info/METADATA,sha256=RGpNKnMAj06Q3SaCvLmkje16DzIVbRDF0z3QD5aZ-dQ,4802
+exscribe-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+exscribe-0.0.1.dist-info/entry_points.txt,sha256=FIUJlWjhKF0oiUmW0hcr4fgaTHTFx9ruesGWKc2ohes,43
+exscribe-0.0.1.dist-info/RECORD,,
