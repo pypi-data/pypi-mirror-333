@@ -1,0 +1,12 @@
+fed_rf_mk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fed_rf_mk/client.py,sha256=AEf2v2UmRxzzgn2zOIJvRKy1i2Q7TAK9G6bm2UxhGWs,11793
+fed_rf_mk/datasets.py,sha256=w2QdA93diH6Y6PJXKLMhBYfcGmwylB2avchpP5ef9-E,298
+fed_rf_mk/datasites.py,sha256=KOUxppjLmQw6utaHA844GlD1ghwReWjL1udxi6_XGGY,3203
+fed_rf_mk/server.py,sha256=5xf1HJlIgxsql3hfv4jyPdGlkDeda1LvfHGUB_gAdoc,1526
+fed_rf_mk/utils.py,sha256=WSoccCQ5qPCcXSEE8c2ph5agmgj8YGBNCbE8iIff-A8,3120
+fed_rf_mk-0.0.2.dist-info/LICENSE,sha256=-Ys5-IVa1iS4xypmEy3ItDYi6oiYYpaW2Gys21BRY_U,1075
+fed_rf_mk-0.0.2.dist-info/METADATA,sha256=vqJpav-McpbAPSzbukIkMh7Xr4PHo36DGvFsfvZWUls,8465
+fed_rf_mk-0.0.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+fed_rf_mk-0.0.2.dist-info/entry_points.txt,sha256=DO5WRDoFAR2L37jVVRtQ9QawQpomVA8SpMn0VUd_Wig,59
+fed_rf_mk-0.0.2.dist-info/top_level.txt,sha256=YH4ZN43lTlrck9yhZeRF-bsgK_CK7oFNqV7ni-2WDu8,10
+fed_rf_mk-0.0.2.dist-info/RECORD,,
