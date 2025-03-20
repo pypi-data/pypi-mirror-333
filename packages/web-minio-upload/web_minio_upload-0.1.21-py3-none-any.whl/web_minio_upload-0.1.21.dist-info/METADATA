@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: web-minio-upload
+Version: 0.1.21
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: flask>=3.1.0
+Requires-Dist: minio>=7.2.15
+Requires-Dist: python-dotenv>=1.0.1

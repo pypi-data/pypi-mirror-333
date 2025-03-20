@@ -1,0 +1,9 @@
+my/entry.py,sha256=5d2SYcURa9tSB85YFRTIbEuUFCvU-CudTilQCQe0t3M,712
+web/app.py,sha256=qF-GnKS8-Sj5EjrrbjBLTrhho15i1DT8Mi9NIAq693o,2585
+web/static/style.css,sha256=Kse-iOchTyEcTg1m60iIIsaks83Ht6tSopjfGyU-YhY,1073
+web/templates/index.html,sha256=nZq0BqQPhQESPAZTNjSW3zb_ZmIJ-h5mJlgJ7HZLync,3224
+web_minio_upload-0.1.21.dist-info/METADATA,sha256=01ohfPxen7zNQ6dA4c3a2miUE_z_6JHfrdpsyyLcbmU,262
+web_minio_upload-0.1.21.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+web_minio_upload-0.1.21.dist-info/entry_points.txt,sha256=LWSorHm6odWSpG4RRtOemrTNf7cBnrJRm4cd75YJryI,45
+web_minio_upload-0.1.21.dist-info/top_level.txt,sha256=UXaeMnUnm2IYx9CtoxSHkq1Q9fTp8c55CYjWZKBta08,7
+web_minio_upload-0.1.21.dist-info/RECORD,,
