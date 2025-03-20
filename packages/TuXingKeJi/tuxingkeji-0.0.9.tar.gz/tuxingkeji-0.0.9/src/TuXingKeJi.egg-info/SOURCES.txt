@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/TuXingKeJi/TuXingSDK.py
+src/TuXingKeJi/__init__.py
+src/TuXingKeJi/enumHelper.py
+src/TuXingKeJi/peripheral.py
+src/TuXingKeJi/serialHelper.py
+src/TuXingKeJi.egg-info/PKG-INFO
+src/TuXingKeJi.egg-info/SOURCES.txt
+src/TuXingKeJi.egg-info/dependency_links.txt
+src/TuXingKeJi.egg-info/requires.txt
+src/TuXingKeJi.egg-info/top_level.txt
+tests/test2.py
