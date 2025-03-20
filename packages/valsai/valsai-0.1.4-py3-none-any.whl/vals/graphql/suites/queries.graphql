@@ -1,0 +1,74 @@
+query getTestSuiteData($suiteId: String!) {
+  testSuites(testSuiteId: $suiteId) {
+    description
+    id
+    org
+    title
+    created
+    globalChecks
+  }
+}
+
+query getTestData($suiteId: String!) {
+  tests(testSuiteId: $suiteId) {
+    checks
+    testId
+    crossVersionId
+    fileIds
+    inputUnderTest
+    tags
+    context
+    goldenOutput
+    testSuite {
+      id
+    }
+  }
+}
+
+query getTestSuitesWithCount($offset: Int, $limit: Int, $search: String) {
+  testSuitesWithCount(
+    filterOptions: { offset: $offset, limit: $limit, search: $search }
+  ) {
+    testSuites {
+      id
+      title
+      description
+      created
+      creator
+      lastModifiedBy
+      lastModifiedAt
+      folder {
+        id
+        name
+      }
+    }
+  }
+}
+
+query getOperators {
+  operators {
+    nameInDoc
+    isUnary
+  }
+}
+
+query GetActiveCustomOperators {
+  customOperators(archived: false) {
+    id
+    name
+    prompt
+    isUnary
+    createdBy
+    createdAt
+    archived
+  }
+}
+
+query getRagSuites {
+  ragSuites {
+    id
+    org
+    path
+    query
+  }
+}
