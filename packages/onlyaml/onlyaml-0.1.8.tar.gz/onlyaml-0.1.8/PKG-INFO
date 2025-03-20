@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: onlyaml
+Version: 0.1.8
+Summary: A python library imposing program only accepting yaml file as CL argument
+Home-page: 
+Author: WD
+Author-email: 
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3.7
+License-File: LICENCE
+Requires-Dist: pyyaml
+Requires-Dist: dacite
