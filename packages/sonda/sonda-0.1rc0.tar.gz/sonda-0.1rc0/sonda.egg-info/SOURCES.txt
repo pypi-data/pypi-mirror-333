@@ -1,0 +1,8 @@
+README.md
+setup.py
+sonda/__main__.py
+sonda.egg-info/PKG-INFO
+sonda.egg-info/SOURCES.txt
+sonda.egg-info/dependency_links.txt
+sonda.egg-info/entry_points.txt
+sonda.egg-info/top_level.txt
