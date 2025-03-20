@@ -1,0 +1,2 @@
+[console_scripts]
+uvi = uvi.cli:main
