@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pydoubao
+Version: 0.1.0
+Summary: Use doubao web api to build a chatbot
+Home-page: https://example.com
+Author: Wenhao Liu
+Author-email: me@liuwenhao.me
+License: UNKNOWN
+Description: # pydoubao.py 文件使用文档
+        
+        ## 简介
+        
+        pydoubao.py 是一个用于与 Doubao（一个智能助手平台）进行对话的 Python 类模块。该模块允许开发者通过发送 HTTP 请求与 Doubao 进行交互，获取或发送文本消息。
+        
+        ## 功能
+        
+        初始化：DoubaoConversation 类的构造函数接受一个包含配置信息的字典，用于建立与 Doubao 的连接。
+        生成随机字符串：generate_hex_string 和 generate_digits_string 方法用于生成指定长度的十六进制和数字字符串，常用于消息 ID 的生成。
+        发送消息：get_text_reply 方法用于发送文本消息到 Doubao，并接收回复。
+        ## 使用示例
+        
+        以下是如何使用 DoubaoConversation 类与 Doubao 进行对话的示例：
+        
+        ```python
+        from pydoubao import DoubaoConversation
+        doubao_config = {
+            "aid": 497858,
+            "device_id": 7449390609188488730,
+            "sid_tt": "d37d4a141d1f89ba2b6cbba43132c73a"
+        }
+        # 创建 Doubao 对象
+        doubao = DoubaoConversation(doubao_config)
+        # 发送消息并打印回复
+        print(doubao.get_text_reply("你是谁？"))
+        print(doubao.get_text_reply("我的上一个问题是什么？"))
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
