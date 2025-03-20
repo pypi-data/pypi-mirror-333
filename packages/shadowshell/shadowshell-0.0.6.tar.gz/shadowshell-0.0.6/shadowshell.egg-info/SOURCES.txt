@@ -1,0 +1,7 @@
+pyproject.toml
+adapter/__init__.py
+adapter/console_logger.py
+shadowshell.egg-info/PKG-INFO
+shadowshell.egg-info/SOURCES.txt
+shadowshell.egg-info/dependency_links.txt
+shadowshell.egg-info/top_level.txt
