@@ -1,0 +1,8 @@
+adafruit_minimqtt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adafruit_minimqtt/adafruit_minimqtt.py,sha256=_3wpOw4OzPketol3CVpUOSde5XzE9yAS8gcqxYa9Db8,48370
+adafruit_minimqtt/matcher.py,sha256=MaZL921S5Pa571pVjiDJrrOOrORZgjyM8evvc00Lit8,3236
+adafruit_circuitpython_minimqtt-8.0.0.dist-info/LICENSE,sha256=4X0xFaoekrvJQ_auPzrSUHJ0QdARs6_tA8iJ3-J69wE,1401
+adafruit_circuitpython_minimqtt-8.0.0.dist-info/METADATA,sha256=PCksi_PDpcpa2Db1koslDrnQ102B1fBrfdJioprD-wk,3658
+adafruit_circuitpython_minimqtt-8.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+adafruit_circuitpython_minimqtt-8.0.0.dist-info/top_level.txt,sha256=0ftaZst0oA0MSY_n-qXJCEpuj55t40zmRXTw6r58ZEQ,18
+adafruit_circuitpython_minimqtt-8.0.0.dist-info/RECORD,,
