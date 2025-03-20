@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: ungrabber
+Version: 0.0.1
+Summary: Ungrabber is a python module to automatically decompile and get the C2/Type of almost every known python grabbers
+Home-page: https://github.com/lululepu/Ungrabber
+Author: Lululepu
+Author-email: a.no.qsdf@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xdis
+Requires-Dist: cryptography
+Requires-Dist: pycryptodome
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
