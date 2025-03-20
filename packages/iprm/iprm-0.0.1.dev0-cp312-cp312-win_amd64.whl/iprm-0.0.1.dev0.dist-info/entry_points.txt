@@ -1,0 +1,3 @@
+[console_scripts]
+iprm = iprm.main:main
+iprm-cli = iprm.main:cli_main
