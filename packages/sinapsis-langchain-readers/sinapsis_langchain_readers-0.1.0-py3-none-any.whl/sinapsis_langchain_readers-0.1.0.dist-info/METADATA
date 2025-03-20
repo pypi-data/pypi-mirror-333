@@ -1,0 +1,85 @@
+Metadata-Version: 2.2
+Name: sinapsis-langchain-readers
+Version: 0.1.0
+Summary: Package that provides support for Langchain community data loaders.
+Author-email: SinapsisAI <dev@sinapsis.tech>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: langchain-community>=0.3.5
+Requires-Dist: sinapsis>=0.1.1
+Provides-Extra: langchain-webpages-readers
+Requires-Dist: apify-client>=1.8.1; extra == "langchain-webpages-readers"
+Requires-Dist: arxiv>=2.1.3; extra == "langchain-webpages-readers"
+Requires-Dist: beautifulsoup4>=4.12.3; extra == "langchain-webpages-readers"
+Requires-Dist: browserbase>=1.0.0; extra == "langchain-webpages-readers"
+Requires-Dist: dgml-utils>=0.3.0; extra == "langchain-webpages-readers"
+Requires-Dist: firecrawl-py>=1.4.0; extra == "langchain-webpages-readers"
+Requires-Dist: geopandas>=1.0.1; extra == "langchain-webpages-readers"
+Requires-Dist: librosa>=0.10.2.post1; extra == "langchain-webpages-readers"
+Requires-Dist: pyairtable>=2.3.5; extra == "langchain-webpages-readers"
+Requires-Dist: pydub>=0.25.1; extra == "langchain-webpages-readers"
+Requires-Dist: pymupdf>=1.24.13; extra == "langchain-webpages-readers"
+Requires-Dist: sodapy>=2.2.0; extra == "langchain-webpages-readers"
+Requires-Dist: yt-dlp>=2024.11.4; extra == "langchain-webpages-readers"
+Provides-Extra: langchain-wikipedia-readers
+Requires-Dist: wikipedia>=1.4.0; extra == "langchain-wikipedia-readers"
+Provides-Extra: langchain-pdfs-readers
+Requires-Dist: bibtexparser>=1.4.2; extra == "langchain-pdfs-readers"
+Requires-Dist: pymupdf>=1.24.13; extra == "langchain-pdfs-readers"
+Requires-Dist: pypdf>=5.1.0; extra == "langchain-pdfs-readers"
+Provides-Extra: langchain-unstructured-readers
+Requires-Dist: langchain-unstructured>=0.1.5; extra == "langchain-unstructured-readers"
+Requires-Dist: unstructured[pdf]>=0.16.5; extra == "langchain-unstructured-readers"
+Requires-Dist: unstructured-client>=0.25.9; extra == "langchain-unstructured-readers"
+Requires-Dist: python-magic>=0.4.27; extra == "langchain-unstructured-readers"
+Provides-Extra: langchain-cloud-readers
+Requires-Dist: amazon-textract-caller>=0.2.4; extra == "langchain-cloud-readers"
+Requires-Dist: assemblyai>=0.35.1; extra == "langchain-cloud-readers"
+Requires-Dist: atlassian-python-api>=3.41.16; extra == "langchain-cloud-readers"
+Requires-Dist: azure-ai-generative>=1.0.0b11; extra == "langchain-cloud-readers"
+Requires-Dist: azure-storage-blob>=12.23.1; extra == "langchain-cloud-readers"
+Requires-Dist: azureml-fsspec>=1.3.1; extra == "langchain-cloud-readers"
+Requires-Dist: boto3>=1.35.57; extra == "langchain-cloud-readers"
+Requires-Dist: dropbox>=12.0.2; extra == "langchain-cloud-readers"
+Requires-Dist: google-api-python-client>=2.151.0; extra == "langchain-cloud-readers"
+Requires-Dist: google-auth-httplib2>=0.2.0; extra == "langchain-cloud-readers"
+Requires-Dist: google-auth-oauthlib>=1.2.1; extra == "langchain-cloud-readers"
+Requires-Dist: html2text>=2024.2.26; extra == "langchain-cloud-readers"
+Requires-Dist: langchain-community>=0.3.5; extra == "langchain-cloud-readers"
+Requires-Dist: langchain-google-bigtable>=0.4.1; extra == "langchain-cloud-readers"
+Requires-Dist: langchain-google-community[gcs]>=2.0.2; extra == "langchain-cloud-readers"
+Requires-Dist: langchain-openai>=0.2.6; extra == "langchain-cloud-readers"
+Requires-Dist: playwright>=1.48.0; extra == "langchain-cloud-readers"
+Requires-Dist: pyodps>=0.12.1; extra == "langchain-cloud-readers"
+Requires-Dist: python-dotenv>=1.0.1; extra == "langchain-cloud-readers"
+Provides-Extra: langchain-social-readers
+Requires-Dist: mastodon-py>=1.8.1; extra == "langchain-social-readers"
+Requires-Dist: pandas>=2.2.3; extra == "langchain-social-readers"
+Requires-Dist: tweepy>=4.14.0; extra == "langchain-social-readers"
+Provides-Extra: langchain-productivity-tools-readers
+Requires-Dist: lxml>=4.30; extra == "langchain-productivity-tools-readers"
+Requires-Dist: py-trello>=0.20.1; extra == "langchain-productivity-tools-readers"
+Provides-Extra: langchain-common-readers
+Requires-Dist: bs4>=0.0.2; extra == "langchain-common-readers"
+Requires-Dist: jq>=1.8.0; extra == "langchain-common-readers"
+Provides-Extra: langchain-database-readers
+Requires-Dist: fauna>=2.3.0; extra == "langchain-database-readers"
+Requires-Dist: langchain>=0.3.7; extra == "langchain-database-readers"
+Requires-Dist: langchain-google-alloydb-pg>=0.8.0; extra == "langchain-database-readers"
+Requires-Dist: langchain-google-community[bigquery]>=2.0.2; extra == "langchain-database-readers"
+Requires-Dist: pyowm>=3.3.0; extra == "langchain-database-readers"
+Provides-Extra: langchain-productivity-tools
+Requires-Dist: gitpython>=3.1.43; extra == "langchain-productivity-tools"
+Provides-Extra: all
+Requires-Dist: sinapsis-langchain-readers[langchain-productivity-tools]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-database-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-common-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-productivity-tools-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-social-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-cloud-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-unstructured-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-pdfs-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-wikipedia-readers]; extra == "all"
+Requires-Dist: sinapsis-langchain-readers[langchain-webpages-readers]; extra == "all"
+Provides-Extra: langchain-wepages-readers
+Requires-Dist: youtube-transcript-api>=1.0.0; extra == "langchain-wepages-readers"
