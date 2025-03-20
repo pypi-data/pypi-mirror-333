@@ -1,0 +1,8 @@
+README.md
+setup.py
+server_report_django.egg-info/PKG-INFO
+server_report_django.egg-info/SOURCES.txt
+server_report_django.egg-info/dependency_links.txt
+server_report_django.egg-info/entry_points.txt
+server_report_django.egg-info/requires.txt
+server_report_django.egg-info/top_level.txt
