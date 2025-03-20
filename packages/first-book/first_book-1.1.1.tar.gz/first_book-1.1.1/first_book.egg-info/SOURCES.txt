@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+first_book/__init__.py
+first_book/utils.py
+first_book.egg-info/PKG-INFO
+first_book.egg-info/SOURCES.txt
+first_book.egg-info/dependency_links.txt
+first_book.egg-info/top_level.txt
