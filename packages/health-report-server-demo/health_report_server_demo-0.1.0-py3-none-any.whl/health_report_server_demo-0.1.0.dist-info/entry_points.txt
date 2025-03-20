@@ -1,0 +1,2 @@
+[console_scripts]
+health_report = health_report_pkg.cli:main
