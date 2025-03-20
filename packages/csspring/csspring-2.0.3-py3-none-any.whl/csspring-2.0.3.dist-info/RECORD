@@ -1,0 +1,15 @@
+csspring/__init__.py,sha256=Nan0UzfsBHDBEuuwlTDusjxIph6GrxuYgklsTlXFx-k,918
+csspring/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+csspring/selectors.py,sha256=xXuB80vJxsFln44i-kp_yBT7nDcAOrqzcBKbMx5hkE0,14237
+csspring/utils.py,sha256=bNg6kM-3n9EivdOfRQsoYgvlNZSQ2SHF5jvJcJq1XkQ,9648
+csspring/values.py,sha256=o45mnrC3_svayXO1JDI3x9NMujkBD7GLtUXvKtHO_dk,12577
+csspring/syntax/__init__.py,sha256=gCv16KO30s1Y5Kkr43KpoqWaXxGSMQegFMljDcBe-GA,280
+csspring/syntax/grammar.py,sha256=IFHHVRHpZTXK3lxMf4o4gVHyWfEcfY447QbHd2Tk1n4,234
+csspring/syntax/parsing.py,sha256=s42Ps-mEOAdf9RXsRMFNJ3hhnLjb4IGKCR3yoktvY2A,33506
+csspring/syntax/preprocessing.py,sha256=kJiglqxjg5LuiNrGWLNoCVspGPJZbiUhaXmG3entddA,2074
+csspring/syntax/tokenizing.py,sha256=M2AhjKITU4DbR9UiAwQv8GaS8RGGAtvN08W0o4MCf4c,30073
+csspring-2.0.3.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+csspring-2.0.3.dist-info/METADATA,sha256=FI35SiehB63J2nr7XCFG3pwYmytaGklSwmLOCI2eWCs,50542
+csspring-2.0.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+csspring-2.0.3.dist-info/top_level.txt,sha256=cAaYTzVdadIRKfa0ncRt2G9zA4lvAe_EpE23MfLdwzQ,9
+csspring-2.0.3.dist-info/RECORD,,
