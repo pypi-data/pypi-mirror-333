@@ -1,0 +1,9 @@
+ibm_vpc/__init__.py,sha256=NfWtFKM7bL88l7_n0T6-YaS-xau4jcwd3E07N-yc948,878
+ibm_vpc/common.py,sha256=o3aIO1AYUeHp-ZmSBto7BrcrfzH7pQHqqNlJzFcj6EI,1857
+ibm_vpc/version.py,sha256=AkB2UxkvS4tnPs7Kxq1t_2PfaUZ7bDpPZvDZ9Hto7C0,47
+ibm_vpc/vpc_v1.py,sha256=FeYswPv293WUM6vbQ8TEIHo2LH8yN0QUay6SVPa476s,7492364
+ibm_vpc-0.27.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ibm_vpc-0.27.0.dist-info/METADATA,sha256=XIMM6_NtsVxrHS2dYLwvNYer_PGeIsIi3QOtTyiNafQ,6889
+ibm_vpc-0.27.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+ibm_vpc-0.27.0.dist-info/top_level.txt,sha256=jBPLaxdKxIzKB3P1h-wqkhv0dQuGVUh-CWKbwKs3-ps,8
+ibm_vpc-0.27.0.dist-info/RECORD,,
