@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/test.py
+src/template_align/__init__.py
+src/template_align/main.py
+src/template_align.egg-info/PKG-INFO
+src/template_align.egg-info/SOURCES.txt
+src/template_align.egg-info/dependency_links.txt
+src/template_align.egg-info/entry_points.txt
+src/template_align.egg-info/requires.txt
+src/template_align.egg-info/top_level.txt
