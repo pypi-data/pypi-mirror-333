@@ -1,0 +1,7 @@
+unitycatalog/ai/openai/__init__.py,sha256=dy8cY4RpsEiC6lOHw48A8t9lNdAYqda8cJAxiktH7jg,74
+unitycatalog/ai/openai/toolkit.py,sha256=e4VWd8tbQIp9HgrV_kSvqR7FnNHCDB4B_9XrRtoLpe0,3550
+unitycatalog/ai/openai/utils.py,sha256=lq-r3l2mKzr2vQcklWPCxWJ87ByPFXXlgYNIR0Q_m40,2329
+unitycatalog/ai/openai/version.py,sha256=CpXi3jGlx23RvRyU7iytOMZrnspdWw4yofS8lpP1AJU,18
+unitycatalog_openai-0.2.0.dist-info/METADATA,sha256=VE8epjOHd6Zl3ZgjoPVAH2pvwcF_7CySLfnDpos8_sA,8165
+unitycatalog_openai-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+unitycatalog_openai-0.2.0.dist-info/RECORD,,
