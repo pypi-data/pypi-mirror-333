@@ -1,0 +1,10 @@
+cachebox-4.5.2.dist-info/METADATA,sha256=ZpKSh9j_qVdPksS3uHzgqBhp8Oun8BiPCxhJ6UI4miU,23177
+cachebox-4.5.2.dist-info/WHEEL,sha256=wJxP_Tsw_9vBsVdda7E1ENFQ1kgOOcFwB5J0gm4KFxo,108
+cachebox-4.5.2.dist-info/licenses/LICENSE,sha256=4oH8nU-rNZ9h5tbh6MoPVPFgtYDqsPXlAr2QnhnxQ4Q,1064
+cachebox.libs/libgcc_s-e52197c3.so.1,sha256=vkPW1Auw6CH9Bjk7frmX3hry_1H9c0tRI0Ncyg71WUI,724137
+cachebox/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cachebox/_cachebox.pyi,sha256=ezaRUDGkUGYnEUcMDCw9e2mogqJK-FlJYPdTMv5nqUs,39320
+cachebox/utils.py,sha256=tMT7ZCiwGWe8SIBIcfszuZ9pU1UNm0s_ZP45zjBJa6g,15036
+cachebox/__init__.py,sha256=haI-Ya3FMVmUmjpxx9O9Q2pazyYR1UPH998_DOex36I,1103
+cachebox/_cachebox.cpython-313-aarch64-linux-musl.so,sha256=I6aqLdnCaHQQCU-egQ2VdI6-i4CAHO1Ip7tbnJTPpgc,920633
+cachebox-4.5.2.dist-info/RECORD,,
