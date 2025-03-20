@@ -1,0 +1,34 @@
+#TEST FILE
+from dotenv import load_dotenv
+import sys
+import os
+sys.path.append("./vaultUts")
+from vaultUts import *
+load_dotenv()
+
+#Pessoa = MyMeta("Pessoa", (Pessoa,), dict(Pessoa.__dict__))
+
+#Pessoa.name
+vlt = VaultLib("","",in_prd=True)
+vlt = VaultLib("http://192.168.80.46:8200","hvs.DlkQG7otLCx1mt0bwDKT8B0i",in_prd=True)
+
+@vlt.link("Teste/data/auth")
+class BotVault: 
+    hehe      : str
+
+@vlt.link("Teste/data/auth")
+class BotVault2: 
+    hehe      : str
+
+#BotVault.hehe = "AI SIM"
+
+#BotVault.save()
+print(BotVault.hehe)
+BotVault.refresh()
+
+
+print(BotVault.hehe)
+
+
+pass
+
