@@ -1,0 +1,12 @@
+duet_tools/__init__.py,sha256=7qTk25XmckwLYL3SrqQe7vEUWbQQ9rydnVSO3yAk0Qw,1253
+duet_tools/calibration.py,sha256=SdJ3WzX-K8xG6tlIZvRFxVqs-VMkJX1V-RrDBfYFg5g,27208
+duet_tools/example.py,sha256=Nd52G3e-F-eaPJKeKIacaVtHKKF4oxikWdDUYd1nj4k,1591
+duet_tools/inputs.py,sha256=2Xc2ygQwpP8bs1Y7GhW3k1M_eB5HJf-O1OfenIc5tFw,3295
+duet_tools/landfire.py,sha256=bwG7D7TYgLmsxeziByBzucPt6h6qI3hfwUivxN7pCg0,14716
+duet_tools/utils.py,sha256=sX7RRwpKCmiInXJSl5EBKzu_jWo3DVYMyV0etT7GKH8,3250
+duet_tools/data/sb40_parameters.csv,sha256=JpMWBLgrcinR8P29WraJe1V4TJI26JlzObtF3igP0NA,2680
+duet_tools-0.6.1.dist-info/LICENSE,sha256=MEtZwIZKL0Ui_l20UbZ83iPYdKxKkGGbjUr9fvTlCCw,1078
+duet_tools-0.6.1.dist-info/METADATA,sha256=CdB0wGmXpuBaNx-cDJbIzFwz1EaeQTgG3h4okcqaggE,2491
+duet_tools-0.6.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+duet_tools-0.6.1.dist-info/top_level.txt,sha256=8b1pImaLGZIcQJ5AkFtSIJciByD5l0f2Aiw67t_46Xc,11
+duet_tools-0.6.1.dist-info/RECORD,,
