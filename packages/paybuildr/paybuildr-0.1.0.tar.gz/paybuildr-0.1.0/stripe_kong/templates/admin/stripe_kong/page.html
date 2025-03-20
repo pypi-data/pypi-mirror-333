@@ -1,0 +1,68 @@
+{# stripe_kong/templates/stripe_kong/page.html #}
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<style>
+  /* Basic reset and styles for Puck pages */
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .puck-page-container {
+    min-height: 100vh;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="puck-page-container" id="puck-page-content">
+  {# This div will be filled with the rendered Puck content #}
+  <div style="padding: 40px; text-align: center;">
+    <h2>{{ page.title }}</h2>
+    <p>Loading page content...</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'stripe_kong/js/puck/dist/renderer.bundle.js' %}"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const pageData = {{ content|safe }};
+    const pageContainer = document.getElementById('puck-page-content');
+    
+    // If the Puck renderer is loaded, use it
+    if (window.renderPuckPage) {
+      window.renderPuckPage('puck-page-content', pageData);
+    } else {
+      // Fallback rendering if the script fails to load
+      if (pageData && pageData.root && pageData.root.children) {
+        let htmlContent = '<h1>{{ page.title }}</h1>';
+        
+        pageData.root.children.forEach(component => {
+          // Simple representation of components
+          htmlContent += `<div style="margin: 20px 0; padding: 20px; border: 1px solid #eee; border-radius: 5px;">
+            <h3>${component.type} Component</h3>
+            <pre style="background: #f5f5f5; padding: 10px; border-radius: 3px; overflow: auto;">${JSON.stringify(component.props, null, 2)}</pre>
+          </div>`;
+        });
+        
+        pageContainer.innerHTML = htmlContent || '<p>This page has no content yet.</p>';
+      } else {
+        pageContainer.innerHTML = '<p>This page has no content yet.</p>';
+      }
+    }
+  });
+</script>
+{% endblock %}

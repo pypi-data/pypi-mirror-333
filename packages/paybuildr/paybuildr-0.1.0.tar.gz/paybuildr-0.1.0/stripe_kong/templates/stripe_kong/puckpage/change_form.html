@@ -1,0 +1,11 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls %}
+
+{% block submit_buttons_bottom %}
+    {{ block.super }}
+    <div class="submit-row">
+        <a href="{% url 'admin:stripe_kong_puckpage_editor' original.pk %}" class="button" style="background-color: #3498db;">
+            {% trans 'Edit with Page Builder' %}
+        </a>
+    </div>
+{% endblock %}

@@ -1,0 +1,110 @@
+# Include license file and readme
+include LICENSE
+include README.md
+
+# Include package data
+recursive-include stripe_kong/templates *
+recursive-include stripe_kong/migrations *
+
+# Handle static files but exclude node_modules
+# First exclude all node_modules directories
+global-exclude */node_modules/*
+global-exclude */*/node_modules/*
+global-exclude */*/*/node_modules/*
+prune **/node_modules
+
+# Then include static files, but with a graft that skips node_modules
+recursive-include stripe_kong/static *.css
+recursive-include stripe_kong/static *.js
+recursive-include stripe_kong/static *.html
+recursive-include stripe_kong/static *.json
+recursive-include stripe_kong/static *.svg
+recursive-include stripe_kong/static *.png
+recursive-include stripe_kong/static *.jpg
+recursive-include stripe_kong/static *.gif
+recursive-include stripe_kong/static *.ico
+recursive-include stripe_kong/static *.md
+recursive-include stripe_kong/static *.txt
+
+# Exclude common development/build artifacts
+global-exclude __pycache__/
+global-exclude *.py[cod]
+global-exclude *$py.class
+global-exclude *.so
+global-exclude .Python
+global-exclude build/
+global-exclude develop-eggs/
+global-exclude dist/
+global-exclude downloads/
+global-exclude eggs/
+global-exclude .eggs/
+global-exclude lib/
+global-exclude lib64/
+global-exclude parts/
+global-exclude sdist/
+global-exclude var/
+global-exclude wheels/
+global-exclude share/python-wheels/
+global-exclude *.egg-info/
+global-exclude .installed.cfg
+global-exclude *.egg
+global-exclude MANIFEST
+global-exclude *.manifest
+global-exclude *.spec
+global-exclude pip-log.txt
+global-exclude pip-delete-this-directory.txt
+global-exclude htmlcov/
+global-exclude .tox/
+global-exclude .nox/
+global-exclude .coverage
+global-exclude .coverage.*
+global-exclude .cache
+global-exclude nosetests.xml
+global-exclude coverage.xml
+global-exclude *.cover
+global-exclude *.py,cover
+global-exclude .hypothesis/
+global-exclude .pytest_cache/
+global-exclude cover/
+global-exclude *.mo
+global-exclude *.pot
+global-exclude *.log
+global-exclude local_settings.py
+global-exclude db.sqlite3
+global-exclude db.sqlite3-journal
+global-exclude instance/
+global-exclude .webassets-cache
+global-exclude .scrapy
+global-exclude docs/_build/
+global-exclude .pybuilder/
+global-exclude target/
+global-exclude .ipynb_checkpoints
+global-exclude profile_default/
+global-exclude ipython_config.py
+global-exclude .pdm.toml
+global-exclude .pdm-python
+global-exclude .pdm-build/
+global-exclude **pypackages**/
+global-exclude celerybeat-schedule
+global-exclude celerybeat.pid
+global-exclude *.sage.py
+global-exclude .env
+global-exclude .venv
+global-exclude env/
+global-exclude venv/
+global-exclude venv*/
+global-exclude ENV/
+global-exclude env.bak/
+global-exclude venv.bak/
+global-exclude .spyderproject
+global-exclude .spyproject
+global-exclude .ropeproject
+global-exclude /site
+global-exclude .mypy_cache/
+global-exclude .dmypy.json
+global-exclude dmypy.json
+global-exclude .pyre/
+global-exclude .pytype/
+global-exclude cython_debug/
+global-exclude .ruff_cache/
+global-exclude .pypirc

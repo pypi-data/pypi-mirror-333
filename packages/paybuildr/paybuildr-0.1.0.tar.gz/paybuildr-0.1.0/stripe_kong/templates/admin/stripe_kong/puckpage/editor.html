@@ -1,0 +1,207 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="https://unpkg.com/grapesjs@0.20.1/dist/css/grapes.min.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  #content {
+    padding: 0;
+  }
+  .editor-container {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+  }
+  .editor-header {
+    display: flex;
+    align-items: center;
+    background-color: #417690;
+    color: white;
+    padding: 10px 20px;
+  }
+  .editor-header h1 {
+    margin: 0;
+    font-size: 18px;
+    flex-grow: 1;
+  }
+  .editor-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .editor-actions .btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .editor-actions .btn-white {
+    background: white;
+    color: #333;
+  }
+  .editor-actions .btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+  #gjs {
+    flex-grow: 1;
+    height: calc(100% - 50px);
+    overflow: hidden;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="editor-container">
+  <div class="editor-header">
+    <h1>{{ title }}</h1>
+    <div class="editor-actions">
+      <button id="save-button" class="btn btn-white">Save</button>
+      <a href="{{ back_url }}" class="btn btn-outline">Back to Admin</a>
+      <a href="{{ preview_url }}" target="_blank" class="btn btn-outline">Preview</a>
+    </div>
+  </div>
+  <div id="gjs"></div>
+</div>
+
+<script src="https://unpkg.com/grapesjs@0.20.1/dist/grapes.min.js"></script>
+<script src="https://unpkg.com/grapesjs-blocks-basic@1.0.1"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize GrapesJS editor
+    const editor = grapesjs.init({
+      container: '#gjs',
+      height: '100%',
+      storageManager: false,
+      plugins: ['gjs-blocks-basic'],
+      pluginsOpts: {
+        'gjs-blocks-basic': {
+          flexGrid: true
+        }
+      },
+      blockManager: {
+        appendTo: '#blocks'
+      },
+      deviceManager: {
+        devices: [
+          {
+            name: 'Desktop',
+            width: '',
+          },
+          {
+            name: 'Tablet',
+            width: '768px',
+            widthMedia: '992px',
+          },
+          {
+            name: 'Mobile',
+            width: '320px',
+            widthMedia: '480px',
+          }
+        ]
+      }
+    });
+
+    // Load page content
+    try {
+      const pageData = {{ page.content|safe }};
+      if (pageData && pageData.html) {
+        editor.setComponents(pageData.html);
+      }
+      if (pageData && pageData.css) {
+        editor.setStyle(pageData.css);
+      }
+    } catch (e) {
+      console.error('Error loading page content:', e);
+    }
+
+    // Add save button event handler
+    document.getElementById('save-button').addEventListener('click', function() {
+      const html = editor.getHtml();
+      const css = editor.getCss();
+      const data = {
+        html: html,
+        css: css
+      };
+
+      // Get CSRF token
+      function getCsrfToken() {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+          const [name, value] = cookie.trim().split('=');
+          if (name === 'csrftoken') return value;
+        }
+        return '';
+      }
+
+      // Save to server
+      fetch('{{ save_url }}', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCsrfToken()
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert('Page saved successfully!');
+        } else {
+          alert('Error saving page: ' + (data.error || 'Unknown error'));
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error saving page: ' + error.message);
+      });
+    });
+
+    // Add custom panels for better UI
+    editor.Panels.addPanel({
+      id: 'panel-top',
+      el: '.editor-header'
+    });
+
+    editor.Panels.addPanel({
+      id: 'basic-actions',
+      buttons: [
+        {
+          id: 'visibility',
+          active: true,
+          className: 'btn-toggle-borders',
+          label: '<i class="fa fa-square-o"></i>',
+          command: 'sw-visibility'
+        },
+        {
+          id: 'export',
+          className: 'btn-export',
+          label: 'Export',
+          command: 'export-template',
+          context: 'export-template'
+        },
+        {
+          id: 'show-json',
+          className: 'btn-show-json',
+          label: 'JSON',
+          context: 'show-json',
+          command: function(editor) {
+            editor.Modal.setTitle('Components JSON');
+            editor.Modal.setContent(`<textarea style="width:100%; height: 250px;">${JSON.stringify(editor.getComponents())}</textarea>`);
+            editor.Modal.open();
+          }
+        }
+      ]
+    });
+  });
+</script>
+{% endblock %}
+
+{% block footer %}{% endblock %}

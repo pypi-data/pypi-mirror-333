@@ -1,0 +1,34 @@
+{
+  "name": "django-stripe-kong-puck",
+  "version": "0.1.0",
+  "description": "Puck page builder integration for Django Stripe Kong",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
+  },
+  "keywords": [
+    "puck",
+    "django",
+    "page-builder"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@measured/puck": "^0.11.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+}

@@ -1,0 +1,26 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block content %}
+<div id="content-main">
+    {% if kong_enabled %}
+    <div class="module" style="border-left: 5px solid #417690; padding: 15px; margin-bottom: 20px; background-color: #f8f8f8;">
+        <h2>{% trans "Kong API Gateway" %}</h2>
+        <p>{% trans "Manage your Kong API Gateway services and routes." %}</p>
+        <div style="margin-top: 10px;">
+            <a href="{% url 'admin:kong_status' %}" class="button" style="margin-right: 10px;">
+                {% trans "View Kong Status" %}
+            </a>
+            <a href="{% url 'admin:stripe_kong_apiservice_changelist' %}" class="button" style="margin-right: 10px;">
+                {% trans "Manage Services" %}
+            </a>
+            <a href="{% url 'admin:stripe_kong_apiroute_changelist' %}" class="button">
+                {% trans "Manage Routes" %}
+            </a>
+        </div>
+    </div>
+    {% endif %}
+    
+    {{ block.super }}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<style>
+  {{ content.css|safe }}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+  {{ content.html|safe }}
+</div>
+{% endblock %}
