@@ -1,0 +1,5 @@
+[console_scripts]
+orman-html-generator=web_reader_mode.html_generator:main
+orman-reader-mode=web_reader_mode.reader_mode:main
+orman-web-reader=web_reader_mode.__main__:main
+
