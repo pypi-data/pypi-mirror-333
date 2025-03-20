@@ -1,0 +1,11 @@
+catalogue/__init__.py,sha256=bkxVOM9UARk881FSGMlLwCEfJVBw4t2PymODsxDbMfM,104
+mammoth/__init__.py,sha256=c3_nQV0pHDcnRqhTItqwqqb0Z253JGsJLF-B9klqza8,161
+mammoth/custom_kfp.py,sha256=nqOnJVAl6zcSNQqdOSzfdR3MNyPvVYb9unibtl1L4oI,3533
+mammoth/externals.py,sha256=vhDA5k17ibmR9H5ZI6EHF1iPsC4cIT7qDB2Ib-ZuafM,1227
+mammoth/integration.py,sha256=2xLlvW2Qt43ZIfaiYbNmMQl2gcLDRPGv9vVTBgALx-s,12402
+mammoth/testing.py,sha256=cGNLT4mJA2LeI5Vqdp1N4pMtcY1Vo2-AwuEgTbjxV2U,939
+MAMMOth_commons-0.0.47.dist-info/LICENSE,sha256=yj1M8actae3Ccx0z5pIutH7vRrWv3c7nkgSN7ZnwIJU,546
+MAMMOth_commons-0.0.47.dist-info/METADATA,sha256=7yCl09fvFSuXTk8NT_qwECpK4M78LjiskBeZQnt_YXU,2045
+MAMMOth_commons-0.0.47.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+MAMMOth_commons-0.0.47.dist-info/top_level.txt,sha256=RXydj81_clxj5KiPQok7gPd7XnVl2vyzHsxhjYIUIEI,18
+MAMMOth_commons-0.0.47.dist-info/RECORD,,
