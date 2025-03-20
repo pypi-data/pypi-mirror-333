@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/pingsss/__init__.py
+src/pingsss/pingsss.py
+src/pingsss.egg-info/PKG-INFO
+src/pingsss.egg-info/SOURCES.txt
+src/pingsss.egg-info/dependency_links.txt
+src/pingsss.egg-info/entry_points.txt
+src/pingsss.egg-info/requires.txt
+src/pingsss.egg-info/top_level.txt
+tests/test_pingsss.py
