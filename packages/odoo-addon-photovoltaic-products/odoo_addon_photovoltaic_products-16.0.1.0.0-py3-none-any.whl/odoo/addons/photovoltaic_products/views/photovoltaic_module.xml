@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_photovoltaic_module_form" model="ir.ui.view">
+      <field name="name">view.photovoltaic_module.form</field>
+      <field name="model">photovoltaic.module</field>
+      <field name="arch" type="xml">
+        <form string="Module">
+          <sheet>
+          <div class="oe_title">
+              <h1>
+                <field name="model" />
+              </h1>
+            </div>
+            <group name="main">
+              <group>
+                <field name="manufacturer"  />
+                <field name="product_id" domain="[('categ_id.id', '=', module_tag)]" options="{'no_create': True, 'no_create_edit':True}"/><!--TODO: Make it so that if no tag has been set all products are visible (https://github.com/OCA/web/tree/13.0/web_domain_field)--> 
+                <field name="module_tag" invisible='1' />
+                <field name="max_voltage"  />
+                <field name="max_current"  />
+                <field name="short_circuit_current"  />
+                <field name="power"  />
+                <field name="open_circuit_voltage"  />
+                <field name="temperature_coeficient"  />
+              </group>
+              <group>
+                <field name="tonc"  />
+                <field name="min_temperature"  />
+                <field name="max_temperature"  />
+                <field name="min_ambient_temperature"  />
+                <field name="max_ambient_temperature"  />
+                <field name="uoc"  />
+                <field name="umpp_min"  />
+                <field name="umpp_max"  />
+                <field name="maximum_system_voltage"  />
+                <field name="maximum_fuse_rating"  />
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_photovoltaic_module_tree" model="ir.ui.view">
+      <field name="name">view.photovoltaic_module.tree</field>
+      <field name="model">photovoltaic.module</field>
+      <field name="arch" type="xml">
+        <tree string="Module">
+          <field name="model" optional="show" />
+          <field name="manufacturer" optional="show" />
+          <field name="product_id" optional="show" />
+          <field name="max_voltage" optional="show" />
+          <field name="max_current" optional="show" />
+          <field name="short_circuit_current" optional="show" />
+          <field name="power" optional="show" />
+          <field name="open_circuit_voltage" optional="show" />
+          <field name="temperature_coeficient" optional="show" />
+          <field name="tonc" optional="show" />
+          <field name="min_temperature" optional="show" />
+          <field name="max_temperature" optional="show" />
+          <field name="min_ambient_temperature" optional="show" />
+          <field name="max_ambient_temperature" optional="show" />
+          <field name="uoc" optional="show" />
+          <field name="umpp_min" optional="show" />
+          <field name="umpp_max" optional="show" />
+          <field name="maximum_system_voltage" optional="show" />
+          <field name="maximum_fuse_rating" optional="show" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="photovoltaic_module_action" model="ir.actions.act_window">
+      <field name="name">Module</field>
+      <field name="res_model">photovoltaic.module</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to create a new module.
+        </p>
+      </field>
+    </record>
+</odoo>

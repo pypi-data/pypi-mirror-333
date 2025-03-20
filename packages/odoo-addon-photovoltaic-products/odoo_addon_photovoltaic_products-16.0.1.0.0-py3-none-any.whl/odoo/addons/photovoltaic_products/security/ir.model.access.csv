@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_photovoltaic_inverter,access_photovoltaic_inverter,model_photovoltaic_inverter,photovoltaic_mgmt.photovoltaic_user,1,1,1,1
+access_photovoltaic_module,access_photovoltaic_module,model_photovoltaic_module,photovoltaic_mgmt.photovoltaic_user,1,1,1,1

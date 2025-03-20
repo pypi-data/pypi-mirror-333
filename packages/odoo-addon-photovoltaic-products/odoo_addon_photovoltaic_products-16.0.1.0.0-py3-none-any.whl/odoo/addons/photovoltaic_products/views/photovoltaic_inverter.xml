@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_photovoltaic_inverter_form" model="ir.ui.view">
+      <field name="name">view.photovoltaic_inverter.form</field>
+      <field name="model">photovoltaic.inverter</field>
+      <field name="arch" type="xml">
+        <form string="Inverter">
+          <sheet>
+          <div class="oe_title">
+              <h1>
+                <field name="model" />
+              </h1>
+            </div>
+            <group name="main">
+              <group>
+                <field name="manufacturer"/>
+                <field name="product_id" domain="[('categ_id.id','=', inverter_tag)]" options="{'no_create': True, 'no_create_edit':True}"/> <!--TODO: Make it so that if no tag has been set all products are visible (https://github.com/OCA/web/tree/13.0/web_domain_field)--> 
+                <field name="inverter_tag" invisible='1'/>
+                <field name="rated_power_ac" />
+                <field name="maximum_power_dc" />
+                <field name="startup_voltage_dc" />
+                <field name="lower_voltage_limit_mpp" />
+                <field name="upper_voltage_limit_mpp" />
+                <field name="max_voltage_dc" />
+                <field name="in_dc" />
+                <field name="maximun_current_dc" />
+                <field name="vac" />
+              </group>
+              <group>
+                <field name="maximun_current_ac" />
+                <field name="power_factor" />
+                <field name="number_of_phases" />
+                <field name="type" />
+                <field name="number_of_mppt_trackers" />
+                <field name="maximum_current_per_mppt" />
+                <field name="maximum_icc_per_mppt" />
+                <field name="pv_inputs_per_mppt" />
+                <field name="total_pv_inputes" />
+                <field name="connectivity" />
+                <field name="monitoring_portal" widget='url'/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_photovoltaic_inverter_tree" model="ir.ui.view">
+      <field name="name">view.photovoltaic_inverter.tree</field>
+      <field name="model">photovoltaic.inverter</field>
+      <field name="arch" type="xml">
+        <tree string="Inverter">
+          <field name="model" optional="show" />
+          <field name="manufacturer" optional="show" />
+          <field name="product_id" optional="show" />
+          <field name="rated_power_ac" optional="show" />
+          <field name="maximum_power_dc" optional="show" />
+          <field name="startup_voltage_dc" optional="show" />
+          <field name="lower_voltage_limit_mpp" optional="show" />
+          <field name="upper_voltage_limit_mpp" optional="show" />
+          <field name="max_voltage_dc" optional="show" />
+          <field name="in_dc" optional="show" />
+          <field name="maximun_current_dc" optional="show" />
+          <field name="vac" optional="show" />
+          <field name="rated_power_ac" optional="show" />
+          <field name="maximun_current_ac" optional="show" />
+          <field name="power_factor" optional="show" />
+          <field name="number_of_phases" optional="show" />
+          <field name="type" optional="show" />
+          <field name="number_of_mppt_trackers" optional="show" />
+          <field name="maximum_current_per_mppt" optional="show" />
+          <field name="maximum_icc_per_mppt" optional="show" />
+          <field name="pv_inputs_per_mppt" optional="show" />
+          <field name="total_pv_inputes" optional="show" />
+          <field name="connectivity" optional="show" />
+          <field name="monitoring_portal" optional="show" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="photovoltaic_inverter_action" model="ir.actions.act_window">
+      <field name="name">Inverter</field>
+      <field name="res_model">photovoltaic.inverter</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to create a new Inverter.
+        </p>
+      </field>
+    </record>
+</odoo>

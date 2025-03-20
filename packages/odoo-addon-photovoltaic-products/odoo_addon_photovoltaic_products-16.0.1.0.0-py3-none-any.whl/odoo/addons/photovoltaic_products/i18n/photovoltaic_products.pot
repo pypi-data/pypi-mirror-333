@@ -1,0 +1,541 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* photovoltaic_products
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20250226\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-12 19:40+0000\n"
+"PO-Revision-Date: 2025-03-12 19:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_needaction
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_attachment_count
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields.selection,name:photovoltaic_products.selection__photovoltaic_inverter__type__central
+msgid "Central"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model_terms:ir.actions.act_window,help:photovoltaic_products.photovoltaic_inverter_action
+msgid "Click to create a new Inverter."
+msgstr ""
+
+#. module: photovoltaic_products
+#: model_terms:ir.actions.act_window,help:photovoltaic_products.photovoltaic_module_action
+msgid "Click to create a new module."
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model,name:photovoltaic_products.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__connectivity
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__connectivity
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__connectivity
+msgid "Connectivity/communications"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__create_uid
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__create_date
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__display_name
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__failed_message_ids
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__failed_message_ids
+msgid "Failed Messages"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_follower_ids
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_partner_ids
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__has_message
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__id
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__id
+msgid "ID"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_inverter__message_needaction
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_module__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_inverter__message_has_error
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_module__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__in_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__in_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__in_dc
+msgid "In DC (A)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.actions.act_window,name:photovoltaic_products.photovoltaic_inverter_action
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__inverter_id
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__inverter_ids
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__inverter_id
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__inverter_ids
+#: model_terms:ir.ui.view,arch_db:photovoltaic_products.view_photovoltaic_inverter_form
+#: model_terms:ir.ui.view,arch_db:photovoltaic_products.view_photovoltaic_inverter_tree
+msgid "Inverter"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__inverter_tag
+msgid "Inverter Tag"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_res_config_settings__photovoltaic_inverter_tag
+msgid "Inverter category"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_is_follower
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter____last_update
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__write_uid
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__write_date
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__lower_voltage_limit_mpp
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__lower_voltage_limit_mpp
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__lower_voltage_limit_mpp
+msgid "Lower voltage limit MPP (V)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_main_attachment_id
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__manufacturer
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__manufacturer
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__manufacturer
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__manufacturer
+msgid "Manufacturer"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__max_ambient_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__max_ambient_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__max_ambient_temperature
+msgid "Max ambient temperature"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__max_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__max_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__max_temperature
+msgid "Max temperature"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__max_voltage_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__max_voltage_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__max_voltage_dc
+msgid "Max voltage DC (V)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__maximum_icc_per_mppt
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__maximum_icc_per_mppt
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__maximum_icc_per_mppt
+msgid "Maximum Icc per MPPT (A)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__max_current
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__max_current
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__max_current
+msgid "Maximum current (A)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__maximun_current_ac
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__maximun_current_ac
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__maximun_current_ac
+msgid "Maximum current AC (A)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__maximun_current_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__maximun_current_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__maximun_current_dc
+msgid "Maximum current DC (A)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__maximum_current_per_mppt
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__maximum_current_per_mppt
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__maximum_current_per_mppt
+msgid "Maximum current per MPPT (A)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__maximum_fuse_rating
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__maximum_fuse_rating
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__maximum_fuse_rating
+msgid "Maximum fuse rating"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__maximum_power_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__maximum_power_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__maximum_power_dc
+msgid "Maximum power DC (W)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__maximum_system_voltage
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__maximum_system_voltage
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__maximum_system_voltage
+msgid "Maximum system voltage "
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__max_voltage
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__max_voltage
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__max_voltage
+msgid "Maximum voltage (V)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_has_error
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_ids
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__min_ambient_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__min_ambient_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__min_ambient_temperature
+msgid "Min ambient temperature"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__min_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__min_temperature
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__min_temperature
+msgid "Min temperature"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__model
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__model
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__model
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__model
+msgid "Model"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.actions.act_window,name:photovoltaic_products.photovoltaic_module_action
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__module_id
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__module_ids
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__module_id
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__module_ids
+#: model_terms:ir.ui.view,arch_db:photovoltaic_products.view_photovoltaic_module_form
+#: model_terms:ir.ui.view,arch_db:photovoltaic_products.view_photovoltaic_module_tree
+msgid "Module"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__module_tag
+msgid "Module Tag"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_res_config_settings__photovoltaic_module_tag
+msgid "Module category"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__monitoring_portal
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__monitoring_portal
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__monitoring_portal
+msgid "Monitoring portal"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields.selection,name:photovoltaic_products.selection__photovoltaic_inverter__type__multistring
+msgid "Multistring"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_needaction_counter
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__number_of_mppt_trackers
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__number_of_mppt_trackers
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__number_of_mppt_trackers
+msgid "Number of MPPT trackers"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__pv_inputs_per_mppt
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__pv_inputs_per_mppt
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__pv_inputs_per_mppt
+msgid "Number of PV inputs per MPPT"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__message_has_error_counter
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_inverter__message_needaction_counter
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_module__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_inverter__message_has_error_counter
+#: model:ir.model.fields,help:photovoltaic_products.field_photovoltaic_module__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__number_of_phases
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__number_of_phases
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__number_of_phases
+msgid "Number of phases"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__total_pv_inputes
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__total_pv_inputes
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__total_pv_inputes
+msgid "Number of total PV inputs"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__open_circuit_voltage
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__open_circuit_voltage
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__open_circuit_voltage
+msgid "Open-circuit voltage (V)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model,name:photovoltaic_products.model_photovoltaic_inverter
+msgid "Photovoltaic Inverter"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model,name:photovoltaic_products.model_photovoltaic_module
+msgid "Photovoltaic Module"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__power
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__power
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__power
+msgid "Power (W)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__power_factor
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__power_factor
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__power_factor
+msgid "Power factor"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model,name:photovoltaic_products.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__product_id
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__product_id
+msgid "Producto"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__rated_power_ac
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__rated_power_ac
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__rated_power_ac
+msgid "Rated power AC (W)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__short_circuit_current
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__short_circuit_current
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__short_circuit_current
+msgid "Short-circuit current (A)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields.selection,name:photovoltaic_products.selection__photovoltaic_inverter__number_of_phases__single-phase
+msgid "Single-phase"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__startup_voltage_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__startup_voltage_dc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__startup_voltage_dc
+msgid "Start-up voltage DC (V)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__tonc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__tonc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__tonc
+msgid "TONC"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model_terms:ir.ui.view,arch_db:photovoltaic_products.view_photovoltaic_products_product_form
+msgid "Technical characteristics"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__temperature_coeficient
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__temperature_coeficient
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__temperature_coeficient
+msgid "Temperature Coefficient [mV/ºC]."
+msgstr ""
+
+#. module: photovoltaic_products
+#. odoo-python
+#: code:addons/photovoltaic_products/models/photovoltaic_module.py:0
+#: model:ir.model.constraint,message:photovoltaic_products.constraint_photovoltaic_module_uniq_product_id
+#, python-format
+msgid "There is a module already assigned to this product"
+msgstr ""
+
+#. module: photovoltaic_products
+#. odoo-python
+#: code:addons/photovoltaic_products/models/photovoltaic_inverter.py:0
+#: model:ir.model.constraint,message:photovoltaic_products.constraint_photovoltaic_inverter_uniq_product_id
+#, python-format
+msgid "There is an inverter already assigned to this product"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields.selection,name:photovoltaic_products.selection__photovoltaic_inverter__number_of_phases__three-phase
+msgid "Three-phase"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__type
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__inverter_type
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__inverter_type
+msgid "Type"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__umpp_max
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__umpp_max
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__umpp_max
+msgid "UMPP (Max temp)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__umpp_min
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__umpp_min
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__umpp_min
+msgid "UMPP (Min temp)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_module__uoc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__uoc
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__uoc
+msgid "UOC (Min temp)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__upper_voltage_limit_mpp
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__upper_voltage_limit_mpp
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__upper_voltage_limit_mpp
+msgid "Upper voltage limit MPP (V)"
+msgstr ""
+
+#. module: photovoltaic_products
+#: model:ir.model.fields,field_description:photovoltaic_products.field_photovoltaic_inverter__vac
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_product__vac
+#: model:ir.model.fields,field_description:photovoltaic_products.field_product_template__vac
+msgid "Vac (V)"
+msgstr ""
