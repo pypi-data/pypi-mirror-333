@@ -1,0 +1,9 @@
+setuptools
+cryptography
+future
+TkinterLite
+pillow
+aes
+rsa
+publicmodel
+stegano

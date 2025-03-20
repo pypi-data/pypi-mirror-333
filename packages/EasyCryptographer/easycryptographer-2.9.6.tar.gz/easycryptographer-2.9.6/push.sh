@@ -1,0 +1,3 @@
+#! /bin/bash
+python setup.py sdist bdist_wheel
+twine upload dist/* --username __token__ --password pypi-AgEIcHlwaS5vcmcCJDEzY2YzZjk5LWVkMTQtNDY3OS1iNzBhLTY4Y2Q2MTQ3OTIzOQACKlszLCJkNjA3ZTkzYi01ODAzLTQ0MDQtOTlmMi05ZTk2ZmMxZGIxNjEiXQAABiDCQO9lg9fa860xM_3ZfPiNVqeHR5UnlcUoV-pjlSo1DA
