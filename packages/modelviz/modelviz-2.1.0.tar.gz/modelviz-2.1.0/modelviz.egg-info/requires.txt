@@ -1,0 +1,11 @@
+numpy
+scikit-learn
+matplotlib
+pandas
+plotly.express
+seaborn
+statsmodels
+scipy
+
+[dev]
+pytest>=7.0
