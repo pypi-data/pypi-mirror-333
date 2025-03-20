@@ -1,0 +1,6 @@
+setup.py
+bot_pipeline.egg-info/PKG-INFO
+bot_pipeline.egg-info/SOURCES.txt
+bot_pipeline.egg-info/dependency_links.txt
+bot_pipeline.egg-info/requires.txt
+bot_pipeline.egg-info/top_level.txt
