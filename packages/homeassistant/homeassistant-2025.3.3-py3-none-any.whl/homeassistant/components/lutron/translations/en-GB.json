@@ -1,0 +1,26 @@
+{
+    "entity": {
+        "event": {
+            "button": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "press": "Press",
+                            "release": "Release",
+                            "single_press": "Single press"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "default_dimmer_level": "Default light level when first turning on a light from Home Assistant"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "entity": {
+        "sensor": {
+            "dehumidifier": {
+                "name": "Dehumidifier"
+            },
+            "humidifier": {
+                "name": "Humidifier"
+            }
+        }
+    },
+    "exceptions": {
+        "humidity_while_off": {
+            "message": "Cannot change humidity while off"
+        }
+    }
+}

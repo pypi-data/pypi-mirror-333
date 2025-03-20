@@ -1,0 +1,66 @@
+{
+    "config": {
+        "abort": {
+            "api_error": "Error while communicating with Mi API: {error_detail}"
+        },
+        "error": {
+            "api_device_not_found": "The device was not found in your Mi account.",
+            "auth_failed": "Authentication failed: {error_detail}"
+        },
+        "step": {
+            "cloud_auth": {
+                "description": "Please provide your Mi app username and password. This data won't be saved and only used to retrieve the device encryption key. Usernames and passwords are case-sensitive."
+            },
+            "get_encryption_key_4_5_choose_method": {
+                "description": "A Mi device can be set up in Home Assistant in two different ways.\n\nYou can enter the bindkey yourself, or Home Assistant can import them from your Mi account.",
+                "menu_options": {
+                    "cloud_auth": "Mi account (recommended)",
+                    "get_encryption_key_4_5": "Enter encryption key manually"
+                }
+            }
+        }
+    },
+    "device_automation": {
+        "trigger_subtype": {
+            "abnormal": "Abnormal",
+            "insufficient_area": "Insufficient area",
+            "lock_inside_the_door": "Lock inside the door",
+            "lock_outside_the_door": "Lock outside the door",
+            "locked": "Locked",
+            "low_quality_too_light_fuzzy": "Low quality (too light, fuzzy)",
+            "match_failed": "Match failed"
+        },
+        "trigger_type": {
+            "button_color_temperature": "Button Colour Temperature \"{subtype}\""
+        }
+    },
+    "entity": {
+        "event": {
+            "error": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "the_safe_was_moved": "The safe was moved",
+                            "the_wrong_key_is_frequently_unlocked": "The wrong key is frequently unlocked",
+                            "timeout_is_not_locked_as_required": "Timeout is not locked as required",
+                            "unlock_inside_the_door_after_arming": "Unlock inside the door after arming",
+                            "unlocking_the_face_frequently_fails": "Unlocking the face frequently fails"
+                        }
+                    }
+                }
+            },
+            "lock": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "abnormal": "Abnormal",
+                            "lock_inside_the_door": "Lock inside the door",
+                            "lock_outside_the_door": "Lock outside the door",
+                            "locked": "Locked"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "entity": {
+        "button": {
+            "reset_lifespan_base_station_filter": {
+                "name": "Reset station filter lifespan"
+            },
+            "reset_lifespan_blade": {
+                "name": "Reset blade lifespan"
+            },
+            "reset_lifespan_lens_brush": {
+                "name": "Reset lens brush lifespan"
+            },
+            "reset_lifespan_round_mop": {
+                "name": "Reset round mop lifespan"
+            },
+            "reset_lifespan_unit_care": {
+                "name": "Reset unit care lifespan"
+            },
+            "station_action_empty_dustbin": {
+                "name": "Empty dustbin"
+            }
+        },
+        "event": {
+            "last_job": {
+                "name": "Last job",
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "finished": "Finished",
+                            "finished_with_warnings": "Finished with warnings",
+                            "manually_stopped": "Manually stopped"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "cut_direction": {
+                "name": "Cut direction"
+            }
+        },
+        "sensor": {
+            "lifespan_base_station_filter": {
+                "name": "Station filter lifespan"
+            },
+            "lifespan_blade": {
+                "name": "Blade lifespan"
+            },
+            "lifespan_lens_brush": {
+                "name": "Lens brush lifespan"
+            },
+            "lifespan_round_mop": {
+                "name": "Round mop lifespan"
+            },
+            "lifespan_unit_care": {
+                "name": "Unit care lifespan"
+            },
+            "station_state": {
+                "name": "Station state",
+                "state": {
+                    "emptying_dustbin": "Emptying dustbin"
+                }
+            }
+        },
+        "switch": {
+            "border_switch": {
+                "name": "Border switch"
+            },
+            "child_lock": {
+                "name": "Child lock"
+            },
+            "cross_map_border_warning": {
+                "name": "Cross map border warning"
+            },
+            "move_up_warning": {
+                "name": "Move up warning"
+            },
+            "safe_protect": {
+                "name": "Safe protect"
+            }
+        }
+    },
+    "exceptions": {
+        "vacuum_raw_get_positions_not_supported": {
+            "message": "Retrieving the positions of the chargers and the device itself is not supported"
+        }
+    },
+    "services": {
+        "raw_get_positions": {
+            "description": "Retrieves a raw response containing the positions of the chargers and the device itself.",
+            "name": "Get raw positions"
+        }
+    }
+}

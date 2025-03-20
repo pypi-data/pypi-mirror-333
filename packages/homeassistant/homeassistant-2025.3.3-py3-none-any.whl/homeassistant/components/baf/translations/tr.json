@@ -1,0 +1,67 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f",
+            "ipv6_not_supported": "IPv6 desteklenmiyor."
+        },
+        "error": {
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "unknown": "Beklenmeyen hata"
+        },
+        "flow_title": "{name} - {model} ({ip_address})",
+        "step": {
+            "discovery_confirm": {
+                "description": "{name} - {model} ( {ip_address} ) kurmak istiyor musunuz?"
+            },
+            "user": {
+                "data": {
+                    "ip_address": "IP Adresi"
+                }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "baf": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "auto": "Otomatik"
+                        }
+                    }
+                }
+            }
+        },
+        "sensor": {
+            "current_rpm": {
+                "name": "Mevcut RPM"
+            },
+            "ip_address": {
+                "name": "IP Adresi"
+            },
+            "target_rpm": {
+                "name": "Hedef RPM"
+            },
+            "wifi_ssid": {
+                "name": "Wi-Fi SSID'si"
+            }
+        },
+        "switch": {
+            "comfort_heat_assist_enable": {
+                "name": "Otomatik Konforlu Is\u0131 Deste\u011fi"
+            },
+            "fan_beep_enable": {
+                "name": "Bip"
+            },
+            "light_dim_to_warm_enable": {
+                "name": "Lo\u015ftan S\u0131ca\u011fa"
+            },
+            "return_to_auto_enable": {
+                "name": "Otomati\u011fe D\u00f6n"
+            },
+            "whoosh_enable": {
+                "name": "Vay can\u0131na"
+            }
+        }
+    }
+}

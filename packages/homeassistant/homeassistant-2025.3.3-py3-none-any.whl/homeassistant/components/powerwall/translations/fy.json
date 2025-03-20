@@ -1,0 +1,9 @@
+{
+    "entity": {
+        "sensor": {
+            "solar_instant_power": {
+                "name": "Sinne-enerzjy"
+            }
+        }
+    }
+}

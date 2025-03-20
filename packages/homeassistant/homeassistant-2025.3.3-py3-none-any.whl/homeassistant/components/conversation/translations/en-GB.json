@@ -1,0 +1,12 @@
+{
+    "conversation": {
+        "agent": {
+            "done": "Done"
+        }
+    },
+    "services": {
+        "process": {
+            "name": "Process"
+        }
+    }
+}

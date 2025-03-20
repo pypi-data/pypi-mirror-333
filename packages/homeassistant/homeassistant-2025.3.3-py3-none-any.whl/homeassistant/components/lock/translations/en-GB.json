@@ -1,0 +1,51 @@
+{
+    "device_automation": {
+        "condition_type": {
+            "is_open": "{entity_name} is open"
+        },
+        "extra_fields": {
+            "for": "Duration"
+        },
+        "trigger_type": {
+            "open": "{entity_name} opened"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "state": {
+                "opening": "Opening"
+            }
+        }
+    },
+    "services": {
+        "lock": {
+            "description": "Locks a lock.",
+            "fields": {
+                "code": {
+                    "description": "Code used to lock the lock.",
+                    "name": "Code"
+                }
+            },
+            "name": "Lock"
+        },
+        "open": {
+            "description": "Opens a lock.",
+            "fields": {
+                "code": {
+                    "description": "Code used to open the lock.",
+                    "name": "Code"
+                }
+            }
+        },
+        "unlock": {
+            "description": "Unlocks a lock.",
+            "fields": {
+                "code": {
+                    "description": "Code used to unlock the lock.",
+                    "name": "Code"
+                }
+            },
+            "name": "Unlock"
+        }
+    }
+}
