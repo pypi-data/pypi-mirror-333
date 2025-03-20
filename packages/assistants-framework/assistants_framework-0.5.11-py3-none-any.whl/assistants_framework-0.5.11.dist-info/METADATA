@@ -1,0 +1,175 @@
+Metadata-Version: 2.2
+Name: assistants-framework
+Version: 0.5.11
+Summary: OpenAI Assistants Wrapper, with CLI and Telegram Bot
+Home-page: https://github.com/nihilok/assistants
+Author: Michael Jarvis
+Author-email: nihilok@jarv.dev
+Keywords: openai gpt3 gpt3.5 gpt4 o1 chatgpt chatbot assistant assistants claude anthropic cli telegram llm bot ui tui coding-assistant coding programming
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai==1.65.4
+Requires-Dist: aiosqlite==0.20.0
+Requires-Dist: loguru==0.7.3
+Requires-Dist: pyperclip==1.9.0
+Requires-Dist: prompt-toolkit==3.0.48
+Requires-Dist: pygments==2.18.0
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: anthropic==0.49.0
+Requires-Dist: aiofiles==24.1.0
+Requires-Dist: aiohttp==3.11.11
+Provides-Extra: telegram
+Requires-Dist: python-telegram-bot==21.10; extra == "telegram"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Assistants Framework
+
+A flexible framework for creating AI assistants with multiple frontend interfaces.
+
+## Features
+
+- **Multi-Front-End Support**: CLI and Telegram interfaces built on the same core framework
+- **CLI Features**: Code highlighting, thread management, editor integration, file input, image generation
+- **Multiple LLM Support**: OpenAI (`gpt-*`, `o*`), Anthropic (`claude-*`), and image generation (DALL-E)
+
+## Installation
+
+Requires Python 3.10+
+
+```bash
+pip install assistants-framework
+```
+
+For Telegram bot functionality:
+
+```bash
+pip install assistants-framework[telegram]
+```
+
+Add commands to your PATH:
+
+```bash
+ai-cli install
+```
+
+## Usage
+
+### Command Line Interface
+
+```bash
+ai-cli --help
+```
+
+Key CLI commands (prefixed with `/`):
+- `/help` - Show help message
+- `/editor` - Open editor for prompt composition
+- `/image <prompt>` - Generate an image
+- `/copy` - Copy response to clipboard
+- `/new` - Start new thread
+- `/threads` - List and select threads
+- `/last` - Retrieve last message
+
+Use the `claude` command for Anthropic models:
+
+```bash
+claude -e  # Open editor for Claude
+```
+
+## Environment Variables
+
+- `ASSISTANT_INSTRUCTIONS` - System message (default: "You are a helpful assistant")
+- `ASSISTANTS_API_KEY_NAME` - API key variable name (default: `OPENAI_API_KEY`)
+- `ANTHROPIC_API_KEY_NAME` - Anthropic API key variable (default: `ANTHROPIC_API_KEY`)
+- `DEFAULT_MODEL` - Default model (default: `gpt-4o-mini`)
+- `CODE_MODEL` - Reasoning model (default: `o3-mini`)
+- `IMAGE_MODEL` - Image model (default: `dall-e-3`)
+- `ASSISTANTS_DATA_DIR` - Data directory (default: `~/.local/share/assistants`)
+- `ASSISTANTS_CONFIG_DIR` - Config directory (default: `~/.config/assistants`)
+- `TG_BOT_TOKEN` - Telegram bot token
+- `OPEN_IMAGES_IN_BROWSER` - Open images automatically (default: `true`)
+
+## Contributing
+
+Contributions welcome! Fork the repository, make changes, and submit a pull request.
+
+#### TODOs:
+- Improved conversation handling/truncation for token limits
+- Additional model/API support
+- Additional database support
+
+## License
+
+MIT License
+
+Changelog
+---
+
+### 12/03/2025 v0.5.11
+
+- update README.md
+- other refactors and improvements
+
+### 12/03/2025 v0.5.10
+
+- add CLI option to set variables and options from a config file (`-c`, `--config-file`)
+- fixes bug where instructions were not being passed to the model via environment variable
+
+### 10/03/2025 v0.5.9
+
+- Update CODE_MODEL default to "o3-mini"
+- add thinking mode options (command line option `-T`, `--thinking`)
+- implement last message retrieval cli command (`/l`, `/last`)
+
+### 07/03/2025 v0.5.8
+
+- add support for `claude-3-7-sonnet-latest` model with "thinking" param if used as code model
+- add support for `o1` and `o3-mini` used via the Assistants API (with reasoning_effort defaulting to "medium")
+- fix logic causing conversations to be continued even without passing the continue thread flag
+
+### 26/02/2025 v0.5.5
+
+- add support for stdin redirection
+- add support for new models
+- add dummy-model for testing/debugging
+- fix duplicated output when using the `/e` (editor) command
+
+---
+
+### 31/01/2025 v0.5.3
+
+- add install command to add environment's bin directory to the PATH
+- update README.md
+
+---
+
+### 30/01/2025 v0.5.2
+
+- add `claude` command to automatically set relevant environment variables to use CLI with `claude-3-5-sonnet-latest` model.
+
+---
+
+### 29/01/2025 v0.5.1
+
+- fix typo in setup.py preventing installation
+- convert TerminalSelector to use label/value pairs instead of just strings of its values
+- alters thread labels when selecting so that the thread id is not shown, just the initial prompt
+
+---
+
+### 12/01/2025 v0.5.0
+
+- add support for image generation via OpenAI API
