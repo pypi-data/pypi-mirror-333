@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "krajjat"
+version = "1.99.8"
+authors = [
+  { name="Romain Pastureau", email="r.pastureau@bcbl.eu" },
+]
+description = "Motion capture analysis and relationship between body movements and speech."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "scipy >= 1.11.0, < 2",
+    "numpy >= 1.25.0, < 2",
+    "chardet >= 5.2.0, < 6",
+    "matplotlib >= 3.7, < 4",
+    "seaborn >= 0.12.2, < 1",
+    "opencv-python == 4.8.0.76",
+    "openpyxl >= 3.1, < 4",
+    "pygame >= 2.5, < 3",
+    "PyAudio >= 0.2.13, < 1",
+    "praat-parselmouth > 0.4, < 1"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/RomainPastureau/Krajjat"
+"Bug Tracker" = "https://github.com/RomainPastureau/Krajjat/issues"
+"Documentation" = "https://krajjat.readthedocs.io/en/latest/"
+

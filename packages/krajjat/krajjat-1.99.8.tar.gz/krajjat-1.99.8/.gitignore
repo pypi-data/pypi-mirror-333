@@ -1,0 +1,15 @@
+/coherence_romain.py
+/delays.txt
+/test_file.py
+/test_stats.py
+/test_video_generation.py
+/.venv/
+/doc/
+/docs/.venv/
+/docs/build/
+/classes/__pycache__/
+/.venv/bin/__pycache__/
+/__pycache__/
+/.idea/
+/lib/__pycache__/
+/docs/build/doctrees/
