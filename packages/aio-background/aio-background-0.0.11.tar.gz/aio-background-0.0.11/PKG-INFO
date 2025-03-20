@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: aio-background
+Version: 0.0.11
+Summary: A thing to run tasks in the background
+Author: Iurii Pliner
+Author-email: yury.pliner@gmail.com
+License: MIT
+Platform: macOS
+Platform: POSIX
+Platform: Windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: Typing :: Typed
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# aio-background
+## v0.0.11 (2025-03-12)
+
+* [Support python 3.13](https://github.com/anna-money/aio-background/pull/234)
+
+
+## v0.0.10 (2024-09-07)
+
+* [Support python 3.12, drop 3.9 and 3.10](https://github.com/anna-money/aio-background/pull/231)
+
+
+## v0.0.9 (2022-11-18)
+
+* [Support python 3.11]
+
+
+## v0.0.8 (2022-08-09)
+
+* [De-synchronize periodic jobs started at the same time](https://github.com/anna-money/aio-background/pull/128)
