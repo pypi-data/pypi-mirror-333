@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: vto-users
+Version: 0.0.2
+Summary: This is a custom reusable Django users app.
+Project-URL: Repository, https://github.com/venteto/vto-users
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# vto_users
+This is a custom reusable Django users app.
+
+## Disclaimer
+This is just a personal test app, it is not intended for use by anyone else.
+
+## Required By
+- https://pypi.org/project/djinntoux/
+
+## Requires
+- https://pypi.org/project/vto-time/
