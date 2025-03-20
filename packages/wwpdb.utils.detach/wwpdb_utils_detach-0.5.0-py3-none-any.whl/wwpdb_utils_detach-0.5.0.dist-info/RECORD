@@ -1,0 +1,7 @@
+wwpdb/utils/detach/DetachUtils.py,sha256=gVyY75EW79sPT9iuqSQr76xL6tIHdBzysoW87hUxi_M,5234
+wwpdb/utils/detach/DetachedProcessBase.py,sha256=SnxwxkpCkq_5FTo0C5eOTTkMreYC1U8uYvKFrEhgSOg,8319
+wwpdb/utils/detach/SubProcessUtil.py,sha256=CVKZFQL_myWwS4PGkVmEkqJ2Km6I6GqmyWMU75YWgDA,4918
+wwpdb/utils/detach/__init__.py,sha256=UGJ5De7yQnwBVATFglGdseBpos5Imd0hGehucnx6yrs,155
+wwpdb_utils_detach-0.5.0.dist-info/METADATA,sha256=XNuu471A281jC5ts5Z7xNvaZfmJp-AXpY8mVXAcZ-6A,1799
+wwpdb_utils_detach-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wwpdb_utils_detach-0.5.0.dist-info/RECORD,,
