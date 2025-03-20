@@ -1,0 +1,103 @@
+Metadata-Version: 2.4
+Name: heycli
+Version: 1.0.1
+Summary: Your AI Buddy for Daily Tasks
+Project-URL: Homepage, https://github.com/sir-kokabi/heycli
+Project-URL: Repository, https://github.com/sir-kokabi/heycli
+Project-URL: Issues, https://github.com/sir-kokabi/heycli/issues
+Author-email: Ayub Kokabi <sir.kokabi@gmail.com>
+Maintainer-email: Ayub Kokabi <sir.kokabi@gmail.com>
+License-Expression: MIT
+Keywords: ai,ai-assistant,artificial-intelligence,assistant,automation,chatbot,cli,code-assistant,command-line,developer-tools,file-management,gpt,natural-language,productivity,python-cli,system-tools,task-automation,terminal,terminal-assistant,workflow
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: System :: System Shells
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Requires-Dist: httpx==0.28.1
+Requires-Dist: litellm==1.63.3
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: questionary==2.1.0
+Requires-Dist: rich==13.9.4
+Requires-Dist: typer==0.15.2
+Requires-Dist: typing-extensions==4.12.2
+Description-Content-Type: text/markdown
+
+# HeyCLI 🤖 - Your AI Buddy for Daily Tasks
+
+![HeyCLI Preview](./heycli.jpg)
+
+Stop wasting time on repetitive chores! `HeyCLI` is your AI-powered command-line assistant that simplifies everyday tasks. Forget writing scripts. Just run commands like `heycli remove all empty folders`. 
+
+Zero setup, maximum efficiency!
+
+For example, need to convert all your `.png` images to `.jpg`? Just type `heycli convert *.png to *.jpg`. Or, if you want to extract the first column of your `contacts.csv` and save it to `names.txt`, simply use `heycli extract column 1 from contacts.csv to names.txt`.
+
+**heycli** shows the code and confirms execution before running, ensuring you're always in control.
+
+Also, by default, it works in your current directory, so you don't have to specify the current working directory every time in your prompt.
+
+**If you can describe it, HeyCLI can do it.**
+Get your time back.
+
+For getting free API keys, check out [Zuki Journey](https://cas.zukijourney.com/).
+
+https://github.com/user-attachments/assets/d3e53d75-7614-45ca-a347-dca77aba51e8
+
+## 🚀 Install
+```bash
+pipx install heycli (recommended)
+
+# Set up config file at ~/.heycli/config.yaml 
+# (on Windows: C:\Users\YourUsername\.heycli\config.yaml)
+# Then use it!
+heycli rename all files sequentially from 1
+heycli sort file names by size (descending) and save in a text file
+heycli change all images format to jpg
+heycli find large files in my documents folder
+heycli print all emails from contact-list.txt
+heycli generate 10 random numbers between 100 and 1000
+```
+
+## 📝 Sample Config File
+
+```yaml
+# List faster, more reliable providers and more capable models first.
+# They will be attempted in the order listed.
+
+providers:
+  - base_url: "https://api.naga.ac/v1"
+    api_key: "Your API key"
+    models:
+      - "gpt-4o"
+      - "deepseek-chat"
+      - "gemini-2.0-flash"
+
+  - base_url: "https://api.electronhub.top/v1"
+    api_key: "Your API Key"
+    models:
+      - "claude-3-7-sonnet-20250219"
+      - "gpt-4o"
+
+  - base_url: "https://openrouter.ai/api/v1"
+    api_key: "Your API key"
+    models:
+      - "deepseek/deepseek-chat:free"
+      - "google/gemini-2.0-pro-exp-02-05:free"
+```
