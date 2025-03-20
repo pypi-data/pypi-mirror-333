@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: trevorproxy
+Version: 1.0.9
+Summary: Rotate your source IP address via SSH proxies and other methods
+Home-page: https://github.com/blacklanternsecurity/TREVORproxy
+License: GPL-3.0
+Author: TheTechromancer
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: sh (>=2.2.1,<3.0.0)
+Project-URL: Repository, https://github.com/blacklanternsecurity/TREVORproxy
