@@ -1,0 +1,8 @@
+[project]
+name = "annflux"
+authors = [
+    {name = "Laurens Hogeweg", email = "l.hogeweg@gmail.com"},
+]
+version = "0.0.0"
+description = "Coming soon"
+
