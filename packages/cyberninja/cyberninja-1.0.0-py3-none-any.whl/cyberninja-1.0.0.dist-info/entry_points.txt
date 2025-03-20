@@ -1,0 +1,2 @@
+[console_scripts]
+cyberninja = cyberninja.cyberninja:main
