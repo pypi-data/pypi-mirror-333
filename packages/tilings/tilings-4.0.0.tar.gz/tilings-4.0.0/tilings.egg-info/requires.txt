@@ -1,0 +1,2 @@
+comb-spec-searcher>=4.2.1
+permuta>=2.3.0
