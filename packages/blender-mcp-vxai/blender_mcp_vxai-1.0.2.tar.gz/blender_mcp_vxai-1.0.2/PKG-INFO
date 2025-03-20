@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: blender-mcp-vxai
+Version: 1.0.2
+Summary: MCP server for Blender integration to enable dynamic 3D scene manipulation
+Author-email: VxAI <vxasi7@gmail.com>
+License: MIT
+Requires-Python: >=3.7
+Requires-Dist: mcp
+Description-Content-Type: text/markdown
+
+# blender-mcp-vxai
+MCP server for Blender integration to enable dynamic 3D scene manipulation.
+
+## Installation
+Run the server with:
+```bash
+uvx blender-mcp-vxai
