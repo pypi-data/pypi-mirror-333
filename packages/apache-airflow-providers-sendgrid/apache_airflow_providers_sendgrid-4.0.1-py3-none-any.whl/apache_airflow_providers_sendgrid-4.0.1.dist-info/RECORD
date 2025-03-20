@@ -1,0 +1,9 @@
+airflow/providers/sendgrid/LICENSE,sha256=gXPVwptPlW1TJ4HSuG5OMPg-a3h43OGMkZRR1rpwfJA,10850
+airflow/providers/sendgrid/__init__.py,sha256=HYzOHtIIWufisLRg1wuLozvcRCLxi6tgQcDPtgTWruw,1495
+airflow/providers/sendgrid/get_provider_info.py,sha256=AlFgHnhBbcYjY5NJ4kejK05h3NIi80rLoer4Sw5EfJY,1848
+airflow/providers/sendgrid/utils/__init__.py,sha256=9hdXHABrVpkbpjZgUft39kOFL2xSGeG4GEua0Hmelus,785
+airflow/providers/sendgrid/utils/emailer.py,sha256=spm0WWRuDks1GmOgfsPaiidGSAU-lw1r0dt3zbq3On4,4497
+apache_airflow_providers_sendgrid-4.0.1.dist-info/entry_points.txt,sha256=hLRalFRGLUnuZPWTM1tC8HCLEh8PFzfgKDez0lQlT2Q,104
+apache_airflow_providers_sendgrid-4.0.1.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+apache_airflow_providers_sendgrid-4.0.1.dist-info/METADATA,sha256=el7zRGzfiUv7QzB09wPCwasi6Ft4AUs0g8Md1p0JX1w,3856
+apache_airflow_providers_sendgrid-4.0.1.dist-info/RECORD,,
