@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: om-indian-states-25
+Version: 0.1
+Summary: A Django app that provides Indian state choices as a model and form field.
+Home-page: UNKNOWN
+Author: Om
+Author-email: ompatil0542004@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+
+UNKNOWN
+
