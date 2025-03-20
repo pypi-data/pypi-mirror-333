@@ -1,0 +1,11 @@
+spark_dynamic_flatten/Tree.py,sha256=9TekB8bgh0S3iOejqGmZPD-IXT-CXuGWe5IwS0zYi_g,20779
+spark_dynamic_flatten/__init__.py,sha256=G95Hcuxld35LHqnUupvbj9N8HfSJx2AU-9spNRKcw3I,392
+spark_dynamic_flatten/flatten.py,sha256=BgwhPN4q8C99LWGs01wIYkEcLaQ4kEX5wS8F1HLCnSQ,10292
+spark_dynamic_flatten/tree_flatten.py,sha256=cD0ZLmPlDz56fHJgHInhUG76GQ5ot6qY6o8gw_JCytA,9499
+spark_dynamic_flatten/tree_manager.py,sha256=xDJVVFQi3PHxLehaIvqAVxxsdHNFvtZGiJEbUu1-Q1M,7162
+spark_dynamic_flatten/tree_schema.py,sha256=PC3Wjiwbp-VgVoplzTNTv3ENvc1zHyoExfpsGWPXmhI,19921
+spark_dynamic_flatten/utils.py,sha256=fo9hVwaq6VTt6lUhuRZ_iJsmdlHdahpodJubJtFseyw,1710
+spark_dynamic_flatten-1.0.0.dist-info/LICENSE,sha256=DObKOwTEhFbPhB_yUachK0qT6HdcnQVjSKGsiw23ktM,1065
+spark_dynamic_flatten-1.0.0.dist-info/METADATA,sha256=ngCvbunP15Q3mTwkza5Kw_90Q-CD8bQBzr9Oj4OOqRo,6883
+spark_dynamic_flatten-1.0.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+spark_dynamic_flatten-1.0.0.dist-info/RECORD,,
