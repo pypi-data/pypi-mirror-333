@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youssef_test"  # Your package name (must be unique on PyPI)
+version = "1.0.0"  # Version number
+description = "A short description of your package"
+readme = "README.md"
+authors = [{ name = "youssef", email = "y.hamila@cfp.energy" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "requests",  # Example dependency
+    "numpy"
+]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+

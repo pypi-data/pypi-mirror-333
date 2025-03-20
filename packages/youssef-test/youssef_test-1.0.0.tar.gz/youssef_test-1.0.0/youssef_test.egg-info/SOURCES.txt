@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+youssef_test.egg-info/PKG-INFO
+youssef_test.egg-info/SOURCES.txt
+youssef_test.egg-info/dependency_links.txt
+youssef_test.egg-info/requires.txt
+youssef_test.egg-info/top_level.txt
