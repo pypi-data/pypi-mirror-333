@@ -1,0 +1,106 @@
+[tool.poetry]
+name = "squiid-engine"
+version = "0.4.0"
+description = "Squiid Engine Python bindings"
+authors = ["TabulateJarl8 <tabulatejarl8@gmail.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://gitlab.com/ImaginaryInfinity/squiid-calculator/squiid-bindings"
+include = [
+    { path = "squiid-engine-rust/Cargo.toml", format = [
+        "sdist",
+    ] },
+    { path = "squiid-engine-rust/src/**", format = [
+        "sdist",
+    ] },
+    { path = "squiid_engine/*.so", format = [
+        "wheel",
+    ] },
+    { path = "squiid_engine/*.dll", format = [
+        "wheel",
+    ] },
+    { path = "squiid_engine/*.dylib", format = [
+        "wheel",
+    ] },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = false
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.1"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[tool.ruff]
+line-length = 90
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D213", "D203"]
+
+[tool.ruff.lint.pydocstyle]
+convention = 'google'
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+order-by-type = true
+
+[tool.ruff.lint.per-file-ignores]
+'tests/**.py' = ['S101', 'INP001', 'D100', 'ANN201']
+'tests/conftest.py' = ['ANN', "ARG"]
+'build.py' = ['S603', 'S607', "EM", "TRY003", "T201", "D"]
+'demo.py' = ['S101', 'D100']
+'squiid_engine/_data_structs.py' = ['N801', 'RUF012']
+
+[tool.coverage.report]
+exclude_also = ["if TYPE_CHECKING:"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.cibuildwheel]
+skip = [
+    "cp36-*",
+    "cp37-*",
+    "cp38*",
+    "cp39*",
+    "pp*",
+    "*-manylinux_i686",
+    "*_ppc64le",
+    "*_s390x",
+    "*_universal2",
+    "*-musllinux_i686",
+]
+
+[tool.cibuildwheel.linux]
+before-all = ["curl -sSf https://sh.rustup.rs | sh -s -- -y", "make clean"]
+environment = "PATH=$HOME/.cargo/bin:$PATH"
+
+[tool.cibuildwheel.windows]
+before-all = ["rustup target add i686-pc-windows-msvc"]
