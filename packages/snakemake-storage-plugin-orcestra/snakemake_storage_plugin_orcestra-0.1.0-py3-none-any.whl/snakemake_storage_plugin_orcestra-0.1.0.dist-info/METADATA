@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: snakemake-storage-plugin-orcestra
+Version: 0.1.0
+Author-email: Jermiah Joseph <jermiahjoseph98@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: orcestra-downloader
+Requires-Dist: snakemake-interface-common<2.0.0,>=1.17.4
+Requires-Dist: snakemake-interface-storage-plugins<4.0.0,>=3.3.0
