@@ -1,0 +1,8 @@
+beartype
+click
+click-completion
+docker
+inquirer
+
+[test]
+pytest
