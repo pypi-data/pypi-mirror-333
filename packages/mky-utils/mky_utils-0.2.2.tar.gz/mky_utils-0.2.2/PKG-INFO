@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: mky_utils
+Version: 0.2.2
+Summary: A basic utility library
+License: MIT
+Keywords: utilities,python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: toml
+Requires-Dist: pre-commit
+
+A basic utility library

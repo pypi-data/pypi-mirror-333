@@ -1,0 +1,16 @@
+[build-system]
+requires = [ "setuptools>=42", "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mky_utils"
+version = "0.2.2"
+description = "A basic utility library"
+readme = "README.md"
+requires-python = ">=3.6"
+keywords = [ "utilities", "python",]
+classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+dependencies = [ "requests", "toml", "pre-commit",]
+
+[project.license]
+text = "MIT"
