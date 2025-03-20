@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysqly"
+version = "0.50.0"
+description = "SQL with YAML - A simplified query language for multiple databases"
+readme = "README.md"
+authors = [
+    {name = "Standard Query Language", email = "example@example.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+mariadb = ["mysql-connector-python>=8.0"]
+postgres = ["psycopg2>=2.9"]
+oracle = ["cx_Oracle>=8.0"]
+mssql = ["pyodbc>=4.0"]
+all = [
+    "mysql-connector-python>=8.0",
+    "psycopg2>=2.9",
+    "cx_Oracle>=8.0",
+    "pyodbc>=4.0",
+]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "isort>=5.0",
+    "ruff>=0.0.1",
+    "pre-commit>=3.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Standard-Query-Language/pySQLY"
+"Bug Tracker" = "https://github.com/Standard-Query-Language/pySQLY/issues"
+
+[project.scripts]
+sqly-cli = "pysqly.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ["py39", "py310", "py311"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.ruff]
+line-length = 88
+target-version = "0.50.0"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "B", "W"]
+ignore = ["E203"]
