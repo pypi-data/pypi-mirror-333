@@ -1,0 +1,13 @@
+README.md
+setup.py
+pytorch-gaussian-mixture/__init__.py
+pytorch-gaussian-mixture/gmm.py
+pytorch-gaussian-mixture/gmm_init.py
+pytorch-gaussian-mixture/metrics.py
+pytorch-gaussian-mixture/plotting.py
+pytorch_gaussian_mixture.egg-info/PKG-INFO
+pytorch_gaussian_mixture.egg-info/SOURCES.txt
+pytorch_gaussian_mixture.egg-info/dependency_links.txt
+pytorch_gaussian_mixture.egg-info/requires.txt
+pytorch_gaussian_mixture.egg-info/top_level.txt
+tests/test_gmm.py

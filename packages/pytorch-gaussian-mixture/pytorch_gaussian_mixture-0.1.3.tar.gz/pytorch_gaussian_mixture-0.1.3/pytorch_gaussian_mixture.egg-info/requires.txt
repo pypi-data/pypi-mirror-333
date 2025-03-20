@@ -1,0 +1,7 @@
+torch>=2.5.1
+numpy>=1.23.0
+matplotlib>=3.10.1
+
+[docs]
+Sphinx>=8.2.3
+Pygments>=2.19.1
