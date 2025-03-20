@@ -1,0 +1,3 @@
+recursive-include src/streamlit_indexed_db/frontend *
+include README.md
+include LICENSE

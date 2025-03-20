@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/streamlit_indexed_db/__init__.py
+src/streamlit_indexed_db.egg-info/PKG-INFO
+src/streamlit_indexed_db.egg-info/SOURCES.txt
+src/streamlit_indexed_db.egg-info/dependency_links.txt
+src/streamlit_indexed_db.egg-info/requires.txt
+src/streamlit_indexed_db.egg-info/top_level.txt
+src/streamlit_indexed_db/frontend/index.html
+src/streamlit_indexed_db/frontend/main.js
+src/streamlit_indexed_db/frontend/streamlit-component-lib.js
+src/streamlit_indexed_db/frontend/style.css
