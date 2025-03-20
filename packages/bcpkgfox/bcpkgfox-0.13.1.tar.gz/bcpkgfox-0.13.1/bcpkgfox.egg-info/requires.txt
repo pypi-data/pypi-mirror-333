@@ -1,0 +1,16 @@
+setuptools
+selenium
+
+[full]
+undetected-chromedriver
+webdriver-manager
+opencv-python
+pygetwindow
+setuptools
+pyscreeze
+pyautogui
+requests
+selenium
+pymupdf
+Pillow
+psutil
