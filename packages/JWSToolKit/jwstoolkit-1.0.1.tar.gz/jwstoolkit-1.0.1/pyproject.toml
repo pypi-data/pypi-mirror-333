@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "JWSToolKit"
+version = "1.0.1"
+description = "A python package for handling JWST observations"
+readme = "README.md"
+authors = [{ name = "Valentin Delabrosse", email = "valentin.delabrosse@univ-grenoble-alpes.fr" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "astropy",
+    "photutils", 
+    "scipy",
+    "tqdm"
+]  
+
+[tool.setuptools]
+packages = ["JWSToolKit"]
+package-dir = {"" = "src"}  # Indique que les fichiers sont dans src/
