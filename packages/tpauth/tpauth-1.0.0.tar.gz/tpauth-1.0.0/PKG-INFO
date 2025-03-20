@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tpauth
+Version: 1.0.0
+Summary: Python library simplifies the process of authenticating accounts with TP Servers.
+License: MIT
+Author: Duy Nguyen
+Author-email: duynguyen02.dev@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Description-Content-Type: text/markdown
+
+
