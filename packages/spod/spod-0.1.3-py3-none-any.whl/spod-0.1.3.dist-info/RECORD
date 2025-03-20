@@ -1,0 +1,11 @@
+spod/__init__.py,sha256=gjN85pEUgqQZgWYdh2TIyziqi6P-322ClLdoQoM0QnY,38
+spod/spod.py,sha256=4RPaDPi64BPl6JFEJOVY7saTimGWm3QRRRItv0SQevs,11965
+spod/templates/accelerate.sh,sha256=wnapyFuYl2EPA2Li8NC1cR94xMqFnm2WE9lYhfNfOsg,1393
+spod/templates/ava_rsc.sh,sha256=9dY50338D_MLom-3yegf8VH-2UnJfCdmWD5JbYpWAWI,894
+spod/templates/basic.sh,sha256=dR8C1jnD6SE9DmzXYqPVn6H7hnHPXgpboj9rxuWiS-Q,1443
+spod/templates/basic_cmd.sh,sha256=dDPuniYQ9ebkUQ4iWjPDpGpyF7wl6nbVAZr_TRjTkOA,1014
+spod-0.1.3.dist-info/METADATA,sha256=oGzY-HrXizyscwdGpYeJ_Wdur3IbjeIJfOELP9NvV9g,92
+spod-0.1.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+spod-0.1.3.dist-info/entry_points.txt,sha256=KwXokVRcyD0IvQMiY96QoE3qAAbgAoobybN-OMw9flo,39
+spod-0.1.3.dist-info/top_level.txt,sha256=njgGhCMYZ3L1mrNlJZUbtH8IJdMcxP47Gy6jPSXH8n8,5
+spod-0.1.3.dist-info/RECORD,,
