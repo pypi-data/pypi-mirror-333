@@ -1,0 +1,14 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cosmocalc-dilru1"
+version = "0.1.0"
+authors = [{name = "dilruwan", email = "dilrushanaka@gmail.com"}]
+description = "A package for cosmological calculations"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = []
