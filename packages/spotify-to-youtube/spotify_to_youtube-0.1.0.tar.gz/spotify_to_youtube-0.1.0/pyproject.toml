@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spotify-to-youtube"
+requires-python = ">=3.8"
+authors=[{name = "Jonathan Z"}]
+description = "clones spotify playlist to youtube playlist"
+version = "0.1.0"
+# dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["spotify_to_youtube/requirements.txt"]}
+readme = {file = ["README.md"]}
+
+[project.scripts]
+spotify-to-youtube = "spotify_to_youtube.main:main"

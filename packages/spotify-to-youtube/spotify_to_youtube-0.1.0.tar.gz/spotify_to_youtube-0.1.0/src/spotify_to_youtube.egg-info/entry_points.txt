@@ -1,0 +1,2 @@
+[console_scripts]
+spotify-to-youtube = spotify_to_youtube.main:main

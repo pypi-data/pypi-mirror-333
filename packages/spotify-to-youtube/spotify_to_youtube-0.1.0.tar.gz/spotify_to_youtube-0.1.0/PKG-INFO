@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: spotify-to-youtube
+Version: 0.1.0
+Summary: clones spotify playlist to youtube playlist
+Author: Jonathan Z
+Requires-Python: >=3.8
