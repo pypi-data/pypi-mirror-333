@@ -1,0 +1,38 @@
+default_stages: [ commit, push ]
+default_language_version:
+  python: python3
+exclude: '^docs/.*\.py$'
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-toml
+      - id: detect-private-key
+  - repo: local
+    hooks:
+      - id: tox-black
+        name: tox-black (local)
+        entry: tox
+        language: python
+        types: [file, python]
+        args: ["-e",  "black", "--"]
+  - repo: local
+    hooks:
+      - id: tox-pep8
+        name: tox-pep8 (local)
+        entry: tox
+        language: python
+        types: [file, python]
+        args: ["-e",  "pep8", "--"]
+  - repo: local
+    hooks:
+      - id: tox-pylint
+        name: tox-pylint (local)
+        entry: tox
+        language: python
+        types: [file, python]
+        args: ["-e",  "pylint", "--"]

@@ -1,0 +1,40 @@
+variables:
+  STATION: "LOFAR station to deploy on"
+
+stages:
+  - deploy
+
+deploy_nomad:
+  stage: deploy
+  image:
+    name: hashicorp/levant
+    entrypoint: [ "" ]
+  parallel:
+    matrix:
+      - COMPONENT:
+          - grafana-rpc-server
+  environment:
+    name: $STATION
+  script:
+    - |
+      if [ "${STATION}" == "dts-lab" ]; then
+          # dts-lab test station
+          HOSTNAME="dts-lab.lofar.net"
+      elif [ "${STATION::2}" == "rs" ]; then
+          # core/remote station
+          HOSTNAME="${STATION}c.control.lofar"
+      fi
+
+      # To deploy manually, get the env.yaml and the .levant.nomad file,
+      # and run docker run --rm -i --net=host -v /path/to/env.yaml:/env.yaml:ro hashicorp/levant deploy --var-file=/env.yaml /dev/stdin < /path/to/file.levant.nomad
+      levant deploy \
+        -address="http://${HOSTNAME}:4646" \
+        -var image_tag="${CI_COMMIT_REF_SLUG}" \
+        -var station="${STATION}" \
+        -ignore-no-changes \
+        infra/jobs/station/${COMPONENT}.levant.nomad
+
+workflow:
+  name: 'deploy on $STATION'
+  rules:
+    - when: always

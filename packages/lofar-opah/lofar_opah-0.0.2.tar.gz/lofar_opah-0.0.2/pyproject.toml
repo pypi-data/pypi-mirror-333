@@ -1,0 +1,83 @@
+[build-system]
+requires = [
+    "setuptools>=70.0",
+    "setuptools_scm[toml]>=8.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_file = "lofar_opah/_version.py"
+
+[tool.pylint]
+ignore = "_version.py"
+
+[tool.tox]
+# Generative environment list to test all supported Python versions
+requires = ["tox>=4.21"]
+env_list = ["fix", "pep8", "black", "pylint", "py{13, 12, 11, 10}"]
+
+[tool.tox.env_run_base]
+package = "editable"
+deps = [
+    "-r{toxinidir}/requirements.txt",
+    "-r{toxinidir}/tests/requirements.txt"]
+set_env = { LANGUAGE = "en_US", LC_ALL = "en_US.UTF-8", PYTHONWARNINGS = "default::DeprecationWarning", PIP_EXTRA_INDEX_URL= "https://git.astron.nl/api/v4/projects/772/packages/pypi/simple" }
+commands = [["python", "--version"], ["python", "-m", "pytest"]]
+
+[tool.tox.env.fix]
+description = "format the code base to adhere to our styles, and complain about what we cannot do automatically"
+skip_install = true
+deps = ["pre-commit-uv>=4.1.1"]
+commands = [["pre-commit", "run", "--all-files", "--show-diff-on-failure"]]
+
+[tool.tox.env.coverage]
+commands = [
+    ["python", "--version"],
+    ["python", "-m", "pytest", "--cov-report", "term", "--cov-report", "xml", "--cov-report", "html", "--cov=lofar_opah"]]
+
+# Command prefixes to reuse the same virtualenv for all linting jobs.
+[tool.tox.env.pep8]
+deps = ["flake8"]
+commands = [
+    ["python", "-m", "flake8", "--version"],
+    ["python", "-m", "flake8", { replace = "posargs", default = ["lofar_opah", "tests"], extend = true }]
+]
+
+[tool.tox.env.black]
+deps = ["black"]
+commands = [
+    ["python", "-m", "black", "--version"],
+    ["python", "-m", "black", "--check", "--diff", "--exclude", "_version.py", { replace = "posargs", default = ["lofar_opah", "tests"], extend = true }]
+]
+
+[tool.tox.env.pylint]
+deps = ["pylint"]
+commands = [
+    ["python", "-m", "pylint", "--version"],
+    ["python", "-m", "pylint", "--prefer-stub=true",{ replace = "posargs", default = ["lofar_opah", "tests"], extend = true }]
+]
+
+[tool.tox.env.format]
+deps = ["autopep8", "black"]
+commands = [
+    ["python", "-m", "autopep8", "-v", "-aa", "--in-place", "--recursive", { replace = "posargs", default = ["lofar_opah", "tests"], extend = true }],
+    ["python", "-m", "black", "-v", { replace = "posargs", default = ["lofar_opah", "tests"], extend = true }]
+]
+
+[tool.tox.env.docs]
+deps = [
+    "-r{toxinidir}/requirements.txt",
+    "-r{toxinidir}/docs/requirements.txt"]
+# unset LC_ALL / LANGUAGE from testenv, would fail sphinx otherwise
+set_env = "PIP_EXTRA_INDEX_URL=https://git.astron.nl/api/v4/projects/772/packages/pypi/simple"
+changedir = "{tox_root}"
+commands = [
+    ["python", "docs/cleanup.py"],
+    ["sphinx-build", "-b", "html", "docs/source", "docs/build/html"]
+]
+
+[tool.tox.env.build]
+package = "wheel"
+deps = ["build>=0.8.0"]
+commands = [["python", "-m", "build"]]
