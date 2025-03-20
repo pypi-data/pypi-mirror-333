@@ -1,0 +1,13 @@
+ms_performance_prechecker/__init__.py,sha256=NZ_2N3AR-1isPIKT4Y3TYKPB8lTPlqIp7ufxg--UPGk,60
+ms_performance_prechecker/__main__.py,sha256=xmIAvgpWoMG8s54PuTAyhfn_zkgF-mkmdLcOdgT6pxA,4617
+ms_performance_prechecker/prechecker/__init__.py,sha256=tC0bXiuIJfGaT00s1W9ama8OiOo9Fi5SpH86us6i5gs,732
+ms_performance_prechecker/prechecker/env_checker.py,sha256=AWr-3ugIk0ZcgPhK15RAAHayLI_Qwglj7pdfAI7x70U,3560
+ms_performance_prechecker/prechecker/env_suggestion.py,sha256=rqWRSKen4ytrESJRgJyheHKGRtt3R0fXUTMjZ8GRKUc,3275
+ms_performance_prechecker/prechecker/register.py,sha256=KgngS4AzU4dbeQnjuwjHWuVoi1fdXjtTsINa23zHUfk,2809
+ms_performance_prechecker/prechecker/system_checker.py,sha256=h55iApQwy_nho8OVOCtawvolTRdFhcuLF7OdfJKNxGc,11119
+ms_performance_prechecker/prechecker/utils.py,sha256=5WCGQKqWPGBbhu4sKoZU1ILnCwMKltpTPS4zqdFJSOs,3728
+ms_performance_prechecker-0.0.1a11.dist-info/METADATA,sha256=yCbZD5cnw3SknZvwd96eSeW9VJJCrSdN3VqtLHonn0Q,3716
+ms_performance_prechecker-0.0.1a11.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+ms_performance_prechecker-0.0.1a11.dist-info/entry_points.txt,sha256=yJI76cH4f6MBjtJ1WXQeqpIbyqo0Zd714bo-QitnXFE,86
+ms_performance_prechecker-0.0.1a11.dist-info/top_level.txt,sha256=AkwMFi1UQ4ET9Y0jg99OBMR50BWE8LkB7aARsW6MN5M,26
+ms_performance_prechecker-0.0.1a11.dist-info/RECORD,,
