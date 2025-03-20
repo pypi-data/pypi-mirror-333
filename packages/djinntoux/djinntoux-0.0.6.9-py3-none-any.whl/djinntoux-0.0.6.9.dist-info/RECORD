@@ -1,0 +1,10 @@
+djinntoux/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djinntoux/rename.py,sha256=0mSVHv03M5V-7-LaRZF07dzddCRAf5_rV-ARd1p2Fis,298
+djinntoux/settings_reuse.py,sha256=8wurEQTVxq6MFW0RJMefWLx_xROnrSWWR58fyLUIRV4,4614
+djinntoux/urls_reuse.py,sha256=fCui2HBq9yuMv0xWnfFgsroioANZyA_MCjDI1UuQPgk,472
+djinntoux/abstract/ab_mod.py,sha256=eY36_lKcEMrYVP3oDG6yxZnaAjnLJ2gCTaEi6ZPws6Y,1175
+djinntoux/utils/scrape.py,sha256=vQbkcZ3dQ8Gw3-93GinmJijT-UVhyAdj6OyeeQVBxh8,795
+djinntoux-0.0.6.9.dist-info/METADATA,sha256=3Zkr4ZFBe2q2H_uZMYkoUR3GWXqR0NR24PDhqBjHK-8,4579
+djinntoux-0.0.6.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+djinntoux-0.0.6.9.dist-info/licenses/LICENSE,sha256=ObKz2Ts26RpIqtTMhHd5Vi4NY4e3Lvl7b81TvoQWqa4,1059
+djinntoux-0.0.6.9.dist-info/RECORD,,
