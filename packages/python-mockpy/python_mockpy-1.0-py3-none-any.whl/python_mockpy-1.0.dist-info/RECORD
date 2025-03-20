@@ -1,0 +1,11 @@
+mockpy/__init__.py,sha256=4J1zJDGUa7HRsZvKs9-stU4pifzV2RtjrHZ9VVhExd0,846
+mockpy/mockpy.py,sha256=K8kf8stEQMeh3rRMPCkg-24zZAruC6PTiDz6e33da-A,74887
+mockpy/data/__init__.py,sha256=ARgR2eGtyTIFhZcL1uLBc4b4lxR5Du70we3Llo6Wv68,46
+mockpy/data/locales/__init__.py,sha256=RTFUHVxSXSfH2jMBEGdzjJUjY8PN9mFT9DbeRuV7W-Y,1990
+mockpy/data/locales/en_US.json,sha256=_nbSKD1bh7T9dJ3EPbmdNCd7VeQNYm4SP7CBEIC-xmM,4522
+mockpy/data/locales/tr_TR.json,sha256=hevo6iTlnKHh8WJZywn5rHwB1koB0Zf3e0xniCPk8uA,3945
+python_mockpy-1.0.dist-info/LICENSE.md,sha256=Lna5ak8D0y-bytpWJPbQ3tXOQf3q2Uonmf7DMsbyRLk,1087
+python_mockpy-1.0.dist-info/METADATA,sha256=s954NjNiOEkxX-l_FcmpkOsXSjqqvd577P6u18Lm0dI,7482
+python_mockpy-1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+python_mockpy-1.0.dist-info/top_level.txt,sha256=wWV4l3ofulbezMjDOJl0jKk3Xb2IxbHIHbEDbud2Mc8,7
+python_mockpy-1.0.dist-info/RECORD,,
