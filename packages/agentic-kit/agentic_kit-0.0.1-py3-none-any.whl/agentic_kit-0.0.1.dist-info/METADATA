@@ -1,0 +1,105 @@
+Metadata-Version: 2.2
+Name: agentic-kit
+Version: 0.0.1
+Summary: EDA agent framework based on Langgraph
+Home-page: 
+Author: manson
+Author-email: manson.li3307@gmail.com
+Keywords: AI,LLM,Agent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: langgraph==0.1.19
+Requires-Dist: langchain==0.2.12
+Requires-Dist: langchain-openai==0.1.20
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: grandalf
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# agentic_kit
+### AgenticKit: 分布式 & 事件驱动的 Agent 框架
+
+#### 简介
+AgenticKit 是一个专注于快速搭建端云结合 Agent 场景的框架，支持分布式通信、事件驱动和异构节点的动态管理。它旨在为物理 Agent、机器人、无人机和 AI 硬件等场景提供工程化支持，同时具备同步/异步业务流程的编排能力。
+
+#### 核心定位
+AgenticKit 的核心定位是提供一个分布式事件驱动框架，支持端云结合的 Agent 场景，具备以下特点：
+- **分布式通信**：支持多智能体协同和异构节点间的实时数据交换。
+- **事件驱动架构（EDA）**：通过事件驱动实现高效协同，解耦离散节点。
+- **端云结合**：连接端侧的感知和执行能力与云端的 Agent 和大模型推理决策能力。
+- **异步任务支持**：通过事件驱动完成复杂的异步任务，减少工作量并保证稳定性。
+- **多任务编排**：支持同步/异步工作流，内置多种 Agent 模式（如 ReAct、CoT 等）。
+- **动态管理**：支持端侧运行状态的动态感知和异构终端的热插拔。
+
+#### 技术目标
+AgenticKit 的技术目标包括：
+1. **通用模块抽象**：对端云间通用模块进行统一抽象和封装，让使用者专注于业务实现。
+2. **实时通信能力**：提供端云之间的实时通信和分布式通信能力。
+3. **同步/异步工作流**：支持同步和异步工作流，异步工作流以事件驱动方式运行。
+4. **动态感知**：支持端侧运行状态变化和数据流转的动态感知。
+5. **任务分配与协调**：支持多 Agent 和分布式端侧的任务分配与协调机制。
+6. **复杂工作流模式**：支持多种工作流模式，如 ReAct、CoT、ToT、LAST 等。
+7. **跨平台支持**：支持跨平台和跨操作系统。
+8. **稳定性和扩展性**：保证底层支持的稳定性和良好的扩展性。
+
+#### 应用场景
+AgenticKit 适用于以下场景：
+- **物理 Agent**：机器人、无人机、AI 硬件等的端云结合场景。
+- **分布式智能体协同**：多智能体协同工作，支持异构节点。
+- **能源电力与具身智能**：分布式异构场景的工程项目。
+- **实时通信与动态管理**：需要实时通信和动态感知能力的场景。
+
+
+#### 许可证
+AgenticKit 采用 [MIT License](LICENSE)。
+
+---
+
+### 联系我们
+- **GitHub**: [https://github.com/your-repo/agentic-kit](https://github.com/your-repo/agentic-kit)
+- **邮件**: contact@agentic-kit.org
+
+---
+
+希望这个 README 文件能够清晰地介绍 AgenticKit 的核心功能和应用场景。如果需要进一步调整或补充内容，请随时告知！
+
+## 代码结构
+> core/base 一些基类定义
+> core/component 对于core/base中的一些通用组件和模块实现
+> core/pattern agent相关的设计模式实现，基于langgraph
+> prebuilt 一些预定义实现
+> utils 工具类
+
+## env
+```
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## dist
+```
+python setup.py sdist bdist_wheel
+pip install twine
+twine upload dist/*
+```
+
+## develop
+### test
+```shell
+python -m unittest tests/xxx
+```

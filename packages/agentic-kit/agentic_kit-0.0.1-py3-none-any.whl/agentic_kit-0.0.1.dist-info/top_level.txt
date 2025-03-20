@@ -1,0 +1,6 @@
+app
+core
+infrastructure
+scenario
+tests
+utils
