@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+whisper_ai_stanley.egg-info/PKG-INFO
+whisper_ai_stanley.egg-info/SOURCES.txt
+whisper_ai_stanley.egg-info/dependency_links.txt
+whisper_ai_stanley.egg-info/requires.txt
+whisper_ai_stanley.egg-info/top_level.txt
