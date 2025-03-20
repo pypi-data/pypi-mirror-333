@@ -1,0 +1,62 @@
+Metadata-Version: 2.2
+Name: ao_ann
+Version: 0.1.6
+Summary: American Options Pricing ANN
+Author-email: Mustafif Khan <me@mustafif.com>
+Maintainer-email: Mustafif Khan <me@mustafif.com>
+Project-URL: Repository, https://github.com/Mustafif/AO_ANN
+Project-URL: Issues, https://github.com/Mustafif/AO_ANN/issues
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: sphinx>=8.2.3
+Requires-Dist: torch>=2.6.0
+
+# American Options ANN
+
+> This is still a work in progress, all `v0.1.*` releases are testing releases.
+
+This is a Python package for American Options Pricing using Artificial Neural Networks (ANN)
+that assumes the option follows a GARCH process. The package will contain 3 stages of datasets
+for 3 GARCH models:
+
+1. HN-GARCH
+2. Duan-NGARCH
+3. GJR GARCH
+
+
+## Project Structure
+- `ann.py`: Contains training and evaluation of the ANN model, as well as the main entry point for the program (`ao_ann_main(...)`)
+- `loss.py`: Contains the function to calculate the different loss measures between target and predicted values.
+- `model.py`: Contains the implementation of the ANN model used for pricing American Options.
+- `dataset.py`: Contains parsing the CSV files and preparing the data for training and testing.
+- `utils.py`: Contains utility functions for the package.
+
+
+## Installation
+
+```bash
+pip install ao_ann
+```
+
+## Running Locally
+
+This project uses the Python package manager `uv`, this can be installed using the following command:
+```bash
+$ git clone https://github.com/Mustafif/AO_ANN.git
+$ cd AO_ANN
+$ pip3 install uv # install uv
+$ uv sync
+$ uv run main.py # run the main.py file
+```
+
+## Todo
+- [X] Comments in the code
+- [ ] Documentation
+- [ ] Example program
