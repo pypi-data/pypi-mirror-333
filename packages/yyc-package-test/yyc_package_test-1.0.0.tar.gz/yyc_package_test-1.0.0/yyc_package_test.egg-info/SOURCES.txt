@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+Tool.py
+setup.py
+yyc_package/__init__.py
+yyc_package/yyc_module.py
+yyc_package_test.egg-info/PKG-INFO
+yyc_package_test.egg-info/SOURCES.txt
+yyc_package_test.egg-info/dependency_links.txt
+yyc_package_test.egg-info/top_level.txt
