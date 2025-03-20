@@ -1,0 +1,10 @@
+pdf2html_ai/__init__.py,sha256=tu-H6dl-cWz30qz-C2oirv9Wqjzv_8XLRg9hBPfLltY,92
+pdf2html_ai/html_converter.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf2html_ai/image_handler.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf2html_ai/processor.py,sha256=FNLde_bHIjHGag2xZYzKXqDrXFymDBaO6FAFPLbg_8c,26723
+pdf2html_ai/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf2html_ai-0.1.1.dist-info/LICENSE,sha256=-Eph_7PmQsEOL4nNOfF2u_dcvW0Yp0rqtq7ne_ZAwsI,1068
+pdf2html_ai-0.1.1.dist-info/METADATA,sha256=NkHKkpLM0hS65H7w_uREGuJzCSsORXUqJw59y3Qlhbw,5002
+pdf2html_ai-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pdf2html_ai-0.1.1.dist-info/top_level.txt,sha256=r31IYy_shzBOYyUYKCHLa1JHlojz2F0OZbTbx5wQn8k,12
+pdf2html_ai-0.1.1.dist-info/RECORD,,
