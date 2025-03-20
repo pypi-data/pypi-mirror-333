@@ -1,0 +1,14 @@
+QA_automation_phone/__init__.py,sha256=VkVVSTdblhd0p7eT3Kmw8pfQdrhIvmDb0qIKh_PABmU,360
+QA_automation_phone/config.py,sha256=oTx53xoFeK25wv8G5RdGZrE_x5g0rxe3tUhVXvvsjlQ,6156
+QA_automation_phone/coreapp.py,sha256=8zZtNDhlQEDKaQU43LYyPsQF5-7BnBXcZ4V1L3m6Atg,8891
+QA_automation_phone/devices.py,sha256=ctEYXmbuBBP768Law4NCmDhfGhZ-u11p1f1x93eywOA,1442
+QA_automation_phone/identify_image.py,sha256=jWmA7X1fSNgxzXcEOO51642A9YOblbmA-_nE-238aLg,7274
+QA_automation_phone/identify_letter.py,sha256=4H19gu-Tkksd2ONGu5O9PpX8OF4arJNQinkmhTn7Iis,5603
+QA_automation_phone/keyevent.py,sha256=MtPmVytELqwjxeGzLcncfP7h_eSYhzLKD1voZahwCak,5108
+QA_automation_phone/script.py,sha256=UBO-FDTw0N2Q4MBNr_WwD75_NYjgwu9pF6AG50-Q_vk,2781
+QA_automation_phone/setting.py,sha256=dOPspYw3kYnfyZtL8MTyD4tJnwDW3-HUhQ0UuiHBUS4,2387
+qa_automation_phone-0.1.4.dist-info/LICENSE,sha256=8TbZvy0Lmkat5Fo1NKZO6mO8R4s1oNoPYS7g9eWLA2s,733
+qa_automation_phone-0.1.4.dist-info/METADATA,sha256=xrEc3550b8XFkDi4bKb9KN9taWJsGE4ptx8dSD2BPFY,3034
+qa_automation_phone-0.1.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+qa_automation_phone-0.1.4.dist-info/top_level.txt,sha256=c3Bzx62JaIM0gACOrvmK0kyYGL5muNpir03mP--45dE,20
+qa_automation_phone-0.1.4.dist-info/RECORD,,
