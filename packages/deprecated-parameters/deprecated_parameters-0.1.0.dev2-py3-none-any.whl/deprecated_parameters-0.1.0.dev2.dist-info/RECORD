@@ -1,0 +1,11 @@
+deprecated_parameters/__init__.py,sha256=Q4DQx10yjEkkPHYX6mDC_bVHScE2fHiPVKw40xULn9o,218
+deprecated_parameters/_decorator.py,sha256=6ynfEhSkXtFa3QTyJi524wxX0gbjxuC1lB_gih77ikc,5283
+deprecated_parameters/_mypy.py,sha256=mzMSv13SK_CWM0pxFPC-YESNWF52u04KdyIr2VZkcHk,3689
+deprecated_parameters/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deprecated_parameters_tests/__main__.py,sha256=PV_mYiydRGGBdQ_q6Rwpq_V43CQRICN_oZbPsf1ngGU,504
+deprecated_parameters_tests/test_decorator.py,sha256=4DXy6Ywexcu874euaR8GKiEL9Y_LWWILeuqDGJrTCXQ,4240
+deprecated_parameters-0.1.0.dev2.dist-info/LICENSE.rst,sha256=Af3qae4VDBM4XRsZi62vIJ3KtVlyvaZ8n6Yglz4JXes,1115
+deprecated_parameters-0.1.0.dev2.dist-info/METADATA,sha256=ocWz_qsE0eXpgBdy1aBS4Xi9NIwQsm7lkQEXZOc1SZ0,2796
+deprecated_parameters-0.1.0.dev2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+deprecated_parameters-0.1.0.dev2.dist-info/top_level.txt,sha256=evn0PJ8ypl5kG4DOWi-M_eFVWCzppAHfnwXT7YWkOWo,50
+deprecated_parameters-0.1.0.dev2.dist-info/RECORD,,
