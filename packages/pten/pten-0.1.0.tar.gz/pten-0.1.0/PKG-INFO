@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: pten
+Version: 0.1.0
+Summary: A tool to use Wework API quickly and easily
+Home-page: https://github.com/bendell02/pten
+Author: PENGyong
+Author-email: 1203029076@qq.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: wework qywx wechat weixin robot app
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
