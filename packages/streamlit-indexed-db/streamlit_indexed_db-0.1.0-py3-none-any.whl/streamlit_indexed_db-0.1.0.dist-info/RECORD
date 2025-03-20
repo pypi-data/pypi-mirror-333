@@ -1,0 +1,10 @@
+streamlit_indexed_db/__init__.py,sha256=B5b_hm7MumaZr9RSwWj-LJ3trmfg7oo-KwgEZfYoBko,1918
+streamlit_indexed_db/frontend/index.html,sha256=KjVvfAnNbPJU_pO5sh0ZOjXbsAsS_dq8mtV_trMyI-k,660
+streamlit_indexed_db/frontend/main.js,sha256=Zk7pqP77HImReS8pPcNt1xp25H_LZw98fVc3AUKovIE,3509
+streamlit_indexed_db/frontend/streamlit-component-lib.js,sha256=b4RmDnVw1sXI27d4_P6qMrxEIEqsUtmuociIQ0DAawg,230931
+streamlit_indexed_db/frontend/style.css,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamlit_indexed_db-0.1.0.dist-info/LICENSE,sha256=6c96ZD-URFZkYa79J01LXsyESDz4hcuJQuqxUKtfXtc,1074
+streamlit_indexed_db-0.1.0.dist-info/METADATA,sha256=rXQAFvBgPrZdRLtRj7jjbWRxWQi0ZIsL-fUcF6T0P2o,860
+streamlit_indexed_db-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+streamlit_indexed_db-0.1.0.dist-info/top_level.txt,sha256=-8KaIwcaUFRVNNYt6VB2K2PmhFNa0S5aXr2JloS4vhM,21
+streamlit_indexed_db-0.1.0.dist-info/RECORD,,
