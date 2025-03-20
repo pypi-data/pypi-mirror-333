@@ -1,0 +1,19 @@
+cppmath/__init__.py,sha256=LDhqXzZkfLBFaTtIAcadMFpE5EQYMkINFMoapFml0lc,684
+cppmath/cache.py,sha256=z4SPPG7OGfvFE7VFrs4n-vwuUtJYUhczT9nq0BpXf5U,5184
+cppmath/core.py,sha256=q1lYaE13p--D3Cq-iq7hdzyGkokchFymstlNDL1Q9Ls,853
+cppmath/integration.py,sha256=NrSGYRaiZKbLwBHANFGNfVqBMhiOkQLbuXaMnfl-T_g,1200
+cppmath/linear.py,sha256=j5GFTPvgClEyD7N0UVAYg91I8LgvZG_zmE9hfAlXlAk,1957
+cppmath/optimization.py,sha256=to5ygiRqhuuybPf1WHXvEd2M_8zgeNIdOMEQHdWz0PY,1763
+cppmath/utils.py,sha256=ux63Hn7tQt462aJLQhBagVQooSnyc1Wudl1yOYa7kzc,990
+cppmath copy/__init__.py,sha256=LDhqXzZkfLBFaTtIAcadMFpE5EQYMkINFMoapFml0lc,684
+cppmath copy/cache.py,sha256=z4SPPG7OGfvFE7VFrs4n-vwuUtJYUhczT9nq0BpXf5U,5184
+cppmath copy/core.py,sha256=q1lYaE13p--D3Cq-iq7hdzyGkokchFymstlNDL1Q9Ls,853
+cppmath copy/integration.py,sha256=NrSGYRaiZKbLwBHANFGNfVqBMhiOkQLbuXaMnfl-T_g,1200
+cppmath copy/linear.py,sha256=j5GFTPvgClEyD7N0UVAYg91I8LgvZG_zmE9hfAlXlAk,1957
+cppmath copy/optimization.py,sha256=to5ygiRqhuuybPf1WHXvEd2M_8zgeNIdOMEQHdWz0PY,1763
+cppmath copy/utils.py,sha256=ux63Hn7tQt462aJLQhBagVQooSnyc1Wudl1yOYa7kzc,990
+cppmath-1.0.5.dist-info/LICENSE,sha256=vPE3yNW_zKy3M1C1sS4Hmm5KnPJksMSIgXjBN7NvpzQ,1086
+cppmath-1.0.5.dist-info/METADATA,sha256=4_TrFPmnFigFrnGbjZL0iOkOwG7HqnFGifRpUcxjxkc,2160
+cppmath-1.0.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+cppmath-1.0.5.dist-info/top_level.txt,sha256=Gm2gvf9upTY_e5il3bAbnzfnhjriM70jtCDrM8YaiRQ,21
+cppmath-1.0.5.dist-info/RECORD,,
