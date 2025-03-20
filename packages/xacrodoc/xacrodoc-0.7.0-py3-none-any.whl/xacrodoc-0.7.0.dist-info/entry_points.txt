@@ -1,0 +1,3 @@
+[console_scripts]
+xacrodoc=xacrodoc.cli:main
+
