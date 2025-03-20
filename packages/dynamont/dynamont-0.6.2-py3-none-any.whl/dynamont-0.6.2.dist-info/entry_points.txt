@@ -1,0 +1,3 @@
+[console_scripts]
+dynamont-resquiggle = src.python.segmentation.segment:main
+dynamont-train = src.python.segmentation.train:main
