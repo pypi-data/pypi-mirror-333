@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: plato-sdk
+Version: 0.1.0a1
+Summary: Plato SDK
+Requires-Python: >=3.12.8
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.11.13
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pydantic-settings>=2.8.1
+
+# Plato SDK
+
+
+## Usage
+```
+class Task(BaseModel):
+    ...
+
+async with env := plato.make(ENV_ID):
+    cdp_url = env.cdp_url
+    
+    # connect to browser and do modifications
+
+   # get state
+    state_mutations: dict = env.get_state()
+
+    # evaluate
+
+    ...
+
+```
