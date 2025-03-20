@@ -1,0 +1,7 @@
+[console_scripts]
+
+[gui_scripts]
+
+[semantiva.specializations]
+imaging = semantiva_imaging:ImagingSpecialization
+
