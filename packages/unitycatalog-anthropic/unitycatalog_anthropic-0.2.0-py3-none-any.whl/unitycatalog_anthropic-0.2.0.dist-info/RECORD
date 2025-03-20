@@ -1,0 +1,7 @@
+unitycatalog/ai/anthropic/__init__.py,sha256=wcLe0LnyOzwQ0JrG7aXgJDL-u6Wl7NdYRuwQffHqbBo,77
+unitycatalog/ai/anthropic/toolkit.py,sha256=AzUfW_pmwPwmvILtYZDRDt52VJtsYxkHhUWMZe-rUe0,4487
+unitycatalog/ai/anthropic/utils.py,sha256=e0FBnKg-yiM_fkY1cKZw5-MRTaQzMGNFAvoYCQ9Q_0o,5634
+unitycatalog/ai/anthropic/version.py,sha256=CpXi3jGlx23RvRyU7iytOMZrnspdWw4yofS8lpP1AJU,18
+unitycatalog_anthropic-0.2.0.dist-info/METADATA,sha256=eQ0_8_XsOFHC_mFA6U3V6NA-jlUF3Zsz8BJEi13HyjE,10343
+unitycatalog_anthropic-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+unitycatalog_anthropic-0.2.0.dist-info/RECORD,,
