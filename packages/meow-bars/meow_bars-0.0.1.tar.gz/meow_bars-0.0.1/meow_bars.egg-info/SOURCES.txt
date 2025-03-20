@@ -1,0 +1,5 @@
+setup.py
+meow_bars.egg-info/PKG-INFO
+meow_bars.egg-info/SOURCES.txt
+meow_bars.egg-info/dependency_links.txt
+meow_bars.egg-info/top_level.txt
