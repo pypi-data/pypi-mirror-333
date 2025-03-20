@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: ctrbuild
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.8
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: semver>=3.0.2
