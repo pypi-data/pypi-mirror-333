@@ -1,0 +1,5 @@
+aiohttp>=3.11.13
+fastapi[standard,standart]>=0.115.11
+flask>=3.1.0
+pydantic>=2.10.6
+requests>=2.32.3
