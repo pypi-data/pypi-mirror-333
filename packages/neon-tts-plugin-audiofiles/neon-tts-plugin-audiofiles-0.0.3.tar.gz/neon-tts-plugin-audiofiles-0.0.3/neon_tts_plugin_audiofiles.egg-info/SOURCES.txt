@@ -1,0 +1,25 @@
+LICENSE.md
+README.md
+setup.py
+neon_tts_plugin_audiofiles/__init__.py
+neon_tts_plugin_audiofiles.egg-info/PKG-INFO
+neon_tts_plugin_audiofiles.egg-info/SOURCES.txt
+neon_tts_plugin_audiofiles.egg-info/dependency_links.txt
+neon_tts_plugin_audiofiles.egg-info/entry_points.txt
+neon_tts_plugin_audiofiles.egg-info/requires.txt
+neon_tts_plugin_audiofiles.egg-info/top_level.txt
+neon_tts_plugin_audiofiles.egg-info/zip-safe
+neon_tts_plugin_audiofiles/audio/en/mary_ann/how are you_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/how do you spell caffeine_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/how much caffeine is in coke_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/location.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/no.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/show me starbucks..wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/starbucks.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/what is the capital of ukraine_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/what is the temperature_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/what is your name_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/what time is it_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/where is the apple store_.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/work hours.wav
+neon_tts_plugin_audiofiles/audio/en/mary_ann/yes.wav
