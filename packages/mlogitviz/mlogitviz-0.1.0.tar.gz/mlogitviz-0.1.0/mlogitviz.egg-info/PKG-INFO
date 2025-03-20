@@ -1,0 +1,45 @@
+Metadata-Version: 2.2
+Name: mlogitviz
+Version: 0.1.0
+Summary: A library to compute and visualize marginal effects for multinomial logistic regression models
+Home-page: https://github.com/payamv3/mlogitviz
+Author: Payam Saeedi and Eric Williamn
+Author-email: ps4019@rit.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: statsmodels
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# mlogitviz
+
+**mlogitviz** is a Python library for fitting multinomial logistic regression models and visualizing marginal effects as heatmaps. It is designed for ease of use, including clear options for evaluating marginal effects at different points (e.g., overall vs. mean) and treating predictors as count or continuous variables.
+
+## Features
+
+- **Model Fitting:**  
+  Fit a multinomial logistic regression using `statsmodels` and compute marginal effects.
+  
+- **Visualization:**  
+  Create heatmaps of probability changes relative to a baseline outcome, with options to annotate significance.
+
+## Installation
+
+You can install the library via pip once it’s published on PyPI:
+
+```bash
+pip install mlogitviz
