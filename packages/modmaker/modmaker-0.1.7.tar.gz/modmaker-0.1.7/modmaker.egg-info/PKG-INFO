@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: modmaker
+Version: 0.1.7
+Summary: Python project skeleton generator
+Author-email: modmaker authors <avattathil@gmail.com>
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# modmaker
+#
