@@ -1,0 +1,10 @@
+setup.py
+mymathlibrary/__init__.py
+mymathlibrary/geometry.py
+mymathlibrary/math.py
+mymathlibrary/matrix.py
+mymathlibrary.egg-info/PKG-INFO
+mymathlibrary.egg-info/SOURCES.txt
+mymathlibrary.egg-info/dependency_links.txt
+mymathlibrary.egg-info/requires.txt
+mymathlibrary.egg-info/top_level.txt
