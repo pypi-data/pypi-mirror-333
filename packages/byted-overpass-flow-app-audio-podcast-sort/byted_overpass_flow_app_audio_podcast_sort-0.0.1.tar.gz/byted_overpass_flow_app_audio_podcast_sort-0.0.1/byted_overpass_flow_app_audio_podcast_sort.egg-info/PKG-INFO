@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: byted-overpass-flow-app-audio-podcast-sort
+Version: 0.0.1
+Summary: A simple package named byted_overpass_flow_app_audio_podcast_sort
+Home-page: https://github.com/artifact/byted_overpass_flow_app_audio_podcast_sort.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
