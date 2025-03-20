@@ -1,0 +1,12 @@
+dagster_serde/__init__.py,sha256=2QOrhC9tMRveFyUh9K8fzAe6y8EdR32GF1ZCi28-Zl0,463
+dagster_serde/_version.py,sha256=fCQOO0iwHdmTpoEkL-2zXDhxNqA1Z_VSt7QlsOqBdX0,56
+dagster_serde/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagster_serde/utils.py,sha256=ICMaRnmiJTJq30HU2Y5bryyQb5v9XOk3E5T2_6ssl0E,932
+dagster_serde/io_managers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagster_serde/io_managers/base.py,sha256=TLoL64JeS1JnfsJ2Yu6Rxow3hL1boH9wj-hS0SphzYA,4634
+dagster_serde/io_managers/json.py,sha256=62Q5LV_Ww3dULJFLJ0M7jwNB_CCGOvmd_PHvnpcOUn8,631
+dagster_serde/io_managers/yaml.py,sha256=ZEd5TpSnKBJd7llXTzFle7DQxusLO-d2OXZdI5M_Qqk,615
+dagster_serde-0.0.3.dist-info/METADATA,sha256=vYz-kFvNw1dZzwECpY8VyjxLSp78qEu1adLQW1UGOrc,359
+dagster_serde-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dagster_serde-0.0.3.dist-info/licenses/LICENSE,sha256=-gtoVIAZYUHYmNHISZg982FI4Oh19mV1nxgTVW8eCB8,11344
+dagster_serde-0.0.3.dist-info/RECORD,,

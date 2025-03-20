@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: dagster-serde
+Version: 0.0.3
+Summary: Dagster library for ser/de of data
+Author-email: Daniel Gafni <danielgafni16@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: dagster>=1.10.0
+Requires-Dist: orjson>=3.9.8
+Requires-Dist: pyserde>=0.12.3
+Requires-Dist: pyyaml>=4.0.0
+Requires-Dist: typing-extensions>=4.7.1
