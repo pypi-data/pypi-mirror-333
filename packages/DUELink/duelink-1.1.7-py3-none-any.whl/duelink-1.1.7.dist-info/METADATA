@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: DUELink
+Version: 1.1.7
+Summary: GHI Electronics DUE Python library.
+Home-page: https://www.duelink.com/
+Author: GHI Electronics
+Author-email: support@ghielectronics.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: pyserial
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
