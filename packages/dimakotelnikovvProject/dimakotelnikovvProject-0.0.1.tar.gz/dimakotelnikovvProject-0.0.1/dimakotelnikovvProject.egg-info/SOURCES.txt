@@ -1,0 +1,8 @@
+setup.py
+dimakotelnikovvProject/__init__.py
+dimakotelnikovvProject/one.py
+dimakotelnikovvProject/two.py
+dimakotelnikovvProject.egg-info/PKG-INFO
+dimakotelnikovvProject.egg-info/SOURCES.txt
+dimakotelnikovvProject.egg-info/dependency_links.txt
+dimakotelnikovvProject.egg-info/top_level.txt
