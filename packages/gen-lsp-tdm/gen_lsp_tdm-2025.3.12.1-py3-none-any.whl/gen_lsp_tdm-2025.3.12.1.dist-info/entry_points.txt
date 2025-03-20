@@ -1,0 +1,2 @@
+[console_scripts]
+gen_lsp_tdm = gen_lsp_tdm.main:main
