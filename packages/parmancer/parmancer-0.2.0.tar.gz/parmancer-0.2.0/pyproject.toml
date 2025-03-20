@@ -1,0 +1,72 @@
+[project]
+name = "parmancer"
+version = "0.2.0"
+description = "Parse structured data from text using parser combinators"
+authors = [{ name = "Rob Hornby", email = "robjhornby@gmail.com" }]
+requires-python = ">=3.8"
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "parser",
+    "parsing",
+    "parser combinator",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Software Development :: Interpreters",
+    "Topic :: Text Processing",
+    "Typing :: Typed",
+    "Topic :: File Formats",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = ["typing-extensions>=4.5.0"]
+
+[project.urls]
+Repository = "https://github.com/parmancer/parmancer"
+Documentation = "https://parmancer.com"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-markdown-docs ; python_version >= '3.8' and python_version < '4'",
+    "mypy>=1",
+    "pyright>=1.1",
+    "docutils>=0.21.2 ; python_version >= '3.9'",
+    "pdoc>=14.4.0,<15",
+    "mkinit>=1.1.0,<2",
+    "pre-commit ; python_version >= '3.8' and python_version < '4'",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["parmancer"]
+
+[tool.hatch.build.targets.wheel]
+include = ["parmancer"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+exclude = [
+    "^scrap/"
+]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.mypy]
+strict = true
+exclude = [
+    "^scrap/"
+]
+
+[tool.pytest.ini_options]
+python_files = ["examples/*.py", "tests/*.py"]
