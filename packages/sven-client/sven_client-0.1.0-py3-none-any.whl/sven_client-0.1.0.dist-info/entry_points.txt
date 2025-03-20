@@ -1,0 +1,2 @@
+[console_scripts]
+sven = sven.__main__:main

@@ -1,0 +1,139 @@
+Metadata-Version: 2.2
+Name: sven-client
+Version: 0.1.0
+Summary: Sven CLI client for agent automation
+Author-email: Sven Team <info@swedishembedded.com>
+License: MIT
+Project-URL: Homepage, https://git.swedishembedded.com/core/platform/sven
+Project-URL: Bug Tracker, https://git.swedishembedded.com/core/platform/sven/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.28.0
+Requires-Dist: rich
+Requires-Dist: httpx<0.28.0,>=0.24.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: tabulate
+Requires-Dist: langchain>=0.2.0
+Requires-Dist: langchain-openai>=0.2.0
+Requires-Dist: langchain-anthropic>=0.2.0
+Requires-Dist: langchain-community>=0.2.0
+Requires-Dist: anthropic
+Requires-Dist: mcp
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: ruff>=0.0.270; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"
+Requires-Dist: bump2version>=1.0.0; extra == "dev"
+Requires-Dist: tox>=4.0.0; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
+
+# Sven
+
+Sven is the CLI client for ActiveAgent, providing a command-line interface for interacting with the ActiveAgent server.
+
+## Installation
+
+```bash
+pip install sven
+```
+
+## Usage
+
+```bash
+# Basic usage
+aa --help
+
+# Connect to a server
+aa connect --url http://localhost:8000
+
+# Run an agent
+aa agent run --name my-agent
+
+# List available tools
+aa tools list
+```
+
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://git.swedishembedded.com/core/platform/sven.git
+cd sven
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Install pre-commit hooks
+pre-commit install
+```
+
+### Testing
+
+```bash
+pytest
+```
+
+### Linting
+
+```bash
+# Run all linters
+pre-commit run --all-files
+
+# Run individual linters
+black .
+isort .
+mypy .
+ruff .
+```
+
+### CI/CD Pipeline
+
+This project uses GitLab CI/CD for automated testing, building, and deployment. The pipeline includes:
+
+- **Lint**: Code quality checks with black, isort, ruff, and mypy
+- **Test**: Unit and integration tests with pytest
+- **Build**: Package building with setuptools
+- **Publish**: Publishing to PyPI (on tags) and TestPyPI (on main branch)
+
+### Releasing
+
+We use semantic versioning for this project. To create a new release:
+
+1. Update the CHANGELOG.md with your changes
+2. Use bump2version to increment the version:
+   ```bash
+   # For a patch release (0.1.0 -> 0.1.1)
+   bump2version patch
+
+   # For a minor release (0.1.0 -> 0.2.0)
+   bump2version minor
+
+   # For a major release (0.1.0 -> 1.0.0)
+   bump2version major
+   ```
+3. Push the new tag to trigger the release pipeline:
+   ```bash
+   git push --tags
+   ```
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
+
+## License
+
+MIT
