@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: interfacemaster
+Version: 1.1.7
+Summary: A program of calculating interface structure
+Home-page: https://github.com/nmdl-mizo/interface_master
+Author: Yaoshu Xie
+Author-email: ysxie@iis.u-tokyo.ac.jp
+License: MIT
+Requires-Python: >=3
+License-File: LICENSE.md
+Requires-Dist: pymatgen
+Requires-Dist: matplotlib
+Requires-Dist: gb-code
+
