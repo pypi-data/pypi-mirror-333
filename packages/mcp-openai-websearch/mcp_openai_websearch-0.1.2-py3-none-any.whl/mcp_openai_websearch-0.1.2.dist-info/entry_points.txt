@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-openai-websearch = mcp_openai_websearch:main
