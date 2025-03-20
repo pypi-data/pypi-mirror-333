@@ -1,0 +1,11 @@
+adafruit_display_text/__init__.py,sha256=AR-ioqagbvMo5LA9GeU4bLiuQ_gW-djOa7ZErShO0oQ,17430
+adafruit_display_text/bitmap_label.py,sha256=GvmT5NzyXh64xI1pOkW0sS0mH6gRq3_OBJP-YrIh9q0,22931
+adafruit_display_text/label.py,sha256=Mhhc0RaCxXa-Rg5WimVsqTL0IiEOva_66A6A_e7LiDs,17605
+adafruit_display_text/outlined_label.py,sha256=YJrtdKyDiH4Cmn4IGP9xYL4u8XhIcfOWhK6gmCWObIs,6315
+adafruit_display_text/scrolling_label.py,sha256=Y-Obj1FAdSP0xkzqg9T57invHgYXS2AEZkxCoRmTmTQ,5224
+adafruit_display_text/text_box.py,sha256=Keum5MlmG910t34V09jXzP41d5MSmOSlnbXNdcuumWo,15219
+adafruit_circuitpython_display_text-3.2.3.dist-info/LICENSE,sha256=sBqlieI8IeJUKB9bAr67qyT2yi9ts0myAC4XgRD2IR0,1110
+adafruit_circuitpython_display_text-3.2.3.dist-info/METADATA,sha256=BQ-k4B8n2ULM1el_mimJapIqq8qaZZd8qAnn8cXKDCI,3089
+adafruit_circuitpython_display_text-3.2.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+adafruit_circuitpython_display_text-3.2.3.dist-info/top_level.txt,sha256=v5LM78IbToOMTJdSUmeGHYS2-33VfMEOcivPsOp5Pyw,22
+adafruit_circuitpython_display_text-3.2.3.dist-info/RECORD,,
