@@ -1,0 +1,3676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn://rostelekom.ru/SOMC/1.0.3"
+            targetNamespace="urn://rostelekom.ru/SOMC/1.0.3" elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+    <xsd:element name="request" type="tns:requestType">
+        <xsd:annotation>
+            <xsd:documentation>Корневой элемент запроса</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="FormResponse" type="tns:FormResponseType">
+        <xsd:annotation>
+            <xsd:documentation>Ответ на подачу заявления или запроса на отмену заявления или текстового сообщения от
+                заявителя в ведомство
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:complexType name="requestType">
+        <xsd:annotation>
+            <xsd:documentation>Root request element</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Service" type="tns:FormStepServiceType">
+                <xsd:annotation>
+                    <xsd:documentation>Служебная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:choice minOccurs="0" maxOccurs="1">
+                <xsd:element name="EPGUData" type="tns:EPGUDataType" minOccurs="0" maxOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Данные заявления ЕПГУ</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="FOIVROIVData" type="tns:FOIVROIVDataType" minOccurs="0" maxOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Данные запроса ФОИВ/РОИВ</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="MFCData" type="tns:MFCDataType" minOccurs="0" maxOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Данные запроса МФЦ</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:choice>
+            <xsd:element name="AdditionalInformation" type="tns:AdditionalInformationType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация по заявлению</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Documents" type="tns:DocumentsType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения о вложениях</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="oktmo" type="tns:oktmo" use="required">
+            <xsd:annotation>
+                <xsd:documentation>ОКТМО</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+    <xsd:complexType name="FormStepServiceType">
+        <xsd:annotation>
+            <xsd:documentation>Служебная информация</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="currentDate" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Текущая дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="userType" type="tns:userTypeType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Тип текущего пользователя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="orderId" type="xsd:long" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер заявления в ЛК ЕПГУ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="orderStatusCode" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код режима внесения данных</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TargetId" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код цели обращения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TargetName" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование цели обращения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DepartmentId" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Код ведомства</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DepartmentName" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование ведомства</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="userTypeType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="PERSON_RF">
+                <xsd:annotation>
+                    <xsd:documentation>Физическое лицо</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="EPGUDataType">
+        <xsd:annotation>
+            <xsd:documentation>Данные заявления ЕПГУ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="VariantChoice" type="tns:VariantChoiceType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант предоставления услуги</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DelegateInfo" type="tns:DelegateInfoType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Категория заявителя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="RecipientPersonalData" type="tns:RecipientPersonalDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные о физическом лице</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DelegatePersonalData" type="tns:DelegatePersonalDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные о физическом лице при заполнении сведений представителем
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ParticipantData" type="tns:ParticipantDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения об участнике</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="CompetentOrganization" type="tns:CompetentOrganizationType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Выбор уполномоченного органа, предоставляющего услугу</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChildrenData" type="tns:ChildrenDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения о детях</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="PaternityCertificate" type="tns:PaternityCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта об установлении отцовства</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DivorceCertificate" type="tns:DivorceCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о расторжении брака</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MarriageCertificate" type="tns:MarriageCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о заключении брака</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeFIOCertificate" type="tns:ChangeFIOCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о перемене имени</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeFIOParticipantCertificate" type="tns:ChangeFIOParticipantCertificateType"
+                         minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DivorceParticipantCertificate" type="tns:DivorceParticipantCertificateType" minOccurs="0"
+                         maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MarriageParticipantCertificate" type="tns:MarriageParticipantCertificateType"
+                         minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthCertificate" type="tns:BirthCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты свидетельства о рождении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MethodGettingResults" type="tns:MethodGettingResultsType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Способ получения результата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveInformation" type="tns:ReserveInformationType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация по заявлению</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Documents" type="tns:DocumentsType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения о вложениях</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FOIVROIVDataType">
+        <xsd:annotation>
+            <xsd:documentation>Данные запроса ФОИВ/РОИВ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+            <xsd:element name="DiedParticipant" type="tns:DiedParticipantType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные запроса по погибшему участнику</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Participant" type="tns:ParticipantType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные запроса по участнику</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:choice>
+    </xsd:complexType>
+    <xsd:complexType name="DiedParticipantType">
+        <xsd:annotation>
+            <xsd:documentation>Данные запроса по погибшему участнику</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="passportRF" type="tns:passportRFType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Паспорт гражданина РФ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FOIVROIVID" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код ОГРН ФОИВ/РОИВ, направившего запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FOIVROIVName" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование ФОИВ/РОИВ, направившего запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FOIVROIVRegionCODE" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код региона ФОИВ/РОИВ, направившего запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ParticipantType">
+        <xsd:annotation>
+            <xsd:documentation>Данные запроса по участнику</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="passportRF" type="tns:passportRFType">
+                <xsd:annotation>
+                    <xsd:documentation>Паспорт гражданина РФ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FOIVROIVID" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код ОГРН ФОИВ/РОИВ, направившего запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FOIVROIVName" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование ФОИВ/РОИВ, направившего запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FOIVROIVRegionCODE" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код региона ФОИВ/РОИВ, направившего запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDataType">
+        <xsd:annotation>
+            <xsd:documentation>Данные заявления в целях обмена данными с МФЦ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="VariantChoice" type="tns:MFCVariantChoiceType">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант предоставления услуги</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DelegateInfo" type="tns:MFCDelegateInfoType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Категория заявителя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="RecipientPersonalData" type="tns:MFCRecipientPersonalDataType">
+                <xsd:annotation>
+                    <xsd:documentation>Данные о физическом лице</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DelegatePersonalData" type="tns:MFCDelegatePersonalDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные о физическом лице при заполнении сведений представителем
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ParticipantData" type="tns:MFCParticipantDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения об участнике</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ParentData" type="tns:MFCParentDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения об общем родителе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DependentPersonData" type="tns:MFCDependentPersonDataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения о гражданине, в отношении которого установлены опека или
+                        попечительство
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="CompetentOrganization" type="tns:MFCCompetentOrganizationType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Выбор уполномоченного органа, предоставляющего услугу</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIOParticipant" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО участника при рождении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FIOParticipant" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО участника при рождении заявителя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FIOParticipantKids" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО участника при рождении сына или дочери</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FIOParticipantChild" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО участника при рождении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIOParent" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО заявителя (родителя) при рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIOSonDaughter" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО заявителя (сына или дочери) при рождении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIOBrotherSister" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО заявителя (брата или сестры) при рождении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="PaternityCertificate" type="tns:MFCPaternityCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта об установлении отцовства</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DivorceCertificate" type="tns:MFCDivorceCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о расторжении брака</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MarriageCertificate" type="tns:MFCMarriageCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о заключении брака</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeFIOCertificate" type="tns:MFCChangeFIOCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о перемене имени</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeFIOParticipantCertificate" type="tns:MFCChangeFIOParticipantCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DivorceParticipantCertificate" type="tns:MFCDivorceParticipantCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MarriageParticipantCertificate" type="tns:MFCMarriageParticipantCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthCertificate" type="tns:MFCBirthCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о рождении заявителя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthParticipantCertificate" type="tns:MFCBirthParticipantCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DeathParticipantCertificate" type="tns:MFCDeathParticipantCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о смерти участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MethodGettingResults" type="tns:MFCMethodGettingResultsType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Способ получения результата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveInformation" type="tns:MFCReserveInformationType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация по заявлению</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Documents" type="tns:MFCDocumentsType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения о вложениях</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="VariantChoiceType">
+        <xsd:annotation>
+            <xsd:documentation>Вариант предоставления услуги</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="KP_OA_01" type="tns:KP_OA_01Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кто подает заявление?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_02" type="tns:KP_OA_02Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем приходитесь участнику?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_03" type="tns:KP_OA_03Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где выданы документы, подтверждающие родство?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_04" type="tns:KP_OA_04Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У вас одинаковая фамилия с участником?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_05" type="tns:KP_OA_05Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>По какой причине у вас разные фамилии?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_06" type="tns:KP_OA_06Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>По какой причине у вас разные фамилии?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_07" type="tns:KP_OA_07Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_08" type="tns:KP_OA_08Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_09" type="tns:KP_OA_09Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>По какой причине у ребёнка и участника разные фамилии?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_10" type="tns:KP_OA_10Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_11" type="tns:KP_OA_11Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Вы участник?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_12" type="tns:KP_OA_12Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У вас и ребёнка одинаковая фамилия?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_13" type="tns:KP_OA_13Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка есть паспорт?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_14" type="tns:KP_OA_14Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем приходитесь участнику?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_15" type="tns:KP_OA_15Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Резервный вопрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_16" type="tns:KP_OA_16Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Резервный вопрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCVariantChoiceType">
+        <xsd:annotation>
+            <xsd:documentation>Вариант предоставления услуги</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="KP_OA_01" type="tns:KP_OA_01Type">
+                <xsd:annotation>
+                    <xsd:documentation>Кто подает заявление?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_02" type="tns:KP_OA_02Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем приходитесь участнику?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_03" type="tns:KP_OA_03Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где выданы документы, подтверждающие родство?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_04" type="tns:KP_OA_04Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У вас одинаковая фамилия с участником?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_05" type="tns:KP_OA_05Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>По какой причине у вас разные фамилии?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_06" type="tns:KP_OA_06Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>По какой причине у вас разные фамилии?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_07" type="tns:KP_OA_07Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_08" type="tns:KP_OA_08Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_09" type="tns:KP_OA_09Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>По какой причине у ребёнка и участника разные фамилии?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_10" type="tns:KP_OA_10Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_11" type="tns:KP_OA_11Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Вы участник?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_12" type="tns:KP_OA_12Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У вас и ребёнка одинаковая фамилия?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_13" type="tns:KP_OA_13Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка есть паспорт?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_14" type="tns:KP_OA_14Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем приходитесь участнику?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_15" type="tns:KP_OA_15Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Резервный вопрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_16" type="tns:KP_OA_16Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Резервный вопрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_17" type="tns:KP_OA_17Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрировано рождение участника?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_18" type="tns:KP_OA_18Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрировано расторжение брака заявителя?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_19" type="tns:KP_OA_19Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрировано заключение брака заявителя?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_20" type="tns:KP_OA_20Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрирована перемена имени заявителя?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_21" type="tns:KP_OA_21Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрировано установление отцовства?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_22" type="tns:KP_OA_22Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрировано рождение заявителя?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_23" type="tns:KP_OA_23Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия, имя или отчество заявителя менялись?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_24" type="tns:KP_OA_24Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия, имя или отчество участника менялись?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_29" type="tns:KP_OA_29Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия, имя или отчество участника менялись после рождения сына или дочери?
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_31" type="tns:KP_OA_31Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка одинаковая фамилия с участником?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="KP_OA_01Type">
+        <xsd:annotation>
+            <xsd:documentation>Кто подает заявление?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Участник</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Член семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+                <xsd:annotation>
+                    <xsd:documentation>Бывший супруг или супруга участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_02Type">
+        <xsd:annotation>
+            <xsd:documentation>Кем приходитесь участнику?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Родителем</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Супругой или супругом</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+                <xsd:annotation>
+                    <xsd:documentation>Сыном или дочерью</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="4">
+                <xsd:annotation>
+                    <xsd:documentation>Братом или сестрой</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5">
+                <xsd:annotation>
+                    <xsd:documentation>Опекуном или попечителем</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="6">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданином, находящимся на иждивении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_03Type">
+        <xsd:annotation>
+            <xsd:documentation>Где выданы документы, подтверждающие родство?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_04Type">
+        <xsd:annotation>
+            <xsd:documentation>У вас одинаковая фамилия с участником?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="KP_OA_05Type">
+        <xsd:annotation>
+            <xsd:documentation>По какой причине у вас разные фамилии?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="IsSecondParent" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У участника фамилия отца (матери)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsPaternity" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У участника фамилия родителя, установившего отцовство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsDivorce" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Я сменил(а) фамилию при разводе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsMarried" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Я сменил(а) фамилию при вступлении в брак</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsCertificateNameChange" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Изменились фамилия, имя или отчество у меня или участника - есть свидетельство о
+                        перемене имени
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsParticipantMarried" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Участник сменил фамилию при вступлении в брак</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsParticipantDivorce" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Участник сменил фамилию при разводе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Other" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Другая причина</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="OtherReason" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Укажите другую причину</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveCheck1" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительный чек-бокс1</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveCheck2" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительный чек-бокс2</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="KP_OA_06Type">
+        <xsd:annotation>
+            <xsd:documentation>По какой причине у вас разные фамилии?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="IsSecondParent" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У меня фамилия матери (отца)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsPaternity" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У меня фамилия родителя, установившего отцовство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsParticipantDivorce" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Участник сменил фамилию при разводе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsParticipantMarried" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Участник сменил фамилию при вступлении в брак</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsCertificateNameChange" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Изменились фамилия, имя или отчество у меня или участника - есть свидетельство о
+                        перемене имени
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsMarried" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Я сменил(а) фамилию при вступлении в брак</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsDivorce" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Я сменил(а) фамилию при разводе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Other" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Другая причина</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="OtherReason" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Укажите другую причину</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveCheck1" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительный чек-бокс1</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveCheck2" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительный чек-бокс2</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="KP_OA_07Type">
+        <xsd:annotation>
+            <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>У меня</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>У участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+                <xsd:annotation>
+                    <xsd:documentation>У обоих</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_08Type">
+        <xsd:annotation>
+            <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>У меня</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>У родителя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+                <xsd:annotation>
+                    <xsd:documentation>У обоих</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="KP_OA_09Type">
+        <xsd:annotation>
+            <xsd:documentation>По какой причине у ребёнка и участника разные фамилии?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="IsMyLastname" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка моя фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsPaternity" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Я установил отцовство в отношении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsParticipantDivorce" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Участник сменил фамилию при разводе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsParticipantMarried" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Участник сменил фамилию при вступлении в брак</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="IsCertificateNameChange" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Изменились фамилия, имя или отчество у ребёнка или участника - есть свидетельство
+                        о перемене имени
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Other" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Другая причина</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="OtherReason" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Укажите другую причину</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveCheck1" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительный чек-бокс1</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveCheck2" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительный чек-бокс2</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="KP_OA_10Type">
+        <xsd:annotation>
+            <xsd:documentation>У кого изменились фамилия, имя или отчество?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>У участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+                <xsd:annotation>
+                    <xsd:documentation>У обоих</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_11Type">
+        <xsd:annotation>
+            <xsd:documentation>Вы участник?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_12Type">
+        <xsd:annotation>
+            <xsd:documentation>У ребёнка одинаковая фамилия с участником?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_13Type">
+        <xsd:annotation>
+            <xsd:documentation>У ребёнка есть паспорт?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_14Type">
+        <xsd:annotation>
+            <xsd:documentation>Кем приходитесь участнику?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сыном или дочерью</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Братом или сестрой</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_15Type">
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+            </xsd:enumeration>
+            <xsd:enumeration value="4">
+            </xsd:enumeration>
+            <xsd:enumeration value="5">
+            </xsd:enumeration>
+            <xsd:enumeration value="6">
+            </xsd:enumeration>
+            <xsd:enumeration value="7">
+            </xsd:enumeration>
+            <xsd:enumeration value="8">
+            </xsd:enumeration>
+            <xsd:enumeration value="9">
+            </xsd:enumeration>
+            <xsd:enumeration value="10">
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_16Type">
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+            </xsd:enumeration>
+            <xsd:enumeration value="4">
+            </xsd:enumeration>
+            <xsd:enumeration value="5">
+            </xsd:enumeration>
+            <xsd:enumeration value="6">
+            </xsd:enumeration>
+            <xsd:enumeration value="7">
+            </xsd:enumeration>
+            <xsd:enumeration value="8">
+            </xsd:enumeration>
+            <xsd:enumeration value="9">
+            </xsd:enumeration>
+            <xsd:enumeration value="10">
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_17Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрировано рождение участника?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_18Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрировано расторжение брака заявителя?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_19Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрировано заключение брака заявителя?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_20Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрирована перемена имени заявителя?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_21Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрировано установление отцовства?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_22Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрировано рождение заявителя?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_23Type">
+        <xsd:annotation>
+            <xsd:documentation>Фамилия, имя или отчество заявителя менялись?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_24Type">
+        <xsd:annotation>
+            <xsd:documentation>Фамилия, имя или отчество участника менялись?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_25Type">
+        <xsd:annotation>
+            <xsd:documentation>Над кем установлена опека или попечительство?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сыном или дочерью участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданином, находящимся на иждивении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_26Type">
+        <xsd:annotation>
+            <xsd:documentation>У гражданина, находящегося под опекой или попечительством есть паспорт?
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_27Type">
+        <xsd:annotation>
+            <xsd:documentation>Фамилия, имя или отчество сына или дочери участника менялись после рождения?
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_28Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрировано рождение сына или дочери участника?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_29Type">
+        <xsd:annotation>
+            <xsd:documentation>Фамилия, имя или отчество участника менялись после рождения сына или дочери?
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_30Type">
+        <xsd:annotation>
+            <xsd:documentation>Где зарегистрировано рождение ребёнка?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>В России</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>В иностранном государстве</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="KP_OA_31Type">
+        <xsd:annotation>
+            <xsd:documentation>У ребёнка одинаковая фамилия с участником?</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ChangeBirthFIOType">
+        <xsd:annotation>
+            <xsd:documentation>Фамилия, имя или отчество общего родителя менялись после рождения заявителя?
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Да</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Нет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DelegateInfoType">
+        <xsd:annotation>
+            <xsd:documentation>Категория заявителя</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Заявитель</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Представитель</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MFCDelegateInfoType">
+        <xsd:annotation>
+            <xsd:documentation>Категория заявителя</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Заявитель</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Представитель</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="RecipientPersonalDataType">
+        <xsd:annotation>
+            <xsd:documentation>Данные о физическом лице</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="fullfio" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lastname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="citizenship" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Phone" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Телефон</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Email" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Электронная почта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="regAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес регистрации</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="factAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес проживания</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DocumentPersonal" type="tns:DocumentPersonalType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные ДУЛ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FIODataType">
+        <xsd:annotation>
+            <xsd:documentation>ФИО</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCRecipientPersonalDataType">
+        <xsd:annotation>
+            <xsd:documentation>Данные о физическом лице</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="fullfio" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="citizenship" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Phone" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Телефон</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Email" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Электронная почта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="regAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес регистрации</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="factAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес проживания</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DocumentPersonal" type="tns:MFCDocumentPersonalType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные ДУЛ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DelegatePersonalDataType">
+        <xsd:annotation>
+            <xsd:documentation>Данные о физическом лице при заполнении сведений представителем</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="fullfio" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lastname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="citizenship" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Phone" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Телефон</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Email" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Электронная почта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="regAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес регистрации</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="factAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес проживания</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChildBirthCertificate" type="tns:BirthCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты свидетельства о рождении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AssemblyRecord" type="tns:AssemblyRecordType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о рождении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_13" type="tns:KP_OA_13Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка есть паспорт?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DocumentPersonal" type="tns:DocumentPersonalType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные ДУЛ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDelegatePersonalDataType">
+        <xsd:annotation>
+            <xsd:documentation>Данные о физическом лице при заполнении сведений представителем</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="fullfio" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="citizenship" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChildBirthCertificate" type="tns:MFCBirthCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты свидетельства о рождении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="foreignChildBirthCertificate" type="tns:MFCBirthCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты иностранного свидетельства о рождении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AssemblyRecord" type="tns:MFCAssemblyRecordType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о рождении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_13" type="tns:KP_OA_13Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка есть паспорт?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DocumentPersonal" type="tns:MFCDocumentPersonalType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные ДУЛ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_30" type="tns:KP_OA_30Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрировано рождение ребёнка?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIOChild" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО ребёнка при рождении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ParticipantDataType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения об участнике</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="fullfio" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lastname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="citizenship" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Phone" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Телефон</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Email" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Электронная почта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="regAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес регистрации</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="factAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес проживания</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DocumentPersonal" type="tns:DocumentPersonalType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные ДУЛ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="previousLastname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия участника при рождении/при рождении сына или дочери/при рождении
+                        ребёнка
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="previousFirstname" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Имя участника при рождении/при рождении сына или дочери/при рождении ребёнка
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="previousMiddlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество участника при рождении/при рождении сына или дочери/при рождении
+                        ребёнка
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCParentDataType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения об общем родителе</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeBirthFIOApplicant" type="tns:ChangeBirthFIOType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия, имя или отчество общего родителя менялись после рождения заявителя?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIOApplicant" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО общего родителя при рождении заявителя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeBirthFIOParentParticipant" type="tns:ChangeBirthFIOType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия, имя или отчество общего родителя менялись после рождения участника?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIOParentParticipant" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО общего родителя при рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDependentPersonDataType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения о гражданине, в отношении которого установлены опека или попечительство
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="KP_OA_25" type="tns:KP_OA_25Type">
+                <xsd:annotation>
+                    <xsd:documentation>Над кем установлена опека или попечительство?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_26" type="tns:KP_OA_26Type">
+                <xsd:annotation>
+                    <xsd:documentation>У гражданина, находящегося под опекой или попечительством есть паспорт?
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DocumentPersonal" type="tns:MFCDocumentPersonalType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Данные ДУЛ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_27" type="tns:KP_OA_27Type">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия, имя или отчество сына или дочери участника менялись после рождения?
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthFIODependentPerson" type="tns:FIODataType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО сына или дочери участника при рождении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_28" type="tns:KP_OA_28Type">
+                <xsd:annotation>
+                    <xsd:documentation>Где зарегистрировано рождение сына или дочери участника?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthCertificate" type="tns:MFCBirthCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о рождении сына или дочери участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCParticipantDataType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения об участнике</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="fullfio" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ФИО</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="snils" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="dateBirth" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="birthPlace" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="citizenship" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Гражданство</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Phone" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Телефон</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Email" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Электронная почта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="regAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес регистрации</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="factAddress" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Адрес проживания</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DocumentPersonal" type="tns:MFCDocumentPersonalType">
+                <xsd:annotation>
+                    <xsd:documentation>Данные ДУЛ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DocumentPersonalType">
+        <xsd:annotation>
+            <xsd:documentation>Данные ДУЛ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="typeDoc" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Тип документа</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="nameDoc" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование документа</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="docseries" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Серия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="docnumber" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issuedate" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата выдачи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issueorg" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем выдан</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="validate" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Срок действия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issueidPassportRF" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Код подразделения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDocumentPersonalType">
+        <xsd:annotation>
+            <xsd:documentation>Данные ДУЛ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="typeDoc" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Тип документа</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="nameDoc" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование документа</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="docseries" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Серия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="docnumber" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issuedate" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата выдачи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issueorg" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем выдан</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issueidPassportRF" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код подразделения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ChildrenDataType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения о детях</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ChildrenDataBlock" type="tns:ChildrenDataBlockType" minOccurs="1" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения о детях</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ChildrenDataBlockType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения о детях</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Lastname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Фамилия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Firstname" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Middlename" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Отчество</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DateBirth" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Дата рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="SNILS" type="tns:snils" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>СНИЛС</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gender" type="tns:gender" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Пол</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="PlaceBirth" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Место рождения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChildBirthCertificate" type="tns:BirthCertificateType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Реквизиты записи акта о рождении ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="KP_OA_13" type="tns:KP_OA_13Type" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>У ребёнка есть паспорт?</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChildPassport" type="tns:DocumentPersonalType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Сведения о документе, удостоверяющем личность ребёнка</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveInformation" type="tns:ReserveInformationType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация по заявлению</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="PaternityCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта об установлении отцовства</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCPaternityCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта об установлении отцовства</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DivorceCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о расторжении брака</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDivorceCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о расторжении брака</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MarriageCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о заключении брака</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCMarriageCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о заключении брака</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ChangeFIOCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о перемене имени</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCChangeFIOCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о перемене имени</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ChangeFIOParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о перемене имени участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCChangeFIOParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о перемене имени участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DivorceParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о расторжении брака участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDivorceParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о расторжении брака участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MarriageParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о заключении брака участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCMarriageParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о заключении брака участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="BirthCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты свидетельства о рождении</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Series" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Серия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCBirthCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о рождении</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Series" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Серия</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCBirthParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о рождении участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDeathParticipantCertificateType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о смерти участника</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AssemblyRecordType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о рождении ребёнка</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCAssemblyRecordType">
+        <xsd:annotation>
+            <xsd:documentation>Реквизиты записи акта о рождении ребёнка</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Date" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Number" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Номер</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Issuer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем зарегистрирована запись</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="CompetentOrganizationType">
+        <xsd:sequence>
+            <xsd:element name="OrganizationID" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Код для выбранного значения справочника "Уполномоченный орган, предоставляющий
+                        услугу"
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Name" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Значение для выбранного значения справочника "Уполномоченный орган,
+                        предоставляющий услугу"
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCCompetentOrganizationType">
+        <xsd:sequence>
+            <xsd:element name="OrganizationID" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ОГРН организации, направившей запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Name" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование организации, направившей запрос</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="RegionCODE" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Код региона организации</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MethodGettingResultsType">
+        <xsd:annotation>
+            <xsd:documentation>Способ получения результата</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="IsPaperDocumentRequired" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Получить дополнительно результат на бумажном носителе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MethodGettingResultsInfo" type="tns:FieldRadioType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Способ получения результата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCMethodGettingResultsType">
+        <xsd:annotation>
+            <xsd:documentation>Способ получения результата</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="IsPaperDocumentRequired" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Получить дополнительно результат на бумажном носителе</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MethodGettingResultsInfo" type="tns:FieldRadioType" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Способ получения результата</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="FieldRadioType">
+        <xsd:annotation>
+            <xsd:documentation>Способ получения результата</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>МФЦ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Личное обращение в уполномоченный орган</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="ReserveInformationType">
+        <xsd:sequence>
+            <xsd:element name="Information" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Information_2" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Information_3" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InformationCheck" type="xsd:boolean" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InformationDate" type="tns:date" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InformationByte" type="tns:InformationByteType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCReserveInformationType">
+        <xsd:sequence>
+            <xsd:element name="Information" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Information_2" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Information_3" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InformationCheck" type="xsd:boolean" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InformationDate" type="tns:date" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="InformationByte" type="tns:InformationByteType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="InformationByteType">
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант1</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант2</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант3</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="4">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант4</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант5</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="6">
+                <xsd:annotation>
+                    <xsd:documentation>Вариант6</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="AdditionalInformationType">
+        <xsd:annotation>
+            <xsd:documentation>Дополнительная информация по заявлению</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Information" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BankName" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Наименование кредитной организации</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="bankBIK" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>БИК или наименование банка участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BIKBankName" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>БИК или наименование банка участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="CheckboxNameAndBIKOrgan" type="xsd:boolean" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Ручной ввод реквизитов</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="account" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Корреспондентский счет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="accountBank" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Корреспондентский счет</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AccountNumber" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Номер расчетного счета участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MilitaryPersonnelNumber" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Личный номер военнослужащего</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MilitaryPersonnelNumber2" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>Личный номер военнослужащего</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MilitaryPersonnelINN" type="xsd:string" minOccurs="0" maxOccurs="1">
+                <xsd:annotation>
+                    <xsd:documentation>ИНН военнослужащего</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Information1" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Information2" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Information3" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DocumentsType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения о вложениях</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="DocumentProvidedApplicant" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Документ, предоставленный заявителем</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о рождении члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="PaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство об установлении отцовства над участником</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство об установлении отцовства над членом семьи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о заключении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о расторжении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о перемене имени члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DeathCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о смерти участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о рождении члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство об установлении отцовства над участником</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство об установлении отцовства над членом семьи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о заключении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о расторжении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о перемене имени члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignDeathCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о смерти участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о рождении члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства об установлении отцовства над участником</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства об установлении отцовства над членом семьи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о заключении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о расторжении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о перемене имени члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignDeathCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о смерти участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ConfirmingGuardianshipOrTrusteeship" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Документ, подтверждающий установление опеки или попечительства</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="CourtDecisionEstablishingDependentFact" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Решение суда об установлении факта нахождения гражданина на иждивении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveDocument1" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Документ по заявлению 1</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveDocument2" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Документ по заявлению 2</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveDocument3" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Документ по заявлению 3</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AdditionalDocument" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительные документы</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AdditionalDocument1" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительные документы</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AdditionalDocument2" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительные документы</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AdditionalDocument3" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительные документы</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MFCDocumentsType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения о вложениях</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="DocumentProvidedApplicant" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Документ, предоставленный заявителем</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="BirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о рождении члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="PaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство об установлении отцовства над участником</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство об установлении отцовства над членом семьи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о заключении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о расторжении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="FamilyMemberChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о перемене имени члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DeathCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Свидетельство о смерти участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о рождении члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство об установлении отцовства над участником</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство об установлении отцовства над членом семьи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о заключении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о расторжении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignFamilyMemberChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о перемене имени члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ForeignDeathCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Иностранное свидетельство о смерти участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о рождении участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberBirthCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о рождении члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства об установлении отцовства над участником</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberPaternityCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства об установлении отцовства над членом семьи</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о заключении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberMarriageCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о заключении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о расторжении брака участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberDivorceCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о расторжении брака члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о перемене имени участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignFamilyMemberChangeNameCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о перемене имени члена семьи участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="TranslationForeignDeathCertificate" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Нотариально заверенный перевод на русский язык иностранного свидетельства о смерти участника</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ConfirmingGuardianshipOrTrusteeship" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Документ, подтверждающий установление опеки или попечительства</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="CourtDecisionEstablishingDependentFact" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Решение суда об установлении факта нахождения гражданина на иждивении</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ReserveDocument" type="tns:DocInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Резервный документ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DocInfoType">
+        <xsd:annotation>
+            <xsd:documentation>Сведения о вложении</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="CodeDocument" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код документа</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Name" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Имя файла документа</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="URL" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Относительный путь к файлу внутри архива</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="type" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>MIME-тип контента</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FormResponseType">
+        <xsd:annotation>
+            <xsd:documentation>Ответ на подачу заявления или запроса на отмену заявления или текстового сообщения от
+                заявителя в ведомство
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="changeOrderInfo" type="tns:changeOrderInfoType">
+                <xsd:annotation>
+                    <xsd:documentation>Информация для изменения статуса заявления</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="additionalInfo" type="tns:additionalInfoType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>Дополнительная информация</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="changeOrderInfoType">
+        <xsd:annotation>
+            <xsd:documentation>Информация для изменения статуса заявления</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="orderId" type="tns:orderIdType">
+                <xsd:annotation>
+                    <xsd:documentation>Номер заявки</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="statusCode" type="tns:statusCodeType">
+                <xsd:annotation>
+                    <xsd:documentation>Новый статус заявления</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="comment" type="tns:string-2048" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Комментарий</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="cancelAllowed" type="xsd:boolean" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Флаг для включения возможности отмены заявления</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="sendMessageAllowed" type="xsd:boolean" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>Флаг для включения возможности переписки с ведомством</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="additionalInfoType">
+        <xsd:annotation>
+            <xsd:documentation>Дополнительная информация</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="name">
+                <xsd:annotation>
+                    <xsd:documentation>Имя атрибута</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="1"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="value" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Значение атрибута</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="gender">
+        <xsd:restriction base="xsd:byte">
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Мужской</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Женский</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="oktmo">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="11"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="date">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+            <xsd:pattern value="[0-9]{2}[.][0-9]{2}[.][0-9]{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="snils">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="14"/>
+            <xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{3} [0-9]{2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="fio">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="60"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="orderIdType">
+        <xsd:sequence>
+            <xsd:annotation>
+                <xsd:documentation>Номер заявки</xsd:documentation>
+            </xsd:annotation>
+            <xsd:element name="pguId" type="tns:string-14">
+                <xsd:annotation>
+                    <xsd:documentation>Номер заявки</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="statusCodeType">
+        <xsd:annotation>
+            <xsd:documentation>Новый статус заявления</xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+            <xsd:element name="orgCode" type="tns:string-20">
+                <xsd:annotation>
+                    <xsd:documentation>Код ведомственного статуса</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="techCode" type="tns:string-20">
+                <xsd:annotation>
+                    <xsd:documentation>Код статуса ЕПГУ</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:choice>
+    </xsd:complexType>
+    <xsd:complexType name="passportRFType">
+        <xsd:sequence>
+            <xsd:element name="docseries" type="tns:string-4">
+                <xsd:annotation>
+                    <xsd:documentation>Серия паспорта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="docnumber" type="tns:string-6">
+                <xsd:annotation>
+                    <xsd:documentation>Номер паспорта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issuedate" type="tns:date">
+                <xsd:annotation>
+                    <xsd:documentation>Дата выдачи паспорта</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issueorg" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Кем выдан</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="issueidPassportRF" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>Код подразделения</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="string-4">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="string-6">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="6"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="string-13">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="13"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="string-14">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="14"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="string-20">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="string-2048">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="2048"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
