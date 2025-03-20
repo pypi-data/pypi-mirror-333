@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: mlcoder
+Version: 0.1.1
+Summary: Get the collection of Python code used frequently in Machine Learning using pip package :).
+Home-page: https://github.com/hissain/mlcoder
+Author: Md. Sazzad Hissain Khan
+Author-email: hissain.khan@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# mlcoder
+Utility functions to write piece of Python codes used frequently in Machine Learning
