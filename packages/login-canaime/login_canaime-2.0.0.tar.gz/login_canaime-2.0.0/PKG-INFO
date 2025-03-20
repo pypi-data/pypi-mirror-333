@@ -1,0 +1,151 @@
+Metadata-Version: 2.2
+Name: login-canaime
+Version: 2.0.0
+Summary: Biblioteca para autenticação no sistema Canaimé e manipulação da página logada
+Author-email: Anderson Assunção <andersongomesrr@hotmail.com>
+License: # MIT License
+        
+        Copyright (c) 2025 Anderson Assunção
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+Project-URL: Homepage, https://github.com/A-Assuncao/login-canaime
+Project-URL: Bug Tracker, https://github.com/A-Assuncao/login-canaime/issues
+Project-URL: Documentation, https://github.com/A-Assuncao/login-canaime/blob/main/README.md
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: playwright>=1.28.0
+
+# login-canaime
+
+Biblioteca para autenticação no sistema Canaimé e manipulação da página logada.
+
+## Instalação
+
+```bash
+pip install login-canaime
+```
+
+## Uso como biblioteca
+
+A biblioteca `login-canaime` oferece duas funcionalidades principais:
+
+### 1. Obter apenas as credenciais
+
+```python
+from login_canaime import Login
+
+# Criar uma instância da classe Login
+login = Login()
+
+# Obter apenas as credenciais
+usuario, senha = login.obter_credenciais()
+
+if usuario and senha:
+    print(f"Login bem-sucedido! Usuário: {usuario}")
+    
+    # Usar as credenciais em outro sistema
+    # outro_sistema.login(usuario, senha)
+```
+
+### 2. Obter e manipular a página logada
+
+```python
+from login_canaime import Login
+import time
+
+# Criar uma instância da classe Login
+login = Login()
+
+# Obter a página logada
+page = login.obter_pagina(headless=False)
+
+if page:
+    try:
+        print(f"Login realizado como: {login.usuario}")
+        
+        # Manipular a página com Playwright
+        print(f"Título da página: {page.title()}")
+        
+        # Capturar screenshot
+        page.screenshot(path="screenshot.png")
+        
+        # Navegar para outra página
+        page.goto("https://www.google.com")
+        
+        # Aguardar visualização
+        time.sleep(5)
+        
+    finally:
+        # Sempre feche o navegador ao terminar
+        login.fechar()
+```
+
+### 3. Uso com gerenciador de contexto
+
+```python
+from login_canaime import Login
+import time
+
+# Usando com o gerenciador de contexto 'with'
+with Login() as login:
+    # Obter a página logada
+    page = login.obter_pagina()
+    
+    if page:
+        print(f"Título da página: {page.title()}")
+        
+        # Fazer operações...
+        
+        # Aguardar visualização
+        time.sleep(5)
+    
+# O navegador será fechado automaticamente ao sair do bloco 'with'
+```
+
+## Autenticadores alternativos
+
+A biblioteca suporta diferentes métodos de autenticação:
+
+```python
+from login_canaime import Login, AutenticadorArgs, AutenticadorEnv
+
+# 1. Usando credenciais em argumentos
+auth_args = AutenticadorArgs()
+login1 = Login(autenticador=auth_args)
+page = login1.obter_pagina(usuario="usuario_exemplo", senha="senha_exemplo")
+
+# 2. Usando variáveis de ambiente (CANAIME_USUARIO e CANAIME_SENHA)
+auth_env = AutenticadorEnv()
+login2 = Login(autenticador=auth_env)
+page = login2.obter_pagina()
+```
+
+## Licença
+
+MIT 

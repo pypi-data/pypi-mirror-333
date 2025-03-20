@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "login-canaime"
+version = "2.0.0"
+description = "Biblioteca para autenticação no sistema Canaimé e manipulação da página logada"
+readme = "README.md"
+authors = [
+    {name = "Anderson Assunção", email = "andersongomesrr@hotmail.com"}
+]
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "playwright>=1.28.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/A-Assuncao/login-canaime"
+"Bug Tracker" = "https://github.com/A-Assuncao/login-canaime/issues"
+"Documentation" = "https://github.com/A-Assuncao/login-canaime/blob/main/README.md"
+
+[project.scripts]
+login-canaime = "login_canaime.cli:main"
+
+[tool.setuptools]
+# Inclui todos os pacotes e subpacotes
+packages = ["login_canaime", "login_canaime.ui"]
+# Garante que o arquivo py.typed seja incluído para compatibilidade de tipagem
+package-data = {"login_canaime" = ["py.typed"]}
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+select = ["E", "F", "B", "I"]
+ignore = [] 

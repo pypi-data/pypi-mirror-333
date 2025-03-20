@@ -1,0 +1,4 @@
+include README.md
+include pyproject.toml
+recursive-include login_canaime *.py *.typed
+recursive-include tests *.py 
