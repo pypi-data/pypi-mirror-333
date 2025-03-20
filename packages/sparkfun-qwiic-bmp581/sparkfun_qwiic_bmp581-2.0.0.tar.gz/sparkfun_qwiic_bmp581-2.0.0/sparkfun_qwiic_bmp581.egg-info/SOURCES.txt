@@ -1,0 +1,10 @@
+DESCRIPTION.rst
+LICENSE
+README.md
+pyproject.toml
+qwiic_bmp581.py
+sparkfun_qwiic_bmp581.egg-info/PKG-INFO
+sparkfun_qwiic_bmp581.egg-info/SOURCES.txt
+sparkfun_qwiic_bmp581.egg-info/dependency_links.txt
+sparkfun_qwiic_bmp581.egg-info/requires.txt
+sparkfun_qwiic_bmp581.egg-info/top_level.txt
