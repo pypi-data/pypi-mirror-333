@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="photovoltaic_production_regularization_view_tree" model="ir.ui.view">
+    <field name="name">photovoltaic_production_regularization.tree</field>
+    <field name="model">photovoltaic.production.regularization</field>
+    <field name="arch" type="xml">
+      <tree expand="1" default_order="production_date">
+        <field name="production_date" />
+        <field name="plant" />
+        <field name="real_production" />
+
+        <field name="accum_1"
+          options='{"fg_color": "red: r12n_1 == \"red\"; green: r12n_1 == \"green\"; blue: r12n_1 == \"blue\"; yellow: r12n_1 == \"yellow\"; white: latest_production == 1; black: r12n_1 == \"yellow\" and latest_production == 1 ", "bg_color": "red: r12n_1 == \"red\" and latest_production == 1; green: r12n_1 == \"green\" and latest_production == 1; blue: r12n_1 == \"blue\" and latest_production == 1; yellow: r12n_1 == \"yellow\" and latest_production == 1 "}'
+          attrs='{"invisible": [("latest_production", "&lt;", 1)]}'
+        />
+        <field name="accum_3"
+          options='{"fg_color": "red: r12n_3 == \"red\"; green: r12n_3 == \"green\"; blue: r12n_3 == \"blue\"; yellow: r12n_3 == \"yellow\"; white: latest_production == 3; black: r12n_3 == \"yellow\" and latest_production == 3 ", "bg_color": "red: r12n_3 == \"red\" and latest_production == 3; green: r12n_3 == \"green\" and latest_production == 3; blue: r12n_3 == \"blue\" and latest_production == 3; yellow: r12n_3 == \"yellow\" and latest_production == 3 "}'
+          attrs='{"invisible": [("latest_production", "&lt;", 3)]}'
+        />
+        <field name="accum_11"
+          options='{"fg_color": "red: r12n_11 == \"red\"; green: r12n_11 == \"green\"; blue: r12n_11 == \"blue\"; yellow: r12n_11 == \"yellow\"; white: latest_production == 11; black: r12n_11 == \"yellow\" and latest_production == 11 ", "bg_color": "red: r12n_11 == \"red\" and latest_production == 11; green: r12n_11 == \"green\" and latest_production == 11; blue: r12n_11 == \"blue\" and latest_production == 11; yellow: r12n_11 == \"yellow\" and latest_production == 11 "}'
+          attrs='{"invisible": [("latest_production", "&lt;", 11)]}'
+        />
+        <field name="reclamation" />
+        
+        <field name="latest_production" invisible="1" />
+        <field name="r12n_1"  invisible="1" />
+        <field name="r12n_3"  invisible="1" />
+        <field name="r12n_11" invisible="1" />
+        <field name="r12n_status" invisible="1" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="photovoltaic_production_regularization_view_search" model="ir.ui.view">
+    <field name="name">photovoltaic_production_regularization.search</field>
+    <field name="model">photovoltaic.production.regularization</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="plant" />
+        <field name="production_date" />
+
+        <filter
+          string="Needs r12n"
+          name="filter_r12n"
+          domain="[('r12n_status', '=', 'red')]"
+        />
+        <filter
+          string="Correct r12n"
+          name="filter_correct_r12n"
+          domain="[('r12n_status', '=', 'green')]"
+        />
+        <filter
+          string="Small negative r12n"
+          name="filter_neg_r12n"
+          domain="[('r12n_status', '=', 'blue')]"
+        />
+        <filter
+          string="Large negative r12n"
+          name="filter_neg_r12n"
+          domain="[('r12n_status', '=', 'yellow')]"
+        />
+
+        <separator />
+
+        <filter
+          string="Reclamation"
+          name="filter_reclamation"
+          domain="[('reclamation', '=', True)]"
+        />
+
+        <separator />
+
+        <filter
+          string="Since june 2023"
+          name="filter_since_june23"
+          domain="[('production_year', '>=', '2023'), ('production_month', '>=', '6')]"
+        />
+
+        <separator />
+
+        <filter
+          string="Production above 0"
+          name="filter_prod_gt_0"
+          domain="[('real_production', '>', 0)]"
+        />
+
+        <separator />
+
+        <filter
+          string="2024"
+          name="filter_2024"
+          domain="[('production_year', '=', '2024')]"
+        />
+        <filter
+          string="2023"
+          name="filter_2023"
+          domain="[('production_year', '=', '2023')]"
+        />
+        <filter
+          string="2022"
+          name="filter_2022"
+          domain="[('production_year', '=', '2022')]"
+        />
+        <filter
+          string="2021"
+          name="filter_2021"
+          domain="[('production_year', '=', '2021')]"
+        />
+
+        <group name="groupby">
+          <filter
+            string="Plant"
+            name="group_plant"
+            domain=""
+            context="{'group_by': 'plant'}"
+          />
+        </group>
+      </search>
+    </field>
+  </record>
+
+  <record id="photovoltaic_production_regularization_view_form" model="ir.ui.view">
+    <field name="name">photovoltaic_production_regularization.form</field>
+    <field name="model">photovoltaic.production.regularization</field>
+    <field name="arch" type="xml">
+      <form>
+        <group colspan="4">
+          <group colspan="2" col="2">
+            <separator string="Main" colspan="2"/>
+            <field name="production_month" />
+            <field name="production_year" />
+            <field name="plant" />
+          </group>
+
+          <group colspan="2" col="2">
+            <separator string="Other" colspan="2"/>
+            <field name="real_production" />
+            <field name="bill_1" />
+            <field name="accum_1" />
+            <field name="bill_3" />
+            <field name="accum_3" />
+            <field name="bill_11" />
+            <field name="accum_11" />
+          </group>
+
+          <group colspan="2" col="2">
+            <separator string="Comments" colspan="2"/>
+            <field name="reclamation" />
+            <field name="comments" />
+          </group>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <record id="photovoltaic_production_regularization_action" model="ir.actions.act_window">
+    <field name="name">Regularization</field>
+    <field name="res_model">photovoltaic.production.regularization</field>
+    <field name="view_mode">tree,form</field>
+    <field name="context">{ 'search_default_group_plant': True, 'search_default_filter_since_june23': True }</field>
+  </record>
+
+  <record id="menu_photovoltaic_production_regularization" model="ir.ui.menu">
+    <field name="name">Regularization</field>
+    <field name="sequence" eval="80"/>
+    <field name="action" ref="photovoltaic_production_regularization_action"/>
+    <field name="parent_id" ref="photovoltaic_production_menu"/>
+  </record>
+
+</odoo>
