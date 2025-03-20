@@ -1,0 +1,10 @@
+spotify_to_youtube/__init__.py,sha256=1hPMjjkCEuDbk-IclkhyjrCCyACq_tSRVL-vBn_cc7Q,86
+spotify_to_youtube/main.py,sha256=9bDFlWGhvyzD7mV_AVdCnl4Hl9pX4K3reSj0QLCcq_w,3353
+spotify_to_youtube/selenium_add_to_playlist.py,sha256=93JGDuAbzvTkNKqjCjLf04RF3m0m64Wnsw14-rzeAhY,7193
+spotify_to_youtube/spotify.py,sha256=K_-7PDWnr9BS9x-l5dPStnY5THb4BzJQ1UhcoSvlGvE,5465
+spotify_to_youtube/tests/test.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotify_to_youtube-0.1.3.dist-info/METADATA,sha256=YucUzMkqWu6GU2wA6T7XZMrCg0sWH0G5L5jwVcOm2NY,249
+spotify_to_youtube-0.1.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+spotify_to_youtube-0.1.3.dist-info/entry_points.txt,sha256=hv99aYSEajepSArR-ZZQLvI0SpDado97jHAk7EieMVc,68
+spotify_to_youtube-0.1.3.dist-info/top_level.txt,sha256=2OhOlEPR2Le2EsYgLmCD83_HikLMj-uqfVub_9K2rcU,19
+spotify_to_youtube-0.1.3.dist-info/RECORD,,
