@@ -1,0 +1,109 @@
+[project]
+authors = ["Jermiah Joseph <jermiahjoseph98@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+name = "snakemake-storage-plugin-orcestra"
+platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.12.9,<3.14"
+pip = ">=24.3.1,<25"
+
+[pypi-dependencies]
+
+[environments]
+dev = ["test", "dev", "release", "quality", "build"]
+quality = ["quality"]
+test = ["test"]
+
+py311 = { features = ["py311", "test"], no-default-feature = true }
+py312 = { features = ["py312", "test"], no-default-feature = true }
+
+publish = ["release", "build"]
+
+############################################## DEV ###############################################
+[feature.dev.pypi-dependencies]
+# snakemake_storage_plugin_orcestra = { path = ".", editable = true }
+# orcestra-downloader = { path = "../orcestra-downloader", editable = true }
+orcestra-downloader = { git = "https://github.com/jjjermiah/orcestra-downloader", branch = "dev" }
+
+[feature.dev.dependencies]
+ipython = "*"
+ipykernel = "*"
+jupyterlab = "*"
+
+############################################## PYTHON ###############################################
+
+[feature.py311.dependencies]
+python = "3.11.*"
+
+[feature.py312.dependencies]
+python = "3.12.*"
+
+############################################## TEST ################################################
+[feature.test.pypi-dependencies]
+snakemake_storage_plugin_orcestra = { path = ".", editable = true }
+
+[feature.test.dependencies]
+pytest = "*"
+coverage = ">=7.6.12,<8"
+pytest-cov = ">=6.0.0,<7"
+snakemake = "*"
+
+[feature.test.tasks.test]
+cmd = "pytest -c config/pytest.ini"
+inputs = ["src", "tests", "config/pytest.ini", "config/coverage.toml"]
+outputs = ["coverage-report/coverage.xml"]
+description = "Run pytest"
+
+
+############################################## QUALITY ###############################################
+# Quality includes linting, type checking, and formatting
+[feature.quality.dependencies]
+ruff = ">=0.4.8"
+mypy = ">=1.13.0,<2"
+types-requests = ">=2.32.0.20250306,<3"
+
+[feature.quality.tasks]
+ruff-check.cmd = ["ruff", "--config", "config/ruff.toml", "check", "src"]
+ruff-check.description = "Run ruff check"
+
+ruff-format.cmd = ["ruff", "--config", "config/ruff.toml", "format", "src"]
+ruff-format.description = "Run ruff format, run check first"
+
+type-check.cmd = ["mypy", "--config-file", "config/mypy.ini", "src"]
+type-check.inputs = ["config/mypy.ini", "src"]
+type-check.description = "Run mypy type check."
+
+qc.depends-on = ["ruff-format", "ruff-check", "type-check"]
+qc.description = "Quality check: ruff & mypy"
+
+#################################### RELEASE & BUILD ###############################################
+[feature.release.dependencies]
+python-semantic-release = ">=8.5.1"
+
+[feature.release.tasks]
+semver = 'echo "Next Version is: $(semantic-release -c config/releaserc.toml version --print)"'
+release = "semantic-release -c config/releaserc.toml version"
+
+[feature.build.dependencies]
+hatch = "*"
+rattler-build = ">=0.32.0,<0.33"
+
+[feature.build.tasks]
+# Builds the package and publishes it to the test.pypi.org repository
+build = { cmd = "hatch build --clean", inputs = ["src"], outputs = ["dist/*"] }
+
+publish-pypi = { cmd = "hatch publish --yes --repo main", inputs = [
+  "dist/*",
+], depends-on = [
+  "build",
+] }
+
+publish-test = { cmd = "hatch publish --yes --repo test", inputs = [
+  "dist/*",
+], depends-on = [
+  "build",
+] }

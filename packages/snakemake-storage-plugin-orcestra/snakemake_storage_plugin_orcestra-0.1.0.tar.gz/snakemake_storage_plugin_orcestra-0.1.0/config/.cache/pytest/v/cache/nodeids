@@ -1,0 +1,6 @@
+[
+  "tests/test_plugin.py::TestStorage::test_example_queries",
+  "tests/test_plugin.py::TestStorage::test_query_validation",
+  "tests/test_plugin.py::TestStorage::test_storage",
+  "tests/test_plugin.py::TestStorage::test_storage_not_existing"
+]
