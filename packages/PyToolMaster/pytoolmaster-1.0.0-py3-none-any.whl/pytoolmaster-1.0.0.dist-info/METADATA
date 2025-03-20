@@ -1,0 +1,148 @@
+Metadata-Version: 2.2
+Name: PyToolMaster
+Version: 1.0.0
+Summary: A Swiss Army knife for developers with text summarization, ASCII art, task automation, math tools, and error handling.
+Home-page: https://github.com/shiboshreeroy/PyToolMaster
+Author: Shiboshree Roy
+Author-email: shiboshreeroy169@gamil.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sumy
+Requires-Dist: Pillow
+Requires-Dist: schedule
+Requires-Dist: sympy
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PyToolMaster
+
+🚀 **The Ultimate Developer's Swiss Army Knife**  
+PyToolMaster combines five powerful utilities into one sleek package, saving you time and effort.
+
+## 🔧 Features
+
+1. **📝 TextSummarizr** — Smart Text Summarization  
+   - Quickly extract key points from long articles, blogs, or research papers.
+
+2. **🖼️ ImageifyCLI** — ASCII Art from Images  
+   - Transform any image into beautiful ASCII art with color and emoji support.
+
+3. **⚙️ TaskFlow** — Lightweight Task Automation  
+   - Schedule tasks with an intuitive, human-readable syntax.
+
+4. **📐 BrainyMath** — Advanced Math Toolkit  
+   - Solve algebra, calculus, and more — complete with interactive plotting.
+
+5. **🐛 ErrorHandlerPro** — Enhanced Error Tracing  
+   - Provides clear, actionable error reports with smart troubleshooting suggestions.
+
+---
+
+## 🛠️ Installation
+
+Install PyToolMaster effortlessly with pip:
+
+```bash
+pip install PyToolMaster
+```
+
+---
+
+## 🚀 Usage
+
+### 📝 TextSummarizr — Summarize Text Quickly
+```python
+from pytoolmaster import TextSummarizr
+
+text = """The quick brown fox jumps over the lazy dog. This sentence contains all letters of the alphabet."""
+summarizer = TextSummarizr()
+print(summarizer.summarize(text))
+```
+
+### 🖼️ ImageifyCLI — Turn Images into ASCII Art
+```bash
+python -m pytoolmaster.imageify path/to/image.jpg
+```
+
+### ⚙️ TaskFlow — Automate Repetitive Tasks
+```python
+from pytoolmaster import TaskFlow
+
+TaskFlow("backup").every("1h").run("backup_script.py")
+```
+
+### 📐 BrainyMath — Advanced Math Computations
+```python
+from pytoolmaster import BrainyMath
+
+print(BrainyMath.solve("x^2 - 4 = 0"))
+```
+
+### 🐛 ErrorHandlerPro — Smarter Error Handling
+```python
+from pytoolmaster import ErrorHandlerPro
+
+try:
+    1 / 0
+except Exception as e:
+    ErrorHandlerPro.report(e)
+```
+
+---
+
+## 🔥 Why Choose PyToolMaster?
+
+- 🎯 **All-in-one utility** — Save time switching between different tools.
+- ⚡ **Fast and lightweight** — Minimal dependencies, optimized for performance.
+- 💪 **Customizable** — Each module is standalone, so you only import what you need.
+
+---
+
+## 🧪 Running Tests
+
+Ensure everything works smoothly:
+```bash
+python -m unittest discover tests
+```
+
+---
+
+## 🧠 Contributing
+
+We welcome contributions! To get started:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Shiboshree Roy**  
+- Email: shiboshreeroy169@gmail.com  
+- GitHub: [ShiboshreeRoy](https://github.com/ShiboshreeRoy)
+
+---
+
+✨ *Empower your development workflow with PyToolMaster!*
+
