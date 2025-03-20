@@ -1,0 +1,2 @@
+[console_scripts]
+run.8000 = speed_port.server:run_8000
