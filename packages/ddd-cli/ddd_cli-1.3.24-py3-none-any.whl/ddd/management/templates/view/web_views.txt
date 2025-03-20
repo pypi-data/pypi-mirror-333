@@ -1,0 +1,215 @@
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.http import HttpResponse
+from django.core.exceptions import ValidationError
+
+# Importar formularios específicos de la entidad
+from {{ app_name.lower() }}.{{ entity_name.lower() }}_forms import {{ entity_name.capitalize() }}Form, {{ entity_name.capitalize() }}ViewForm, {{ entity_name.capitalize() }}EditForm
+
+# Importar servicios específicos del dominio
+from {{ app_name.lower() }}.domain.services import (
+    create_{{ entity_name.lower() }},
+    retrieve_{{ entity_name.lower() }},
+    update_{{ entity_name.lower() }},
+    delete_{{ entity_name.lower() }},
+)
+
+# Importar repositorios específicos de la infraestructura
+from {{ app_name.lower() }}.infrastructure.{{ entity_name.lower() }}_repository import {{ entity_name.capitalize() }}Repository
+
+
+def {{ entity_name.lower() }}_list(request):
+    """
+    Generic view to display a list of all {{ entity_name.lower() }} instances.
+    """
+    # Paso 1: Instanciar el repositorio
+    repository = {{ entity_name.capitalize() }}Repository()
+
+    # Paso 2: Obtener datos desde el repositorio
+    {{ entity_name.lower() }}List = repository.get_all()
+
+    # Paso 3: Renderizar la vista con los datos
+    return render(request, '{{ app_name.lower() }}/{{ entity_name.lower() }}_list.html', {
+        '{{ entity_name.lower() }}List': {{ entity_name.lower() }}List
+    })
+
+
+def {{ entity_name.lower() }}_create(request):
+    """
+    Generic view to create a new {{ entity_name.lower() }} instance using a service.
+    """
+    if request.method == "POST":
+        # Paso 1: Validar datos del formulario
+        form = {{ entity_name.capitalize() }}Form(request.POST)
+        if form.is_valid():
+            form_data = form.cleaned_data
+            repository = {{ entity_name.capitalize() }}Repository()
+
+            try:
+                # Paso 2: Llamar al servicio de creación
+                create_{{ entity_name.lower() }}(repository=repository, **form_data)
+
+                # Paso 3: Mostrar mensaje de éxito y redirigir
+                messages.success(request, f"Successfully created {{ entity_name.lower() }}.")
+                return redirect('{{ entity_name.lower() }}_list')
+            except ValidationError as e:
+                # Manejar errores específicos del dominio
+                form.add_error(None, str(e))
+        else:
+            messages.error(request, "There were errors in the form. Please correct them.")
+    else:
+        # Formulario vacío para solicitudes GET
+        form = {{ entity_name.capitalize() }}Form()
+
+    # Renderizar la plantilla con el formulario
+    return render(request, '{{ app_name.lower() }}/{{ entity_name.lower() }}_create.html', {'form': form})
+
+
+def {{ entity_name.lower() }}_edit(request, id=None): #TODO: REVISAR
+    """
+    Generic view to edit an existing {{ entity_name.lower() }} instance.
+    """
+    if id is None:
+        # Redirigir si el ID no está presente
+        return redirect('{{ entity_name.lower() }}_list')
+
+    repository = {{ entity_name.capitalize() }}Repository()
+    try:
+        # Paso 1: Obtener los datos del servicio
+        {{ entity_name.lower() }} = retrieve_{{ entity_name.lower() }}(repository=repository, entity_id=id)
+    except ValueError:
+        # Manejar caso en el que la entidad no exista
+        messages.error(request, f"The {{ entity_name.lower() }} with ID {id} does not exist.")
+        return redirect('{{ entity_name.lower() }}_list')
+
+    # Paso 2: Inicializar el formulario con los datos de la entidad
+    form = {{ entity_name.capitalize() }}EditForm(initial={
+        'id': {{ entity_name.lower() }}.id,
+        'title': {{ entity_name.lower() }}.title,
+        'content': {{ entity_name.lower() }}.content,
+        'public': {{ entity_name.lower() }}.public,
+    })
+
+    # Paso 3: Renderizar la plantilla con el formulario inicializado
+    return render(request, '{{ app_name.lower() }}/{{ entity_name.lower() }}_edit.html', {'form': form})
+
+    
+def {{ entity_name.lower() }}_save(request): #TODO: REVISAR
+    """
+    Generic view to save changes to an existing {{ entity_name.lower() }} instance.
+    """
+    # Paso 1: Recuperar los datos enviados desde el formulario
+    id = request.POST.get('id')
+    title = request.POST.get('title')
+    content = request.POST.get('content')
+    public = request.POST.get('public')
+
+    repository = {{ entity_name.capitalize() }}Repository()
+    try:
+        # Paso 2: Llamar al servicio para actualizar la entidad con los datos proporcionados
+        update_{{ entity_name.lower() }}(
+            repository=repository,
+            entity_id=id,
+            title=title,
+            content=content,
+            public=public
+        )
+
+        # Paso 3: Mostrar un mensaje de éxito al usuario
+        messages.success(request, f"Successfully updated {{ entity_name.lower() }}: {id} - {title}")
+
+    except ValueError as e:
+        # Manejar errores relacionados con reglas de negocio o validaciones
+        messages.error(request, f"Error saving {{ entity_name.lower() }}: {str(e)}")
+
+    # Paso 4: Redirigir al listado de {{ entity_name.lower() }}s
+    return redirect('{{ entity_name.lower() }}_list')
+
+
+def {{ entity_name.lower() }}_edit_save(request, id=None):
+    """
+    Generic view to edit an existing {{ entity_name.lower() }} instance using a service.
+    """
+    if id is None:
+        # Redirigir si el ID no está presente
+        return redirect('{{ entity_name.lower() }}_list')
+
+    repository = {{ entity_name.capitalize() }}Repository()
+    try:
+        # Paso 1: Obtener los datos del servicio
+        {{ entity_name.lower() }} = retrieve_{{ entity_name.lower() }}(repository=repository, entity_id=id)
+    except ValueError:
+        # Manejar caso en el que la entidad no exista
+        messages.error(request, f"The {{ entity_name.lower() }} with ID {id} does not exist.")
+        return redirect('{{ entity_name.lower() }}_list')
+
+    if request.method == "POST":
+        # Paso 2: Validar datos del formulario
+        form = {{ entity_name.capitalize() }}Form(request.POST)
+        if form.is_valid():
+            form_data = form.cleaned_data
+            try:
+                # Paso 3: Llamar al servicio de actualización
+                update_{{ entity_name.lower() }}(repository=repository, entity_id=id, **form_data)
+
+                # Paso 4: Mostrar mensaje de éxito y redirigir
+                messages.success(request, f"Successfully updated {{ entity_name.lower() }}.")
+                return redirect('{{ entity_name.lower() }}_list')
+            except ValidationError as e:
+                form.add_error(None, str(e))
+        else:
+            messages.error(request, "There were errors in the form. Please correct them.")
+    else:
+        # Inicializar el formulario con los datos existentes
+        form = {{ entity_name.capitalize() }}Form(initial={
+            'title': {{ entity_name.lower() }}.title,
+            'content': {{ entity_name.lower() }}.content,
+            'public': {{ entity_name.lower() }}.public
+        })
+
+    # Renderizar la plantilla con el formulario
+    return render(request, '{{ app_name.lower() }}/{{ entity_name.lower() }}_edit.html', {'form': form})
+
+
+def {{ entity_name.lower() }}_detail(request, id=None):
+    """
+    Generic view to display details of a specific {{ entity_name.lower() }} instance.
+    """
+    if id is None:
+        return redirect('{{ entity_name.lower() }}_list')
+
+    repository = {{ entity_name.capitalize() }}Repository()
+    try:
+        # Obtener datos de la entidad desde el servicio
+        {{ entity_name.lower() }} = retrieve_{{ entity_name.lower() }}(repository=repository, entity_id=id)
+    except ValueError:
+        messages.error(request, f"The {{ entity_name.lower() }} with ID {id} does not exist.")
+        return redirect('{{ entity_name.lower() }}_list')
+
+    # Renderizar los detalles con un formulario de solo lectura
+    form = {{ entity_name.capitalize() }}ViewForm(initial={
+        'title': {{ entity_name.lower() }}.title,
+        'content': {{ entity_name.lower() }}.content,
+        'public': {{ entity_name.lower() }}.public
+    })
+
+    return render(request, '{{ app_name.lower() }}/{{ entity_name.lower() }}_detail.html', {'form': form})
+
+
+def {{ entity_name.lower() }}_delete(request, id=None):
+    """
+    Generic view to delete an existing {{ entity_name.lower() }} instance using a service.
+    """
+    if id is None:
+        return redirect('{{ entity_name.lower() }}_list')
+
+    repository = {{ entity_name.capitalize() }}Repository()
+    try:
+        # Llamar al servicio de eliminación
+        delete_{{ entity_name.lower() }}(repository=repository, entity_id=id)
+        messages.success(request, f"Successfully deleted {{ entity_name.lower() }}.")
+    except ValueError:
+        messages.error(request, f"The {{ entity_name.lower() }} with ID {id} does not exist.")
+
+    return redirect('{{ entity_name.lower() }}_list')
+
