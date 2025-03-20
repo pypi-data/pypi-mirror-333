@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+pyaibot/__init__.py
+pyaibot.egg-info/PKG-INFO
+pyaibot.egg-info/SOURCES.txt
+pyaibot.egg-info/dependency_links.txt
+pyaibot.egg-info/entry_points.txt
+pyaibot.egg-info/requires.txt
+pyaibot.egg-info/top_level.txt

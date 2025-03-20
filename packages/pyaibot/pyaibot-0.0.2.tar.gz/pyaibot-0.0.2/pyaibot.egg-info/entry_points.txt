@@ -1,0 +1,3 @@
+[gui_scripts]
+aibot = pyaibot:main
+pyaibot = pyaibot:main
