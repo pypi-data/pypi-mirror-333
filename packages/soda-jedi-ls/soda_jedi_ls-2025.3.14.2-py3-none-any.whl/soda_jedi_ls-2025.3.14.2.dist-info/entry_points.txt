@@ -1,0 +1,2 @@
+[console_scripts]
+soda-jedi-ls = soda_jedi_ls.cli:cli
