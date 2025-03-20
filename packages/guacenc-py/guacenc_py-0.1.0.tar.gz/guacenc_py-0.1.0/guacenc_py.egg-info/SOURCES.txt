@@ -1,0 +1,17 @@
+.gitignore
+.python-version
+LICENSE
+README.md
+pyproject.toml
+uv.lock
+guacenc/cli.py
+guacenc/guacenc_encode.py
+guacenc/guacenc_instruction.py
+guacenc/guacenc_parse.py
+guacenc/guacenc_types.py
+guacenc_py.egg-info/PKG-INFO
+guacenc_py.egg-info/SOURCES.txt
+guacenc_py.egg-info/dependency_links.txt
+guacenc_py.egg-info/entry_points.txt
+guacenc_py.egg-info/requires.txt
+guacenc_py.egg-info/top_level.txt
