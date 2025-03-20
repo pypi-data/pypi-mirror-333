@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+platforms = ["Windows"]
+
+[project]
+name = "wintoastlistener"
+version = "1.0.0"
+authors = [
+  { name="Gu-f" },
+]
+dependencies = [
+    "pywin32 (>=308,==308.*)",
+    "xmltodict (>=0.14.2,==0.14.2.*)",
+]
+description = "A python library implemented by python3, for listening to Toast message notifications on windows."
+readme = "README_EN.md"
+requires-python = ">=3.8"
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Gu-f/WinToastListener"
+"Bug Tracker" = "https://github.com/Gu-f/WinToastListener/issues"

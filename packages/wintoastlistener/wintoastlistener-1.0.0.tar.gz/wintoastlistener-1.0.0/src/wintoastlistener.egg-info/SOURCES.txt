@@ -1,0 +1,15 @@
+LICENSE
+README.md
+README_EN.md
+pyproject.toml
+src/setup.py
+src/wintoastlistener/__init__.py
+src/wintoastlistener/exception.py
+src/wintoastlistener/fetch_toast_payload.py
+src/wintoastlistener/subscriber.py
+src/wintoastlistener/utils.py
+src/wintoastlistener.egg-info/PKG-INFO
+src/wintoastlistener.egg-info/SOURCES.txt
+src/wintoastlistener.egg-info/dependency_links.txt
+src/wintoastlistener.egg-info/requires.txt
+src/wintoastlistener.egg-info/top_level.txt
