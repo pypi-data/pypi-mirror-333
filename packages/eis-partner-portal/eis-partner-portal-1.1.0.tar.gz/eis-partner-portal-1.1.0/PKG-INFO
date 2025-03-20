@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: eis-partner-portal
+Version: 1.1.0
+Summary: EMIL PartnerPortal
+Home-page: UNKNOWN
+Author: Contact us
+Author-email: kontakt@emil.de
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,EMIL PartnerPortal
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+    The EMIL PartnerPortal API description  # noqa: E501
+    
+
