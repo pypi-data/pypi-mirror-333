@@ -1,0 +1,13 @@
+setuptools
+wheel
+julia>=0.6.2
+pymatgen>=2025.3.10
+pytest>=8.3.5
+
+[publish]
+build
+twine
+
+[test]
+pytest
+pytest-cov
