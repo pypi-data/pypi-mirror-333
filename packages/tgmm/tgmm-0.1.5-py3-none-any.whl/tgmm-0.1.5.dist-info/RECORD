@@ -1,0 +1,9 @@
+tgmm/__init__.py,sha256=2r8-knshH9K7pukhphKhB-LgXUYTl5-YBv9I96VWxLM,157
+tgmm/gmm.py,sha256=27tUJCxQDp9RDYJ-fOV5p7jJVvsJtxFwa8vS0yQkZSY,51161
+tgmm/gmm_init.py,sha256=L2hUPVIh_v_G9FcI4QAtoXyYGCVZLNYBMpDb_VKemNs,8375
+tgmm/metrics.py,sha256=vtS8wstsaBOPGRKz_SiG40fjYNlYXhAWwPbOhhjo2wI,34394
+tgmm/plotting.py,sha256=ABZk35VXl5Tjx0ZlfPaa32SGZRsIJwPRRyVRxdO8B8Y,13398
+tgmm-0.1.5.dist-info/METADATA,sha256=_n9c4q_ixjdCYhbwh32nxBb9cAXZBQxn_V5g1XyBjAU,3637
+tgmm-0.1.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+tgmm-0.1.5.dist-info/top_level.txt,sha256=n8oPwpIa8ffchy_BIEdW3t6pFzHlmddMb3ORVKOcI34,5
+tgmm-0.1.5.dist-info/RECORD,,
