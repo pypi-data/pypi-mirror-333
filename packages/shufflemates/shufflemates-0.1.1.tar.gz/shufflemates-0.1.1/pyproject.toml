@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shufflemates"
+version = "0.1.1"
+authors = [
+  { name="Ian Park", email="ianolpx@gmail.com" },
+]
+description = "A Python package for randomly grouping students or teams."
+readme = "README.md"
+requires-python = ">=3.6"
+license = { file="LICENSE" }
+dependencies = []

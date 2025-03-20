@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+shufflemates/__init__.py
+shufflemates/main.py
+shufflemates.egg-info/PKG-INFO
+shufflemates.egg-info/SOURCES.txt
+shufflemates.egg-info/dependency_links.txt
+shufflemates.egg-info/top_level.txt
+tests/test_main.py
