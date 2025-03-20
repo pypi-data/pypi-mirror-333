@@ -1,0 +1,11 @@
+devtools/conda.recipe/build_env.yml,sha256=QhUFpLDqjQuRrCM2-vKwlNmBnUY7OrG-Gcjb2nQ6jqE,194
+devtools/conda.recipe/meta.yaml,sha256=_cI3Ko4z6jWUK3pPzn6DeD892_KBVNu0mAetze_pnLo,1491
+pytcs/__init__.py,sha256=o0VlSFMRG80whRXuKxLn2ize-JUuxR2m_d3eyMQFXTM,114
+pytcs/_version.py,sha256=hcPkC9vIGgfrKK6ft7ysLT7iOCjpFmCBmyKLmXiaZ1g,511
+pytcs/helpers.py,sha256=asXSobEt4eIjnGt5z5JHv9ptai5YEvb7tX6pl-jCBAM,3836
+pytcs/pytcs.py,sha256=HJ4OnO1wTY-fL3rkcFRhNFlOuswlR0CJ8fhCyIUpsSQ,28865
+pytcs-0.1.4.dist-info/LICENSE,sha256=naFtT2v5rq_1zJDRcHx6LOnSeCmrg3wyWm0fBdeQreg,1520
+pytcs-0.1.4.dist-info/METADATA,sha256=uOrHHycKNXU8utPBk_DbIcGjHjzuna3LZpemlb-utX4,11022
+pytcs-0.1.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pytcs-0.1.4.dist-info/top_level.txt,sha256=ZyLbe60vm5xKEI4z9sKD-_zgR9YhjJSnO_90rD8Jgo4,15
+pytcs-0.1.4.dist-info/RECORD,,
