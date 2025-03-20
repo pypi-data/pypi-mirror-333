@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "health-report"
+version = "0.1.0"
+description = "Health Report System"
+authors = ["Amrutha <amamrutha04@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "health_report_pkg"}]  # ✅ Ensures correct packaging
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django = "^4.0"
+djangorestframework = "^3.14"
+
+[tool.poetry.scripts]
+health-report = "health_report_pkg.cli:main"  # ✅ Correct entry point
