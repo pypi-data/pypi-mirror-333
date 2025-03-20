@@ -1,0 +1,6 @@
+gspread
+strict_rfc3339
+google-auth
+google-auth-oauthlib
+requests
+setuptools
