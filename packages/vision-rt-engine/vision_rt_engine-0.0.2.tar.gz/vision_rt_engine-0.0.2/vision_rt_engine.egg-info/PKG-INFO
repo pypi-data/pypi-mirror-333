@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: vision-rt-engine
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Krishneel
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Provides-Extra: dev
+Provides-Extra: full
+
+UNKNOWN
+
