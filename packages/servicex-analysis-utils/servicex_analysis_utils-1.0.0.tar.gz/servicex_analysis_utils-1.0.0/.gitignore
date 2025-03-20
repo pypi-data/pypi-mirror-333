@@ -1,0 +1,9 @@
+#py caches 
+__pycache__/
+.pytest_cache/
+
+#servicex
+servicex.yaml
+
+#Distribution 
+dist/
