@@ -1,0 +1,17 @@
+.env.example
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/eg4_inverter_api/__init__.py
+src/eg4_inverter_api/client.py
+src/eg4_inverter_api/constants.py
+src/eg4_inverter_api/exceptions.py
+src/eg4_inverter_api/models.py
+src/eg4_inverter_api.egg-info/PKG-INFO
+src/eg4_inverter_api.egg-info/SOURCES.txt
+src/eg4_inverter_api.egg-info/dependency_links.txt
+src/eg4_inverter_api.egg-info/requires.txt
+src/eg4_inverter_api.egg-info/top_level.txt
+tests/test_client.py
