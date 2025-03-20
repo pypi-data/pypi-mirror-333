@@ -1,0 +1,13 @@
+dyncfg/__init__.py,sha256=sdrV7wiU3NP9H_BhW7ZonBRxeoPYZpJA_DGeu4E5LOw,533
+dyncfg/config_value.py,sha256=MYZGRbVctpAzE5tk5Rsp-VDgE0MmV68qOG9Rf9_srmo,6639
+dyncfg/config_value_list.py,sha256=jBCKfsGbj09_PUYiM-Mr6VFrXwR3tFFrUxPByxXF0KE,1597
+dyncfg/config_value_list.pyi,sha256=a_Bxov3Hr8t4X4SUwml4-PWig77gaRP_RVYMbbbimxM,1254
+dyncfg/dynamic_config.py,sha256=AQrffu4bmcsRrqhoLzUMesHCij8cWhwM3PnGGtPywVk,4506
+dyncfg/pandas_extension.py,sha256=k036yHS_wGxzEpCmt60ieSSs_zegocZTLq3u6Y8Z4aQ,1789
+dyncfg/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dyncfg/section.py,sha256=1jcAhBOKI7yc-D0tXPbmX7YZC9XyPKEIgEeObhzShM0,2361
+dyncfg-0.4.7.dist-info/LICENSE,sha256=NF34XvL4-HOQ39bHEvf1rLXatJ8UUV0N-XJJ9D3SjG0,1067
+dyncfg-0.4.7.dist-info/METADATA,sha256=ftjUzxdp6Tm412tivrTovjlKcdg1TJWY9-fyrKDOwq0,7203
+dyncfg-0.4.7.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+dyncfg-0.4.7.dist-info/top_level.txt,sha256=7O8TXfFk5wz578Z-RwW5T5ODrcjOPQvl2zfm1d0opvc,7
+dyncfg-0.4.7.dist-info/RECORD,,
