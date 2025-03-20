@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/_init_.py
+src/task.py
+src/dnms_task.egg-info/PKG-INFO
+src/dnms_task.egg-info/SOURCES.txt
+src/dnms_task.egg-info/dependency_links.txt
+src/dnms_task.egg-info/entry_points.txt
+src/dnms_task.egg-info/top_level.txt
