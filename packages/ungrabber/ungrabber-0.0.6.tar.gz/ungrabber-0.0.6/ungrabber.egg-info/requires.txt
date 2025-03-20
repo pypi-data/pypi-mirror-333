@@ -1,0 +1,4 @@
+xdis
+cryptography
+pycryptodome
+yara-python
