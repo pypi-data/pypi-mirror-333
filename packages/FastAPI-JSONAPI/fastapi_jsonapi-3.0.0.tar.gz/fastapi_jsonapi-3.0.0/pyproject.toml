@@ -1,0 +1,228 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "FastAPI-JSONAPI"
+dynamic = ["version"]
+description = "FastAPI extension to create REST web api according to JSON:API 1.0 specification with FastAPI, Pydantic and data provider (SQLAlchemy)"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Aleksey Nekrasov", email = "a.nekrasov@mts.ai" },
+    { name = "Suren Khorenyan", email = "s.khorenyan@mts.ai" },
+    { name = "German Bernadskiy", email = "german11235813@gmail.com" },
+]
+keywords = [
+    "fastapi",
+    "jsonapi",
+    "json:api",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "fastapi>=0.112.3",
+    "orjson>=3.10.0",
+    "pydantic>=2.6.0",
+]
+
+[project.optional-dependencies]
+all = [
+    "pytest",
+    "sphinx",
+    "SQLAlchemy[asyncio]>=2.0.26",
+    "uvicorn>=0.18.2",
+]
+docs = [
+    "sphinx",
+]
+sqlalchemy = [
+    "SQLAlchemy[asyncio]>=2.0.26",
+]
+tests = [
+    "pytest",
+]
+uvicorn = [
+    "uvicorn>=0.18.2",
+]
+
+[project.urls]
+Documentation = "https://fastapi-jsonapi.readthedocs.io/"
+Source = "https://github.com/mts-ai/FastAPI-JSONAPI"
+
+[tool.hatch.version]
+path = "fastapi_jsonapi/VERSION"
+pattern = "(?P<version>[^']+)"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/fastapi_jsonapi",
+    "/examples",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "fastapi_jsonapi"
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = ">=0.112.3"
+orjson = ">=3.10.0"
+pydantic = ">=2.6.0"
+
+uvicorn = { version = ">=0.18.2", optional = true }
+sqlalchemy = { version = ">=2.0.26", optional = true, extras = ["asyncio"] }
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^7.3.1"
+faker = "^18.9.0"
+httpx = "^0.24.1"
+pytest-asyncio = "^0.21.0"
+coverage = "^7.2.6"
+pytest-cov = "^4.1.0"
+aiosqlite = "0.17.0"
+asyncpg = "0.28.0"
+
+
+[tool.poetry.group.lint.dependencies]
+black = "^25.1.0"
+mypy = "^1.14.1"
+pre-commit = "^4.1.0"
+ruff = "^0.9.4"
+sqlalchemy-stubs = "^0.4"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+hatch = "^1.7.0"
+
+[tool.poetry.extras]
+sqla = ["sqlalchemy"]
+databases = ["sqlalchemy"]
+uvicorn = ["uvicorn"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning"
+]
+asyncio_mode = "auto"
+
+[tool.black]
+line-length = 119
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 119
+target-version = "py39"
+
+lint.select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "D",
+    "A",
+    "C4",
+    "COM",
+    "DTZ",
+    "T10",
+    "EM",
+    "ISC",
+    "ICN",
+    "G",
+    "T20",
+    "PT",
+    "SIM",
+    "TID",
+    "ARG",
+    "PTH",
+    "PL",
+    "PLE",
+    "PLR",
+    "PLW",
+    "RUF",
+    "ASYNC",
+]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "docs/*",
+]
+
+# Avoid trying to fix flake8-bugbear (`B`) violations.
+lint.unfixable = ["B"]
+
+lint.extend-ignore = [
+    "D401",
+    "D403",
+    "D400",
+    "D415",
+    "D100",  # Missing docstring in public module
+    "D101",  # Missing docstring in public class
+    "D102",  # Missing docstring in public method
+    "D103",  # Missing docstring in public function
+    "D104",  # Missing docstring in public package
+    "D105",  # Missing docstring in magic method
+    "D106",  # Missing docstring in public nested class
+    "D107",  # Missing docstring in `__init__`
+    "D200",  # One-line docstring should fit on one line
+    "D203",  # 1 blank line required before class docstring
+    "D210",  # No whitespaces allowed surrounding docstring text
+    "D212",  # Multi-line docstring summary should start at the first line
+    "D301",  # Use r""" if any backslashes in a docstring
+    "D404",  #  First word of the docstring should not be "This"
+    "PLR0913",  # Too many arguments to function call
+    "A003",  # Class attribute `type` is shadowing a Python builtin
+    "ARG001",  # Unused function argument: `{name}`
+    "ARG002",  # Unused method argument: `{name}`
+    "ARG003",  # Unused class method argument: `{name}`
+    "RUF001",  # String contains ambiguous unicode character {confusable} (did you mean {representant}?)
+    "RUF002",  # Docstring contains ambiguous unicode character {confusable} (did you mean {representant}?)
+    "RUF003",  # Comment contains ambiguous unicode character {confusable} (did you mean {representant}?)
+    "PT006",  # pytest parametrize tuple args
+]
+
+[tool.ruff.lint.per-file-ignores]
+"examples/api_for_sqlalchemy/*" = [
+    "E402",
+    "D105",
+]
+
+[tool.ruff.lint.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
