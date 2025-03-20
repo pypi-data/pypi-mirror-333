@@ -1,0 +1,9 @@
+setup.py
+flask_pdf_extractor/__init__.py
+flask_pdf_extractor/app.py
+flask_pdf_extractor.egg-info/PKG-INFO
+flask_pdf_extractor.egg-info/SOURCES.txt
+flask_pdf_extractor.egg-info/dependency_links.txt
+flask_pdf_extractor.egg-info/entry_points.txt
+flask_pdf_extractor.egg-info/requires.txt
+flask_pdf_extractor.egg-info/top_level.txt

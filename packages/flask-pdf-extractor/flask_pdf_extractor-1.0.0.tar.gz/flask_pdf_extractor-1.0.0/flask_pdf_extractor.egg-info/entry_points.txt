@@ -1,0 +1,2 @@
+[console_scripts]
+pdf-extractor = flask_pdf_extractor.app:main
