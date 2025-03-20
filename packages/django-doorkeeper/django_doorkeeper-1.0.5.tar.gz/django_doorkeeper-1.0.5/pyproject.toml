@@ -1,0 +1,26 @@
+[project]
+name = "django-doorkeeper"
+version = "1.0.5"
+requires-python = ">=3.9"
+description = "Dirty and insecure django pluggable to password-protect an entire website -- for instance, while under construction"
+readme = "README.md"
+authors = [ { name = "Noemi M", email = "oss@triopter.com" } ]
+license = "MIT"
+license-file = "LICENSE.txt"
+
+[project.urls]
+Homepage = "https://github.com/triopter/django-doorkeeper"
+
+[tool.poetry]
+packages = [
+    { include = "doorkeeper", from = "src" }
+]
+requires-poetry = ">=2.0"
+
+[tool.poetry.dependencies]
+django = ">=3.2,<6.0"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
