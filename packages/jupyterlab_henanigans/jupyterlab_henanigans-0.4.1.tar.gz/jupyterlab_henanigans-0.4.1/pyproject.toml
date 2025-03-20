@@ -1,0 +1,216 @@
+[project]
+name = "jupyterlab_henanigans"
+version = "0.4.1"
+description = "Henanigans theme for Jupyter Lab."
+authors = [
+    {name = "Alex Braun", email = "alexander.g.braun@gmail.com"},
+]
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "jupyter",
+    "jupyter-lab",
+    "theme",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+repository = "https://github.com/theNewFlesh/jupyterlab_henanigans"
+documentation = "https://theNewFlesh.github.io/jupyterlab_henanigans"
+
+[tool.pytest.ini_options]
+cache_dir = "/home/ubuntu/.pytest_cache"
+filterwarnings = [
+    # "ignore::UserWarning",
+    # "ignore::DeprecationWarning",
+    # "ignore::PendingDeprecationWarning"
+]
+markers = [
+    "flaky:Flaky test",
+]
+
+[tool.coverage.report]
+show_missing = true
+omit = [
+    "*/__init__.py",
+    "*/*_test_base.py",
+    "*/*_test.py",
+    "*/*_tests.py",
+    "*/cli.py",
+    "*/command.py",
+    "*/mock_*.py",
+    "*/conftest.py",
+]
+
+[tool.mypy]
+cache_dir = "/home/ubuntu/.mypy_cache"
+python_version = "3.13"
+ignore_missing_imports = true
+warn_no_return = false
+pretty = true
+warn_unused_ignores = true
+
+[tool.pdm.dev-dependencies]
+lab = []
+dev = [
+    "build",
+    "copier~=7.2",
+    "hatchling>=1.21.1",
+    "jinja2-time>=0.2.0",
+    "jupyter_packaging",
+    "jupyter_server>=1.6",
+    "jupyterlab-git",
+    "jupyterlab>=4.0.0,<5",
+    "myst-parser>=4.0.0",
+    "pip>=24.0",
+    "pydantic<2.0.0",
+    "rolling-pin>=0.9.5",
+    "sphinx-autodoc-typehints>=1.22",
+    "sphinx-rtd-theme>=2.0.0,<3.0.0",
+    "sphinx>=5.3.0",
+    "sphinxcontrib-jquery>=4.1",
+    "toml>=0.10.2",
+]
+test = []
+
+[tool.pdm]
+distribution = true
+
+[tool.ruff]
+cache-dir = "/home/ubuntu/.cache/ruff"
+line-length = 100
+indent-width = 4
+exclude = ["*_test.py"]
+
+[tool.ruff.format]
+quote-style = "preserve"
+indent-style = "space"
+docstring-code-format = true
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "single"
+inline-quotes = "single"
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = ["E731"]
+
+[tool.uv]
+cache-dir = "/home/ubuntu/pdm/cache"
+
+[tool.jupyter-packaging.options]
+skip-if-exists = [
+    "jupyterlab_henanigans/labextension/static/style.js",
+]
+ensured-targets = [
+    "jupyterlab_henanigans/labextension/static/style.js",
+    "jupyterlab_henanigans/labextension/package.json",
+]
+
+[tool.jupyter-packaging.builder]
+factory = "jupyter_packaging.npm_builder"
+
+[tool.jupyter-packaging.build-args]
+build_cmd = "build:prod"
+npm = [
+    "jlpm",
+]
+
+[tool.check-manifest]
+ignore = [
+    "jupyterlab_henanigans/labextension/**",
+    "yarn.lock",
+    ".*",
+    "package-lock.json",
+]
+
+[tool.hatch.version]
+source = "nodejs"
+
+[tool.hatch.metadata.hooks.nodejs]
+fields = [
+    "description",
+    "authors",
+    "urls",
+    "keywords",
+]
+
+[tool.hatch.build.targets.sdist]
+artifacts = [
+    "jupyterlab_henanigans/labextension",
+]
+exclude = [
+    ".github",
+    "binder",
+    ".yarn",
+    "node_modules",
+]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyterlab_henanigans/labextension" = "share/jupyter/labextensions/jupyterlab_henanigans"
+"install.json" = "share/jupyter/labextensions/jupyterlab_henanigans/install.json"
+
+[tool.hatch.build.hooks.jupyter-builder]
+dependencies = [
+    "hatch-jupyter-builder>=0.5",
+]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = [
+    "jupyterlab_henanigans/labextension/package.json",
+]
+skip-if-exists = [
+    "jupyterlab_henanigans/labextension/static/style.js",
+]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+build_cmd = "build:prod"
+npm = [
+    "jlpm",
+]
+
+[tool.hatch.build.hooks.jupyter-builder.editable-build-kwargs]
+build_cmd = "install:extension"
+npm = [
+    "jlpm",
+]
+source_dir = "src"
+build_dir = "jupyterlab_henanigans/labextension"
+
+[tool.jupyter-releaser.options]
+version_cmd = "hatch version"
+
+[tool.jupyter-releaser.hooks]
+before-build-npm = [
+    "python -m pip install 'jupyterlab>=4.0.0,<5'",
+    "jlpm",
+    "jlpm build:prod",
+]
+before-build-python = [
+    "jlpm clean:all",
+]
+
+[tool.check-wheel-contents]
+ignore = [
+    "W002",
+]
+
+[build-system]
+requires = [
+    "hatchling>=1.5.0",
+    "jupyterlab>=4.0.0,<5",
+    "hatch-nodejs-version>=0.3.2",
+]
+build-backend = "hatchling.build"
