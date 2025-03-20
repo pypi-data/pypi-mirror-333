@@ -1,0 +1,12 @@
+starlette_di/__init__.py,sha256=a7fG2dB4fYT4DfG8boPdwYRNfd4rn0hpJ2r4CtodDMY,460
+starlette_di/definitions.py,sha256=vhngXcERu5mYF56AiUFNltBdE76gAIqJoXXMLdJN2oM,105
+starlette_di/inject.py,sha256=ffJ9_Q3vgfEJc4gPYeawJEjZm-xnKOy9xLFbildvaJ0,15165
+starlette_di/middleware.py,sha256=jPotKgVgy8XCDg9ouy0aidWfnIvvKohMkR-xcztando,1990
+starlette_di/service_collection.py,sha256=nb10s1fwjzYXyRz6czWaIMx1vjOkEd3gpVZ9kgqP5Qo,6896
+starlette_di/service_provider.py,sha256=bXuSujF-XVbEHnqSzbQ5wk-NfWMPCzu7Zk5mZMjv1aM,8790
+starlette_di/types.py,sha256=EdacPP6y5luLcjNOXHWbMXiLidj4KrRmN-VmGDfOQlY,279
+starlette_di-0.1.0.dist-info/LICENSE,sha256=eRojZc7xDZyAzVODZGMDaa5QzgUjbTbR8-JsB7cnDuY,1071
+starlette_di-0.1.0.dist-info/METADATA,sha256=rO3F1DNvbaF3VZ2IALDYvB-zwJS-xSH3mp-00OPJPPc,11089
+starlette_di-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+starlette_di-0.1.0.dist-info/top_level.txt,sha256=0KGVZ00rSCOvz0ky1DiHFW5VpZlhIhCTd2b-PiyanaQ,13
+starlette_di-0.1.0.dist-info/RECORD,,
