@@ -1,0 +1,10 @@
+numpy
+scipy
+
+[landfire]
+pandas
+geojson
+shapely
+pyproj
+landfire[geospatial]
+rasterio
