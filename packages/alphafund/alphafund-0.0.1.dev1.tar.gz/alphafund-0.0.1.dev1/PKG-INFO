@@ -1,0 +1,36 @@
+Metadata-Version: 2.3
+Name: alphafund
+Version: 0.0.1.dev1
+Summary: AI-powered Hedge Fund
+License: Apache-2.0
+Author: Stephen Yau
+Author-email: softwareentrepreneer+alphafund@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: controlflow (>=0.12.0,<0.13.0)
+Requires-Dist: pfeed (>=0.0.2,<0.1.0)
+Requires-Dist: pfund (>=0.0.2,<0.1.0)
+Requires-Dist: pymupdf (>=1.25.1,<2.0.0)
+Requires-Dist: qdrant-client (>=1.13.0,<2.0.0)
+Project-URL: Documentation, https://alphafund-docs.pfund.ai
+Project-URL: Homepage, https://pfund.ai
+Project-URL: Repository, https://github.com/PFund-Software-Ltd/alphafund
+Description-Content-Type: text/markdown
+
+# AlphaFund
+AI-powered Hedge Fund
+
+# Direction
+AI trading framework, build on top of llm framework like haystack or langchain.
+think of it as langchain but for trading
+
+
+# TODO:
+- supports MCP, so that people who use Claude AI can also use it
+- store functions in vector database for retrieval
+- pfund-open-webui as submodule?

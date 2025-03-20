@@ -1,0 +1,37 @@
+[project]
+name = "alphafund"
+version = "0.0.1.dev1"
+description = "AI-powered Hedge Fund"
+license = "Apache-2.0"
+authors = [
+    {name = "Stephen Yau", email = "softwareentrepreneer+alphafund@gmail.com"}
+]
+readme = "README.md"
+keywords = []
+classifiers = []
+requires-python = ">=3.10"
+dependencies = [
+    "pfund (>=0.0.2,<0.1.0)",
+    "pfeed (>=0.0.2,<0.1.0)",
+    "controlflow (>=0.12.0,<0.13.0)",
+    "qdrant-client (>=1.13.0,<2.0.0)",
+    "pymupdf (>=1.25.1,<2.0.0)",
+    # marvin = "^2.3.8"  # TODO: wait for version 3
+    # haystack-ai = "^2.7.0"  # TODO: wait for python<3.13 restriction to be lifted
+]
+
+[project.urls]
+homepage = "https://pfund.ai"
+repository = "https://github.com/PFund-Software-Ltd/alphafund"
+documentation = "https://alphafund-docs.pfund.ai"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pfund = {path = "../pfund", develop = true}
+pfeed = {path = "../pfeed", develop = true}
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
