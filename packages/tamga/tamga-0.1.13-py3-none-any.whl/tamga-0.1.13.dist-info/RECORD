@@ -1,0 +1,12 @@
+tamga/__init__.py,sha256=aI-wEDd2bNdQz44R3CLO1N3xgKw_cpvy7q7Mb1r9GRg,25
+tamga/constants.py,sha256=iYv9IZE7zxCLstvBe1yV91iwdMao54ieCsH0ZW4lmpE,973
+tamga/main.py,sha256=jieuGaT9-uklRj-yEne_9MPzQdc5yS7ReE5RUF7083A,14213
+tamga/utils/__init__.py,sha256=y2uRk9mTXDrgUlQI9HtAn1bFZQc8WGdvwREFSYeTQ7o,30
+tamga/utils/colors.py,sha256=15EZ3riZh5HdFt5_aoK9pw4XKZuMGcpCifVTobQ_Z3A,2258
+tamga/utils/mail.py,sha256=JQu6LTkSMmtsZ7jYa1lyC2zjZ1j90j9XmwQid83ckQk,8395
+tamga/utils/time.py,sha256=taTA98cz0KzHViIniKoa_tUSSL6A_HnXD2NuvoPBrkE,318
+tamga-0.1.13.dist-info/LICENSE,sha256=zTraWxy_dkYyfjxNV_VOWiktL280hnJ6UE9ZvP5FpW4,1093
+tamga-0.1.13.dist-info/METADATA,sha256=U-pq2pGRYQpSRVbdS0yARzwZfgrFlahsGv5GB28tZWA,4807
+tamga-0.1.13.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+tamga-0.1.13.dist-info/top_level.txt,sha256=y-CG9_hjAwCI7mP-5RDxfSnFkFbO-t1dCnln8RZPgIg,6
+tamga-0.1.13.dist-info/RECORD,,
