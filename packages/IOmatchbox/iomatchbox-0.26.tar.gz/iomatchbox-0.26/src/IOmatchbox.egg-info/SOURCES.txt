@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/IOmatchbox/IOTEC.py
+src/IOmatchbox/IOmatchbox.py
+src/IOmatchbox/__init__.py
+src/IOmatchbox.egg-info/PKG-INFO
+src/IOmatchbox.egg-info/SOURCES.txt
+src/IOmatchbox.egg-info/dependency_links.txt
+src/IOmatchbox.egg-info/top_level.txt
