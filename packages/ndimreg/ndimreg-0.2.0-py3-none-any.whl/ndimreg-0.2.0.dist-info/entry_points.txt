@@ -1,0 +1,2 @@
+[console_scripts]
+ndimreg = ndimreg.main:app
