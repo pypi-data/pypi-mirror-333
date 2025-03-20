@@ -1,0 +1,76 @@
+Metadata-Version: 2.3
+Name: repli
+Version: 0.1.2
+Summary: Read–Eval–Print Loop Interpreter
+Author: luojiahai
+Author-email: ljiahai@hotmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Description-Content-Type: text/markdown
+
+# Read–Eval–Print Loop Interpreter (REPLI)
+
+Features:
+
+- Pagination
+- Interface panel
+
+```shell
+────────────────────────────────────────────────────────────────
+  home
+────────────────────────────────────────────────────────────────
+╭─ commands ───────────────────────────────────────────────────╮
+│ 1  page 1                                                    │
+│ 2  page 2                                                    │
+╰──────────────────────────────────────────────────────────────╯
+╭─ builtins ───────────────────────────────────────────────────╮
+│ e  exit                                                      │
+│ q  previous page                                             │
+╰──────────────────────────────────────────────────────────────╯
+> _
+```
+
+## Install
+
+Pip:
+
+```shell
+pip install repli
+```
+
+Poetry:
+
+```shell
+poetry add repli
+```
+
+## Usage
+
+```python
+from repli import Command, Interpreter, Page
+from repli.callback import NativeFunction, Subprocess
+
+native_function = NativeFunction(function=lambda *args: print('command 1'))
+subprocess = Subprocess(arguments=lambda *args: 'echo command 2')
+commands = [
+    Command(name='1', description='command 1', callback=native_function),
+    Command(name='2', description='command 2', callback=subprocess),
+]
+elements = [
+    Page(
+        name='1',
+        description='page 1',
+        elements=commands,
+    ),
+]
+page = Page(name='0', description='home', elements=elements)
+interpreter = Interpreter(page=page)
+interpreter.loop()
+```
+
+See [example](./example).
+
