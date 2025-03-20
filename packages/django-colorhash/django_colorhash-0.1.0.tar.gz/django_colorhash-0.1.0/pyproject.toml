@@ -1,0 +1,15 @@
+[project]
+name = "django-colorhash"
+version = "0.1.0"
+description = "color-hash templatetag for Django"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "colorhash>=2.0.0",
+    "django>=4.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.10",
+]

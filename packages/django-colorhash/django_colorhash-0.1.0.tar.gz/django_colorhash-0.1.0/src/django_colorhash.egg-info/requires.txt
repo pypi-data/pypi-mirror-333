@@ -1,0 +1,2 @@
+colorhash>=2.0.0
+django>=4.2

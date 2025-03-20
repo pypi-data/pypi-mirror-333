@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/django_colorhash.egg-info/PKG-INFO
+src/django_colorhash.egg-info/SOURCES.txt
+src/django_colorhash.egg-info/dependency_links.txt
+src/django_colorhash.egg-info/requires.txt
+src/django_colorhash.egg-info/top_level.txt
+src/django_colorhash/templatetags/colorhash.py
