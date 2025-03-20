@@ -1,0 +1,2 @@
+[console_scripts]
+cmosskillav2 = cmosskillav2.__main__:main
