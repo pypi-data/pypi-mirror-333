@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: pydantic-views
+Version: 0.1.0.dev0
+Summary: View for Pydantic models
+Home-page: https://github.com/alfred82santa/pydantic-views
+License: MIT
+Keywords: view,pydantic,datamodel,model,REST API
+Author: Alfred Santacatalina
+Author-email: alfred.santacatalinagea@telefonica.com
+Requires-Python: >=3.13,<4.0.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pydantic
+Classifier: Framework :: Pydantic :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Project-URL: Issues, https://github.com/alfred82santa/pydantic-views/issues
+Project-URL: Repository, https://github.com/alfred82santa/pydantic-views.git
+Description-Content-Type: text/markdown
+
+# Views for pydantic models
+
+TBD
+
