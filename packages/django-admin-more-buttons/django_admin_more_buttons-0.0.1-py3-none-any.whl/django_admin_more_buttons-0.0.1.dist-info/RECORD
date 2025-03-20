@@ -1,0 +1,11 @@
+admin_buttons/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+admin_buttons/admin.py,sha256=wjgoTlhRgSF3ca9dSNaC-ikIrPfkUMjNpcAr_Upt_xs,2902
+admin_buttons/apps.py,sha256=VfLl37Qqerts12yvSuJE9-6KXuHx-HrIXVnSRw6uEIA,185
+admin_buttons/static/admin_buttons/custom_submit_row.css,sha256=Gt5Jh8ex8aQShjeZuskS35KiqT-Au7Y1PI9d-RGEqOo,379
+admin_buttons/templates/admin_buttons/change_form.html,sha256=qlUxgbzqBibB7gTRHWftJ9UAXW6uE6y-AK4JlteQHHQ,136
+admin_buttons/templates/admin_buttons/submit_line.html,sha256=kSf00uLUeErOFJVtOFSFPYG8-A2KY1Si3Qf0B1Cqytw,1475
+admin_buttons/templatetags/custom_admin.py,sha256=A5FPGmlMQSB2nSjhx3V2JteynQve__NwMENBgBJd7YY,312
+django_admin_more_buttons-0.0.1.dist-info/METADATA,sha256=lSdUDbJIFfjGcP2gGqKyPIyesvEVbX1qKDEHN2Ywc6Q,2733
+django_admin_more_buttons-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_admin_more_buttons-0.0.1.dist-info/licenses/LICENSE,sha256=e01liRkmjhH388oYQiTFcka0_Zkf0U9imO6U2p-F-KM,1070
+django_admin_more_buttons-0.0.1.dist-info/RECORD,,
