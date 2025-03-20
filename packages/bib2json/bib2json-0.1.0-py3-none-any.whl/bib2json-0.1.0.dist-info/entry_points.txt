@@ -1,0 +1,2 @@
+[console_scripts]
+bib2json = bib2json.__main__:main
