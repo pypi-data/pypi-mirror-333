@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mosync
+Version: 0.1.0
+Summary: Utility for sync batch jobs in marimo
+Project-URL: Homepage, https://github.com/koaning/mosync
+Project-URL: Changelog, https://github.com/koaning/mosync/releases
+Project-URL: Issues, https://github.com/koaning/mosync/issues
+Project-URL: CI, https://github.com/koaning/mosync/actions
+Author: Vincent D. Warmerdam
+License: MIT
+License-File: LICENSE
+Requires-Dist: marimo
+Description-Content-Type: text/markdown
+
+# mosync
+A utility for async batch jobs in marimo 

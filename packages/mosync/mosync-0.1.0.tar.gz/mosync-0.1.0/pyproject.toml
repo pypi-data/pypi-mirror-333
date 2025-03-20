@@ -1,0 +1,24 @@
+[project]
+name = "mosync"
+version = "0.1.0"
+description = "Utility for sync batch jobs in marimo"
+readme = "README.md"
+authors = [{name = "Vincent D. Warmerdam"}]
+license = {text = "MIT"}
+dependencies = [
+    "marimo",
+]
+
+[project.urls]
+Homepage = "https://github.com/koaning/mosync"
+Changelog = "https://github.com/koaning/mosync/releases"
+Issues = "https://github.com/koaning/mosync/issues"
+CI = "https://github.com/koaning/mosync/actions"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
