@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: glan2_dedup
+Version: 0.1.0
+Summary: A document deduplication tool using MinHash
+Author: shh
+Requires-Python: >=3.7
+Requires-Dist: datasketch>=1.5.8
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
