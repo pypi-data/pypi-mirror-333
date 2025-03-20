@@ -1,0 +1,17 @@
+qageneratorllm/__init__.py,sha256=KV4JKPDN8mGQTE-cMCr5r5mOul-_tov-XHG50zJHvn4,312
+qageneratorllm/generator.py,sha256=7gXx6KgjeSNeGdXy3PF-8RJQb9MfCxJpjT2HGe2tMg4,5260
+qageneratorllm/qa_dataclass.py,sha256=Jw9Ln0hIOJleqxzrprGeTpnzXrw-WLGGqRK2xdwv008,2623
+qageneratorllm/utils.py,sha256=WYrXkAF992ez-3Pt77-7DqXG7evNbFzdmiM3VEgA5kc,5291
+qageneratorllm/prompts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qageneratorllm/prompts/mcq_prompt.py,sha256=qNAzVoefcE5_mz48FOleyEQ4ee74bDpSJWnyWdjec9w,3205
+qageneratorllm/prompts/qa_prompt.py,sha256=5nrv1ZpnoyFi7tEYt1h_2BcbmaJgDUdEf_pDbCl90QQ,2578
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=a1ZFwJhfurToSdjuZVw0G9svlugDrGDulfbhuBU_kPM,2232
+tests/test_generator.py,sha256=s3gPwRSvi2gFmZ3QTMx0vOXUEepJkh6s7aqTHpBlVNQ,2642
+tests/test_qa_dataclass.py,sha256=UF-43U0qdDi8zsCkETRybKy4XYodtVYz-85sFHwWt0o,1416
+tests/test_utils.py,sha256=ap7OjKosJ7avj8FuB8qTpaIiYoCBOKdz6IUX13NBuQQ,1595
+qageneratorllm-0.0.1.dist-info/LICENSE,sha256=hdDhGgqXMXX1hfJw612Gcu0_CymmMSD8mNerif4BYEI,1070
+qageneratorllm-0.0.1.dist-info/METADATA,sha256=6XfY2ZOpcpqemUuQJk6K9qSxBRvpQcWp8iONcQFXrpI,2191
+qageneratorllm-0.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+qageneratorllm-0.0.1.dist-info/top_level.txt,sha256=PSiuaNlKTJpbx43oQqDHOY76JF21K99pVX4KezNMYyU,21
+qageneratorllm-0.0.1.dist-info/RECORD,,
