@@ -1,0 +1,3 @@
+[pytest11]
+extended_mock=pytest_extended_mock.plugin
+
