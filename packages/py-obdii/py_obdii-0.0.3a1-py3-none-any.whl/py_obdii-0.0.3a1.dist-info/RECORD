@@ -1,0 +1,16 @@
+obdii/__init__.py,sha256=vjl1wIOBJJzqAduR7-hvkeXLU8KJskQxBBQ3YgLsU5g,292
+obdii/basetypes.py,sha256=C6yibRM3clVdWF5ditVcQfRIDJCmpFosQ0TXi7SF0v8,6328
+obdii/commands.py,sha256=kNrXGK2xiyLCxk7fxiIsxqiMO-9tnnFNmS5sSaGIhyA,1271
+obdii/connection.py,sha256=kIfxww3SV9dN3f5xjPJ6XgWyA0LaOurLfJzQmIu6t5I,5815
+obdii/formula.py,sha256=HxA4k-vnfVKFHA9FatdApn85XlKgLh2l0TIpHOPGwbs,2716
+obdii/protocol.py,sha256=e3ru0VmqfYZqsXS-ZYMfXblkPj4f4fCUvuBaKMMjhxQ,2060
+obdii/modes/__init__.py,sha256=a2W5PQ86wcQFl_yPMfaYIIOXGGxLn8XwGk-1bnV_KMk,55
+obdii/modes/mode01.py,sha256=bghvdsrDW8jCKj8yIRrgf_GSq1JCYpAG4_qVFRyTjzA,24248
+obdii/modes/modeat.py,sha256=jdBUSobpDGF3yn2aBSke72QCl6cO5otuGdXIzlJFBGw,10159
+obdii/protocols/__init__.py,sha256=T5scsO8tBBkFBcuJACIX76aBDKl6cRqa9G0mBjI_qgg,37
+obdii/protocols/protocol_can.py,sha256=OlbIgSHzQnCiz4IUZL54enlz_PB-K3xjimXYpZFwLWk,2080
+py_obdii-0.0.3a1.dist-info/LICENSE,sha256=DqkPi0HVx51HRc429WdQt7L59OQDznDcd4F8z293xBM,1079
+py_obdii-0.0.3a1.dist-info/METADATA,sha256=aPLVzNafFaXtP1MgJ5W7SFOQy5jt57wp-JCBFqE8RuU,5578
+py_obdii-0.0.3a1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+py_obdii-0.0.3a1.dist-info/top_level.txt,sha256=UsSA2kV9Wm51yzSVGyUR-1XZuNiHm3IUz4rD5wvO7Tc,6
+py_obdii-0.0.3a1.dist-info/RECORD,,
