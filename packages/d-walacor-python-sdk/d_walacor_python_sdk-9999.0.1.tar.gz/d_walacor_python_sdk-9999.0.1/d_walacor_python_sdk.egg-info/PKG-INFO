@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: d-walacor-python-sdk
+Version: 9999.0.1
+Summary: Python SDK for Walacor
+Author-email: Garo Kechichian <garo.keshish@gmail.com>
+License: Apache-2.0
+Project-URL: Documentation, https://apidoc.walacor.com
+Project-URL: Homepage, https://www.walacor.com
+Keywords: data-transformations,lineage,provenance,walacor
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.20
+Provides-Extra: test
+Requires-Dist: pytest>=6; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+
+# python-sdk
+A python SDK
