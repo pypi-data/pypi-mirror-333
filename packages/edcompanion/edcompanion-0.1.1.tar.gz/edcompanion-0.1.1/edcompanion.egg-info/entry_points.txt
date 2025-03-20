@@ -1,0 +1,2 @@
+[nbdev]
+edcompanion = edcompanion._modidx:d
