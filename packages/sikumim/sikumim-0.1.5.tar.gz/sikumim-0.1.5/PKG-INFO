@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: sikumim
+Version: 0.1.5
+Summary: A simple tool to download lecture notes, written by Regev Yehezkel Imra
+Author: Eitan Sztuden
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# Sikumim
+
+## Introduction
+A simple tool to quickly and easily download lecture notes (and more).
+
+All notes are published with the courtesy of **Regev Yehezkel Imra**.
+
+##  Instructions
+1. Install the library:
+    ```
+    pip install sikumim
+    ```
+2. Run the following command to download course material:
+    ```
+    dl_lec <course-name> <output-path>
+    ```
+   For example,
+   ```
+   dl_lec Topology Desktop
+   ```
