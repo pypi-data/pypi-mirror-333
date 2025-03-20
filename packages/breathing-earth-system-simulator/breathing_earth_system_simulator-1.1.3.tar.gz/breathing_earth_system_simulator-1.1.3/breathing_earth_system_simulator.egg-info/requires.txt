@@ -1,0 +1,14 @@
+FLiESANN
+gedi-canopy-height
+geos5fp
+modisci
+numpy
+rasters
+
+[dev]
+build
+pytest>=6.0
+pytest-cov
+jupyter
+pytest
+twine
