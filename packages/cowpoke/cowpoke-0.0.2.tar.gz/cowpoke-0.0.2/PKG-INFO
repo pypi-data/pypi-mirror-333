@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: cowpoke
+Version: 0.0.2
+Summary: Code in support of the 'Cooking with Python and KBpedia' (CWPK) series
+Home-page: https://github.com/Cognonto/cowpoke
+Author: Michael K Bergman
+Author-email: mike@mkbergman.com
+Project-URL: CWPK blog series, https://www.mkbergman.com/cooking-with-python-and-kbpedia/
+Project-URL: CWPK Jupyter notebooks, https://github.com/Cognonto/CWPK
+Project-URL: KBpedia, https://kbpedia.org/
+Project-URL: Source, https://github.com/Cognonto/cowpoke/
+Keywords: KBpedia,knowledge graph,build,extract
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
+
+# *cowpoke*
+<div style="float: right; width: 305px; margin-left: 10px;">
+<img src="files/cowpoke-450.png" title="cowpoke" width="305" />
+</div>
+
+*cowpoke* is a package of Python build, extract, mapping, statistics, and analysis routines applicable to knowledge graphs, specifically [KBpedia](https://kbpedia.org/). The *cowpoke* package was developed as part of a 75-part series of electronic notebooks entitled [*Cooking with Python
+and KBpedia*](https://www.mkbergman.com/cooking-with-python-and-kbpedia/). 
+
+The electronic notebooks, which begin with installment #14, may be obtained from the [Jupyter Notebook repository](https://github.com/Cognonto/CWPK). There is much explanatory material in those notebooks regarding how the *cowpoke* code was constructed and what it does.
+
+### Installation
+Besides downloading and building the package locally, you may install the *cowpoke* package directly:
+
+<code>pip install cowpoke</code>

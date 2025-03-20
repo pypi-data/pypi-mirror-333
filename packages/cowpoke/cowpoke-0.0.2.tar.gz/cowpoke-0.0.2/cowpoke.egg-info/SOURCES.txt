@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+cowpoke/__init__.py
+cowpoke/__main__.py
+cowpoke/autoFill.py
+cowpoke/build.py
+cowpoke/config.py
+cowpoke/extract.py
+cowpoke/mapping.py
+cowpoke/stats.py
+cowpoke/utils.py
+cowpoke/visualize.py
+cowpoke.egg-info/PKG-INFO
+cowpoke.egg-info/SOURCES.txt
+cowpoke.egg-info/dependency_links.txt
+cowpoke.egg-info/top_level.txt
