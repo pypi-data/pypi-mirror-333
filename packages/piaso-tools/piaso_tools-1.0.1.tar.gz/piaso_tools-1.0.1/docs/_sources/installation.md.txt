@@ -1,0 +1,33 @@
+## Installation
+
+### Stable version
+
+**1. Activate conda environment**
+
+If you already have an environment, activate it:
+
+```
+## Replace ` <myenv> ` with your actual environment name
+conda activate <myenv>
+```
+
+If you don't have an environment yet, create one first:
+
+```
+conda create --name <myenv>
+conda activate <myenv>
+```
+
+**2. Install PIASO**
+
+```
+pip install piaso-tools
+```
+
+### Development version
+
+Install PIASO from GitHub directly:
+ 
+```
+pip install git+https://github.com/genecell/PIASO.git
+```
