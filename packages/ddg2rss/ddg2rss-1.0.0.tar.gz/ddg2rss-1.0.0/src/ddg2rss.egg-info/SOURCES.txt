@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ddg2rss/__init__.py
+src/ddg2rss/generator.py
+src/ddg2rss/test_generator.py
+src/ddg2rss.egg-info/PKG-INFO
+src/ddg2rss.egg-info/SOURCES.txt
+src/ddg2rss.egg-info/dependency_links.txt
+src/ddg2rss.egg-info/requires.txt
+src/ddg2rss.egg-info/top_level.txt
