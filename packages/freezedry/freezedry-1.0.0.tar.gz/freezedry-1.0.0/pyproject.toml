@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "freezedry"
+dynamic = ["version"]
+authors = [
+    {name = "Andrew Landau", email = "andrew+tyler+landau+getridofthisanddtheplusses@gmail.com"},
+]
+description = "A simple package to save a compressed directory"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+keywords = ["python code", "compression", "compress"]
+dependencies = [
+    "gitignore_parser",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers", 
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/landoskape/freezedry"
+Documentation = "https://freezedry.readthedocs.io/en/stable/"
+
+[tool.hatch.build]
+include = ["freezedry.py"]
+
+[tool.hatch.version]
+path = "freezedry.py"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=freezedry --cov-report=xml --cov-report=term-missing"
