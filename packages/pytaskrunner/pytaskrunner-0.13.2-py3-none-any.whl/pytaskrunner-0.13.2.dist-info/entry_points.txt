@@ -1,0 +1,2 @@
+[console_scripts]
+task = tr.__main__:main
