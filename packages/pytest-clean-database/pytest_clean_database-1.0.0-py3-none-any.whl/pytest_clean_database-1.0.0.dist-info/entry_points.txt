@@ -1,0 +1,3 @@
+[pytest11]
+clean-db=pytest_clean_db.plugin
+

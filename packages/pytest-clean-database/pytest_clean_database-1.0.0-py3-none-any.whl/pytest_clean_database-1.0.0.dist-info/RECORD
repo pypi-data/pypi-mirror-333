@@ -1,0 +1,12 @@
+pytest_clean_db/__init__.py,sha256=W1jarMwO1D56NJNAdq0HxeID8iymgu1m09eucPyeLNk,64
+pytest_clean_db/connection.py,sha256=wRLfyaqWN4qDZB_Ph0mIygptcC8GSKvFm07695EZ4VY,3300
+pytest_clean_db/dialect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_clean_db/dialect/mysql.py,sha256=iKaOJlJgvChKdQsFeG2zTjQJe6UgnO5oYG9YnPCTJSQ,1737
+pytest_clean_db/dialect/postgres.py,sha256=-z7nFSvgQggpgSF1BMGmNS3iQ25Wx30aQe1HLQBCpLg,1844
+pytest_clean_db/plugin.py,sha256=AeEynJiaj8hbHqG3rn8XbAXUNIweBW8ZQYwHmSIEqb0,1739
+pytest_clean_db/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_clean_database-1.0.0.dist-info/LICENSE,sha256=JoTqnqaQzAJiAo_izJMw07zGum9-7ksJLcLXRljD4kQ,1071
+pytest_clean_database-1.0.0.dist-info/METADATA,sha256=khT15mwqTmxKcg5a0kp5sOLjJHJGPR6HzQquWlWOCw0,6327
+pytest_clean_database-1.0.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pytest_clean_database-1.0.0.dist-info/entry_points.txt,sha256=eppTsgX-zifiiGVbEVLfZfLMJWC-mBiyEkXz4C96VYs,44
+pytest_clean_database-1.0.0.dist-info/RECORD,,
