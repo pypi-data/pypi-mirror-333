@@ -1,0 +1,41 @@
+Metadata-Version: 2.2
+Name: molass_pre
+Version: 0.0.2
+Summary: Matrix Optimization with Low-rank factorization for Automated analysis of SEC-SAXS.
+Home-page: https://github.com/freesemt/molass-working
+Author: Masatsuyo Takahashi, Nobutaka Shimizu
+Author-email: freesemt@gmail.com
+License: GPLv3
+Project-URL: Source Code, https://github.com/freesemt/molass-working
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Molass Library for Developers
+
+This is an experimental or pre-release version of [Molass Library](https://github.com/freesemt/molass-library)
+
+To install this package, you can use pip as follows.
+
+```
+pip install -U molass_pre
+```
