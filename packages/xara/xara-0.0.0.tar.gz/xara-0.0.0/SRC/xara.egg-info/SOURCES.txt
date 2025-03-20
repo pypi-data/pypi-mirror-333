@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+SRC/xara.egg-info/PKG-INFO
+SRC/xara.egg-info/SOURCES.txt
+SRC/xara.egg-info/dependency_links.txt
+SRC/xara.egg-info/entry_points.txt
+SRC/xara.egg-info/requires.txt
+SRC/xara.egg-info/top_level.txt
+about/README.pypi.md
