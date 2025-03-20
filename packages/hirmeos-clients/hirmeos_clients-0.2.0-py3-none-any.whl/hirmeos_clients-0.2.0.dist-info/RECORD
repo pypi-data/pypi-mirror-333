@@ -1,0 +1,10 @@
+hirmeos_clients/__init__.py,sha256=HvGiUNcwzkLBErepBgvEoBpWHrJUXy0ER7wYDhWFmMY,118
+hirmeos_clients/altmetrics.py,sha256=ekLox7S6U3D-wnfYFGHozcWRqQr-yZMWmLgBNvyK5BA,3618
+hirmeos_clients/tokens_api.py,sha256=MGPhiFRdvRs26srUAPPTjn3CEimCJC7V6AAF2n3nq34,5079
+hirmeos_clients/translator.py,sha256=pE0Ixp0rHEM1CxS0eUq7_2qFp_iLEaDu4ZAjiighX9Q,13975
+hirmeos_clients/variables.py,sha256=NWWb-HBRLzHJebsQo95bQ8T175h6A5yjZbe2FW2KW4s,1039
+hirmeos_clients-0.2.0.dist-info/LICENSE,sha256=QeLZVZHgvnx4bClha4roJOi_TGgwjgYkTpQrrwDCn4Y,1077
+hirmeos_clients-0.2.0.dist-info/METADATA,sha256=FN5CecYW0hAKKoDW7ddY4R-WeBQmldqCYOXP_BcD0vY,4748
+hirmeos_clients-0.2.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+hirmeos_clients-0.2.0.dist-info/top_level.txt,sha256=kgiifej8YwpV177skXspTzKvM9es4OtYrsmwWMPd9Gs,16
+hirmeos_clients-0.2.0.dist-info/RECORD,,
