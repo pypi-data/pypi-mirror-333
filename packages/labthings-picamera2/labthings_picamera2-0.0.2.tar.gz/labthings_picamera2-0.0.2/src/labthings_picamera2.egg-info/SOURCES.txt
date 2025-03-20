@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/labthings_picamera2/__init__.py
+src/labthings_picamera2/recalibrate_utils.py
+src/labthings_picamera2/thing.py
+src/labthings_picamera2.egg-info/PKG-INFO
+src/labthings_picamera2.egg-info/SOURCES.txt
+src/labthings_picamera2.egg-info/dependency_links.txt
+src/labthings_picamera2.egg-info/requires.txt
+src/labthings_picamera2.egg-info/top_level.txt
+tests/test_acquisition.py
+tests/test_exposure_time_drift.py
+tests/test_sensor_mode.py
+tests/test_tuning.py
