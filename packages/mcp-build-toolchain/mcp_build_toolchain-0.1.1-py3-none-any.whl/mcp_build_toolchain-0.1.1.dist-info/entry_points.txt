@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-build-toolchain = mcp_build_toolchain:main
