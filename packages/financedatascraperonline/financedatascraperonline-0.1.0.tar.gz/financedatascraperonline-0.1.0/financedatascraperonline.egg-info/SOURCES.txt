@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+financedatascraperonline/__init__.py
+financedatascraperonline/myfunctions.py
+financedatascraperonline.egg-info/PKG-INFO
+financedatascraperonline.egg-info/SOURCES.txt
+financedatascraperonline.egg-info/dependency_links.txt
+financedatascraperonline.egg-info/requires.txt
+financedatascraperonline.egg-info/top_level.txt
+tests/test_financedatascraperonline.py
