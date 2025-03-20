@@ -1,0 +1,11 @@
+mlcoder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlcoder/cli.py,sha256=fYQDHzmhObY6vS8hucgIs2Z0nqmFS19ju7ijz9r2jWk,1044
+mlcoder/file.py,sha256=1Bg6BfgYyVPNLny1L86B9ITat9JXe-424e6P0qfVGMk,958
+mlcoder/ui.py,sha256=Ms8asTr5VwayzP0IWtQolDDvSYzV9onwC7o7nVFSu20,383
+mlcoder/files/pretty_print.py,sha256=kc5y065c9C9Azzq4iKoS_uFN49JUXAh0fBvfl38_Efo,260
+mlcoder-0.1.2.dist-info/LICENSE,sha256=4GqwSHMDh_U4O_k4M_7bpjBtqrT0iw8pkm13E8ocbkg,1080
+mlcoder-0.1.2.dist-info/METADATA,sha256=3MmieMJlU8-D6Yxj2YQ8FHDuG73xBt5Aw2fynFJe9As,813
+mlcoder-0.1.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mlcoder-0.1.2.dist-info/entry_points.txt,sha256=WMFUQhSewyHmCS6Lz7ui_bfVOR_9AG5jyVSSH-IBLZo,45
+mlcoder-0.1.2.dist-info/top_level.txt,sha256=al0ra89eLvrD259w37jEJvoCXOeNXJDDUmpx64q529w,8
+mlcoder-0.1.2.dist-info/RECORD,,
