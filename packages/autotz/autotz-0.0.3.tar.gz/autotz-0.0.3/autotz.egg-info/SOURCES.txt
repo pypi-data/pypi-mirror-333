@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+.github/workflows/publish.yml
+autotz/__init__.py
+autotz/main.py
+autotz.egg-info/PKG-INFO
+autotz.egg-info/SOURCES.txt
+autotz.egg-info/dependency_links.txt
+autotz.egg-info/entry_points.txt
+autotz.egg-info/requires.txt
+autotz.egg-info/top_level.txt
