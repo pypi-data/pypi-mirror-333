@@ -1,0 +1,42 @@
+---
+source: codegen-sdk-cst-generator/src/generator/state.rs
+expression: snapshot_tokens(&enum_tokens)
+---
+#[subenum(AnonymousTestChildren)]
+#[derive(Debug, Eq, PartialEq, Clone, Hash, salsa::Update, Delegate, Ord, PartialOrd)]
+#[delegate(CSTNode<'db1>)]
+pub enum NodeTypes<'db1> {
+    AnonymousChild(AnonymousChild<'db1>),
+    AnonymousChildTwo(AnonymousChildTwo<'db1>),
+    AnonymousTest(AnonymousTest<'db1>),
+}
+impl<'db3> From<AnonymousChild<'db3>> for NodeTypes<'db3> {
+    fn from(node: AnonymousChild<'db3>) -> Self {
+        Self::AnonymousChild(node)
+    }
+}
+impl<'db3> From<AnonymousChildTwo<'db3>> for NodeTypes<'db3> {
+    fn from(node: AnonymousChildTwo<'db3>) -> Self {
+        Self::AnonymousChildTwo(node)
+    }
+}
+impl<'db3> From<AnonymousTest<'db3>> for NodeTypes<'db3> {
+    fn from(node: AnonymousTest<'db3>) -> Self {
+        Self::AnonymousTest(node)
+    }
+}
+impl<'db4> FromNode<'db4, NodeTypes<'db4>> for AnonymousTestChildren<'db4> {
+    fn from_node(
+        context: &mut ParseContext<'db4, NodeTypes<'db4>>,
+        node: tree_sitter::Node,
+    ) -> Result<(Self, Vec<indextree::NodeId>), ParseError> {
+        match node.kind_id() {
+            _ => {
+                Err(ParseError::UnexpectedNode {
+                    node_type: node.kind().to_string(),
+                    backtrace: Backtrace::capture(),
+                })
+            }
+        }
+    }
+}

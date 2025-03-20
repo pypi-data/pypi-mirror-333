@@ -1,0 +1,26 @@
+[package]
+version.workspace = true
+edition.workspace = true
+readme = "README.md"
+license.workspace = true
+homepage.workspace = true
+authors.workspace = true
+repository.workspace = true
+name = "codegen-bindings-generator"
+description = "Generates bindings for the codegen-sdk"
+
+
+[dependencies]
+quote = { workspace = true }
+codegen-sdk-common = { workspace = true }
+codegen-sdk-cst-generator = { workspace = true }
+codegen-sdk-ast-generator = { workspace = true }
+syn = { workspace = true }
+anyhow = { workspace = true }
+proc-macro2 = { workspace = true }
+codegen-sdk-cst = { workspace = true }
+[dev-dependencies]
+test-log = { workspace = true }
+rstest = { workspace = true }
+insta = { workspace = true }
+codegen-sdk-common = { workspace = true , features = ["rust", "typescript", "python"]}

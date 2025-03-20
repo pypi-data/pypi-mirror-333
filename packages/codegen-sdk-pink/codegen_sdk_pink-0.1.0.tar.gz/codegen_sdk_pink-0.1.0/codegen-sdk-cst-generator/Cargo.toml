@@ -1,0 +1,25 @@
+[package]
+version.workspace = true
+edition.workspace = true
+readme = "README.md"
+license.workspace = true
+homepage.workspace = true
+authors.workspace = true
+repository.workspace = true
+name = "codegen-sdk-cst-generator"
+
+description = "Generates the CST for the given language from the tree-sitter node-types.json"
+[dependencies]
+syn = { workspace = true }
+tree-sitter = { workspace = true }
+log = { workspace = true }
+codegen-sdk-common = { workspace = true, features = ["python", "typescript"]}
+anyhow = { workspace = true }
+quote = { workspace = true }
+proc-macro2 = { workspace = true }
+tempfile = { workspace = true }
+mockall_double = "0.3.1"
+[dev-dependencies]
+tree-sitter-python = { workspace = true }
+test-log = { workspace = true }
+insta = { workspace = true }

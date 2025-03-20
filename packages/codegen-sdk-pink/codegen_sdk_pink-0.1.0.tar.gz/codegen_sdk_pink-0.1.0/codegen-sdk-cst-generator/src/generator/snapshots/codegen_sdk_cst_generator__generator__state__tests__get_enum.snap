@@ -1,0 +1,14 @@
+---
+source: codegen-sdk-cst-generator/src/generator/state.rs
+expression: snapshot_tokens(&enum_tokens)
+---
+#[derive(Debug, Eq, PartialEq, Clone, Hash, salsa::Update, Delegate, Ord, PartialOrd)]
+#[delegate(CSTNode<'db1>)]
+pub enum NodeTypes<'db1> {
+    Test(Test<'db1>),
+}
+impl<'db3> From<Test<'db3>> for NodeTypes<'db3> {
+    fn from(node: Test<'db3>) -> Self {
+        Self::Test(node)
+    }
+}

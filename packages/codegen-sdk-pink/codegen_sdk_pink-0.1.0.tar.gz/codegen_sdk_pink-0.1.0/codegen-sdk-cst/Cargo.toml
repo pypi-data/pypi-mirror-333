@@ -1,0 +1,21 @@
+[package]
+version.workspace = true
+edition.workspace = true
+readme = "README.md"
+license.workspace = true
+homepage.workspace = true
+authors.workspace = true
+repository.workspace = true
+name = "codegen-sdk-cst"
+description = "Common code for the CST"
+
+[dependencies]
+bytes = { workspace = true }
+codegen-sdk-common = { path = "../codegen-sdk-common" }
+salsa = { workspace = true }
+dashmap = "6.1.0"
+thiserror = {workspace = true}
+indextree = { workspace = true }
+
+[features]
+serialization = ["codegen-sdk-common/serialization"]

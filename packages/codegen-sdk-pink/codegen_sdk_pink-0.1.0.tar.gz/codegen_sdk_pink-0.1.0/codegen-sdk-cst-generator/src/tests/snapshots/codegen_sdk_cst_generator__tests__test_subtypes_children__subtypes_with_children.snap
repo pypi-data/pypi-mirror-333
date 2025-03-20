@@ -1,0 +1,881 @@
+---
+source: codegen-sdk-cst-generator/src/tests/test_subtypes_children.rs
+expression: "crate::test_util::snapshot_string(&output)"
+---
+use std::sync::Arc;
+use tree_sitter;
+use codegen_sdk_common::*;
+use subenum::subenum;
+use std::backtrace::Backtrace;
+use bytes::Bytes;
+use ambassador::Delegate;
+use derive_more::Debug;
+use ambassador::delegate_to_methods;
+use codegen_sdk_cst::CSTLanguage;
+use crate::cst::tree::ParseContext;
+use std::path::PathBuf;
+#[subenum(BlockChildren, IfStatementChildren, Statement)]
+#[derive(Debug, Eq, PartialEq, Clone, Hash, salsa::Update, Delegate, Ord, PartialOrd)]
+#[delegate(CSTNode<'db1>)]
+pub enum NodeTypes<'db1> {
+    #[subenum(IfStatementChildren)]
+    Block(Block<'db1>),
+    #[subenum(Statement, BlockChildren)]
+    IfStatement(IfStatement<'db1>),
+    #[subenum(Statement, BlockChildren)]
+    ReturnStatement(ReturnStatement<'db1>),
+}
+impl<'db3> From<Block<'db3>> for NodeTypes<'db3> {
+    fn from(node: Block<'db3>) -> Self {
+        Self::Block(node)
+    }
+}
+impl<'db3> From<IfStatement<'db3>> for NodeTypes<'db3> {
+    fn from(node: IfStatement<'db3>) -> Self {
+        Self::IfStatement(node)
+    }
+}
+impl<'db3> From<ReturnStatement<'db3>> for NodeTypes<'db3> {
+    fn from(node: ReturnStatement<'db3>) -> Self {
+        Self::ReturnStatement(node)
+    }
+}
+impl<'db4> FromNode<'db4, NodeTypes<'db4>> for BlockChildren<'db4> {
+    fn from_node(
+        context: &mut ParseContext<'db4, NodeTypes<'db4>>,
+        node: tree_sitter::Node,
+    ) -> Result<(Self, Vec<indextree::NodeId>), ParseError> {
+        match node.kind_id() {
+            0u16 => {
+                let (node, ids) = ReturnStatement::from_node(context, node)?;
+                Ok((Self::ReturnStatement(node), ids))
+            }
+            _ => {
+                Err(ParseError::UnexpectedNode {
+                    node_type: node.kind().to_string(),
+                    backtrace: Backtrace::capture(),
+                })
+            }
+        }
+    }
+}
+impl<'db4> FromNode<'db4, NodeTypes<'db4>> for IfStatementChildren<'db4> {
+    fn from_node(
+        context: &mut ParseContext<'db4, NodeTypes<'db4>>,
+        node: tree_sitter::Node,
+    ) -> Result<(Self, Vec<indextree::NodeId>), ParseError> {
+        match node.kind_id() {
+            0u16 => {
+                let (node, ids) = Block::from_node(context, node)?;
+                Ok((Self::Block(node), ids))
+            }
+            _ => {
+                Err(ParseError::UnexpectedNode {
+                    node_type: node.kind().to_string(),
+                    backtrace: Backtrace::capture(),
+                })
+            }
+        }
+    }
+}
+impl<'db4> FromNode<'db4, NodeTypes<'db4>> for Statement<'db4> {
+    fn from_node(
+        context: &mut ParseContext<'db4, NodeTypes<'db4>>,
+        node: tree_sitter::Node,
+    ) -> Result<(Self, Vec<indextree::NodeId>), ParseError> {
+        match node.kind_id() {
+            0u16 => {
+                let (node, ids) = ReturnStatement::from_node(context, node)?;
+                Ok((Self::ReturnStatement(node), ids))
+            }
+            _ => {
+                Err(ParseError::UnexpectedNode {
+                    node_type: node.kind().to_string(),
+                    backtrace: Backtrace::capture(),
+                })
+            }
+        }
+    }
+}
+#[subenum(BlockChildrenRef, IfStatementChildrenRef, StatementRef)]
+#[derive(Debug, Eq, PartialEq, Hash, Clone, Ord, PartialOrd)]
+pub enum NodeTypesRef<'db1> {
+    #[subenum(IfStatementChildrenRef)]
+    Block(&'db1 Block<'db1>),
+    #[subenum(StatementRef, BlockChildrenRef)]
+    IfStatement(&'db1 IfStatement<'db1>),
+    #[subenum(StatementRef, BlockChildrenRef)]
+    ReturnStatement(&'db1 ReturnStatement<'db1>),
+}
+impl<'db3> From<&'db3 Block<'db3>> for NodeTypesRef<'db3> {
+    fn from(node: &'db3 Block<'db3>) -> Self {
+        Self::Block(node)
+    }
+}
+impl<'db3> From<&'db3 IfStatement<'db3>> for NodeTypesRef<'db3> {
+    fn from(node: &'db3 IfStatement<'db3>) -> Self {
+        Self::IfStatement(node)
+    }
+}
+impl<'db3> From<&'db3 ReturnStatement<'db3>> for NodeTypesRef<'db3> {
+    fn from(node: &'db3 ReturnStatement<'db3>) -> Self {
+        Self::ReturnStatement(node)
+    }
+}
+impl<'db3> NodeTypes<'db3> {
+    pub fn as_ref(&'db3 self) -> NodeTypesRef<'db3> {
+        match self {
+            Self::Block(data) => NodeTypesRef::Block(data),
+            Self::IfStatement(data) => NodeTypesRef::IfStatement(data),
+            Self::ReturnStatement(data) => NodeTypesRef::ReturnStatement(data),
+        }
+    }
+}
+#[delegate_to_methods]
+#[delegate(CSTNode<'db3>, target_ref = "deref")]
+impl<'db3> NodeTypesRef<'db3> {
+    fn deref<'db2>(&'db2 self) -> &'db2 dyn CSTNode<'db3> {
+        match self {
+            Self::Block(data) => *data,
+            Self::IfStatement(data) => *data,
+            Self::ReturnStatement(data) => *data,
+        }
+    }
+}
+impl<'db3> From<&'db3 NodeTypes<'db3>> for NodeTypesRef<'db3> {
+    fn from(node: &'db3 NodeTypes<'db3>) -> Self {
+        node.as_ref().into()
+    }
+}
+impl<'db3> From<NodeTypesRef<'db3>> for NodeTypes<'db3> {
+    fn from(node: NodeTypesRef<'db3>) -> Self {
+        match node {
+            NodeTypesRef::Block(data) => Self::Block((*data).clone()),
+            NodeTypesRef::IfStatement(data) => Self::IfStatement((*data).clone()),
+            NodeTypesRef::ReturnStatement(data) => Self::ReturnStatement((*data).clone()),
+        }
+    }
+}
+impl<'db3> From<&'db3 NodeTypesRef<'db3>> for NodeTypes<'db3> {
+    fn from(node: &'db3 NodeTypesRef<'db3>) -> Self {
+        match node {
+            NodeTypesRef::Block(data) => Self::Block((*data).clone()),
+            NodeTypesRef::IfStatement(data) => Self::IfStatement((*data).clone()),
+            NodeTypesRef::ReturnStatement(data) => Self::ReturnStatement((*data).clone()),
+        }
+    }
+}
+impl<'db3> TryFrom<NodeTypesRef<'db3>> for &'db3 Block<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: NodeTypesRef<'db3>) -> Result<Self, Self::Error> {
+        if let NodeTypesRef::Block(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+impl<'db3> TryFrom<NodeTypesRef<'db3>> for &'db3 IfStatement<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: NodeTypesRef<'db3>) -> Result<Self, Self::Error> {
+        if let NodeTypesRef::IfStatement(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+impl<'db3> TryFrom<NodeTypesRef<'db3>> for &'db3 ReturnStatement<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: NodeTypesRef<'db3>) -> Result<Self, Self::Error> {
+        if let NodeTypesRef::ReturnStatement(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+impl<'db3> BlockChildren<'db3> {
+    pub fn as_ref(&'db3 self) -> BlockChildrenRef<'db3> {
+        match self {
+            Self::IfStatement(data) => BlockChildrenRef::IfStatement(data),
+            Self::ReturnStatement(data) => BlockChildrenRef::ReturnStatement(data),
+        }
+    }
+}
+#[delegate_to_methods]
+#[delegate(CSTNode<'db3>, target_ref = "deref")]
+impl<'db3> BlockChildrenRef<'db3> {
+    fn deref<'db2>(&'db2 self) -> &'db2 dyn CSTNode<'db3> {
+        match self {
+            Self::IfStatement(data) => *data,
+            Self::ReturnStatement(data) => *data,
+        }
+    }
+}
+impl<'db3> From<&'db3 BlockChildren<'db3>> for NodeTypesRef<'db3> {
+    fn from(node: &'db3 BlockChildren<'db3>) -> Self {
+        node.as_ref().into()
+    }
+}
+impl<'db3> From<BlockChildrenRef<'db3>> for BlockChildren<'db3> {
+    fn from(node: BlockChildrenRef<'db3>) -> Self {
+        match node {
+            BlockChildrenRef::IfStatement(data) => Self::IfStatement((*data).clone()),
+            BlockChildrenRef::ReturnStatement(data) => {
+                Self::ReturnStatement((*data).clone())
+            }
+        }
+    }
+}
+impl<'db3> From<&'db3 BlockChildrenRef<'db3>> for BlockChildren<'db3> {
+    fn from(node: &'db3 BlockChildrenRef<'db3>) -> Self {
+        match node {
+            BlockChildrenRef::IfStatement(data) => Self::IfStatement((*data).clone()),
+            BlockChildrenRef::ReturnStatement(data) => {
+                Self::ReturnStatement((*data).clone())
+            }
+        }
+    }
+}
+impl<'db3> TryFrom<BlockChildrenRef<'db3>> for &'db3 IfStatement<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: BlockChildrenRef<'db3>) -> Result<Self, Self::Error> {
+        if let BlockChildrenRef::IfStatement(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+impl<'db3> TryFrom<BlockChildrenRef<'db3>> for &'db3 ReturnStatement<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: BlockChildrenRef<'db3>) -> Result<Self, Self::Error> {
+        if let BlockChildrenRef::ReturnStatement(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+impl<'db3> IfStatementChildren<'db3> {
+    pub fn as_ref(&'db3 self) -> IfStatementChildrenRef<'db3> {
+        match self {
+            Self::Block(data) => IfStatementChildrenRef::Block(data),
+        }
+    }
+}
+#[delegate_to_methods]
+#[delegate(CSTNode<'db3>, target_ref = "deref")]
+impl<'db3> IfStatementChildrenRef<'db3> {
+    fn deref<'db2>(&'db2 self) -> &'db2 dyn CSTNode<'db3> {
+        match self {
+            Self::Block(data) => *data,
+        }
+    }
+}
+impl<'db3> From<&'db3 IfStatementChildren<'db3>> for NodeTypesRef<'db3> {
+    fn from(node: &'db3 IfStatementChildren<'db3>) -> Self {
+        node.as_ref().into()
+    }
+}
+impl<'db3> From<IfStatementChildrenRef<'db3>> for IfStatementChildren<'db3> {
+    fn from(node: IfStatementChildrenRef<'db3>) -> Self {
+        match node {
+            IfStatementChildrenRef::Block(data) => Self::Block((*data).clone()),
+        }
+    }
+}
+impl<'db3> From<&'db3 IfStatementChildrenRef<'db3>> for IfStatementChildren<'db3> {
+    fn from(node: &'db3 IfStatementChildrenRef<'db3>) -> Self {
+        match node {
+            IfStatementChildrenRef::Block(data) => Self::Block((*data).clone()),
+        }
+    }
+}
+impl<'db3> TryFrom<IfStatementChildrenRef<'db3>> for &'db3 Block<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: IfStatementChildrenRef<'db3>) -> Result<Self, Self::Error> {
+        if let IfStatementChildrenRef::Block(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+impl<'db3> Statement<'db3> {
+    pub fn as_ref(&'db3 self) -> StatementRef<'db3> {
+        match self {
+            Self::IfStatement(data) => StatementRef::IfStatement(data),
+            Self::ReturnStatement(data) => StatementRef::ReturnStatement(data),
+        }
+    }
+}
+#[delegate_to_methods]
+#[delegate(CSTNode<'db3>, target_ref = "deref")]
+impl<'db3> StatementRef<'db3> {
+    fn deref<'db2>(&'db2 self) -> &'db2 dyn CSTNode<'db3> {
+        match self {
+            Self::IfStatement(data) => *data,
+            Self::ReturnStatement(data) => *data,
+        }
+    }
+}
+impl<'db3> From<&'db3 Statement<'db3>> for NodeTypesRef<'db3> {
+    fn from(node: &'db3 Statement<'db3>) -> Self {
+        node.as_ref().into()
+    }
+}
+impl<'db3> From<StatementRef<'db3>> for Statement<'db3> {
+    fn from(node: StatementRef<'db3>) -> Self {
+        match node {
+            StatementRef::IfStatement(data) => Self::IfStatement((*data).clone()),
+            StatementRef::ReturnStatement(data) => Self::ReturnStatement((*data).clone()),
+        }
+    }
+}
+impl<'db3> From<&'db3 StatementRef<'db3>> for Statement<'db3> {
+    fn from(node: &'db3 StatementRef<'db3>) -> Self {
+        match node {
+            StatementRef::IfStatement(data) => Self::IfStatement((*data).clone()),
+            StatementRef::ReturnStatement(data) => Self::ReturnStatement((*data).clone()),
+        }
+    }
+}
+impl<'db3> TryFrom<StatementRef<'db3>> for &'db3 IfStatement<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: StatementRef<'db3>) -> Result<Self, Self::Error> {
+        if let StatementRef::IfStatement(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+impl<'db3> TryFrom<StatementRef<'db3>> for &'db3 ReturnStatement<'db3> {
+    type Error = codegen_sdk_cst::ConversionError;
+    fn try_from(node: StatementRef<'db3>) -> Result<Self, Self::Error> {
+        if let StatementRef::ReturnStatement(node) = node {
+            Ok(node)
+        } else {
+            Err(codegen_sdk_cst::ConversionError {
+                expected: "TODO".to_string(),
+                actual: node.kind_name().to_string(),
+                backtrace: Backtrace::capture(),
+            })
+        }
+    }
+}
+#[derive(Debug, Eq, PartialEq, Clone, salsa::Update)]
+pub struct Block<'db> {
+    id: CSTNodeId<'db>,
+    file_id: FileNodeId,
+    start_byte: usize,
+    end_byte: usize,
+    start_position: Point<'db>,
+    end_position: Point<'db>,
+    #[debug(ignore)]
+    buffer: Arc<Bytes>,
+    is_error: bool,
+    pub _children: Vec<indextree::NodeId>,
+}
+impl<'db> FromNode<'db, NodeTypes<'db>> for Block<'db> {
+    fn from_node(
+        context: &mut ParseContext<'db, NodeTypes<'db>>,
+        node: tree_sitter::Node,
+    ) -> Result<(Self, Vec<indextree::NodeId>), ParseError> {
+        let start_position = Point::from(context.db, node.start_position());
+        let end_position = Point::from(context.db, node.end_position());
+        let id = CSTNodeId::new(context.db, context.file_id, node.id(), context.root);
+        let mut ids = Vec::new();
+        let _children = named_children_without_field_names::<
+            NodeTypes<'db>,
+            BlockChildren<'db>,
+        >(context, node)?;
+        for child in _children.iter().cloned() {
+            ids.push(child);
+        }
+        Ok((
+            Self {
+                start_byte: node.start_byte(),
+                end_byte: node.end_byte(),
+                start_position: start_position,
+                end_position: end_position,
+                buffer: context.buffer.clone(),
+                is_error: node.is_error(),
+                id,
+                file_id: context.file_id.clone(),
+                _children,
+            },
+            ids,
+        ))
+    }
+}
+impl<'db> Block<'db> {
+    const KIND_NAME: &'static str = "block";
+}
+impl<'db> CSTNode<'db> for Block<'db> {
+    fn kind_name(&self) -> &str {
+        &Self::KIND_NAME
+    }
+    fn start_byte(&self) -> usize {
+        self.start_byte
+    }
+    fn end_byte(&self) -> usize {
+        self.end_byte
+    }
+    fn start_position(&self) -> Point<'db> {
+        self.start_position
+    }
+    fn end_position(&self) -> Point<'db> {
+        self.end_position
+    }
+    fn buffer(&self) -> &Bytes {
+        &self.buffer
+    }
+    fn kind_id(&self) -> u16 {
+        0u16
+    }
+    fn is_error(&self) -> bool {
+        self.is_error
+    }
+    fn is_named(&self) -> bool {
+        true
+    }
+    fn id(&self) -> CSTNodeId<'db> {
+        self.id
+    }
+    fn file_id(&self) -> FileNodeId {
+        self.file_id
+    }
+}
+impl<'db1> HasChildren<'db1, NodeTypes<'db1>> for Block<'db1> {
+    type Child<'db2> = BlockChildrenRef<'db2> where Self: 'db2;
+    fn children<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+    ) -> Vec<Self::Child<'db2>> {
+        let mut children: Vec<Self::Child<'db2>> = self
+            ._children
+            .iter()
+            .map(|c| context.get(c).unwrap().as_ref().try_into().unwrap())
+            .collect();
+        children.sort_by_key(|c| c.start_byte());
+        children
+    }
+    fn children_by_field_name<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+        field_name: &str,
+    ) -> Vec<Self::Child<'db2>> {
+        match field_name {
+            _ => vec![],
+        }
+    }
+    fn children_by_field_id<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+        field_id: u16,
+    ) -> Vec<Self::Child<'db2>> {
+        match field_id {
+            _ => vec![],
+        }
+    }
+}
+impl<'db> std::hash::Hash for Block<'db> {
+    fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
+        self.id.hash(state);
+    }
+}
+impl<'db> PartialOrd for Block<'db> {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+impl<'db> Ord for Block<'db> {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        let res = self.start_byte().cmp(&other.start_byte());
+        if res == std::cmp::Ordering::Equal {
+            self.end_byte().cmp(&other.end_byte())
+        } else {
+            res
+        }
+    }
+}
+#[derive(Debug, Eq, PartialEq, Clone, salsa::Update)]
+pub struct IfStatement<'db> {
+    id: CSTNodeId<'db>,
+    file_id: FileNodeId,
+    start_byte: usize,
+    end_byte: usize,
+    start_position: Point<'db>,
+    end_position: Point<'db>,
+    #[debug(ignore)]
+    buffer: Arc<Bytes>,
+    is_error: bool,
+    pub _children: Vec<indextree::NodeId>,
+}
+impl<'db> FromNode<'db, NodeTypes<'db>> for IfStatement<'db> {
+    fn from_node(
+        context: &mut ParseContext<'db, NodeTypes<'db>>,
+        node: tree_sitter::Node,
+    ) -> Result<(Self, Vec<indextree::NodeId>), ParseError> {
+        let start_position = Point::from(context.db, node.start_position());
+        let end_position = Point::from(context.db, node.end_position());
+        let id = CSTNodeId::new(context.db, context.file_id, node.id(), context.root);
+        let mut ids = Vec::new();
+        let _children = named_children_without_field_names::<
+            NodeTypes<'db>,
+            IfStatementChildren<'db>,
+        >(context, node)?;
+        for child in _children.iter().cloned() {
+            ids.push(child);
+        }
+        Ok((
+            Self {
+                start_byte: node.start_byte(),
+                end_byte: node.end_byte(),
+                start_position: start_position,
+                end_position: end_position,
+                buffer: context.buffer.clone(),
+                is_error: node.is_error(),
+                id,
+                file_id: context.file_id.clone(),
+                _children,
+            },
+            ids,
+        ))
+    }
+}
+impl<'db> IfStatement<'db> {
+    const KIND_NAME: &'static str = "if_statement";
+}
+impl<'db> CSTNode<'db> for IfStatement<'db> {
+    fn kind_name(&self) -> &str {
+        &Self::KIND_NAME
+    }
+    fn start_byte(&self) -> usize {
+        self.start_byte
+    }
+    fn end_byte(&self) -> usize {
+        self.end_byte
+    }
+    fn start_position(&self) -> Point<'db> {
+        self.start_position
+    }
+    fn end_position(&self) -> Point<'db> {
+        self.end_position
+    }
+    fn buffer(&self) -> &Bytes {
+        &self.buffer
+    }
+    fn kind_id(&self) -> u16 {
+        0u16
+    }
+    fn is_error(&self) -> bool {
+        self.is_error
+    }
+    fn is_named(&self) -> bool {
+        true
+    }
+    fn id(&self) -> CSTNodeId<'db> {
+        self.id
+    }
+    fn file_id(&self) -> FileNodeId {
+        self.file_id
+    }
+}
+impl<'db1> HasChildren<'db1, NodeTypes<'db1>> for IfStatement<'db1> {
+    type Child<'db2> = IfStatementChildrenRef<'db2> where Self: 'db2;
+    fn children<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+    ) -> Vec<Self::Child<'db2>> {
+        let mut children: Vec<Self::Child<'db2>> = self
+            ._children
+            .iter()
+            .map(|c| context.get(c).unwrap().as_ref().try_into().unwrap())
+            .collect();
+        children.sort_by_key(|c| c.start_byte());
+        children
+    }
+    fn children_by_field_name<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+        field_name: &str,
+    ) -> Vec<Self::Child<'db2>> {
+        match field_name {
+            _ => vec![],
+        }
+    }
+    fn children_by_field_id<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+        field_id: u16,
+    ) -> Vec<Self::Child<'db2>> {
+        match field_id {
+            _ => vec![],
+        }
+    }
+}
+impl<'db> std::hash::Hash for IfStatement<'db> {
+    fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
+        self.id.hash(state);
+    }
+}
+impl<'db> PartialOrd for IfStatement<'db> {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+impl<'db> Ord for IfStatement<'db> {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        let res = self.start_byte().cmp(&other.start_byte());
+        if res == std::cmp::Ordering::Equal {
+            self.end_byte().cmp(&other.end_byte())
+        } else {
+            res
+        }
+    }
+}
+#[derive(Debug, Eq, PartialEq, Clone, salsa::Update)]
+pub struct ReturnStatement<'db> {
+    id: CSTNodeId<'db>,
+    file_id: FileNodeId,
+    start_byte: usize,
+    end_byte: usize,
+    start_position: Point<'db>,
+    end_position: Point<'db>,
+    #[debug(ignore)]
+    buffer: Arc<Bytes>,
+    is_error: bool,
+}
+impl<'db> FromNode<'db, NodeTypes<'db>> for ReturnStatement<'db> {
+    fn from_node(
+        context: &mut ParseContext<'db, NodeTypes<'db>>,
+        node: tree_sitter::Node,
+    ) -> Result<(Self, Vec<indextree::NodeId>), ParseError> {
+        let start_position = Point::from(context.db, node.start_position());
+        let end_position = Point::from(context.db, node.end_position());
+        let id = CSTNodeId::new(context.db, context.file_id, node.id(), context.root);
+        let mut ids = Vec::new();
+        Ok((
+            Self {
+                start_byte: node.start_byte(),
+                end_byte: node.end_byte(),
+                start_position: start_position,
+                end_position: end_position,
+                buffer: context.buffer.clone(),
+                is_error: node.is_error(),
+                id,
+                file_id: context.file_id.clone(),
+            },
+            ids,
+        ))
+    }
+}
+impl<'db> ReturnStatement<'db> {
+    const KIND_NAME: &'static str = "return_statement";
+}
+impl<'db> CSTNode<'db> for ReturnStatement<'db> {
+    fn kind_name(&self) -> &str {
+        &Self::KIND_NAME
+    }
+    fn start_byte(&self) -> usize {
+        self.start_byte
+    }
+    fn end_byte(&self) -> usize {
+        self.end_byte
+    }
+    fn start_position(&self) -> Point<'db> {
+        self.start_position
+    }
+    fn end_position(&self) -> Point<'db> {
+        self.end_position
+    }
+    fn buffer(&self) -> &Bytes {
+        &self.buffer
+    }
+    fn kind_id(&self) -> u16 {
+        0u16
+    }
+    fn is_error(&self) -> bool {
+        self.is_error
+    }
+    fn is_named(&self) -> bool {
+        true
+    }
+    fn id(&self) -> CSTNodeId<'db> {
+        self.id
+    }
+    fn file_id(&self) -> FileNodeId {
+        self.file_id
+    }
+}
+impl<'db1> HasChildren<'db1, NodeTypes<'db1>> for ReturnStatement<'db1> {
+    type Child<'db2> = ReturnStatement<'db2> where Self: 'db2;
+    fn children<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+    ) -> Vec<Self::Child<'db2>> {
+        vec![]
+    }
+    fn children_by_field_name<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+        field_name: &str,
+    ) -> Vec<Self::Child<'db2>> {
+        match field_name {
+            _ => vec![],
+        }
+    }
+    fn children_by_field_id<'db2>(
+        &'db2 self,
+        context: &'db2 Tree<NodeTypes<'db2>>,
+        field_id: u16,
+    ) -> Vec<Self::Child<'db2>> {
+        match field_id {
+            _ => vec![],
+        }
+    }
+}
+impl<'db> std::hash::Hash for ReturnStatement<'db> {
+    fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
+        self.id.hash(state);
+    }
+}
+impl<'db> PartialOrd for ReturnStatement<'db> {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.cmp(other))
+    }
+}
+impl<'db> Ord for ReturnStatement<'db> {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        let res = self.start_byte().cmp(&other.start_byte());
+        if res == std::cmp::Ordering::Equal {
+            self.end_byte().cmp(&other.end_byte())
+        } else {
+            res
+        }
+    }
+}
+impl<'db> TreeNode for NodeTypes<'db> {}
+#[salsa::tracked]
+pub struct Parsed<'db> {
+    #[id]
+    id: FileNodeId,
+    #[tracked]
+    #[return_ref]
+    #[no_clone]
+    #[no_eq]
+    pub tree: Arc<Tree<NodeTypes<'db>>>,
+    pub program: indextree::NodeId,
+}
+pub fn parse_program_raw<'db>(
+    db: &'db dyn salsa::Database,
+    input: codegen_sdk_cst::File,
+) -> Option<Parsed<'db>> {
+    let buffer = Bytes::from(input.content(db).as_bytes().to_vec());
+    let tree = codegen_sdk_common::language::language::Language
+        .parse_tree_sitter(&input.content(db));
+    match tree {
+        Ok(tree) => {
+            if tree.root_node().has_error() {
+                ParseError::SyntaxError.report(db);
+                None
+            } else {
+                let mut context = ParseContext::new(
+                    db,
+                    input.path(db),
+                    input.root(db),
+                    buffer,
+                );
+                let root_id = Program::orphaned(&mut context, tree.root_node())
+                    .map_or_else(
+                        |e| {
+                            e.report(db);
+                            None
+                        },
+                        |program| { Some(program) },
+                    );
+                if let Some(program) = root_id {
+                    Some(
+                        Parsed::new(db, context.file_id, Arc::new(context.tree), program),
+                    )
+                } else {
+                    None
+                }
+            }
+        }
+        Err(e) => {
+            e.report(db);
+            None
+        }
+    }
+}
+#[salsa::tracked(return_ref)]
+pub fn parse_program(
+    db: &dyn salsa::Database,
+    input: codegen_sdk_cst::File,
+) -> Parsed<'_> {
+    let raw = parse_program_raw(db, input);
+    if let Some(parsed) = raw {
+        parsed
+    } else {
+        panic!("Failed to parse program");
+    }
+}
+pub struct Language;
+impl CSTLanguage for Language {
+    type Types<'db> = NodeTypes<'db>;
+    type Program<'db> = Program<'db>;
+    fn language() -> &'static codegen_sdk_common::language::Language {
+        &codegen_sdk_common::language::language::Language
+    }
+    fn parse<'db>(
+        db: &'db dyn salsa::Database,
+        content: std::string::String,
+    ) -> Option<
+        (&'db Self::Program<'db>, &'db Tree<Self::Types<'db>>, indextree::NodeId),
+    > {
+        let input = codegen_sdk_cst::File::new(
+            db,
+            std::path::PathBuf::new(),
+            content,
+            std::path::PathBuf::new(),
+        );
+        let parsed = parse_program(db, input);
+        let program_id = parsed.program(db);
+        let tree = parsed.tree(db);
+        let program = tree.get(&program_id).unwrap().as_ref();
+        Some((program.try_into().unwrap(), tree, program_id))
+    }
+}
