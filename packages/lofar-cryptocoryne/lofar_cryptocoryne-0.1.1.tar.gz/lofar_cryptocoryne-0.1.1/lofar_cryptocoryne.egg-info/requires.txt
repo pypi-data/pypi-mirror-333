@@ -1,0 +1,8 @@
+hvac
+py-consul
+requests[socks]
+acme
+josepy
+simple_acme_dns
+cryptography
+desec-dns

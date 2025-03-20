@@ -1,0 +1,2 @@
+[console_scripts]
+l2ss-cryptocoryne-certbot = lofar_cryptocoryne.cli:main
