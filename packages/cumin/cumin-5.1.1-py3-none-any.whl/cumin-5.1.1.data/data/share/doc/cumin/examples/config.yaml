@@ -1,0 +1,76 @@
+# Cumin main configuration
+#
+# By default Cumin load the configuration from /etc/cumin/config.yaml, but it can be overriden by command line argument
+#
+transport: clustershell  # Default transport to use, can be overriden by command line argument
+log_file: ~/.cumin/cumin.log  # Absolute or relative path for the log file, expands ~ into the user's home directory
+# If set, use this backend to parse the query first and only if it fails, fallback to parse it with the general
+# multi-query grammar [optional]
+default_backend: direct
+
+# Environment variables that will be defined [optional]
+environment:
+    ENV_VARIABLE: env_value
+
+# Backend-specific configurations [optional]
+puppetdb:
+    host: puppetdb.local
+    port: 443
+    # [optional] Allow to override the default HTTPS scheme with HTTP in case the connection to PuppetDB is secured in
+    # other ways (e.g. SSH tunnel)
+    scheme: https
+    timeout: 30  # The timeout in seconds to pass to requests when calling the PuppetDB API [optional]
+
+    # [optional] Whether to verify SSL CA certificate: true to verify with the default system CA
+    # bundle, a path to a certificate to verify against that certificate, or false to disable
+    # verification. This is passed to requests's 'verify' option, for more details see:
+    # https://requests.readthedocs.io/en/latest/user/advanced/#ssl-cert-verification
+    ssl_verify: true
+
+    # [optional] Path to SSL client certificiate and key for communicating with PuppetDB.
+    # If only ssl_client_cert is set, it is assumed that the single file contains both the private
+    # key and the certificate. For more details, see:
+    # https://requests.readthedocs.io/en/latest/user/advanced/#client-side-certificates
+    ssl_client_cert: /path/to/cert.pem
+    ssl_client_key: /path/to/key.pem
+
+    urllib3_disable_warnings:  # List of Python urllib3 exceptions to ignore
+        - SomeWarning  # See the urllib3.exceptions module for available warnings
+
+openstack:
+    auth_url: http://keystone.local:5000
+    username: observer  # Keystone API user's username
+    password: observer_password  # Keystone API user's password
+    domain_suffix: openstack.local  # OpenStack managed domain, to be added to all hostnames
+    nova_api_version: 2.12
+    timeout: 2  # Used for both Keystone and Nova API calls
+    # Additional parameters to set when instantiating the novaclient Client
+    client_params:
+        region_name: region1
+    # Default query parameters. The ones set by default anyway are: status: ACTIVE and vm_state: ACTIVE [optional]
+    query_params:
+        project: project_name  # Parameter name: parameter value
+
+knownhosts:
+    files:  # List of SSH known hosts files to load
+        - /path/to/known_hosts
+
+# Transport-specific configuration
+clustershell:
+    ssh_options:  # SSH options passed to ClusterShell [optional]
+        - 'some_option'
+    fanout: 16  # Max size of the sliding window of concurrent workers active at any given time [optional, default: 64]
+
+# Kerberos specific configuration [optional]
+kerberos:
+    # Whether the SSH authentication to the hosts will be done via Kerberos. If true ensures that a valid Kerberos
+    # ticket is present for the current user. [optional, default: false]
+    ensure_ticket: false
+    # Whether the check for a valid Kerberos ticket should be performed also when Cumin is run as root.
+    # [optional, default: false]
+    ensure_ticket_root: false
+
+# Plugins-specific configuration
+plugins:
+    backends:  # External backends. Each module must define GRAMMAR_PREFIX and query_class, and be in Python PATH
+        - external.backend.module
