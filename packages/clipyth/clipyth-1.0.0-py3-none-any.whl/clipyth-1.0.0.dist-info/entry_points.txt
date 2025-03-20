@@ -1,0 +1,2 @@
+[console_scripts]
+clipyth = clipyth:main
