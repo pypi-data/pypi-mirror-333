@@ -1,0 +1,10 @@
+airflow/providers/facebook/LICENSE,sha256=gXPVwptPlW1TJ4HSuG5OMPg-a3h43OGMkZRR1rpwfJA,10850
+airflow/providers/facebook/__init__.py,sha256=_lsijRMZo8YweKVJD2dskuXsJXt2VlEgZYBkVcIbOfg,1495
+airflow/providers/facebook/get_provider_info.py,sha256=KowXM-5E6Q1Ex_nZ9Ik0lT7Kn253UV7wAz_Sd6a3II4,2667
+airflow/providers/facebook/ads/__init__.py,sha256=9hdXHABrVpkbpjZgUft39kOFL2xSGeG4GEua0Hmelus,785
+airflow/providers/facebook/ads/hooks/__init__.py,sha256=9hdXHABrVpkbpjZgUft39kOFL2xSGeG4GEua0Hmelus,785
+airflow/providers/facebook/ads/hooks/ads.py,sha256=j6vJ_gPpTrBszqS5JSd7wG40vw2U7lfCmfZLjRytVv8,7871
+apache_airflow_providers_facebook-3.7.1.dist-info/entry_points.txt,sha256=4LCeSmYuXHJ4t19N4WDurSny_cQ1sqsiIjo79o9ghtI,104
+apache_airflow_providers_facebook-3.7.1.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+apache_airflow_providers_facebook-3.7.1.dist-info/METADATA,sha256=FyDipSuLiAOXsmEKSBzn2KFDjeR_syTzqViZtefku1A,3902
+apache_airflow_providers_facebook-3.7.1.dist-info/RECORD,,
