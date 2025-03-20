@@ -1,0 +1,32 @@
+[build-system]
+requires = [
+    "packaging>=21.3",
+    "pip>=21.3",
+    "setuptools>=59.6",
+    "setuptools-git-versioning>=2.0,<3"
+]
+
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[project]
+name = "m3-db-utils"
+dynamic = [
+    "version",
+    "description",
+    "readme",
+    "license",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true

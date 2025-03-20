@@ -1,0 +1,7 @@
+isort==5.12.0
+ruff==0.6.9
+
+sphinx>=7,<7.5
+sphinx-autodoc-typehints>=2,<2.5
+myst-parser>=3,<3.2
+sphinx_design>=0.6,<0.7
