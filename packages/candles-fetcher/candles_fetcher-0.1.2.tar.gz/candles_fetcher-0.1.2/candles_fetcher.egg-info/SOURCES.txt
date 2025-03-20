@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+binance_candle_fetcher/__init__.py
+binance_candle_fetcher/fetch_candles.py
+candles_fetcher.egg-info/PKG-INFO
+candles_fetcher.egg-info/SOURCES.txt
+candles_fetcher.egg-info/dependency_links.txt
+candles_fetcher.egg-info/requires.txt
+candles_fetcher.egg-info/top_level.txt
