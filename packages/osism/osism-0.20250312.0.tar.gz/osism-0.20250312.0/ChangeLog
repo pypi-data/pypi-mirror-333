@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.20250312.0
+-------------
+
+* Add REST API for baremetal notifications (#1202)
