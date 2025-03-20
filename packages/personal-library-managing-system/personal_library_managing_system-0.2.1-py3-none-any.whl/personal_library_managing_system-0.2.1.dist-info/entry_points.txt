@@ -1,0 +1,2 @@
+[console_scripts]
+lms = library_manager.main:main
