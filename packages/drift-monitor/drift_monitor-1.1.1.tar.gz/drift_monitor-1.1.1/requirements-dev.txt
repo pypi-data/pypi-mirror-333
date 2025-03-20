@@ -1,0 +1,8 @@
+build
+twine
+black
+isort
+mypy
+gitchangelog
+mkdocs
+ipykernel
