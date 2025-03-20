@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/bopi/__init__.py
+src/bopi.egg-info/PKG-INFO
+src/bopi.egg-info/SOURCES.txt
+src/bopi.egg-info/dependency_links.txt
+src/bopi.egg-info/top_level.txt

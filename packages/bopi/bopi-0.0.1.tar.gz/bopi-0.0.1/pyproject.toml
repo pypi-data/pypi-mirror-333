@@ -1,0 +1,18 @@
+[project]
+name = "bopi"
+version = "0.0.1"
+authors = [
+  { name = "Yek" },
+]
+description = "Create bopjson files through Python"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"

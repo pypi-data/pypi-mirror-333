@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: bopi
+Version: 0.0.1
+Summary: Create bopjson files through Python
+Author: Yek
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# bopimo
+## is
+### awesome
