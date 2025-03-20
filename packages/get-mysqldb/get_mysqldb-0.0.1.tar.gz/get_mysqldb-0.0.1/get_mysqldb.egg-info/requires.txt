@@ -1,0 +1,4 @@
+pymysql
+loguru
+threading
+dbutils==3.1.0
