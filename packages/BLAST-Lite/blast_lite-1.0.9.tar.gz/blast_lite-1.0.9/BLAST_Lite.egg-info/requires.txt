@@ -1,0 +1,14 @@
+h5pyd
+numpy
+pandas
+matplotlib
+scipy
+nrel-rex
+geopy
+
+[dev]
+sphinx
+myst-parser
+sphinx-copybutton
+pydata-sphinx-theme
+ipykernel
