@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pcldapy
+Version: 0.0.1
+Summary: Python copy of pcldar
+Author: BobBorges
+Author-email: robert.borges@statistik.uu.se
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: jpype1
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
