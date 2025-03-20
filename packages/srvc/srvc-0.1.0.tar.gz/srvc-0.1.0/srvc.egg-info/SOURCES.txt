@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+srvc.egg-info/PKG-INFO
+srvc.egg-info/SOURCES.txt
+srvc.egg-info/dependency_links.txt
+srvc.egg-info/not-zip-safe
+srvc.egg-info/requires.txt
+srvc.egg-info/top_level.txt
