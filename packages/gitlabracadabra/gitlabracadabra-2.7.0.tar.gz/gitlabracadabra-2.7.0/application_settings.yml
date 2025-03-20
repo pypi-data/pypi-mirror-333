@@ -1,0 +1,137 @@
+application_settings:
+  type: application-settings
+  admin_mode: true
+  admin_notification_email:
+  after_sign_out_path:
+  after_sign_up_text:
+  akismet_api_key: SOMEKEY
+  akismet_enabled: true
+  allow_local_requests_from_hooks_and_services: false
+  archive_builds_in_human_readable:
+  authorized_keys_enabled: true
+  auto_devops_domain:
+  auto_devops_enabled: true
+  can_create_group: false
+  commit_email_hostname: users.noreply.gitlab.example.com
+  container_registry_token_expire_delay: 5
+  default_artifacts_expire_in: 30 days
+  default_branch_protection: 2
+  default_ci_config_path: ''
+  default_group_visibility: private
+  default_project_creation: 2
+  default_projects_limit: 100000
+  default_project_visibility: private #
+  default_snippet_visibility: private
+  diff_max_patch_bytes: 102400
+  disabled_oauth_sign_in_sources: []
+  dns_rebinding_protection_enabled: true
+  domain_blacklist_enabled: true
+  domain_blacklist: ['*.bad.example.com', '*.ugly.example.com']
+  domain_whitelist:
+  dsa_key_restriction: 0
+  ecdsa_key_restriction: 0
+  ed25519_key_restriction: 0
+  email_author_in_body: false
+  enabled_git_access_protocol:
+  enforce_terms: true
+  external_auth_client_cert:
+  external_auth_client_key:
+  external_auth_client_key_pass:
+  external_authorization_service_default_label:
+  external_authorization_service_enabled: true
+  external_authorization_service_timeout: 0.5
+  external_authorization_service_url: https://authz.example.org/
+  ### first_day_of_week: 0
+  gitaly_timeout_default: 55
+  gitaly_timeout_fast: 10
+  gitaly_timeout_medium: 30
+  grafana_enabled: false
+  grafana_url: "/-/grafana"
+  gravatar_enabled: true
+  hashed_storage_enabled: false
+  help_page_hide_commercial_content: false
+  help_page_support_url:
+  help_page_text:
+  hide_third_party_offers: false
+  home_page_url:
+  housekeeping_bitmaps_enabled: true
+  housekeeping_enabled: true
+  housekeeping_full_repack_period: 50
+  housekeeping_gc_period: 200
+  housekeeping_incremental_repack_period: 10
+  html_emails_enabled: true
+  import_sources:
+  - github
+  - bitbucket
+  - bitbucket_server
+  - gitlab
+  - google_code
+  - fogbugz
+  - git
+  - gitlab_project
+  - gitea
+  - manifest
+  - phabricator
+  instance_statistics_visibility_private: false
+  local_markdown_version: 0
+  max_artifacts_size: 100
+  max_attachment_size: 10
+  max_pages_size: 100
+  metrics_enabled: false
+  metrics_host: localhost
+  metrics_method_call_threshold: 10
+  metrics_packet_size: 1
+  metrics_pool_size: 16
+  metrics_port: 8089
+  metrics_sample_interval: 15
+  metrics_timeout: 10
+  mirror_available: true
+  pages_domain_verification_enabled: true
+  password_authentication_enabled_for_git: true
+  password_authentication_enabled_for_web: true
+  performance_bar_allowed_group_path:
+  plantuml_enabled: true
+  plantuml_url: https://plantuml.example.org/
+  polling_interval_multiplier: 1.0 ## '1.0'
+  project_export_enabled: true
+  prometheus_metrics_enabled: true
+  protected_ci_variables: false
+  recaptcha_enabled: true
+  recaptcha_private_key: PK
+  recaptcha_site_key: SK
+  receive_max_input_size:
+  repository_checks_enabled: true
+  repository_storages:
+  - default
+  require_two_factor_authentication: false
+  restricted_visibility_levels: []
+  rsa_key_restriction: 0
+  send_user_confirmation_email: false
+  session_expire_delay: 10080
+  shared_runners_enabled: true
+  shared_runners_text: Shared Runners
+  sign_in_text:
+  signup_enabled: true
+  terminal_max_session_time: 0
+  terms: Terms
+  throttle_authenticated_api_enabled: false
+  throttle_authenticated_api_period_in_seconds: 3600
+  throttle_authenticated_api_requests_per_period: 7200
+  throttle_authenticated_web_enabled: false
+  throttle_authenticated_web_period_in_seconds: 3600
+  throttle_authenticated_web_requests_per_period: 7200
+  throttle_unauthenticated_enabled: false
+  throttle_unauthenticated_period_in_seconds: 3600
+  throttle_unauthenticated_requests_per_period: 3600
+  time_tracking_limit_to_hours: false
+  two_factor_grace_period: 48
+  unique_ips_limit_enabled: false
+  unique_ips_limit_per_user: 10
+  unique_ips_limit_time_window: 3600
+  usage_ping_enabled: false
+  user_default_external: false
+  user_default_internal_regex:
+  user_oauth_applications: true
+  user_show_add_ssh_key_message: true
+  version_check_enabled: false
+  web_ide_clientside_preview_enabled: false

@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "config:best-practices",
+    ":automergeMinor",
+    ":automergeDigest",
+    ":prHourlyLimitNone",
+    ":prConcurrentLimit20",
+    "docker:enableMajor"
+  ],
+  "packageRules": [
+    {
+      "matchFileNames": [
+        ".gitlab-ci.yml",
+        "Jobs/*.gitlab-ci.yml"
+      ],
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["debian"],
+      "versioning": "docker"
+    },
+    {
+      "matchFileNames": [
+        "test-requirements.txt"
+      ],
+      "matchPackageNames": ["urllib3"],
+      "matchCurrentVersion": "1.*",
+      "allowedVersions": "/^1\\./"
+    }
+  ]
+}

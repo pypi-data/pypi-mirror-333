@@ -1,0 +1,23 @@
+extend-diff-ignore = "^[^/]*[.]egg-info/"
+tar-ignore
+tar-ignore = build
+tar-ignore = .coverage
+tar-ignore = dist
+tar-ignore = docs/_build
+tar-ignore = *.egg-info
+tar-ignore = .git
+tar-ignore = htmlconv
+tar-ignore = .idea
+tar-ignore = MANIFEST
+tar-ignore = .mypy_cache
+tar-ignore = node_modules
+tar-ignore = package-lock.json
+tar-ignore = package.json
+tar-ignore = *.pyc
+tar-ignore = .pytest_cache
+tar-ignore = *.swp
+tar-ignore = .testrepository
+tar-ignore = venv
+tar-ignore = .venv
+tar-ignore = .vscode
+tar-ignore = */__pycache__

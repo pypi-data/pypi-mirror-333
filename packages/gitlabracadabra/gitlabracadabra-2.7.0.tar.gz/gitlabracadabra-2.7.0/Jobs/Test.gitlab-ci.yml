@@ -1,0 +1,65 @@
+test:
+  stage: test
+  image:
+    name: python:3.13.2-slim@sha256:f3614d98f38b0525d670f287b0474385952e28eb43016655dd003d0e28cf8652
+    entrypoint: [""]
+  before_script:
+    - pip install --root-user-action=ignore hatch hatch-pip-compile
+  script:
+    - hatch fmt
+    - hatch test --cover -vv
+    - hatch run types:check
+    - hatch run hatch-test.py3.13:coverage html
+  interruptible: true
+  rules:
+    - if: '$TEST_DISABLED'
+      when: never
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH'
+  artifacts:
+    paths:
+      - htmlcov/
+    expire_in: 15 days
+    when: always
+
+
+test-deb:
+  stage: test
+  image: debian:bookworm@sha256:35286826a88dc879b4f438b645ba574a55a14187b483d09213a024dc0c0a64ed
+  needs: [build-deb]
+  before_script:
+    - apt-get update
+    - apt-get install -y autopkgtest python3-setuptools python3-vcr ./debian/output/gitlabracadabra_*_all.deb
+  script:
+    - autopkgtest --output-dir /tmp/output-dir -B  . -- null
+  rules:
+    - if: '$TEST_DISABLED'
+      when: never
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH'
+
+
+test-image:
+  stage: test
+  image: debian:bookworm@sha256:35286826a88dc879b4f438b645ba574a55a14187b483d09213a024dc0c0a64ed
+  needs: [build]
+  services:
+    - name: 'docker:28-dind@sha256:9a651b22672c7151b5d8ca820ed2290b3fe4d4922e9b3f37ab14c8876da6613d'
+      command: ['--tls=false', '--host=tcp://0.0.0.0:2375']
+  before_script:
+    - apt-get update
+    - apt-get install -y docker.io
+  script:
+    - |
+      if [[ -z "$CI_COMMIT_TAG" ]]; then
+        export CI_APPLICATION_REPOSITORY=${CI_APPLICATION_REPOSITORY:-$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG}
+        export CI_APPLICATION_TAG=${CI_APPLICATION_TAG:-$CI_COMMIT_SHA}
+      else
+        export CI_APPLICATION_REPOSITORY=${CI_APPLICATION_REPOSITORY:-$CI_REGISTRY_IMAGE}
+        export CI_APPLICATION_TAG=${CI_APPLICATION_TAG:-$CI_COMMIT_TAG}
+      fi
+    - export DOCKER_HOST='docker'
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+    - docker build --file test/Dockerfile --build-arg IMAGE="$CI_APPLICATION_REPOSITORY:$CI_APPLICATION_TAG" .
+  rules:
+    - if: '$TEST_DISABLED'
+      when: never
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH'

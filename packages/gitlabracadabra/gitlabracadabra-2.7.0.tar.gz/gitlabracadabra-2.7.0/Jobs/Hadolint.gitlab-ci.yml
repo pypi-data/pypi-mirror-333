@@ -1,0 +1,13 @@
+hadolint:
+  stage: test
+  image: hadolint/hadolint:v2.12.1-beta-alpine@sha256:e6f3fb90751bd85e53e4f0b758fbd77bce25833c80d9dcdb49aabc5ee39ff018
+  needs: []
+  script:
+    - |
+        [ -n $CI_DEBUG ] && set -x
+    - hadolint $CI_PROJECT_DIR/Dockerfile
+    - hadolint $CI_PROJECT_DIR/test/Dockerfile
+  rules:
+    - if: '$TEST_DISABLED'
+      when: never
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH'

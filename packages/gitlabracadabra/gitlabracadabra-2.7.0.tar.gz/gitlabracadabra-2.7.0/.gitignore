@@ -1,0 +1,17 @@
+build/
+.coverage
+dist/
+docs/_build
+*.egg-info
+htmlcov
+.idea/
+MANIFEST
+.mypy_cache/
+node_modules/
+package-lock.json
+package.json
+*.pyc
+.pytest_cache
+.*.swp
+.testrepository/
+.vscode

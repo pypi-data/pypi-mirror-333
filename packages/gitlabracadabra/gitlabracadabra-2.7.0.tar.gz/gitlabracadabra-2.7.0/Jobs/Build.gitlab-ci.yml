@@ -1,0 +1,15 @@
+build-deb:
+  stage: build
+  image: debian:bookworm@sha256:35286826a88dc879b4f438b645ba574a55a14187b483d09213a024dc0c0a64ed
+  before_script:
+    - apt-get update
+    - apt-get install -y git-buildpackage --no-install-recommends
+  script:
+    - apt-get build-dep -y .
+    - gbp buildpackage --git-ignore-branch --git-no-pbuilder --git-export-dir=${CI_PROJECT_DIR}/debian/output -us -uc
+  rules:
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH'
+  artifacts:
+    name: "$CI_JOB_NAME:$CI_COMMIT_REF_NAME"
+    paths:
+      - ${CI_PROJECT_DIR}/debian/output/

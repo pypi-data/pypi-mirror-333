@@ -1,0 +1,475 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: GET
+    uri: http://gitlab.example.com/api/v4/projects/test%2Fprotected-branches
+  response:
+    body:
+      string: '{"message":"404 Project Not Found"}'
+    headers:
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Nov 2024 14:38:32 GMT
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW5118ENQWTNSFW10BCF5Y","version":"1"}'
+      X-Request-Id:
+      - 01JDHW5118ENQWTNSFW10BCF5Y
+      X-Runtime:
+      - '0.031043'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: GET
+    uri: http://gitlab.example.com/api/v4/namespaces/test
+  response:
+    body:
+      string: '{"id":4,"name":"Test","path":"test","kind":"group","full_path":"test","parent_id":null,"avatar_url":null,"web_url":"http://gitlab.example.com/groups/test","members_count_with_descendants":1,"root_repository_size":6044,"projects_count":2}'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '237'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Nov 2024 14:38:32 GMT
+      Etag:
+      - W/"1c369aa40fba45e8198a43cd1b7da799"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW512GEPMP4AW7V130G9PY","version":"1"}'
+      X-Request-Id:
+      - 01JDHW512GEPMP4AW7V130G9PY
+      X-Runtime:
+      - '0.040464'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"path": "protected-branches", "name": "protected-branches", "initialize_with_readme":
+      true, "namespace_id": 4}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '111'
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: POST
+    uri: http://gitlab.example.com/api/v4/projects
+  response:
+    body:
+      string: '{"id":15,"description":null,"name":"protected-branches","name_with_namespace":"Test
+        / protected-branches","path":"protected-branches","path_with_namespace":"test/protected-branches","created_at":"2024-11-25T14:38:32.704Z","default_branch":"main","tag_list":[],"topics":[],"ssh_url_to_repo":"git@gitlab.example.com:test/protected-branches.git","http_url_to_repo":"http://gitlab.example.com/test/protected-branches.git","web_url":"http://gitlab.example.com/test/protected-branches","readme_url":"http://gitlab.example.com/test/protected-branches/-/blob/main/README.md","forks_count":0,"avatar_url":null,"star_count":0,"last_activity_at":"2024-11-25T14:38:32.653Z","namespace":{"id":4,"name":"Test","path":"test","kind":"group","full_path":"test","parent_id":null,"avatar_url":null,"web_url":"http://gitlab.example.com/groups/test"},"repository_storage":"default","container_registry_image_prefix":"gitlab-registry.example.com/test/protected-branches","_links":{"self":"http://gitlab.example.com/api/v4/projects/15","issues":"http://gitlab.example.com/api/v4/projects/15/issues","merge_requests":"http://gitlab.example.com/api/v4/projects/15/merge_requests","repo_branches":"http://gitlab.example.com/api/v4/projects/15/repository/branches","labels":"http://gitlab.example.com/api/v4/projects/15/labels","events":"http://gitlab.example.com/api/v4/projects/15/events","members":"http://gitlab.example.com/api/v4/projects/15/members","cluster_agents":"http://gitlab.example.com/api/v4/projects/15/cluster_agents"},"packages_enabled":true,"empty_repo":false,"archived":false,"visibility":"private","resolve_outdated_diff_discussions":false,"container_expiration_policy":{"cadence":"1d","enabled":false,"keep_n":10,"older_than":"90d","name_regex":".*","name_regex_keep":null,"next_run_at":"2024-11-26T14:38:32.717Z"},"repository_object_format":"sha1","issues_enabled":true,"merge_requests_enabled":true,"wiki_enabled":true,"jobs_enabled":true,"snippets_enabled":true,"container_registry_enabled":true,"service_desk_enabled":false,"service_desk_address":null,"can_create_merge_request_in":true,"issues_access_level":"enabled","repository_access_level":"enabled","merge_requests_access_level":"enabled","forking_access_level":"enabled","wiki_access_level":"enabled","builds_access_level":"enabled","snippets_access_level":"enabled","pages_access_level":"private","analytics_access_level":"enabled","container_registry_access_level":"enabled","security_and_compliance_access_level":"private","releases_access_level":"enabled","environments_access_level":"enabled","feature_flags_access_level":"enabled","infrastructure_access_level":"enabled","monitor_access_level":"enabled","model_experiments_access_level":"enabled","model_registry_access_level":"enabled","emails_disabled":false,"emails_enabled":true,"shared_runners_enabled":true,"lfs_enabled":true,"creator_id":1,"import_url":null,"import_type":null,"import_status":"none","import_error":null,"open_issues_count":0,"description_html":"","updated_at":"2024-11-25T14:38:32.704Z","ci_default_git_depth":20,"ci_forward_deployment_enabled":true,"ci_forward_deployment_rollback_allowed":true,"ci_job_token_scope_enabled":false,"ci_separated_caches":true,"ci_allow_fork_pipelines_to_run_in_parent_project":true,"ci_id_token_sub_claim_components":["project_path","ref_type","ref"],"build_git_strategy":"fetch","keep_latest_artifact":true,"restrict_user_defined_variables":false,"ci_pipeline_variables_minimum_override_role":"maintainer","runners_token":"GR1348941VozeF3LKrxJ8HBcWjP-B","runner_token_expiration_interval":null,"group_runners_enabled":true,"auto_cancel_pending_pipelines":"enabled","build_timeout":3600,"auto_devops_enabled":true,"auto_devops_deploy_strategy":"continuous","ci_push_repository_for_job_token_allowed":false,"ci_config_path":null,"public_jobs":true,"shared_with_groups":[],"only_allow_merge_if_pipeline_succeeds":false,"allow_merge_on_skipped_pipeline":null,"request_access_enabled":true,"only_allow_merge_if_all_discussions_are_resolved":false,"remove_source_branch_after_merge":true,"printing_merge_request_link_enabled":true,"merge_method":"merge","squash_option":"default_off","enforce_auth_checks_on_uploads":true,"suggestion_commit_message":null,"merge_commit_template":null,"squash_commit_template":null,"issue_branch_template":null,"warn_about_potentially_unwanted_characters":true,"autoclose_referenced_issues":true}'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4391'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Nov 2024 14:38:33 GMT
+      Etag:
+      - W/"849844871ad65be2c6981fd56466e21a"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW5141AYZXRTH96Y1BA5MZ","version":"1"}'
+      X-Request-Id:
+      - 01JDHW5141AYZXRTH96Y1BA5MZ
+      X-Runtime:
+      - '0.905203'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: GET
+    uri: http://gitlab.example.com/api/v4/projects/15/protected_branches
+  response:
+    body:
+      string: '[]'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Nov 2024 14:38:33 GMT
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Link:
+      - <http://gitlab.example.com/api/v4/projects/15/protected_branches?id=15&page=1&per_page=20>;
+        rel="first", <http://gitlab.example.com/api/v4/projects/15/protected_branches?id=15&page=1&per_page=20>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW520QZAQEPFYSB4GSSPTN","version":"1"}'
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 01JDHW520QZAQEPFYSB4GSSPTN
+      X-Runtime:
+      - '0.086041'
+      X-Total:
+      - '0'
+      X-Total-Pages:
+      - '1'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: GET
+    uri: http://gitlab.example.com/api/v4/projects/15/protected_branches
+  response:
+    body:
+      string: '[{"id":21,"name":"main","push_access_levels":[{"id":24,"access_level":40,"access_level_description":"Maintainers","deploy_key_id":null}],"merge_access_levels":[{"id":21,"access_level":40,"access_level_description":"Maintainers"}],"allow_force_push":false}]'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Nov 2024 14:38:34 GMT
+      Etag:
+      - W/"dbe49bda84276fb3a559963bde2a5d98"
+      Link:
+      - <http://gitlab.example.com/api/v4/projects/15/protected_branches?id=15&page=1&per_page=20>;
+        rel="first", <http://gitlab.example.com/api/v4/projects/15/protected_branches?id=15&page=1&per_page=20>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW5331NAVSSAMX5JNFZYAP","version":"1"}'
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 01JDHW5331NAVSSAMX5JNFZYAP
+      X-Runtime:
+      - '0.059885'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      content-length:
+      - '256'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"name": "develop", "allowed_to_merge": [{"access_level": 30}], "allowed_to_push":
+      [{"access_level": 0}], "push_access_level": 0, "merge_access_level": 30}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '155'
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: POST
+    uri: http://gitlab.example.com/api/v4/projects/15/protected_branches
+  response:
+    body:
+      string: '{"id":22,"name":"develop","push_access_levels":[{"id":25,"access_level":0,"access_level_description":"No
+        one","deploy_key_id":null}],"merge_access_levels":[{"id":22,"access_level":30,"access_level_description":"Developers
+        + Maintainers"}],"allow_force_push":false}'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '264'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Nov 2024 14:38:34 GMT
+      Etag:
+      - W/"7d74599496df94d09c347fb8968f799e"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW535909MD1XQA99AZ28P7","version":"1"}'
+      X-Request-Id:
+      - 01JDHW535909MD1XQA99AZ28P7
+      X-Runtime:
+      - '0.073157'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: DELETE
+    uri: http://gitlab.example.com/api/v4/projects/15/protected_branches/main
+  response:
+    body:
+      string: ''
+    headers:
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 25 Nov 2024 14:38:34 GMT
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW537VGA06MS5V1RJCDXR9","version":"1"}'
+      X-Request-Id:
+      - 01JDHW537VGA06MS5V1RJCDXR9
+      X-Runtime:
+      - '0.050807'
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: '{"name": "main", "allowed_to_merge": [{"access_level": 0}], "allowed_to_push":
+      [{"access_level": 30}], "push_access_level": 30, "merge_access_level": 0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '152'
+      Content-type:
+      - application/json
+      PRIVATE-TOKEN:
+      - glpat-yMB69tHJWVfaDH1qU6Li
+      User-Agent:
+      - gitlabracadabra/2.5.0
+    method: POST
+    uri: http://gitlab.example.com/api/v4/projects/15/protected_branches
+  response:
+    body:
+      string: '{"id":23,"name":"main","push_access_levels":[{"id":26,"access_level":30,"access_level_description":"Developers
+        + Maintainers","deploy_key_id":null}],"merge_access_levels":[{"id":23,"access_level":0,"access_level_description":"No
+        one"}],"allow_force_push":false}'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '261'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Nov 2024 14:38:34 GMT
+      Etag:
+      - W/"66d086e621df68cbded5cb3888f93713"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Meta:
+      - '{"correlation_id":"01JDHW539R38P34RGWV75S2W5V","version":"1"}'
+      X-Request-Id:
+      - 01JDHW539R38P34RGWV75S2W5V
+      X-Runtime:
+      - '0.070688'
+    status:
+      code: 201
+      message: Created
+version: 1

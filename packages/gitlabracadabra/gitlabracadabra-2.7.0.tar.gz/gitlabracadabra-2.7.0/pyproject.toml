@@ -1,0 +1,117 @@
+[build-system]
+requires = [
+  "hatchling == 1.27.0",
+  "hatch-pip-compile == 1.11.3"
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "gitlabracadabra"
+dynamic = ["version"]
+description = "Adds some magic to GitLab"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "LGPL-3.0-or-later"
+authors = [
+    { name = "Mathieu Parent", email = "math.parent@gmail.com" },
+]
+keywords = [
+    "api",
+    "gitlab",
+    "yaml",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Natural Language :: English",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "html5lib",
+    "jsonschema >= 2.6.0",
+    "packaging",
+    "pip-system-certs",
+    "pygit2",
+    "pygithub",
+    "python-gitlab >= 2.5.0",
+    "PyYAML",
+    "semantic_version",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/gitlabracadabra/gitlabracadabra"
+Issues = "https://gitlab.com/gitlabracadabra/gitlabracadabra/-/issues"
+Source = "https://gitlab.com/gitlabracadabra/gitlabracadabra"
+
+[project.scripts]
+gitlabracadabra = "gitlabracadabra.cli:main"
+
+[tool.hatch.version]
+path = "src/gitlabracadabra/__init__.py"
+
+[tool.hatch.envs.default]
+type = "pip-compile"
+
+[tool.hatch.envs.hatch-build]
+type = "pip-compile"
+lock-filename = "build-requirements.txt"
+
+[tool.hatch.envs.hatch-static-analysis]
+type = "pip-compile"
+lock-filename = "static-analysis-requirements.txt"
+
+[tool.hatch.envs.hatch-test]
+type = "pip-compile"
+lock-filename = "test-requirements.txt"
+extra-dependencies = [
+    "vcrpy",
+]
+
+[tool.hatch.envs.types]
+lock-filename = "types-requirements.txt"
+extra-dependencies = [
+  "mypy>=1.0.0",
+  "packaging",
+  "pytest",
+  "types-html5lib",
+  "types-PyYAML",
+  "types-requests",
+]
+
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/gitlabracadabra tests}"
+
+[tool.ruff.lint]
+ignore = [
+  "TRY400",  # Use `logging.exception` instead of `logging.error`
+  "PT011",   # `pytest.raises(ValueError)` is too broad,
+             # set the `match` parameter or use a more specific exception
+             # https://github.com/astral-sh/ruff/issues/6840
+             # https://github.com/astral-sh/ruff/issues/5157
+  "PLW2901", # FIXME `for` loop variable overwritten by assignment target
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/*" = [
+  "SLF001",  # SLF001 Private member accessed
+]
+
+[tool.coverage.run]
+source_pkgs = ["gitlabracadabra"]
+branch = true
+parallel = true
+omit = [
+  "src/gitlabracadabra/__init__.py",
+]
+dynamic_context = "test_function"
+
+[tool.coverage.paths]
+gitlabracadabra = ["src/gitlabracadabra", "*/gitlabracadabra/src/gitlabracadabra"]
+tests = ["tests", "*/gitlabracadabra/tests"]
+

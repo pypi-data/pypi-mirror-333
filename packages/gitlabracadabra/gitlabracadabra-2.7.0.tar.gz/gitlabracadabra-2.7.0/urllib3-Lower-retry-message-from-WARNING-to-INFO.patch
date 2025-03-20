@@ -1,0 +1,18 @@
+From: Mathieu Parent <math.parent@gmail.com>
+Date: Thu Apr 14 13:40:01 2022 +0200
+Subject: [PATCH] urllib3: Lower retry message from WARNING to INFO
+
+See https://github.com/urllib3/urllib3/issues/2583
+
+diff --git a/pygit2/remote.py b/pygit2/remote.py
+--- /usr/lib/python3/dist-packages/urllib3/connectionpool.py.orig 2021-06-27 15:02:18.000000000 +0000
++++ /usr/lib/python3/dist-packages/urllib3/connectionpool.py      2022-04-14 11:55:30.533652336 +0000
+@@ -777,7 +777,7 @@
+
+         if not conn:
+             # Try again
+-            log.warning(
++            log.info(
+                 "Retrying (%r) after connection broken by '%r': %s", retries, err, url
+             )
+             return self.urlopen(
