@@ -1,0 +1,5 @@
+@import url('base.css');
+
+.input {
+  min-width: 25em;
+}
