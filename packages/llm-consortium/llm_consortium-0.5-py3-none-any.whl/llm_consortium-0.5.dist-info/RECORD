@@ -1,0 +1,9 @@
+llm_consortium/__init__.py,sha256=bUM0IoBJfRvQInXmevi98z5em40Qf-brNoUokatYyEM,34841
+llm_consortium/arbiter_prompt.xml,sha256=MfbItPggmmzAfXOOmZagE7X5s_G7rnXay0kKNeYool0,4152
+llm_consortium/iteration_prompt.txt,sha256=x8idj1rWe5oMef6lbWTVOU4aGv9vKge3YnkWH_KHNKM,1817
+llm_consortium/system_prompt.txt,sha256=wT77FGpHp0HTyQqLL-LD6Gst71qjptODh9IX-SznxUA,1181
+llm_consortium-0.5.dist-info/METADATA,sha256=McdIpSSKkBCPjesc5eNqHFDeJMbnkA7FWpNLxDTpuqU,6010
+llm_consortium-0.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+llm_consortium-0.5.dist-info/entry_points.txt,sha256=WJdaB4nO4MJTRG6aLmJVCKv0fmfp2pTZiwXbP2FV1yY,38
+llm_consortium-0.5.dist-info/top_level.txt,sha256=Be5oOQwLqnJdeLd8QEJ1ZROUPXz7Z4sGrz68ewBFf8w,15
+llm_consortium-0.5.dist-info/RECORD,,
