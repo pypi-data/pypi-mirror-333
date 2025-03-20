@@ -1,0 +1,9 @@
+README.md
+setup.py
+google_review_analysis.egg-info/PKG-INFO
+google_review_analysis.egg-info/SOURCES.txt
+google_review_analysis.egg-info/dependency_links.txt
+google_review_analysis.egg-info/requires.txt
+google_review_analysis.egg-info/top_level.txt
+review_analysis/__init__.py
+review_analysis/main.py
