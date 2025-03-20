@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+winConnect/WinConnectBase.py
+winConnect/WinConnectClient.py
+winConnect/WinConnectDaemon.py
+winConnect/__init__.py
+winConnect/__meta__.py
+winConnect/errors.py
+winConnect/exceptions.py
+winConnect/utils.py
+winConnect.egg-info/PKG-INFO
+winConnect.egg-info/SOURCES.txt
+winConnect.egg-info/dependency_links.txt
+winConnect.egg-info/requires.txt
+winConnect.egg-info/top_level.txt
