@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: krakenio
+Version: 0.2.0
+Summary: Kraken.io API Client
+Home-page: https://github.com/kraken-io/kraken-python
+Author: Nekkra UG
+Author-email: support@kraken.io
+License: MIT
+Keywords: kraken,kraken.io,image,optimizer,resizer
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: requests>=2.28.0
+Requires-Dist: urllib3<2.0
+Provides-Extra: test
+Requires-Dist: python-dotenv>=1.0.0; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Official Python client for integrating with the Kraken.io Image Optimizer, providing fast and powerful image optimization capabilities.
