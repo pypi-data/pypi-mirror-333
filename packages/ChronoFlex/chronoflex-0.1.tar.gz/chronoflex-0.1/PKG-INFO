@@ -1,0 +1,44 @@
+Metadata-Version: 2.2
+Name: ChronoFlex
+Version: 0.1
+Summary: A Python package for enhanced date and time formatting, localization, time zone conversion, and scheduling.
+Home-page: https://github.com/ktsoaela/ChronoFlex
+Author: Khotso Tsoaela
+Author-email: khotso.s.tsoaela@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pytz
+Requires-Dist: python-dateutil
+Requires-Dist: babel
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# ChronoFlex
+
+ChronoFlex is a Python package for enhanced date and time formatting, localization, time zone conversion, and scheduling.
+
+## Features
+- **Localization**: Format dates and times based on locale.
+- **Time Zone Conversion**: Convert datetime objects between time zones.
+- **Scheduling**: Schedule tasks with recurring patterns.
+
+## Installation
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+```bash
+from chronoflex import localization, timezone, scheduling
+```
+
+## License
+MIT
