@@ -1,0 +1,17 @@
+streamstore/__init__.py,sha256=KQPPXLfcehfEdSAHcET-5w88rehoxsO5IESesjRvrcM,213
+streamstore/_client.py,sha256=CS1vg6kvR0OK-5vk3vPCNPF3JbOYZSBYtI5MML7fQOE,33170
+streamstore/_exceptions.py,sha256=_iow6gnsjm5tlUSKk1bBfLcTtJqCJR9bgqmwRb7DvCk,1161
+streamstore/_mappers.py,sha256=6x0aRAtrD-Jrj-IQOEF5miVfkHRuk2g9mIzh98SZIp0,4500
+streamstore/_retrier.py,sha256=dbmY-Ab-gkCZGaV2yWRCmCFsM0zxnkh0xNu3jxpAoJY,1120
+streamstore/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamstore/schemas.py,sha256=qPiq8IVGDhEeA8i3UvXLWao_OhKhAhkIiCeGAw6OlfQ,6795
+streamstore/utils.py,sha256=YGkEaMuGtj4tefvkpwsbK9DjUvDfcuESxD8K_s4aea8,8277
+streamstore/_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamstore/_lib/s2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamstore/_lib/s2/v1alpha/s2_pb2.py,sha256=l3ndBv76_9Yj1GIxRcm7NQf8QfkYPwECJM5inOlUEIc,17200
+streamstore/_lib/s2/v1alpha/s2_pb2.pyi,sha256=rATcycJlfmpdZ8bzNUVp-yaQgbnf7-hg4SjGPHnurz4,15645
+streamstore/_lib/s2/v1alpha/s2_pb2_grpc.py,sha256=H_oPeQa8WnGYQ-y7ijIgyprwsojuxn3w5Q4nU99AOwk,29709
+streamstore-3.0.0.dist-info/METADATA,sha256=pqzVhA3zu2O7lB1fwIr69exBrAvFUKhmmGRYWADMjyI,2236
+streamstore-3.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+streamstore-3.0.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+streamstore-3.0.0.dist-info/RECORD,,
