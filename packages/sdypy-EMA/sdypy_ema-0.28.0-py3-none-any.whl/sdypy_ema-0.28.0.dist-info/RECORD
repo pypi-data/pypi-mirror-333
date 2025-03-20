@@ -1,0 +1,11 @@
+sdypy/EMA/EMA.py,sha256=AYxkqQvtfTQW5B1eZFZu3Q9-NnsrzhiuG5RdwV414d0,49925
+sdypy/EMA/__init__.py,sha256=jApta8ed-TFT20mjVUeU3iaks7DSBTnNpR6_MqTtix4,168
+sdypy/EMA/normal_modes.py,sha256=jfOjusZKjP20FohQWR5YTR9SK4df8P98bH8QkVUsAxI,4665
+sdypy/EMA/paper.bib,sha256=UKbzger8fEuRxP2clHretXrbSoRW9qFqUqEf9TsjPB0,1021
+sdypy/EMA/pole_picking.py,sha256=OFe63ukMpRgBqUt7f49KQM9OzbTqGCUpokxJ2Cqbhcc,19127
+sdypy/EMA/stabilization.py,sha256=La6Atof87cSlYcNFyJ8lgPiwO_rOgkmON-FsiAOQETs,3430
+sdypy/EMA/tools.py,sha256=HEdnnWfoKg0XJEkaVfDaVouyi9VlEf_INP-kW4UiASc,4660
+sdypy_ema-0.28.0.dist-info/METADATA,sha256=seTHdf3rHchOouSkT5f5BzBMmSIeRDPxr4JprYPoCBk,3601
+sdypy_ema-0.28.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sdypy_ema-0.28.0.dist-info/licenses/LICENSE,sha256=xmf6__EoVCDm9wpgyyh-_5HC8eWqXoPDVvDpMtPB9fg,1070
+sdypy_ema-0.28.0.dist-info/RECORD,,
