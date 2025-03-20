@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: async-hyperliquid
+Version: 0.1.0a1
+Summary: Async Hyperliquid client using aiohttp
+Author: oneforalone
+Author-email: oneforalone@proton.me
+Requires-Python: >=3.10,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.13,<4.0.0)
+Requires-Dist: eth-account (>=0.13.5,<0.14.0)
+Requires-Dist: eth-utils (>=5.2.0,<6.0.0)
+Requires-Dist: logging (>=0.4.9.6,<0.5.0.0)
+Requires-Dist: msgpack (>=1.1.0,<2.0.0)
+Project-URL: Documentation, https://github.com/oneforalone/async-hyperliquid
+Project-URL: Homepage, https://github.com/oneforalone/async-hyperliquid
+Project-URL: Issues, https://github.com/oneforalone/async-hyperliquid/issues
+Project-URL: Repository, https://github.com/oneforalone/async-hyperliquid
+Description-Content-Type: text/markdown
+
+# Async Hyperliquid
+
+use `aiohttp` to interactive with Hyperliquid
+
