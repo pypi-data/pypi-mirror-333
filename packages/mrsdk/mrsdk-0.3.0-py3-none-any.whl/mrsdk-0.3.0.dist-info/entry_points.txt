@@ -1,0 +1,2 @@
+[console_scripts]
+mrsdk = mrsdk.cli:main
