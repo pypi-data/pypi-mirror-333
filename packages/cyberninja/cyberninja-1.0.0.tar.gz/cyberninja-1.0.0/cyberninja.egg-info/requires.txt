@@ -1,0 +1,15 @@
+beautifulsoup4>=4.9.3
+bs4
+certifi
+colorama
+lxml
+PySocks
+requests>=2.25.1
+requests-futures>=1.0.0
+soupsieve
+stem>=1.8.0
+torrequest>=0.1.0
+pyfiglet>=0.8.post1
+term_image>=0.7.2
+timg>=1.1.6
+pillow<11,>=9.1
