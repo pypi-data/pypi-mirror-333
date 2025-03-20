@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: JWSToolKit
+Version: 1.0.4
+Summary: Un outil pour analyser les données JWST
+Author-email: Ton Nom <tonemail@example.com>
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: astropy
+
+# JWSTools
+A python package for handling JWST observations 
+
