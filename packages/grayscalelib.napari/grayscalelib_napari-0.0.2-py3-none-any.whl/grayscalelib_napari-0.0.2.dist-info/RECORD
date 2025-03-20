@@ -1,0 +1,7 @@
+grayscalelib/napari/__init__.py,sha256=K_yfT668zlckjM7xRznT7HMzeYFBdQXYk8MC0UAi9CM,88
+grayscalelib/napari/view.py,sha256=V8XsbeR7jX1FKeqT-Ii5Dp7jeeU1jT5JIl-nPnj77ro,183
+grayscalelib/napari/tests/test_view.py,sha256=gUDX2n2tlQ3alm8c4iqlVPHaSAMFouHXZPOg61Db-DI,233
+grayscalelib_napari-0.0.2.dist-info/METADATA,sha256=7hRUxs-EExjopg3x3WXEx8Qp3TynWzIhi9gfP3WY7jQ,1096
+grayscalelib_napari-0.0.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+grayscalelib_napari-0.0.2.dist-info/top_level.txt,sha256=XafczT0HjNhVHfUr_YzuhHR2_XFPlhTKbQOXBsC_Lig,13
+grayscalelib_napari-0.0.2.dist-info/RECORD,,
