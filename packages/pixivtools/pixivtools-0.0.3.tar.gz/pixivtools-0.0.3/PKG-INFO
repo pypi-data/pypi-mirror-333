@@ -1,0 +1,55 @@
+Metadata-Version: 2.2
+Name: pixivtools
+Version: 0.0.3
+Summary: A Python module for Pixiv crawling and interaction
+Home-page: https://github.com/aliubo/pixivtools
+Author: aliubo
+Author-email: liubo@aliubo.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: parsel
+Requires-Dist: pillow
+Requires-Dist: pyyaml
+Requires-Dist: sqlalchemy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# pixivhelper
+
+pixivhelper 是一个用于 Pixiv 爬虫和互动的 Python 模块。
+
+## 安装
+
+```
+pip install pixivhelper
+```
+
+## 使用方法
+
+```python
+import pixivhelper
+
+# 在这里添加使用示例
+```
+
+## 功能
+
+- 功能 1: 描述
+- 功能 2: 描述
+- ...
+
+## 许可证
+
+MIT
