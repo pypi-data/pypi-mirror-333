@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+shell2launch.py
+shell2launch.egg-info/PKG-INFO
+shell2launch.egg-info/SOURCES.txt
+shell2launch.egg-info/dependency_links.txt
+shell2launch.egg-info/entry_points.txt
+shell2launch.egg-info/top_level.txt
+tests/test_functions.py
+tests/test_main.py

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shell2launch"
+description = "Transform shell code that invokes python scripts to vscode debug configurations."
+authors = [{name="Jakob Jung"}]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+]
+license = {file = "LICENSE"}
+keywords = ["vscode", "debug"]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/jjaju/shell2launch"
+Issues = "https://github.com/jjaju/shell2launch/issues"
+
+[project.scripts]
+shell2launch = "shell2launch:main"
+
+[tool.setuptools]
+py-modules = ["shell2launch"]
+
+[tool.setuptools.dynamic]
+version = {attr = "shell2launch.__version__"}

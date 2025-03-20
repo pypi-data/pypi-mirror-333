@@ -1,0 +1,2 @@
+[console_scripts]
+shell2launch = shell2launch:main

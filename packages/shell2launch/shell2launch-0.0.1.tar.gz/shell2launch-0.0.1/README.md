@@ -1,0 +1,144 @@
+# shell2launch
+
+[![Pypi Status](https://img.shields.io/pypi/v/shell2launch)](https://pypi.org/project/shell2launch/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/shell2launch?logo=python&logoColor=FBE072)](https://pypi.org/project/shell2launch/)
+[![GitHub Actions (Tests)](https://github.com/jjaju/shell2launch/actions/workflows/tests.yaml/badge.svg)](https://github.com/jjaju/shell2launch/actions/workflows/tests.yaml)
+[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jjaju/50560ab0666b49dbaae6507c022107d9/raw/covbadge.json)](https://github.com/jjaju/shell2launch/actions/workflows/tests.yaml)
+
+Transform shell code that invokes python scripts to Visual Studio Code debug configurations.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install shell2launch.
+
+```sh
+pip install shell2launch
+```
+
+## Usage
+
+shell2launch helps you to quickly convert shell code that calls a Python script with additional arguments into a vscode debug configuration that can be copied and pasted into launch.json files.
+
+For Python projects that provide shell scripts with dozens of arguments, starting a debug run in vscode can be annoying, as the debug configuration expects arguments in [a different format](https://code.visualstudio.com/docs/python/debugging#_args) than shell code.
+
+Run shell2launch with the path to your shell script to print the debug configuration to your console.
+```sh
+shell2launch path/to/your/shellscript.sh
+```
+
+### Optional Arguments
+
+```
+--args_only
+```
+Setting this flag limits the output to the `"args": [...]` part of the debug configuration. This might be sufficient, if you want to set the other configuration attributes manually.
+
+```sh
+-o, --output_filepath path/to/your/output.txt
+```
+Allows you to provide a filepath to store the output.
+shell2launch will create the file at the specified location and writes the same output that gets printed to the console.
+
+## Example
+
+[./testing/](./testing/) contains a python script [example.py](./testing/example.py) and a corresponding shell script [example.sh](./testing/example.sh) that invokes the python script with arguments.
+
+To start a debug run of [example.py](./testing/example.py) with the same arguments as in the shell script, follow these steps:
+
+1. Open the *Run and Debug* view (Ctrl + Shift + D), click *create a `launch.json` file*, and select the *Python Debugger* and the *Python File* configuration.
+This creates `.vscode/launch.json`. The contents should look something like this: 
+    ```json
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python Debugger: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal"
+            }
+        ]
+    }
+    ```
+
+2. Run shell2launch on the shell script.
+    ```sh
+    shell2launch testing/example.sh
+    ```
+
+3. Copy the console output and append it to the list of configurations in `.vscode/launch.json`. It should now look like this:
+    ```json
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python Debugger: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal"
+            },
+            {
+                "name": "Python Debugger: testing/example.py with Arguments",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "testing/example.py",
+                "console": "integratedTerminal",
+                "args": [
+                    "positional",
+                    "--store_true",
+                    "--no_val",
+                    "--single_val", "1",
+                    "--list_val", "1", "2", "3", "4",
+                    "-s", "short",
+                    "--path", "dir/dir/file.txt",
+                ]
+            }
+        ]
+    }
+    ```
+
+4. In the *RUN AND DEBUG* dropdown select the new option *Python Debugger: testing/example.py with Arguments* and hit the play button (F5).
+Usually, this should print the following to your vscode terminal:
+    ```
+    {'list_val': ['1', '2', '3', '4'],
+    'no_val': None,
+    'path': 'dir/dir/file.txt',
+    'positional': 'positional',
+    'short': 'short',
+    'single_val': '1',
+    'store_true': True}
+    ```
+
+## Development Setup
+
+Clone this repository.
+
+```sh
+git clone https://github.com/jjaju/shell2launch.git
+```
+
+Navigate to the cloned repository.
+
+```sh
+cd shell2launch
+```
+
+Install dev dependencies.
+
+```sh
+pip install -r requirements_dev.txt
+```
+
+Install shell2launch in "editable" mode.
+
+```sh
+pip install -e .
+```
+
+Automatically run pytest, mypy, ruff, and coverage
+
+```sh
+tox -p
+```
