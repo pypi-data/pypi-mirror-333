@@ -1,0 +1,4 @@
+dist
+sedkit
+source
+tests
