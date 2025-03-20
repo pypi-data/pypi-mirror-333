@@ -1,0 +1,34 @@
+Metadata-Version: 2.2
+Name: screen-watcher-ig
+Version: 1.1.8
+Summary: 화면 변경 감지 모니터링 프로그램
+Home-page: https://github.com/rudclthe/screen-watcher-ig
+Author: rudclthe
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pynput
+Requires-Dist: pyobjc-framework-Quartz
+Requires-Dist: pync
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Screen Watcher IG 🖥️
+
+✅ 화면 변경 감지 프로그램  
+📌 특정 영역을 모니터링하고 변경되면 알림을 보내줍니다.  
+
+## 설치 방법
+```bash
+pip install screen-watcher-ig
