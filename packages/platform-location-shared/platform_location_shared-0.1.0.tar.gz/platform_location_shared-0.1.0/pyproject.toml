@@ -1,0 +1,32 @@
+[project]
+name = "platform-location-shared"
+dynamic = ["version"]
+description = "Shared modules for the Royal Voluntary Service platform-location"
+authors = [
+    {name = "paddyRVS", email = "Patrick.Kenneally@royalvoluntaryservice.org.uk"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic (>=2.10.6,<3.0.0)",
+    "fastapi (>=0.115.11,<0.116.0)"
+]
+
+[tool.poetry]
+version = "0.1.0"  # This version will be overridden by semantic-release
+packages = [{ include = "platform_location_shared" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = "platform_location_shared/__init__.py:__version__"
+branch = "main"
+build_command = "pip install poetry && poetry build"
+upload_to_pypi = true
+upload_to_release = true

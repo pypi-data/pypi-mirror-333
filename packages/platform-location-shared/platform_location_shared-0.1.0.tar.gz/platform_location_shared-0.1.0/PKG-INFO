@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: platform-location-shared
+Version: 0.1.0
+Summary: Shared modules for the Royal Voluntary Service platform-location
+Author: paddyRVS
+Author-email: Patrick.Kenneally@royalvoluntaryservice.org.uk
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi (>=0.115.11,<0.116.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Description-Content-Type: text/markdown
+
+# platform-location-shared
+Shared modules for the platform-location service
+
+
+## Coverage Test
+`poetry run python -m pytest --cov=platform_location_shared --cov-report=html`
