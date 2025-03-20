@@ -1,0 +1,14 @@
+rcode/__init__.py,sha256=AVbiWM53ce06uSOzn0rUoaVpJXL3IsfhT4AdeV6NPUk,21
+rcode/__main__.py,sha256=mjZIdH2duMd0PxcZohwWg8wbLMxXLg6A7pcq5q7R3dA,64
+rcode/rcode.py,sha256=uOmHj7-B-1UihqQE8oSGAwZPugSNWUpTF9qoG-ZDXy4,11269
+rcode/rssh.py,sha256=oBAgWgcRhCoJcquZWj5qgz3vAdR00FZukuXY2Za36I0,5036
+rcode/ipc/__init__.py,sha256=8jNG2F4KV7Xn6xZUD17lkGJd1Lh20fPb4me0a-tHRN8,80
+rcode/ipc/ipc.py,sha256=i9lVM0WKbw97V6eTC-vxY2rFdNR63TXfvomUuSj8loE,11318
+rcode/ipc/ipc_runner.py,sha256=PUX-xWjXoFqMey3kAy1JIfI1G2Xdj9iMIZfiPxhXXhk,937
+rcode-0.7.0.dist-info/LICENSE,sha256=66x4Ez_sgVWPTMHKpsuLqCaFQg9t098LcoZO60eepj4,1075
+rcode-0.7.0.dist-info/METADATA,sha256=foaM4jZa7T7om4RUTx68r5gpSaIwxA_PkeMVysMm6rw,902
+rcode-0.7.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+rcode-0.7.0.dist-info/entry_points.txt,sha256=KhaZqrVIbtb1lZBriee-O3fsr1hnmbkP4bQ--y_zCQw,168
+rcode-0.7.0.dist-info/top_level.txt,sha256=iN3Eo_2DFE8YHECWR5zjFgTISsCFGqLNUkVp-Qs-uoE,6
+rcode-0.7.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+rcode-0.7.0.dist-info/RECORD,,
