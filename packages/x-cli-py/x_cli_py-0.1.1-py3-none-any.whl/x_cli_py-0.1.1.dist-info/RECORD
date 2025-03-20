@@ -1,0 +1,14 @@
+x_cli_py/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+x_cli_py/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+x_cli_py/commands/post.py,sha256=MAmmOAXU0PL0cI_We7HzqJIot9UjZj_1S0PhEaMlClk,2531
+x_cli_py/commands/setup.py,sha256=fbjwqIFJX8tDpDNNE4qC117FEqnS9N-9tf4B38a_On0,1590
+x_cli_py/commands/timeline.py,sha256=_-u65rnJ49sZi-9CiVog1HTb7cr8NpDVAyGfX4iBQS4,4991
+x_cli_py/commands/whoami.py,sha256=QSOOi-z5Qa0kvRxyL_1nozyZgoWDcZ9aOjgHnrf7mlE,2953
+x_cli_py/main.py,sha256=FzhvCLKvMHYxeTpKQT8bbn6CS75fTeKMZlz5AgP_FzE,1213
+x_cli_py/theme.py,sha256=WPbJAti01blSbZYQg2vBJiN1KfqWIed7lliKNs7jzxs,1178
+x_cli_py/xcli.py,sha256=KQbuj5p-tdQpWMK8-gK2e6RdVJ4D-z0emFpyQr8o4HY,1744
+x_cli_py-0.1.1.dist-info/LICENSE,sha256=Uq-7ywKH3WlAAARHtYYvwG7m-0bCuzmRge4Z8383T4w,1065
+x_cli_py-0.1.1.dist-info/METADATA,sha256=DNA4o0fyrz6iqFL6Y3ZNpDpk9RDSjr4MdEryK_447Wg,1615
+x_cli_py-0.1.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+x_cli_py-0.1.1.dist-info/entry_points.txt,sha256=tXeIPtvg1MfCWVCcwIB7D1TiIWkIMXkpkdhbmlCQNI8,42
+x_cli_py-0.1.1.dist-info/RECORD,,
