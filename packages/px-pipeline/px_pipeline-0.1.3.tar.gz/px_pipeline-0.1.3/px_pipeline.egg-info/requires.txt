@@ -1,0 +1,6 @@
+
+[dev]
+pytest
+pytest-watch<5.0,>=4.2
+coverage==6.4.2
+twine
