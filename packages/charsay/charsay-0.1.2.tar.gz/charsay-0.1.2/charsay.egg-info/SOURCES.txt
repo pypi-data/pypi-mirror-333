@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.py
+charsay/__init__.py
+charsay/charsay.py
+charsay/speechbubble.py
+charsay.egg-info/PKG-INFO
+charsay.egg-info/SOURCES.txt
+charsay.egg-info/dependency_links.txt
+charsay.egg-info/top_level.txt
