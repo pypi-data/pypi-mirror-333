@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+version.txt
+binaries/ecos
+binaries/libecosc.dll
+binaries/proxyfmu
+ecospy.egg-info/PKG-INFO
+ecospy.egg-info/SOURCES.txt
+ecospy.egg-info/dependency_links.txt
+ecospy.egg-info/not-zip-safe
+ecospy.egg-info/top_level.txt
