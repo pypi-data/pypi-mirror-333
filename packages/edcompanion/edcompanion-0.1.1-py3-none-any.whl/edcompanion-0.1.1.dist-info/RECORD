@@ -1,0 +1,15 @@
+edcompanion/__init__.py,sha256=Lgf9keBX7aG_JEFt6UYSyiFKcm-BYGtmk9ohpQhYpyk,20
+edcompanion/_modidx.py,sha256=jojZcBCxavJ7NLphdrAcl3z1sNfAuHWkqT5qnFzsW40,1369
+edcompanion/core.py,sha256=f27lPATA1iQQF3zqhvMMeD__Y4deHOhnXKQJSJNkJVU,183
+edcompanion/eddb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+edcompanion/eddb/navigation.py,sha256=8bkObH_VlfcqPQ_CxtBhzCV5gmLdI3tq2YG-K1hw7eA,1115
+edcompanion/linalg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+edcompanion/linalg/fitsvd.py,sha256=2y8kNkgYRDocmb2YHU1NhGCbByQRMQGZlrKIq8gAyHg,734
+edcompanion/md/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+edcompanion/md/edastro.py,sha256=V5HYJxIQTjiuFy3jvb2LSskabkkv-v7Mv0Si_49VEtA,1152
+edcompanion-0.1.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+edcompanion-0.1.1.dist-info/METADATA,sha256=ZwmHsdMJjPD8CvxohXVWnxsk0d4Z3jAbJUCRD9dwwPc,2844
+edcompanion-0.1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+edcompanion-0.1.1.dist-info/entry_points.txt,sha256=g2i8oCmubLIDrXykx1tZgA-1PlYurh-UaLZxnHW_AP8,44
+edcompanion-0.1.1.dist-info/top_level.txt,sha256=OqP9dVyzts6fvRKaAXh297bq_TusUSX6A-blssl9b1w,12
+edcompanion-0.1.1.dist-info/RECORD,,
