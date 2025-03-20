@@ -1,0 +1,2 @@
+[console_scripts]
+home-clean-home = home_clean_home:main
