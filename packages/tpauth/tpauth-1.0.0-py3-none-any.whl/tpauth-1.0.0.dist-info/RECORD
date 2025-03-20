@@ -1,0 +1,11 @@
+tpauth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tpauth/endpoint.py,sha256=Kr75czb3g0CjiiS0baKAVNqcODN0PJGgiJ07mNjAAOc,85
+tpauth/response/base.py,sha256=_oaIH7vYfgU_Z6auJcYMSQrQM5BkkwY6woGyL4r-n_k,169
+tpauth/response/success.py,sha256=DGu4kpY76RE8uCo4J-AN6fAw1VCOZCNLma8XDF0D-l8,357
+tpauth/response/unauthorised.py,sha256=9HaXQ2BkqygPem_OYftePFlKa_3HbHv_fLY0jWt_YH0,153
+tpauth/response/unknown.py,sha256=VN6UxBZi731sDOklRnTGuRR_hR_eA6zPAFp9I4j2b2w,74
+tpauth/tpauth.py,sha256=zWprRDj1GQ-dCRHYhObuslhi_14r2I1EhmF0dJMqmlU,2725
+tpauth-1.0.0.dist-info/LICENSE,sha256=0E3onIwo8Gtum6ES03qrK26kLWDEsr3oTwLM-66KZQY,1066
+tpauth-1.0.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+tpauth-1.0.0.dist-info/METADATA,sha256=7zPfTaC516qr_j21PtOvj2_oGhSlBEJhPVuRhAPFRM0,516
+tpauth-1.0.0.dist-info/RECORD,,
