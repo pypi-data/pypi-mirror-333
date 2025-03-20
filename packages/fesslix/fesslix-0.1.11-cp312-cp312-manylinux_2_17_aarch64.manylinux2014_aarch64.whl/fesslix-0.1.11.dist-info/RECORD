@@ -1,0 +1,11 @@
+fesslix/__init__.py,sha256=fzLbmmlMnImFnBr6I0a07uRPwCXKBX_LObF5WnwHdL4,1894
+fesslix/core.cpython-312-aarch64-linux-gnu.so,sha256=ZtPu7vPw_UH7Haq3utlNQHbpc2Yo7xxyFLrn77sxRiU,204633
+fesslix/libflxlib.so,sha256=EztGx722qjU2lerxxLPFwBQQoGpKu652dEnn6ID1Wew,4864209
+fesslix.libs/libgfortran-8634ef04.so.3.0.0,sha256=8j7Q7vWSa-TJ1ipbEOi-HNJBBvxVj7O8-Q05_YkRxH8,1151345
+fesslix.libs/libgsl-d7f65cd8.so.0.16.0,sha256=vCCpmZgK4fkkUZzpfbDpqcdr4UcXhopTKsta9B14-Pw,2466641
+fesslix.libs/libgslcblas-a43b44a1.so.0.0.0,sha256=0lzmL2XUygzb0T1CPjkcS-m38Cz7Nol_G0EEJvh-xY8,331081
+fesslix.libs/libsatlas-c20ebb47.so.3.10,sha256=MLlSO5VxBBxH_xSFtFgQxLpHOBkqQXu10vgYwVbjShE,8268321
+fesslix-0.1.11.dist-info/METADATA,sha256=vgx4w4sNbGb1X1d-K38khaSV5pgOGsq-paRd6NGtaZk,42284
+fesslix-0.1.11.dist-info/WHEEL,sha256=Dp72oFToWWu1H_xuN1KICWonvrzmhILDdBTOu1XIXfk,158
+fesslix-0.1.11.dist-info/RECORD,,
+fesslix-0.1.11.dist-info/licenses/LICENSE,sha256=CuBIWlvTemPmNgNZZBfk6w5lMzT6bH-TLKOg6F1K8ic,35148
