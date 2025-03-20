@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+L9110_I2C.egg-info/PKG-INFO
+L9110_I2C.egg-info/SOURCES.txt
+L9110_I2C.egg-info/dependency_links.txt
+L9110_I2C.egg-info/top_level.txt
