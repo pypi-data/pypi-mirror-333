@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+enverge_open_from_badge/__init__.py
+enverge_open_from_badge/_version.py
+enverge_open_from_badge/service/__init__.py
+enverge_open_from_badge/service/open_repo_service.py
+jupyterhub_enverge_open_from_badge.egg-info/PKG-INFO
+jupyterhub_enverge_open_from_badge.egg-info/SOURCES.txt
+jupyterhub_enverge_open_from_badge.egg-info/dependency_links.txt
+jupyterhub_enverge_open_from_badge.egg-info/requires.txt
+jupyterhub_enverge_open_from_badge.egg-info/top_level.txt
