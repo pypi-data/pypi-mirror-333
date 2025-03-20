@@ -1,0 +1,13 @@
+fr_youssef_test_cf/__init__.py,sha256=z-BD3xRGu-qiALfbz9JJg90sljoodSxKl3O_SUiI9zg,52
+fr_youssef_test_cf/clickhoused.py,sha256=iZT4QXgFuRJDqh4nkHEg9sCYGsTe73PqdAQ7awmYeGI,1472
+fr_youssef_test_cf/core_env_vars.py,sha256=S6DCAsAc3qqi2GOWZaVFsV9nZRMGi7vdpm0IDYroK9w,483
+fr_youssef_test_cf/data_transformer.py,sha256=u7PMa69Y17zUGvOwE9DmzSywm3z_RDECCHVuDna2kEw,3340
+fr_youssef_test_cf/enappsys.py,sha256=_XA-jAudu5fzzbVCPVpb4xC3eRD7XhmS9egLuYIbn3U,3612
+fr_youssef_test_cf/env_vars.py,sha256=rkgS5s44X_yokNojKKFz4rdKD74OydW8bqNAh0QnRUw,700
+fr_youssef_test_cf/minio_driver.py,sha256=8AVmaHl-25UOQFKpZQiuQBQxVFs6pcBXInJwN-GPBPs,18508
+fr_youssef_test_cf/plugin_loader.py,sha256=NScdQRRPTK8wrglpQFRApmGeyUNu41mzEg1ONTtKvL0,984
+fr_youssef_test_cf/util.py,sha256=X_WhBIK2aIq8LcBvJYvKZYjZ3llaO7RX1jhinGZMWYs,4210
+fr_youssef_test_cf-2.0.12.dist-info/METADATA,sha256=Ev_6VsNAn8c_UHG-QYlLatFh-cKWDrZ-Wd26U8p2jws,418
+fr_youssef_test_cf-2.0.12.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+fr_youssef_test_cf-2.0.12.dist-info/top_level.txt,sha256=8FlIuPzo7oO7LNB888Hs2Y9PaDvXUHPTy2T1GNVAuo8,19
+fr_youssef_test_cf-2.0.12.dist-info/RECORD,,
