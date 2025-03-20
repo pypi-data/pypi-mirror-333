@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: imagetoolkit
+Version: 0.1.0
+Summary: Advanced tool for processing images from the command line
+Home-page: https://github.com/jedahee/imagetoolkit
+Author: jedahee
+Author-email: jdaza.her@gamil.com
+License: Creative Commons Legal Code
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: Pillow==11.0.0
+Requires-Dist: prompt==0.4.1
+Requires-Dist: prompt-toolkit==3.0.36
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: questionary==2.0.1
+Requires-Dist: regex==2024.11.6
+Requires-Dist: setuptools==75.8.0
+Requires-Dist: six==1.16.0
+Requires-Dist: wcwidth==0.2.13
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
