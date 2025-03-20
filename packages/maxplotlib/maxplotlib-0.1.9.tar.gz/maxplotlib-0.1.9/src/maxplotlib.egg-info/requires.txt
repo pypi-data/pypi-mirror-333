@@ -1,0 +1,8 @@
+
+[server]
+matplotlib
+mlx_lm
+numpy
+pillow
+plotly
+torch
