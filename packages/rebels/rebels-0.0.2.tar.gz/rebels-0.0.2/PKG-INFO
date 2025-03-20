@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: rebels
+Version: 0.0.2
+Summary: Solution from Rebels
+Author-email: "Rebels.ai" <hello@rebels.ai>
+Project-URL: Homepage, https://github.com/rebels-ai/rebels-solution
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Пример кода
+```python
+from rebels import Solution
+solution = Solution().greetings()
+```
+
+
+
