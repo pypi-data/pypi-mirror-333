@@ -1,0 +1,2 @@
+[console_scripts]
+files-lister = lister.main:main
