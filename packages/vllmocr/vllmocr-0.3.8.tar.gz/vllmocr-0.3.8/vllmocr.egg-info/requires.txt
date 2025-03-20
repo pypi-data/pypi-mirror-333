@@ -1,0 +1,15 @@
+opencv-python
+anthropic
+pytest
+pytest-mock
+openai
+google-genai
+ollama
+requests
+PyMuPDF
+opencv-python-headless
+python-dotenv
+typing-extensions
+
+[dev]
+pytest>=8.3.5
