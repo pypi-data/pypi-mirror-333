@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pytest-lw-realtime-result
+Version: 0.1.0
+Summary: Pytest plugin to generate realtime test results to a file
+Author-email: Your Name <your.email@example.com>
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pytest>=3.5.0
+
