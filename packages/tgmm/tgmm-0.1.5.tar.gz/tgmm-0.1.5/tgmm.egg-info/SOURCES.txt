@@ -1,0 +1,13 @@
+README.md
+setup.py
+tests/test_gmm.py
+tgmm/__init__.py
+tgmm/gmm.py
+tgmm/gmm_init.py
+tgmm/metrics.py
+tgmm/plotting.py
+tgmm.egg-info/PKG-INFO
+tgmm.egg-info/SOURCES.txt
+tgmm.egg-info/dependency_links.txt
+tgmm.egg-info/requires.txt
+tgmm.egg-info/top_level.txt
