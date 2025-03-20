@@ -1,0 +1,14 @@
+z3c.recipe.compattest-3.0-py3.11-nspkg.pth,sha256=JXMxbvV4meo6FFgpdBBbxgx8m2foNt4geHAidesQPpY,988
+z3c/recipe/compattest/__init__.py,sha256=J4-ov_dOu_9I48-2Bbm6Arqm0rhItZlk1f013dxQS0I,17
+z3c/recipe/compattest/recipe.py,sha256=Hi7em06Xf8q1UK9mVhreUgHlVAg0f5rFFsVaYmSZO4k,3772
+z3c/recipe/compattest/runner.py,sha256=Z6u9xFS6WxaRC-ZuL3B1--PZZyIXBSWAXDr1AIofINc,3605
+z3c/recipe/compattest/runner.rst,sha256=lIu3xrQoAu8wNnfvDtrFyRgj6FpBRwJF3WRiziB64K4,1638
+z3c/recipe/compattest/testing.py,sha256=-U02K-LZL2tO10vVxst9yVfYBaZ_pG58iPNKo-Um3iM,1805
+z3c/recipe/compattest/tests.py,sha256=QWkewx6VPtE-ylk5qKCrf8TTVRJ194eX8XcRTaDr5OE,946
+z3c.recipe.compattest-3.0.dist-info/LICENSE.rst,sha256=PmcdsR32h1FswdtbPWXkqjg-rKPCDOo_r1Og9zNdCjw,2070
+z3c.recipe.compattest-3.0.dist-info/METADATA,sha256=xjxX83441hiQa2xXhRvmhprUSYyRDsYNYth27sr87c8,9972
+z3c.recipe.compattest-3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+z3c.recipe.compattest-3.0.dist-info/entry_points.txt,sha256=d72CiJ9ResnZ2dnJtY-ZZERUZzHpyO_VYtpHLF7j3t0,60
+z3c.recipe.compattest-3.0.dist-info/namespace_packages.txt,sha256=LiwBGNj6i1fm4yUm-yky6C1lCDbhjwIjxIXSZbkEQHY,15
+z3c.recipe.compattest-3.0.dist-info/top_level.txt,sha256=4IdyINjld7m2QfMrXUzjX5iV4pLTBx0DBASmKaA1wJc,4
+z3c.recipe.compattest-3.0.dist-info/RECORD,,
