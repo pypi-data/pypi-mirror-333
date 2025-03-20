@@ -1,0 +1,11 @@
+agent/__init__.py,sha256=qo1r5ayw6CjSCApvta-kKd_6s1E8DTY_w4VN_FP-RvI,41
+agent/api.py,sha256=ohZoEOEiePJCd_PvyIcN10_k9GSmUCzcIlcr1_V6jl4,225
+agent/crawler.py,sha256=dBgL6tg3V51e_tYtrH-0dzwdymKTXTllhD7IjFzwoGQ,7272
+chima_rufus/__init__.py,sha256=g7ujxdJiTvwVeO5mKdnGfNgogTBY3s0rzcX-msxd4hk,53
+chima_rufus/api.py,sha256=ohZoEOEiePJCd_PvyIcN10_k9GSmUCzcIlcr1_V6jl4,225
+chima_rufus/crawler.py,sha256=KcO-FggN7HnGkKU0EGgv4DdLZoHpOZLd2EEa8xtdusc,9324
+chima_rufus-0.1.dist-info/METADATA,sha256=8KmTPAeSyEvfuIAAvF1SybHttlf3Lb9TL6YYCkB1RlM,284
+chima_rufus-0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+chima_rufus-0.1.dist-info/entry_points.txt,sha256=noL7s_Mnt9rkQNQyEUmOWJ5jRWPPkj7uY-qUjnM-Ev4,52
+chima_rufus-0.1.dist-info/top_level.txt,sha256=fUrFDU7cNrOdxb81dZeyt_TJMnn9QCc8dW_SwELwj_w,12
+chima_rufus-0.1.dist-info/RECORD,,
