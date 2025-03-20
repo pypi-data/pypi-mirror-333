@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.py
+neon_tts_plugin_coqui_remote/__init__.py
+neon_tts_plugin_coqui_remote/configs.py
+neon_tts_plugin_coqui_remote.egg-info/PKG-INFO
+neon_tts_plugin_coqui_remote.egg-info/SOURCES.txt
+neon_tts_plugin_coqui_remote.egg-info/dependency_links.txt
+neon_tts_plugin_coqui_remote.egg-info/entry_points.txt
+neon_tts_plugin_coqui_remote.egg-info/requires.txt
+neon_tts_plugin_coqui_remote.egg-info/top_level.txt
+neon_tts_plugin_coqui_remote.egg-info/zip-safe
