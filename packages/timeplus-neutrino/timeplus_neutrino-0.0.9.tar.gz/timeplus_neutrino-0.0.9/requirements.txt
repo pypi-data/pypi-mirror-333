@@ -1,0 +1,5 @@
+autogen
+proton_driver
+confluent-kafka
+autogen-core
+autogen-ext
