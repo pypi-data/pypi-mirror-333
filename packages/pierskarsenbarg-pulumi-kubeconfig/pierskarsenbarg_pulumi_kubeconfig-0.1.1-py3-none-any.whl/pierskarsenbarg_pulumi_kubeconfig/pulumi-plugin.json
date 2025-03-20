@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "kubeconfig",
+  "version": "0.1.1",
+  "server": "github://api.github.com/pierskarsenbarg/pulumi-kubeconfig"
+}
