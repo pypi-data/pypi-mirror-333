@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: coloria
+Version: 0.14.1
+Summary: Tools for color models
+Author-email: Nico =?utf-8?q?Schl=C3=B6mer?= <nico.schloemer@gmail.com>
+Project-URL:
+ changelog, https://github.com/coloria-dev/coloria/blob/main/CHANGELOG.md
+Project-URL: homepage, https://github.com/coloria-dev/coloria
+Project-URL: issues, https://github.com/coloria-dev/coloria/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: stonefish-license-manager>=0.5.17
+Requires-Dist: x22>=0.1.7
+Requires-Dist: matplotlib
+Requires-Dist: npx
+Requires-Dist: numpy>=1.20
+Requires-Dist: webcolors
+Provides-Extra: all
+Requires-Dist: meshio<6,>=4; extra == "all"
+Requires-Dist: meshzoo; extra == "all"
+Requires-Dist: pyvista; python_version < "3.12" and extra == "all"
+Requires-Dist: scipy; extra == "all"
+Requires-Dist: scipyx; extra == "all"
+
