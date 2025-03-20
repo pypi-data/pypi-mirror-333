@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+mock_requests/__init__.py
+mock_requests/mock_requests.py
+mock_requests.egg-info/PKG-INFO
+mock_requests.egg-info/SOURCES.txt
+mock_requests.egg-info/dependency_links.txt
+mock_requests.egg-info/top_level.txt
+mock_requests/data/potterapi_fedeperin_vercel_app_en_books.json
+mock_requests/data/potterapi_fedeperin_vercel_app_en_characters.json
+mock_requests/data/potterapi_fedeperin_vercel_app_en_houses.json
