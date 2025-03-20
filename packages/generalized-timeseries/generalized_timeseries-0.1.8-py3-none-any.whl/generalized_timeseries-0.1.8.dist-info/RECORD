@@ -1,0 +1,16 @@
+docs/source/conf.py,sha256=HbZtiTFzf0w_n7z_MgFgjnTKsjea8s41OXoLjtl8wyI,1510
+generalized_timeseries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+generalized_timeseries/data_generator.py,sha256=lfwtVErHyMnhGLgCGyGwJyUh5pC-ZQj1n8zpAHbuJcE,4801
+generalized_timeseries/data_processor.py,sha256=kWQ8zz-fom_XUdXBFI1oEyhou33zz23-bObTHSg8lds,18200
+generalized_timeseries/stats_model.py,sha256=RwqgUUv4b8GZvPLdoqkdJVl-pdgEgJmNgNfB7aRBcqA,10865
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_data_generator.py,sha256=xYopwYeqlc6_9MGYOF95TdB96s0VhEfi9RupW0b8VDo,856
+tests/test_data_generator_advanced.py,sha256=jO0GngnUh526RXje0ElVf4yG1to_ImlrIKHPoaKgbu8,9329
+tests/test_data_processor.py,sha256=eIyS0SQpjZWbot8rEngJirr9xsx6TvTy3wBRjL3yGX0,1226
+tests/test_stats_model_arima.py,sha256=ngopEs9JnmixKnIvlHBx0nXIRM8p2ZYS46gb_WXNDCU,3478
+tests/test_stats_model_garch.py,sha256=0zqTXryjfTr7nOQIJwWmTeuJPcgQ9sHBznLr2h7xP_A,5300
+generalized_timeseries-0.1.8.dist-info/LICENSE,sha256=TrWwnkDfpIvaYH6haWvQLrVgSsjr9PUCp0_P1HnFScE,61
+generalized_timeseries-0.1.8.dist-info/METADATA,sha256=HPa2mN8FXvVCGddtiEdRsR5QM48r6Elkt_Ed1a8KVgA,3554
+generalized_timeseries-0.1.8.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+generalized_timeseries-0.1.8.dist-info/top_level.txt,sha256=6CFbh6RXl-FoHsNhxfq3chha8JxPp7joDZTy6_FNbNw,34
+generalized_timeseries-0.1.8.dist-info/RECORD,,
