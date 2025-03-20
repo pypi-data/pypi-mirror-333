@@ -1,0 +1,12 @@
+djinntoux/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djinntoux/context_processors.py,sha256=7dYrgLUkTVIVJjBUSH_1mpZ9_L4aK5WqrHiT-wSmMPQ,423
+djinntoux/middleware.py,sha256=_kEybNp3hu0LqPOcQja99T300rZ1Kxtt0N8nEPkk8Wo,419
+djinntoux/rename.py,sha256=0mSVHv03M5V-7-LaRZF07dzddCRAf5_rV-ARd1p2Fis,298
+djinntoux/settings2.py,sha256=EA7MlXvEYdGjOKhwwQCtrOQ6VlDJMr9i6-wwZ0BTflk,5541
+djinntoux/urls2.py,sha256=c4UXlbnvcpONZZ18SY9qaCaXI1IT36vYLOXrhePkqpw,581
+djinntoux/abstract/ab_mod.py,sha256=eY36_lKcEMrYVP3oDG6yxZnaAjnLJ2gCTaEi6ZPws6Y,1175
+djinntoux/utils/scrape.py,sha256=vQbkcZ3dQ8Gw3-93GinmJijT-UVhyAdj6OyeeQVBxh8,795
+djinntoux-0.0.8.17.dist-info/METADATA,sha256=8Apz8hAbK5PUT9LD_UbQqcxjiQISQougbuFBfqIIzEo,4580
+djinntoux-0.0.8.17.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+djinntoux-0.0.8.17.dist-info/licenses/LICENSE,sha256=ObKz2Ts26RpIqtTMhHd5Vi4NY4e3Lvl7b81TvoQWqa4,1059
+djinntoux-0.0.8.17.dist-info/RECORD,,
