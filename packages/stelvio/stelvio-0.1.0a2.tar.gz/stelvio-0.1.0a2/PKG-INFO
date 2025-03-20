@@ -1,0 +1,81 @@
+Metadata-Version: 2.3
+Name: stelvio
+Version: 0.1.0a2
+Summary: AWS for Python devs made simple.
+License: Apache-2.0
+Keywords: aws,infrastructure
+Author: Michal
+Author-email: michal@stelvio.dev
+Maintainer: Michal
+Maintainer-email: michal@stelvio.dev
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pulumi (>=3.147.0,<4.0.0)
+Requires-Dist: pulumi-aws (>=6.67.0,<7.0.0)
+Project-URL: Bug Tracker, https://github.com/michal-stlv/stelvio/issues
+Project-URL: Documentation, https://docs.stelvio.dev
+Project-URL: Homepage, https://stelvio.dev/
+Project-URL: Repository, https://github.com/michal-stlv/stelvio
+Description-Content-Type: text/markdown
+
+# Stelvio
+
+_**AWS for Python devs - made simple.**_
+
+[**Documentation**](https://docs.stelvio.dev/getting-started/quickstart/)
+
+## What is Stelvio?
+
+Stelvio is a Python library that simplifies cloud infrastructure management and deployment. It lets you define your cloud infrastructure using pure Python, with smart defaults that handle complex configuration automatically.
+
+### Key Features
+
+- **Python-Native Infrastructure**: Define your cloud resources using familiar Python code
+- **Smart Defaults**: Automatic configuration of IAM roles, networking, and security
+- **Clean Separation**: Keep your infrastructure code separate from application code
+- **Developer-First**: Built specifically for Python developers, not infrastructure experts
+
+### Currently Supported
+
+- AWS Lambda
+- Amazon DynamoDB
+- API Gateway
+- Linking - automated IAM
+
+*Support for additional AWS services is planned.*
+
+## Quick Start
+
+Go to our [Quick Start Guide](https://docs.stelvio.dev/getting-started/quickstart/) to start
+
+## Why Stelvio?
+
+Unlike generic infrastructure tools like Terraform, Pulumi, or AWS CDK, Stelvio is:
+
+- Built specifically for Python developers
+- Focused on developer productivity, not infrastructure complexity
+- Designed to minimize boilerplate through intelligent defaults
+- Maintained in pure Python without mixing application and infrastructure code
+
+## Project Status
+
+Stelvio is currently in active development as a side project. 
+
+⚠️ It is in Early alpha state - Not production ready - Only for experimentation - API unstable"
+
+It supports basic Lambda, Dynamo DB and API Gateway setup.
+
+## Contributing
+
+Best way to contribute now is to play with it and report any issues.
+
+I'm also happy to gather any feedback or feature requests.
+
+Use GitHub Issues or email me directly at michal@stelvio.dev
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
