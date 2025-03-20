@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+magedata_sdk/__init__.py
+magedata_sdk/client.py
+magedata_sdk/config.py
+magedata_sdk/exceptions.py
+magedata_sdk/models.py
+magedata_sdk/processors.py
+magedata_sdk.egg-info/PKG-INFO
+magedata_sdk.egg-info/SOURCES.txt
+magedata_sdk.egg-info/dependency_links.txt
+magedata_sdk.egg-info/requires.txt
+magedata_sdk.egg-info/top_level.txt
