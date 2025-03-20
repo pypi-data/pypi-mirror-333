@@ -1,0 +1,27 @@
+metadata:
+  description: >-
+    A MEDS version of MIMIC-IV.
+  links:
+    - https://github.com/mmcdermott/MIMIC_IV_MEDS
+    - https://physionet.org/content/mimiciv/3.1/
+    - https://www.nature.com/articles/s41597-022-01899-x
+  contacts:
+    - name: "Tom Pollard"
+      github_username: "tompollard"
+    - name: "Matthew McDermott"
+      github_username: "mmcdermott"
+commands:
+  build_full: >-
+    MEDS_extract-MIMIC_IV
+    raw_input_dir="{temp_dir}/raw"
+    pre_MEDS_dir="{temp_dir}/pre_MEDS"
+    MEDS_cohort_dir="{output_dir}"
+    log_dir="{output_dir}/.pipeline_logs"
+
+  build_demo: >-
+    MEDS_extract-MIMIC_IV
+    do_demo=True
+    raw_input_dir="{temp_dir}/raw"
+    pre_MEDS_dir="{temp_dir}/pre_MEDS"
+    MEDS_cohort_dir="{output_dir}"
+    log_dir="{output_dir}/.pipeline_logs"

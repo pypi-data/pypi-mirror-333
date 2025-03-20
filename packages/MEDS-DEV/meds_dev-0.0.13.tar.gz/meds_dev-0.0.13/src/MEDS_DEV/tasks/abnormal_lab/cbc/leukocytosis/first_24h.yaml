@@ -1,0 +1,80 @@
+metadata:
+  description: >-
+    This task predicts whether the patient will have high _WBC_ values (leukocytosis) within the next 24
+    hours, given the first 24 hours of their admission to the _hospital_. To be included, 1) patients must
+    have at least one measurement for _WBC_ within the next 24 hours after their admission to the hospital, 2)
+    patients must not have shown high _WBC_ values previously, and 3) their length of stay in the hospital
+    must be at least 48 hours.
+  links: []
+  contacts:
+    - name: "Jungwoo Oh"
+      github_username: "jwoo5"
+  supported_datasets:
+    - MIMIC-IV
+
+predicates:
+  hospital_admission: ???
+  hospital_discharge: ???
+  birth:
+    code: { regex: "MEDS_BIRTH.*" }
+  death:
+    code: { regex: "MEDS_DEATH.*" }
+  discharge_or_death:
+    expr: or(death, hospital_discharge)
+
+  # Plain predicates
+  wbc_kul:
+    code: ???
+  abnormally_high_wbc_kul_range:
+    code: null
+    value_min: 11 # K/uL
+    value_min_inclusive: False
+    value_max: null
+  abnormally_high_wbc_kul:
+    expr: and(wbc_kul, abnormally_high_wbc_kul_range)
+
+  # wbc:
+  #   expr: or(wbc_kul, ..., wbc_other_unit)
+  # abnormally_high_wbc:
+  #   expr: or(abnormally_high_wbc_kul, ..., abnormally_high_wbc_other_unit)
+
+trigger: hospital_admission
+
+windows:
+  input:
+    start: null
+    end: trigger + 24h
+    start_inclusive: True
+    end_inclusive: True
+    index_timestamp: end
+    # do not allow to have shown high WBC values previously
+    has:
+      # abnormally_high_wbc: (None, 0)
+      abnormally_high_wbc_kul: (None, 0)
+  # do not allow hospital discharge to happen within the input + target window
+  no_discharge:
+    start: trigger
+    end: start + 48h
+    start_inclusive: False
+    end_inclusive: True
+    has:
+      hospital_admission: (None, 0)
+      discharge_or_death: (None, 0)
+  # do not allow to include children (age <= 18) patients
+  no_children:
+    start: end - 6570d # 18 years = 365 * 18 days
+    end: trigger
+    start_inclusive: True
+    end_inclusive: True
+    has:
+      birth: (None, 0)
+  target:
+    start: input.end
+    end: start + 24h
+    start_inclusive: False
+    end_inclusive: True
+    has:
+      # wbc: (1, None)
+      wbc_kul: (1, None)
+    # label: abnormally_high_wbc
+    label: abnormally_high_wbc_kul
