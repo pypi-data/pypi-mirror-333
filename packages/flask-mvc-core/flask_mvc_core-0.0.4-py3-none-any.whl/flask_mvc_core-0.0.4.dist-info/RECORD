@@ -1,0 +1,8 @@
+flask_mvc/__init__.py,sha256=IL2rDSRlH5hBQqESL-yzskVCfNiXsAnI3aGvyXVwtww,120
+flask_mvc/__version__.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+flask_mvc/flask_mvc.py,sha256=xJGKXtqpGP99oFTT-JWk9Lmbbg801BWRgqw6s_rx73I,1629
+flask_mvc_core-0.0.4.dist-info/LICENSE,sha256=YmshRdhU1s-hPDLyIMxWt0RnznqqUIp1RqT0ndruBHI,1110
+flask_mvc_core-0.0.4.dist-info/METADATA,sha256=B39gmR81POm0Qi2dVumyb7Btgndd10Is-GIQJ0mdiII,617
+flask_mvc_core-0.0.4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+flask_mvc_core-0.0.4.dist-info/top_level.txt,sha256=QP_jUPAD8CrmOxmsYD16IstC2bF0w4Dv5LJuEqJC6fE,10
+flask_mvc_core-0.0.4.dist-info/RECORD,,
