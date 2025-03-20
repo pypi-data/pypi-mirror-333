@@ -1,0 +1,2 @@
+[console_scripts]
+ampworks = ampworks.cli:main
