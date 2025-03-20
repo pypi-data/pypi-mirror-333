@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+fastfmri_toolbox/__init__.py
+fastfmri_toolbox.egg-info/PKG-INFO
+fastfmri_toolbox.egg-info/SOURCES.txt
+fastfmri_toolbox.egg-info/dependency_links.txt
+fastfmri_toolbox.egg-info/requires.txt
+fastfmri_toolbox.egg-info/top_level.txt

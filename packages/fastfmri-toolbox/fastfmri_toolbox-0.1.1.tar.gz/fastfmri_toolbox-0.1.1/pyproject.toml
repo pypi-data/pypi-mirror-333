@@ -1,0 +1,15 @@
+[project]
+name = "fastfmri-toolbox"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "nibabel>=5.3.2",
+    "numpy>=2.2.3",
+    "polars>=1.24.0",
+    "pydantic>=2.10.6",
+]
+
+[tool.setuptools.packages.find]
+include = ["fastfmri_toolbox", "fastfmri_toolbox/*"]
