@@ -1,0 +1,12 @@
+README.md
+setup.py
+EnvGuard.egg-info/PKG-INFO
+EnvGuard.egg-info/SOURCES.txt
+EnvGuard.egg-info/dependency_links.txt
+EnvGuard.egg-info/entry_points.txt
+EnvGuard.egg-info/requires.txt
+EnvGuard.egg-info/top_level.txt
+envguard/__init__.py
+envguard/cli.py
+envguard/validator.py
+tests/test_validator.py

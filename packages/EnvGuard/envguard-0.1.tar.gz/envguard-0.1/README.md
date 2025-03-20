@@ -1,0 +1,63 @@
+# EnvGuard
+
+EnvGuard is a Python tool to check for missing or incorrect environment variables in `.env` files.
+
+## Features
+- Validate required environment variables.
+- Command-line interface for easy usage.
+
+## Installation
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+```bash
+envguard --required DATABASE_URL --required SECRET_KEY
+```
+
+## Example .env File
+```bash
+DATABASE_URL=postgres://user:password@localhost:5432/mydb
+SECRET_KEY=mysecretkey
+```
+
+### License
+MIT
+
+
+### Example `.env` File
+Create a `.env` file in the root of your project with the following content:
+
+```env
+DATABASE_URL=postgres://user:password@localhost:5432/mydb
+SECRET_KEY=mysecretkey
+```
+
+### Testing Steps
+
+1. Install the package (if not already installed):
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the CLI tool to validate the .env file:
+```bash
+    envguard --required DATABASE_URL --required SECRET_KEY
+```
+
+3. If the .env file is correct, you’ll see:
+```bash
+    All required environment variables are present!
+```
+
+4. To test missing variables, edit the .env file and remove one of the variables (e.g., SECRET_KEY). Then run the command again:
+```bash
+    envguard --required DATABASE_URL --required SECRET_KEY
+```
+
+5. You’ll see an error like this:
+```bash
+    Missing or incorrect environment variables:
+    - SECRET_KEY
+```
