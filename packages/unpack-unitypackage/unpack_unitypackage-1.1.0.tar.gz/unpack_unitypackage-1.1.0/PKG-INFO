@@ -1,0 +1,108 @@
+Metadata-Version: 2.2
+Name: unpack-unitypackage
+Version: 1.1.0
+Summary: 解压和提取Unity包文件的工具
+Author: xiayangqun
+Author-email: xyq377x@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: unitypackage_extractor
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Unity包解压工具
+
+这是一个用于解压和提取Unity包文件的命令行工具。它可以处理`.zip`和`.unitypackage`文件。
+
+## 安装
+
+### 用户安装
+
+```bash
+# 直接从PyPI安装
+pip install unpack-unitypackage
+```
+
+### 开发者安装
+
+```bash
+# 从源代码安装（会自动安装所有依赖）
+pip install -e .
+```
+
+安装后，您可以在任何目录下使用`unpack_unitypackage`命令。
+
+### 方法2：创建符号链接（仅限Unix/Linux/Mac）
+
+如果您不想使用pip安装，可以通过创建符号链接的方式将脚本添加到系统路径：
+
+```bash
+# 首先确保脚本有执行权限
+chmod +x unpack_unitypackage.py
+
+# 创建符号链接到/usr/local/bin（需要管理员权限）
+sudo ln -s "$(pwd)/unpack_unitypackage.py" /usr/local/bin/unpack_unitypackage
+```
+
+## 使用方法
+
+```bash
+# 解压Unity包文件
+unpack_unitypackage path/to/your/file.unitypackage
+
+# 解压包含Unity包的ZIP文件
+unpack_unitypackage path/to/your/archive.zip
+```
+
+## 功能
+
+- 支持直接解压`.unitypackage`文件
+- 支持解压包含`.unitypackage`文件的ZIP压缩包
+- 自动在同级目录创建解压目录
+- 提取Unity包内的资源文件
+
+## 发布到PyPI
+
+如果您想将此包发布到PyPI，请按照以下步骤操作：
+
+1. 安装必要的工具：
+
+```bash
+pip install build twine
+```
+
+2. 构建分发包：
+
+```bash
+python -m build
+```
+
+3. 上传到PyPI（需要PyPI账号）：
+
+```bash
+# 上传到测试PyPI（推荐先测试）
+python -m twine upload --repository testpypi dist/*
+
+# 上传到正式PyPI
+python -m twine upload dist/*
+```
+
+4. 测试安装：
+
+```bash
+# 从测试PyPI安装
+pip install --index-url https://test.pypi.org/simple/ unpack-unitypackage
+
+# 从正式PyPI安装
+pip install unpack-unitypackage
+``` 
