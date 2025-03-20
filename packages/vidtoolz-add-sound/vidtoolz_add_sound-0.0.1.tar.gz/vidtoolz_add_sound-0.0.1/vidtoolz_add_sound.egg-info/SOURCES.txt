@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_vidtoolz_add_sound.py
+vidtoolz_add_sound/__init__.py
+vidtoolz_add_sound/add_sound.py
+vidtoolz_add_sound.egg-info/PKG-INFO
+vidtoolz_add_sound.egg-info/SOURCES.txt
+vidtoolz_add_sound.egg-info/dependency_links.txt
+vidtoolz_add_sound.egg-info/entry_points.txt
+vidtoolz_add_sound.egg-info/requires.txt
+vidtoolz_add_sound.egg-info/top_level.txt
