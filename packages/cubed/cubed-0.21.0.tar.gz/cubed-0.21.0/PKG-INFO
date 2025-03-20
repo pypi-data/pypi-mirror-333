@@ -1,0 +1,97 @@
+Metadata-Version: 2.2
+Name: cubed
+Version: 0.21.0
+Summary: Scalable array processing with bounded memory
+Author-email: Tom White <tom.e.white@gmail.com>
+License: Apache License 2.0
+Project-URL: homepage, https://github.com/cubed-dev/cubed
+Project-URL: documentation, https://tomwhite.github.io/cubed
+Project-URL: repository, https://github.com/cubed-dev/cubed
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiostream
+Requires-Dist: array-api-compat
+Requires-Dist: cloudpickle
+Requires-Dist: donfig
+Requires-Dist: fsspec
+Requires-Dist: mypy_extensions
+Requires-Dist: ndindex
+Requires-Dist: networkx!=2.8.3,!=2.8.4,!=2.8.5,!=2.8.6,!=2.8.7,!=2.8.8,!=3.0.*,!=3.1.*,!=3.2.*
+Requires-Dist: numpy>=1.22
+Requires-Dist: psutil
+Requires-Dist: tenacity
+Requires-Dist: toolz
+Requires-Dist: zarr
+Provides-Extra: diagnostics
+Requires-Dist: tqdm; extra == "diagnostics"
+Requires-Dist: graphviz; extra == "diagnostics"
+Requires-Dist: jinja2; extra == "diagnostics"
+Requires-Dist: pydot; extra == "diagnostics"
+Requires-Dist: pandas; extra == "diagnostics"
+Requires-Dist: matplotlib; extra == "diagnostics"
+Requires-Dist: rich; extra == "diagnostics"
+Requires-Dist: seaborn; extra == "diagnostics"
+Provides-Extra: beam
+Requires-Dist: apache-beam; extra == "beam"
+Requires-Dist: gcsfs; extra == "beam"
+Provides-Extra: dask
+Requires-Dist: dask<2024.12.0; extra == "dask"
+Provides-Extra: dask-distributed
+Requires-Dist: distributed<2024.12.0; extra == "dask-distributed"
+Provides-Extra: icechunk
+Requires-Dist: icechunk; extra == "icechunk"
+Provides-Extra: lithops
+Requires-Dist: lithops[aws]>=3.3.0; extra == "lithops"
+Provides-Extra: lithops-aws
+Requires-Dist: cubed[diagnostics]; extra == "lithops-aws"
+Requires-Dist: lithops[aws]>=3.3.0; extra == "lithops-aws"
+Requires-Dist: s3fs; extra == "lithops-aws"
+Provides-Extra: lithops-gcp
+Requires-Dist: cubed[diagnostics]; extra == "lithops-gcp"
+Requires-Dist: lithops[gcp]>=3.3.0; extra == "lithops-gcp"
+Requires-Dist: gcsfs; extra == "lithops-gcp"
+Provides-Extra: modal
+Requires-Dist: cubed[diagnostics]; extra == "modal"
+Requires-Dist: modal; extra == "modal"
+Requires-Dist: s3fs; extra == "modal"
+Provides-Extra: modal-gcp
+Requires-Dist: cubed[diagnostics]; extra == "modal-gcp"
+Requires-Dist: modal; extra == "modal-gcp"
+Requires-Dist: gcsfs; extra == "modal-gcp"
+Provides-Extra: coiled
+Requires-Dist: cubed[diagnostics]; extra == "coiled"
+Requires-Dist: coiled; extra == "coiled"
+Requires-Dist: dask[complete]; extra == "coiled"
+Requires-Dist: s3fs; extra == "coiled"
+Provides-Extra: test
+Requires-Dist: cubed[diagnostics]; extra == "test"
+Requires-Dist: dill; extra == "test"
+Requires-Dist: numpy_groupies; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+
+# Cubed
+
+## Scalable array processing with bounded memory
+
+Cubed is a Python library for scalable out-of-core multi-dimensional array processing with bounded memory.
+
+- Cubed provides NumPy and Xarray APIs for processing your multi-dimensional array data
+- Cubed is a drop-in replacement for Dask's Array API
+- Cubed will tell you if your computation would run out of memory *before* running it
+- Cubed is designed to be robust to failures and will reliably complete a computation
+- Cubed can process hundreds of GB of array data on your laptop using all available cores
+- Cubed is horizontally scalable and stateless, and can scale to multi-TB datasets in the cloud
+
+[Documentation](https://cubed-dev.github.io/cubed/)
