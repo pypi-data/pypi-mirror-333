@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: blue_gan
+Version: 4.16.1
+Summary: 🖌️ A command interface for PyTorch-GAN.
+Home-page: https://github.com/kamangir/blue-gan
+Author: Arash Abadpour (Kamangir)
+Author-email: arash@kamangir.net
+License: Public Domain
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: abcli
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# 🖌️ blue-gan
+
+🖌️ `@gan` is a command interface for [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN).
+
+```bash
+pip install blue-gan
+```
+
+|   |   |
+| --- | --- |
+| [`PyTorch-GAN`](https://raw.githubusercontent.com/kamangir/blue-gan/main/blue_gan/docs/PyTorch_GAN.md) [![image](https://github.com/eriklindernoren/PyTorch-GAN/raw/master/assets/logo.png)](https://raw.githubusercontent.com/kamangir/blue-gan/main/blue_gan/docs/PyTorch_GAN.md) 6+ years old, missing assets, bugs. 🛑 | [`What is a GAN?`](https://aws.amazon.com/what-is/gan/) [![image](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2021/11/11/ML-6149-image025.jpg)](https://aws.amazon.com/what-is/gan/)  |
+
+---
+
+
+[![pylint](https://github.com/kamangir/blue-gan/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/blue-gan/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/blue-gan/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/blue-gan/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/blue-gan/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/blue-gan/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/blue-gan.svg)](https://pypi.org/project/blue-gan/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/blue-gan)](https://pypistats.org/packages/blue-gan)
+
+built by 🌀 [`blue_options-4.232.1`](https://github.com/kamangir/awesome-bash-cli), based on 🖌️ [`blue_gan-4.16.1`](https://github.com/kamangir/blue-gan).
