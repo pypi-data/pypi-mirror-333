@@ -1,0 +1,117 @@
+Metadata-Version: 2.4
+Name: kishuboard
+Version: 0.1.2
+Dynamic: Author
+Dynamic: Author-email
+Dynamic: Summary
+Dynamic: Keywords
+Dynamic: Project-URL
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023, Yongjoo Park
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Jupyter :: JupyterLab
+Classifier: Framework :: Jupyter :: JupyterLab :: 4
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: kishu
+Description-Content-Type: text/markdown
+
+# KishuBoard
+This is a dash-board extension of Kishu. With the interactive GUI provided by KishuBoard, you can browse, compare and search commits, checkout code/kernel variables to previous commits; branch out etc in a straightforward way.
+## Getting Started
+### pypi installation
+To install the extension from pypi, execute:
+
+```bash
+pip install kishuboard
+```
+To remove the extension, execute:
+
+```bash
+pip uninstall kishuboard
+```
+### starting up via kishuboard
+```bash
+kishuboard
+```
+And then you should be able to  visit the kishuboard at localhost://4999.
+
+### Install from source code:
+Note: You will need NodeJS to build the kishuboard, please make sure you have node on your computer, or install it from [here](https://nodejs.org/en/download/).
+1. enter the directory of the current file
+2. build the NodeJS frontend
+```bash
+npm init # If you are building it from the source code for the first time
+npm install # If you are building it from the source code for the first time
+npm run build
+```
+3. [optional] Install kishu core from source code
+```bash
+source ../.env/bin/activate # activate the virtual environment
+pip install ../kishu # install kishu from source code
+pip install -r requirements.txt #install other dependencies
+```
+4. install kishu board
+```bash
+pip install .
+```
+5. run the kishuboard
+```bash
+kishuboard
+```
+And then you should be able to  visit the kishuboard at localhost://4999.
+
+## Development
+### Dev mode deployment
+To run the kishuboard in dev mode, you will need to start the kishuboard server and the kishuboard frontend separately.
+1. enter the directory of this readme file
+2. start the kishuboard server(backend) in dev mode
+```bash
+source ../.env/bin/activate # activate the virtual environment
+cd kishuboard
+python server.py
+```
+3. start the kishuboard frontend in dev mode
+```bash
+cd .. # go back to the directory of this readme file
+npm init # If you are building it from the source code for the first time
+npm install # If you are building it from the source code for the first time
+npm start
+```
+And you should be able to visit the kishuboard at **localhost://3000**. Refresh the page in your browser to update the frontend after changing frontend code.
+To build a new release of kishuboard, please refer to [RELEASE.md](./RELEASE.md)
