@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+liberal_alpha.egg-info/PKG-INFO
+liberal_alpha.egg-info/SOURCES.txt
+liberal_alpha.egg-info/dependency_links.txt
+liberal_alpha.egg-info/requires.txt
+liberal_alpha.egg-info/top_level.txt
