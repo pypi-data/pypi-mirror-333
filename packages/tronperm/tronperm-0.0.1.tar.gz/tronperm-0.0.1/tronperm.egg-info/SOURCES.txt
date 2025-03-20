@@ -1,0 +1,9 @@
+LICENSE.txt
+setup.py
+tronperm/__init__.py
+tronperm/main.py
+tronperm.egg-info/PKG-INFO
+tronperm.egg-info/SOURCES.txt
+tronperm.egg-info/dependency_links.txt
+tronperm.egg-info/requires.txt
+tronperm.egg-info/top_level.txt
