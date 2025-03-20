@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: simple-rabbit-broker
+Version: 0.0.2
+Summary: RPC имплементация брокера RabbitMQ
+Author-email: Nikita Sysoev <nylinary@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: aio-pika~=9.0.2
+Requires-Dist: django-environ~=0.9.0
+Requires-Dist: pydantic~=2.10.6
+Description-Content-Type: text/markdown
+
+# RabbitMQ Broker
