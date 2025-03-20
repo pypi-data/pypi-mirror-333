@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "ObsiPy"
+version = "1.0.0.post1"
+description = "Module for processing Obsidian markdown files"
+license = "GPL-3.0-or-later"
+authors = [
+    "Julian Trude <ebulaylp@gmail.com>"
+]
+maintainers = [
+    "Julian Trude <ebulaylp@gmail.com>"
+]
+readme = "README.md"
+repository = "https://gitlab.com/trude/obsidian-parser"
+keywords = ["obsidian","frontmatter","parser"]
+packages = [
+    {include = "ObsiPy", from = "src"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+ruamel-yaml = ">=0.18.10,<0.19.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^4.1"
+pytest-html = "^4.0"
+pytest-xdist = "^3.3"
+tabulate = "^0.9.0"
+allure-pytest = "^2.13.5"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^8.2.1"
+sphinx-rtd-theme = "^3.0.2"
+myst-parser = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = """
+--cov=src/ObsiPy
+--cov-report=term-missing
+--cov-report=xml:test_reports/coverage.xml
+--cov-report=html:test_reports/coverage-html
+--junitxml=test_reports/junit.xml
+--alluredir=test_reports/allure-results
+"""
+testpaths = ["tests"]
+
+[tool.poetry.scripts]
+allure-test = "scripts.test_runner:run"
