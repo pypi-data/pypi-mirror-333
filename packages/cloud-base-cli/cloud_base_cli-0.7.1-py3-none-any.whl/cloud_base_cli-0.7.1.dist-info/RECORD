@@ -1,0 +1,10 @@
+cloud_base_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloud_base_cli/__main__.py,sha256=ekaMEfyVxQ4OTJtEn0UqzdYwjZFxOVIpTI2qkAVMhuQ,55
+cloud_base_cli/cli.py,sha256=92BU5Zlvk4g9XbLsw-KHimiV7d0gIUFe_G2EsRXyPmU,1460
+cloud_base_cli/libs/aws.py,sha256=Rr0VnJLq6Iu9Ezgj_IrJL0uB_y8srhZ94j_C5BJhCpo,8170
+cloud_base_cli/libs/gitlab.py,sha256=YF9cq4gjpusXUHiEQEjWQxPOnpJmaXg8QTUjAqDqAws,11736
+cloud_base_cli/libs/logger.py,sha256=LcCsrUqiSmwrgK6GawMUkipPl7VcdXHStDwe8zDMsGU,695
+cloud_base_cli-0.7.1.dist-info/METADATA,sha256=MrD6cd-6w8g9RRyY6ReDDYarQYcTrOOaMNDHb35j0YU,1877
+cloud_base_cli-0.7.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+cloud_base_cli-0.7.1.dist-info/entry_points.txt,sha256=6ttiaGuU3jczHQQM6lZAXF1TDGkHEjgjxrGTjYOfxAo,57
+cloud_base_cli-0.7.1.dist-info/RECORD,,
