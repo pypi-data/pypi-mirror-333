@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pdfuncdemo
+Version: 0.0.2
+Summary: a Python collection of function calls to get well data
+Project-URL: Homepage, https://pacificdigital.tech
+Project-URL: Issues, https://pacificdigital.tech
+Author-email: Pacific Digital <python@pacificdigital.tech>
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# Function Demo Library
+a Python collection of function calls to get well data.
+<br>
+Please note, this is the source code of version 0.0.2
+<br>
