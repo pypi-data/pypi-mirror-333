@@ -1,0 +1,4 @@
+[console_scripts]
+map_closure_pipeline = map_closures.tools.cmd:run
+gt_closure_pipeline = map_closures.tools.gt_closures:run
+
