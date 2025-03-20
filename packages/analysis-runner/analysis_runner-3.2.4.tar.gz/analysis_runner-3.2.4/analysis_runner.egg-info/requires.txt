@@ -1,0 +1,6 @@
+cloudpathlib[all]
+cpg-utils>=5.0.0
+grpcio-status<1.50,>=1.48
+hail
+requests
+tabulate
