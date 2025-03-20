@@ -1,0 +1,80 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "cmake>=3.23",
+    "ninja>=1.11",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iprm"
+version = "0.0.1a"
+authors = [
+]
+description = "Intermediate Project Representation Model"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+[project.scripts]
+iprm = "iprm.main:main"
+iprm-cli = "iprm.main:cli_main"
+iprm-studio = "iprm.main:studio_cxx_main"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+python_files = [
+    "test*.py"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = { find = { where = ["src"] } }
+
+[tool.setuptools.package-data]
+"iprm.studio_cxx" = [
+    "bin/studio*",
+    "bin/*.dll",
+    "bin/*.so",
+    "bin/*.pdb",
+]
+"iprm.core" = [
+    "core*.pyd",
+    "core*.pdb",
+]
+"iprm" = [
+    "CMakeLists.txt",
+    "third_party/CMakeLists.txt",
+    "third_party/graphviz/CMakeLists.txt",
+    "third_party/graphviz/PLATFORM-win64/graphviz_12.2.1.tar.gz",
+    "third_party/K-Editor/CMakeLists.txt",
+    "third_party/K-Editor/initial_iprm_modifications.patch",
+    "third_party/K-Editor/src/K-Editor.tar.gz",
+    "third_party/lemon/CMakeLists.txt",
+    "third_party/lemon/lemon-1.3.1.tar.gz",
+    "third_party/pybind11/CMakeLists.txt",
+    "third_party/qt/CMakeLists.txt",
+    "third_party/qt/PLATFORM-win64/qt_6_8_0_slim.tar.gz",
+    "core/CMakeLists.txt",
+    "core/src/*.cpp",
+    "core/src/*.hpp",
+    "studio_cxx/CMakeLists.txt",
+    "studio_cxx/res/res.qrc",
+    "studio_cxx/res/langs/*.xml",
+    "studio_cxx/res/logos/*.svg",
+    "studio_cxx/res/logos/*.png",
+    "studio_cxx/res/styles/*.xml",
+    "studio_cxx/res/styles/*.qss",
+    "studio_cxx/src/*.cpp",
+    "studio_cxx/src/*.hpp",
+    "studio_cxx/src/**/*.cpp",
+    "studio_cxx/src/**/*.hpp",
+]
