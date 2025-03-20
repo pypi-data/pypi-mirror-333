@@ -1,0 +1,5 @@
+setup.py
+derst.egg-info/PKG-INFO
+derst.egg-info/SOURCES.txt
+derst.egg-info/dependency_links.txt
+derst.egg-info/top_level.txt
