@@ -1,0 +1,132 @@
+Metadata-Version: 2.2
+Name: webcommander
+Version: 1.0.0
+Summary: Webcommander SDK
+Home-page: https://github.com/WebCommanderCMS/wc_python_sdk
+Author: Ashiq Rahman
+Author-email: ashiq@webalive.com.au
+Project-URL: Documentation, https://developers.webcommander.com/
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.31.0
+Requires-Dist: setuptools
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: platform
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+Hereâ€™s your updated `README.md` with "Exsited" replaced by "Webcommender":  
+
+```md
+# Webcommender Python SDK
+The Webcommender Python SDK provides an easy-to-use library for integrating Webcommender services into your project. This includes Custom Integration, Onsite Integration, and all APIs.
+
+***
+## Table of Contents
+- [Requirements](#Requirements)
+- [Installation](#Installation)
+- [Configuration](#Configuration)
+- [Authentication](#Authentication)
+- [Getting Started](#Getting-Started)
+- [Testing](#Testing)
+- [API Documentation](#API-Documentation)
+- [Usage charge_item_uuid Association](#Usage-charge_item_uuid-Association)
+
+# Requirements
+Python 3.12 and Later
+
+# Installation
+```bash
+# Navigate to the project directory
+cd webcommender-python
+
+# Install virtualenv
+pip install virtualenv
+
+# Create Virtual Environment
+python -m venv venv
+
+# Activate virtual environment from Windows
+venv\Scripts\activate
+
+# Upgrade pip
+python -m pip install --upgrade pip
+
+# Install setup tools
+pip install setuptools
+
+# Install app dependencies
+pip install -e .
+
+# Usage association dependencies
+pip install peewee
+pip install mysql-connector-python
+```
+
+# Configuration
+
+To set up the Webcommender SDK, you'll require your `Client ID`, `Client Secret`, and `Redirect URL`. If you have not received these details already, please reach out to your designated client contact to obtain them.
+
+# Authentication
+1. **Locate `common_data.py`:** Open the SDK project directory on an IDE and navigate to the `common_data.py` file located at `tests/common/common_data.py`.
+2. **Update `get_request_token_dto` function:** Within the `common_data.py` class, locate the method named `get_request_token_dto` and update it with the credentials you were provided.
+
+3. **Provide Credential Values:** Populate the mandatory fields (`clientId`, `clientSecret`, `redirectUri`, and `WebcommenderUrl`) within the `RequestTokenDTO` object. However, **replace the placeholder values** in the following code block with your actual credentials:
+
+### Code Example:
+```python
+def get_request_token_dto():
+    return RequestTokenDTO(
+            webCommanderUrl="[YOUR_WEBCOMMANDER_URL]",
+            grantType="client_credentials",
+            authString="[YOUR_AUTH_STRING]",
+            clientId="[YOUR_CLIENT_ID]",
+            clientSecret="[YOUR_CLIENT_SECRET]",
+            redirectUri="[YOUR_REDIRECT_URI]"
+        )
+
+```
+### Credentials Table
+| Key              | Value                           |  
+|------------------|--------------------------------|  
+| clientId         | "[YOUR_CLIENT_ID]"             |  
+| clientSecret     | "[YOUR_CLIENT_SECRET]"         |  
+| redirectUri      | "[YOUR_REDIRECT_URI]"          |  
+| webCommanderUrl  | "[YOUR_WEBCOMMANDER_URL]"      |  
+| grantType        | "client_credentials"           |  
+| authString       | "[YOUR_AUTH_STRING]"           |  
+
+
+# Getting Started
+Follow the common pattern to test the functions in the SDK. All tests can be found in the "Tests" directory.
+
+### Testing SDK Functions
+
+### Example Method 1: `product_get_list_test`
+***
+
+
+```
+### Function Signature
+```Python
+def product_get_list_test():
+    webcommander_sdk: WebCommanderSDK = WebCommanderSDK().init_sdk(request_token_dto=CommonData.get_request_token_dto())
+
+    try:
+        response = webcommander_sdk.product.list()
+        print(response)
+    except WCException as ab:
+        print(ab)
+        print(ab.get_errors())
+        print(ab.raw_response)
+```
