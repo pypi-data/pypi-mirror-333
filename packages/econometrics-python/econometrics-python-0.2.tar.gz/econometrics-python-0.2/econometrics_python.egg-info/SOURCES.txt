@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+linear_regression.csv
+requirements.txt
+setup.py
+LinearRegression/__init__.py
+LinearRegression/plot.py
+LinearRegression/regression.py
+LinearRegression/utils.py
+econometrics_python.egg-info/PKG-INFO
+econometrics_python.egg-info/SOURCES.txt
+econometrics_python.egg-info/dependency_links.txt
+econometrics_python.egg-info/requires.txt
+econometrics_python.egg-info/top_level.txt
+tests/test_plot.py
+tests/test_regression.py
