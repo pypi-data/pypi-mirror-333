@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: amr_x2_pose
+Version: 0.1.0
+Requires-Dist: opencv-python
+Requires-Dist: mediapipe
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: filterpy
+Dynamic: requires-dist
