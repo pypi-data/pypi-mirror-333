@@ -1,0 +1,5 @@
+gitingest>=0.1.4
+
+[dev]
+pytest>=7.0.0
+ruff>=0.9.10
