@@ -1,0 +1,13 @@
+/docs/build/
+/dist/
+/.idea
+*.pyc
+/copul/expirements*
+/copul/images/
+*__pycache__*
+/notes/examples/experiments*
+/docs/images/schur/
+/notes/examples/*.png
+.venv/
+/.coverage
+/tests/families/images/
