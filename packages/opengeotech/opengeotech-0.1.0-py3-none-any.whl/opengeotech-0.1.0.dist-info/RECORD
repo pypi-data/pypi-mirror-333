@@ -1,0 +1,9 @@
+opengeotech/__init__.py,sha256=bjgLBBKYIcPSq1Qvqo6M1qOOhdfg8lieVD3VAYyJgb0,242
+opengeotech/soil_mechanics.py,sha256=Ruyo2QCrQ5tS-09yvukwFk_npx61g1yX1qGm8Cbw9-Y,519
+opengeotech/tests/__init__.py,sha256=dnttQvvGjGHz2kHTP95ortIlOiZtAQ07yQ54hodjoP0,38
+opengeotech/tests/test_soil_mechanics.py,sha256=OT4nNy5EpU_CQRZSBMZrsxD1NVq5JRPo-1AYIYSS7lU,652
+opengeotech-0.1.0.dist-info/LICENSE,sha256=dzHJarX7zVlxOpzuMLWhjCYJ2GgCCroP6xabwtnxBko,1081
+opengeotech-0.1.0.dist-info/METADATA,sha256=pRzu1caNeYu2Fs1sOIBG4q1mbY2jgoUpEfmnf4CYjZk,1323
+opengeotech-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+opengeotech-0.1.0.dist-info/top_level.txt,sha256=V63EwXqStHlTwNG66zFlYJKWdVsFQzXVlOO36YzZ1XY,12
+opengeotech-0.1.0.dist-info/RECORD,,
