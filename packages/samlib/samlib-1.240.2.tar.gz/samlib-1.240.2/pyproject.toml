@@ -1,0 +1,118 @@
+[build-system]
+requires = ['hatchling ~= 1.27']
+build-backend = 'hatchling.build'
+
+
+[project]
+name = 'samlib'
+dynamic = ['version']  # Built in hatch_build/sdist.py, static components defined below in metadata hook config
+description = "High-level library for NREL's SAM Simulation Core (SSC)"
+readme = 'README.md'
+# hatch_build/wheel.py uses requires-python to derive the interpreter tag of wheel files.
+# It expects there to be exactly three digits in the specifier.
+requires-python = '>=3.10'
+license = 'BSD-3-clause'
+authors = [
+    {name = 'Brandon Carpenter', email = 'brandon@avantus.com'},
+]
+keywords = [
+    'model',
+    'NREL',
+    'SAM',
+    'SSC',
+    'System Advisor Model',
+    'techno-economic',
+]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: MacOS',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX :: Linux',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Topic :: Scientific/Engineering',
+    'Typing :: Typed',
+]
+dependencies = [
+    # cffi is included by hatch build hooks and will match the version used during the build
+]
+
+[dependency-groups]
+dev = [
+    "mypy ~= 1.15",
+]
+
+
+[project.license-files]
+paths = [
+    'LICENSE',
+    'SSC-LICENSE',
+]
+
+
+[project.urls]
+'Source Code' = 'https://github.com/avantus-tech/samlib'
+
+
+[tool.hatch.build.targets.sdist]
+include = [
+    '/build-samlib.py',
+    '/hatch_build/metadata.py',
+    '/hatch_build/sdist.py',
+    '/hatch_build/wheel.py',
+    '/patches/limits.patch',
+    '/src/samlib/__init__.py',
+    '/src/samlib/_ssc.pyi',
+    '/src/samlib/_ssc_cffi.pyi',
+    '/src/samlib/_util.py',
+    '/src/samlib/modules/__init__.py',
+    '/src/samlib/modules/_types.pyi',
+    '/src/samlib/py.typed',
+    '/src/samlib/ssc.py',
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ['src/samlib']
+zip-safe = false  # Allow mypy to perform type checking using py.typed marker
+
+[tool.hatch.metadata.hooks.custom]
+path = 'hatch_build/sdist.py'
+version = 1
+revision = 2
+file = 'src/samlib/__version__.py'
+
+[tool.hatch.build.targets.sdist.hooks.custom]
+path = 'hatch_build/sdist.py'
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = 'hatch_build/wheel.py'
+dependencies = [
+    'cffi ~= 1.16',  # Will be injected into [project.dependencies] by hatch_build.py
+    'requests',
+    'setuptools; python_version >= "3.12"',
+]
+
+
+[tool.mypy]
+allow_redefinition = true
+check_untyped_defs = true
+disallow_any_unimported = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+follow_imports = 'silent'
+ignore_missing_imports = true
+incremental = true
+scripts_are_modules = true
+show_error_codes = true
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
