@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+termstyler.egg-info/PKG-INFO
+termstyler.egg-info/SOURCES.txt
+termstyler.egg-info/dependency_links.txt
+termstyler.egg-info/top_level.txt
