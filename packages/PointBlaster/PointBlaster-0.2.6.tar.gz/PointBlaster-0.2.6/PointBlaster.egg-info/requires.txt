@@ -1,0 +1,5 @@
+Bio
+pandas
+numpy
+cvmblaster>=0.4.5
+setuptools

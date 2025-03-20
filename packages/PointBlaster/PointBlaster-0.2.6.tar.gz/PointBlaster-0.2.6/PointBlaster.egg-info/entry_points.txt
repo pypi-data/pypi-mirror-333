@@ -1,0 +1,2 @@
+[console_scripts]
+PointBlaster = PointBlaster.PointBlaster:main
