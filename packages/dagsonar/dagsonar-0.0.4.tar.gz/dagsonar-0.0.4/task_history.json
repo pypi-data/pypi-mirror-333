@@ -1,0 +1,46 @@
+[
+  {
+    "dag_id": "tester",
+    "reference": {
+      "dag_id": "tester",
+      "task_history": [
+        {
+          "task_id": "bash_op_changed",
+          "task_type": null,
+          "content": "Call(func=Name(id='BashOperator', ctx=Load()), args=[], keywords=[keyword(arg='task_id', value=Constant(value='bash_op_changed')), keyword(arg='bash_command', value=Constant(value='/home/laboratory/dagsonar/playground/greeting_bot.sh '))])",
+          "shell_scripts": [
+            {
+              "path": "/home/laboratory/dagsonar/playground/greeting_bot.sh",
+              "content": "Constant(value=\"#!bin/bash\\n\\necho 'Greeting, Master Yoda, ' $1\\n\")",
+              "mtime": "2025-03-14T02:31:50.756094"
+            }
+          ],
+          "external_variables": [],
+          "called_functions": [],
+          "hash": "595520f09244ebefc1511bf57d4c7fece63bc3a2611f6ed67d29b8835b249168",
+          "last_modified": "2025-03-14T02:34:57.024951"
+        },
+        {
+          "task_id": "end",
+          "task_type": null,
+          "content": "FunctionDef(name='end', args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=[Expr(value=Call(func=Name(id='print', ctx=Load()), args=[Name(id='END_MESSAGE', ctx=Load())], keywords=[])), Expr(value=Call(func=Name(id='caller', ctx=Load()), args=[], keywords=[])), Expr(value=Call(func=Name(id='print', ctx=Load()), args=[Constant(value='Job Completed')], keywords=[]))], decorator_list=[Name(id='task', ctx=Load())], type_params=[])",
+          "shell_scripts": [],
+          "external_variables": [
+            {
+              "name": "END_MESSAGE",
+              "content": "Constant(value='End of DAG 1, Warning!')"
+            }
+          ],
+          "called_functions": [
+            {
+              "name": "caller",
+              "content": "FunctionDef(name='caller', args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=[Expr(value=Call(func=Name(id='print', ctx=Load()), args=[Constant(value='Has been called!')], keywords=[]))], decorator_list=[], type_params=[])"
+            }
+          ],
+          "hash": "fa92557b0b901ab051eaf2c5f99c15fc3d45e75c728293b536318d1ec039a1c0",
+          "last_modified": "2025-03-14T02:34:57.024951"
+        }
+      ]
+    }
+  }
+]
