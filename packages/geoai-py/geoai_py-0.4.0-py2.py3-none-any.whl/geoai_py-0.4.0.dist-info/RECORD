@@ -1,0 +1,15 @@
+geoai/__init__.py,sha256=rtBuAkA1JMtY_o_PE3kdaFftrp5K9YBQxdi5y99ktPU,923
+geoai/download.py,sha256=eqMecJqvqyrIVFViNA7pW8a5EIhqYJzRILmxQoFHG2k,13095
+geoai/extract.py,sha256=CCXjUcGC4ZOKOKKjvElp8VFmTz46b0ATvGitbOPgTwE,95506
+geoai/geoai.py,sha256=L1jkozDcjqJXvqT6i8oW04Ix9x4cc2-LNYi9_564ABQ,163
+geoai/hf.py,sha256=mLKGxEAS5eHkxZLwuLpYc1o7e3-7QIXdBv-QUY-RkFk,17072
+geoai/segment.py,sha256=g3YW17ftr--CKq6VB32TJEPY8owGQ7uQ0sg_tUT2ooE,13681
+geoai/segmentation.py,sha256=AtPzCvguHAEeuyXafa4bzMFATvltEYcah1B8ZMfkM_s,11373
+geoai/train.py,sha256=VaeFzIkVUNTdre8ImgUNhmbpA42qijSXaajLpmBF_Ic,36248
+geoai/utils.py,sha256=Q5f-mFVjer7BKipt4GOI9QFvTRsdB8V48LpkqlfBg2o,223437
+geoai_py-0.4.0.dist-info/LICENSE,sha256=vN2L5U7cZ6ZkOHFmc8WiGlsogWsZc5dllMeNxnKVOZg,1070
+geoai_py-0.4.0.dist-info/METADATA,sha256=xRCruLClbNxRuXn3A-729IWqiyO-B08VFbpMvrN-ErI,6297
+geoai_py-0.4.0.dist-info/WHEEL,sha256=SrDKpSbFN1G94qcmBqS9nyHcDMp9cUS9OC06hC0G3G0,109
+geoai_py-0.4.0.dist-info/entry_points.txt,sha256=uGp3Az3HURIsRHP9v-ys0hIbUuBBNUfXv6VbYHIXeg4,41
+geoai_py-0.4.0.dist-info/top_level.txt,sha256=1YkCUWu-ii-0qIex7kbwAvfei-gos9ycyDyUCJPNWHY,6
+geoai_py-0.4.0.dist-info/RECORD,,
