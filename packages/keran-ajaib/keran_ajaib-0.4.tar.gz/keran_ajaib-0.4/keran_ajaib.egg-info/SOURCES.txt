@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+keran_ajaib/__init__.py
+keran_ajaib/main.py
+keran_ajaib.egg-info/PKG-INFO
+keran_ajaib.egg-info/SOURCES.txt
+keran_ajaib.egg-info/dependency_links.txt
+keran_ajaib.egg-info/requires.txt
+keran_ajaib.egg-info/top_level.txt
