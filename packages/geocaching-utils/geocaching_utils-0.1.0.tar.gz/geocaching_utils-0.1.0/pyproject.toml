@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geocaching-utils"
+version = "0.1.0"
+description = "A collection of utilities for geocaching puzzle solving"
+readme = "README.md"
+authors = [
+    {name = "GC-Utils Team", email = "hytegeocaching@gmail.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.6"
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/spectraldecomp/gc-utils"
+"Bug Tracker" = "https://github.com/spectraldecomp/gc-utils/issues"
+
+[project.scripts]
+gc-utils = "gc_utils.cli.main:main"
+
+[tool.setuptools]
+packages = ["gc_utils", "gc_utils.cli", "gc_utils.utils", "gc_utils.tests"]
+
+[tool.setuptools.package-data]
+"gc_utils" = ["data/**/*"] 

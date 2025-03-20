@@ -1,0 +1,2 @@
+[console_scripts]
+gc-utils = gc_utils.cli.main:main
