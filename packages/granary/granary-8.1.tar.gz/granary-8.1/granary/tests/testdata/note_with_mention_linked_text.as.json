@@ -1,0 +1,13 @@
+{
+  "objectType": "note",
+  "content": "hi @alice!",
+  "author": "did:plc:foo",
+  "tags": [{
+    "objectType": "mention",
+    "url": "https://bsky.app/profile/did:plc:789",
+    "displayName": "@alice",
+    "startIndex": 3,
+    "length": 6
+  }],
+  "published": "2022-01-02T03:04:05.000Z"
+}

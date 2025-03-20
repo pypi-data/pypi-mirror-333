@@ -1,0 +1,17 @@
+{
+  "$type": "app.bsky.actor.profile",
+  "displayName": "Martin Smith",
+  "description": "this is my bio",
+  "fooOriginalDescription": "this is my bio",
+  "fooOriginalUrl": "https://example.com/martin",
+  "avatar": {
+    "$type": "blob",
+    "ref": {"$link": "avatar-cid"},
+    "mimeType": "image/jpeg",
+    "size": 345
+  },
+  "banner": {
+    "cid": "banner-cid",
+    "mimeType": "image/jpeg"
+  }
+}

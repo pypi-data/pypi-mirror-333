@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://purl.archive.org/miscellany",
+    {
+      "discoverable": "http://joinmastodon.org/ns#discoverable",
+      "indexable": "http://joinmastodon.org/ns#indexable"
+    }, {
+        "PropertyValue": "http://schema.org#PropertyValue"
+    }
+  ],
+  "type": "Person",
+  "id": "tag:example.com,2011:martin",
+  "url": "http://example.com/martin",
+  "name": "Martin Smith",
+  "discoverable": true,
+  "indexable": true,
+  "image": [{
+    "type": "Image",
+    "url": "http://example.com/martin/image"
+  }, {
+    "type": "Image",
+    "url": "http://example.com/martin/icon"
+  }],
+  "icon": {
+    "type": "Image",
+    "url": "http://example.com/martin/icon"
+  },
+  "attachment": [{
+    "name": "Link",
+    "type": "PropertyValue",
+    "value": "<a rel=\"me\" href=\"http://example.com/martin\"><span class=\"invisible\">http://</span>example.com/martin</a>"
+  }]
+}

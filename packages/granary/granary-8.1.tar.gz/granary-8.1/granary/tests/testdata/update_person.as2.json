@@ -1,0 +1,26 @@
+{
+  "@context": ["https://www.w3.org/ns/activitystreams", "https://purl.archive.org/miscellany"],
+  "type": "Update",
+  "actor": "https://example.com/martin",
+  "object": {
+    "@context": [
+      {
+        "discoverable": "http://joinmastodon.org/ns#discoverable",
+        "indexable": "http://joinmastodon.org/ns#indexable"
+      }, {
+        "PropertyValue": "http://schema.org#PropertyValue"
+      }
+    ],
+    "type": "Person",
+    "url": "https://example.com/martin",
+    "discoverable": true,
+    "indexable": true,
+    "attachment": [
+      {
+        "type": "PropertyValue",
+        "name": "super cool",
+        "value": "<a rel=\"me\" href=\"https://example.com/martin\"><span class=\"invisible\">https://</span>example.com/martin</a>"
+      }
+    ]
+  }
+}

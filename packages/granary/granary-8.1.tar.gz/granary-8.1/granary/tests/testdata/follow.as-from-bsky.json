@@ -1,0 +1,6 @@
+{
+  "objectType": "activity",
+  "verb": "follow",
+  "object": "http://followee",
+  "actor": "did:plc:foo"
+}

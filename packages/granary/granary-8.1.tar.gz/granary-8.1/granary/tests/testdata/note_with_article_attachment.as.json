@@ -1,0 +1,10 @@
+{
+  "objectType": "note",
+  "content": "i hereby attach an article",
+  "attachments": [{
+    "objectType": "article",
+    "content": "this is being attached",
+    "displayName": "an att",
+    "url": "http://att/post"
+  }]
+}
