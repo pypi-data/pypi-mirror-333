@@ -1,0 +1,15 @@
+latentshift/__init__.py,sha256=kp3dPivPKn9citeuXF3r59L-uEKNjdCIVTQfzmtY_iY,120
+latentshift/alignment.py,sha256=VOe-fymPftwOra3wIX8ukEg-ssGaP5HG1io0gcAZ0Cw,10610
+latentshift/autoencoders.py,sha256=6xjYSZU9SQT3Ko-q71mpU00prQnUWPa9LuiwfUEviag,3184
+latentshift/classifiers.py,sha256=mKEg0zEuF8ySuMlvuAyVSK057SmPVuLgcmuj4TMgXMs,11163
+latentshift/utils.py,sha256=ZkAChMY4naWDKwNGzIJwVOKStFwQOe1GlbMVzbXPnPw,1111
+latentshift/video_utils.py,sha256=KwU5DD-wyUDjJbWrIH0kUith5_ISIU7EKenNnt3Q_0k,5219
+latentshift/attribute_classifier/BranchedTiny.py,sha256=Ufj1cIMMZZuqWMqzo7ou-RLajllYMyZO-HU0_OGRAPQ,10592
+latentshift/attribute_classifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+latentshift/cf/__init__.py,sha256=TuPFkEZwlTDVoUd53JH9Pl0bDrS98qpqBGeSPR3RZd8,66
+latentshift/cf/latent_shift.py,sha256=Pi-Lczsm0nZNwJnbGHffjDJSnrpXujOQlcyGDYTPaBo,11542
+latentshift/cf/wachter.py,sha256=gqM3JAHpbt4UWkVLwB2M5cAcb7PO6rDc6qJM_3vo0vE,4160
+latentshift-0.0.6.dist-info/METADATA,sha256=pmW4S-KbqWxFOfsR7K4KIHFj7gWy8cTp3Et17CihWsA,2403
+latentshift-0.0.6.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+latentshift-0.0.6.dist-info/top_level.txt,sha256=2bL-p3_bzAHTmdm8tMQTWaYWNeNLqziZsYKDvPP-BXI,12
+latentshift-0.0.6.dist-info/RECORD,,
