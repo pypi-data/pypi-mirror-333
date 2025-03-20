@@ -1,0 +1,11 @@
+sync_with_uv/__init__.py,sha256=fAhfo0ejWFgj-ax3VTmnHA8IyISA9phyxMAY7vViH-4,216
+sync_with_uv/__main__.py,sha256=eXDJ5exIgynbP0sCwZHxoW3yoNSLLEnBGSMIcmf_nfY,166
+sync_with_uv/_version.py,sha256=bSmADqydH8nBu-J4lG8UVuR7hnU_zcwhnSav2oQ0W0A,511
+sync_with_uv/cli.py,sha256=EB3dw_Akeo_NgX4NKJBPljcUbI3OLLhG_TVviG-rbjE,1931
+sync_with_uv/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sync_with_uv/repo_data.py,sha256=WVnL84QGDPL7ZXHD3vlXGpGTL6dvnhjxvUFbpOjO6Zo,3433
+sync_with_uv/sync_with_uv.py,sha256=HxXGLdSLKJRrcM7SEs7ociwHXFDkRhq9p6wUVsiOPRk,2598
+sync_with_uv-0.1.2.dist-info/METADATA,sha256=2wvxORa-03iNO2csc0kJAezDyLLj5nbDXxcD1GArurw,5188
+sync_with_uv-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sync_with_uv-0.1.2.dist-info/entry_points.txt,sha256=MlJGxmO_SMbHxSX8N3QpF_i0TxJHnbk_BngwuSiqt6I,54
+sync_with_uv-0.1.2.dist-info/RECORD,,
