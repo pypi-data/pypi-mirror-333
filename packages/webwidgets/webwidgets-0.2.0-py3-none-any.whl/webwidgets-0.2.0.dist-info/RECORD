@@ -1,0 +1,14 @@
+webwidgets/__init__.py,sha256=jkCnUIqDE1LjArrZKtl1Bpm9bf-ZmLUP5JBRTh3gayA,481
+webwidgets/compilation/__init__.py,sha256=hb61nhmPTghIzuA_hun98xT5Ngv7QFAgMHD44g-9uOo,433
+webwidgets/compilation/css/__init__.py,sha256=Yzk_Bq1ey8Bf4dcKNd_priwj6_DA9CwG9wFs-BbZRGE,449
+webwidgets/compilation/css/css.py,sha256=8VjlXQtjY2fuhg49VtUi1RZF__Z7-qtj9-FAw3ZAtZA,7160
+webwidgets/compilation/html/__init__.py,sha256=NRccbCUKdhmK51MnYFO8q1sS8fWhAggRnMiGDG7lQMQ,505
+webwidgets/compilation/html/html_node.py,sha256=IEkb_zfIexU59cEk2Gf7nBo9Tm13DN_siLF7TBIGF1k,10095
+webwidgets/compilation/html/html_tags.py,sha256=U2HmhLkV6BOqTmgvIMlmMCQysQ7i2nEAVWJzZe74ucA,1388
+webwidgets/utility/__init__.py,sha256=_L0RxTAzAhjgZqg0eKEqpCJJeN_W2P9p5Clu7PETqCQ,448
+webwidgets/utility/sanitizing.py,sha256=OKJRDqk-OXYCWeK6ie3GdfQvb49wTs93kd971mg5oK0,5770
+webwidgets/utility/validation.py,sha256=bUjpiGP59GW3DPvQ1hwR5ezBMmcSd6v4xlDLwTHZv_A,4261
+webwidgets-0.2.0.dist-info/METADATA,sha256=WDQK0YqoVt7imhRbXDw3QjrG9UgCflSvbHYDiNRM1mU,550
+webwidgets-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+webwidgets-0.2.0.dist-info/licenses/LICENSE,sha256=LISw1mw5eK6i8adFSlx6zltZxrJFwurngVdZAEU8g_I,1064
+webwidgets-0.2.0.dist-info/RECORD,,
