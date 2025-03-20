@@ -1,0 +1,4 @@
+build>=1.2.2.post1
+colorama>=0.4.6
+setuptools>=76.0.0
+twine>=6.1.0
