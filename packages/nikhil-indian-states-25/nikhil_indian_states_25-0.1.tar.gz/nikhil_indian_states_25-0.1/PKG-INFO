@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nikhil_indian_states_25
+Version: 0.1
+Summary: A Django app that provides Indian state choices as a model and form field.
+Author: Nikhil Bhilare
+Author-email: nikhil.bhilare.20@gmail.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: django
