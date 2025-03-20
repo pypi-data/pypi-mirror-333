@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: template_tool
+Version: 0.1.5
+Summary: A package for manage python templates
+Author: sk2011se
+Author-email: eatebarisajjad@gmail.com
+Requires-Dist: colorama
+Requires-Dist: argparse
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
