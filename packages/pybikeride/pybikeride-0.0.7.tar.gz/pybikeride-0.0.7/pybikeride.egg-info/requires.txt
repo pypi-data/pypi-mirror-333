@@ -1,0 +1,8 @@
+python-dateutil
+pandas
+numpy
+geopy
+fitdecode
+bs4
+ipyleaflet
+requests
