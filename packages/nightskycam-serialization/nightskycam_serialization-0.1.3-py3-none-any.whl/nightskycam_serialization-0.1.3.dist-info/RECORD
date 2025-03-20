@@ -1,0 +1,12 @@
+nightskycam_serialization/#status.py#,sha256=Q961_GpfczQl9QEVBgKMagQPeXeYfLOUCyiXPM7kxgY,17253
+nightskycam_serialization/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nightskycam_serialization/command.py,sha256=M60Kw2J0_f0ZpZ3hKh7Fl1RBCFNdWqtP8evu28vF5iM,3093
+nightskycam_serialization/config.py,sha256=ORMYZK9lyH9H2BsnLTctbbxHRt9R8ScEnnjz5HdMhdk,1901
+nightskycam_serialization/fix.py,sha256=LUIjvVH82CHjEP-isyDDaN4ZeO8jUQJhdCh0QUsa4EA,1411
+nightskycam_serialization/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nightskycam_serialization/serialize.py,sha256=3RKB6TAB439IzsT-eIWcLq28G9bq6TMa5ctdM0xv5q4,2280
+nightskycam_serialization/status.py,sha256=4SrPqpv97xaXm9zfK5oGMVboxVP6N40aJNuOEW4mwiE,17587
+nightskycam_serialization/version.py,sha256=Lgf9keBX7aG_JEFt6UYSyiFKcm-BYGtmk9ohpQhYpyk,20
+nightskycam_serialization-0.1.3.dist-info/METADATA,sha256=SzWBCjUnTFExqk1k4Wg_dPojITB0l2KLhOQ9Nk_vW6E,652
+nightskycam_serialization-0.1.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+nightskycam_serialization-0.1.3.dist-info/RECORD,,
