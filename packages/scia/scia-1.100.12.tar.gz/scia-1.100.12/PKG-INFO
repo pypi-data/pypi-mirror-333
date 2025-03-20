@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: scia
+Version: 1.100.12
+Summary: A Python package for eye-tracking data processing
+Home-page: https://github.com/Ahsankhodami/scia
+Author: Mohammad Ahsan Khodami
+Author-email: ahsan.khodami@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: openpyxl
+Requires-Dist: sklearn
+Requires-Dist: scipy
+Requires-Dist: statsmodels
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# scia
+
+scia is a robust Python package dedicated to single-case data analysis. Designed for researchers and practitioners working with single-case experimental designs.
+
+**scia** provides a comprehensive suite of statistical methods to analyze, interpret, and report data effectively. The package includes functionality to create and preprocess single-case data frames, fill in missing values, filter data, and compute key non-overlap and effect size metrics. Advanced methods for evaluating treatment effects and trends are available through functions such as autocorr for autocorrelation analysis and bayesplm for Bayesian piecewise linear regression. Additional tools like pnd, pem, pet, nap, pand, ird, tau_u, and corrected_tau offer further analytical capabilities to support rigorous, data-driven decision making.
+
+For full documentation, please visit our [Documentation](https://github.com/ahsankhodami/scia/documentation) 🚀📚
