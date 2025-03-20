@@ -1,0 +1,76 @@
+[project]
+name = "jamlib"
+version = "2.1.2-alpha"
+description = "Simple and univirsal library for authorization"
+authors = [
+    {name = "Makridenko Adrian",email = "adrianmakridenko@duck.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["pycryptodome (>=3.21.0,<4.0.0)", "cryptography (>=44.0.2,<45.0.0)"]
+
+[project.urls]
+Homepage = "https://github.com/lyaguxafrog/jam"
+Repository = "https://github.com/lyaguxafrog/jam"
+Issues = "https://github.com/lyaguxafrog/jam/issues"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "jam" },
+]
+
+[tool.poetry.group.dev.dependencies]
+pretty-errors = "^1.2.25"
+icecream = "^2.1.4"
+pre-commit = "^4.1.0"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+black = "^24.10.0"
+mypy = "^1.14.1"
+
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^8.3.4"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.50"
+mkdocstrings = "^0.27.0"
+mkdocstrings-python = "^1.13.0"
+
+
+[tool.flake8]
+ignore = ["D203", "E501"]
+exclude = [".git", "__pycache__", "__init__.py", "docs/"]
+max-complexity = 18
+max-line-length = 80
+
+[tool.isort]
+profile = "black"
+default_section = "THIRDPARTY"
+balanced_wrapping = true
+known_first_party = "src"
+line_length = 80
+lines_after_imports = 2
+lines_between_sections = 1
+multi_line_output = 3
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+skip = ["env", ".env", ".env.example"]
+
+[tool.black]
+line-length = 80
+skip-string-normalization = false
+
+[tool.mypy]
+disable_error_code = ["no-redef", "import-not-found"]
+
+[tool.pytest]
+asyncio_default_fixture_loop_scope = "function"
+python_files = ["test*.py"]
