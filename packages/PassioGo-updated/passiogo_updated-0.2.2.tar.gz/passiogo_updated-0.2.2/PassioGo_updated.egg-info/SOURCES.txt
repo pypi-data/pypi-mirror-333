@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+PassioGo_updated.egg-info/PKG-INFO
+PassioGo_updated.egg-info/SOURCES.txt
+PassioGo_updated.egg-info/dependency_links.txt
+PassioGo_updated.egg-info/requires.txt
+PassioGo_updated.egg-info/top_level.txt
+passiogo/__init__.py
+tests/__init__.py
+tests/test_main.py
