@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+bank_system_aliceferreiracodes.egg-info/PKG-INFO
+bank_system_aliceferreiracodes.egg-info/SOURCES.txt
+bank_system_aliceferreiracodes.egg-info/dependency_links.txt
+bank_system_aliceferreiracodes.egg-info/top_level.txt
