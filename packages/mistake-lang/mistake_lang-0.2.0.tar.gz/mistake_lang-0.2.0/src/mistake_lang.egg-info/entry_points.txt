@@ -1,0 +1,2 @@
+[console_scripts]
+mistake-lang = mistake.main:main
