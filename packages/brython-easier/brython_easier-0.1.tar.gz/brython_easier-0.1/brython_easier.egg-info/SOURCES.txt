@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+brython_easier.egg-info/PKG-INFO
+brython_easier.egg-info/SOURCES.txt
+brython_easier.egg-info/dependency_links.txt
+brython_easier.egg-info/top_level.txt

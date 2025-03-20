@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: brython_easier
+Version: 0.1
+Summary: An easier brython library 
+Home-page: https://github.com/MatveyKostis/brython_easier
+Author: MatveyKostis
+Author-email: matveykostiapk@gmail.com
+License: GPL-3.0 license
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
