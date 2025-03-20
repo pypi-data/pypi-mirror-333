@@ -1,0 +1,118 @@
+# TxTWrap🔡
+A tool for wrapping a text.🔨
+
+> **⚠️All documents are in the each module.⚠️**
+
+All constants and functions❕:
+- `LOREM_IPSUM_W`
+- `LOREM_IPSUM_S`
+- `LOREM_IPSUM_P`
+- `mono`
+- `word`
+- `wrap`
+- `align` (Updated!)
+- `fillstr` (New!)
+- `printwrap` (New!)
+- `shorten` (Updated!)
+
+Mod `python -m txtwrap` Commands❗:
+```shell
+python -m txtwrap --help
+```
+
+Examples❓:
+## Render a wrap text in PyGame🎮
+```py
+from typing import Literal, Optional
+from txtwrap import align, LOREM_IPSUM_P
+import pygame
+
+def render_wrap(
+
+    font: pygame.font.Font,
+    text: str,
+    width: int,
+    antialias: bool,
+    color: pygame.Color,
+    background: Optional[pygame.Color] = None,
+    linegap: int = 0,
+    alignment: Literal['left', 'center', 'right', 'fill'] = 'left',
+    method: Literal['word', 'mono'] = 'word',
+    use_max_width: bool = True,
+    preserve_empty: bool = True
+
+) -> pygame.Surface:
+
+    # Only supports in txtwrap 1.1.0+
+    align_info = align(
+        text=text,
+        width=width,
+        linegap=linegap,
+        sizefunc=font.size,
+        method=method,
+        alignment=alignment,
+        use_max_width=use_max_width,
+        preserve_empty=preserve_empty,
+        return_details=True
+    )
+
+    surface = pygame.Surface(align_info['size'], pygame.SRCALPHA)
+
+    if background is not None:
+        surface.fill(background)
+
+    for x, y, text in align_info['aligned']:
+        surface.blit(font.render(text, antialias, color), (x, y))
+
+    return surface
+
+# Example usage:
+pygame.init()
+pygame.display.set_caption("Lorem Ipsum")
+
+running = True
+screen = pygame.display.set_mode((600, 510))
+clock = pygame.time.Clock()
+surface = render_wrap(
+    font=pygame.font.Font(None, 20),
+    text=LOREM_IPSUM_P,
+    width=screen.get_width(),
+    antialias=True,
+    color='#ffffff',
+    background='#303030',
+    alignment='fill'
+)
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    screen.fill('#000000')
+    screen.blit(surface, (0, 0))
+    pygame.display.flip()
+    clock.tick(60)
+```
+
+## Print a wrap text to terminal🔡
+```py
+from txtwrap import printwrap, LOREM_IPSUM_W
+
+printwrap(LOREM_IPSUM_W, width=20, alignment='left')
+print('=' * 20)
+printwrap(LOREM_IPSUM_W, width=20, alignment='center')
+print('=' * 20)
+printwrap(LOREM_IPSUM_W, width=20, alignment='right')
+print('=' * 20)
+printwrap(LOREM_IPSUM_W, width=20, alignment='fill')
+```
+
+## Short a long text🔤
+```py
+from txtwrap import shorten, LOREM_IPSUM_S
+
+short_lorem = shorten(LOREM_IPSUM_S, width=20, placeholder='…')
+test = shorten('   Helllo,   \t\r\n World!!  \f', width=20, placeholder='…', strip_space=True)
+
+print(short_lorem)
+print(test)
+```
