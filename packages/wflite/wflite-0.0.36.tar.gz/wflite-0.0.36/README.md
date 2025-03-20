@@ -1,0 +1,353 @@
+# State Machine Framework
+
+A flexible state machine implementation with visualization and REST API support.
+
+## Quick Start
+
+1. Install dependencies:
+```bash
+pip install -e .
+```
+### Inititialize the database and load some templates
+```bash
+rm workflows.db
+PYTHONPATH=${PWD}/src streamlit run app/template_manager.py
+```
+
+### Start the API Server
+
+3. Start the API server:
+```bash
+uvicorn runtime.workflow_api:app --reload --port 8000
+```
+
+The API documentation will be available at: http://localhost:8000/docs
+
+### Start the Workflow simulator
+
+
+```bash
+PYTHONPATH=${PWD}/src streamlit run app/simulator.py
+```
+
+The API documentation will be available at: http://localhost:8000/docs
+
+### Using the Customer Workflow API
+
+1. Assign a workflow to a customer:
+```bash
+curl -X POST http://localhost:8000/workflow/customer/assign \
+-H "Content-Type: application/json" \
+-d '{
+    "customer_id": "CUST-001",
+    "template_name": "Simple"
+}'
+```
+
+Response:
+```json
+{
+    "customer_id": "CUST-001",
+    "template_name": "Simple",
+    "instance_id": "Simple-CUST-001-1678901234567-a1b2c3d4"
+}
+```
+
+2. Trigger an event for a customer:
+```bash
+curl -X POST http://localhost:8000/workflow/customer/CUST-001/event \
+-H "Content-Type: application/json" \
+-d '{
+    "event_name": "case_created",
+    "event_details": {
+        "data": {
+            "amount": 900
+        }
+    }
+}'
+```
+
+Response:
+```json
+{
+    "success": true,
+    "customer_id": "CUST-001",
+    "instance_id": "order_process-CUST-001-1678901234567-a1b2c3d4",
+    "current_state": "submitted",
+    "state_name": "Order Submitted",
+    "context": {
+        "order_id": "12345",
+        "amount": 100
+    },
+    "actions": []
+}
+```
+
+3. Check customer workflow status:
+```bash
+curl http://localhost:8000/workflow/customer/CUST-001
+```
+
+### Common API Operations
+
+- List available templates:
+```bash
+curl http://localhost:8000/workflow/templates
+```
+
+- Get available events for current state:
+```bash
+curl http://localhost:8000/workflow/customer/CUST-001/events
+```
+
+### Example Workflow
+
+1. Assign order process workflow:
+```bash
+curl -X POST http://localhost:8000/workflow/customer/assign \
+-d '{"customer_id": "CUST-001", "template_name": "order_process"}'
+```
+
+2. Submit order:
+```bash
+curl -X POST http://localhost:8000/workflow/customer/CUST-001/event \
+-d '{
+    "event_name": "submit",
+    "event_details": {
+        "order_id": "ORD-123",
+        "data": {
+            "amount": 1500,
+            "items": ["item1", "item2"]
+        }
+    }
+}'
+```
+
+3. Approve order:
+```bash
+curl -X POST http://localhost:8000/workflow/customer/CUST-001/event \
+-d '{
+    "event_name": "approve",
+    "event_details": {
+        "approved_by": "manager1",
+        "data": {
+            "notes": "Order approved"
+        }
+    }
+}'
+
+### Package
+```bash
+source venv/bin/activate
+pip install twine
+python setup.py sdist bdist_wheel
+pip install dist/wflite-0.0.33-py3-none-any.whl --force-reinstall
+
+twine upload dist/*
+```
+
+## Command Line Interface
+
+Workflow Lite includes a command-line interface (CLI) for interacting with workflows:
+
+### Installation
+
+When you install Workflow Lite, the CLI tool is automatically installed:
+
+```bash
+pip install -e .
+```
+
+### Usage
+
+The CLI supports several commands:
+
+#### Trigger an event
+
+```bash
+# Trigger an event with default customer ID and event name
+wflite event
+
+# Trigger an event with specific customer ID and event name
+wflite event --customer-id CUST-002 --event-name approve
+
+# Trigger an event with event data
+wflite event -c CUST-001 -e submit -d '{"order_id": "ORD-123", "amount": 500}'
+
+# Trigger an event with data from a JSON file
+wflite event -c CUST-001 -e submit -d path/to/data.json
+```
+
+#### Get workflow state
+
+```bash
+# Get state for default customer ID
+wflite state
+
+# Get state for a specific customer
+wflite state --customer-id CUST-002
+```
+
+#### Assign a workflow template
+
+```bash
+# Assign a workflow with default customer ID and template
+wflite assign
+
+# Assign a specific template to a customer
+wflite assign --customer-id CUST-002 --template OrderProcess
+```
+
+#### List available templates
+
+```bash
+# List all available workflow templates
+wflite templates
+```
+
+### Environment Configuration
+
+The CLI will use environment variables from your `.env` file. You can also specify the API URL:
+
+```bash
+# Set API URL via environment variable
+export WFLITE_API_URL=http://api.example.com
+
+# Or specify it directly in the command
+wflite event --api-url http://api.example.com
+```
+
+## Environment Variable Configuration
+
+Workflow Lite supports configuration through environment variables. This is especially useful for deployment scenarios where you don't want to include credentials in config files.
+
+### Using .env Files for Local Development
+
+For local development, you can use a `.env` file to set environment variables without modifying your system's environment.
+
+1. Create a copy of the template file:
+
+   ```bash
+   cp .env.template .env
+   ```
+
+2. Edit the `.env` file and set your configuration values:
+
+   ```bash
+   # Example .env file
+   PERSISTENCE_PROVIDER=mongodb
+   MONGODB_CONNECTION_STRING=mongodb://localhost:27017
+   MONGODB_DATABASE=workflow_db
+   ```
+
+3. The application will automatically load these variables when it starts.
+
+### Common Environment Variables
+
+```bash
+# General
+export PERSISTENCE_PROVIDER=mongodb  # sqlite, mongodb, cosmosdb, dynamodb
+
+# MongoDB/CosmosDB MongoDB API
+export MONGODB_CONNECTION_STRING="mongodb://user:password@host:port/database?options"
+export MONGODB_HOST="your-mongodb-host"
+export MONGODB_PORT=27017
+export MONGODB_DATABASE="workflow_db"
+export MONGODB_COSMOS_MODE=true  # When using CosmosDB with MongoDB API
+
+# CosmosDB SQL API
+export COSMOSDB_CONNECTION_STRING="AccountEndpoint=https://your-account.documents.azure.com:443/;AccountKey=your-key;"
+
+# AWS DynamoDB
+export DYNAMODB_REGION="us-east-1"
+export DYNAMODB_ACCESS_KEY_ID="your-access-key-id"
+export DYNAMODB_SECRET_ACCESS_KEY="your-secret-access-key"
+```
+
+### Configuration Precedence
+
+Workflow Lite uses the following order of precedence for configuration (highest to lowest):
+
+1. Directly provided configuration in API calls
+2. Environment variables
+3. Azure Key Vault secrets (if available)
+4. Default values in the config.yml file
+
+## Azure Key Vault Integration
+
+Workflow Lite can securely store and retrieve database credentials and other configuration secrets using Azure Key Vault. This integration is particularly useful for serverless deployments like Azure Functions.
+
+### Storing MongoDB Connection String in Azure Key Vault
+
+Follow these steps to store your MongoDB connection string in Azure Key Vault:
+
+1. **Create an Azure Key Vault** (if you don't have one already):
+
+   ```bash
+   az keyvault create --name "wflite-kv" --resource-group "your-resource-group" --location "eastus"
+   ```
+
+2. **Add your MongoDB connection string as a secret:**
+
+   ```bash
+   az keyvault secret set --vault-name "wflite-kv" --name "MONGODB-CONNECTION-STRING" --value "mongodb://user:password@host:port/database?options"
+   ```
+
+3. **Create a Managed Identity for your Azure Function App:**
+
+   ```bash
+   az functionapp identity assign --name "rmhub" --resource-group "rg-integration-middleware"
+   ```
+
+   This command will return the principal ID of the managed identity. Copy this ID for the next step.
+
+4. **Grant your Function App's Managed Identity access to Key Vault:**
+
+   ```bash
+   az keyvault set-policy --name "wflite-kv" --object-id "b2574ac6-3ac3-4728-afb7-a2f6a82d55f1" --secret-permissions get list
+   ```
+
+5. **Set the KEYVAULT_URL in your Function App's settings:**
+
+   ```bash
+   az functionapp config appsettings set --name "update-mongo-db" --resource-group "rg-integration-middleware" --settings KEYVAULT_URL="https://wflite-kv.vault.azure.net/"
+   ```
+6. **Set the MONGODB-CONNECTION-STRING in the key vault:**
+
+   ```bash
+   az keyvault secret set --vault-name "wflite-kv" --name "MONGODB-CONNECTION-STRING" --value "mongodb://user:password@host:port/database?options"
+   ```
+
+### Using Key Vault in Your Code
+
+When running in Azure Functions, Workflow Lite will automatically attempt to retrieve secrets from Key Vault. You don't need to explicitly provide credentials in your function code:
+
+```python
+import azure.functions as func
+from wflite.runtime.serverless import azure_function_handler
+import json
+
+def main(req: func.HttpRequest) -> func.HttpResponse:
+    result = azure_function_handler(req)
+    return func.HttpResponse(
+        json.dumps(result),
+        mimetype="application/json",
+        status_code=200 if result.get('success') else 400
+    )
+```
+
+The serverless module will:
+1. Check if you're running in Azure Functions environment
+2. Attempt to use the Managed Identity to access Key Vault
+3. Retrieve the MongoDB connection string and other configured secrets
+4. Apply these secrets to your workflow configuration
+
+### Available Secret Names
+
+The following secret names are currently supported:
+
+- `MONGODB-CONNECTION-STRING`: Connection string for MongoDB/CosmosDB
+- `COSMOSDB-CONNECTION-STRING`: Connection string for CosmosDB SQL API
+- `DYNAMODB-CONNECTION-STRING`: Connection string for AWS DynamoDB
+
+To add more secrets, modify the `secret_names` list in `wflite/config/azure_keyvault.py`.
