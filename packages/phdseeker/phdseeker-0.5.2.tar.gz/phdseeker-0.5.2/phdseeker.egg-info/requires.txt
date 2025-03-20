@@ -1,0 +1,9 @@
+brotlipy
+bs4
+docopt
+httpx
+openpyxl
+pandas
+PyYAML
+rich
+urllib3
