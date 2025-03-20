@@ -1,0 +1,6 @@
+torch
+transformers<4.47.0,>4.45.2
+accelerate
+
+[test]
+pytest
