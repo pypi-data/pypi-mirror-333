@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: StatisticalAnalysis
+Version: 0.0.7
+Summary: Statistical analysis
+Home-page: https://github.com/joheras/
+Author: Jonathan Heras
+Author-email: joheras@gmail.com
+Keywords: image augmentation,classification,localization,detection,semantic segmentation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE.txt
