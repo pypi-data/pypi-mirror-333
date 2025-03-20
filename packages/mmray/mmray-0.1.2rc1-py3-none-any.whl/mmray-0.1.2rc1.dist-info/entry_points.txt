@@ -1,0 +1,2 @@
+[console_scripts]
+mmray_generate_slurm_script = mmray:generate_slurm_script
