@@ -1,0 +1,12 @@
+capitolscraper/__init__.py,sha256=56iV2jgIXvS02f89GOGFOS_UUaapt2LuYMIsKMrXStw,104
+capitolscraper/trades.py,sha256=z2zlSLnJxP6JZEaIstXqAf5sq0kht6MtGU3f0n8iWwM,2302
+capitolscraper/utils/__init__.py,sha256=DWlgJbi7s-fcjJUvdMxiRNApSRAVstcH6xLjQSfBA_Q,279
+capitolscraper/utils/scraperfuncs.py,sha256=mxR-2mhzy-vwBOV7Hnr2sXcCp_fbAEa26zEvpAkidmU,4087
+capitolscraper/utils/dataclasses/__init__.py,sha256=rBzdA9Aqrd-yHG5Fy487opHHkwFtMplcpVVM0KfaKbM,327
+capitolscraper/utils/dataclasses/page_data.py,sha256=bbLhv7ofOXN1jT6WFuL1ImvCWusFb7MSfSGOZUO5XgE,315
+capitolscraper/utils/dataclasses/trade.py,sha256=-rC0PWbwASAxyDU8DBp0u7h0ixLHT89DugPbCtjkgEM,1401
+capitolscraper/utils/dataclasses/trade_stats.py,sha256=QcBTn_YRoSjjb-IRJVb0qE-JkMaSr7PihcyP8I1fcn4,534
+capitolscraper/utils/dataclasses/traded_issuer.py,sha256=WroIxlD9RTU1kTOSH2IUoeiOlXZWNJPKXfKHxGTgHTg,296
+capitolscraper-0.1.dist-info/METADATA,sha256=LsDt33NvOorVJ-UL_biQB7kdNjJMn6lV-k1PAwBD7nk,651
+capitolscraper-0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+capitolscraper-0.1.dist-info/RECORD,,
