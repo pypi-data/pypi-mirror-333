@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+snotation/__init__.py
+snotation/snotation.py
+snotation.egg-info/PKG-INFO
+snotation.egg-info/SOURCES.txt
+snotation.egg-info/dependency_links.txt
+snotation.egg-info/top_level.txt

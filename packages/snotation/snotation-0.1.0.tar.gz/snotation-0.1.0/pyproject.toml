@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snotation"
+version = "0.1.0"
+description = "A lightweight scientific notation handler"
+readme = "README.md"
+authors = [{ name = "Oscar Maldonado", email = "oscarmmgg1234@gmail.com" }]
+license = { file = "LICENSE" }
+dependencies = []
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/snotation"
+
+[tool.setuptools]
+packages = ["snotation"]
