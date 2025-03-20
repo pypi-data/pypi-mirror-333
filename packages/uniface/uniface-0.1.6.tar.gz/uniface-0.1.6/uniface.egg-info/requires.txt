@@ -1,0 +1,10 @@
+numpy
+opencv-python
+onnx
+onnxruntime
+requests
+torch
+scikit-image
+
+[dev]
+pytest
