@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdfuncdemo"
+version = "0.0.2"
+authors = [
+  { name="Pacific Digital", email="python@pacificdigital.tech" },
+]
+description = "a Python collection of function calls to get well data"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pdfuncdemo"]
+
+[project.urls]
+Homepage = "https://pacificdigital.tech"
+Issues = "https://pacificdigital.tech"
