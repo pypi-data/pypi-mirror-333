@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/geogif/__init__.py
+src/geogif/cli.py
+src/geogif/core.py
+src/geogif/geoframe.py
+src/realgeogif.egg-info/PKG-INFO
+src/realgeogif.egg-info/SOURCES.txt
+src/realgeogif.egg-info/dependency_links.txt
+src/realgeogif.egg-info/entry_points.txt
+src/realgeogif.egg-info/requires.txt
+src/realgeogif.egg-info/top_level.txt
+tests/test_geogif.py
