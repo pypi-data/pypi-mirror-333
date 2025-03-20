@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/pypiccolo/__init__.py
+src/pypiccolo/__main__.py
+src/pypiccolo/hello.py
+src/pypiccolo/math.py
+src/pypiccolo/math_utils.py
+src/pypiccolo.egg-info/PKG-INFO
+src/pypiccolo.egg-info/SOURCES.txt
+src/pypiccolo.egg-info/dependency_links.txt
+src/pypiccolo.egg-info/requires.txt
+src/pypiccolo.egg-info/top_level.txt
+src/pypiccolo/sub_hello/__init__.py
+src/pypiccolo/sub_hello/__main__.py
+src/pypiccolo/sub_hello/hello.py
+tests/test.py

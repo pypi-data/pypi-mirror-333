@@ -1,0 +1,50 @@
+[build-system]
+requires = [
+    "setuptools>=75.8",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypiccolo"
+version = "0.0.1.a1.dev1"
+description = "Python wrapper of Piccolo.jl"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { file = "LICENSE" }
+keywords = [
+    "quantum",
+    "physics",
+    "dynamics",
+]
+authors = [
+    { name = "Gennadi Ryan", email = "gennadiryan@gmail.com" },
+]
+maintainers = [
+    { name = "Gennadi Ryan", email = "gennadiryan@gmail.com" },
+    { name = "Jack Champagne", email = "jchampag@andrew.cmu.edu" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Quantum Computing",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "numpy>=2.2",
+]
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=8.3",
+]
+
+[project.urls]
+# Homepage = ""
+# Documentation = ""
+# Repository = "https://github.com/[organization]/[repository].git"
+# Issues = "https://github.com/[organization]/[repository]/issues"
+# Changelog = "https://github.com/[organization]/[repository]/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+package-dir = { "" = "src" }

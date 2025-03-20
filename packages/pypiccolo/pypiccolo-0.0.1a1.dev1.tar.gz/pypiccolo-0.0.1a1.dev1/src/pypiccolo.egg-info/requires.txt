@@ -1,0 +1,4 @@
+numpy>=2.2
+
+[tests]
+pytest>=8.3
