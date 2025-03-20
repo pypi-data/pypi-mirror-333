@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: semantic-api
+Version: 0.0.18
+Summary: A simple python API for creating, inserting, querying, and processing semantic data. This requires semantic services that are not included here
+Project-URL: Homepage, https://source.coderefinery.org/wac/semantic-api
+Project-URL: Issues, https://source.coderefinery.org/wac/semantic-api/-/issues
+Author-email: William A Coolidge <wac@mmmi.sdu.dk>
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: behave==1.2.6
+Requires-Dist: future==0.18.2
+Requires-Dist: paho-mqtt==2.1.0
+Requires-Dist: pydantic-core==2.27.2
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: pymonad==2.4.0
+Requires-Dist: pyrsistent==0.20.0
+Requires-Dist: typing-extensions==4.12.2
+Requires-Dist: typing==3.7.4.3
+Requires-Dist: urllib3==1.26.5
+Description-Content-Type: text/markdown
+
+
+# Semantic API
+
+#### Versions
+
+```0.0.18``` : Intial version with only the API for insertion and query.
+
+| Element | Status | Comment |
+|:--- |:--- |:--- |
+| insert  | ✅ | complete |
+| query  | ✅ | complete |
+| typelib |   ❌  | in-process |
+| type tools | ❌ | in-process |
+| database tools | ❌ | in-process |
+| chain tools  | ❌ | in-process | 
+
+
+#### 1 [Python API](https://source.coderefinery.org/wac/semantic-api/-/blob/main/src/doc/python-api.md)
+
+#### 2 [Background](https://source.coderefinery.org/wac/semantic-api/-/blob/main/src/doc/background.md)
+
+#### 3 [RDF and Types](https://source.coderefinery.org/wac/semantic-api/-/blob/main/src/doc/rdf-and-types.md)
+
+#### 4 [Editing Ontologies](https://source.coderefinery.org/wac/semantic-api/-/blob/main/src/doc/editing-ontologies.md)
+
+
+
+

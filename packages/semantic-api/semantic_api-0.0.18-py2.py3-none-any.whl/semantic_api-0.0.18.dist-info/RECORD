@@ -1,0 +1,17 @@
+src/doc/background.md,sha256=DLkjksr8erH4LHvJZ6lnsae9A7UezYY-6fTKe-6IdCs,5550
+src/doc/editing-ontologies.md,sha256=WP_6bvoS5eWfP4jRwyfeKCToxvOL5dpqH2bQ55QSfq0,7401
+src/doc/facilityCobot-v022-core-cluster.svg,sha256=Q1Pnru9qrxlItGEXP1dgLFn1zRTc4uAXo7ct0qhfBeM,18017
+src/doc/python-api.md,sha256=9U2E8J-2i3fXHfA33nslC7wUxoPVx2bRa7xDSQlMM14,18038
+src/doc/rdf-and-types.md,sha256=QSR4LP2esLHa_T9anz-LGUX0qblAOzlWMZlwkI20Oa4,6130
+src/doc/usd-framing.md,sha256=0h83A7ufXFV7waRDbvy--wl2I1BnIqYNs0b7J0xmNZQ,5681
+semantic/api/config.py,sha256=jOnrcg7yqHu_E-vndiDSuuJMwdiDbpxpM1x7oLXLjwA,783
+semantic/api/semantic_api.py,sha256=R-7SMqjbQHpAf1bnPFrUt7gY-_MKVKaPbs1NBRFs-5k,16014
+semantic/api/semantic_client.py,sha256=cNw8Zd6TCROnUPc1K-j67Ne_A7FIrB9STNO8JluuU64,5851
+semantic/common/common_types.py,sha256=hEeJ6t8fCsSYSwfOBndoJL7OXPeIWvuTaRgD4LYUOnU,2700
+semantic/common/utils.py,sha256=vNXRUIorLPf2LZ9cyd7Dk3J42MrZVUAhwMsqwmNlSoo,5320
+semantic/py_mqtt/py_mqtt.py,sha256=TM1lDpZltGRZLkOyMuycMHIIn7BaaBQEw8RvOmt2C0I,9218
+semantic_api-0.0.18.dist-info/METADATA,sha256=3uD-tN5wITyI4rIwIPT9LPTPtGmDu3_HpgYDEK087BQ,1627
+semantic_api-0.0.18.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+semantic_api-0.0.18.dist-info/licenses/LICENSE,sha256=hQNdSQ5JD3TmzgScnDLFrwFybIj5bZgwHXXoz4sDX-w,10801
+semantic_api-0.0.18.dist-info/licenses/NOTICE,sha256=1ISraPHIGlHO07CXETqrIeJXaTjzx94bjK9da6HGt-U,92
+semantic_api-0.0.18.dist-info/RECORD,,
