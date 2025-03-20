@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: FDTDream
+Version: 0.1.3
+Summary: A package used to create and run simulations in Ansys Lumerical FDTD.
+Project-URL: Homepage, https://github.com/Mgnsoscar/FDTDream
+Project-URL: Issues, https://github.com/Mgnsoscar/FDTDream
+Author-email: Magnus Oscar Støleggen <mgnsoscar@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pyqt6
+Requires-Dist: scipy
+Requires-Dist: shapely
+Requires-Dist: trimesh
