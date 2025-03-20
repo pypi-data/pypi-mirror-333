@@ -1,0 +1,12 @@
+dice_api/__init__.py,sha256=GAATD6vKwf5rl6ALOvp9GCnh7dCGu-vEHPVG4373gUA,211
+dice_api/app.py,sha256=2JeZw_ncCDZm_mVsQyO3fDsVIfH1EAuckvWuQ7E2_OI,625
+dice_api/cli.py,sha256=_RH1bnQwFRLF6yEbbRy__XNQmGv6W8aPe9Jp3x97lMQ,376
+dice_api/host.py,sha256=bbriSPlqbvYqVj9JHiCuuLo7HUbZMdHQVNTnzqfVXXA,893
+dice_api/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dice_api/storage/__init__.py,sha256=xN2CaW771xN1qC9-H6aUc3xH-FhXKlRxAoXxY5r15mo,104
+dice_api/storage/_hdfs.py,sha256=AEs_O_nB6FtOHipVVmCBOlwPPN463Z6qz126OhNOZiQ,2092
+dice_api-2025.3.1.dist-info/METADATA,sha256=jI_HHFOFQ_DWCdgLPHKIVsq9gkl7oEyhIQaTYkoLidc,3064
+dice_api-2025.3.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dice_api-2025.3.1.dist-info/entry_points.txt,sha256=Bc9_hY-8bTzzJ0jx8Qp4xvfWfITEmY1YND2vqHd44PU,47
+dice_api-2025.3.1.dist-info/licenses/LICENSE,sha256=JOvaXpjrXtTI_K08SmY0LVx2Lsh-CmvEEhX0nHJtTak,11343
+dice_api-2025.3.1.dist-info/RECORD,,
