@@ -1,0 +1,10 @@
+README.md
+setup.py
+speedyPort/__init__.py
+speedyPort/app.py
+speedyPort.egg-info/PKG-INFO
+speedyPort.egg-info/SOURCES.txt
+speedyPort.egg-info/dependency_links.txt
+speedyPort.egg-info/entry_points.txt
+speedyPort.egg-info/requires.txt
+speedyPort.egg-info/top_level.txt
