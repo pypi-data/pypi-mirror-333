@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: shadowshell
+Version: 0.0.15
+Summary: shadowshell.xyz
+Author-email: shadowshell <shadowshell@foxmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+
+
+# Install
+
+``` BASH
+
+> pip3 install shadowshell --upgrade
+
+# > pip3 install shadowshell --upgrade -i https://pypi.org/simple/
+
+```
+
+
+``` BASH
+
+> python3 -c "from shadowshell import ShadowShell; ShadowShell().hello();"
+
+```
