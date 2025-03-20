@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+AsroNLP.egg-info/PKG-INFO
+AsroNLP.egg-info/SOURCES.txt
+AsroNLP.egg-info/dependency_links.txt
+AsroNLP.egg-info/requires.txt
+AsroNLP.egg-info/top_level.txt
+asro_nlp/__init__.py
+asro_nlp/nlp.py
