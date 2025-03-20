@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: cmossfuckerv1v2
+Version: 0.1.0
+Summary: A simple package that adds two numbers
+Home-page: https://github.com/yourusername/cmossfuckerv1v2
+Author: cmoss
+Author-email: cmoss <cmoss8227@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: build>=1.2.2
+Dynamic: author
+Dynamic: home-page
