@@ -1,0 +1,5 @@
+setup.py
+ai_dynamo.egg-info/PKG-INFO
+ai_dynamo.egg-info/SOURCES.txt
+ai_dynamo.egg-info/dependency_links.txt
+ai_dynamo.egg-info/top_level.txt
