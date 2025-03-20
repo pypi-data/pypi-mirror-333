@@ -1,0 +1,9 @@
+requests>=2.32.3
+jsonschema>=4.23.0
+click>=8.1.8
+referencing>=0.35.1
+
+[dev]
+pytest
+requests-mock
+types-setuptools
