@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: prt-rl
+Version: 0.1.0
+Author-Email: Gavin Strunk <gavin.strunk@gmail.com>
+Requires-Python: <3.13,>=3.11
+Requires-Dist: torch<3.0.0,>=2.4.1
+Requires-Dist: mlflow<3.0.0,>=2.19.0
+Requires-Dist: tensordict<1.0.0,>=0.6.2
+Requires-Dist: tqdm<5.0.0,>=4.67.1
+Requires-Dist: pynput<2.0.0,>=1.7.7
+Requires-Dist: gymnasium[all]<2.0.0,>=1.1.1
+Requires-Dist: psutil<7.0.0,>=6.1.1
+Requires-Dist: sphinx<9.0.0,>=8.1.3
+Requires-Dist: myst-parser<5.0.0,>=4.0.0
+Requires-Dist: sphinx-book-theme<2.0.0,>=1.1.3
+Requires-Dist: toml<1.0.0,>=0.10.2
+Requires-Dist: pytest<9.0.0,>=8.3.4
+Requires-Dist: pynvml<13.0.0,>=12.0.0
+Requires-Dist: sphinxcontrib-mermaid<2.0.0,>=1.0.0
+Requires-Dist: flappy-bird-gymnasium<1.0.0,>=0.4.0
+Requires-Dist: inputs<1.0,>=0.5
+Requires-Dist: sphinx-design<1.0.0,>=0.6.1
+Requires-Dist: nbsphinx<1.0.0,>=0.9.6
+Requires-Dist: notebook<8.0.0,>=7.3.2
+Requires-Dist: nbconvert<8.0.0,>=7.16.5
+Requires-Dist: boto3<2.0.0,>=1.35.98
+Requires-Dist: rootutils<2.0.0,>=1.0.7
+Requires-Dist: vmas[all]<2.0.0,>=1.4.3
+Requires-Dist: dm-control<2.0.0,>=1.0.28
+Requires-Dist: jinja2<4.0.0,>=3.1.6
+Description-Content-Type: text/markdown
+
+<p align="center">
+<picture>
+<img src="docs/_static/prt-rl-logo-title.png" width="1024" style="max-width: 100%;">
+</picture>
+</p>
+
+My code related to learning and using RL outside of a specific project
+
+The documentation website is at [https://reinforcement-learning.readthedocs.io/](https://reinforcement-learning.readthedocs.io/)
+
+# Installation
+PRT-RL uses pyenv to manage the python version and poetry for package management. This library can be setup using other tools for these purposes.
+
+
+# Getting Started
+
+# Related Libraries
+* stable baselines
+* openai spinup
+* TorchRL
+* RLlib
+* Tianshou
+* CleanRL
