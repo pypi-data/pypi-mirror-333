@@ -1,0 +1,12 @@
+shaperglot-1.0.1.dist-info/METADATA,sha256=rz_-TGpFcY3ltTnuFhXHLi6ONJFdgp1r83pTQ_aXrtA,471
+shaperglot-1.0.1.dist-info/WHEEL,sha256=txrf3mWfYT8fuidWcn4w4bCG5e7tCVvnYzYyHWO_WFg,129
+shaperglot-1.0.1.dist-info/entry_points.txt,sha256=PEWNUQnbNFv4q1oDfNcniVNlV3Op4se85atpOZUjxCM,49
+shaperglot/cli/whatuses.py,sha256=PQpXc7hS_hOKvHMQKDrFiNvS0MUhjURAm1Ae60Oh3UU,1742
+shaperglot/cli/check.py,sha256=n9cGjkMgkZjJxd0V0O4T62bjZkqlgfy6c1ZTXFgTeMM,2680
+shaperglot/cli/describe.py,sha256=oGsH6j6S2DlUGCoOiVwpVpfpO2GEyuLgSQyhg1if1mI,1551
+shaperglot/cli/report.py,sha256=xsF2JS3vICV1moukgUdvig70WoiGQeZE48Tpkk4HD-U,4690
+shaperglot/cli/__init__.py,sha256=-gOmLqH29jTfLALslnviMVbQnPjSCYVabGD0lfoXQCQ,2779
+shaperglot/__main__.py,sha256=Zu87Al-49wwhZDngH-Mk1EkX4XEK5QNpHPnD1122zM8,143
+shaperglot/__init__.py,sha256=dJLDKXRdkXVN9vFcCFmCQK7Orq5IwSDTqrx64PSQ8XI,322
+shaperglot/_shaperglot.cpython-310-arm-linux-gnueabihf.so,sha256=r3iE4FPb3HRK9VOjJGJzokOayvQ5Uw2GBNnu3q4NJNk,6095308
+shaperglot-1.0.1.dist-info/RECORD,,
