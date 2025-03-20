@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: beiker
+Version: 0.0.8
+Summary: developed for electronic archive organization.
+Author: tarantella110
+Author-email: beiker110@126.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Archiving
+Classifier: Topic :: Text Processing :: General
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pandas
+Requires-Dist: mysql-connector-python
+Requires-Dist: pillow
+Requires-Dist: python-docx
+Requires-Dist: openpyxl
+Requires-Dist: PyMuPDF
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
