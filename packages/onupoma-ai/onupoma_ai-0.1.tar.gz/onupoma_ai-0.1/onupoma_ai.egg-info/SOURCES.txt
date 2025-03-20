@@ -1,0 +1,9 @@
+README.md
+setup.py
+onupoma_ai/__init__.py
+onupoma_ai/ai.py
+onupoma_ai.egg-info/PKG-INFO
+onupoma_ai.egg-info/SOURCES.txt
+onupoma_ai.egg-info/dependency_links.txt
+onupoma_ai.egg-info/requires.txt
+onupoma_ai.egg-info/top_level.txt

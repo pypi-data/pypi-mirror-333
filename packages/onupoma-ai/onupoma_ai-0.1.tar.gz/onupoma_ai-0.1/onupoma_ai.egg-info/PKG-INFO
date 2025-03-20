@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: onupoma_ai
+Version: 0.1
+Summary: AI API for Onupoma AI chatbot
+Home-page: https://github.com/yourusername/onupoma_ai
+Author: Your Name
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
