@@ -1,0 +1,10 @@
+pptx_merger/__init__.py,sha256=QLkyeqaBFPWY97eOR8YvCjCnM8ol0XmL22vdHpucluw,115
+pptx_merger/core.py,sha256=16DumhRv1VLU76CrLowN2NvmqCYcN9gJbRXqeGTfkXo,3359
+pptx_merger/lib/DocumentFormat.OpenXml.dll,sha256=lwMjrlOT9lI1NtFra3XnqAlhPFQS4WX5mryKMZ-kjE8,5938704
+pptx_merger/lib/OpenXmlPowerTools.dll,sha256=-DpDDJAEIJ3sHv4uWqjkcJSMBvHcbo_oxCQYQB8lJgU,1437184
+pptx_merger/lib/System.Drawing.Common.dll,sha256=5wxtNVKvdGIMZXPXefVTj2gFWyb2a6hOiUMPBTXCHhM,136576
+pptx_merger/lib/System.IO.Packaging.dll,sha256=SLkSkPIy92bm52qnmIHHMr_RE-D2MOHojiIEO6pBWP4,122216
+python_pptx_merger-0.0.1.dist-info/METADATA,sha256=JZLznRrq0u4AooPyt1H9PjCmYW7av-j3DbhqgW2f1ZI,1935
+python_pptx_merger-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_pptx_merger-0.0.1.dist-info/licenses/LICENSE,sha256=Q_Dy3Q34tsJhtAYawWdklNoUnIYjLEMB7iZXytnGcdw,1103
+python_pptx_merger-0.0.1.dist-info/RECORD,,
