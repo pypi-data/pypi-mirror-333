@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: byted-overpass-ic-cv-high-aes-scheduler
+Version: 0.0.1
+Summary: This package is a reserved placeholder to prevent dependency confusion attacks and package name squatting.
+Home-page: https://github.com/bytedance/byted_overpass_ic_cv_high_aes_scheduler
+Author: ByteDance Security Team
+Author-email: security@bytedance.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/plain
+
+This package is registered by ByteDance to mitigate supply chain security risks. It does not contain functional code and is not intended for actual use in software development.
+
+
