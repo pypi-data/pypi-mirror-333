@@ -1,0 +1,5 @@
+[ckan.plugins]
+cmsdatanav_harvest = ckanext.datajson.harvester_cmsdatanavigator:CmsDataNavigatorHarvester
+datajson = ckanext.datajson.plugin:DataJsonPlugin
+datajson_harvest = ckanext.datajson.harvester_datajson:DataJsonHarvester
+datajson_validator = ckanext.datajson.plugin:DataJsonValidatorPlugin
