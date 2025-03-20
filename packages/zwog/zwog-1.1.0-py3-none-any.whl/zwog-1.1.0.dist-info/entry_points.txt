@@ -1,0 +1,3 @@
+[console_scripts]
+zwog=zwog.utils:main
+
