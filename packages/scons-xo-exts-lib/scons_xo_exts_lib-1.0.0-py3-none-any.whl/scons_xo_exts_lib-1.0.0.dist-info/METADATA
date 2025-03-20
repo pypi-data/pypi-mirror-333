@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: scons-xo-exts-lib
+Version: 1.0.0
+Summary: Scons extensions library by XGQT.
+Requires-Python: >=3.12
+Requires-Dist: scons>=4.8.1
