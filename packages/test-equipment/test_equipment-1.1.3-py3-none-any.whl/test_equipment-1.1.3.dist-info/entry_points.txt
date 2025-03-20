@@ -1,0 +1,7 @@
+[console_scripts]
+dmm_hm8112=test_equipment.dmm_8112_3:main
+psu_ctrl=test_equipment.psu_ctrl:main
+serial_helper=test_equipment.serial_helper:test
+shelly=test_equipment.shelly:main
+visa_helper=test_equipment.visa_helper:test
+
