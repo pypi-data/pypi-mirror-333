@@ -1,0 +1,10 @@
+*.idea
+data/
+.DS_STORE
+*.pyc
+sandbox/
+
+
+!/tests/
+!/tests/data/
+!/tests/data/*.json
