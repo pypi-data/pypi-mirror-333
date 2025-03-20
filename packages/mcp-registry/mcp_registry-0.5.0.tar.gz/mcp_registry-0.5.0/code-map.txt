@@ -1,0 +1,95 @@
+# MCP Registry Code Map
+
+## Project Overview
+MCP Registry is a tool for managing and interacting with multiple MCP (Model Context Protocol) servers. It serves both as a CLI tool for managing server configurations and as a library for programmatically interacting with multiple servers.
+
+## Directory Structure
+
+- `/src/mcp_registry/` - Core package code
+  - `__init__.py` - Package initialization and exports
+  - `cli.py` - Command-line interface implementation
+  - `compound.py` - Core aggregation functionality for multiple servers
+  - `connection.py` - Persistent connection management
+
+- `/tests/` - Test suite
+  - `test_cli.py` - CLI command tests
+  - `test_compound.py` - Core functionality tests
+  - `test_persistent_connections.py` - Connection management tests
+
+- `/examples/` - Usage examples
+  - `get_config_path_example.py` - Example showing how to get the config path
+  - `persistent_connections_example.py` - Example showing persistent connections
+  - `mcp_agent_anthropic_persistent.py` - Anthropic agent with persistent connections
+
+- `/docs/` - Documentation
+  - `async-connection-management.md` - Detailed connection management documentation
+
+## Key Components
+
+### ServerRegistry
+- **Purpose**: Manages server configurations
+- **Location**: `src/mcp_registry/compound.py`
+- **Key Methods**:
+  - `from_config()`: Creates registry from config file
+  - `get_client()`: Gets temporary client for a server
+  - `save_config()`: Saves configuration to file
+
+### MCPAggregator
+- **Purpose**: Aggregates multiple MCP servers
+- **Location**: `src/mcp_registry/compound.py`
+- **Key Methods**:
+  - `list_tools()`: Lists tools from all servers
+  - `call_tool()`: Calls a tool on a specific server
+  - `load_servers()`: Loads and caches tools from servers
+  - `__aenter__/__aexit__`: Context manager protocol for persistent connections
+
+### Connection Management
+- **Purpose**: Manages persistent connections to MCP servers
+- **Location**: `src/mcp_registry/connection.py`
+- **Key Components**:
+  - `MCPConnectionManager`: Manages connection pools and lifecycle
+  - `ServerConnection`: Represents individual server connections
+  - `ConnectionState`: Enum for connection states
+
+### CLI
+- **Purpose**: Command-line interface
+- **Location**: `src/mcp_registry/cli.py`
+- **Key Commands**:
+  - `init`: Initialize configuration
+  - `add`: Add a server
+  - `remove`: Remove a server
+  - `list`: List configured servers
+  - `serve`: Run the compound server
+
+## Connection Modes
+
+The library supports two modes for connections:
+
+1. **Temporary Connections** (default):
+   - Each tool call creates and destroys its own connection
+   - Simple and ensures clean resource management
+   - Optimized to only load specific servers as needed
+
+2. **Persistent Connections** (context manager):
+   - Maintains connections for the duration of the context
+   - Significantly improves performance for multiple calls
+   - Proper resource cleanup with `async with` pattern
+
+## Examples
+
+See the `examples/` directory for practical usage examples:
+- Basic config path handling
+- Temporary vs persistent connections
+- Anthropic agent implementation with persistent connections
+
+## Testing
+
+Run tests with:
+```bash
+python -m pytest
+```
+
+For coverage:
+```bash
+python -m pytest --cov=mcp_registry
+```
