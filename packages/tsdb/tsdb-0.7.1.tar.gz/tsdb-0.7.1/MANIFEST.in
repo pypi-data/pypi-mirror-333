@@ -1,0 +1,2 @@
+include tsdb/config_template.ini
+prune tests
