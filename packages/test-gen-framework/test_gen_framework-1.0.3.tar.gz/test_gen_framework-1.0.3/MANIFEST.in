@@ -1,0 +1,9 @@
+# Include Python files under the 'test_gen_framework' directory and subdirectories
+recursive-include test_gen_framework *.py
+recursive-include test_gen_framework *.json
+
+# Include non-Python files like config, LICENSE, and post_install
+include config.yaml
+include post_install.py
+include LICENSE
+
