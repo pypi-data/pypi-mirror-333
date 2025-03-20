@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "nightskycam-serialization"
+version = "0.1.3"
+description = "communication between nightskycam and nightskycam-server"
+authors = ["Vincent Berenz <vberenz@tuebingen.mpg.de>"]
+packages = [{ include = "nightskycam_serialization" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+# Normal dependencies:
+# Installable with both poetry and pip.
+tomli = "^2.0.1"
+tomli-w = "^1.0.0"
+nightskyrunner = "^0.1.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+# Dependencies for development:
+# Only installable with poetry (NOT pip).
+isort = "^5.13.2"
+mypy = "^1.10.0"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+# Dependencies for testing:
+# Only installable with poetry (NOT pip).
+pytest = "^8.2.0"
+coverage = "^7.6.1"
+coverage2clover = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# Coverage.
+[tool.coverage.run]
+branch = true
+source = ["."]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+# isort.
+[tool.isort]
+# Do not distinguish import style (import/from) for sorting.
+force_sort_within_sections = true
+# Use same formatting as black.
+profile = "black"
