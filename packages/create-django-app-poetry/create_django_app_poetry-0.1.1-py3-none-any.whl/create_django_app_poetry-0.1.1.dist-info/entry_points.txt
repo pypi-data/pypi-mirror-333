@@ -1,0 +1,3 @@
+[console_scripts]
+create-django-app=create_django_app_poetry.main:main
+
