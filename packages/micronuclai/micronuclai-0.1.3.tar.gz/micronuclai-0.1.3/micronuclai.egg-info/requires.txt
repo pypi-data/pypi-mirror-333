@@ -1,0 +1,7 @@
+torch==2.6.0
+torchvision
+numpy==2.2.3
+pandas==2.2.3
+scikit_learn==1.6.1
+mask2bbox==0.0.23
+lightning==2.5.0
