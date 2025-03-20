@@ -1,0 +1,65 @@
+[project]
+name = "itc2kc"
+version = "0.1.1"
+authors = [
+    { name = "Eric Johnson", email = "eric.j.johnson22@gmail.com" },
+]
+description = "A converter for iTerm2 to kitty themes"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Terminals :: Terminal Emulators/X Terminals"
+]
+dependencies = [
+    "lxml>=5.3.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/ejohnso49/itc2kc"
+Repository = "https://github.com/ejohnso49/itc2kc"
+Changelog = "https://github.com/ejohnso49/itc2kc/blob/master/CHANGELOG.md"
+Issues = "https://github.com/ejohnso49/itc2kc/issues"
+
+[project.scripts]
+itc2kc = "itc2kc:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "ruff>=0.9.10",
+    "types-lxml>=2025.3.4",
+]
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+strict = true

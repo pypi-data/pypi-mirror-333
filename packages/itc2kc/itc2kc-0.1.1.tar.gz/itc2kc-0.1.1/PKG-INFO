@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: itc2kc
+Version: 0.1.1
+Summary: A converter for iTerm2 to kitty themes
+Project-URL: Homepage, https://github.com/ejohnso49/itc2kc
+Project-URL: Repository, https://github.com/ejohnso49/itc2kc
+Project-URL: Changelog, https://github.com/ejohnso49/itc2kc/blob/master/CHANGELOG.md
+Project-URL: Issues, https://github.com/ejohnso49/itc2kc/issues
+Author-email: Eric Johnson <eric.j.johnson22@gmail.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Terminals :: Terminal Emulators/X Terminals
+Requires-Python: >=3.12
+Requires-Dist: lxml>=5.3.1
+Description-Content-Type: text/markdown
+
+# itc2kc (pronounced: it-see-too-kay-see)
+
+A stupidly named utility to convert an iTerm2 theme to a `kitty` theme. This script uses `lxml` to parse the `.itermcolors` file provided as input and transform into a `.conf` file to be used by `kitty`
+
+## Acknowledgements
+
+- [Bliss iTerm2 Theme](https://github.com/joshjon/bliss-iterm) by @joshjon
+- [kitty](https://sw.kovidgoyal.net/kitty/) by Kovid Goyal
+
+## Contributing
+
+This was a little experiment so feel free to tweak or send me suggestions.
+
+## About
+
+This started as a desire to have the Bliss theme on my kitty terminal, I wrote about developing this script [here](https://ericjohnson.bearblog.dev/itc2kc/)
