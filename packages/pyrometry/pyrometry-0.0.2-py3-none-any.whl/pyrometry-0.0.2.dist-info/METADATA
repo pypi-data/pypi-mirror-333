@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: pyrometry
+Version: 0.0.2
+Summary: Flame graph comparison library
+Project-URL: Documentation, https://github.com/p403n1x87/pyrometry#readme
+Project-URL: Issues, https://github.com/p403n1x87/pyrometry/issues
+Project-URL: Source, https://github.com/p403n1x87/pyrometry
+Author-email: "Gabriele N. Tornetta" <gabriele.n.tornetta@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# pyrometry
+
+This library provides a Python implementation of the paper [On the Algebraic
+Properties of Flame Graphs][paper] for the comparison and decomposition of
+flame graphs.
+
+
+## Usage
+
+To parse a flame graph from a collapsed stacks format, use `FlameGraph.load`
+from `pyrometry.flamegraph`.
+
+To perform the differential analysis of two samples of flame graphs, collect
+them in two lists, and then use e.g. `decompose_4way` from `pyrometry.analysis`
+to get the flame graphs of appeared, disappeared, grown and shrunk stacks.
+
+
+[paper]: https://arxiv.org/pdf/2301.08941
