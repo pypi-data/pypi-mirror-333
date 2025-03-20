@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+prokill/__init__.py
+prokill/__main__.py
+prokill/prokill.py
+prokill.egg-info/PKG-INFO
+prokill.egg-info/SOURCES.txt
+prokill.egg-info/dependency_links.txt
+prokill.egg-info/entry_points.txt
+prokill.egg-info/requires.txt
+prokill.egg-info/top_level.txt
