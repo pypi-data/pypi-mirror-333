@@ -1,0 +1,12 @@
+lxml>=4.9
+requests==2.*
+packaging>=24.1
+
+[dev]
+wheel
+
+[test]
+flake8
+pytest
+mock
+setuptools
