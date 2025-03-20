@@ -1,0 +1,4 @@
+[console_scripts]
+crispio = crispio.cli:main
+guidefitness = crispio.fitness:main
+guideplot = crispio.plot:main

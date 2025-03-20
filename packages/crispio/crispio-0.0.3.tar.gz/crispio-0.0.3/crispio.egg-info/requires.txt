@@ -1,0 +1,15 @@
+bioino>=0.0.2
+carabiner-tools>=0.0.4
+pyyaml
+nemony
+streq
+tqdm
+
+[fit]
+carabiner-tools[mpl,pd]>=0.0.4
+jax[cuda12]
+numpy
+optax
+pandas
+scipy
+matplotlib
