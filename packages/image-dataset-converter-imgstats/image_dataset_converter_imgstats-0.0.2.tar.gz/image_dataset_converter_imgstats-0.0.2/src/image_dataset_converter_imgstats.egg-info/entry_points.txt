@@ -1,0 +1,2 @@
+[class_lister]
+idc.imgstats = idc.imgstats.class_lister

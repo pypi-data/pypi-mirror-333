@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: image_dataset_converter_imgstats
+Version: 0.0.2
+Summary: Image statistics extension for the image-dataset-converter library.
+Home-page: https://github.com/waikato-datamining/image-dataset-converter-imgstats
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+License-File: LICENSE
+
+Image statistics extension for the image-dataset-converter library.
+
+
+Changelog
+=========
+
+0.0.2 (2025-03-14)
+------------------
+
+- switched to underscores in project name
+- added support for placeholders: `area-histogram`, and `label-dist`
+
+
+0.0.1 (2024-05-06)
+------------------
+
+- initial release
+
