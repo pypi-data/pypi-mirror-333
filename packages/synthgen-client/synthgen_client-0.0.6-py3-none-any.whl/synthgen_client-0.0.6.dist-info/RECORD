@@ -1,0 +1,7 @@
+synthgen/__init__.py,sha256=T7DdZh2gMqrS27v1v7YM0XknRDqbvSUaiPQmeMzEvZg,486
+synthgen/exceptions.py,sha256=IG_XryYIiWseTMVs1UifLptmywi7aY4oThj3f0C9eVQ,580
+synthgen/models.py,sha256=tq5dtaZxYaBMtAFfm0lrU8xcWGf1KbnZQx2OjqhHmc8,10073
+synthgen/sync_client.py,sha256=J6KVfD2WiVDCkK1l62bQlQD96pi3-UBWMC4MvGZogc0,28218
+synthgen_client-0.0.6.dist-info/METADATA,sha256=q-ha4u73WkAI8IQXiI9eI4zfw7I8ne4TkGZBu8AYfNk,10736
+synthgen_client-0.0.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+synthgen_client-0.0.6.dist-info/RECORD,,
