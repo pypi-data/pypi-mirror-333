@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: sier2-blocks
+Version: 0.6
+Summary: Blocks for sier2
+Author: Algol60
+Author-email: algol60 <algol60@users.noreply.github.com>
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/x-rst
+
+Sier2 Blocks
+============
+
+This library provides useful blocks.
+
