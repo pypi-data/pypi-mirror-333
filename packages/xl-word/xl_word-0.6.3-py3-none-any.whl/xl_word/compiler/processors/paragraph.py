@@ -1,0 +1,132 @@
+from xl_word.compiler.processors.base import BaseProcessor
+import re
+
+
+class ParagraphProcessor(BaseProcessor):
+    """处理段落相关的XML标签"""
+    @classmethod
+    def compile(cls, xml: str) -> str:
+        """将xl-p标签转换为w:p标签"""
+        def process_paragraph(match):
+            style_str = match.group(1) or ''
+            content = match.group(2).strip()
+            styles = {}
+            if style_str:
+                styles = dict(pair.split(':') for pair in style_str.split(';') if pair.strip())
+
+            p_props_str = '<w:pPr>'
+            align, padding_top, padding_bottom, english, chinese, font_size, font_weight = cls.retrieve(styles, \
+                ['align', 'padding-top', 'padding-bottom', 'english', 'chinese', 'font-size', 'font-weight'])
+            p_props_str += f'<w:jc w:val="{align}"/>' if align else ''
+            spacing_attr_str = ''
+            spacing_attr_str += f'w:before="{padding_top}" ' if padding_top else ''
+            spacing_attr_str += f'w:after="{padding_bottom}"' if padding_bottom else ''
+            p_props_str += f'<w:spacing {spacing_attr_str}/>' if spacing_attr_str else ''
+            p_props_str += '</w:pPr>'
+            
+            r_props_str = '<w:rPr>'
+            r_props_str += f'<w:rFonts w:ascii="{english}" w:cs="{chinese}" w:eastAsia="{english}" w:hAnsi="{english}" w:hint="eastAsia"/>' if (english and chinese) else ''
+            r_props_str += f'<w:kern w:val="0"/>' if font_size else ''
+            r_props_str += f'<w:sz w:val="{font_size}"/>' if font_size else ''
+            r_props_str += f'<w:szCs w:val="{font_size}"/>' if font_size else ''
+            r_props_str += f'<w:b/>' if font_weight == 'bold' else ''
+            r_props_str += '</w:rPr>'
+
+            def process_span(match):
+                content = match.group(1).strip()
+                return f'<w:r>{r_props_str}<w:t xml:space="preserve">{content}</w:t></w:r>'
+            
+            def process_signature(match):
+                data_var, height = match.groups()
+                height = height.replace('px', '')
+                
+                return f'''<w:r>
+                        <w:pict>
+                            <v:shape style="height:{height}px;width:{{{{ {height}*{data_var}['width']/{data_var}['height'] }}}}px">
+                                <v:imagedata r:id="{{{{%s['rid']}}}}"/>
+                            </v:shape>
+                        </w:pict> 
+                        </w:r>''' % data_var
+            
+            content = cls._process_tag(content, r'<xl-signature\s+data="([^"]+)"\s+height="([^"]+)"\s*></xl-signature>', process_signature)
+            content = cls._process_tag(content, r'<xl-span>(.*?)</xl-span>', process_span)
+            data = f'<w:p>{p_props_str}{content}</w:p>'
+            return data
+        
+        data = cls._process_tag(xml, r'<xl-p(?:[^>]*style="([^"]+)")?[^>]*>(.*?)</xl-p>', process_paragraph)
+        return data
+    
+
+    @classmethod
+    def decompile(cls, xml: str) -> str:
+        """将Ww:p标签转换为xl-p标签"""
+        def process_word_paragraph(match):
+
+            full_p = match.group(0)
+            content = match.group(1)
+            if not '<w:r' in full_p:
+                return full_p
+            
+            # 提取样式属性
+            styles = {}
+            
+            # 提取对齐方式
+            align_match = re.search(r'<w:jc\s+w:val="([^"]+)"/>', content)
+            if align_match:
+                styles['align'] = align_match.group(1)
+            
+            # 提取间距
+            spacing_match = re.search(r'<w:spacing\s+([^/>]+)/>', content)
+            if spacing_match:
+                spacing_attrs = spacing_match.group(1)
+                before_match = re.search(r'w:before="([^"]+)"', spacing_attrs)
+                after_match = re.search(r'w:after="([^"]+)"', spacing_attrs)
+                if before_match:
+                    styles['padding-top'] = before_match.group(1)
+                if after_match:
+                    styles['padding-bottom'] = after_match.group(1)
+            
+            # 提取字体信息
+            font_match = re.search(r'<w:rFonts\s+w:ascii="([^"]+)"\s+w:cs="([^"]+)"', content)
+            if font_match:
+                styles['english'] = font_match.group(1)
+                styles['chinese'] = font_match.group(2)
+            
+            # 提取字体大小
+            size_match = re.search(r'<w:sz\s+w:val="([^"]+)"/>', content)
+            if size_match:
+                styles['font-size'] = size_match.group(1)
+            
+            # 检查是否加粗
+            if '<w:b/>' in content:
+                styles['font-weight'] = 'bold'
+
+            def process_r(match):
+                content = match.group(1).strip()
+
+                def process_t(match):
+                    content = match.group(1).strip()
+                    return f'{content}'
+                
+                matches = list(re.finditer(r'<w:t(?:\s+[^>]*)?>(.*?)</w:t>', content, re.DOTALL))
+                content = ''
+                for match in matches:
+                    full_r = match.group(0)
+                    full_r = cls._process_tag(full_r, r'<w:t(?:\s+[^>]*)?>(.*?)</w:t>', process_t)
+                    content += full_r
+                return f'<xl-span>{content}</xl-span>'
+            
+            matches = list(re.finditer(r'<w:r(?:\s+[^>]*)?>(.*?)</w:r>', content, re.DOTALL))
+            content = ''
+            for match in matches:
+                full_t = match.group(0)
+                full_t = cls._process_tag(full_t, r'<w:r(?:\s+[^>]*)?>(.*?)</w:r>', process_r)
+                content += full_t
+            
+            # 构建样式字符串
+            style_str = ';'.join([f"{k}:{v}" for k, v in styles.items()]) if styles else ""
+            style_attr = f' style="{style_str}"' if style_str else ""
+            
+            return f'<xl-p{style_attr}>{content}</xl-p>'
+        
+        return cls._process_tag(xml, r'<w:p[^>]*?>(.*?)</w:p>', process_word_paragraph)
