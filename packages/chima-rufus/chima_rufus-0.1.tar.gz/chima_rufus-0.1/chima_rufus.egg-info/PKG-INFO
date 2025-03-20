@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: chima_rufus
+Version: 0.1
+Author: Mukesh Kumar Javvaji
+Author-email: mukeshjavvaji123@gmail.com
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist

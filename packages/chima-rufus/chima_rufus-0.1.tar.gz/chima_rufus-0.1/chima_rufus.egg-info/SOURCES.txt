@@ -1,0 +1,11 @@
+README.md
+setup.py
+chima_rufus/__init__.py
+chima_rufus/api.py
+chima_rufus/crawler.py
+chima_rufus.egg-info/PKG-INFO
+chima_rufus.egg-info/SOURCES.txt
+chima_rufus.egg-info/dependency_links.txt
+chima_rufus.egg-info/entry_points.txt
+chima_rufus.egg-info/requires.txt
+chima_rufus.egg-info/top_level.txt
