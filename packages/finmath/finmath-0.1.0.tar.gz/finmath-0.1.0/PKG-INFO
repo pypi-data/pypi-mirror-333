@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: finmath
+Version: 0.1.0
+Summary: Python Financial Mathematics library written in C/C++
+Author: Prajwal Shah, .. , Boiler Quant
+License: MIT
+License-File: LICENSE
+Dynamic: author
+Dynamic: license
+Dynamic: summary
