@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-e-learning
+Version: 15.0.20250313.0
+Summary: Meta package for oca-e-learning Odoo addons
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 15.0
+Requires-Dist: odoo-addon-website-sale-slides-order-line-link<15.1dev,>=15.0dev
+
+UNKNOWN
