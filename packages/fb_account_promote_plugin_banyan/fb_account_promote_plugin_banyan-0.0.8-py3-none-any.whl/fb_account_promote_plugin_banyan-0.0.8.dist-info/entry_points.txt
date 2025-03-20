@@ -1,0 +1,3 @@
+[facebook]
+account_promotion=fb_account_promote_plugin_banyan.account_promotion:PluginA
+
