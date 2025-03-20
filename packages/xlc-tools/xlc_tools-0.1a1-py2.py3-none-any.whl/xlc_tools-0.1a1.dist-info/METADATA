@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: xlc-tools
+Version: 0.1a1
+Summary: xlc toolkit
+Home-page: https://github.com/bondbox/xlc/
+Author: Mingzhe Zou
+Author-email: zoumingzhe@outlook.com
+License: MIT
+Project-URL: Source Code, https://github.com/bondbox/xlc/
+Project-URL: Bug Tracker, https://github.com/bondbox/xlc/issues
+Project-URL: Documentation, https://github.com/bondbox/xlc/
+Keywords: command-line,argparse,argcomplete
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: xkits >=2.2.3
+Requires-Dist: xlc >=0.1.1
+

@@ -1,0 +1,9 @@
+xlc_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xlc_tools/attribute.py,sha256=AhDIR7SNBCA95ulFp22wHkX-4aQ50X59_yM5UWXGRns,362
+xlc_tools/generate.py,sha256=CPu78obS-7i-qeWgubR1rdmZ1pRy5FzpPwY-0lroaHE,644
+xlc_tools-0.1a1.dist-info/METADATA,sha256=L3pq0kOb8cyNtfuUGILAT6eTTUQoHfe6jlZ_YXpypt0,638
+xlc_tools-0.1a1.dist-info/WHEEL,sha256=pWvVuNuBTVmNV7Lp2jMAgt1NplTICeFdl1SW8U3MWN4,109
+xlc_tools-0.1a1.dist-info/entry_points.txt,sha256=cxqU0Poz0qQOveRR6NveBQBEJOUbTogb2Y2U13N4sGY,57
+xlc_tools-0.1a1.dist-info/top_level.txt,sha256=f_7tpXSRCXvURYxopduvY95jrce3dqE_m9heJNPWuac,10
+xlc_tools-0.1a1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+xlc_tools-0.1a1.dist-info/RECORD,,
