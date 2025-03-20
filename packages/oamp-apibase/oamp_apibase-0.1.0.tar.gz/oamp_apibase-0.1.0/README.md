@@ -1,0 +1,59 @@
+# OAMP-APIBASE
+
+[![Build Status](https://github.com/msimkins/oamp-apibase/actions/workflows/django.yml/badge.svg)](https://github.com/msimkins/oamp-apibase/actions/workflows/django.yml)
+[![PyPI version](https://badge.fury.io/py/oamp-apibase.svg)](https://badge.fury.io/py/oamp-apibase)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+These are abstract API Clients to be used to contact external API Services
+
+There are Three Clients supported:
+
+- HTTPClient
+
+The HTTPClient is a simple client that can be used to make HTTP requests to an API. It uses the httpx library to make the requests,
+and so returns a rich object as the response. This object can be used to access the response data, headers, and status code.
+
+- HTTPProxyClient
+
+The HTTPProxyClient is a client that can be used to make HTTP requests to an API through a proxy.
+It supports both HTTP (not reccommended)  and HTTPS proxies, and can be used to make requests to APIs that require a
+proxy to be used. If the proxy requires authentication, the client can be configured to use a username and password.
+
+- HttpProxyTokenClient
+
+The HttpProxyTokenClient is a client that can be used to make HTTP requests to an API through a proxy,
+and that requires a token to be passed in the headers.
+
+## Installation
+
+```bash
+pip install oamp-apibase
+```
+
+## Usage
+
+
+## The Response Object
+
+The response object returned by the clients is an instance of the httpx.Response class.
+
+This object has the following attributes:
+
+- status_code: The status code of the response
+- reason_phrase: The reason phrase of the response
+- headers: A dictionary of the response headers
+
+
+## Testing
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Copyright
+
+This project is Copyright (c) 2025 by Mike Simkins, All Rights Reserved
