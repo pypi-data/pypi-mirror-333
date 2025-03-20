@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mcp-registry
+Version: 0.5.1
+Summary: A tool for managing and interacting with multiple MCP servers
+Author-email: Jonathan Chang <31893406+cccntu@users.noreply.github.com>
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: mcp
+Requires-Dist: pydantic
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-asyncio; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
