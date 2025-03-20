@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: eshaansmart
+Version: 3.0.0
+Summary: A clone of the Monkey Mart game where players pick and sell fruits to earn money.
+Home-page: https://github.com/yourusername/EshaansMart
+Author: Eshaan Buddhisagar
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: pygame>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
