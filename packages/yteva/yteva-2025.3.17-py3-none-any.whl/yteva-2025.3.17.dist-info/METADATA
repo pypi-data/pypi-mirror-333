@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: yteva
+Version: 2025.3.17
+Summary: yteva library for downloading audio and videos from YouTube and details about them.
+Home-page: https://t.me/CH_Twiins
+Author: Eslam
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: httpx==0.25.0
+Requires-Dist: pyrofork
