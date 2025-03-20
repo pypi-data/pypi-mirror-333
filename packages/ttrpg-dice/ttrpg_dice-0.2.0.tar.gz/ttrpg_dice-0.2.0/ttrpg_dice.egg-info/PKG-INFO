@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: ttrpg-dice
+Version: 0.2.0
+Author: Mike Foster
+License: MIT
+Project-URL: Documentation, https://musicalninjadad.github.io/ttrpg-dice
+Project-URL: Repository, https://github.com/MusicalNinjaDad/ttrpg-dice
+Project-URL: Issues, https://github.com/MusicalNinjaDad/ttrpg-dice/issues
+Project-URL: Changelog, https://github.com/MusicalNinjaDad/ttrpg-dice/blob/main/CHANGELOG.md
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Rust
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: tabulate2
+Requires-Dist: typing-extensions; python_version < "3.11"
+
+# ttrpg-dice
+
+Some stuff to help TTRPG gamesmasters with dice:
+
+- a python library with useful calculations
+- a jupyter notebook as a lazy interface to run the calculations
+- a StatBlock class for constructing characters & beasts
