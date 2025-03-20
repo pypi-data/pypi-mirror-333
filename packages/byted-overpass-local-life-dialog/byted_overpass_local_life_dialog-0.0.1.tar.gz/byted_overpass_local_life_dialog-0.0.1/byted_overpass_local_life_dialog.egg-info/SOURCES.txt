@@ -1,0 +1,6 @@
+setup.py
+byted_overpass_local_life_dialog/__init__.py
+byted_overpass_local_life_dialog.egg-info/PKG-INFO
+byted_overpass_local_life_dialog.egg-info/SOURCES.txt
+byted_overpass_local_life_dialog.egg-info/dependency_links.txt
+byted_overpass_local_life_dialog.egg-info/top_level.txt
