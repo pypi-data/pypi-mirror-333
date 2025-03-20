@@ -1,0 +1,16 @@
+napari_hsi_analysis/_version.py,sha256=NIzzV8ZM0W-CSLuEs1weG4zPrn_-8yr1AwwI1iuS6yo,511
+napari_hsi_analysis/_widgets.py,sha256=u76BO66IC1OKCRB07MJVv65FpzcHhdZLB9aUhxIJEOw,20552
+napari_hsi_analysis/main.py,sha256=ackX83C_MSfRyO5uytgRxNzzs6tuZW4znWrXA-gbX0w,1509
+napari_hsi_analysis/napari.yaml,sha256=trhmDhig2WrLG2xZyfUZhgeWBnGAr6mr-LC_X06hDIM,550
+napari_hsi_analysis/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_hsi_analysis/_tests/test_widget.py,sha256=snk2ET43YECcTwPt_JriYlveQjxcxvIKGvviTHrelsE,172
+napari_hsi_analysis/modules/D_illuminants.mat,sha256=IO-AQ5lTYhBN80uo0oypOByeSA0pNEaClqBngWWlcBY,4103
+napari_hsi_analysis/modules/data.py,sha256=GhqDypvt4-82oUhc3eQWNAmF6nX_bKlwZdLXxxgKVOY,3331
+napari_hsi_analysis/modules/functions.py,sha256=4N2TjIdha-i7FrLHp3aUC5ZgepGPCWWgXNAFwvC9Msc,16960
+napari_hsi_analysis/modules/plot_widget.py,sha256=VMJOhNPHL2n_fc7qFWu7yicKr8K2Nixpo-L4d-V7tSE,13989
+napari_hsi_analysis-0.1.3.dist-info/LICENSE,sha256=hnLkUdQOVlkaNySIaaBHMaeEQ6XTDKOhGGqBBf66P-k,1495
+napari_hsi_analysis-0.1.3.dist-info/METADATA,sha256=Xozf23JqCCeBIkGt-a-vCDYRVq7RUYKKbQ4Mcv1cSLs,6922
+napari_hsi_analysis-0.1.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+napari_hsi_analysis-0.1.3.dist-info/entry_points.txt,sha256=YbnR6pdfCDe3wj7vy6TrLo3RdkZAnlvRTrk8oysBNJ8,72
+napari_hsi_analysis-0.1.3.dist-info/top_level.txt,sha256=Lx09B1zlVtJxFzALjG_R0y4R0PC6tNNYO0grD5XdLuo,20
+napari_hsi_analysis-0.1.3.dist-info/RECORD,,
