@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mcptool/__init__.py
+mcptool/mcptool.py
+openai_agents_mcptools.egg-info/PKG-INFO
+openai_agents_mcptools.egg-info/SOURCES.txt
+openai_agents_mcptools.egg-info/dependency_links.txt
+openai_agents_mcptools.egg-info/requires.txt
+openai_agents_mcptools.egg-info/top_level.txt
+tests/test_mcptool.py
