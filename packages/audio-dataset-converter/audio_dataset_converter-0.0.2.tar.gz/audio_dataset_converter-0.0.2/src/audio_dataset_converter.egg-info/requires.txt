@@ -1,0 +1,9 @@
+librosa
+numpy
+resampy
+seppl>=0.2.13
+setuptools
+soundfile
+tinytag
+wai.common>=0.0.44
+wai_logging
