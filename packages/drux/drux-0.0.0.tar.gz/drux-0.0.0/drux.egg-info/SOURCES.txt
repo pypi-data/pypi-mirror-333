@@ -1,0 +1,6 @@
+drux_setup.py
+drux/__init__.py
+drux.egg-info/PKG-INFO
+drux.egg-info/SOURCES.txt
+drux.egg-info/dependency_links.txt
+drux.egg-info/top_level.txt
