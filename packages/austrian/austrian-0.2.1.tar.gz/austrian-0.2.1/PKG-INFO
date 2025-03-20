@@ -1,0 +1,65 @@
+Metadata-Version: 2.3
+Name: austrian
+Version: 0.2.1
+Summary: A library to convert name of object into sidc code
+Author: Serhii Syrota
+Author-email: ssyrota241@gmail.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: regex (==2023.10.3)
+Requires-Dist: setuptools (==70.2.0)
+Project-URL: Repository, https://github.com/NorwayPoppy/austrian_python
+Description-Content-Type: text/markdown
+
+# Austrian 
+Ідея і стартова реалізація завдячує роботі `d3m0`.
+
+Бібліотека для перетворення повнотекстової назви або коментаря до об'єкта на код sidc стандарту app6d
+
+## Як працювати зараз?
+
+Запускає
+```
+from austrian import UnitDesignator
+
+UnitDesignator.calculate_icon("танк")
+//'30062000001103000000'
+```        
+
+## Development
+
+This project uses [Poetry](https://python-poetry.org/) for dependency management.
+
+### Installation
+
+1. Install Poetry (if not already installed):
+   ```
+   pip install poetry
+   ```
+
+2. Install dependencies:
+   ```
+   poetry install
+   ```
+
+3. Activate the virtual environment:
+   ```
+   poetry shell
+   ```
+
+### Testing
+
+Run tests with pytest:
+```
+poetry run pytest
+```
+
+### CI/CD
+
+This project uses GitHub Actions for continuous integration and deployment. The workflow:
+
+1. Runs tests on pull requests and pushes to main and develop branches
+2. When manually triggered with a version number, builds and publishes the package to PyPI        

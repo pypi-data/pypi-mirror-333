@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "austrian"
+version = "0.2.1"
+description = "A library to convert name of object into sidc code"
+authors = ["Serhii Syrota <ssyrota241@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/NorwayPoppy/austrian_python"
+packages = [{include = "austrian", from = "."}]
+include = ["austrian/patterns_data.csv"]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+setuptools = "70.2.0"
+regex = "2023.10.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
