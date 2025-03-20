@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+apparatusai/__init__.py
+apparatusai/client.py
+apparatusai.egg-info/PKG-INFO
+apparatusai.egg-info/SOURCES.txt
+apparatusai.egg-info/dependency_links.txt
+apparatusai.egg-info/requires.txt
+apparatusai.egg-info/top_level.txt
+tests/test_client.py
