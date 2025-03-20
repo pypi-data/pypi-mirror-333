@@ -1,0 +1,1 @@
+from .simple_message import send_telegram_message as send_telegram_message
