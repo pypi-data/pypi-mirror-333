@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: galtea
+Version: 1.0.0
+Summary: Galtea software development kit
+Home-page: https://galtea.ai/
+License: Apache-2.0
+Keywords: MLOps,ML Experiment Tracking,ML Model Registry,ML Model Store,ML Metadata Store
+Author: galtea.ai
+Author-email: info@galtea.ai
+Requires-Python: >=3.9,<3.13
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: email-validator (==2.1.2)
+Requires-Dist: injector (>=0.22.0,<0.23.0)
+Requires-Dist: pydantic (>=2.9.2,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: termcolor (>=2.5.0,<3.0.0)
+Requires-Dist: urllib3 (>=2.3.0,<3.0.0)
+Project-URL: Documentation, https://docs.galtea.ai/
+Project-URL: Repository, https://github.com/Galtea-AI/galtea
+Description-Content-Type: text/markdown
+
+# Galtea Evaluation Task Creator
+
+Streamline your evaluation process with Galtea's powerful evaluation SDK
+
+## Setting Up the Development Environment
+
+#### Prerequisites:
+
+Before starting, make sure you have [Poetry](https://python-poetry.org/docs/main/) installed. Poetry is a tool for dependency management and packaging in Python.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Galtea-AI/galtea.git
+   cd galtea-sdk
+   ```
+
+2. To install the project dependencies, run:
+
+   ```bash
+   poetry install
+   ```
+
+3. To active the virtual environmennt created by Poetry run:
+
+   ```bash
+   poetry shell
+   ```
+
+4. Set up your environment variables:
+   Create a `.env` file in your project root directory with the following content:
+   ```
+   API_URL=STATIC_API_URL
+   API_KEY=GALTEA_API_KEY
+   ```
+
+## Creating Evaluation Tasks
+
+1. Create your evaluation task:
+   In your `main.py` file, use the following code to create a simple ab testing evaluation task:
+
+   ```python
+      from dotenv import load_dotenv
+      load_dotenv()
+
+      import galtea
+
+
+      def main():
+         with galtea.Evaluation() as pipeline:
+
+            pipeline.create_evaluation(
+                  ...
+                  ...
+                  ...
+            )
+
+      if __name__ == "__main__":
+         main()
+   ```
+
+2. Launch your evaluation task:
+   Run the script to create your task:
+   ```
+   python main.py
+   ```
+
