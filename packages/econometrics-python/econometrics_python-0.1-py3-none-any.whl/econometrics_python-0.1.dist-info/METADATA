@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: econometrics-python
+Version: 0.1
+Summary: Package for econometric linear regression models and plotting.
+Home-page: https://github.com/Trantamming/econometrics
+Author: Trần Minh Tâm
+Author-email: tam.ming.zhan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: statsmodels
+Requires-Dist: matplotlib
+
+# Econometrics 
+
+## Linear Regression
+
+A simple econometrics package for linear regression and plotting.
+
+### Installation
+
+You can install the package via pip: pip install econometrics
+
+### Run with the package
+```python
+
+from LinearRegression.regression import LinearRegression
+
+# Không cần truyền 'x_column' và 'y_column' vào nữa
+model = LinearRegression(data_file='./data_file.csv')
+
+# Huấn luyện mô hình
+model.fit()
+
+# In ra kết quả summary
+model.summary()
+
+# Vẽ đồ thị
+model.plot()
+
+
+
