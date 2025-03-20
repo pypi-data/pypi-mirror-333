@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: django-dynamic-smtp
+Version: 0.0.2
+Summary: Configure email settings in the admin
+Project-URL: Homepage, https://gitlab.com/joaoseckler/django-dynamic-smtp
+Project-URL: Issues, https://gitlab.com/joaoseckler/django-dynamic-smtp/issues
+Author-email: João Seckler <jseckler@riseup.net>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: beautifulsoup4
+Requires-Dist: django
+Requires-Dist: django-object-actions
+Requires-Dist: django-solo
+Requires-Dist: django-tinymce
+Requires-Dist: lxml
+Description-Content-Type: text/markdown
+
+# Django dynamic SMTP
+
+Configure email configuration in the admin.
+
+## Usage
+
+1. Install with `pip install django-dynamic-smtp`
+
+2. Add `dynamic_smtp` to `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    ...,
+    "dynamic_smtp",
+]
+```
+
+3. Configure your email backend:
+
+```
+EMAIL_BACKEND = (
+    "django.core.mail.backends.console.EmailBackend"
+    if DEBUG
+    else "dynamic_smtp.email.DynamicSMPTEmailBackend"
+)
+```
+
+4. Migrate: `./manage.py migrate`
+5. Access you admin and configure your SMTP settings
+
+## Dependencies
+
+This package needs quite a few dependencies, considering its simplicity.
+
+- `Django`
+- `beautifulsoup4` and `lxml`: prepare text version of HTML emails
+- `django-object-actions`: Button for email test
+- `django-tinymce`: Button for email test
+- `django-solo`: Use singleton model
+
+## Contributing
+
+All contributions are welcome! To setup you environment:
+
+1. `pip install -r dev.requirements.txt`
+2. `pre-commit install`
