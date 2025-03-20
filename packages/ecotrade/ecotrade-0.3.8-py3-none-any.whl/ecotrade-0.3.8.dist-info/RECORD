@@ -1,0 +1,11 @@
+ecotrade/authentication.py,sha256=Fw5bozZ0nshIeNK8aobU1jTtz6tcOoVjjSHLQSehlfA,1486
+ecotrade/comunications.py,sha256=c3rEQBEUbrmVrFSKKu6CzZBPb4Rn6ogecBihJakv6f0,4077
+ecotrade/database.py,sha256=s8R-_zVelmFJoB6l0P8naiCUVEUwfOZ2eShBankNV30,2185
+ecotrade/hermes_access.py,sha256=vejK7EUqIBuWE2ELfAtIqIHf_gAH_xhVby6hKSUV0xI,911
+ecotrade/sharepoint.py,sha256=dIbldwQ9cNuxPkmVknWUeAR21RTJMUhSrVx1Xxk0pAA,6379
+ecotrade/utils.py,sha256=JLZRBRJBu5_vShwCBWtqtcjZukU_xJvYpZsiHe6rZg0,342
+ecotrade-0.3.8.dist-info/LICENSE,sha256=HnpbROPmkOhMQCr7TovAb6dbjs0y6rinBTjaU8YFNVU,571
+ecotrade-0.3.8.dist-info/METADATA,sha256=h8Svn73WbUSu6YLmspKhosvjyL3TmNeOdhG5F-S-sG4,503
+ecotrade-0.3.8.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+ecotrade-0.3.8.dist-info/top_level.txt,sha256=Z0GZgEvOGFTstWJ8yss1rmMA5WSiq0FVh33Ztgu49hg,9
+ecotrade-0.3.8.dist-info/RECORD,,
