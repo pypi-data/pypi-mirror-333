@@ -1,0 +1,3 @@
+colav-protobuf==0.1.82
+numpy
+shapely
