@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: isgb
+Version: 0.11
+Summary: Smart import for PIH module
+Home-page: https://none.com/
+Author: Nikita Karachentsev
+Author-email: n.karachencev@sf-m.biz
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: prettytable
+Requires-Dist: colorama
+Requires-Dist: grpcio
+Requires-Dist: protobuf
+Requires-Dist: requests
+Requires-Dist: transliterate
+Requires-Dist: psutil
+Requires-Dist: setuptools
+Requires-Dist: pycron
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
