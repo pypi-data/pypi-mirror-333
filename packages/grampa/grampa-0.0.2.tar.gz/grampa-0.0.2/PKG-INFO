@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: grampa
+Version: 0.0.2
+Summary: Gaussian Random Magnetic Fields Approximation
+Project-URL: Homepage, https://github.com/ErikOsinga/magneticfields
+Author-email: Erik Osinga <your_email@example.com>
+License: MIT License
+        Copyright (c) 2025 Erik Osinga
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: astropy
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: psutil
+Requires-Dist: pyfc
+Requires-Dist: pyfftw
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# Gaussian Random-fields Approximation for Magnetic-fields with Python Algorithms (GRAMPA)
+
+## Overview
+GRAMPA is a Python-based tool for modeling magnetic fields as Gaussian random fields following a specified power spectrum and electron density profile, as described in Murgia et al. (2004) and originally proposed by Tribble (1991). This framework is designed primarily for analyzing Faraday rotation experiments in galaxy clusters but can be applied more generally to other magnetized plasmas, depending on the chosen parameters.
+
+## Getting Started
+To begin using GRAMPA, refer to the Jupyter notebook `examples/example_cluster_Bfield.ipynb`, which provides an example workflow to help users understand the implementation and features of the code.
+
+## Citation
+If you use this code in your research, please cite the following works:
+- **Osinga et al. 2022**: [A&A, 665, A71](https://ui.adsabs.harvard.edu/abs/2022A%26A...665A..71O/abstract)
+- **Osinga et al. 2025**: [A&A, 694, A44](https://ui.adsabs.harvard.edu/abs/2025A%26A...694A..44O/abstract)
+
+If your work involves lognormal density fluctuations, please also cite:
+- **Khadir et al. 2025 (in prep.)**
+- **PyFC**: [PyFC on PiWheels](https://www.piwheels.org/project/pyfc/)
+
+## License
+This software is provided under an open-source license. Please check the GitHub repository for details.
+
+## Contact
+For questions or feedback, please reach out to the authors or open an issue on the [Github repository](https://github.com/ErikOsinga/magneticfields/)
