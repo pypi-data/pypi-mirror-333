@@ -1,0 +1,9 @@
+plover_uinput_output/__init__.py,sha256=mLuxb9GVTqUAdmGV3SPQgI-bdsep7xcQ_4onO78xBfw,6769
+plover_uinput_output/set_xkb_alias.py,sha256=UvF6ED9lrK1SLerZDEVBAlTRybfRk1GEbLBOIcpmq5o,4761
+plover_uinput_output/subprocess_run.py,sha256=npmuKEKjxR0h85rAH9ZQANlex2ZiuYFnxWExM92Tzok,829
+plover_uinput_output-0.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+plover_uinput_output-0.0.2.dist-info/METADATA,sha256=EmDZ3mG5jfpefzENtbSJwH1137QmiaN_koZrH_eqn0g,1085
+plover_uinput_output-0.0.2.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+plover_uinput_output-0.0.2.dist-info/entry_points.txt,sha256=UG2eLYR0PN-8h2tg0L_fFrt7euxACG2a96A7XxxxVN4,147
+plover_uinput_output-0.0.2.dist-info/top_level.txt,sha256=YRWniNx6m0-rBUrGGAfelAqqifUnxVwHJyDRPW22TlI,21
+plover_uinput_output-0.0.2.dist-info/RECORD,,
