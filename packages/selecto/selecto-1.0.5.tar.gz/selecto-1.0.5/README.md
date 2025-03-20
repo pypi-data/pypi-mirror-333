@@ -1,0 +1,154 @@
+# Selecto
+
+Selecto is a colorful, simple-to-use Text User Interface (TUI) library that requires just **1 line of code** to get started. It's designed to make building beautiful and interactive CLI apps a breeze.
+
+## Features
+- Easy to use.
+- Colorful and interactive interface.
+- Requires only 1 line of code to run.
+- **No external dependencies** – everything you need is built-in.
+- **Dual mode**: Select one item or multiple items.
+  - **Single mode**: Select a single item and return it.
+  - **Multiple mode**: Select multiple items and return them as a list.
+- **Automatic Adjustment to terminal height**: selecto can automatically detect the number of available lines, then will dynamically adjust what options are shown in a way that keeps the cursor always visible and ideally in the center
+
+## Installation
+
+You can install Selecto via pip:
+
+``` bash
+pip install selecto
+```
+
+## Usage
+
+To control selecto, arrow keys provide navigation:
+arrow up and down to move a single row
+arrow left and right to move multiple rows (number of rows configurable)
+return key to select item in single selection mode
+space key to toggle item and return key to confirm selections in multiple selection mode
+Q to exit
+
+To start selecto in the single selection mode (default mode):
+
+``` python
+from selecto import selecto
+
+choice=selecto(list(range(50)))
+
+if choice is not None:
+    print(choice)
+
+# > 0
+#   1
+#   2
+#   3
+#   4
+#   5
+#   6
+#   7
+#   8
+#   9
+#   10
+#   11
+#   12
+#   13
+
+# Item 1 of 50
+# Press 'Q'  to exit, 'Enter' to confirm selection.
+```
+
+To start selecto in multiple selection mode:
+``` python
+from selecto import selecto
+
+choice=selecto(list(range(50)),select_multiple=True) # by default value set to False
+
+if choice is not None:
+    print(choice)
+
+# > [ ] 0
+#   [ ] 1
+#   [ ] 2
+#   [ ] 3
+#   [ ] 4
+#   [ ] 5
+#   [ ] 6
+#   [ ] 7
+#   [ ] 8
+#   [ ] 9
+#   [ ] 10
+#   [ ] 11
+#   [ ] 12
+#   [ ] 13
+
+# Item 1 of 50
+# Press 'Q'  to exit, 'Space' to toggle selection, 'Enter' to confirm selection(s).
+```
+
+To change the number of rows left and right arrow keys jump:
+
+``` python
+from selecto import selecto
+
+choice=selecto(list(range(50)),multi_index_jump=25) # default is 5
+
+if choice is not None:
+    print(choice)
+```
+
+Selecto has randomized messages on exit or errors, to toggle them:
+
+``` python
+from selecto import selecto
+
+choice=selecto(list(range(50)),exit_messages=True) # True by default, False replaces all messages with generic messages
+
+if choice is not None:
+    print(choice)
+
+# > 0
+#   1
+#   2
+#   3
+#   4
+#   5
+#   6
+#   7
+#   8
+#   9
+#   10
+#   11
+#   12
+#   13
+
+# Item 1 of 50
+# Press 'Q'  to exit, 'Enter' to confirm selection.
+#Houston, we have a problem!
+
+choice=selecto(list(range(50)),exit_messages=False) # True by default, False replaces all messages with generic messages
+
+if choice is not None:
+    print(choice)
+
+# > 0
+#   1
+#   2
+#   3
+#   4
+#   5
+#   6
+#   7
+#   8
+#   9
+#   10
+#   11
+#   12
+#   13
+
+# Item 1 of 50
+# Press 'Q'  to exit, 'Enter' to confirm selection.
+#Exiting.
+
+
+```
