@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+MM_Core/__init__.py
+MM_Core/mol.py
+MM_Core/plot.py
+MM_Core/utilities.py
+MatmaCore.egg-info/PKG-INFO
+MatmaCore.egg-info/SOURCES.txt
+MatmaCore.egg-info/dependency_links.txt
+MatmaCore.egg-info/requires.txt
+MatmaCore.egg-info/top_level.txt
