@@ -1,0 +1,98 @@
+Metadata-Version: 2.2
+Name: corefolio
+Version: 0.2.2
+Summary: A package for optimizing asset selection using CVXPY.
+Author-email: Sebastien Eveno <sebastien.louis.eveno@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Sébastien Eveno
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas==1.5.1
+Requires-Dist: cvxpy==1.6.2
+Requires-Dist: pytest==8.3.5
+Requires-Dist: numpy==1.26.4
+
+# CoreFolio
+
+<p align="center">
+    <img src="https://github.com/SebastienEveno/corefolio/actions/workflows/python-package.yml/badge.svg?branch=master" />
+    <a href="https://pypi.org/project/corefolio" alt="Python Versions">
+        <img src="https://img.shields.io/pypi/pyversions/corefolio.svg?logo=python&logoColor=white" /></a>
+    <a href="https://pypi.org/project/corefolio" alt="PyPi">
+        <img src="https://img.shields.io/pypi/v/corefolio" /></a>
+    <a href="https://pepy.tech/project/corefolio" alt="Downloads">
+        <img src="https://pepy.tech/badge/corefolio" /></a>
+</p>
+
+`corefolio` is a Python package for optimizing asset selection using CVXPY. It allows users to define a universe of assets, apply constraints, and optimize the portfolio based on specified criteria.
+
+## Installation
+
+To install the package, use the following command:
+
+```sh
+pip install corefolio
+```
+
+## Requirements
+- Python >= 3.10
+- pandas
+- cvxpy >= 1.6.2
+- pytest
+
+## Usage
+
+```python
+import pandas as pd
+from corefolio.optimizer import Optimizer
+from corefolio.universe import Universe
+from corefolio.constraint import MaxAssetsConstraint, MeanConstraint
+
+# Define your universe and constraints
+data = pd.DataFrame(
+    {
+        "ID": [1, 2, 3, 4], 
+        "value": [10, 20, 30, 40], 
+        "other_value": [5, 5, 5, 5]
+    }
+)
+universe = Universe(data)
+constraints = [
+    MaxAssetsConstraint(max_assets=2), 
+    MeanConstraint(column_name="other_value", tolerance=0.01)
+]
+
+# Create an optimizer instance
+optimizer = Optimizer(universe, constraints, sense="maximize", target_column="value")
+
+# Optimize the portfolio
+selected_assets = optimizer.optimize()
+
+print("Selected assets:", selected_assets)
+```
+
+## License
+This project is licensed under the MIT License.

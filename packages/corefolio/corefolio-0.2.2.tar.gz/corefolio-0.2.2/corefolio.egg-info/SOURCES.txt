@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+corefolio/__init__.py
+corefolio/constraint.py
+corefolio/optimizer.py
+corefolio/universe.py
+corefolio.egg-info/PKG-INFO
+corefolio.egg-info/SOURCES.txt
+corefolio.egg-info/dependency_links.txt
+corefolio.egg-info/requires.txt
+corefolio.egg-info/top_level.txt
+tests/test_constraints.py
+tests/test_optimizer.py
+tests/test_universe.py

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corefolio"
+version = "0.2.2"
+description = "A package for optimizing asset selection using CVXPY."
+authors = [
+    { name = "Sebastien Eveno", email = "sebastien.louis.eveno@gmail.com" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas==1.5.1",
+    "cvxpy==1.6.2",
+    "pytest==8.3.5",
+    "numpy==1.26.4"
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+
+[tool.setuptools]
+packages = ["corefolio"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.flake8]
+max-line-length = 100
