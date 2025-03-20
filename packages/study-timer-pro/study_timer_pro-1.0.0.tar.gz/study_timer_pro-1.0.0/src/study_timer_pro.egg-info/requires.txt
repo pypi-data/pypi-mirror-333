@@ -1,0 +1,7 @@
+pygame
+matplotlib
+numpy
+Pillow
+psutil
+plyer
+requests

@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/study_timer_pro.egg-info/PKG-INFO
+src/study_timer_pro.egg-info/SOURCES.txt
+src/study_timer_pro.egg-info/dependency_links.txt
+src/study_timer_pro.egg-info/entry_points.txt
+src/study_timer_pro.egg-info/requires.txt
+src/study_timer_pro.egg-info/top_level.txt
+tests/test_timer.py
