@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: apypie
+Version: 0.7.0
+Summary: Apipie bindings for Python
+Home-page: https://github.com/Apipie/apypie
+Author: Evgeni Golov
+Author-email: evgeni@golov.de
+License: MIT
+Keywords: api apipie bindings
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.4.2
+Provides-Extra: kerberos
+Requires-Dist: requests-gssapi; extra == "kerberos"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+# apypie - Apipie bindings for Python
+
+[![Build Status](https://github.com/Apipie/apypie/actions/workflows/main.yml/badge.svg)](https://github.com/Apipie/apypie/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/Apipie/apypie/branch/master/graph/badge.svg)](https://codecov.io/gh/Apipie/apypie)
+[![Documentation Status](https://readthedocs.org/projects/apypie/badge/?version=latest)](https://apypie.readthedocs.io/en/latest/?badge=latest)
