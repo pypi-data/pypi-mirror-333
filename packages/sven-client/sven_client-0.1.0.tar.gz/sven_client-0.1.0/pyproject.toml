@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sven-client"
+version = "0.1.0"
+description = "Sven CLI client for agent automation"
+readme = "README.md"
+authors = [{ name = "Sven Team", email = "info@swedishembedded.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.28.0",
+    "rich",
+    "httpx>=0.24.0,<0.28.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "tabulate",
+    "langchain>=0.2.0",
+    "langchain-openai>=0.2.0",
+    "langchain-anthropic>=0.2.0",
+    "langchain-community>=0.2.0",
+    "anthropic",
+    "mcp",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "ruff>=0.0.270",
+    "pre-commit>=3.0.0",
+    "bump2version>=1.0.0",
+    "tox>=4.0.0",
+    "build>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://git.swedishembedded.com/core/platform/sven"
+"Bug Tracker" = "https://git.swedishembedded.com/core/platform/sven/-/issues"
+
+[project.scripts]
+sven = "sven.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+select = ["E", "F", "B", "I"]
+ignore = ["E501", "B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--cov=sven --cov-report=term-missing"
