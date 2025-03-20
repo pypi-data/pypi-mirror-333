@@ -1,0 +1,22 @@
+LICENSE
+README.md
+setup.py
+cppmath/__init__.py
+cppmath/cache.py
+cppmath/core.py
+cppmath/integration.py
+cppmath/linear.py
+cppmath/optimization.py
+cppmath/utils.py
+cppmath copy/__init__.py
+cppmath copy/cache.py
+cppmath copy/core.py
+cppmath copy/integration.py
+cppmath copy/linear.py
+cppmath copy/optimization.py
+cppmath copy/utils.py
+cppmath.egg-info/PKG-INFO
+cppmath.egg-info/SOURCES.txt
+cppmath.egg-info/dependency_links.txt
+cppmath.egg-info/requires.txt
+cppmath.egg-info/top_level.txt
