@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+SignalSemaphore.egg-info/PKG-INFO
+SignalSemaphore.egg-info/SOURCES.txt
+SignalSemaphore.egg-info/dependency_links.txt
+SignalSemaphore.egg-info/top_level.txt
+src/SignalSemaphore.py
+src/__init__.py

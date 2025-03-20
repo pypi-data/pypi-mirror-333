@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: SignalSemaphore
+Version: 0.0.3
+Summary: A simple event signaling system
+Home-page: https://gitea.com/Lerking/semaphore
+Author: Jan Lerking
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# SignalSemaphore
+
+A lightweight Python event signaling system.
+
+## Installation
+```
+pip install signalsemaphore
+```
+
+## Usage
+```python
+from SignalSemaphore import Semaphore
+
+semaphore = Semaphore()
+
+def handler(data):
+    print(f"Received: {data}")
+
+semaphore.connect("event", handler)
+semaphore.emit("event", "Hello")
+semaphore.disconnect("event", handler)
+```
