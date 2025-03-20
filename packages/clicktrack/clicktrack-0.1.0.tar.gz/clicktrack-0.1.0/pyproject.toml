@@ -1,0 +1,96 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clicktrack"
+dynamic = ["version"]
+description = 'Create click tracks in MIDI format.'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = [
+  'audio',
+  'cli',
+  'click track',
+  'command line',
+  'count-in',
+  'midi-generator',
+  'midi',
+  'music',
+]
+authors = [
+  { name = "Ramiro Gómez", email = "code@ramiro.org" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "MIDIUtil"
+]
+
+[project.scripts]
+clicktrack = "clicktrack.cli:main"
+
+[project.urls]
+Documentation = "https://github.com/yaph/clicktrack#readme"
+Issues = "https://github.com/yaph/clicktrack/issues"
+Source = "https://github.com/yaph/clicktrack"
+
+[tool.hatch.version]
+path = "clicktrack/__about__.py"
+
+[tool.hatch.envs.clicktrack-dev]
+extra-dependencies = ["flake8", "ipdb", "mypy>=1.0.0", "pytest"]
+
+[tool.hatch.envs.clicktrack-dev.scripts]
+type_check = "mypy --install-types --non-interactive {args:clicktrack tests}"
+qa = [
+  "hatch run type_check",
+  "hatch test"
+]
+release = [
+  "hatch run qa",
+  "hatch build --clean",
+  "hatch publish",
+  "git tag -a $(hatch version) -m \"Create version $(hatch version)\"",
+  "git push --tags",
+  "git-changelog -o CHANGELOG.md",
+  "git commit -m 'Update CHANGELOG' CHANGELOG.md",
+  "git push"
+]
+test_release = [
+  "hatch run qa",
+  "hatch build --clean"
+]
+
+[tool.coverage.run]
+source_pkgs = ["clicktrack", "tests"]
+branch = true
+parallel = true
+omit = [
+  "clicktrack/__about__.py",
+]
+
+[tool.coverage.paths]
+clicktrack = ["clicktrack", "*/clicktrack/clicktrack"]
+tests = ["tests", "*/clicktrack/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.ruff.lint]
+ignore = ["T201", "DTZ005", "FA100"]
+
+[tool.ruff.format]
+quote-style = "preserve"
