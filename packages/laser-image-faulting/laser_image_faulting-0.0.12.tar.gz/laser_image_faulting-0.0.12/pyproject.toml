@@ -1,0 +1,32 @@
+[project]
+name = "laser-image-faulting"
+version = "0.0.12"
+description = "Laser image fault detection package"
+requires-python = ">=3.8"
+dependencies = [
+    "torch",
+    "numpy",
+    "pillow"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"laser_image_faulting" = [
+    "pyarmor_runtime_000000/*",
+    "*.py",
+    "*.so"
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+    "pyarmor>=7.7.0"  # For development and building only
+]
+
+[tool.setuptools.packages.find]
+include = ["laser_image_faulting*"]
+exclude = ["tests*", "docs*"]
