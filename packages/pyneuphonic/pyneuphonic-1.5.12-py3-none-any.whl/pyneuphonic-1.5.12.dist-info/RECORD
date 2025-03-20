@@ -1,0 +1,16 @@
+pyneuphonic/__init__.py,sha256=HvXQ1hAwwc7-pRmT3W9ie9jN-dKkLsKWxLMRsZnWSpo,290
+pyneuphonic/_agents.py,sha256=VYFUvXl-yNiTdDLDPa25gCbIVGYT2OT-9YObc9SAiXY,4096
+pyneuphonic/_endpoint.py,sha256=wq3MggnHHpHTm8nGKJwxu6qgu6VJXt8GwUwE9B3yjcM,1424
+pyneuphonic/_restore.py,sha256=YzEM5vtgLzZyjQO8NXdsv6xwlbCvEvoD1KSCEjxd_Bg,3908
+pyneuphonic/_sse.py,sha256=EA9L3aC9HwK6kyeVC7fXDlGo9B0aSokfwwm7b_O1GsY,5283
+pyneuphonic/_utils.py,sha256=B986eVh-CHwFs26kGuAL9yB4IyJRvmeZ0K3WHu3BUyU,3028
+pyneuphonic/_voices.py,sha256=GeVfntKhxQu2qU0Mk1N8T48vMB6GKd9OV5AbNATwtvs,9160
+pyneuphonic/_websocket.py,sha256=teWb5YO6Xth_bKwlXU8Znjw9CA8R6HiBawsmTTpdkI0,7846
+pyneuphonic/agents.py,sha256=SQkdBi-OYG7CUQnu-XF4oHrHWVgj2E7aNMWUOCjb_Fk,4529
+pyneuphonic/client.py,sha256=7q7sS9atR-3FtKS8oXQYy-6rfa38BTQdVQ03dJ30FAM,2550
+pyneuphonic/models.py,sha256=quMDgvaaKZrQ5Q57CikDyDEkXMuTYOKaI1sPnoPQ1LM,9032
+pyneuphonic/player.py,sha256=PpZ7lIqAxtWPjtXsDhzcoLJIiiGbKFRAUfl6IXHmkqI,7412
+pyneuphonic-1.5.12.dist-info/LICENSE.txt,sha256=BvIxvdUQJXx39mRoxnH9sfNg-DO3EHheBO7QNBNxfto,1075
+pyneuphonic-1.5.12.dist-info/METADATA,sha256=Gs-V7Q-O9sAG8oKPgpBmkfNC2QCE5_gqAutrpP_2Adk,15562
+pyneuphonic-1.5.12.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pyneuphonic-1.5.12.dist-info/RECORD,,
