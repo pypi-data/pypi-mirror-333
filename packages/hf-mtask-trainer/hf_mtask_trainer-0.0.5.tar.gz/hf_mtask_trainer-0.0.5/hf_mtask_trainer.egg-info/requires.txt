@@ -1,0 +1,6 @@
+torch
+transformers>=4.47.0
+accelerate
+
+[test]
+pytest
