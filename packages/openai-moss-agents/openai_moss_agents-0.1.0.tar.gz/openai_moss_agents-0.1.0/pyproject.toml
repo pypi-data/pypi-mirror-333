@@ -1,0 +1,26 @@
+[project]
+name = "openai-moss-agents"
+version = "0.1.0"
+description = "make python module as code interpreter tool for OpenAI Agent by MOSS protocol"
+readme = "README.md"
+authors = [
+    { name = "thirdgerb", email = "thirdgerb@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "ghostos-moss>=0.3.7",
+    "openai-agents>=0.0.3",
+]
+
+[project.scripts]
+openai-moss-agents = "openai_moss_agents.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+console = [
+    "rich>=13.9.4",
+]
+
