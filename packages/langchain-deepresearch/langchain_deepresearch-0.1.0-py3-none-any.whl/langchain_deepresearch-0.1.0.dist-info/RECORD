@@ -1,0 +1,12 @@
+langchain_deepresearch/__init__.py,sha256=-RjprpSDQ9kiwM-U0IyblpGN8ytQ1hHgohEM3yGu2Gw,382
+langchain_deepresearch/deep_researcher.py,sha256=CedWG9AeiIiisfaTk3LNOja784P6cPbgcfFGdHQK8J8,10617
+langchain_deepresearch/services/__init__.py,sha256=pcPpePWAPxpgg757Zrw0fDbbT9rig0b8v0iQVm2gHAA,630
+langchain_deepresearch/services/deep_research_service.py,sha256=udJ-eRGqTrlErqfadRhOLWc_BAhxLC78hDAOjDEmang,18649
+langchain_deepresearch/services/report_service.py,sha256=nnNra_i2FGvoge7o1v8EN4aGtsR4UIJsMD6xmXyoKO0,12484
+langchain_deepresearch/services/search_service.py,sha256=9VopF8zvneb992nu9ZDu0g92UALyoCofmcLsXj6TCp0,24600
+langchain_deepresearch/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_deepresearch/utils/logging_utils.py,sha256=MxWA6iZvRE_9zaOWV4DoyJF09saYX9xYEnIA1ItNlaU,3706
+langchain_deepresearch-0.1.0.dist-info/METADATA,sha256=mTd0sgaooFh7k1F4VdQyCz0PtbeDVm3BwPKmOOM5Kp4,12165
+langchain_deepresearch-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+langchain_deepresearch-0.1.0.dist-info/top_level.txt,sha256=tubw8msOCSrbUPQRyMhcl9qB_SYMxAp9k7TJjvqLBVk,23
+langchain_deepresearch-0.1.0.dist-info/RECORD,,
