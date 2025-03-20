@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+h5ify/__init__.py
+h5ify/h5ify.py
+h5ify.egg-info/PKG-INFO
+h5ify.egg-info/SOURCES.txt
+h5ify.egg-info/dependency_links.txt
+h5ify.egg-info/requires.txt
+h5ify.egg-info/top_level.txt
