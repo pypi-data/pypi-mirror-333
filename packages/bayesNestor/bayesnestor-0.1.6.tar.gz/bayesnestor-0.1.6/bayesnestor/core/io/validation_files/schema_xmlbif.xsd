@@ -1,0 +1,55 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+    <xs:element name="BIF">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NETWORK" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="VERSION" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="NETWORK">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NAME" type="xs:string"/>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element name="PROPERTY" type="xs:string"/>
+                    <xs:element name="VARIABLE">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="NAME" type="xs:string"/>
+                                <xs:choice maxOccurs="unbounded">
+                                    <xs:element name="OUTCOME" type="xs:string"/>
+                                    <xs:element name="PROPERTY" type="xs:string"/>
+                                </xs:choice>
+                            </xs:sequence>
+                            <xs:attribute name="TYPE" default="nature">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="nature"/>
+                                        <xs:enumeration value="decision"/>
+                                        <xs:enumeration value="utility"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DEFINITION">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:choice maxOccurs="unbounded">
+                                    <xs:element name="FOR" type="xs:string"/>
+                                    <xs:element name="GIVEN" type="xs:string"/>
+                                    <xs:element name="TABLE" type="xs:string"/>
+                                    <xs:element name="PROPERTY" type="xs:string"/>
+                                </xs:choice>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
