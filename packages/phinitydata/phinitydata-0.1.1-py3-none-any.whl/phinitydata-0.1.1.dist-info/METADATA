@@ -1,0 +1,45 @@
+Metadata-Version: 2.2
+Name: phinitydata
+Version: 0.1.1
+Summary: A package for generating synthetic data for LLMs
+Home-page: https://github.com/phinitylabs/phinitydata.git
+Author: Sonya Jin
+Author-email: sonyajin@stanford.edu
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: openai>=1.0.0
+Requires-Dist: langchain
+Requires-Dist: faiss-cpu
+Requires-Dist: chromadb>=0.3.0
+Requires-Dist: tiktoken
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: transformers>=4.30.0
+Requires-Dist: torch>=2.0.0
+Requires-Dist: ragas>=0.0.20
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Phinity is a synthetic data generation SDK designed to help you create high-quality, verifiable datasets for LLM development and evaluation.

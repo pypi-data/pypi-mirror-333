@@ -1,0 +1,13 @@
+phinitydata/__init__.py,sha256=cAqU1xemIPghFTApvq9Dne6hGrrlpErjwsr7Ym2DlYk,281
+phinitydata/client.py,sha256=kZUdioNGcampkHClUg9va30InLhdCp0zxnrgWbaIQdI,2220
+phinitydata/connectors/__init__.py,sha256=aswZCkR9Is6weeXwO0rBNBO29ESLd1dEKXKw1Mnc-x8,154
+phinitydata/connectors/base.py,sha256=29f4sAe8FE3_pzb73nn66-wslrTNEBMXSCs3Ag91Wcc,655
+phinitydata/connectors/chromadb.py,sha256=l8EHOvdffodxx6STdPxYLCI3dNtJN40rIc-qCvV3U1E,1323
+phinitydata/testset/__init__.py,sha256=39vrRh8FmnwyNbKI0ExyXt_oPbwrsV70CST6zZTq-F0,169
+phinitydata/testset/models.py,sha256=enDHlMmtXBiblMnHCjUPW9pAWSOPIcEaa6ruacmGg2E,3044
+phinitydata/testset/rag_generator.py,sha256=RS4y8eXAy9YYpQPZzCv9Pt6QnTmdt2U_Fo8j9TeKn28,8404
+phinitydata/testset/sft_generator.py,sha256=99gZLxh_r3FoMNqzuF5KATzDLPOxWm0u0PyeUDme6eQ,23653
+phinitydata-0.1.1.dist-info/METADATA,sha256=RiYafhXt5IBZi-h4ZqUxll1RbsJZHPKxQOJxiiZbu3g,1548
+phinitydata-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+phinitydata-0.1.1.dist-info/top_level.txt,sha256=KhkX3JRm_56UkCG8YI_1NskG561YajxhZO5WYU_yU1M,12
+phinitydata-0.1.1.dist-info/RECORD,,
