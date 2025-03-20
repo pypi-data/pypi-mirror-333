@@ -1,0 +1,10 @@
+[workspace]
+members = ["fastcore", "py"]
+
+[workspace.dependencies]
+fastcore = { path = "fastcore" }
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+opt-level = 3
