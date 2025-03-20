@@ -1,0 +1,8 @@
+README.md
+setup.py
+variamos_security/__init__.py
+variamos_security.egg-info/PKG-INFO
+variamos_security.egg-info/SOURCES.txt
+variamos_security.egg-info/dependency_links.txt
+variamos_security.egg-info/requires.txt
+variamos_security.egg-info/top_level.txt

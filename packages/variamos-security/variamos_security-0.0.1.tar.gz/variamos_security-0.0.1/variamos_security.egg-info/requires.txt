@@ -1,0 +1,4 @@
+python-jose
+
+[fastapi]
+fastapi>=0.115.0
