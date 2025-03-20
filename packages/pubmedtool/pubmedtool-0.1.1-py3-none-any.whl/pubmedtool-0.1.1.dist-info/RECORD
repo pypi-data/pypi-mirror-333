@@ -1,0 +1,6 @@
+pubmedtool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubmedtool/pubmed_fetcher.py,sha256=lOzyVQcQshDRM_TPUOpsxct6oa2xbpLbgkpm1v_p-30,5786
+pubmedtool-0.1.1.dist-info/METADATA,sha256=LbX1QbxUaoTyDokIWhMG6XNhDUocscx2yu3W-2ZPRYA,1279
+pubmedtool-0.1.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pubmedtool-0.1.1.dist-info/entry_points.txt,sha256=jI8aTLS2EYoLppl13qhsffeYca0ieHCKSktA3HpNtYI,44
+pubmedtool-0.1.1.dist-info/RECORD,,
