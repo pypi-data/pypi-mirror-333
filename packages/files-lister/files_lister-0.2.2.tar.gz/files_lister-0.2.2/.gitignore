@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/v
+dist/
+wheels/
+*.egg-info
+
+.idea
+
+# Virtual environments
+.venv
+venv
+
+test_tmp_dir
+
+.coverage
+coverage.xml
+htmlcov
+files_output
+junit.xml
