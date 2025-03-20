@@ -1,0 +1,8 @@
+LICENSE.txt
+README.txt
+setup.py
+FastEBM/__init__.py
+FastEBM.egg-info/PKG-INFO
+FastEBM.egg-info/SOURCES.txt
+FastEBM.egg-info/dependency_links.txt
+FastEBM.egg-info/top_level.txt
