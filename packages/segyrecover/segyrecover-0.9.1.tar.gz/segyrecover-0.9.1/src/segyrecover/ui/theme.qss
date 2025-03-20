@@ -1,0 +1,174 @@
+
+
+/* --- Modern Light Theme (Windows 11-like) --- */
+
+/* General */
+* {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 11pt;
+    color: #2B2B2B;
+    background: #F8F8F8
+}
+
+/* Main Window */
+QMainWindow {
+    background: #FFFFFF;
+}
+
+/* Group Box */
+QGroupBox {
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    margin-top: 1ex;
+    padding: 10px;
+}
+QGroupBox::title {
+    padding: 0 3px;
+    color: #2B2B2B;
+    background: #F8F8F8;
+    font-weight: bold;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #E3E3E3;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+QPushButton:hover {
+    background-color: #D6EAF8;
+    border: 1px solid #A0CFFF;
+}
+QPushButton:pressed {
+    background-color: #B4D3FF;
+    border: 1px solid #5A9EFF;
+}
+QPushButton:disabled {
+    background-color: #F0F0F0;
+    color: #A0A0A0;
+    border: 1px solid #E0E0E0;
+}
+
+/* Tool Buttons */
+QToolButton {
+    background-color: #E3E3E3;
+    border: 1px solid #CCCCCC;
+}
+QToolButton {
+    border-radius: 6px;
+    padding: 6px;
+}
+QToolButton:hover {
+    background-color: #D6EAF8;
+}
+QToolButton:pressed {
+    background-color: #B4D3FF;
+}
+QToolButton:disabled {
+    color: #A0A0A0;
+}
+
+/* Line Edits */
+QLineEdit {
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 4px;
+}
+QLineEdit:focus {
+    border: 1px solid #5A9EFF;
+    background: #FFFFFF;
+}
+
+/* Labels */
+QLabel {
+    color: #2B2B2B;
+}
+
+/* ComboBox */
+QComboBox {
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 4px;
+}
+QComboBox:hover {
+    border: 1px solid #A0CFFF;
+}
+QComboBox::drop-down {
+    border-left: 1px solid #CCCCCC;
+    width: 20px;
+    background: #E3E3E3;
+}
+
+/* Checkboxes */
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Radio Buttons */
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* ScrollBars */
+QScrollBar:vertical {
+    background: #F0F0F0;
+    width: 8px;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical {
+    background: #A0A0A0;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #5A9EFF;
+}
+
+QScrollBar:horizontal {
+    background: #F0F0F0;
+    height: 8px;
+    border-radius: 4px;
+}
+QScrollBar::handle:horizontal {
+    background: #A0A0A0;
+    border-radius: 4px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #5A9EFF;
+}
+
+/* Tables */
+QTableWidget, QTableView {
+    background: #FFFFFF
+}
+QHeaderView::section {
+    background: #E3E3E3;
+    padding: 4px;
+    border: 1px solid #CCCCCC;
+}
+
+/* Progress Bar */
+QProgressBar {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    text-align: center;
+    background: #F0F0F0;
+}
+QProgressBar::chunk {
+    background: #5A9EFF;
+    border-radius: 4px;
+}
+
+/* Tooltips */
+QToolTip {
+    background: #FFFFFF;
+    color: #2B2B2B;
+    border: 1px solid #CCCCCC;
+    padding: 4px;
+}

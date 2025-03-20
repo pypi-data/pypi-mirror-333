@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segyrecover"
+version = "0.9.1"  
+description = "A Python tool for digitizing scanned seismic sections and converting them to standard SEGY format."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "Alejandro Pertuz", email = "apertuz@ucm.es"}
+]
+dependencies = [
+    "PySide6>=6.5.0",
+    "matplotlib>=3.7.0",
+    "numpy>=1.22.0",
+    "opencv-python>=4.7.0",
+    "scipy>=1.10.0",
+    "seisio>=1.0.0",
+    "appdirs>=1.4.4",
+    "setuptools>=65.0.0",  # Added setuptools for pkg_resources
+]
+
+[project.scripts]
+segyrecover = "segyrecover.__main__:main"
+
+[tool.setuptools]
+packages = ["segyrecover", "segyrecover.ui", "segyrecover.core", "segyrecover.utils"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"segyrecover" = ["examples/**/*"]
+"segyrecover.ui" = ["theme.qss"]  # Include the theme.qss file
+
+# Include example files that resource_utils.py accesses
+[tool.setuptools.data-files]
+"segyrecover/examples/IMAGES" = ["examples/IMAGES/*"]
+"segyrecover/examples/GEOMETRY" = ["examples/GEOMETRY/*"]
+"segyrecover/examples/PARAMETERS" = ["examples/PARAMETERS/*"]
+
