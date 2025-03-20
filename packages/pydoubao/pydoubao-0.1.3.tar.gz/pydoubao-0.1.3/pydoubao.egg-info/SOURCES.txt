@@ -1,0 +1,7 @@
+README.md
+setup.py
+pydoubao.egg-info/PKG-INFO
+pydoubao.egg-info/SOURCES.txt
+pydoubao.egg-info/dependency_links.txt
+pydoubao.egg-info/requires.txt
+pydoubao.egg-info/top_level.txt
