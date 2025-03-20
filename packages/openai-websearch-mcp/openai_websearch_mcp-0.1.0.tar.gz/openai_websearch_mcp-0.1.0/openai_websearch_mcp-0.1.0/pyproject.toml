@@ -1,0 +1,29 @@
+[project]
+name = "openai-websearch-mcp"
+version = "0.1.0"
+description = "using openai websearch as mcp server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic_extra_types",
+    "pydantic",
+    "mcp",
+    "tzdata",
+]
+
+
+[project.scripts]
+openai-websearch-mcp = "openai_websearch_mcp:main"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pydantic_extra_types",
+    "pydantic",
+    "mcp",
+    "tzdata",
+]
