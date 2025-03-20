@@ -1,0 +1,7 @@
+pydelt/__init__.py,sha256=ZElwKsrX65J5DxAXPcfXbLa9_1NpnDepETJ2ngPLbgk,110
+pydelt/derivatives.py,sha256=4k1CHiazODPtN0jKiDXVC8CQjRy_U8j_8007iStlVnw,6733
+pydelt/tests/test_derivatives.py,sha256=FMtw_C_sQ2mFH4fekkaJnSPRBFnZM2-lJdrnws1go7w,2296
+pydelt-0.1.0.dist-info/METADATA,sha256=lj_jcpLJHC_HENNxvKHCC5dkaZAFCDE3oFQjpCAKZTo,3549
+pydelt-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydelt-0.1.0.dist-info/licenses/LICENSE,sha256=Btzdu2kIoMbdSp6OyCLupB1aRgpTCJ_szMimgEnpkkE,1056
+pydelt-0.1.0.dist-info/RECORD,,
