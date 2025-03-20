@@ -1,0 +1,14 @@
+idiomatch/__init__.py,sha256=ZUkIcjDftgo-4TLoXOg7U2ksxlefIW0hL8hv7bfTIiA,66
+idiomatch/builders.py,sha256=zIrGTt-89B32ZmUu0e47--bKFnL10HbKSG5QGsRmPmY,5711
+idiomatch/cases.py,sha256=oo2tVoKErMZE5EBhWW5IafVzLjYbEoHcsfa7VZMVBaM,1227
+idiomatch/configs.py,sha256=OS5rzMb3EZ_lUEAxo1pFYdiZvPRaZ09YhoKNnogB9E4,183
+idiomatch/idiomatcher.py,sha256=uae7OY4AH9FulNdnn0HxHzj0FWHHYVyRzFilgQkHkwA,4335
+idiomatch/patterns/slop_1.json,sha256=inAx8sI3u4ybhuCbBshF96g5CRX7F73ZfeOiE232auE,2060898
+idiomatch/patterns/slop_2.json,sha256=756K1bL3Z1mCwWApbubLcXRRarp4N1_25P5FltWksRA,2060898
+idiomatch/patterns/slop_3.json,sha256=aIcHCjdJMVSrUTjKCAcdxa9m28GsStEt1sIN1p-K6PI,2060898
+idiomatch/patterns/slop_4.json,sha256=IQGYOS6ZlFZvKBq7kZqUekxPJHsZIFuWlES8nVtxCsw,2060898
+idiomatch/patterns/slop_5.json,sha256=RVRlgU8EGJyHQWel99Pd-ukQwNokVhxSO4zTAC-YAFE,2060898
+idiomatch-0.2.11.dist-info/METADATA,sha256=m8t8cmEV3WyHWuQunx-cmilSu0vBvqWBHfS3AmLoj-4,4501
+idiomatch-0.2.11.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+idiomatch-0.2.11.dist-info/top_level.txt,sha256=DppoSdqAIPcLuRoJeyrHNrT2f7qEGmOJytqdK7H6vPs,10
+idiomatch-0.2.11.dist-info/RECORD,,
