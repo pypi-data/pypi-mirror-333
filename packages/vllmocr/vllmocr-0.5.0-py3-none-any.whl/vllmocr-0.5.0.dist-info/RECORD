@@ -1,0 +1,14 @@
+vllmocr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vllmocr/config.py,sha256=vODz3-G54BO_r_-4DnjfUlnulvkY_DKXCQ2_8VSBOAI,3668
+vllmocr/image_processing.py,sha256=5hWdOb95KfA_bix5T__Yg3-lJ0kaNJCCAziEsf1xS7Q,5078
+vllmocr/llm_interface.py,sha256=8t5rOl-iPwBH3Sm7Mp1r3u3cGp6VJQTKd5COWoDFVg0,9063
+vllmocr/main.py,sha256=lx10vaZ-Sh4doEEGIJZctseYXb61YpVU3fl0hhC8-lA,8059
+vllmocr/prompts.py,sha256=SbvlZw5eDFQGjAEW3g6CW3iRhU8nirdq6RU9RP3f2vI,2988
+vllmocr/utils.py,sha256=AJ-yeAItrwVSO1yMFN271O0WesJT2AJ9RgPlr8YnlWc,1325
+vllmocr/providers/anthropic.py,sha256=-cUxEmc1G9uqb8lQtsoE1YBzN1IuuNlHaRzwNgOZ6qc,3692
+vllmocr/providers/openrouter.py,sha256=lvv38h1O3_0i3fudfCxz-Y5ivnmQHdXILhkxFwiG4bg,1656
+vllmocr-0.5.0.dist-info/METADATA,sha256=spd244_fEEqIPR_X0JD7SQcXj2gmwOJ3VSTeZwFJeVk,5060
+vllmocr-0.5.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+vllmocr-0.5.0.dist-info/entry_points.txt,sha256=xOTUYSEZIdZPFRK3iur1Fc9-FzhelRjm3psYcvl68Uo,46
+vllmocr-0.5.0.dist-info/top_level.txt,sha256=qQGIzRWhcx3flNxk1gpdmM5Vw-Gu4loRT6UUu2v74jg,8
+vllmocr-0.5.0.dist-info/RECORD,,
