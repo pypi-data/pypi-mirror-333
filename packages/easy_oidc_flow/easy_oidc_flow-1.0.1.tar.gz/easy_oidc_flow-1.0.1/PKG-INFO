@@ -1,0 +1,85 @@
+Metadata-Version: 2.2
+Name: easy_oidc_flow
+Version: 1.0.1
+Summary: a Flask wrapper which handles OIDC authentication, authorization, and the OAuth flow for a given Identity Provider.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: blinker>=1.9.0
+Requires-Dist: certifi>=2025.1.31
+Requires-Dist: cffi>=1.17.1
+Requires-Dist: charset-normalizer>=3.4.1
+Requires-Dist: click>=8.1.8
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: cryptography>=44.0.2
+Requires-Dist: flask>=3.1.0
+Requires-Dist: idna>=3.10
+Requires-Dist: itsdangerous>=2.2.0
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: markupsafe>=3.0.2
+Requires-Dist: oauthlib>=3.2.2
+Requires-Dist: pycparser>=2.22
+Requires-Dist: pyjwt>=2.10.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: requests-oauthlib>=2.0.0
+Requires-Dist: urllib3>=2.3.0
+Requires-Dist: werkzeug>=3.1.3
+
+# Easy OIDC Flow
+
+This python library is designed to be an easy drop in which handles OIDC authentication,
+authorization, and the OAuth flow.
+
+## Example Implementation
+
+```python
+from flask import Flask, request
+from easy_oidc_flow import EasyOIDCFlow
+
+app = EasyOIDCFlow(Flask(__name__))
+
+@app.route("/")
+def main():
+  return f"hello {request.user_data["email"]}!"
+
+if __name__ in "__main__":
+  app.run(host="0.0.0.0", port=8000, debug=True)
+```
+
+
+## Quickstart
+
+1) Create a .env file using the .env.template file as a template. Populate with your OAuth Client details (see below)
+
+2) Run the example server implementation with the following:
+
+```bash
+
+uv run --env-file=.env .\example_server.py
+```
+
+3) Navigate to `http://localhost:8000/`
+4) Follow through the OAuth flow
+5) Congrats! You are now successfully authorized.
+
+## IDP Configuration
+
+### Google Cloud Platform
+0) Create a GCP Project
+1) Navigate to https://console.cloud.google.com/auth/clients/
+2) Create a Web Application OAuth Client ID
+3) Download the OAuth client id .json file
+4) Copy .env to .env.template and fill out the client id and client secret from the downloaded OAuth .json file
+5) Delete the .json file from your system
+
+![Google Cloud Platform Identity Platform Client ID creation](gcp_oauth_client_id.png)
+
+## Additional Details
+This Flask context wrapper overrides the following REST routes:
+`/login`
+`/callback`
+
+So make sure that your flask app doesn't define these routes, or an error will be thrown.
+
+## References
+
+https://developers.google.com/identity/openid-connect/openid-connect#discovery
