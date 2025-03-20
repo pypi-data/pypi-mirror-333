@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+session_conductor_client/__init__.py
+session_conductor_client/client.py
+session_conductor_client.egg-info/PKG-INFO
+session_conductor_client.egg-info/SOURCES.txt
+session_conductor_client.egg-info/dependency_links.txt
+session_conductor_client.egg-info/requires.txt
+session_conductor_client.egg-info/top_level.txt
