@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: image-dataset-converter-video
+Version: 0.0.3
+Summary: Video support for the image-dataset-converter library.
+Home-page: https://github.com/waikato-datamining/image-dataset-converter-video
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+License-File: LICENSE
+
+Video support for the image-dataset-converter library.
+
+
+Changelog
+=========
+
+0.0.3 (2025-03-14)
+------------------
+
+- added support for placeholders to: `from-video-file`, `calc-frame-changes`, and `to-video-file`
+
+
+0.0.2 (2025-03-12)
+------------------
+
+- switched to underscores in project name
+- `from-video-file` can process multiple files now and the `-f/--fps_factor` option
+  can override the `-n/--nth_frame` option by calculation the nth frame based on
+  the frame-rate of the video
+
+
+0.0.1 (2024-05-06)
+------------------
+
+- initial release
+
