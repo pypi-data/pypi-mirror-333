@@ -1,0 +1,7 @@
+README.md
+setup.py
+kingpepe_sdk.egg-info/PKG-INFO
+kingpepe_sdk.egg-info/SOURCES.txt
+kingpepe_sdk.egg-info/dependency_links.txt
+kingpepe_sdk.egg-info/requires.txt
+kingpepe_sdk.egg-info/top_level.txt
