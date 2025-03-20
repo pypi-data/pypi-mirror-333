@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: tetkit
+Version: 0.1.6
+Summary: Batteries-included application framework built on Pyramid and tet
+Home-page: https://github.com/leadingslash/tetkit
+License: MIT
+Keywords: web,wsgi,pyramid,tet
+Author: Hieu Nguyen
+Author-email: hieu@leadingslash.com
+Requires-Python: >=3.9,<3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: alembic (==1.8.1)
+Requires-Dist: fire (==0.4.0)
+Requires-Dist: psycopg2-binary (==2.9.3)
+Requires-Dist: pyramid (==2.0)
+Requires-Dist: pyramid-retry (==2.1.1)
+Requires-Dist: pyramid-tm (==2.5)
+Requires-Dist: sentry-sdk (==1.7.2)
+Requires-Dist: sqlalchemy (==1.4.39)
+Requires-Dist: tet (==0.4.0.dev1)
+Requires-Dist: transaction (==3.0.1)
+Requires-Dist: waitress (==3.0.2)
+Requires-Dist: webtest (==2.0.35)
+Requires-Dist: zope-sqlalchemy (==1.6)
+Project-URL: Source, https://github.com/leadingslash/tetkit
+Description-Content-Type: text/markdown
+
+# Tetkit
+
+Batteries-included application framework built on [Pyramid](https://trypyramid.com/) and [tet](https://github.com/tetframework/tet)
+
