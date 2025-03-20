@@ -1,0 +1,13 @@
+m3d/__init__.py,sha256=k4HYNsyGsmKBIF2CR25wfPfVKvoFLHQ0MS2bEOsSzQ0,319
+m3d/common.py,sha256=4ddm6f_03A91eg08MC-CeOXvACPGJQnDpSzMA4DxmIY,176
+m3d/dual_quaternion.py,sha256=6gZT9VuuiBerey--i1gd0G994xcFNol4pJBCIWMscoU,2539
+m3d/orientation.py,sha256=L_kXAPNRjcXY7YW5jvN-5zgOQANj1seSDy_vaa96yQ0,14996
+m3d/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+m3d/quaternion.py,sha256=cDMQaxgfN9ePButGPhTyIw2pVRpx1-OefnfIXTWphhA,2464
+m3d/transform.py,sha256=igw81Bs04B0mMcvbWp13q3wjA6lb5_8PnxQ7O_OQYp0,9057
+m3d/vector.py,sha256=IN2BO65c0oxAcFAGHhFPUn1XEDL4nyTj00xs5BxD8OI,6436
+m3d-0.5.13.dist-info/LICENSE,sha256=pKHZZ-2_npvZQ2g7-cuMYcUPmrXzbjnpiPD6MkBQcgU,1063
+m3d-0.5.13.dist-info/METADATA,sha256=V2Z1Hnh5cIiDt9x0vUELRzchb0I9Nsdo3DO62mjdeB8,925
+m3d-0.5.13.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+m3d-0.5.13.dist-info/top_level.txt,sha256=AIHbOYyVcUkj08TWckZ-cizUuF9HGkem-JSQH0QXM8E,4
+m3d-0.5.13.dist-info/RECORD,,
