@@ -1,0 +1,15 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: sleuthkit
+Description: An open source forensic toolkit
+URL: http://www.sleuthkit.org/sleuthkit
+Version: 4.13.0
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -ltsk
+Libs.private: 
+Requires:  
+Requires.private:  
