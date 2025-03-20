@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mergerz/__init__.py
+mergerz/module.pyd
+mergerz.egg-info/PKG-INFO
+mergerz.egg-info/SOURCES.txt
+mergerz.egg-info/dependency_links.txt
+mergerz.egg-info/requires.txt
+mergerz.egg-info/top_level.txt
