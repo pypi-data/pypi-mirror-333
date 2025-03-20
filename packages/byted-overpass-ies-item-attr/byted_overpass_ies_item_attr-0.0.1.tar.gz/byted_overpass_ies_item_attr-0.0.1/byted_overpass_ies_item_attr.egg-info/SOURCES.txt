@@ -1,0 +1,6 @@
+setup.py
+byted_overpass_ies_item_attr/__init__.py
+byted_overpass_ies_item_attr.egg-info/PKG-INFO
+byted_overpass_ies_item_attr.egg-info/SOURCES.txt
+byted_overpass_ies_item_attr.egg-info/dependency_links.txt
+byted_overpass_ies_item_attr.egg-info/top_level.txt
