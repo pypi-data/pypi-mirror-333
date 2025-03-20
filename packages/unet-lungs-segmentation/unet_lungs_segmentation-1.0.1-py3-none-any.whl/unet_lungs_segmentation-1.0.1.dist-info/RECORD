@@ -1,0 +1,13 @@
+UNet_lungs_segmentation/__init__.py,sha256=hp5nvWuiTqi5Oe18sT-XdgNEwMx_tlWTXobNeckNlvg,39
+UNet_lungs_segmentation/cli.py,sha256=VU9fN3IVilea3fG82U9DL0rKEY98G7LTkA9rZ0OAGKk,2134
+UNet_lungs_segmentation/lungs_predict.py,sha256=CEOcTU9oI3_qN-AwPCSdC9Qcd5rp_Zn18rDIl1ya0UI,1748
+UNet_lungs_segmentation/model.py,sha256=R5xwUoJHv8FFYM388gjFuCERhEWcv040gBvLCBfbjW4,2263
+UNet_lungs_segmentation/napari.yaml,sha256=xzYnohQdZVG_QxPsCJ5SjpxbqTlnvkWtQ7YCwbP94Co,479
+UNet_lungs_segmentation/utils.py,sha256=loHF0eUjcBdKNOQ4sf3E9HBs6OnSrUaneTu0GdJcz8U,315
+UNet_lungs_segmentation/napari_plugin/__init__.py,sha256=BG06oTO_FAl4wYD5_b1Xl70qN13p7K3US67tw1MkYIA,43
+UNet_lungs_segmentation/napari_plugin/plugin.py,sha256=nqa61FIq-IZBk9wyyIzo9BUkTIRSklIugY0qEgRXM24,2884
+unet_lungs_segmentation-1.0.1.dist-info/LICENSE,sha256=p9wmdNf96UDdAq9LEwMsP669a6Lhhrc5ovjn0zL2pQs,1514
+unet_lungs_segmentation-1.0.1.dist-info/METADATA,sha256=8llLwU5YsNxJkLuEbFd39eqSu37S94SPD5TzYIofA_I,4870
+unet_lungs_segmentation-1.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+unet_lungs_segmentation-1.0.1.dist-info/top_level.txt,sha256=JM_RtvZw4DjcQsvw7i_GVVkXb41tpJznbMmdmcPyln0,24
+unet_lungs_segmentation-1.0.1.dist-info/RECORD,,
