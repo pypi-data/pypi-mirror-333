@@ -1,0 +1,10 @@
+MapAvro/__init__.py,sha256=IsDdu4nq7rAvCWXPHNqIzpM0PHh97DZlIShFpUsn1_0,183
+MapAvro/avroConverter.py,sha256=xUqmXu6XqZeWu2cozyBknMHBQVlc4o7u89SKRJkrnnI,2290
+MapAvro/utils/__init__.py,sha256=BJrWeOB2P5SYP4Jj-vn69Tc_vJkvC6WcGbR56QHqim0,112
+MapAvro/utils/maps.py,sha256=S44YuexIYGYZHwJX_itAB1xsMbrQKvj2icGa_Pkg2Mw,741953
+MapAvro/utils/utils.py,sha256=ebrpJCopLvXp0sauq4TrV2Qr7zd4RsWmB3TFU3AyWmY,1812
+mapavro-0.1.6.dist-info/LICENSE,sha256=Vwng5F0VYUuoctrvGrb_PuHoZBpZIwZpJjJicWVhd_A,1064
+mapavro-0.1.6.dist-info/METADATA,sha256=5Sscw5v5ERfu-sWQNaZi3z9R5CYNgVPzV74O37wB5SI,3785
+mapavro-0.1.6.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mapavro-0.1.6.dist-info/top_level.txt,sha256=G_WwGWuKRd1l0ObZOJnOS1vHqWLnVZ3KZ5jUbOGRg1M,8
+mapavro-0.1.6.dist-info/RECORD,,
