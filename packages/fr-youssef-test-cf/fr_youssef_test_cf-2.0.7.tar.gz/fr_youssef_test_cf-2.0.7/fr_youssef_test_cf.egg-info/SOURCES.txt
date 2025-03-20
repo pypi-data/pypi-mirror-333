@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+fr_youssef_test_cf/__init__.py
+fr_youssef_test_cf.egg-info/PKG-INFO
+fr_youssef_test_cf.egg-info/SOURCES.txt
+fr_youssef_test_cf.egg-info/dependency_links.txt
+fr_youssef_test_cf.egg-info/requires.txt
+fr_youssef_test_cf.egg-info/top_level.txt
+fr_youssef_test_cf/plugins/__init__.py
