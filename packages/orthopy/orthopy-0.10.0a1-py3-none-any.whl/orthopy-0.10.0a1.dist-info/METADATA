@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: orthopy
+Version: 0.10.0a1
+Summary: Orthogonal polynomials for Python
+Author-email: Nico =?utf-8?q?Schl=C3=B6mer?= <nico.schloemer@gmail.com>
+Project-URL: Homepage, https://github.com/sigma-py/orthopy
+Project-URL: Issues, https://github.com/sigma-py/orthopy/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: stonefish-license-manager>=0.5.17
+Requires-Dist: x22>=0.1.7
+Requires-Dist: numpy
+Requires-Dist: sympy
+Requires-Dist: matplotlib
+Requires-Dist: matplotx
+Provides-Extra: all
+Requires-Dist: meshio; extra == "all"
+Requires-Dist: meshzoo; extra == "all"
+
