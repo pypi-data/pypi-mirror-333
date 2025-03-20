@@ -1,0 +1,2 @@
+alith>=0.4.2
+coinbase-agentkit>=0.1.6

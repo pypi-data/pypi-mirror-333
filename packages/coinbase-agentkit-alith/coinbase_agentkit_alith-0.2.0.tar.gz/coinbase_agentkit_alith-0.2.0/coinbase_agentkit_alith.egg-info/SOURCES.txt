@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+tool.py
+coinbase_agentkit_alith.egg-info/PKG-INFO
+coinbase_agentkit_alith.egg-info/SOURCES.txt
+coinbase_agentkit_alith.egg-info/dependency_links.txt
+coinbase_agentkit_alith.egg-info/requires.txt
+coinbase_agentkit_alith.egg-info/top_level.txt
