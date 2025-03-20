@@ -1,0 +1,13 @@
+[console_scripts]
+davai-build = davai.cli.scripts.build:main
+davai-ciboulai_init = davai.cli.scripts.ciboulai_init:main
+davai-config = davai.cli.scripts.config:main
+davai-cwd_is_xp = davai.cli.scripts.cwd_is_xp:main
+davai-get_xp_path = davai.cli.scripts.get_xp_path:main
+davai-new_xp = davai.cli.scripts.new_xp:main
+davai-new_xp_from_bundle = davai.cli.scripts.new_xp_from_bundle:main
+davai-run_tests = davai.cli.scripts.run_tests:main
+davai-run_xp = davai.cli.scripts.run_xp:main
+davai-shelf = davai.cli.scripts.shelf:main
+davai-tests_version = davai.cli.scripts.tests_version:main
+davai-xp_status = davai.cli.scripts.xp_status:main
