@@ -1,0 +1,11 @@
+livisi/__init__.py,sha256=WfjrI1lKksaRhrL8vgN7rOWmmHvA1cxVcXrmdd3TSAc,220
+livisi/aiolivisi.py,sha256=kOqeNa-dg3d5lApd-_wzbw43dkD5UjPcf7m_QvQAHeg,9539
+livisi/const.py,sha256=1JaKhrRSwevc8mWwiTONEITVFJEOGjysDvUHTazF3T0,1088
+livisi/errors.py,sha256=ys6cS5yNGXPmJbU9BtUBuhlWqaKkcGSsnie8HMVnvDU,540
+livisi/livisi_event.py,sha256=Z3VN1nW737O1xMt1yj62lC0KTiiXFIlRPEog33IsJpw,456
+livisi/websocket.py,sha256=YTs-Eok303u01FFEWUeYLoa6i9QpXE0rK0f3eTwsekQ,4483
+livisi-0.0.25.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+livisi-0.0.25.dist-info/METADATA,sha256=Kxt3hnQmzgbuQkzFl0hvr8-k7iVEN6uAjZ7O8FFIqd0,889
+livisi-0.0.25.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+livisi-0.0.25.dist-info/top_level.txt,sha256=ctiU5MMpBSwoQR7mJWIuyB1ND1_g004Xa3vNmMsSiCs,7
+livisi-0.0.25.dist-info/RECORD,,
