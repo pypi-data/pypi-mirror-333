@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: GeospatialPackage
+Version: 0.0.1
+Summary: Geospatial package for course
+Author-email: Alex McCorkel <amccorketutoring@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/amccorketutoring/GeospatialPackage
+Keywords: GeospatialPackage
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: GeospatialPackage[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+
+# GeospatialPackage
+
+
+[![image](https://img.shields.io/pypi/v/GeospatialPackage.svg)](https://pypi.python.org/pypi/GeospatialPackage)
+[![image](https://img.shields.io/conda/vn/conda-forge/GeospatialPackage.svg)](https://anaconda.org/conda-forge/GeospatialPackage)
+
+
+**Geospatial package for course**
+
+
+-   Free software: MIT License
+-   Documentation: https://amccorketutoring.github.io/GeospatialPackage
+    
+
+## Features
+
+-   TODO

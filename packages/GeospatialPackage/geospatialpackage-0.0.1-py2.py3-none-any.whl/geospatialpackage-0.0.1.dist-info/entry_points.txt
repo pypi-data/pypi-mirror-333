@@ -1,0 +1,2 @@
+[console_scripts]
+geospatialpackage = geospatialpackage.cli:main
