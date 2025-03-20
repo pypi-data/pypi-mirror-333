@@ -1,0 +1,10 @@
+lirix/DiceAgent.py,sha256=Y5apSCkIXjPx2XmvEa6FjJkJiekDRtJnDtcgtvzmUy4,3202
+lirix/Wiki_Agent.py,sha256=nmdjqzG-jAbhGlQwx2oZHX2K3lKCI7rV6-8OD6I2CgI,5610
+lirix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lirix/agent_class.py,sha256=7VReicsIBD1A2jqX9ixGd99Dbp0k3eUTCx-bcOUhlB4,645
+lirix/load_api_key.py,sha256=XlKBrIpmAfxORPRqH72kv7YlrDzNAzIMe8s53w3O2vg,608
+lirix/searchAgent.py,sha256=vHTqoRuPlMYVJXu50IzGa-5kJ6W4Klsdv8ZUQf1T_Tc,6561
+lirix_ai-0.0.1.dist-info/METADATA,sha256=tNrR94SZHUA7i-eWV3IReXKDCtJfDxCSWTEtg7cbzuI,511
+lirix_ai-0.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+lirix_ai-0.0.1.dist-info/top_level.txt,sha256=6Mk61xmlEkmgjLa5n3eM1SZup094acvKarIDc18eqLM,6
+lirix_ai-0.0.1.dist-info/RECORD,,
