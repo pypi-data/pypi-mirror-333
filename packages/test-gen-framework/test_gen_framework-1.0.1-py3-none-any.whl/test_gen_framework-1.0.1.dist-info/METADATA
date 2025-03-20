@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: test_gen_framework
+Version: 1.0.1
+Summary: Test Generation Framework
+License: MIT
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pytest
+Requires-Dist: PyYAML
+Requires-Dist: gitpython
+Requires-Dist: pygithub
