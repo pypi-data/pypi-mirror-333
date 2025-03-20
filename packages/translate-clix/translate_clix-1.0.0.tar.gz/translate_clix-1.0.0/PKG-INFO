@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: translate-clix
+Version: 1.0.0
+Summary: CLI interface for DeepLX/DeepL.
+Author-Email: Tadeas Fort <business@tadeasfort.com>
+License: GPL-3.0
+Requires-Python: >=3.8
+Requires-Dist: typer>=0.15.2
+Requires-Dist: prompt-toolkit>=3.0.50
+Requires-Dist: pyaml>=25.1.0
+Requires-Dist: clipboard>=0.0.4
+Requires-Dist: pycurl>=7.45.6
+Description-Content-Type: text/markdown
+
+# translate-clix
+
+Describe your project here.
+* License: GPL-3.0
