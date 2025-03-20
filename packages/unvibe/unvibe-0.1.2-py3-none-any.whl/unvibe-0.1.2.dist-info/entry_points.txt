@@ -1,0 +1,4 @@
+[console_scripts]
+unvibe=unvibe.__main__:parse_args_and_run_main
+unvibe-server=unvibe.server:__main__
+
