@@ -1,0 +1,5 @@
+[console_scripts]
+snowpack=snowpack_stack.cli:run_cli
+snowpack-bruin-sql=snowpack_stack.cli.bruin.sql_generator:SqlGeneratorCommand.run
+snowpack-bruin-yaml=snowpack_stack.cli.bruin.yaml_generator:YamlGeneratorCommand.run
+
