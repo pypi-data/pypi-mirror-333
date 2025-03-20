@@ -1,0 +1,6 @@
+setup.py
+byted_httprunner/__init__.py
+byted_httprunner.egg-info/PKG-INFO
+byted_httprunner.egg-info/SOURCES.txt
+byted_httprunner.egg-info/dependency_links.txt
+byted_httprunner.egg-info/top_level.txt
