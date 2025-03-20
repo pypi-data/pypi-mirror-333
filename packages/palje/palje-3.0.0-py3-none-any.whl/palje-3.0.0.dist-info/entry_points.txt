@@ -1,0 +1,4 @@
+[console_scripts]
+palje = palje.cli2:main
+palje-gui = palje.gui.gui:main
+palje-old = palje.cli:main
