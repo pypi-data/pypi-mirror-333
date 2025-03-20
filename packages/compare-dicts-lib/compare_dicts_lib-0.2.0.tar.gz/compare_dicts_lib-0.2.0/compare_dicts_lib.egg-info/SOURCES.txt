@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+compare_dicts_lib/__init__.py
+compare_dicts_lib/compare_dicts.py
+compare_dicts_lib.egg-info/PKG-INFO
+compare_dicts_lib.egg-info/SOURCES.txt
+compare_dicts_lib.egg-info/dependency_links.txt
+compare_dicts_lib.egg-info/top_level.txt
+tests/test_compare_dicts.py
