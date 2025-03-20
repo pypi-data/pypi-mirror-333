@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blender_mcp_vxai"
+version = "0.1.0"
+description = "Blender integration through the Model Context Protocol"
+readme = "README.md"
+authors = [
+    {name = "Chirag Awale", email = "chiragawale@example.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "Pillow",
+    "mcp>=1.3.0",
+]
+
+[project.scripts]
+blender-mcp-vxai = "blender_mcp_vxai.server.server:main"
+
+[project.urls]
+"Homepage" = "https://github.com/chiragawale/blender-mcp-vxai"
+"Bug Tracker" = "https://github.com/chiragawale/blender-mcp-vxai/issues" 

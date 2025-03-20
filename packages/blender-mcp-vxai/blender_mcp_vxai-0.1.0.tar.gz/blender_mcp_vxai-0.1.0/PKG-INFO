@@ -1,0 +1,126 @@
+Metadata-Version: 2.2
+Name: blender_mcp_vxai
+Version: 0.1.0
+Summary: Blender integration through the Model Context Protocol
+Author-email: Chirag Awale <chiragawale@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/chiragawale/blender-mcp-vxai
+Project-URL: Bug Tracker, https://github.com/chiragawale/blender-mcp-vxai/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow
+Requires-Dist: mcp>=1.3.0
+
+# Blender MCP VxAI - Model Context Protocol for Blender
+
+A server that implements the Model Context Protocol (MCP) for integrating Blender 3D with AI assistants like those in Cursor IDE.
+
+## Features
+
+- Control Blender through natural language in Cursor IDE
+- Create, modify, and delete 3D objects
+- Apply materials and colors
+- Create animations
+- Render scenes
+- Access Blender's Python API directly
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Blender 3.x or higher
+- Cursor IDE (for integration)
+
+### Standard Installation
+
+```bash
+pip install blender_mcp_vxai
+```
+
+### Development Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chiragawale/blender-mcp-vxai.git
+   cd blender-mcp-vxai
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -e .
+   ```
+
+## Setup in Blender
+
+1. Open Blender
+2. Install the Blender MCP addon:
+   - Go to Edit > Preferences > Add-ons
+   - Click "Install" and select the `blender_mcp_vxai/addon/blender_mcp_addon.py` file
+   - Enable the addon by checking the box
+
+## Running the Server
+
+Start the server by running:
+
+```bash
+blender-mcp-vxai
+```
+
+This will start an MCP server on localhost port 9876. The server will connect to Blender using a socket connection.
+
+## Integration with Cursor IDE
+
+### Adding the MCP Server to Cursor
+
+1. Open Cursor IDE
+2. Go to Settings > Features > MCP
+3. Click on "+ Add New MCP Server"
+4. Fill out the form:
+   - **Name**: BlenderMCP-VxAI
+   - **Type**: stdio
+   - **Command**: `blender-mcp-vxai` (or the path to the Python script if installed in development mode)
+5. Click "Add"
+
+Once added, you can use the Agent in Cursor's Composer feature to interact with Blender.
+
+### Example Prompts
+
+- "Create a blue cube at position [0, 1, 0]"
+- "Create a sphere with a red material"
+- "Move the cube to position [2, 0, 0]"
+- "Render the scene at 800x600"
+
+## Documentation
+
+### Available Tools
+
+The MCP server provides various tools for interacting with Blender:
+
+- `get_scene_info`: Get detailed information about the Blender scene
+- `create_primitive`: Create basic 3D primitives (cube, sphere, etc.)
+- `modify_object`: Change object properties (location, rotation, scale, color)
+- `delete_object`: Remove objects from the scene
+- `set_material`: Apply materials to objects
+- `render_scene`: Generate renders of the scene
+- `execute_blender_code`: Run arbitrary Python code in Blender
+
+## Troubleshooting
+
+### Common Issues
+
+- **Connection refused**: Make sure Blender is running and the addon is installed and enabled
+- **Tool not showing up in Cursor**: Try refreshing the tools list in the MCP settings
+- **Commands not working**: Check the Blender console for error messages
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 

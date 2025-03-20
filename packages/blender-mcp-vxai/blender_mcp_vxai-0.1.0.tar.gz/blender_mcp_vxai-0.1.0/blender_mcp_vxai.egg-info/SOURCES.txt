@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+blender_mcp_vxai/__init__.py
+blender_mcp_vxai.egg-info/PKG-INFO
+blender_mcp_vxai.egg-info/SOURCES.txt
+blender_mcp_vxai.egg-info/dependency_links.txt
+blender_mcp_vxai.egg-info/entry_points.txt
+blender_mcp_vxai.egg-info/requires.txt
+blender_mcp_vxai.egg-info/top_level.txt
+blender_mcp_vxai/addon/blender_mcp_addon.py
+blender_mcp_vxai/server/__init__.py
+blender_mcp_vxai/server/server.py
