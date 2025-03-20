@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    {name = "Arnout", email = "bastien@prune.sh"},
+]
+requires-python = "<4.0,>=3.12"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["norminette", "django", "code-quality"]
+urls = {Homepage = "https://gitlab.com/bastien_arnout/norminette"}
+name = "norminette_prune"
+version = "0.1.0"
+description = "Outil de vérification des normes de code pour l'entreprise"
+readme = "README.md"
+
+[project.scripts]
+norminette_prune = "norminette_prune.main:main"
