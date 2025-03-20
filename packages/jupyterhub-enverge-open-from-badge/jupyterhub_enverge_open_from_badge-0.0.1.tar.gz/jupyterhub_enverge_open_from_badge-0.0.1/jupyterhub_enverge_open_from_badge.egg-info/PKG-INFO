@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: jupyterhub-enverge-open-from-badge
+Version: 0.0.1
+Summary: JupyterHub Enverge Open From Badge
+Home-page: https://github.com/Enverge-Labs/enverge_open_from_badge
+Author: Tudor M
+Author-email: tudor@enverge.ai
+License: 3 Clause BSD
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jupyterhub>=4.1.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Enverge Placeholder
+
+For development run:
+```bash
+cd /path/to/enverge_placeholder
+jlpm install:extension
+pip install -e .
+jupyter labextension develop . --overwrite
+jlpm run watch
+```
