@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: gnukek-cli
+Version: 1.0.0a2
+Summary: Key Encryption Key CLI
+License: GPL-3.0-only
+Author: SweetBubaleXXX
+Author-email: 70811772+SweetBubaleXXX@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: s3
+Requires-Dist: boto3 (>=1.36.25,<2.0.0) ; extra == "s3"
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: dependency-injector (>=4.45.0,<5.0.0)
+Requires-Dist: gnukek (==2.0.0a3)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Description-Content-Type: text/markdown
+
+# KEK-cli
+
