@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/simplevent/__init__.py
+src/simplevent.egg-info/PKG-INFO
+src/simplevent.egg-info/SOURCES.txt
+src/simplevent.egg-info/dependency_links.txt
+src/simplevent.egg-info/top_level.txt
