@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: tutti
+Version: 1.0.0
+Summary: Distributed Synchronization Primitives
+Author-email: Hamilton Kibbe <ham@hamiltonkib.be>, Tylor Dodge <tylor.dodge1@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: ~=3.10
+Requires-Dist: redis<5,>=4.2
+Provides-Extra: asyncio
