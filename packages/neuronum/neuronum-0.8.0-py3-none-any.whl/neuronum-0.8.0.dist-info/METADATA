@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: neuronum
+Version: 0.8.0
+Summary: A high-level coding library to build & automate economic data streams - The Neuronum Team
+Author: Neuronum Cybernetics
+Author-email: welcome@neuronum.net
+Requires-Python: >=3.6
+Requires-Dist: requests
+
