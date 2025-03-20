@@ -1,0 +1,73 @@
+Metadata-Version: 2.2
+Name: pygdatax
+Version: 0.2.12
+Summary: Python libray for Small Angle Neutron (SANS) and X-ray (SAXS) scattering data treatment and visualization.
+Author-email: Alexis Chenneviere <alexis.chenneviere@cea.fr>
+Keywords: SAXS,SANS,XRR,data reduction
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: silx
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: pyFAI
+Requires-Dist: nexusformat
+Requires-Dist: openpyxl
+Requires-Dist: pyyaml
+Requires-Dist: ipython
+Requires-Dist: lmfit
+Provides-Extra: full
+Requires-Dist: PyQt5; extra == "full"
+
+# PYGDATAX
+Python libray for Small Angle Neutron (SANS) and X-ray (SAXS) scattering data treatment and visualization.
+This package can be used for the following instruments : 
+ - Xeuss 2.0 SAXS instrument
+ - SANS_LLB instrument installed at the Paul Scherrer Institut (PSI)
+ - Xeuss 2.0 in reflectivity mode
+## Installation
+To install pygdatax, run:
+```
+pip install pygdatax
+```
+Depending on your OS and python distribution, you may need to install PyQt5 and Ipython
+```
+pip install pyqt5 Ipython
+```
+## Upgrade Version
+pygdatax package is up to now often upgraded. In order to get the last version type the following command in your
+ terminal or acaconda prompt
+```
+pip install --upgrade pygdatax
+```
+## Launch Graphical User Interface for Xeuss data treatment and visualization
+To launch the GUI, run in you terminal (or conda prompt):
+````
+pygdatax_gui
+````
+This GUI can also be used to visualize nexus files from SANS_LLB.
+
+![alt text](pygdatax_screenshot_2.png)
+
+
+
+## Run Graphical User Interface for scan log file visualization
+From version 0.1.8, a new application  is available allowing to preview and fit the scan logfile of the Xeuss spectrometer
+
+To launch it , run in your terminal the command:
+````
+pygdatax_log
+````
+![alt text](pygdatax_log_screenshot.png)
+
+The two curves plotted per scans corresponds to the **roi0** (integration over the instrument's roi) signal and **ct0** signal (full detector sum)
+
+To fit one curve, you can use the fit widget present within the toolbar. The fit will be performed on the current 
+plot window which means that one can fit a speific part of the curve by zooming on it.
+
+## Run Gaphical User Interface for X-Ray reflectivity treatment and visualzation
+from version 2.0.0, a new application allows to treat and  vizualize X ray reflectiviy measurements performed on the Xeuss 2.0
+apparatus. The command to run it is:
+````
+pygdatax_rx
+````
