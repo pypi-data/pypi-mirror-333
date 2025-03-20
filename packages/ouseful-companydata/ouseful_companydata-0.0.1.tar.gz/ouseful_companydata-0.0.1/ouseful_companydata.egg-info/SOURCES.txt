@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ouseful_companydata/__init__.py
+ouseful_companydata/companies_house.py
+ouseful_companydata.egg-info/PKG-INFO
+ouseful_companydata.egg-info/SOURCES.txt
+ouseful_companydata.egg-info/dependency_links.txt
+ouseful_companydata.egg-info/requires.txt
+ouseful_companydata.egg-info/top_level.txt

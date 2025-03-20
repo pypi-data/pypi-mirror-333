@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: ouseful_companydata
+Version: 0.0.1
+Summary: ouseful datasupply package for working with Companies House data and creating co-director graphs.
+Home-page: https://github.com/ouseful-datasupply/companydata
+Author: Tony Hirst
+Author-email: tony.hirst@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: networkx
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: requests-cache
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# companydata
+Company data tools
