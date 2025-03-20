@@ -1,0 +1,16 @@
+ferpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ferpy/auxiliary/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ferpy/auxiliary/changelog_entry.py,sha256=9w2mJgdt0RVccqAlFxWS_Nxzru30wgLfU9kZI_E7xUA,817
+ferpy/auxiliary/correlations.py,sha256=tdqNHjEKGnL2xXlYunMKgMoIRll-tPXLrLIgUv5BWqU,656
+ferpy/auxiliary/coverage.py,sha256=i8RlP2mZFDsUYE_8sdoxA0jM94Ms3bZ3xK2xRnuXk3o,683
+ferpy/auxiliary/probability_density_function.py,sha256=PvRH3C-QW5RyP_dQTVRhaFRgAGpMkGiYarDZ-gWQJcQ,561
+ferpy/auxiliary/state.py,sha256=MYWWfIOGRg2i_NPWxlnTTW675_vNE945VDAjbje1HTY,1172
+ferpy/main/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ferpy/main/measurement.py,sha256=r1RKiutjqpwCohgDpfxNTWSl-_EiQ6jp9Xi_NaCzM-Y,3270
+ferpy/main/quantity_values.py,sha256=MZiwxuCL5Q0jrIg6SZjtjCapBPKtGpTx2fvb58dvGOk,4558
+ferpy/main/source.py,sha256=U9RxHyiyQjKJQ6tVILv5HX1Pq8Np_4tZseqXS7zWvVg,1884
+ferpy-0.1.13.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ferpy-0.1.13.dist-info/METADATA,sha256=DoqIj8LHG0GFgob_UzUPqz4ligvkyVCVcjWVH-Xy1hQ,1990
+ferpy-0.1.13.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+ferpy-0.1.13.dist-info/top_level.txt,sha256=q3mjCFGO4B8sryHqj77SocAQA6Zh0pYTMx3G9HAca3w,6
+ferpy-0.1.13.dist-info/RECORD,,
