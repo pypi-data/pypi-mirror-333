@@ -1,0 +1,2 @@
+[console_scripts]
+geogif = geogif.cli:main
