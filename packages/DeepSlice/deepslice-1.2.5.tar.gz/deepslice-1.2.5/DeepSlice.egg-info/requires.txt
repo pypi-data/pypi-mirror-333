@@ -1,0 +1,11 @@
+numpy
+scikit-learn
+scikit-image
+tensorflow<=2.15.0
+h5py
+typing
+pandas
+requests
+protobuf
+lxml
+urllib3==1.26.6
