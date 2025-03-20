@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyhun"
+version = "1.1.0"
+description = "A Python package to generate Hugarian things"
+authors = [{name = "Pőcze Bence", email = "bence@pocze.ch"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
+
+[tool.setuptools]
+py-modules = ["pyhun"]
+
+[tool.setuptools.package-dir]
+"" = "src"
