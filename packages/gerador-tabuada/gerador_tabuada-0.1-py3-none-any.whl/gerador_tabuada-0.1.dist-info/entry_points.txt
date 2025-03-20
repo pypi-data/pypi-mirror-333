@@ -1,0 +1,2 @@
+[console_scripts]
+gerador-tabuada = gerador_tabuada.tabuada:main
