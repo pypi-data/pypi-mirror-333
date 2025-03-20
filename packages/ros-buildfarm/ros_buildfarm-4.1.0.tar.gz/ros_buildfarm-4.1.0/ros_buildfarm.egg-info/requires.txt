@@ -1,0 +1,15 @@
+empy
+PyYAML
+catkin_pkg>=0.2.6
+jenkinsapi
+rosdistro>=1.0.0
+vcstool>=0.1.37
+
+[test]
+flake8>=3.7
+flake8-class-newline
+flake8_docstrings
+flake8-import-order
+pep8
+pyflakes
+pytest
