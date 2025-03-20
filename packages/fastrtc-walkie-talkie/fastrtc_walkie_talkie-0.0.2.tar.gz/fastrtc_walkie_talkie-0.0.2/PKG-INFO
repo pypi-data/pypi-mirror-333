@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: fastrtc_walkie_talkie
+Version: 0.0.2
+Summary: FastRTC Turn Detection Algorithm that works like a walkie talkie. Finish your turn when you say "over".
+Project-URL: Documentation, https://github.com/Freddy Boulton/fastrtc-walkie-talkie#readme
+Project-URL: Issues, https://github.com/Freddy Boulton/fastrtc-walkie-talkie/issues
+Project-URL: Source, https://github.com/Freddy Boulton/fastrtc-walkie-talkie
+Author-email: Freddy Boulton <not-my-email@domain.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: fastrtc[vad]>=0.0.15
+Description-Content-Type: text/markdown
+
+# ReplyOnOver FastRTC
+
+[![PyPI - Version](https://img.shields.io/pypi/v/fastrtc-walkie-talkie.svg)](https://pypi.org/project/fastrtc-walkie-talkie)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fastrtc-walkie-talkie.svg)](https://pypi.org/project/fastrtc-walkie-talkie)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install fastrtc-walkie-talkie
+```
+
+## Usage
+
+```python
+from fastrtc_walkie_talkie import WalkieTalkie
+from fastrtc import Stream
+
+
+def echo(audio: tuple[int, np.ndarray]):
+    """Echo the audio back to the user after they say a sentence ending with "over"."""
+    yield audio
+
+
+stream = Stream(
+    handler=WalkieTalkie(echo),
+    modality="audio",
+    mode="send-receive",
+    ui_args={"title": "Walkie Talkie Turn Taking Algorithm",
+            "subtitle": "Say 'over' to finish your turn. For example, 'Hi, how are you? over'."},
+)
+
+stream.ui.launch()
+```
