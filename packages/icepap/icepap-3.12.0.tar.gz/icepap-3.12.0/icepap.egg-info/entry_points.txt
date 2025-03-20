@@ -1,0 +1,5 @@
+[console_scripts]
+icepapctl = icepap.cli.cli:cli
+
+[sinstruments.device]
+IcePAP = icepap.simulator:IcePAP [simulator]
