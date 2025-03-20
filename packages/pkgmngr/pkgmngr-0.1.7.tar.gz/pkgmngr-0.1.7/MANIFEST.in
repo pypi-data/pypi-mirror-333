@@ -1,0 +1,26 @@
+include LICENSE
+include README.md
+include pyproject.toml
+include *.md
+recursive-include pkgmngr *.py
+recursive-include tests *.py
+
+# Add this line to include template files
+recursive-include pkgmngr/templates *.txt
+
+# Exclude various Python cache files
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude *.egg-info
+global-exclude *.egg
+
+# Exclude test cache directories
+recursive-exclude .pytest_cache *
+recursive-exclude htmlcov *
+recursive-exclude .coverage *
+
+# Exclude build directories
+recursive-exclude build *
+recursive-exclude dist *
