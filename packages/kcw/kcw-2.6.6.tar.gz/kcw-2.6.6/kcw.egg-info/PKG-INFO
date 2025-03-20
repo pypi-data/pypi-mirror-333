@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: kcw
+Version: 2.6.6
+Summary: 超轻量级http框架
+Home-page: https://docs.kwebapp.cn/index/index/1
+Author: 百里-坤坤
+Author-email: kcweb@kwebapp.cn
+Maintainer: 坤坤
+Maintainer-email: fk1402936534@qq.com
+License: MIT License
+Description: kcw是一个由kcw抽象出来的超轻量级http框架
+Keywords: kcw2.6.6
+Platform: UNKNOWN

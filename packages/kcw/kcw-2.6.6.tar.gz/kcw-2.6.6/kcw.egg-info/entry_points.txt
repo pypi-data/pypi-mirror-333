@@ -1,0 +1,3 @@
+[console_scripts]
+kcw = kcw.kcw:cill_start
+
