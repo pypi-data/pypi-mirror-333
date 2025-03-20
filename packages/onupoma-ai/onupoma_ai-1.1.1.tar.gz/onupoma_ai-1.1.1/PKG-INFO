@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: onupoma_ai
+Version: 1.1.1
+Summary: Onupoma AI Python Package
+Home-page: https://github.com/onupoma/onupoma_ai
+Author: MD Jakaria Fiad
+Author-email: onupoma749@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+This package allows interaction with the Onupoma AI chat and think APIs.
