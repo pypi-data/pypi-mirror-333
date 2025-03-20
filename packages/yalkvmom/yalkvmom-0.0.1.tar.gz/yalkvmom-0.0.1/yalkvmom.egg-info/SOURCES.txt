@@ -1,0 +1,8 @@
+setup.py
+yalkvmom/__init__.py
+yalkvmom/first.py
+yalkvmom/second.py
+yalkvmom.egg-info/PKG-INFO
+yalkvmom.egg-info/SOURCES.txt
+yalkvmom.egg-info/dependency_links.txt
+yalkvmom.egg-info/top_level.txt
