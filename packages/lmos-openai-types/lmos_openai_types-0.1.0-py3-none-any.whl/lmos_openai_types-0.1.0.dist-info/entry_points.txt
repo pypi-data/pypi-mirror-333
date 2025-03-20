@@ -1,0 +1,2 @@
+[console_scripts]
+lmos-openai-types = lmos_openai_types:main
