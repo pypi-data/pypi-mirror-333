@@ -1,0 +1,2 @@
+[console_scripts]
+amr_x2_pose = amr_x2_pose.main:main
