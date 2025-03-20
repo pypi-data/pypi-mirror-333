@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pysmd/__init__.py
+pysmd/example.py
+pysmd.egg-info/PKG-INFO
+pysmd.egg-info/SOURCES.txt
+pysmd.egg-info/dependency_links.txt
+pysmd.egg-info/requires.txt
+pysmd.egg-info/top_level.txt

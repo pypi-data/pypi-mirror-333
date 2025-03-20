@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "pysmd"
+version = "0.1"
+description = "pySMD: First-Principles Shadow Molecular Dynamics Framework"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+
+maintainers = [
+  {name = "Ilia M. Mazin", email = "imazin@lanl.gov"}
+]
+
+authors = [
+  {name = "Ilia M. Mazin", email = "imazin@lanl.gov"},
+  {name = "Yu Zhang", email = "zhy@lanl.gov"},
+  {name = "Anders M.N. Niklasson", email = "zhy@lanl.gov"},
+]
+
+requires-python = ">=3.8"
+
+dependencies = [
+  "setuptools",
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX",
+  "Operating System :: Unix",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development",
+]
+
