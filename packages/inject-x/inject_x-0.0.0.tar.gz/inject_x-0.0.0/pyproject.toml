@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[bumpver]
+current_version = "0.0.1"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "[ROBOT] bump version to {new_version} [ci skip]"
+tag_message = "[ROBOT] {new_version} [ci skip]"
+commit = true
+tag = true
+push = true
+
+[bumpver.file_patterns]
+"src/injectx/__init__.py" = [
+    '^__version__ = "{version}"$',
+]
+"README.md" = [
+    'version {version} \({date}\)',
+]
+"pyproject.toml" = [
+    '^version = "{version}"$',
+    '^current_version = "{version}"$',
+]
+
+# [tool.setuptools_scm]
+# write_to = "src/__init__.py"
+
+[project]
+name = "inject-x"
+dynamic = ["version", "dependencies"]
+# version = {attr = "src.injectx.__version__"}
+authors = [
+  { name="Colageo Mirko", email="mirko.colageo@gmail.com" },
+]
+description = "Natural language request to json converter library"
+readme = "README.md"
+requires-python = ">=3.11.5"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["ioc", "dependency injection", "inversion of control", "automatic class loader"]
+license = {text = "MIT License"}
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Homepage = "https://github.com/bocejo5/injectx"
+Documentation = "https://github.com/bocejo5/injectx"
+Repository = "https://github.com/bocejo5/injectx"
+Issues = "https://github.com/bocejo5/injectx/issues"
