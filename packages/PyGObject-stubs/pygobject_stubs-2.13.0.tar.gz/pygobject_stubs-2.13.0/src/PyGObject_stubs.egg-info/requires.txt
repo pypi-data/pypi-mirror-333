@@ -1,0 +1,8 @@
+
+[dev]
+black>=25.1.0
+codespell>=2.4.1
+isort>=6.0.1
+ruff>=0.9.10
+pre-commit
+PyGObject
