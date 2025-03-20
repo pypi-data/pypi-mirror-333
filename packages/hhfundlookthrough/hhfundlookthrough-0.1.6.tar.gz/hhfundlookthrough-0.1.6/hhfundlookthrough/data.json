@@ -1,0 +1,1 @@
+{"lookbackNdays": 30, "omega": 0.05, "engine": "mssql+pymssql://xxxx"}
