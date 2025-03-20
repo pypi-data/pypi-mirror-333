@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: spider_oss_utils
+Version: 0.1.0
+Summary: 一个简单的文件上传工具包
+Author: MindLullaby
+Author-email: 3203939025@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: summary
