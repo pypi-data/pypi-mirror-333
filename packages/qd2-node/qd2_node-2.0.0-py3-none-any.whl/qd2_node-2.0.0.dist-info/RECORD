@@ -1,0 +1,8 @@
+qd2_node/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qd2_node/functions.py,sha256=XkOmgJ7qm1ifgmpnA8gf0Jw-efc6ilaOOl2Ufb63kGw,3580
+qd2_node/http_receptor.py,sha256=XK3oAw0wOus8a7YtsCDk8l73Hsp5BYsL_Byko1R2w0Q,1374
+qd2_node/receive_qd2.py,sha256=zM2pEy18mZxkNZHcAf3DPVQmKbNwV46Ntsw_zve5C-8,6277
+qd2_node-2.0.0.dist-info/METADATA,sha256=bSGbZ1xBCJT2qmq5zjJKM4MaWEDQTqIxVxktJRJuOrc,360
+qd2_node-2.0.0.dist-info/WHEEL,sha256=sb4ZHsmozXdkdXRvpMHZmhxsxQvL8DERDUEGA9tAfc8,83
+qd2_node-2.0.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qd2_node-2.0.0.dist-info/RECORD,,
