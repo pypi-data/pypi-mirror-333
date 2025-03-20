@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "orman-news-reader"
+version = "0.1.0"
+description = "Extracts the main content from webpages and generates clean, reader-friendly HTML"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "web_reader_mode"}]
+repository = "https://github.com/yourusername/orman-news-reader"
+keywords = ["web", "reader", "readability", "html", "content-extraction"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Text Processing :: Markup :: HTML"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "2.31.0"
+beautifulsoup4 = "4.12.2"
+pillow = "10.1.0"
+lxml = "^4.9.3"
+lxml-html-clean = "^0.1.0"
+readability-lxml = "0.8.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+orman-reader-mode = "web_reader_mode.reader_mode:main"
+orman-html-generator = "web_reader_mode.html_generator:main"
+orman-web-reader = "web_reader_mode.__main__:main"
