@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+md_to_docx.egg-info/PKG-INFO
+md_to_docx.egg-info/SOURCES.txt
+md_to_docx.egg-info/dependency_links.txt
+md_to_docx.egg-info/entry_points.txt
+md_to_docx.egg-info/requires.txt
+md_to_docx.egg-info/top_level.txt
+md_to_docx/md_to_docx/__init__.py
+md_to_docx/md_to_docx/cli.py
+md_to_docx/md_to_docx/core.py
+md_to_docx/md_to_docx/server.py
+md_to_docx/tests/__init__.py
+md_to_docx/tests/test_md_to_docx.py
