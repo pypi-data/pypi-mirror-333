@@ -1,0 +1,75 @@
+Metadata-Version: 2.2
+Name: ferpy
+Version: 0.1.13
+Summary: A Python implementation of the FER data structure.
+Home-page: https://github.com/jongablop/ferpy
+Author: Jon Gabirondo-López
+Author-email: jon.gabirondol@ehu.eus
+License: GPL-3.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# ferpy
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Development](#development)
+- [Testing](#testing)
+- [License](#license)
+
+## Overview
+
+A Python implementation of the data structure defined by `fer`: Framework for Experimental Results. Visit the main repository [here](https://github.com/jongablop/fer).
+
+The aim of fer is to stablish a standard way of **collecting**, **treating**, and **sharing** the experimental results.
+
+## Installation
+
+You can install the package from PyPI:
+
+```bash
+pip install ferpy
+```
+
+Alternatively, you can clone the repository and install locally:
+
+```bash
+git clone https://github.com/jongablop/ferpy.git
+cd fer-py
+pip install .
+```
+
+## Usage
+
+## Development
+
+## Testing
+
+## License
+
+This project is licensed under the terms of the GNU General Public License v3.0 (GPL-3.0). 
+
+You may obtain a copy of the license at [GNU.org](https://www.gnu.org/licenses/gpl-3.0.en.html).
