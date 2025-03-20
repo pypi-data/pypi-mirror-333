@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: phyloRNN
+Version: 0.45
+Summary: A project for phylogenetic analysis using RNNs
+Home-page: https://github.com/phyloRNN/phyloRNN
+Author: Daniele Silvestro, Thibault Latrille
+Author-email: davide.silvestro@unil.ch, thibault.latrille@unil.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE
+
+UNKNOWN
+
