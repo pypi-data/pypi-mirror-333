@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "jsqlib"
+version = "0.10a0"
+license = "MPL-2.0"
+description = "JSON to SQL query generator"
+authors = ["pymancer <pymancer@gmail.com>"]
+readme = "README.md"
+homepage = "https://gitlab.com/ru-r5/jsqlib"
+repository = "https://gitlab.com/ru-r5/jsqlib"
+documentation = "https://gitlab.com/ru-r5/jsqlib/-/wikis/home"
+keywords = ["sql", "json"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+python-box = ">=5,<8"
+sqlfluff = "^3"
+jsonschema = "^4"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.0"
+icecream = "^2.0"
+pytest = "^8"
+coverage = {extras = ["toml"], version = "^7"}
+pytest-cov = "^5"
+pre-commit = "^3"
+ruff = "^0"
+pyre-check = "^0.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["jsqlib"]
+
+[tool.coverage.report]
+fail_under = 90
+
+[tool.black]
+line-length = 120
+target-version = ['py312']
+include = "jsqlib"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py312"
+exclude = [
+    'README.md',
+    'tests',
+    '.venv'
+]
+
+[tool.ruff.lint]
+ignore = ['E501']
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
