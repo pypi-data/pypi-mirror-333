@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: nmea2000
+Version: 0.1.0
+Summary: NMEA 2000 encoder and decoder
+Home-page: https://github.com/tomer-w/nmea2000
+Author: Tomer-W
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# nmea2000
+NMEA 2000 Python encoder and decoder based on canboat database
