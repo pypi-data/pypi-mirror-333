@@ -1,0 +1,12 @@
+lsapy/__init__.py,sha256=MXu8EIXhOrPg7Aba-9nrQCU51QTRAWNKxDapzYcnzFs,284
+lsapy/criteria.py,sha256=f2piZaEecKsLBvIH4JhLNXDNfNKNXUp70r23oeHErcQ,2971
+lsapy/functions.py,sha256=WYfpUREOsrkv-70wme_zL_HArM_AI2b5YxU8vtee5NI,8382
+lsapy/lsa.py,sha256=sBx96OpTDeaSrcX9s8IB2k91CNl0WUIW9hVM6oP-Hqg,14339
+lsapy/statistics.py,sha256=62O57pqF1Pth4s1D0MbQEyobnxDGZ2bNatC2uVFnHH8,4269
+lsapy/utils.py,sha256=eezLr5l0gqqgFEglzsSnbwx7JqOlVeKK3G63qllAJrg,776
+lsapy/data/climate_sample.nc,sha256=ng2o7BxKLgzQWIl5fdiGWvdCQSeHeOO5-X3ciyD72Xo,52687793
+lsapy/data/soil_sample.nc,sha256=y7NpYV9VZKXwiYExynA0vF1KAn5rhsWqzwGJ4tFE-TQ,2535031
+lsapy-0.1.0.dev0.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+lsapy-0.1.0.dev0.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+lsapy-0.1.0.dev0.dist-info/METADATA,sha256=Vr0peYa--97JnnQKHtAsNb8SdreyYCs7espEr4XSemg,1145
+lsapy-0.1.0.dev0.dist-info/RECORD,,
