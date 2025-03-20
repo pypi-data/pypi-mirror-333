@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+my/entry.py
+web/app.py
+web/static/style.css
+web/templates/index.html
+web_minio_upload.egg-info/PKG-INFO
+web_minio_upload.egg-info/SOURCES.txt
+web_minio_upload.egg-info/dependency_links.txt
+web_minio_upload.egg-info/entry_points.txt
+web_minio_upload.egg-info/requires.txt
+web_minio_upload.egg-info/top_level.txt
