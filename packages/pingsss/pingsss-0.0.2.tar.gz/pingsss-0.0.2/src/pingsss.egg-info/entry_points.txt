@@ -1,0 +1,2 @@
+[console_scripts]
+pingsss = pingsss.pingsss:main
