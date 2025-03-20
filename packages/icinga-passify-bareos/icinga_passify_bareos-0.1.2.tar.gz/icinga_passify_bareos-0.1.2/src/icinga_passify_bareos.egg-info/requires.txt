@@ -1,0 +1,6 @@
+
+[dev]
+pipenv
+black
+ruff
+pre-commit
