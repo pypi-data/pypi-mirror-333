@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pd-shortcut"
+authors = [
+    {name = "FEI YUAN", email = "fei.yuan@bcm.edu"},
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.6"
+dynamic = ["version", "description"]
+dependencies = [
+    'pandas'
+]
+
+[tool.flit.module]
+name = "pd_shortcut"
