@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/ScaleRPy/__init__.py
+src/ScaleRPy/man_dat.py
+src/ScaleRPy.egg-info/PKG-INFO
+src/ScaleRPy.egg-info/SOURCES.txt
+src/ScaleRPy.egg-info/dependency_links.txt
+src/ScaleRPy.egg-info/requires.txt
+src/ScaleRPy.egg-info/top_level.txt
+src/ScaleRPy/fitting/fit_funcs.py
+src/ScaleRPy/formatting/__init__.py
+src/ScaleRPy/formatting/density_contours.py
+src/ScaleRPy/formatting/tol_colors.py
