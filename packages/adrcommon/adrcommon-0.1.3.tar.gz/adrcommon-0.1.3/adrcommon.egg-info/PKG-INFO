@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: adrcommon
+Version: 0.1.3
+Summary: adrcommon
+Author-email: Will Swift <will@afterdarkstudio.dev>
+License: MIT License
+Project-URL: homepage, https://www.afterdarkstudio.dev
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <3.14,>=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: cheroot
+Requires-Dist: mergedeep
+Requires-Dist: pyyaml
+Requires-Dist: boto3
+Requires-Dist: pymongo
+Requires-Dist: pydantic
+Requires-Dist: pydantic-mongo
+Requires-Dist: ndjson

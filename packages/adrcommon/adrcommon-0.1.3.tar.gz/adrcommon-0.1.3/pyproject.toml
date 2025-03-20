@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# Do not add spaces around the '=' sign for any of the fields
+# preceeded by a marker comment as it affects the publish workflow.
+#replace_package_name_marker
+name="adrcommon"
+#replace_package_version_marker
+version="0.1.3"
+description = "adrcommon"
+readme = "README.md"
+authors = [{ name = "Will Swift", email = "will@afterdarkstudio.dev"}]
+license = { text = "MIT License" }
+requires-python = ">=3.9, <3.14"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3", # removed 3.8
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "openai",
+    "cheroot",
+    "mergedeep",
+    "pyyaml",
+    "boto3",
+    "pymongo",
+    "pydantic",
+    "pydantic-mongo",
+    "ndjson"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["adrcommon", "adrcommon.*"]
+exclude = ["tests", "tests.*"]
+
+
+[project.urls]
+homepage = "https://www.afterdarkstudio.dev"
