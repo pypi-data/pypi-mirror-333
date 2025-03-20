@@ -1,0 +1,15 @@
+ccds/__init__.py,sha256=C3mKDozy5A9JMO4FPtTXi8aF5KNbDjDWnubM2l9nDLk,45
+ccds/__main__.py,sha256=nVqC3qGF9aKR3eKYQqe5cuA39h70cG8RE-AfT4_m-2Q,1060
+ccds/monkey_patch.py,sha256=GSudTuRcl8yL3C4nzvbIjs6LVIAXgxBw2fNnmxaKTfY,4814
+ccds/hook_utils/__init__.py,sha256=w2jIigUX5YF_vBR6neI2lhtZAvh8Vdd7h_9UeBMCuAo,72
+ccds/hook_utils/configure_gh.py,sha256=L9CR6GUSjqsjOfvZwIuT8xodbtxlzuNdXDWvAVUOxxI,7150
+ccds/hook_utils/configure_ssh.py,sha256=IPn-b3A0KuWh7eC8m3PX_Fz4lX3Akb92hhwFk2gr4AI,1237
+ccds/hook_utils/configure_vcs.py,sha256=CBTjWOqV1RAJIcI9ZN4Ti6rZodvD1PoSYyGSQwabZqc,6008
+ccds/hook_utils/custom_config.py,sha256=riqyNMyBAwYgHUM_uDzQSdOA18axumS9kXEIBmzk84k,1396
+ccds/hook_utils/dependencies.py,sha256=gj-454Hhlfr8_fNlcAgxmawfoSpLDdYUk2eHbXNNJEU,1608
+ccds/hook_utils/scaffold_cleaner.py,sha256=v8Alr-W6Fq77Ibt8ZyF60acf2pbUcMLcN4mD4yi_0xo,9492
+gatlens_opinionated_template-0.4.4.dist-info/entry_points.txt,sha256=rmumL9yaTvBZxYgJ8X22dBqy9Hakqxkw-naj30-Dx5k,44
+gatlens_opinionated_template-0.4.4.dist-info/licenses/LICENSE,sha256=LppXyZM_uaLxIfVOhw8C27t7KF4f4uCN_nchykVcl-w,1081
+gatlens_opinionated_template-0.4.4.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+gatlens_opinionated_template-0.4.4.dist-info/METADATA,sha256=2bAaksswDrVS-P05CC4vIxNTxWMzH9upkJRoCUdYgeo,19584
+gatlens_opinionated_template-0.4.4.dist-info/RECORD,,
