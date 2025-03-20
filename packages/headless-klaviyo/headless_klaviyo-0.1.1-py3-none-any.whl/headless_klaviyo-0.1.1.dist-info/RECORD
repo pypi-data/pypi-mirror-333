@@ -1,0 +1,10 @@
+kcli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kcli/constants.py,sha256=qrpBtr2_nJKqlojdQJK1bDu1HRNukXt8q0vlKbj1tbo,560
+kcli/helpers.py,sha256=3Aq2wrJmtEJDSlOOEOpsX8auAQCXzoxLqoLahkjZ5Fs,24239
+kcli/kcli.py,sha256=uMbw1wf37ihi-f0WtJiLIC_zl36UdAbAmc-9v0WPtnI,25189
+headless_klaviyo-0.1.1.dist-info/LICENSE,sha256=k0vxfDh0AUelvFQ2_IqOJryBZv8QOflWwUMq1XRknyU,1063
+headless_klaviyo-0.1.1.dist-info/METADATA,sha256=ebplMArCAYhKpvlJQ5dqzCiJ3utNBYDlxWp3UFTFTEw,11009
+headless_klaviyo-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+headless_klaviyo-0.1.1.dist-info/entry_points.txt,sha256=WFQvVa9TtDsGjStaJ7VDr6D8xD1zaqDElwa4_-WdNOU,42
+headless_klaviyo-0.1.1.dist-info/top_level.txt,sha256=7uFWxxHdNyuXCtNtQGkV-kfdMG6gVAx1WNZJHUKFWcg,5
+headless_klaviyo-0.1.1.dist-info/RECORD,,
