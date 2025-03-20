@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Jomolhari", serif;
+            background: linear-gradient(to right, rgb(95, 38, 142), rgb(151, 31, 151), rgb(225, 55, 148));
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+        h1 {
+            color: #FFFFFF;
+            letter-spacing: 0.5px;
+            margin-bottom: 30px;
+        }
+        .workflow-list {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+        }
+        .workflow-item {
+            background: #dbdbdc;
+            padding: 25px 0px;
+            margin: 10px 0;
+            border-radius: 15px;
+            box-shadow: 0 0px 10px rgba(46, 46, 46, 0.193);
+            transition: background 0.3s ease;
+        }
+        .workflow-item:hover {
+            background: #ffffff;
+        }
+        a {
+            text-decoration: none;
+            color: #8C0606;
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+        }
+        .workflow-meta {
+            font-size: 12px;
+            color: #8c0606c6;
+            margin-top: 5px;
+        }
+        .no-workflows {
+            font-size: 18px;
+            color: #cbd5e0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product Workflows</h1>
+
+    <div class="workflow-list">
+        {% if product_workflows %}
+            {% for workflow in product_workflows %}
+                <div class="workflow-item">
+                    <a href="{% url 'product_workflow_detail' product_workflow_id=workflow.id %}">
+                        {{ workflow.product.name }} - {{ workflow.workflow.name }}
+                    </a>
+                    <div class="workflow-meta">
+                        Created on: {{ workflow.created_at|date:"F j, Y" }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-workflows">No product workflows available.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
