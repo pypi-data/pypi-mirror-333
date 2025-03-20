@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+speedportonetop.egg-info/PKG-INFO
+speedportonetop.egg-info/SOURCES.txt
+speedportonetop.egg-info/dependency_links.txt
+speedportonetop.egg-info/requires.txt
+speedportonetop.egg-info/top_level.txt
