@@ -1,0 +1,17 @@
+ECOv002-CMR>=1.0.5
+ECOv002-granules>=1.0.3
+ECOv003-granules
+geos5fp>=1.0.5
+h5py>=3.13.0
+numpy
+pandas
+rasters>=1.4.6
+scikit-learn
+
+[dev]
+build
+pytest>=6.0
+pytest-cov
+jupyter
+pytest
+twine
