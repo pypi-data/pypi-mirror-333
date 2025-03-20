@@ -1,0 +1,11 @@
+revisitpy/StudyConfigSchema.json,sha256=w6nN8W6q_CfxBiLeMj-GbouPf2tVVhAN0NDh9lWkcLQ,121615
+revisitpy/__init__.py,sha256=xlBUJnRCwvlD2HQ58ooBdTkBf_JRsMovUj0p12Wg91o,261
+revisitpy/models.py,sha256=adzYk5Wl5Z94EIYPD0768qTGaNqn-e9m5NviZw3hayA,146788
+revisitpy/revisitpy.py,sha256=la1IC6f4crNFKf7RLQ9bwmZkHZCrER45_XtyjLFyAzs,31746
+revisitpy/widget.py,sha256=VvFqRvvvn86fW8ASe1pxaAvh5ZLvvSRThI5XtlCdgcg,915
+revisitpy/static/widget.css,sha256=TLu5F6k0CvowQtmApPswG-JZUXYszo7a10dVWKnZsIg,647
+revisitpy/static/widget.js,sha256=jjc-RvauEnU8dHCR7oGSjg0y1CRXtAlw1-4yDeSbdKE,186472
+revisitpy-1.2.0.dist-info/METADATA,sha256=MkOi1FSGsvb7zN2J-SXW-yLG3Q7pC2NUGAOZS8j_Sgk,33234
+revisitpy-1.2.0.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+revisitpy-1.2.0.dist-info/licenses/LICENSE,sha256=TG751oNdGJ3dom-YvlXDOiJjqg8d1s8hsJ64EagPztM,1510
+revisitpy-1.2.0.dist-info/RECORD,,
