@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+botdrive/__init__.py
+botdrive/gdrive.py
+botdrive.egg-info/PKG-INFO
+botdrive.egg-info/SOURCES.txt
+botdrive.egg-info/dependency_links.txt
+botdrive.egg-info/requires.txt
+botdrive.egg-info/top_level.txt
