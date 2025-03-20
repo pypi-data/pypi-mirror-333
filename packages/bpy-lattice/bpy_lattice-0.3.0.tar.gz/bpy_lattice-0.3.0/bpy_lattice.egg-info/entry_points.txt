@@ -1,0 +1,2 @@
+[console_scripts]
+bmad-to-blender = bpy_lattice.interfaces.bmad:bmad_to_blender_entrypoint
