@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: xts
+Version: 0.0.12
+Summary: xts is the Python SDK for XT Systems
+Author: Josh XT
+Author-email: josh@devxt.com
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pyotp
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# xts
+
+XT Systems Python SDK

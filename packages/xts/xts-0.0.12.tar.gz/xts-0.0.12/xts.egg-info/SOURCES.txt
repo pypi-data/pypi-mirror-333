@@ -1,0 +1,12 @@
+.gitignore
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+xts/__init__.py
+xts.egg-info/PKG-INFO
+xts.egg-info/SOURCES.txt
+xts.egg-info/dependency_links.txt
+xts.egg-info/requires.txt
+xts.egg-info/top_level.txt
