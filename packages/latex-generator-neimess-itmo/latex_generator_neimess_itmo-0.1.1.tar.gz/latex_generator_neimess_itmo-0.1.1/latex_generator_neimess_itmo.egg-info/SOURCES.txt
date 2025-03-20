@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+latex_generator_neimess_itmo/__init__.py
+latex_generator_neimess_itmo/latex_utils.py
+latex_generator_neimess_itmo.egg-info/PKG-INFO
+latex_generator_neimess_itmo.egg-info/SOURCES.txt
+latex_generator_neimess_itmo.egg-info/dependency_links.txt
+latex_generator_neimess_itmo.egg-info/top_level.txt
