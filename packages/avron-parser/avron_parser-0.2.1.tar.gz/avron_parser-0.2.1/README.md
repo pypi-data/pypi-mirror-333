@@ -1,0 +1,107 @@
+# AVRON Parser
+
+**AVRON (A Very Readable Object Notation)** is a human-friendly data format that is also easy for machines to parse.  
+This package provides a parser for AVRON, allowing you to read AVRON files and convert them into Python objects.
+
+---
+
+## Features
+- **Simple, indentation-based syntax** (like YAML but better for machines)
+- **Supports nested objects, lists, and inline data**
+- **Multi-line strings and comments**
+- **Boolean, numeric, and null values auto-detected**
+- **Customisable formatting**
+
+---
+
+## Usage
+### **Parse an AVRON File**
+```python
+from avron_parser import parse_avron
+
+parsed_data = parse_avron("example.avron")
+print(parsed_data)
+```
+
+### **Example AVRON File (`example.avron`)**
+```
+title: "A Very Readable Object Notation"
+version: 1.0
+author: "Kohan Mathers"
+
+description: """
+This is an example of an AVRON file.
+It supports multi-line strings, lists, nested objects, and more.
+"""
+
+# Here is a comment!
+
+###
+And here is a
+multi-line comment!
+###
+
+features:
+  - "Simple syntax"
+  - "No unnecessary characters"
+  - 100
+  - true
+  - null
+
+tags: ["format", "human-readable", "parser"]
+
+settings:
+  display:
+    resolution:
+      width: 1920
+      height: 1080
+    fullscreen: true
+  theme: "dark"
+
+###
+You can also use optional formatting settings, as displayed below
+
+[INDENT_LEVEL: 2]
+[TAB_MODE: false]
+[COMMENT_SYNTAX: #]
+[BOOLEAN_STYLE: true-false]
+[NULL_STYLE: null]
+[MULTILINE_STYLE: ''']
+
+NOTE: Settings MUST be placed at the TOP of the file, before anything else.
+###
+
+metadata: { created_by: "QTI", last_updated: "11-03-2025" }
+```
+
+### **Accessing Specific Data**
+```python
+print(parsed_data["title"])
+print(parsed_data["settings"]["display"]["resolution"]["width"])
+```
+
+---
+
+## Development
+### **Clone the Repository**
+```sh
+git clone https://github.com/kohanmathers/avron-parser.git
+cd avron-parser
+```
+---
+
+## License
+This project is licensed under the **MIT License**.
+
+---
+
+## Contributing
+1. Fork the repository
+2. Create a new branch (`feature-name`)
+3. Commit changes (`git commit -m "Added new feature"`)
+4. Push to your branch (`git push origin feature-name`)
+5. Open a pull request
+
+---
+
+- **GitHub:** [https://github.com/kohanmathers/avron-parser](https://github.com/kohanmathers/avron-parser)

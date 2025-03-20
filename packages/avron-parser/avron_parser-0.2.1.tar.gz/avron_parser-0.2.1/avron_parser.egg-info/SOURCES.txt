@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+avron_parser/__init__.py
+avron_parser/inline_parser.py
+avron_parser/parser.py
+avron_parser/settings_parser.py
+avron_parser.egg-info/PKG-INFO
+avron_parser.egg-info/SOURCES.txt
+avron_parser.egg-info/dependency_links.txt
+avron_parser.egg-info/top_level.txt
