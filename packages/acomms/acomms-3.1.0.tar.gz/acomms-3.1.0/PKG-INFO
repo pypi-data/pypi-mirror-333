@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: acomms
+Version: 3.1.0
+Summary: WHOI Micromodem Interface Library and Tools
+Author-email: Eric Gallimore <egallimore@whoi.edu>, Caileigh Fitzgerald <cfitzgerald@whoi.edu>
+License: LGPLv3+
+Project-URL: homepage, http://acomms.whoi.edu
+Keywords: Library,Python Modules,Scientific/Engineering
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+License-File: LICENSE.txt
+Requires-Dist: bidict
+Requires-Dist: bitstring>=3.0.0
+Requires-Dist: pyserial>=2.6
+Requires-Dist: isodate>=0.4.9
+Requires-Dist: crcmod>=1.7
+
+===========
+pyAcomms
+===========
+
+pyAcomms provides a Python interface to Micromodem and Micromodem-2 hardware from the
+`Acoustic Communications Group <http://acomms.whoi.edu/>`_ at the `Woods Hole Oceanographic Institution <http://www.whoi.edu/>`_.
+
+See examples in the ``/examples`` and ``/bin`` directories.

@@ -1,0 +1,43 @@
+[project]
+name = "acomms"
+dynamic = ["version"]
+description = "WHOI Micromodem Interface Library and Tools"
+readme = "README.txt"
+keywords = ["Library", "Python Modules", "Scientific/Engineering"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.6"
+dependencies = ["bidict", "bitstring >=3.0.0", "pyserial >=2.6", "isodate >=0.4.9", "crcmod >=1.7"]
+
+[[project.authors]]
+name = "Eric Gallimore"
+email = "egallimore@whoi.edu"
+
+[[project.authors]]
+name = "Caileigh Fitzgerald"
+email = "cfitzgerald@whoi.edu"
+
+[project.license]
+text = "LGPLv3+"
+
+[project.urls]
+homepage = "http://acomms.whoi.edu"
+
+[project.scripts]
+# No scripts for now; we may add scripts in /bin in a future release
+
+[project.optional-dependencies]
+# No optional dependencies
+
+[build-system]
+requires = ["setuptools>=64", "wheel", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "acomms/_version.py"

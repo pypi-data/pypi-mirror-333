@@ -1,0 +1,6 @@
+.pypirc
+*.pyc
+/.idea
+/dist
+/*.egg-info
+acomms/_version.py
