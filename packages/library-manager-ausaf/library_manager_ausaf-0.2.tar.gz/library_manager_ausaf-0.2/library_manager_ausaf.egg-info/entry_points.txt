@@ -1,0 +1,2 @@
+[console_scripts]
+library-manager = library_manager.library_manager:main

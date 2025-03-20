@@ -1,0 +1,6 @@
+pyfiglet
+inquirer
+tabulate
+yaspin
+colorama
+termcolor
