@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/pygdl/__init__.py
+src/pygdl/__main__.py
+src/pygdl.egg-info/PKG-INFO
+src/pygdl.egg-info/SOURCES.txt
+src/pygdl.egg-info/dependency_links.txt
+src/pygdl.egg-info/requires.txt
+src/pygdl.egg-info/top_level.txt
