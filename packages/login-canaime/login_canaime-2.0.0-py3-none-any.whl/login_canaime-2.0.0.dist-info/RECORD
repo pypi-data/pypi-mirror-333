@@ -1,0 +1,13 @@
+login_canaime/__init__.py,sha256=j_x2yLXUs7gQFYgCfQfZlWGYwWrk9wVxfxFh4jUtmvk,576
+login_canaime/autenticador.py,sha256=lB1KV9ktRwpR4qMBNSdVTkx7mGi2F6_4V7FTLDDp6mc,2902
+login_canaime/auth.py,sha256=JKYpWhjpvscmYyb7M-5j1qT23ua-2bG05zlUJ03MtjM,7161
+login_canaime/cli.py,sha256=8I7DR04RBcDQvOlkXm5U2VJm5sGdPr1HIEtMOvudxqc,1394
+login_canaime/py.typed,sha256=Nqnn8clbgv-5l0PgxcTOldg8mkMKrFn4TvPL-rYUUGg,1
+login_canaime/ui/__init__.py,sha256=Zt4Hw4vSTLnmQe8iqRDR1SqH73TmE2Ptpl1Mqaolt9o,154
+login_canaime/ui/tkinter_ui.py,sha256=rNCT5ET4gRYWOM0dmCgQtl5nKh9gzoQfUeZF3Kox2Xc,7467
+login_canaime-2.0.0.dist-info/LICENSE,sha256=eo8cZmNUfoO7VHdlbmRjjz2ZDppBf9DRCzXHjDmMNSw,1098
+login_canaime-2.0.0.dist-info/METADATA,sha256=Ic1JY97caZ6mSY_aHHaC-CS1FAFgyI9YZeKcrZRouVY,4826
+login_canaime-2.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+login_canaime-2.0.0.dist-info/entry_points.txt,sha256=qGZBgpaCwy64Jw6VNa0XA5Klwhu9qPIvN_kGksDqxLU,57
+login_canaime-2.0.0.dist-info/top_level.txt,sha256=Fv5dKCiIeiTnm6sF7jiL_990TYiWREeItZ5Pr_BMkB0,14
+login_canaime-2.0.0.dist-info/RECORD,,
