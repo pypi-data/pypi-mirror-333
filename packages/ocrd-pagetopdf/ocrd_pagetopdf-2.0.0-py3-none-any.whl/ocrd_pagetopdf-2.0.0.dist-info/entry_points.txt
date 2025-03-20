@@ -1,0 +1,3 @@
+[console_scripts]
+ocrd-altotopdf = ocrd_pagetopdf.cli:ocrd_altotopdf
+ocrd-pagetopdf = ocrd_pagetopdf.cli:ocrd_pagetopdf
