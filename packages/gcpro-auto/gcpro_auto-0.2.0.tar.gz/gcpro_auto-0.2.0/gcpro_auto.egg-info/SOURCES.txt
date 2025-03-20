@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+gcpro_auto/__init__.py
+gcpro_auto/git.py
+gcpro_auto.egg-info/PKG-INFO
+gcpro_auto.egg-info/SOURCES.txt
+gcpro_auto.egg-info/dependency_links.txt
+gcpro_auto.egg-info/requires.txt
+gcpro_auto.egg-info/top_level.txt
