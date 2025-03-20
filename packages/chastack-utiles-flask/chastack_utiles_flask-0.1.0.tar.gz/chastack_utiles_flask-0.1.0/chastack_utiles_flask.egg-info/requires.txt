@@ -1,0 +1,12 @@
+requests
+zeep
+xlsxwriter
+pillow
+flask
+Flask-Caching
+flask-cdn
+flask-compress
+flask-babel
+Flask-Minify
+sobrecargar
+solteron
