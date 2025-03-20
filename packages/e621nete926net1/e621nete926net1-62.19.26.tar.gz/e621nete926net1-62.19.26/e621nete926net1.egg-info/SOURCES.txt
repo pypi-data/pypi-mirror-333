@@ -1,0 +1,8 @@
+setup.py
+e621nete926net1/__init__.py
+e621nete926net1/e621net.py
+e621nete926net1/e926net.py
+e621nete926net1.egg-info/PKG-INFO
+e621nete926net1.egg-info/SOURCES.txt
+e621nete926net1.egg-info/dependency_links.txt
+e621nete926net1.egg-info/top_level.txt
