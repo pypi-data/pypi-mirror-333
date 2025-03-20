@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: apheris-utils
+Version: 0.8.0
+Summary: Utility functions for Apheris projects
+License-File: LICENSE
+Requires-Dist: pydantic==2.10.6
+Requires-Dist: pydantic-settings==2.8.1
+Requires-Dist: requests==2.32.3
+Provides-Extra: nvflare
+Requires-Dist: nvflare<2.6,>=2.4; extra == "nvflare"
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
