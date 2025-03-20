@@ -1,0 +1,3 @@
+[console_scripts]
+sudoblark-github-cli=sudoblark_github_cli.cli:app
+

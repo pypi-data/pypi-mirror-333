@@ -1,0 +1,15 @@
+sudoblark_github_cli/__init__.py,sha256=SLHFAQqCfTd6CPG7RBCPy8uZ2rw8b7OCxPkwHQnoHkk,318
+sudoblark_github_cli/cli.py,sha256=k069gPFLGn59LF_2Qzu-u0k9k2EePDivfddjVmPhL9c,1191
+sudoblark_github_cli/console.py,sha256=rc0u1aCK9gFeBZFs7Rar_tBqPFoZaWxc7tVjhkSO_lA,85
+sudoblark_github_cli/constants.py,sha256=CAmjiF9sqJ9wEzN0BlkSZGVlI7YGc_G_aQUW9d6aIIs,448
+sudoblark_github_cli/pull_request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sudoblark_github_cli/pull_request/cli.py,sha256=tsS16Rl_k9SeyMuA3YLH93oYwBT9tGvytdPLgFzwDYM,11151
+sudoblark_github_cli/pull_request/constants.py,sha256=jcqfyzayZp50q6S_5auu9yYPPq8MX5VYwsaaw3wUolk,125
+sudoblark_github_cli/pull_request/utils.py,sha256=syftjIwp0kN_5jF1qlcajQVWa_nUFPMNhfi6iWoclCc,3167
+sudoblark_github_cli/state.py,sha256=XvIoREQQeizmdWYgAc-9ePkQXeZqCZCJ0NrorzJtReQ,37
+sudoblark_github_cli/utils.py,sha256=RQMe8wpRRWZWwscqhoUNwDQaY2DQgBik7UVIdSIJiyg,6200
+sudoblark_github_cli-1.0.0.dist-info/LICENSE.txt,sha256=oO_Wbz894XsmTQQkE7rkJNecF68vYQVoQjov2JnNodk,1490
+sudoblark_github_cli-1.0.0.dist-info/METADATA,sha256=Uci4wYTQYbdWc1QlhpHIH-K9UZUpnYU56UlSQQwHvwI,1560
+sudoblark_github_cli-1.0.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+sudoblark_github_cli-1.0.0.dist-info/entry_points.txt,sha256=XUGMWkRRJj0lbfv4WmljVu_vrY8J7EHspBYVTeb7oFs,69
+sudoblark_github_cli-1.0.0.dist-info/RECORD,,
