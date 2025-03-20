@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+mockpy/__init__.py
+mockpy/mockpy.py
+mockpy/data/__init__.py
+mockpy/data/locales/__init__.py
+mockpy/data/locales/en_US.json
+mockpy/data/locales/tr_TR.json
+python_mockpy.egg-info/PKG-INFO
+python_mockpy.egg-info/SOURCES.txt
+python_mockpy.egg-info/dependency_links.txt
+python_mockpy.egg-info/requires.txt
+python_mockpy.egg-info/top_level.txt
