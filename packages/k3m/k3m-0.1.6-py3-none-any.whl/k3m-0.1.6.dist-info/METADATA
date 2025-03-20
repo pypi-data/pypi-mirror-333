@@ -1,0 +1,77 @@
+Metadata-Version: 2.3
+Name: k3m
+Version: 0.1.6
+Summary: Lightweight k3s cluster manager
+License: MIT
+Keywords: k3s,kubernetes,cluster,multipass,devops
+Author: Bruno Bernard
+Author-email: brunobernard@duck.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: System :: Systems Administration
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: halo (>=0.0.31,<0.0.32)
+Requires-Dist: pydantic (>=2.6.3,<3.0.0)
+Requires-Dist: rich (>=13.7.0,<14.0.0)
+Project-URL: Repository, https://github.com/eznix86/k3m
+Description-Content-Type: text/markdown
+
+# k3m - Lightweight k3s Cluster Manager
+
+A simple CLI tool to manage k3s clusters using canonical's multipass.
+
+## Installation
+
+### Ubuntu/Debian
+```bash
+sudo apt install pipx
+pipx install k3m
+```
+
+### MacOS
+```bash
+brew install pipx
+pipx install k3m
+```
+
+### Development Installation
+```bash
+# Clone the repository
+git clone https://github.com/eznix86/k3m.git
+cd k3m
+
+# Install using poetry
+poetry install
+```
+
+## Usage
+
+```bash
+# Create a cluster
+k3m cluster create my-cluster --servers 1 --agents 2
+
+# List clusters
+k3m cluster list
+
+# Delete a cluster
+k3m cluster delete my-cluster
+
+# Start/Stop a cluster
+k3m cluster start my-cluster
+k3m cluster stop my-cluster
+
+# Get kubeconfig
+k3m kubeconfig write my-cluster
+# or
+export KUBECONFIG=$(k3m kubeconfig write my-cluster)
+```
+
