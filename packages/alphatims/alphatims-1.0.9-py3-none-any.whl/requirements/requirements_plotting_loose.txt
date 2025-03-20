@@ -1,0 +1,5 @@
+bokeh
+datashader
+hvplot
+selenium
+jinja2

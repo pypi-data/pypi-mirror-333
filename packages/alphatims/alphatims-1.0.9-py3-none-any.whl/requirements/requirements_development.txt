@@ -1,0 +1,11 @@
+jupyter
+jupyter_contrib_nbextensions
+pyinstaller
+autodocsumm
+sphinx-rtd-theme
+plotly
+seaborn
+twine
+bumpversion
+
+pywin32; sys_platform=='win32'

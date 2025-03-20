@@ -1,0 +1,7 @@
+click
+h5py
+numba
+pandas
+psutil
+pyzstd
+tqdm

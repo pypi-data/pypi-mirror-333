@@ -1,0 +1,5 @@
+alphatims
+docs
+release
+requirements
+tests
