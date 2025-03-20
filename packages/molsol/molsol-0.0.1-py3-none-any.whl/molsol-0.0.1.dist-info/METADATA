@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: molsol
+Version: 0.0.1
+Summary: A k-deep ensemble model to predict solubility
+Home-page: https://github.com/maykcaldas/molsol
+Author: Mayk Caldas
+Author-email: andrew.white@rochester.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tensorflow
+Requires-Dist: kdeepensemble
+Requires-Dist: scikit-learn
+Requires-Dist: rdkit
+Requires-Dist: selfies
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# Mol Sol
+
+Backend code used in mol.dev
