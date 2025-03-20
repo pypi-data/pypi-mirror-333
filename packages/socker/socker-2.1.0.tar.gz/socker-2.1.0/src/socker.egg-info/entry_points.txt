@@ -1,0 +1,2 @@
+[console_scripts]
+socker = socker.cli.command:Interface
