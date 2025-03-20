@@ -1,0 +1,10 @@
+mmray/HRE.py,sha256=mSZ45qCOQ70dp4a1zXzgPka9xPIy_4aVa99qTt0EO8k,4315
+mmray/TRE.py,sha256=-8F3nWDesvovcmiBUH95_mUGVLZvDu55jJw1R1bhcz8,6664
+mmray/__init__.py,sha256=vKeAYbREnSXTaSJTv2yDp55Ynw1JY-HP6o_qepRMSHI,133
+mmray/base.py,sha256=FyEM3VgzmjnzkSPHpeVwthoHXLv97-IcTA7MCi8e-IU,4697
+mmray/generate_slurm_script.py,sha256=pHM-K1Yzj97Uk3wJWemP_z1AA8YrsCWvQgw5Vqpl2Es,6935
+mmray-0.1.2.dist-info/METADATA,sha256=EaST_TFFTKijWhI2CSrcq5JVbRMZmS6A7Mf-P0_cW_s,214
+mmray-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mmray-0.1.2.dist-info/entry_points.txt,sha256=fdKwGCyVowrQ23MQQnwQXu28V62s8TocNGsf_Qelym8,76
+mmray-0.1.2.dist-info/licenses/LICENSE,sha256=qAHiUOqK87vs9KdqixP3vxKkmIMfTZe1_EhcXmknKFc,1070
+mmray-0.1.2.dist-info/RECORD,,
