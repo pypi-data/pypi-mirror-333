@@ -1,0 +1,17 @@
+pyscored/__init__.py,sha256=zhjrULaUAb7yWN4xufmBQXop9BhQN7QF7G0rQKKZLM4,285
+pyscored/adapters/__init__.py,sha256=gEa_SF_u7rC3G5g6cTI9bvkaX2YCTlz4n6TynSuiUp8,324
+pyscored/adapters/game_frameworks.py,sha256=MuUxvY74K30oypxrd5YucVRClMq4h2sGhldV5o3grKg,1313
+pyscored/adapters/web_frameworks.py,sha256=mpUU6p51b8v4exftZwouw2lAT7oyVDZQfAEhHUnrkRQ,1380
+pyscored/core/__init__.py,sha256=3XN9yJwN8AdXHKF8Smjm78-QFooWYmBGffklug3AyY0,257
+pyscored/core/sandbox.py,sha256=FbHSOtrwZgBfhnzSYfebWlbDWUuGpH6MzGvCthR6maU,1365
+pyscored/core/scoring_engine.py,sha256=MfprWRtTX3hhZfS_iWp_l_vupmFDAsFfyC2BS3WmZSM,2272
+pyscored/plugins/__init__.py,sha256=inaT4qevWZ_ScSPr2c20R7eUPxOWhaN1oHeJk82jtlI,209
+pyscored/plugins/base_plugin.py,sha256=InTbNF0o7iD2q0C4ELai_F6iE9oO5TNtu52dftQqkBc,767
+pyscored/plugins/combo_bonus_plugin.py,sha256=1-QnnN5Wix1F8LgkkU43-EMnLJKNfSl8wa1V3A27kK8,2447
+pyscored/plugins/time_decay_plugin.py,sha256=nz1zHJO2vT2MGuIgfulNO8Wo_rQA-EYmdnE-OOHr94E,1606
+pyscored/utils/__init__.py,sha256=Zx-08wjJ2w7y26w_GC4DM-euQK_PY3TC0SAtxnrj0iQ,208
+pyscored/utils/helpers.py,sha256=OdIHn9UUMTm34lUF1MF7cQ0pZEdxUiMKCYzNKyqS2aQ,1164
+pyscored-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyscored-0.1.0.dist-info/METADATA,sha256=uegDz-Wyw2u7B7UtoDGYE3-dVIWuuwGwVoU2MSwf8YY,3933
+pyscored-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pyscored-0.1.0.dist-info/RECORD,,
