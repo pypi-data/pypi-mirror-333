@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: aython
+Version: 0.1.0
+Summary: Python and Warp had a baby
+Author-email: Avi Yeger <yeger00@gmail.com>
+License: MIT
+Requires-Python: >=3.7
+Requires-Dist: pathspec>=0.11.0
+Provides-Extra: test
+Requires-Dist: pytest-cov>=4.0.0; extra == 'test'
+Requires-Dist: pytest>=7.0.0; extra == 'test'
+Requires-Dist: ruff>=0.2.0; extra == 'test'
+Description-Content-Type: text/markdown
+
+# aython
+Python and Warp had a baby
