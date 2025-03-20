@@ -1,0 +1,4 @@
+cd neuroimage_denoiser_gui # In the folder with the pyproject.toml
+python -m build 
+pip install twine
+python -m twine upload --repository neuroimage_denoiser_gui dist/v1.3.1/* --config-file .pypirc
