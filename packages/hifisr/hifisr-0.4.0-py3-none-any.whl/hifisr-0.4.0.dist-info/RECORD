@@ -1,0 +1,13 @@
+hifisr_functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hifisr_functions/annotations.py,sha256=ezu1C6gXDCNvW72s3rRoNj1uc06yossDdVrs2uxsx-4,20196
+hifisr_functions/base.py,sha256=t-xqB5m9JqAbLW2v5Ie-P-vp2wLt7wl3IA4n9flTJOk,877
+hifisr_functions/hifisr_functions.py,sha256=NoeD5XAR4jw0HqPqGn7MUFEpRM7NpAvP-8Uax6IgDVk,75367
+hifisr_functions/reads.py,sha256=P08aZztdqupOZhp5gWICkj-eVG9qlLPNcjx2dsTn0Eo,5024
+hifisr_functions/references.py,sha256=fn9OH2JolR_aa01yrc_fw7ajcZEiS1CvYvVIt567NsE,4448
+hifisr_functions/reports.py,sha256=9Wyb0U6CEhJz9K8cVOV-Y0lagnBoXzarBYuLYp_FkDA,6339
+hifisr_functions/variants.py,sha256=JViYUcOf0kiJG-Ao4kjbY43lz-9lYGWtysr31YiTF1U,56889
+hifisr-0.4.0.dist-info/LICENSE,sha256=1j0o8EsyxukaQfitUsoliQKkE3yXkuRHZEj7lGZKilM,1063
+hifisr-0.4.0.dist-info/METADATA,sha256=AhSlQ1Fmu62Et0C1NiRQsaxbQQmD7nclcSpcNBPdagE,603
+hifisr-0.4.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+hifisr-0.4.0.dist-info/top_level.txt,sha256=jVsfeV7lB85kaYimsmUyauMYNLSR4qQ7cdahjBtEDTM,17
+hifisr-0.4.0.dist-info/RECORD,,
