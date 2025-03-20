@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: pyspark-opendic
+Version: 0.1.0
+Summary: Add your description here
+Author: akongstad, carlbrr
+Author-email: akongstad <kongstad@outlook.com>, carlbrr <?@>
+Requires-Dist: pyspark>=3.5.5
+Requires-Dist: requests>=2.32.3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# PySpark OpenDict Libray
+
+**Authors: Carl Bruun & Andreas Kongstad**
+
+This project implements a REST client and backend to use the OpenDict Polaris extension.
+
+...
+
+
+
