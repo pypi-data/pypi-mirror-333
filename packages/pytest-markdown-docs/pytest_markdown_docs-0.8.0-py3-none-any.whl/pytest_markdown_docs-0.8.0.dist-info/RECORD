@@ -1,0 +1,11 @@
+pytest_markdown_docs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_markdown_docs/_runners.py,sha256=YtQ5ZlGQ8aJAKU60zlVKYPfj6yKAcwEFecGhf08rtZg,3793
+pytest_markdown_docs/definitions.py,sha256=-RqQsFVSHyLnXlcvYfo-l-i7idn6W4VCQ0cwJv7IaAQ,399
+pytest_markdown_docs/hooks.py,sha256=DCmldD00dcUGrrIQBOQQHROBVhca4y95x4uBUU82bW4,98
+pytest_markdown_docs/plugin.py,sha256=EVuLOTh4QdYfVoZbm3n4OUMzw9TYorKO1FzIYtj07bs,13175
+pytest_markdown_docs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_markdown_docs-0.8.0.dist-info/METADATA,sha256=4RS6zTwtzzCeQgJF5UUp6VRrURW532fqGWyXxLaA6so,5911
+pytest_markdown_docs-0.8.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_markdown_docs-0.8.0.dist-info/entry_points.txt,sha256=UdWX6zwBOIfePSar70k2C9pA99vpe4i2CW51DcL_IwA,62
+pytest_markdown_docs-0.8.0.dist-info/licenses/LICENSE,sha256=6elhl6Sf_kfw2ru8mPXqbCPZdB1OfGxFxp4dLbsRgPo,1062
+pytest_markdown_docs-0.8.0.dist-info/RECORD,,
