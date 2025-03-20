@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: gutpull
+Version: 0.1.0
+Summary: 
+Author: Sheng Fan
+Author-email: fredtools999@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# GutPull
+
+A command that notifies you when you type `gut pull` instead of `git pull`.
+
+[Reference](https://www.zhihu.com/question/286978123/answer/513858834)
+
+```bash
+pip install gutpull
+```
