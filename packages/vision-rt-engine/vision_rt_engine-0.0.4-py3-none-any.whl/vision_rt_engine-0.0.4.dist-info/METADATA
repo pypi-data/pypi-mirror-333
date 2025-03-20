@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: vision-rt-engine
+Version: 0.0.4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Krishneel
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: igniter (>=1.0.6)
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python (>=4.4)
+Requires-Dist: pillow
+Requires-Dist: pytest
+Requires-Dist: torch (>=2.0)
+Requires-Dist: torchvision
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: jupyterlab ; extra == 'dev'
+Provides-Extra: full
+
+UNKNOWN
+
