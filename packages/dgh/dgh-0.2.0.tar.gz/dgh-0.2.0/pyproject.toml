@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dgh"
+version = "0.2.0"
+authors = [
+  {name="Vladyslav Oles", email="vlad.oles@proton.me"},
+]
+description = "computing the Gromov–Hausdorff distance"
+readme = "README.md"
+requires-python = ">=3.5"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy >= 1.17.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest >= 7.0",
+    "scipy >= 0.7.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vlad-oles/dgh"
+"Bug Tracker" = "https://github.com/vlad-oles/dgh/issues"

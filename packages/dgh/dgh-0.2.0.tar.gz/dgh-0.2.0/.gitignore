@@ -1,0 +1,4 @@
+dist/*
+dgh/__pycache__
+*.pdf
+.ipynb_checkpoints/*
