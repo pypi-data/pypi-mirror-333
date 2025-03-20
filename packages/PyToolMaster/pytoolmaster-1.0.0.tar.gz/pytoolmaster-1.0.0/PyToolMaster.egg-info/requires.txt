@@ -1,0 +1,5 @@
+sumy
+Pillow
+schedule
+sympy
+requests
