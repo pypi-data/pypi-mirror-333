@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: dtpyftp
+Version: 0.1.1
+Summary: A package that has different utils, wrappers, and functions.
+License: MIT
+Author: Reza Shirazi
+Author-email: reza@datgate.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: paramiko (>=3.5.0,<4.0.0)
+Requires-Dist: python-dateutil (>=2.9.0.post0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Python FTP Tools Package
+
+A Python package that have some tools for ftp controlling.
+
+## Installation
+
+To use the `dtpyftp` in your project, you can install it directly via `pip`.
+
+### Installation via `pip`
+
+```bash
+pip install dtpyftp
+```
+
