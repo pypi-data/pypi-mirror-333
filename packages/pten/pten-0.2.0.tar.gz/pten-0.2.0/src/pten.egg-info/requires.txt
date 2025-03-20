@@ -1,0 +1,4 @@
+apscheduler
+lunardate
+openai
+pycryptodome
