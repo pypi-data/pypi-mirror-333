@@ -1,0 +1,2 @@
+neon-transformers>=0.2.1a8,~=0.1
+ovos-lingua-franca~=0.4
