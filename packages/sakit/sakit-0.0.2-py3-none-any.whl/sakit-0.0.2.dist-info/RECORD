@@ -1,0 +1,8 @@
+sakit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sakit/search_internet/__init__.py,sha256=BSjrhFAHZnDd80QpEvJT5bVjQiFji7OO4cIOR1t09Sg,109
+sakit/search_internet/plugin.py,sha256=Lz6_Vd1c8rcONaFF4WeSU3t19a0gwzDmw_44Ml-ODnM,5051
+sakit-0.0.2.dist-info/LICENSE,sha256=ghKIoiIa6gMFml7Ys2wUHFfaQGPWGGSOWZCDsVes0r8,1057
+sakit-0.0.2.dist-info/METADATA,sha256=2pvRPzgDcjOfqVqSfs2WbDp891XLV5VieO09K492dQE,3895
+sakit-0.0.2.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+sakit-0.0.2.dist-info/entry_points.txt,sha256=WJY5Q50iztJy4oOL5K6uA-Y8r4OcjWK5nKUMCZb2UyY,75
+sakit-0.0.2.dist-info/RECORD,,
