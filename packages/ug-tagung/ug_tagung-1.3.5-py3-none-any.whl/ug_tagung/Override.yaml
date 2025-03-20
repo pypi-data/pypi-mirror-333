@@ -1,0 +1,12 @@
+## Override.yaml
+#
+# Einzulesen mit PyYAML
+
+##  PostgreSQL Server Daten
+#       PSQL_HOST
+#           I.d.R. 138.199.218.230, also der Hetzner vServer
+#       PSQL_PORT
+#       PSQL_DATABASE
+PSQL_HOST: '138.199.218.230'
+PSQL_PORT: '22555'
+PSQL_DATABASE: 'cg'
