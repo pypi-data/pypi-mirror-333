@@ -1,0 +1,11 @@
+---
+thales_install_client: true
+security_world_iso_zip_url: https://myhost.example.com/SecWorld_Lin64-13.4.4.iso.zip
+nshield_hsms:
+  - name: "My HSM 1"
+    ip: 192.168.1.1
+  - name: "My HSM 2"
+    ip: 192.168.1.1
+thales_rfs_server_ip_address: 192.168.1.10
+thales_bootstrap_client: 192.168.100.1
+thales_client_ips: 192.168.100.1 192.168.100.2 192.168.100.3
