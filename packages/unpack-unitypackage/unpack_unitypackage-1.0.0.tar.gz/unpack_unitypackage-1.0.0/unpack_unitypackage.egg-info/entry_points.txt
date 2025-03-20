@@ -1,0 +1,2 @@
+[console_scripts]
+unpack_unitypackage = unpack_unitypackage:main

@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+unpack_unitypackage.py
+unpack_unitypackage.egg-info/PKG-INFO
+unpack_unitypackage.egg-info/SOURCES.txt
+unpack_unitypackage.egg-info/dependency_links.txt
+unpack_unitypackage.egg-info/entry_points.txt
+unpack_unitypackage.egg-info/requires.txt
+unpack_unitypackage.egg-info/top_level.txt

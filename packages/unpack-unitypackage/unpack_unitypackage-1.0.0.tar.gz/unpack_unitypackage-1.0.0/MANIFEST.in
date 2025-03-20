@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+include unpack_unitypackage.py 
