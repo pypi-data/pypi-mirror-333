@@ -1,0 +1,26 @@
+[project]
+name = "action-engine"
+version = "0.1.2"
+description = "Light-weight, fully-typed tool call orchestration framework for agentic workflows."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.10.4",
+    "uvicorn>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "pymdown-extensions>=10.14",
+    "mkdocs-material==9.5.50",
+    "mypy>=1.14.0",
+    "pytest>=8.3.4",
+    "ruff>=0.8.4",
+]
+
+demo = [
+    "python-dotenv>=1.0.1",
+    "bilibili-api-python>=16.3.0",
+    "cohere>=5.13.5",
+    "pygithub>=2.5.0",
+]
