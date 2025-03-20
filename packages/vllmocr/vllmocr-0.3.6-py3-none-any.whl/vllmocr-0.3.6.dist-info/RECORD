@@ -1,0 +1,12 @@
+vllmocr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vllmocr/config.py,sha256=6fU7N1ZMJk31hQG-OkzFoipc_qYnVgikbFXaDnSqfOc,3402
+vllmocr/image_processing.py,sha256=bwGFJa1nkteysozn3M8rKjDtvc9MHChEg3CE0iV79R8,6836
+vllmocr/llm_interface.py,sha256=WpzexZWgD3AbwyLWzOoVS-p5eW5Wgvsc-0nFBNu7c6I,11334
+vllmocr/main.py,sha256=mF_jZb_iM4Sd44zmGHkWZMnyGDV4BnHVTQ60xeRJujQ,6045
+vllmocr/prompts.py,sha256=fnZ1kepbXAn1IwRjQ1geZW9UbA3n2_-T_d4DtljLyjw,2718
+vllmocr/utils.py,sha256=DJRnvRjYzvvfYRcz62hWZRZgrnnZ-kS15tEGYJ1nSzQ,1048
+vllmocr-0.3.6.dist-info/METADATA,sha256=s2bRIjLBSlgijnRBQzxXwjjGGyF-2okREo5xjsCbvus,4886
+vllmocr-0.3.6.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+vllmocr-0.3.6.dist-info/entry_points.txt,sha256=xOTUYSEZIdZPFRK3iur1Fc9-FzhelRjm3psYcvl68Uo,46
+vllmocr-0.3.6.dist-info/top_level.txt,sha256=qQGIzRWhcx3flNxk1gpdmM5Vw-Gu4loRT6UUu2v74jg,8
+vllmocr-0.3.6.dist-info/RECORD,,
