@@ -1,0 +1,11 @@
+crackmnist/__init__.py,sha256=6JM655kiSDOnX4_UvVbXpSKTbG1MAcjnUSmULsN0rmg,162
+crackmnist/dataset.py,sha256=pTsWv2vcCRno3AHFfozhXkCqFjNp7BZoG0QcNckR_Q8,3733
+crackmnist/info.py,sha256=ZZuAoJyhMtQryAkwpcc8tWDRH2GiOcCy0TOqds7t7Z4,2615
+crackmnist/loss.py,sha256=_RKJNWMoD1rvJOegWU2OIRyY4L8P4oeXPydxw5mYvNk,1882
+crackmnist/nets.py,sha256=Gyb6lSgjPKtFpU5tuzXzQLEE7sxJncBy6SSTc_NHh5Q,4189
+crackmnist/transforms.py,sha256=Db7itETZiCfs_MQCQS_HISWrwrAlQJFXA7TOXivhjqo,832
+crackmnist-1.0.0.dist-info/LICENSE,sha256=uE73RJM5ZPFJE3lVncDb2igCRZk3lw9yNkAiSdg3Lbo,1086
+crackmnist-1.0.0.dist-info/METADATA,sha256=SHNjrUxaXXSEKMnOEqEJUupIqNkNjeUkpLUCkzpseXU,10782
+crackmnist-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+crackmnist-1.0.0.dist-info/top_level.txt,sha256=UypvkF6INFKjFHhWLRHENrg_bz7_2_kpB4Sh5u5i08w,11
+crackmnist-1.0.0.dist-info/RECORD,,
