@@ -1,0 +1,2 @@
+[console_scripts]
+bpdp = bpdp_cli.__main__:main
