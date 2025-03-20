@@ -1,0 +1,16 @@
+starferry/__init__.py,sha256=haNYw7Z0hu9h6w28elNgEYaztSpZT3P9hhRSlBsQXTE,86
+starferry/main.py,sha256=srh-hPtWBcHnYFtVxfSoSWSiZgA4FZjgYwR0_KMqFPY,1208
+starferry/routers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starferry/routers/bingo.py,sha256=aaOlhFqdKZiTQ9spLH302uYsTRR1OonDB5QXXItFQtM,2337
+starferry/routers/finance.py,sha256=10_w7o2juYBrGMh32_KbveULW9jk2tejpyUAD-uC6PE,4
+starferry/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starferry/services/gemini_service.py,sha256=PzkWbpFRyYbcPmgfynGR8qx4QpzQAKYvWduobIcuLQI,2376
+starferry/services/grok_service.py,sha256=-AhX-BOlBoCXUc9DB-9ZWpw_sU1q2OMHB-ElvmwPkcw,1716
+starferry/services/openai_service.py,sha256=6CW1MWiNyv48B8yP8CtXZOflWpqhKB5IQfPfX-a9GlE,1571
+starferry/services/sovits_service.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starferry/services/token_service.py,sha256=2TWBYicJglthXGS1dHW2zq212sX0X5YPl9_Uq67nH-Q,10410
+starferry/utils/__init__.py,sha256=sXenKV8HKEzukafHX--ED5NlYrEj7Qi8BeUE8imQcf8,697
+starferry/utils/ip_tracker.py,sha256=wL8jq3v6J-2A235ofi8WoDk8KMbBShgrRURRdZls7BE,1311
+starferry-0.1.1.dist-info/METADATA,sha256=r0C8n9rAf_OooNpT0YE4aaaS9dzN6SNrHN6nrAHdtG4,4668
+starferry-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+starferry-0.1.1.dist-info/RECORD,,
