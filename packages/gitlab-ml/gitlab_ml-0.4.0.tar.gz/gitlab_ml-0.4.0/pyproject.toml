@@ -1,0 +1,66 @@
+[project]
+name = "gitlab-ml"
+version = "0.4.0"
+description = "CLI tool for managing machine learning models in GitLab's Model Registry"
+requires-python = ">=3.9,<4.0"
+dependencies = [
+    "typer[all]>=0.15.2",
+    "rich>=13.9.4",
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.1",
+    "python-gitlab>=5.6.0",
+    "semver>=3.0.4",
+    "python-dateutil>=2.9.0.post0",
+    "httpx>=0.28.1",
+    "mlflow-skinny>=2.20.3",
+]
+authors = [
+    {name = "Ahmet Öner"}
+]
+license = { text = "MIT" }
+readme = "README.md"
+
+[project.urls]
+Repository = "https://github.com/ahmetoner/gitlab-ml"
+Changelog = "https://github.com/ahmetoner/gitlab-ml/blob/main/CHANGELOG.md"
+
+[tool.poetry]
+requires-poetry = ">=2.0"
+classifiers = [
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.25.3"
+pytest-cov = "^6.0.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = "^1.15.0"
+ruff = "^0.9.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.ruff]
+select = ["E", "F", "B", "I"]
+ignore = []
+line-length = 88 
