@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+wltdecode.py
+wltdecode.egg-info/PKG-INFO
+wltdecode.egg-info/SOURCES.txt
+wltdecode.egg-info/dependency_links.txt
+wltdecode.egg-info/requires.txt
+wltdecode.egg-info/top_level.txt
