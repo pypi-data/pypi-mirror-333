@@ -1,0 +1,8 @@
+requests>=2.25.0
+pandas>=1.2.0
+python-dateutil>=2.8.0
+pytest>=6.0.0
+mypy>=0.900
+black>=21.0
+web3==6.20.2
+eth-account==0.11.0
