@@ -1,0 +1,7 @@
+README.md
+setup.py
+rfitestplaceholder/__init__.py
+rfitestplaceholder.egg-info/PKG-INFO
+rfitestplaceholder.egg-info/SOURCES.txt
+rfitestplaceholder.egg-info/dependency_links.txt
+rfitestplaceholder.egg-info/top_level.txt
