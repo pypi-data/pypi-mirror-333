@@ -1,0 +1,13 @@
+perscache/__init__.py,sha256=kild9ncAisBFvefgaBDDVHtnwMBfu9Xw0EWIbqrS2uY,66
+perscache/_logger.py,sha256=mikftiKaA_KrkLizWs-GW9fku0mPkgXv9xeBCm4ILmY,611
+perscache/cache.py,sha256=nEOKojk7q-zNb8AUsFo4jONzQUFQHEYNCAOkRO-tH8A,12371
+perscache/compatibility.py,sha256=x0Z9zg-4aWd60FFYaxx8TBztRhisVV0QsmOcGgSLn6E,1772
+perscache/serializers.py,sha256=9mWpy3CdBqfGNRtPx6V6AJdkOpN4kHt6lkt14YENikk,3218
+perscache/storage.py,sha256=BJDg5cqdC0liiaQ3AqlPZxVs-KQt4LawoWkZFVSOCMA,7268
+perscache-0.7.1.dist-info/AUTHORS,sha256=c97q9oF7BGZlc7lL8wfDY5HBHCL5fADIHvp2S8yw-NU,41
+perscache-0.7.1.dist-info/LICENSE,sha256=rhDCr6dVMMIwgtdJxAOVVxFuYD7AT8hcpRdQ8Rm0-mE,1074
+perscache-0.7.1.dist-info/METADATA,sha256=vw8V1Gqi_tqel0mVbCuh6innU2VNGCLtmH1H86Q2V7M,12193
+perscache-0.7.1.dist-info/WHEEL,sha256=SrDKpSbFN1G94qcmBqS9nyHcDMp9cUS9OC06hC0G3G0,109
+perscache-0.7.1.dist-info/pbr.json,sha256=-Tb6LyYMoxYLaLaRjTR15ugS1FeebarQpJKG23dcuH0,47
+perscache-0.7.1.dist-info/top_level.txt,sha256=s7BtJjAhlTMaAyzjQIKxjg0QGjFqLp9XBGXw4KO7orA,10
+perscache-0.7.1.dist-info/RECORD,,
