@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: abracudabra
+Version: 0.1.3
+Summary: Convert Tensors, Arrays and DataFrames Between CPU and CUDA
+Project-URL: Homepage, https://gitlab.cern.ch/particlepredatorinvasion/abracudabra
+Project-URL: Documentation, https://abracudabra.docs.cern.ch
+Project-URL: Repository, https://gitlab.cern.ch/particlepredatorinvasion/abracudabra
+Project-URL: Issues, https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/issues
+Project-URL: Changelog, https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/-/blob/master/CHANGELOG.md
+Author-email: Anthony Correia <anthony.correia@cern.ch>
+License: Apache License (2.0)
+License-File: LICENSE
+Keywords: array,cpu,cuda,cudf,cupy,data-processing,data-science,dataframe,deep-learning,gpu,machine-learning,numpy,pandas,series,tensor,torch
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Provides-Extra: cpu
+Requires-Dist: numpy>=2.0.2; extra == 'cpu'
+Requires-Dist: pandas>=2.2.3; extra == 'cpu'
+Requires-Dist: torch<2.6.0; extra == 'cpu'
+Provides-Extra: cuda124
+Requires-Dist: cudf-cu12==25.2.*; extra == 'cuda124'
+Requires-Dist: cupy-cuda12x>=13.4.0; extra == 'cuda124'
+Requires-Dist: torch<2.6.0; extra == 'cuda124'
+Description-Content-Type: text/markdown
+
+![Abracudabra logo](https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/raw/master/docs/source/_static/logo.png)
+
+<h2 align="center">Convert Tensors, Arrays and DataFrames Between CPU and CUDA</h2>
+
+
+<p align="center">
+  <a href="https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/-/pipelines/">
+    <img alt="Pipeline Status" src="https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/badges/master/pipeline.svg" />
+  </a>
+  <a href="https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/pipelines/latest">
+    <img alt="Test Coverage" src="https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/badges/master/coverage.svg" />
+  </a>
+  <a href="https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/-/blob/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/pypi/l/abracudabra" />
+  </a>
+  <a href="https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/-/releases">
+    <img alt="Latest Release" src="https://gitlab.cern.ch/particlepredatorinvasion/abracudabra/-/badges/release.svg" />
+  </a>
+  <a href="https://pypi.org/project/abracudabra/">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/abracudabra" />
+  </a>
+  <a href="https://pypi.org/project/abracudabra/">
+    <img alt="Python Version" src="https://img.shields.io/pypi/pyversions/abracudabra" />
+  </a>
+</p>
+
+📖 **Documentation:** https://abracudabra.docs.cern.ch/master
+
+
+Abracudabra simplifies moving data between CPU and CUDA devices,
+supporting seamless conversions for
+[Torch](https://pytorch.org/docs/stable/index.html) tensors,
+[NumPy](https://numpy.org/doc/stable/)/[CuPy](https://docs.cupy.dev/en/stable/) arrays,
+and [Pandas](https://pandas.pydata.org/docs/)/[cuDF](https://docs.rapids.ai/api/cudf/stable/) Series
+and DataFrames.
+
+## Quick Installation
+
+```bash
+pip install abracudabra
+```
+
+## Basic Usage
+
+Here's a quick example demonstrating how to convert a NumPy array to a CUDA-compatible
+(CuPy) array:
+```python
+from abracudabra import to_array
+import torch
+
+tensor = torch.rand(2, 3, device="cuda:0")
+array = to_array(tensor)
+
+print(type(array))  # <class 'cupy.ndarray'>
+```
+
+## More Information
+
+Abracudabra also supports conversions for dataframes, series, tensors,
+and includes utilities for querying and managing device contexts.
+For comprehensive documentation and additional examples,
+please visit the [official usage guide](https://abracudabra.docs.cern.ch/master/usage.html).
+
