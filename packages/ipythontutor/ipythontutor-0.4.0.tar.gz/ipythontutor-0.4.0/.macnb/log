@@ -1,0 +1,95 @@
+[I 2025-03-14 18:41:55.887 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-03-14 18:41:55.892 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[W 2025-03-14 18:41:55.894 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-03-14 18:41:55.894 LabApp] 'iopub_data_rate_limit' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2025-03-14 18:41:55.897 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+[W 2025-03-14 18:41:55.897 ServerApp] ServerApp.iopub_data_rate_limit config is deprecated in 2.0. Use ZMQChannelsWebsocketConnection.iopub_data_rate_limit.
+[I 2025-03-14 18:41:55.897 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-03-14 18:41:56.203 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-03-14 18:41:56.269 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-03-14 18:41:56.272 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-03-14 18:41:56.274 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-03-14 18:41:56.275 LabApp] JupyterLab extension loaded from /Users/tparment/miniconda3/envs/ipythontutor/lib/python3.13/site-packages/jupyterlab
+[I 2025-03-14 18:41:56.275 LabApp] JupyterLab application directory is /Users/tparment/miniconda3/envs/ipythontutor/share/jupyter/lab
+[I 2025-03-14 18:41:56.276 LabApp] Extension Manager is 'pypi'.
+[I 2025-03-14 18:41:56.331 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-03-14 18:41:56.333 ServerApp] Serving notebooks from local directory: /Users/tparment/git/ipythontutor
+[I 2025-03-14 18:41:56.333 ServerApp] Jupyter Server 2.15.0 is running at:
+[I 2025-03-14 18:41:56.333 ServerApp] http://localhost:53648/lab?token=...
+[I 2025-03-14 18:41:56.333 ServerApp]     http://127.0.0.1:53648/lab?token=...
+[I 2025-03-14 18:41:56.333 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2025-03-14 18:41:56.368 ServerApp] Could not determine npm prefix: Command '['/usr/local/bin/npm', 'prefix', '-g']' returned non-zero exit status 127.
+[I 2025-03-14 18:41:56.383 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2025-03-14 18:42:02.101 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-03-14 18:42:04.844 ServerApp] Kernel started: f939878f-da51-402d-b095-1cbe16b8cbeb
+[I 2025-03-14 18:42:06.611 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[I 2025-03-14 18:42:06.614 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[I 2025-03-14 18:42:06.629 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[W 2025-03-14 18:42:06.662 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x10f54bc50>
+[I 2025-03-14 18:42:09.613 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:42:12.709 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:42:18.739 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:42:21.766 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:42:39.801 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:42:42.830 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:42:54.860 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:00.890 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:06.941 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:09.977 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:25.012 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:28.043 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:31.070 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:43.100 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:46.128 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:43:52.155 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:01.187 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:10.216 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:13.244 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:16.270 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:19.297 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:22.327 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:25.361 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:28.389 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:44:37.418 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:31.462 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:34.494 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:37.538 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:40.565 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:43.593 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:49.622 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:52.650 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:55.677 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:45:58.705 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:46:01.731 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:46:04.761 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:46:07.794 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:46:10.827 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:48:16.897 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:50:37.978 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 18:51:08.757 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:02:09.004 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:02:39.061 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:02:42.093 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:03:15.135 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:03:18.163 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:05:09.706 ServerApp] Starting buffering for f939878f-da51-402d-b095-1cbe16b8cbeb:f441496b-3dcd-49e0-aa20-36858fbd44e2
+[W 2025-03-14 19:05:11.093 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-03-14 19:05:11.221 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[I 2025-03-14 19:05:11.598 ServerApp] Starting buffering for f939878f-da51-402d-b095-1cbe16b8cbeb:ac18c5c0-2fe2-4d83-9d13-daeb29e94953
+[I 2025-03-14 19:05:12.598 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[I 2025-03-14 19:05:18.205 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:07:12.770 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:08:24.823 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:08:38.031 ServerApp] Starting buffering for f939878f-da51-402d-b095-1cbe16b8cbeb:e2934794-0867-4a96-8b76-80ab7d5b4638
+[W 2025-03-14 19:10:24.466 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-03-14 19:10:24.592 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[I 2025-03-14 19:10:24.971 ServerApp] Starting buffering for f939878f-da51-402d-b095-1cbe16b8cbeb:7842790d-94a8-41b5-82e8-2fd6f5e30585
+[I 2025-03-14 19:10:25.934 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[I 2025-03-14 19:11:21.376 ServerApp] Starting buffering for f939878f-da51-402d-b095-1cbe16b8cbeb:9cac0488-ca80-4f12-b320-5382c0dcdca0
+[W 2025-03-14 19:11:22.517 ServerApp] Notebook screenshot.ipynb is not trusted
+[I 2025-03-14 19:11:22.870 ServerApp] Connecting to kernel f939878f-da51-402d-b095-1cbe16b8cbeb.
+[I 2025-03-14 19:11:34.621 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:11:49.661 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:11:55.694 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:11:58.727 ServerApp] Saving file at /screenshot.ipynb
+[I 2025-03-14 19:12:04.902 ServerApp] Starting buffering for f939878f-da51-402d-b095-1cbe16b8cbeb:31557183-d4fb-455b-b881-ec29e7c65a14
