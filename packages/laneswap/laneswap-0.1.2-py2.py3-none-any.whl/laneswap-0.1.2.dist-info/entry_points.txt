@@ -1,0 +1,3 @@
+[console_scripts]
+laneswap = laneswap.cli.commands:main
+laneswap-web = laneswap.examples.web_monitor.launch:main
