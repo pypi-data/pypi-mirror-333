@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BUDA{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<style>
+
+</style>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="BUDA Logo" width="30" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item" {% if request.path == '' %}active{% endif %}>
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/narratives/">Narratives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user_profiles">User Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/activities">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/statistics/dashboard">Statistics</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <a href="/context" class="btn btn-outline-light me-2"  title="Modify the context">
+                    <i class="fa-solid fa-cubes"></i>
+                </a>
+                <a href="/settings" class="btn btn-outline-light me-2"  title="Settings">
+                    <i class="fas fa-cog"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+        <!-- Bottom Button for FAQ -->
+        <div style="position: fixed; bottom: 20px; right: 20px;">
+            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#faqModal">
+                <i class="fa fa-question-circle" aria-hidden="false"></i>
+            </button>
+        </div>
+    
+        <!-- FAQ Modal -->
+        <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="faqModalLabel">Frequently Asked Questions</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <strong>Q: What is BUDA?</strong>
+                                <p>A: BUDA stands for Behavioral User-driven Deceptive Activities. BUDA is a cutting-edge experimental cybersecurity solution designed to automate the simulation of realistic user behaviors within decoy environments.  
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Q: How do I create a narrative?</strong>
+                                <p>Go to the <a href="/narratives">Narrative Management</a> section, fill in the form, and create it. The Narrative act as the strategic backbone of the deception operation.</p>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Q: How can I generate a user profile?</strong>
+                                <p>Use the <a href="/user_profiles">User Profile</a> section to create every simulated identity used in your environment. These profiles mimic real users</p>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Q: How do I upload context?</strong>
+                                <p>The process begins by integrating real-world environmental data into BUDA through 
+                                    <a href="/context">Global Context</a>. This involves uploading EVTX logs to extract information.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Global JavaScript -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

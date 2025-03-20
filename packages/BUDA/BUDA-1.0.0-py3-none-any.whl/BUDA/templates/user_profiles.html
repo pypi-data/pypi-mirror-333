@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}Honey user profiles {% endblock %}
+
+{% block content %}
+<h3 class="mb-4">Honey user profile Management</h1>
+
+<!-- Form to create a user profile -->
+<div class="card mb-4">
+    <div class="card-header">Honey user profiles</div>
+    <div class="card-body">
+        {% if user_profiles %}
+        <ul class="list-group">
+            {% for profile in user_profiles %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>{{ profile.name }}</strong> -  Role: {{ profile.role }}
+                </div>
+                <div>
+                    <button class="btn btn-danger btn-sm delete-btn" id="deleteBtn-{{ profile.id }}" 
+                    onmousedown="startHoldDelete({{ profile.id }},'user_profiles')"
+                    onmouseup="cancelHoldDelete({{ profile.id }})"
+                    onmouseleave="cancelHoldDelete({{ profile.id }})">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    <a href="{{ url_for('user_profiles_bp.edit_user_profile', user_profile_id=profile.id) }}" class="btn btn-warning btn-sm"> <i class="fa fa-pencil" aria-hidden="true"></i> </a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No fake profiles available.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div>
+            Create New profile
+        </div>
+
+        <div class="d-flex align-items-center">
+            <button id="generateUserProfileButton" class="btn btn-outline-dark" title="Ask to the LLM!">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+            </button>
+            <div id="generateResponse" style="margin-left: 1rem;"></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('user_profiles_bp.manage_user_profiles') }}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="role" class="form-label">Role</label>
+                <input type="text" class="form-control" id="role" name="role" required>
+            </div>
+            <div class="mb-3">
+                <label for="behavior_pattern" class="form-label">Behavior Pattern</label>
+                <textarea class="form-control" id="behavior_pattern" name="behavior_pattern" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Activity Executor</label>
+                <div class="card mb-3 custom-div">
+                    <div class="card-body p-4">
+                        <label for="winrm_server" class="form-label">WinRM Server</label>
+                        <input type="text" class="form-control" id="winrm_server" name="winrm_server" required placeholder="http://remote-server:5985/wsman">
+                        <label for="winrm_username" class="form-label">WinRM Username</label>
+                        <input type="text" class="form-control" id="winrm_username" name="winrm_username" required>
+                        <label for="winrm_password" class="form-label">WinRM Password</label>
+                        <input type="password" class="form-control" id="winrm_password" name="winrm_password" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="narratives_id" class="form-label">Assigned Narratives</label>
+                <select multiple class="form-control" id="narratives_id" name="narratives_id">
+                    {% for narrative in all_narratives %}
+                        <option value="{{ narrative.id }}">
+                            {{ narrative.title }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Profile</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .custom-div {
+      background-color: #f0f8ffa6; /* AliceBlue */
+    }
+
+    /* For Chrome, Safari, Opera, and Edge  */
+    input[type="range"]::-webkit-slider-runnable-track {
+        background: #212529;
+        height: 0.5rem;
+    }
+
+    /* For Firefox */
+    input[type="range"]::-moz-range-track {
+        background: #212529;
+        height: 0.5rem;
+    }
+
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Function to confirm narrative deletion
+    function confirmDelete(form) {
+    const confirmMessage = "Are you sure you want to delete this user? This action cannot be undone.";
+    if (confirm(confirmMessage)) {
+        return true; // Proceed with form submission
+    }
+    return false; // Prevent form submission
+    }
+    document.getElementById('generateUserProfileButton').addEventListener('click', async () => {
+
+        if (document.getElementById('name').value != '' && document.getElementById('role').value != '' && document.getElementById('behavior_pattern').value != '') {
+            alert('You need to leave at least one field on blank to generate a user profile');
+            return;
+        }
+
+        const narrativeId = document.getElementById('narratives_id').value;
+        if (narrativeId == '') {
+            alert('You need to select a narrative');
+            return;
+        }
+        const name = document.getElementById('name').value;
+        const role = document.getElementById('role').value;
+        const behaviorPattern = document.getElementById('behavior_pattern').value;
+
+        const response = await fetch('/ai/generate/user_profile', { 
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: name,
+                role: role,
+                behavior_pattern: behaviorPattern,
+                narrative_id: narrativeId
+            })
+        });
+        const result = await response.json();
+
+        document.getElementById('generateResponse').textContent = "User profile generated!" || result.error;
+        
+        // Convert to json and extract data from the result and fill the form
+        jsonResult = JSON.parse(result.message);
+
+        if (document.getElementById('name').value == '') {
+            document.getElementById('name').value = jsonResult.complete_name || '';
+        }
+        if (document.getElementById('role').value == '') {
+            document.getElementById('role').value = jsonResult.role || '';
+        }
+        if (document.getElementById('behavior_pattern').value == '') {
+            document.getElementById('behavior_pattern').value = jsonResult.behavior_pattern || '';
+        }
+    });
+
+</script>    
+{% endblock %}
