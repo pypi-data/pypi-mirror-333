@@ -1,0 +1,4 @@
+msal<2,>=1.29
+
+[portalocker]
+portalocker<4,>=1.4
