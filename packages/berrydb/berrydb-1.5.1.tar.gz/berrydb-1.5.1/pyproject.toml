@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "berrydb"
+version = "1.5.1"
+description = "The database for unstructured data and AI apps"
+authors = ["BerryDB"]
+license = "Proprietary"
+readme = "README.md"
+homepage = "https://berrydb.io"
+packages = [
+  { include = "berrydb" },
+  { include = "database" },
+  { include = "constants" },
+  { include = "utils" },
+  { include = "evaluator" },
+  { include = "fts" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+requests = "*"
+deepeval = "*"
+label-studio-sdk = "1.0.5"
+
+[tool.poetry.dev-dependencies]
+# Add development dependencies here if needed, e.g.:
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry>=1.1.0"]
+build-backend = "poetry.core.masonry.api"
