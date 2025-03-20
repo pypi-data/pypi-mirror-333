@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: grabba
+Version: 0.0.1
+Summary: Python SDK for Grabba API
+Author: Bolu Agbana
+Author-email: obaa@obaa.io
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+
