@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: fastrtc_walkie_talkie
+Version: 0.0.1
+Summary: FastRTC Turn Detection Algorithm that works like a walkie talkie. Finish your turn when you say "over".
+Project-URL: Documentation, https://github.com/Freddy Boulton/fastrtc-walkie-talkie#readme
+Project-URL: Issues, https://github.com/Freddy Boulton/fastrtc-walkie-talkie/issues
+Project-URL: Source, https://github.com/Freddy Boulton/fastrtc-walkie-talkie
+Author-email: Freddy Boulton <not-my-email@domain.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: fastrtc>=0.0.15
+Description-Content-Type: text/markdown
+
+# ReplyOnOver FastRTC
+
+[![PyPI - Version](https://img.shields.io/pypi/v/replyonover-fastrtc.svg)](https://pypi.org/project/replyonover-fastrtc)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/replyonover-fastrtc.svg)](https://pypi.org/project/replyonover-fastrtc)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install replyonover-fastrtc
+```
+
+## License
+
+`replyonover-fastrtc` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
