@@ -1,0 +1,1 @@
+CREATE_AGENT_V2 = "/team-studio/v1/agents"  # POST -> Create agent
