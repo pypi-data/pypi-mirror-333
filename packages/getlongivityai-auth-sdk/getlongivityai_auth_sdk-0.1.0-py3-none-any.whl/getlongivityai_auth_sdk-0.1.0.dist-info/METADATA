@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: getlongivityai-auth-sdk
+Version: 0.1.0
+Summary: Python Library to intract with Auth Service
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pyjwt>=2.10.1
+
+A Python Library to interact with Auth service in a generic way
+
+## Features
+
+- Common Types
+- JWT token construction
+- Notifications sending
