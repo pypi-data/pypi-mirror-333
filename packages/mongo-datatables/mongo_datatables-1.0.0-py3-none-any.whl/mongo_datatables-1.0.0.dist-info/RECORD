@@ -1,0 +1,12 @@
+mongo_datatables/__init__.py,sha256=FF93qPIW4rrQXc-4Bwcz2acEo4C0Kn68R6Rv3m3B8lw,203
+mongo_datatables/datatables.py,sha256=lah92s9Sd1piRVU35tCSSXCygaM37fOFP0kadlRORBY,23110
+mongo_datatables/editor.py,sha256=EHLqEuo-IntLytC2wtV4gDGRqLPyuYUBwWPFKH5xI2g,9220
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_datatables.py,sha256=THhyVavz1o9deB0OYtOGoKdcpqCF_HCkWEuWF0RVoOc,27348
+tests/test_editor.py,sha256=2j4-MruBc-TJaMfJaBT8jrmkdhvo-2xvElUYsz6Ordg,14790
+tests/test_init.py,sha256=0t93pYZjMiNC6tYrh92tFMSzIznUhhRtTtEEDp7BkcE,1014
+mongo_datatables-1.0.0.dist-info/LICENSE.txt,sha256=1Q3ArzVtT2-JBT1oCs_LWl0qfIGy7VMHa3W500vxBok,1066
+mongo_datatables-1.0.0.dist-info/METADATA,sha256=XRDB6d4CS2Uc7ysK2LG8sv-slqtbGGTh4TInd_FYiCM,4470
+mongo_datatables-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mongo_datatables-1.0.0.dist-info/top_level.txt,sha256=TgWs1Hm6-NE1pA5530fAwanz0-8JfwlvEufzp7YQLc4,23
+mongo_datatables-1.0.0.dist-info/RECORD,,

@@ -1,0 +1,132 @@
+Metadata-Version: 2.2
+Name: mongo_datatables
+Version: 1.0.0
+Summary: Server-side processing for DataTables and Editor with MongoDB
+Home-page: https://github.com/pjosols/mongo-datatables
+Author: Paul Olsen
+Author-email: pjosols@wholeshoot.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/pjosols/mongo-datatables/issues
+Project-URL: Source, https://github.com/pjosols/mongo-datatables
+Project-URL: Documentation, https://github.com/pjosols/mongo-datatables#readme
+Keywords: datatables editor mongodb pymongo flask django server-side
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Flask
+Classifier: Framework :: Django
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pymongo>=3.9.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: sphinx_rtd_theme; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# mongo-datatables
+
+[![PyPI version](https://badge.fury.io/py/mongo-datatables.svg)](https://badge.fury.io/py/mongo-datatables)
+[![Downloads](https://static.pepy.tech/badge/mongo-datatables)](https://pepy.tech/project/mongo-datatables)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![codecov](https://codecov.io/gh/pjosols/mongo-datatables/branch/main/graph/badge.svg)](https://codecov.io/gh/pjosols/mongo-datatables)
+[![Tests](https://github.com/pjosols/mongo-datatables/actions/workflows/python-tests.yml/badge.svg)](https://github.com/pjosols/mongo-datatables/actions/workflows/python-tests.yml)
+
+Server-side processing for jQuery DataTables with MongoDB.
+
+## Support
+If you find this project helpful, consider buying me a coffee!
+
+<p>
+  <a href="https://www.buymeacoffee.com/yourusername" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="160">
+  </a>
+</p>
+
+## Overview
+
+This package provides an elegant bridge between jQuery DataTables and MongoDB databases, handling the translation of DataTables server-side requests into optimized MongoDB queries. It supports both read operations and full CRUD functionality when paired with DataTables Editor.
+
+## Key Capabilities
+
+- Server-side processing for efficient handling of large datasets
+- Advanced search functionality with column-specific filtering
+- Multi-column sorting with MongoDB optimization
+- Complete Editor integration for create, read, update, and delete operations
+- Framework-agnostic design compatible with Flask, Django, and other Python web frameworks
+
+## Installation
+
+```bash
+pip install mongo-datatables
+```
+
+## Basic Implementation
+
+```python
+from flask import request, jsonify
+from mongo_datatables import DataTables
+
+@app.route('/data/<collection>', methods=['POST'])
+def get_data(collection):
+    data = request.get_json()
+    results = DataTables(mongo, collection, data).get_rows()
+    return jsonify(results)
+```
+
+## Documentation
+
+For comprehensive documentation, visit [mongo-datatables.readthedocs.io](https://mongo-datatables.readthedocs.io/)
+
+## Development
+
+### Testing
+
+Run the tests:
+
+```bash
+python run_tests.py
+```
+
+Generate coverage report:
+
+```bash
+python run_coverage.py
+```
+
+Coverage reports are available in the `htmlcov` directory.
+
+## License
+
+Released under the MIT License.
