@@ -1,0 +1,13 @@
+nonebot_plugin_quote/__init__.py,sha256=uzRSsw4U1rFfKnXXr7JzUhw-uC-AsppbkUhcx1eoHzo,26964
+nonebot_plugin_quote/config.py,sha256=3ZZ4kRRecWlpGHfz-t7RvwCqf9zEDXmLf2q0BxYk0qQ,605
+nonebot_plugin_quote/make_image.py,sha256=Wk5GqwPwPV2nKbhW7D0SIsgDRfzeuxQyk_kpneMtgdQ,5718
+nonebot_plugin_quote/pilmoji/__init__.py,sha256=Z3HL_8oVCfE442OcxEmnwJ8drlR4CXjVEZ88pI2bMxY,131
+nonebot_plugin_quote/pilmoji/core.py,sha256=NgOMRvsGRiuDeLwz6S-QZHlLh07xV6oM8C3SbGLUYS0,17625
+nonebot_plugin_quote/pilmoji/helpers.py,sha256=CZahUwB8g8YbkoQaSxPtB6qIBA4g7OcoeOdLGOdnM1g,4160
+nonebot_plugin_quote/pilmoji/LICENSE,sha256=klKbZAQGe-brmvLYa9rHtFlXL_jXopNkq5b3sXVRDmE,1062
+nonebot_plugin_quote/pilmoji/README.md,sha256=4TMC108DY4d8Py_zzLEndXvHlkrweTuLDFS0hAAX5es,2407
+nonebot_plugin_quote/pilmoji/source.py,sha256=WJyRdMnRJ5uVtTuzn0YyF8ubea2eU1NOifA56I0EH_E,6201
+nonebot_plugin_quote/task.py,sha256=pc2V96hbD81QMzLtyoR6WdFPGAwSlck5vn8W0VgMIK0,7248
+nonebot_plugin_quote-0.4.0.1.dist-info/METADATA,sha256=Qiw6Fr1WHeDfYRUiOljl3KiiOYL8MYd2FX_q5ILsLkU,11908
+nonebot_plugin_quote-0.4.0.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+nonebot_plugin_quote-0.4.0.1.dist-info/RECORD,,
