@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: plato-sdk
+Version: 1.0.3
+Summary: Plato SDK
+Author-email: Pranav Putta <pranav@plato.so>, Rob Farlow <rob@plato.so>
+Requires-Python: >=3.12.8
+Requires-Dist: aiohttp>=3.11.13
+Requires-Dist: pydantic-settings>=2.8.1
+Requires-Dist: pydantic>=2.10.6
+Description-Content-Type: text/markdown
+
+# Plato SDK
+
+
+## Usage
+```python
+from plato import Plato
+
+async def run():
+    env = await client.make_environment("doordash")
+    cdp_url = env.cdp_url
+
+    # connect to browser and do modifications
+    browser = await playwright.chromium.connect_over_cdp(cdp_url)
+
+    # get state
+    state_mutations: dict = env.get_state()
+
+    # evaluate
+    ...
