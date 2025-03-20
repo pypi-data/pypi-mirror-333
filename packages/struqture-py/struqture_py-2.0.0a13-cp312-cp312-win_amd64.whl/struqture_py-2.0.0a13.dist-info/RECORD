@@ -1,0 +1,14 @@
+struqture_py-2.0.0a13.dist-info/METADATA,sha256=EzI3Qt34IGteOvy_yUGUn5Ab5XwaOssCp9XXeEYmh_I,4126
+struqture_py-2.0.0a13.dist-info/WHEEL,sha256=jABKVkLC9kJr8mi_er5jOqpiQUjARSLXDUIIxDqsS50,96
+struqture_py-2.0.0a13.dist-info/licenses/LICENSE,sha256=2v7ABawzEvGa0opGmZ8aR-OMbXcRK8Skk32IjXYdh78,11564
+struqture_py/bosons.pyi,sha256=G_Gb1RaottBkXeWRPeubjyvjSnZuC3lLx1rIQ_G7ubU,51056
+struqture_py/DEPENDENCIES,sha256=S25yhyc5NwmwZGfCE0znYqz7ZasQLXff2NYMkc2v08I,2360067
+struqture_py/fermions.pyi,sha256=3xfE4dBSGNdfGAmTVFXL2k98s6RHN0FVYC8qi9Kso6Q,53257
+struqture_py/LICENSE_FOR_BINARY_DISTRIBUTION,sha256=wM75BhMaNgruFXj6xXXgk8hThmywrPqzP-aO8qXMzb8,512
+struqture_py/mixed_systems.pyi,sha256=eymGByC6Zdanni0zGFgtA77HfhLKbwMFbGZe7OQFJEw,85645
+struqture_py/PYTHON_LICENSE,sha256=afJD6tT6yA29hZbjIFs-eNVD6iR2aAsZIy8x_BkVJDM,2444
+struqture_py/spins.pyi,sha256=fpwwWR7PnzGZ6rN_uneukeLWhFUBR9EzvUn6feHHj5o,88775
+struqture_py/struqture_py.pyi,sha256=n37F8yuQMTMUzpuY6ELaFb-OXcQpg2n0BBZeBEGdRQs,140
+struqture_py/__init__.py,sha256=Iv6R0AksVZuSHIAjC0wzZXnfunbdYlrPcNsEKOMjHfk,644
+struqture_py/struqture_py.cp312-win_amd64.pyd,sha256=OFoUAR0BGQwHdPftIWOG4uGJ9jGenZcSVHTKyQK6I3Y,6050816
+struqture_py-2.0.0a13.dist-info/RECORD,,
