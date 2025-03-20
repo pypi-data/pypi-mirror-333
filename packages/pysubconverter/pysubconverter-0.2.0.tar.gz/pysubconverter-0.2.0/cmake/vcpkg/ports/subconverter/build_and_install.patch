@@ -1,0 +1,674 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 22af45c..6edbcf1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -118,25 +118,41 @@ ELSE() #BUILD_STATIC_LIBRARY
+ 
+ ADD_LIBRARY(${BUILD_TARGET_NAME} STATIC
+     src/generator/config/ruleconvert.cpp
++    src/generator/config/nodemanip.cpp
+     src/generator/config/subexport.cpp
+     src/generator/template/templates.cpp
+-    src/lib/wrapper.cpp
++    src/handler/interfaces.cpp
++    src/handler/multithread.cpp
++    src/handler/webget.cpp
++    src/handler/upload.cpp
++    src/handler/settings.cpp
++    # src/lib/wrapper.cpp
+     src/parser/subparser.cpp
++    src/parser/infoparser.cpp
+     src/utils/base64/base64.cpp
+     src/utils/codepage.cpp
++    src/utils/file.cpp
+     src/utils/logger.cpp
+     src/utils/md5/md5.cpp
+     src/utils/network.cpp
+     src/utils/regexp.cpp
+     src/utils/string.cpp
++    src/utils/system.cpp
+     src/utils/urlencode.cpp)
+-TARGET_COMPILE_DEFINITIONS(${BUILD_TARGET_NAME} PRIVATE -DNO_JS_RUNTIME -DNO_WEBGET)
+ 
+-TARGET_INCLUDE_DIRECTORIES(${BUILD_TARGET_NAME} PUBLIC src)
++TARGET_INCLUDE_DIRECTORIES(${BUILD_TARGET_NAME} PRIVATE src)
++
++FIND_PACKAGE(inja CONFIG REQUIRED)
++TARGET_INCLUDE_DIRECTORIES(${BUILD_TARGET_NAME} PRIVATE pantor::inja)
++
++FIND_PACKAGE(CURL CONFIG REQUIRED)
++TARGET_INCLUDE_DIRECTORIES(${BUILD_TARGET_NAME} PRIVATE ${CURL_INCLUDE_DIRS})
++TARGET_LINK_LIBRARIES(${BUILD_TARGET_NAME} PRIVATE ${CURL_LIBRARIES})
+ 
+ FIND_PACKAGE(Rapidjson REQUIRED)
+ TARGET_INCLUDE_DIRECTORIES(${BUILD_TARGET_NAME} PRIVATE ${RAPIDJSON_INCLUDE_DIRS})
+ 
++if(OFF)
+ FIND_PACKAGE(PkgConfig REQUIRED)
+ 
+ PKG_CHECK_MODULES(YAML_CPP yaml-cpp>=0.6.3 REQUIRED)
+@@ -145,6 +161,9 @@ TARGET_LINK_DIRECTORIES(${BUILD_TARGET_NAME} PRIVATE ${YAML_CPP_LIBRARY_DIRS})
+ TARGET_INCLUDE_DIRECTORIES(${BUILD_TARGET_NAME} PRIVATE ${YAML_CPP_INCLUDE_DIRS})
+ TARGET_LINK_LIBRARIES(${BUILD_TARGET_NAME} PRIVATE ${YAML_CPP_LIBRARY})
+ TARGET_COMPILE_DEFINITIONS(${BUILD_TARGET_NAME} PRIVATE -DYAML_CPP_STATIC_DEFINE)
++endif()
++FIND_PACKAGE(yaml-cpp CONFIG REQUIRED)
++TARGET_LINK_LIBRARIES(${BUILD_TARGET_NAME} PRIVATE yaml-cpp::yaml-cpp)
+ 
+ FIND_PACKAGE(PCRE2 REQUIRED)
+ TARGET_INCLUDE_DIRECTORIES(${BUILD_TARGET_NAME} PRIVATE ${PCRE2_INCLUDE_DIRS})
+@@ -164,3 +183,32 @@ ENDIF()
+ IF(USING_MALLOC_TRIM)
+     TARGET_COMPILE_DEFINITIONS(${BUILD_TARGET_NAME} PRIVATE -DMALLOC_TRIM)
+ ENDIF()
++
++# Headers under src/ makes relative includes so directory structure must be kept
++target_include_directories(${BUILD_TARGET_NAME} PUBLIC $<INSTALL_INTERFACE:include>/${BUILD_TARGET_NAME})
++# Install the headers
++install(DIRECTORY src/ DESTINATION include/${BUILD_TARGET_NAME} FILES_MATCHING PATTERN "*.h" PATTERN "src/lib" EXCLUDE)
++
++include(CMakePackageConfigHelpers)
++configure_package_config_file(
++  "${CMAKE_CURRENT_SOURCE_DIR}/unofficial-${BUILD_TARGET_NAME}-config.cmake.in"
++  "${CMAKE_CURRENT_BINARY_DIR}/unofficial-${BUILD_TARGET_NAME}-config.cmake"
++  INSTALL_DESTINATION "share/unofficial-${BUILD_TARGET_NAME}"
++)
++install(
++  FILES "${CMAKE_CURRENT_BINARY_DIR}/unofficial-${BUILD_TARGET_NAME}-config.cmake"
++  DESTINATION "share/unofficial-${BUILD_TARGET_NAME}"
++)
++install(DIRECTORY base DESTINATION share/unofficial-${BUILD_TARGET_NAME})
++
++include(GNUInstallDirs)
++install(
++    TARGETS ${BUILD_TARGET_NAME}
++    EXPORT unofficial-${BUILD_TARGET_NAME}-targets
++    COMPONENT ${BUILD_TARGET_NAME}
++    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
++    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
++    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
++)
++
++install(EXPORT unofficial-${BUILD_TARGET_NAME}-targets FILE unofficial-${BUILD_TARGET_NAME}-targets.cmake NAMESPACE unofficial::${BUILD_TARGET_NAME}:: DESTINATION share/unofficial-${BUILD_TARGET_NAME})
+diff --git a/src/generator/config/nodemanip.cpp b/src/generator/config/nodemanip.cpp
+index 6f133cb..cece125 100644
+--- a/src/generator/config/nodemanip.cpp
++++ b/src/generator/config/nodemanip.cpp
+@@ -49,7 +49,7 @@ int addNodes(std::string link, std::vector<Proxy> &allNodes, int groupID, parse_
+ 
+     // TODO: replace with startsWith if appropriate
+     link = replaceAllDistinct(link, "\"", "");
+-
++#if 0
+     /// script:filepath,arg1,arg2,...
+     if(authorized) script_safe_runner(parse_set.js_runtime, parse_set.js_context, [&](qjs::Context &ctx)
+     {
+@@ -89,6 +89,7 @@ int addNodes(std::string link, std::vector<Proxy> &allNodes, int groupID, parse_
+             }
+         }
+     }, global.scriptCleanContext);
++#endif
+             /*
+             duk_context *ctx = duktape_init();
+             defer(duk_destroy_heap(ctx);)
+@@ -382,6 +383,7 @@ void nodeRename(Proxy &node, const RegexMatchConfigs &rename_array, extra_settin
+     {
+         if(!x.Script.empty() && ext.authorized)
+         {
++#if 0
+             script_safe_runner(ext.js_runtime, ext.js_context, [&](qjs::Context &ctx)
+             {
+                 std::string script = x.Script;
+@@ -400,6 +402,7 @@ void nodeRename(Proxy &node, const RegexMatchConfigs &rename_array, extra_settin
+                     script_print_stack(ctx);
+                 }
+             }, global.scriptCleanContext);
++#endif
+             continue;
+         }
+         if(applyMatcher(x.Match, real_rule, node) && real_rule.size())
+@@ -435,6 +438,7 @@ std::string addEmoji(const Proxy &node, const RegexMatchConfigs &emoji_array, ex
+         if(!x.Script.empty() && ext.authorized)
+         {
+             std::string result;
++#if 0
+             script_safe_runner(ext.js_runtime, ext.js_context, [&](qjs::Context &ctx)
+             {
+                 std::string script = x.Script;
+@@ -455,6 +459,7 @@ std::string addEmoji(const Proxy &node, const RegexMatchConfigs &emoji_array, ex
+             }, global.scriptCleanContext);
+             if(!result.empty())
+                 return result;
++#endif
+             continue;
+         }
+         if(x.Replace.empty())
+@@ -486,6 +491,7 @@ void preprocessNodes(std::vector<Proxy> &nodes, extra_settings &ext)
+             std::string script = ext.sort_script;
+             if(startsWith(script, "path:"))
+                 script = fileGet(script.substr(5), false);
++#if 0
+             script_safe_runner(ext.js_runtime, ext.js_context, [&](qjs::Context &ctx)
+             {
+                 try
+@@ -508,6 +514,7 @@ void preprocessNodes(std::vector<Proxy> &nodes, extra_settings &ext)
+                     script_print_stack(ctx);
+                 }
+             }, global.scriptCleanContext);
++#endif
+         }
+         if(failed) std::stable_sort(nodes.begin(), nodes.end(), [](const Proxy &a, const Proxy &b)
+         {
+diff --git a/src/generator/config/nodemanip.h b/src/generator/config/nodemanip.h
+index 5bce636..32dcdc0 100644
+--- a/src/generator/config/nodemanip.h
++++ b/src/generator/config/nodemanip.h
+@@ -5,7 +5,7 @@
+ #include <vector>
+ #include <limits.h>
+ 
+-#ifndef NO_JS_RUNTIME
++#if 0
+ #include <quickjspp.hpp>
+ #endif // NO_JS_RUNTIME
+ 
+@@ -24,7 +24,7 @@ struct parse_settings
+     std::string *sub_info = nullptr;
+     bool authorized = false;
+     string_icase_map *request_header = nullptr;
+-#ifndef NO_JS_RUNTIME
++#if 0
+     qjs::Runtime *js_runtime = nullptr;
+     qjs::Context *js_context = nullptr;
+ #endif // NO_JS_RUNTIME
+diff --git a/src/generator/config/subexport.cpp b/src/generator/config/subexport.cpp
+index c77e21b..591c2de 100644
+--- a/src/generator/config/subexport.cpp
++++ b/src/generator/config/subexport.cpp
+@@ -199,7 +199,7 @@ void groupGenerate(const std::string &rule, std::vector<Proxy> &nodelist, string
+     {
+         filtered_nodelist.emplace_back(rule.substr(2));
+     }
+-#ifndef NO_JS_RUNTIME
++#if 0
+     else if(startsWith(rule, "script:") && ext.authorized)
+     {
+         script_safe_runner(ext.js_runtime, ext.js_context, [&](qjs::Context &ctx){
+diff --git a/src/generator/config/subexport.h b/src/generator/config/subexport.h
+index fd77055..13c93d6 100644
+--- a/src/generator/config/subexport.h
++++ b/src/generator/config/subexport.h
+@@ -3,7 +3,7 @@
+ 
+ #include <string>
+ 
+-#ifndef NO_JS_RUNTIME
++#if 0
+ #include <quickjspp.hpp>
+ #endif // NO_JS_RUNTIME
+ 
+@@ -46,7 +46,7 @@ struct extra_settings
+     extra_settings(const extra_settings&) = delete;
+     extra_settings(extra_settings&&) = delete;
+ 
+-#ifndef NO_JS_RUNTIME
++#if 0
+     qjs::Runtime *js_runtime = nullptr;
+     qjs::Context *js_context = nullptr;
+ 
+diff --git a/src/handler/interfaces.cpp b/src/handler/interfaces.cpp
+index 61b0945..53053f3 100644
+--- a/src/handler/interfaces.cpp
++++ b/src/handler/interfaces.cpp
+@@ -535,7 +535,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
+         lIncludeRemarks = string_array{argIncludeRemark};
+     if(!argExcludeRemark.empty() && regValid(argExcludeRemark))
+         lExcludeRemarks = string_array{argExcludeRemark};
+-
++#if 0
+     /// initialize script runtime
+     if(authorized && !global.scriptCleanContext)
+     {
+@@ -544,7 +544,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
+         ext.js_context = new qjs::Context(*ext.js_runtime);
+         script_context_init(*ext.js_context);
+     }
+-
++#endif
+     //start parsing urls
+     RegexMatchConfigs stream_temp = safe_get_streams(), time_temp = safe_get_times();
+ 
+@@ -562,9 +562,10 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
+     parse_set.sub_info = &subInfo;
+     parse_set.authorized = authorized;
+     parse_set.request_header = &request.headers;
++#if 0
+     parse_set.js_runtime = ext.js_runtime;
+     parse_set.js_context = ext.js_context;
+-
++#endif
+     if(!global.insertUrls.empty() && argEnableInsert)
+     {
+         groupID = -1;
+@@ -660,6 +661,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
+             }
+         }
+         */
++#if 0
+         script_safe_runner(ext.js_runtime, ext.js_context, [&](qjs::Context &ctx)
+         {
+             try
+@@ -673,6 +675,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
+                 script_print_stack(ctx);
+             }
+         }, global.scriptCleanContext);
++#endif
+     }
+ 
+     //check custom group name
+diff --git a/src/handler/interfaces.h b/src/handler/interfaces.h
+index 8687736..3bba50b 100644
+--- a/src/handler/interfaces.h
++++ b/src/handler/interfaces.h
+@@ -3,12 +3,21 @@
+ 
+ #include <string>
+ #include <map>
+-#include <inja.hpp>
+ 
+ #include "config/ruleset.h"
+ #include "generator/config/subexport.h"
+ #include "server/webserver.h"
+-
++#ifdef _WIN32
++#pragma push_macro("min")
++#pragma push_macro("max")
++#undef min
++#undef max
++#endif
++#include <inja/inja.hpp>
++#ifdef _WIN32
++#pragma pop_macro("min")
++#pragma pop_macro("max")
++#endif
+ std::string parseProxy(const std::string &source);
+ 
+ void refreshRulesets(RulesetConfigs &ruleset_list, std::vector<RulesetContent> &rca);
+diff --git a/src/handler/settings.cpp b/src/handler/settings.cpp
+index a90bec7..c3a0d6a 100644
+--- a/src/handler/settings.cpp
++++ b/src/handler/settings.cpp
+@@ -469,6 +469,7 @@ void readYAMLConf(YAML::Node &node)
+ 
+     if(node["aliases"].IsSequence())
+     {
++#if 0
+         webServer.reset_redirect();
+         for(size_t i = 0; i < node["aliases"].size(); i++)
+         {
+@@ -477,6 +478,7 @@ void readYAMLConf(YAML::Node &node)
+             node["aliases"][i]["target"] >> target;
+             webServer.append_redirect(uri, target);
+         }
++#endif
+     }
+ 
+     if(node["tasks"].IsSequence())
+@@ -501,15 +503,19 @@ void readYAMLConf(YAML::Node &node)
+         importItems(vArray, false);
+         global.enableCron = !vArray.empty();
+         global.cronTasks = INIBinding::from<CronTaskConfig>::from_ini(vArray);
++#if 0
+         refresh_schedule();
++#endif
+     }
+ 
+     if(node["server"].IsDefined())
+     {
+         node["server"]["listen"] >> global.listenAddress;
+         node["server"]["port"] >> global.listenPort;
++#if 0
+         node["server"]["serve_file_root"] >>= webServer.serve_file_root;
+         webServer.serve_file = !webServer.serve_file_root.empty();
++#endif
+     }
+ 
+     if(node["advanced"].IsDefined())
+@@ -699,27 +705,31 @@ void readTOMLConf(toml::value &root)
+     {
+         global.templateVars[key.as_string()] = value.as_string();
+     });
+-
++#if 0
+     webServer.reset_redirect();
++#endif
+     operate_toml_kv_table(toml::find_or<std::vector<toml::table>>(root, "aliases", {}), "uri", "target", [&](const toml::value &key, const toml::value &value)
+     {
++#if 0
+         webServer.append_redirect(key.as_string(), value.as_string());
++#endif
+     });
+ 
+     auto tasks = toml::find_or<std::vector<toml::value>>(root, "tasks", {});
+     importItems(tasks, "tasks", false);
+     global.cronTasks = toml::get<CronTaskConfigs>(toml::value(tasks));
++#if 0
+     refresh_schedule();
+-
++#endif
+     auto section_server = toml::find(root, "server");
+-
++#if 0
+     find_if_exist(section_server,
+                   "listen", global.listenAddress,
+                   "port", global.listenPort,
+                   "serve_file_root", webServer.serve_file_root
+     );
+     webServer.serve_file = !webServer.serve_file_root.empty();
+-
++#endif
+     auto section_advanced = toml::find(root, "advanced");
+ 
+     std::string log_level;
+@@ -996,9 +1006,11 @@ void readConf()
+     {
+         ini.enter_section("aliases");
+         ini.get_items(tempmap);
++#if 0
+         webServer.reset_redirect();
+         for(auto &x : tempmap)
+             webServer.append_redirect(x.first, x.second);
++#endif
+     }
+ 
+     if(ini.section_exist("tasks"))
+@@ -1009,15 +1021,18 @@ void readConf()
+         importItems(vArray, false);
+         global.enableCron = !vArray.empty();
+         global.cronTasks = INIBinding::from<CronTaskConfig>::from_ini(vArray);
++#if 0
+         refresh_schedule();
++#endif
+     }
+ 
+     ini.enter_section("server");
+     ini.get_if_exist("listen", global.listenAddress);
+     ini.get_int_if_exist("port", global.listenPort);
++#if 0
+     webServer.serve_file_root = ini.get("serve_file_root");
+     webServer.serve_file = !webServer.serve_file_root.empty();
+-
++#endif
+     ini.enter_section("advanced");
+     std::string log_level;
+     ini.get_if_exist("log_level", log_level);
+diff --git a/src/handler/webget.cpp b/src/handler/webget.cpp
+index 4433536..2482a5c 100644
+--- a/src/handler/webget.cpp
++++ b/src/handler/webget.cpp
+@@ -1,6 +1,18 @@
+ #include <iostream>
++#ifndef _WIN32
+ #include <unistd.h>
+-#include <sys/stat.h>
++#else
++#include <io.h>       // 提供Unix风格文件操作
++#include <direct.h>   // 添加目录操作支持
++// 添加Windows特有头文件
++#include <windows.h>
++// 定义POSIX兼容宏
++#define stat _stat
++#define mkdir(dir, mode) _mkdir(dir)
++#define access _access
++#define strcasecmp _stricmp
++#define strncasecmp _strnicmp
++#endif
+ //#include <mutex>
+ #include <thread>
+ #include <atomic>
+diff --git a/src/parser/subparser.cpp b/src/parser/subparser.cpp
+index ca29ece..a0da0de 100644
+--- a/src/parser/subparser.cpp
++++ b/src/parser/subparser.cpp
+@@ -2485,7 +2485,9 @@ void explodeSub(std::string sub, std::vector<Proxy> &nodes)
+     //try to parse as normal subscription
+     if(!processed)
+     {
+-        sub = urlSafeBase64Decode(sub);
++        // probably Base64-encoded string
++        if(!regFind(sub, "[^a-zA-Z0-9+/=]"))
++            sub = urlSafeBase64Decode(sub);
+         if(regFind(sub, "(vmess|shadowsocks|http|trojan)\\s*?="))
+         {
+             if(explodeSurge(sub, nodes))
+diff --git a/src/script/script_quickjs.h b/src/script/script_quickjs.h
+index 86defed..83ec5f7 100644
+--- a/src/script/script_quickjs.h
++++ b/src/script/script_quickjs.h
+@@ -4,7 +4,7 @@
+ #include "parser/config/proxy.h"
+ #include "utils/defer.h"
+ 
+-#ifndef NO_JS_RUNTIME
++#if 0
+ 
+ #include <quickjspp.hpp>
+ 
+diff --git a/src/utils/file.cpp b/src/utils/file.cpp
+index 3d1928a..9b52a2e 100644
+--- a/src/utils/file.cpp
++++ b/src/utils/file.cpp
+@@ -1,6 +1,6 @@
+ #include <string>
+ #include <fstream>
+-#include <sys/stat.h>
++#include <filesystem>
+ 
+ #include "utils/string.h"
+ 
+@@ -60,12 +60,9 @@ std::string fileGet(const std::string &path, bool scope_limit)
+ 
+ bool fileExist(const std::string &path, bool scope_limit)
+ {
+-    //using c++17 standard, but may cause problem on clang
+-    //return std::filesystem::exists(path);
+     if(scope_limit && !isInScope(path))
+         return false;
+-    struct stat st;
+-    return stat(path.data(), &st) == 0 && S_ISREG(st.st_mode);
++    return std::filesystem::exists(path);
+ }
+ 
+ bool fileCopy(const std::string &source, const std::string &dest)
+diff --git a/src/utils/file.h b/src/utils/file.h
+index e7daacf..7b9cd75 100644
+--- a/src/utils/file.h
++++ b/src/utils/file.h
+@@ -2,19 +2,33 @@
+ #define FILE_H_INCLUDED
+ 
+ #include <string>
+-#include <string.h>
++#include <cstring>
+ 
+ #ifdef _WIN32
+-#include <unistd.h>
++#include <direct.h>
++#include <windows.h>
++#include <io.h>
+ #define PATH_SLASH "\\"
+ #else
+-#include <sys/types.h>
+ #include <sys/stat.h>
+-#define PATH_SLASH "//"
++#include <unistd.h>
++#define PATH_SLASH "/"
+ #endif // _WIN32
+ 
+ #include <sys/types.h>
++
++#ifdef _WIN32
++struct dirent {
++    char d_name[MAX_PATH];
++};
++using DIR = struct {
++    HANDLE hFind;
++    WIN32_FIND_DATAA findData;
++    dirent dirEnt;
++};
++#else
+ #include <dirent.h>
++#endif
+ 
+ std::string fileGet(const std::string &path, bool scope_limit = false);
+ bool fileExist(const std::string &path, bool scope_limit = false);
+@@ -24,29 +38,48 @@ int fileWrite(const std::string &path, const std::string &content, bool overwrit
+ template<typename F>
+ int operateFiles(const std::string &path, F &&op)
+ {
+-    DIR* dir = opendir(path.data());
++#ifdef _WIN32
++    WIN32_FIND_DATAA findData;
++    HANDLE hFind = FindFirstFileA((path + "\\*").c_str(), &findData);
++    if(hFind == INVALID_HANDLE_VALUE)
++        return -1;
++
++    do {
++        if(strcmp(findData.cFileName, ".") != 0 &&
++           strcmp(findData.cFileName, "..") != 0) {
++            if(op(findData.cFileName)) {
++                FindClose(hFind);
++                return 0;
++            }
++        }
++    } while(FindNextFileA(hFind, &findData));
++
++    FindClose(hFind);
++    return 0;
++#else
++    DIR* dir = opendir(path.c_str());
+     if(!dir)
+         return -1;
+     struct dirent* dp;
+-    while((dp = readdir(dir)) != NULL)
+-    {
+-        if(strcmp(dp->d_name, ".") != 0 && strcmp(dp->d_name, "..") != 0)
+-        {
++    while((dp = readdir(dir)) != nullptr) {
++        if(strcmp(dp->d_name, ".") != 0 &&
++           strcmp(dp->d_name, "..") != 0) {
+             if(op(dp->d_name))
+                 break;
+         }
+     }
+     closedir(dir);
+     return 0;
++#endif
+ }
+ 
+ inline int md(const char *path)
+ {
+ #ifdef _WIN32
+-    return mkdir(path);
++    return _mkdir(path);
+ #else
+     return mkdir(path, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+-#endif // _WIN32
++#endif
+ }
+ 
+ #endif // FILE_H_INCLUDED
+diff --git a/src/utils/logger.cpp b/src/utils/logger.cpp
+index ec6353b..f183320 100644
+--- a/src/utils/logger.cpp
++++ b/src/utils/logger.cpp
+@@ -1,9 +1,13 @@
+ #include <string>
+ #include <iostream>
+ #include <thread>
+-#include <sys/time.h>
+-#include <sys/types.h>
++#include <chrono>
++#include <ctime>
++#ifdef _WIN32
++#include <windows.h>
++#else
+ #include <unistd.h>
++#endif
+ 
+ #include "handler/settings.h"
+ #include "defer.h"
+@@ -12,15 +16,20 @@
+ 
+ std::string getTime(int type)
+ {
+-    time_t lt;
++    auto now = std::chrono::system_clock::now();
++    auto now_time_t = std::chrono::system_clock::to_time_t(now);
++    auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(
++                            now.time_since_epoch()) % 1000000;
+     char tmpbuf[32], cMillis[7];
+     std::string format;
+-    timeval tv = {};
+-    gettimeofday(&tv, nullptr);
+-    snprintf(cMillis, 7, "%.6ld", (long)tv.tv_usec);
+-    lt = time(nullptr);
+-    struct tm *local = localtime(&lt);
+-    switch(type)
++    snprintf(cMillis, 7, "%06d", static_cast<int>(microseconds.count()));
++    struct tm local;
++#ifdef _WIN32
++    localtime_s(&local, &now_time_t);
++#else
++    localtime_r(&now_time_t, &local);
++#endif
++    switch (type)
+     {
+     case 1:
+         format = "%Y%m%d-%H%M%S";
+@@ -34,7 +43,7 @@ std::string getTime(int type)
+         format = "%Y-%m-%d %H:%M:%S";
+         break;
+     }
+-    strftime(tmpbuf, 32, format.data(), local);
++    strftime(tmpbuf, 32, format.c_str(), &local);
+     return {tmpbuf};
+ }
+ 
+@@ -62,15 +71,20 @@ std::mutex log_mutex;
+ 
+ void writeLog(int type, const std::string &content, int level)
+ {
+-    if(level > global.logLevel)
++    if (level > global.logLevel)
+         return;
+     std::lock_guard<std::mutex> lock(log_mutex);
+     const char *levels[] = {"[FATL]", "[ERRO]", "[WARN]", "[INFO]", "[DEBG]", "[VERB]"};
+-    std::cerr<<getTime(2)<<" ["<<getpid()<<" "<<get_thread_name()<<"]"<<levels[level % 6];
+-    std::cerr<<" "<<content<<"\n";
++    std::cerr << getTime(2) << " ["
++#ifdef _WIN32
++              << GetCurrentProcessId()
++#else
++              << getpid()
++#endif
++              << " " << get_thread_name() << "]" << levels[level % 6];
++    std::cerr << " " << content << "\n";
+ }
+ 
+-
+ #ifdef __GNUG__
+ #include <cstdlib>
+ #include <memory>
+diff --git a/src/utils/printout.h b/src/utils/printout.h
+index 4b46d71..79b46ed 100644
+--- a/src/utils/printout.h
++++ b/src/utils/printout.h
+@@ -3,7 +3,6 @@
+ 
+ #include <string>
+ #include <vector>
+-#include <unistd.h>
+ 
+ #include "misc.h"
+ #include "nodeinfo.h"
