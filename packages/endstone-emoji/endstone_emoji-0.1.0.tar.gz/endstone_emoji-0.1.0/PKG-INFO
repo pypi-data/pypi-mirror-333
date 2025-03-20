@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: endstone-emoji
+Version: 0.1.0
+Summary: EmojiNK in endstone
+Project-URL: Homepage, https://github.com/endstone-essentials/emoji
+Author-email: daoge_cmd <3523206925@qq.com>
+Maintainer-email: daoge_cmd <3523206925@qq.com>, Vincent <magicdroidx@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Endstone
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: emoji,endstone,plugin
+Description-Content-Type: text/markdown
+
+# Endstone Emoji Plugin
+
+EmojiNK in endstone!
+
+![Plugin Menu](assets/menu.png)
+
+![Emoji.png](assets/emoji.png)
+
+## Features
+
+- [x] Command `/emoji`: Switch and send an emoji
+
+## Installation
+
+- Download plugin file (`.whl`) and resources pack (`.mcpack`)
+  from the [release page](https://github.com/endstone-essentials/emoji/releases)
+- Put `.whl` file into `plugins` folder
+- Put `.mcpack` file into `resource_packs` folder
+- Restart the server, enjoy!
+
+## Requirement
+
+Python: 3.10+
+
+Endstone: 0.5+

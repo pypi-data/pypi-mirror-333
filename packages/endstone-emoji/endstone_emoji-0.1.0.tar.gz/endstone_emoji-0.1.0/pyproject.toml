@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endstone-emoji"
+version = "0.1.0"
+dependencies = []
+authors = [
+    { name = "daoge_cmd", email = "3523206925@qq.com" }
+]
+maintainers = [
+    { name = "daoge_cmd", email = "3523206925@qq.com" },
+    { name = "Vincent", email = "magicdroidx@gmail.com" }
+]
+description = "EmojiNK in endstone"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["endstone", "plugin", "emoji"]
+
+[project.urls]
+Homepage = "https://github.com/endstone-essentials/emoji"
+
+[project.entry-points."endstone"]
+emoji = "endstone_emoji:EmojiPlugin"
