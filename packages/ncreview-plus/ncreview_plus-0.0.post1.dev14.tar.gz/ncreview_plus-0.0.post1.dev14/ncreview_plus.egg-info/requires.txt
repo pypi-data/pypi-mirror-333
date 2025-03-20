@@ -1,0 +1,5 @@
+netCDF4
+numpy==1.26
+urllib3
+act-atmos
+matplotlib
