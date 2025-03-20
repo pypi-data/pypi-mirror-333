@@ -1,0 +1,35 @@
+{% include '.header.template' %}
+{% set standard_imports = [] -%}
+{%- for field in fields -%}
+    {%- if field.type in ['date', 'datetime'] and 'datetime' not in standard_imports -%}
+        {% set _ = standard_imports.append('datetime') %}
+    {%- endif -%}
+{%- endfor -%}
+{%- if standard_imports -%}
+from {{ ', '.join(standard_imports) }} import {{ 'date, datetime' if 'datetime' in standard_imports else 'date' }}
+{%- endif %}
+
+from stellanow_sdk_python.messages.message_base import StellaNowMessageBase
+{% for model in referencedModels -%}
+from models.{{ model | camel_to_snake }} import {{ model }}
+{% endfor %}
+
+class {{ className }}Message(StellaNowMessageBase):
+    {% for entity in entities -%}
+    {{ entity.python_name }}: str
+    {% endfor -%}
+    {% for field in fields -%}
+    {{ field.original_name }}: {{ field.type }}
+    {% endfor %}
+    def __init__(self, {% for entity in entities %}{{ entity.python_name }}: str{% if not loop.last or fields %}, {% endif %}{% endfor %}{% for field in fields %}{{ field.original_name }}: {{ field.type }}{% if not loop.last %}, {% endif %}{% endfor %}):
+        super().__init__(
+            event_name="{{ eventName }}",
+            entities=[{% for entity in entities %}{"type": "{{ entity.original_name }}", "id": {{ entity.python_name }}}{% if not loop.last %}, {% endif %}{% endfor %}],
+            {% for entity in entities -%}
+            {{ entity.python_name }}={{ entity.python_name }},
+            {% endfor -%}
+            {% for field in fields -%}
+            {{ field.original_name }}={{ field.original_name }}{% if not loop.last %},{% endif %}
+            {% endfor -%}
+        )
+{% include '.footer.template' %}

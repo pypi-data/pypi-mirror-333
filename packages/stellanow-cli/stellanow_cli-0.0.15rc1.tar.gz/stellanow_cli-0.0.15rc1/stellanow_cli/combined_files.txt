@@ -1,0 +1,3697 @@
+--- .//core/enums.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+from enum import Enum
+
+
+class StellaDataStructure(str, Enum):
+    MODEL = "Model"
+    EVENT = "Event"
+
+
+class StellaCommentStructure(Enum):
+    PYTHON = ('"""', '"""')
+    C_SHARP = ("/*", "*/")
+    JAVA_SCRIPT = ("/*", "*/")
+
+    def __iter__(self):
+        return iter(self.value)
+
+
+class StellaLanguage(Enum):
+    PYTHON = "python"
+    CSHARP = "csharp"
+    TYPESCRIPT = "typescript"
+
+
+class FieldType(Enum):
+    DECIMAL = "Decimal"
+    INTEGER = "Integer"
+    BOOLEAN = "Boolean"
+    STRING = "String"
+    DATE = "Date"
+    DATETIME = "DateTime"
+    MODEL = "Model"
+    ANY = "Any"
+
+--- .//core/profile_manager.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import configparser
+import os
+import typing as t
+
+from loguru import logger
+
+STORAGE_FOLDER = ".stellanow"
+CONFIG_FILE = "config.ini"
+
+
+ProfileData = t.Dict[str, t.Any]
+
+
+class ProfileManager:
+    def __init__(self):
+        self._loaded = False
+
+        self.config: configparser.ConfigParser = configparser.ConfigParser(interpolation=None)
+
+        self._profile: t.Optional[str] = None
+        self.profile_data: ProfileData = {}  # This will store the loaded profile data
+
+    def _load(self) -> None:
+        home = os.path.expanduser("~")
+        config_file = os.path.join(home, STORAGE_FOLDER, CONFIG_FILE)
+        self.config.read(config_file)
+
+        prefix = f"{self.profile}"
+        for section in self.config.sections():
+            if section.startswith(prefix):
+                module_name = section[len(prefix) + 1 :]
+                self.profile_data[module_name] = {k: v for k, v in self.config.items(section)}
+
+    def save_service_config(self, service: str, service_data: ProfileData) -> None:
+        home = os.path.expanduser("~")
+        config_dir = os.path.join(home, STORAGE_FOLDER)
+        if not os.path.exists(config_dir):
+            os.makedirs(config_dir)  # Create the directory if it does not exist
+
+        config_file = os.path.join(config_dir, CONFIG_FILE)
+        self.config[f"{self.profile}:{service}"] = service_data
+
+        # Save the updated configuration to the file
+        with open(config_file, "w") as configfile:
+            self.config.write(configfile)
+
+        logger.success(f"Configuration for profile '{self.profile}' and service '{service}' saved successfully")
+
+    @property
+    def profile(self) -> t.Optional[str]:
+        """Get the current profile."""
+        return self._profile
+
+    @profile.setter
+    def profile(self, new_profile: str) -> None:
+        """Set a new profile and reload data."""
+        self._profile = new_profile
+        self._load()  # Reload the data for the new profile
+
+    def get_profile_data(self) -> ProfileData:
+        return self.profile_data
+
+    def get_service_data(self, service: str) -> ProfileData:
+        return self.profile_data.get(service, {})
+
+--- .//core/validators.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+import typing as t
+import uuid
+from urllib.parse import urlparse
+
+import click
+
+
+def any_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: t.Any) -> t.Any:
+    return value
+
+
+def url_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: t.Any) -> t.Any:
+    parsed = urlparse(value.strip())
+    if not all([parsed.scheme, parsed.netloc]):
+        click.BadParameter(f"Expected a valid URL, got '{value}' instead.")
+    return value
+
+
+def url_list_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: t.Any) -> t.List[str]:
+    if isinstance(value, list):
+        return value
+    urls = value.split(",")
+    for url in urls:
+        parsed = urlparse(url.strip())
+        if not all([parsed.scheme, parsed.netloc]):
+            click.BadParameter(f"Expected a valid URL, got '{url}' instead.")
+    return value
+
+
+def username_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: t.Any) -> str:
+    if not (6 <= len(value) < 200):
+        click.BadParameter("Username must have at least 6 characters and less than 200 characters.")
+    return value
+
+
+def password_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: t.Any) -> str:
+    if not (10 <= len(value) < 255):
+        click.BadParameter("Password must have at least 10 characters and less than 255 characters.")
+    return value
+
+
+def uuid_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: t.Any) -> str:
+    try:
+        uuid.UUID(value)
+    except ValueError:
+        raise click.BadParameter(f"{value} is not a valid UUID.")
+    return value
+
+
+def kafka_brokers_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: str) -> str:
+    """
+    Validates that each broker in a comma-separated list is a valid host address.
+    """
+    brokers = value.split(",")
+    for broker in brokers:
+        parsed = urlparse("dummy-scheme://" + broker)
+        if not parsed.hostname or not parsed.port:
+            raise click.BadParameter(f"Each Kafka broker must be in the format 'host:port'. Error parsing '{broker}'.")
+    return value
+
+
+def zip_file_validator(ctx: click.Context, param: t.Optional[click.Parameter], value: str):
+    """
+    Validates that the provided file is a ZIP file based on its extension.
+    """
+    if not value.lower().endswith(".zip"):
+        raise click.UsageError("The input file must be a ZIP file.")
+    return value
+
+--- .//core/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//core/utils/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//core/utils/string_utils.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import re
+import uuid
+
+
+def flatten_field(field):
+    if isinstance(field.valueType, dict):
+        # Handle nested types
+        for nested_field_name, nested_field_value_type in field.valueType.items():
+            yield f"{field.name}.{nested_field_name}", nested_field_value_type
+    else:
+        yield field.name, field.valueType
+
+
+def is_valid_uuid(uuid_to_test, version=4):
+    """
+    Check if uuid_to_test is a valid UUID.
+
+    Parameters:
+    * uuid_to_test: str - The string to test as a UUID.
+    * version: int - UUID version (default is 4).
+
+    Returns:
+    * `True` if uuid_to_test is a valid UUID; otherwise `False`.
+    """
+    try:
+        uuid_obj = uuid.UUID(uuid_to_test, version=version)
+    except ValueError:
+        return False
+    return str(uuid_obj) == uuid_to_test
+
+
+def remove_comments(code: str) -> str:
+    return re.sub(r"/\*.*?\*/", "", code, flags=re.DOTALL)
+
+
+def snake_to_camel(snake_str):
+    components = snake_str.split("_")
+    return "".join([x[:1].upper() + x[1:] for x in components])
+
+
+def snake_to_lower_camel(s):
+    components = s.split("_")
+    return components[0] + "".join(x.title() for x in components[1:])
+
+
+def camel_to_snake(camel_str):
+    return "".join(["_" + i.lower() if i.isupper() else i for i in camel_str]).lstrip("_")
+
+--- .//core/utils/logger_utils.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+from typing import List, Set
+
+from loguru import logger
+from prettytable import PrettyTable
+
+from stellanow_cli.core.helpers import ProcessedFile, SkippedFile
+
+
+def log_processed_and_skipped_result(
+    processed_files: List[ProcessedFile], skipped_files: List[SkippedFile], events_not_found: Set[str]
+):
+    if processed_files:
+        logger.info("\n==============================\n      PROCESSED FILES\n==============================\n")
+
+        table = PrettyTable(["File"])
+
+        for processed_file in processed_files:
+            table.add_row(list(processed_file))
+
+        logger.info(table)
+
+    if skipped_files:
+        logger.info("\n==============================\n      SKIPPED FILES\n==============================\n")
+
+        table = PrettyTable(["File", "Skipping Reason"])
+
+        for skipped_file in skipped_files:
+            table.add_row(list(skipped_file))
+
+        for event in events_not_found:
+            table.add_row([event, "Missing Event Configuration"])
+
+        logger.info(table)
+
+        logger.info("\nSkipped Reason - Explanation:\n")
+        logger.info(
+            "- File Already Exist - Existing classes can't be overridden. Use --force to override this protection."
+        )
+        logger.info("- Missing Event Configuration - Check if the specified event exists in the Operators Console.")
+        logger.info("- No Entity Associated With Event - Event exists, but it is not attached to any entity type.")
+
+
+def log_summary(skipped_files: List[SkippedFile]) -> None:
+    if skipped_files:
+        logger.info("\n==============================\n         SUMMARY\n==============================\n")
+
+        table = PrettyTable(["File", "Reason for not comparing"])
+
+        # Populate the table with data from your SkippedFile instances
+        for skipped_file in skipped_files:
+            table.add_row([skipped_file.filename, skipped_file.reason])
+
+        logger.info(table)
+
+        logger.info("\nSkipped Reason - Explanation:\n")
+        logger.info("- Not Auto-Generated - It looks like the file was not generated by this CLI.")
+        logger.info("- Event ID Not Found - The ID of the event is missing in the header comment.")
+
+--- .//core/logger.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import sys
+
+from loguru import logger
+
+logger.level("RAW", no=50)
+
+
+def setup_logging(verbose: bool) -> None:
+    logger.remove()
+
+    info_format = " <level>{message}</level>"
+    raw_format = " {message}"
+    success_format = (
+        "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level: <8}</level> | <level>{message}</level>"
+    )
+    default_fmt = "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+
+    logger.add(
+        sys.stdout,
+        format=info_format,
+        level="INFO",
+        filter=lambda record: record["level"].name == "INFO",
+        colorize=False,
+    )
+
+    logger.add(
+        sys.stdout,
+        format=raw_format,
+        level="RAW",
+        filter=lambda record: record["level"].name == "RAW",
+        colorize=True,
+    )
+
+    logger.add(
+        sys.stdout,
+        format=success_format,
+        level="INFO",
+        filter=lambda record: record["level"].name == "SUCCESS",
+        colorize=True,
+    )
+
+    level = "DEBUG" if verbose else "INFO"
+
+    logger.add(
+        sys.stdout,
+        format=default_fmt,
+        level=level,
+        filter=lambda record: record["level"].name not in ["INFO", "SUCCESS", "RAW"],
+        colorize=True,
+    )
+
+--- .//core/context.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import typing as t
+
+import click
+
+from ..services.service import StellaNowService
+from .logger import setup_logging
+from .profile_manager import ProfileData, ProfileManager
+
+DEFAULT = "DEFAULT"
+
+T = t.TypeVar("T", bound=StellaNowService)
+ServiceType = t.Type[T]
+ServiceDict = t.Dict[ServiceType, T]
+
+
+class StellaNowContext:
+    def __init__(self):
+        self._profile_manager: ProfileManager = ProfileManager()
+        self._profile: str = DEFAULT
+        self._verbose: bool = False
+        self._services: ServiceDict = {}
+
+    @property
+    def profile(self) -> str:
+        return self._profile
+
+    @profile.setter
+    def profile(self, profile: str) -> None:
+        self._profile = profile
+        self._profile_manager.profile = profile
+
+    def save_service_config(self, service_name: str, service_config: ProfileData) -> None:
+        self._profile_manager.save_service_config(service_name, service_config)
+
+    @property
+    def verbose(self) -> bool:
+        return self._verbose
+
+    @verbose.setter
+    def verbose(self, verbose: bool) -> None:
+        self._verbose = verbose
+        setup_logging(verbose)
+
+    def service_profile_data(self, service_name: str) -> ProfileData:
+        return self._profile_manager.get_service_data(service_name)
+
+    def get_config_value(self, service_name: str, config_key: str, default=None) -> str:
+        """Get a specific configuration value for a service."""
+        service_data = self.service_profile_data(service_name)
+        return service_data.get(config_key, default)
+
+    def get_service(self, service_type: t.Type[T]) -> T:
+        service = self._services.get(service_type)
+        if service is None:
+            raise RuntimeError(f"Service of type {service_type.__name__} not found")
+        return service
+
+    def add_service(self, service: StellaNowService):
+        self._services[type(service)] = service
+
+
+pass_stella_context = click.make_pass_decorator(StellaNowContext, ensure=True)
+
+--- .//core/filed_type_mapper.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from abc import ABC, abstractmethod
+from typing import Dict, Union
+
+# Assuming these imports are defined elsewhere in your codebase
+from stellanow_api_internals.datatypes.workflow_mgmt import (
+    StellaField,
+    StellaFieldType,
+    StellaModelDetailed,
+    StellaModelField,
+)
+
+from stellanow_cli.core.enums import FieldType
+from stellanow_cli.core.utils.string_utils import snake_to_camel
+
+
+class FieldTypeMapper(ABC):
+    @property
+    @abstractmethod
+    def type_mappings(self) -> Dict[FieldType, str]:
+        """Return the type mappings for the specific language."""
+
+    def map_field_type(
+        self,
+        field: Union[StellaField, StellaModelField],
+        model_details: Dict[str, StellaModelDetailed],
+    ) -> str:
+        if isinstance(field.fieldType, dict):
+            field_type = StellaFieldType(**field.fieldType)
+        else:
+            field_type = field.fieldType
+
+        value_type = FieldType(field_type.value)
+
+        if value_type == FieldType.MODEL:
+            if field_type.modelRef:
+                model_name = snake_to_camel(model_details[field_type.modelRef].name)
+                return f"{model_name}Model"
+            else:
+                return self.type_mappings[FieldType.MODEL]
+
+        return self.type_mappings.get(value_type, self.default_type())
+
+    def default_type(self) -> str:
+        return self.type_mappings.get(FieldType.MODEL, "object")
+
+--- .//core/helpers.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from pathlib import Path
+
+from loguru import logger
+
+
+class ProcessedFile:
+    def __init__(self, filename: str):
+        self.filename = filename
+
+    def __iter__(self):
+        return iter([self.filename])
+
+
+class SkippedFile:
+    def __init__(self, filename: str, reason: str):
+        self.filename = filename
+        self.reason = reason
+
+    def __iter__(self):
+        return iter([self.filename, self.reason])
+
+
+def ensure_destination_exists(destination: str):
+    """Ensure the destination directory exists, creating it if necessary."""
+    path = Path(destination)
+    if not path.is_dir():
+        logger.info(f"Destination directory {destination} does not exist. Creating...")
+        path.mkdir(parents=True, exist_ok=True)
+
+--- .//core/decorators.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+import functools
+import typing as t
+from functools import update_wrapper
+
+import click
+import typing_extensions as te
+from click import get_current_context
+
+from ..core.context import StellaNowContext
+from ..services.service import StellaNowService
+
+P = te.ParamSpec("P")
+R = t.TypeVar("R")
+T = t.TypeVar("T", bound=StellaNowService)
+_AnyCallable = t.Callable[..., t.Any]
+
+
+def option_with_config_lookup(
+    param_name: str, service_class: t.Optional[t.Type[T]] = None, **option_kwargs
+) -> t.Callable[[_AnyCallable], _AnyCallable]:
+    def decorator(f):
+        original_callback = option_kwargs.pop("callback", None)
+
+        def callback(ctx, param, value):
+            lookup_name = service_class if service_class else ctx.info_name
+            stella_ctx: t.Optional[StellaNowContext] = ctx.find_object(StellaNowContext)
+
+            if stella_ctx is None:
+                raise click.ClickException(
+                    f"{StellaNowContext.__class__.__name__} not found in the current Click context."
+                )
+
+            if value is None or ctx.get_parameter_source(param.name) == click.core.ParameterSource.DEFAULT:
+                config_value = stella_ctx.get_config_value(lookup_name, param_name.replace("-", ""))
+                value = config_value if config_value is not None else value
+
+            if original_callback is not None:
+                return original_callback(ctx, param, value)
+            return value
+
+        option_kwargs["callback"] = callback
+
+        def default_value():
+            ctx = click.get_current_context()
+            lookup_service = service_class.service_name() if service_class else ctx.info_name
+            stella_ctx: t.Optional[StellaNowContext] = ctx.find_object(StellaNowContext)
+
+            if stella_ctx is None:
+                raise click.ClickException(
+                    f"{StellaNowContext.__class__.__name__} not found in the current Click context."
+                )
+
+            config_value = stella_ctx.get_config_value(lookup_service, param_name.replace("-", ""))
+            if config_value is None:
+                ctx.fail(f"Missing value for '{param_name}', provide configuration for Service: {lookup_service}")
+            return config_value
+
+        option_kwargs["default"] = functools.partial(default_value)
+        option_kwargs["show_default"] = False
+
+        return click.option(param_name, **option_kwargs)(f)
+
+    return decorator
+
+
+def prompt(param_name: str, **option_kwargs) -> t.Callable[[_AnyCallable], _AnyCallable]:
+    """
+    Creates a Click option decorator that automatically fetches its default value
+    from the configuration, using a service name from ctx.obj.
+    Additional keyword arguments are passed through to click.option().
+    """
+
+    def default_value():
+        ctx = click.get_current_context()
+        return ctx.obj.get_config_value(ctx.info_name, param_name.replace("-", ""))
+
+    option_kwargs.setdefault("prompt", True)
+    option_kwargs.setdefault("hidden", True)
+
+    return click.option(param_name, default=default_value, **option_kwargs)
+
+
+def make_stella_context_pass_decorator(
+    object_type: t.Type[T],
+) -> t.Callable[["t.Callable[te.Concatenate[T, P], R]"], "t.Callable[P, R]"]:
+    def decorator(f: "t.Callable[te.Concatenate[T, P], R]") -> "t.Callable[P, R]":
+        def new_func(*args: "P.args", **kwargs: "P.kwargs") -> "R":
+            ctx = get_current_context()
+
+            from ..core.context import StellaNowContext
+
+            stella_ctx: t.Optional[StellaNowContext] = ctx.find_object(StellaNowContext)
+            if stella_ctx is None:
+                raise click.ClickException(
+                    f"{StellaNowContext.__class__.__name__} not found in the current Click context."
+                )
+
+            obj: t.Optional[T]
+            obj = stella_ctx.get_service(object_type)
+
+            if obj is None:
+                raise RuntimeError(
+                    "Managed to invoke callback without a context"
+                    f" object of type {object_type.__name__!r}"
+                    " existing."
+                )
+
+            return ctx.invoke(f, obj, *args, **kwargs)
+
+        return update_wrapper(new_func, f)
+
+    return decorator  # type: ignore[return-value]
+
+--- .//_version.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+
+__version__ = "0.0.15-rc1"
+
+--- .//__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//exceptions/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//exceptions/cli_exceptions.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+from click import ClickException
+
+
+class StellaNowCLIException(ClickException):
+    """Exception raised for errors in the Stella Now CLI."""
+
+    def __init__(self, message, details):
+        self.message = message
+        self.details = details
+        super().__init__(self.message)
+
+    def __str__(self):
+        return f"{self.message} {self.details}"
+
+
+class StellaNowCLILanguageNotSupportedException(StellaNowCLIException):
+    """Exception raised for unsupported languages by the CLI."""
+
+    def __init__(self, language):
+        super().__init__(f"Code generator for {language} not found.", {})
+
+
+class StellaNowCLINamespaceNotFoundException(StellaNowCLIException):
+    """Exception raised when a namespace is not found in a file."""
+
+    def __init__(self):
+        super().__init__(f"No Namespace Found", {})
+
+
+class StellaNowCLINamespaceNotProvidedException(StellaNowCLIException):
+    """Exception raised when a namespace is not provided."""
+
+    def __init__(self):
+        super().__init__(f"Namespace must be provided for C# code generation", {})
+
+
+class StellaNowCLINoEntityAssociatedWithEventException(StellaNowCLIException):
+    """Exception raised when an event does not have any associated entities. It is not a valid event for ingestion."""
+
+    def __init__(self):
+        super().__init__(f"No Entity Associated With Event", {})
+
+--- .//exceptions/api_exceptions.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+from bs4 import BeautifulSoup
+from keycloak import KeycloakError
+from loguru import logger
+
+from stellanow_cli.exceptions.cli_exceptions import StellaNowCLIException
+
+
+class StellaAPIError(StellaNowCLIException):
+    """Exception raised for errors in the Stella API."""
+
+    def __init__(self, message, details=None):
+        if details:
+            logger.debug(f"Error: {details}")
+
+        super().__init__(message, details)
+
+
+class StellaAPIBadRequestError(StellaAPIError):
+    """Exception raised for when a requested object does not exist in the Stella API."""
+
+    def __init__(self, details):
+        super().__init__("Bad Request", details)
+
+
+class StellaAPIForbiddenError(StellaAPIError):
+    """Exception raised for when trying to access the Stella API from blacklisted address."""
+
+    def __init__(self, details):
+        super().__init__("Forbidden", details)
+
+
+class StellaAPINotFoundError(StellaAPIError):
+    """Exception raised for when a requested object does not exist in the Stella API."""
+
+    def __init__(self, details):
+        super().__init__("Not Found", details)
+
+
+class StellaAPIUnauthorisedError(StellaAPIError):
+    """Exception raised for when request is not authorised to be performed by requesting entity in the Stella API."""
+
+    def __init__(self, details):
+        super().__init__("Unauthorised", details)
+
+
+class StellaAPIWrongCredentialsError(StellaAPIError):
+    """Exception raised for wrong credentials during auth in the Stella API."""
+
+    def __init__(self):
+        super().__init__("Unauthorized: Provided username or password is invalid.", {})
+
+
+class StellaAPIInternalServerError(StellaAPIError):
+    """Exception raised for when Internal Server Error."""
+
+    def __init__(self, details):
+        super().__init__("Internal Server Error.", details)
+
+
+def parse_keycloak_error_response(error: KeycloakError):
+    soup = BeautifulSoup(str(error), "html.parser")
+    what_happened = soup.find_all("h2", text="What happened?")
+    if what_happened:
+        return what_happened[0].find_next("p").text
+    h1_error = soup.find("h1")
+    if h1_error:
+        return h1_error.text
+    return str(error)
+
+
+class StellaNowApiKeycloakException(StellaAPIError):
+    """Exception raised for Keycloak errors in the Stella Now API."""
+
+    def __init__(self, message, details=None):
+        if details:
+            error_message = parse_keycloak_error_response(error=details)
+            logger.debug(f"KeycloakError: {error_message}")
+
+        super().__init__(message, details)
+
+
+class StellaNowKeycloakCommunicationException(StellaNowApiKeycloakException):
+    def __init__(self, details):
+        super().__init__(f"An error occurred while trying to communicate with the authentication server", details)
+
+--- .//cli.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+
+import click
+from loguru import logger
+
+from stellanow_cli._version import __version__
+from stellanow_cli.commands.code_generator.code_generator_service_group import code_generator_service
+from stellanow_cli.commands.configure.configure_group import configure
+from stellanow_cli.commands.data_dna_stream_tester.data_dna_stream_tester_group import data_dna_stream_tester
+from stellanow_cli.core.context import DEFAULT, StellaNowContext, pass_stella_context
+
+
+@click.group()
+@click.version_option(version=__version__, message="%(version)s")
+@click.option(
+    "--profile",
+    "-p",
+    default=DEFAULT,
+    help="The profile name for storing a particular set of configurations. If no profile is "
+    "specified, the configurations will be stored under the 'DEFAULT' profile.",
+)
+@click.option(
+    "--verbose",
+    "-v",
+    is_flag=True,
+    help="Enables verbose mode, which outputs more detailed logging messages.",
+)
+@pass_stella_context
+def cli(stella_ctx: StellaNowContext, profile: str, verbose: bool) -> None:
+    """Command-line interface for the StellaNow SDK code generation and comparison tool."""
+    stella_ctx.profile = profile
+    stella_ctx.verbose = verbose
+
+    logger.info(f"Command executed in context of profile: {stella_ctx.profile} ")
+
+
+cli.add_command(configure)
+cli.add_command(code_generator_service)
+cli.add_command(data_dna_stream_tester)
+
+--- .//code_generators/python/dataclass.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from dataclasses import dataclass
+from typing import Dict
+
+from stellanow_api_internals.datatypes.workflow_mgmt import (
+    StellaEntity,
+    StellaField,
+    StellaModelDetailed,
+    StellaModelField,
+)
+
+from stellanow_cli.code_generators.python.field_type_mapper import PythonFieldTypeMapper
+from stellanow_cli.code_generators.python.reserved_words import python_escape_reserved_words
+from stellanow_cli.core.utils.string_utils import snake_to_lower_camel
+
+
+@dataclass
+class PythonField:
+    original_name: str
+    python_name: str
+    type: str
+    is_model: bool
+
+    @classmethod
+    def from_stella_field(cls, field: StellaField | StellaModelField, model_details: Dict[str, StellaModelDetailed]):
+        python_mapper = PythonFieldTypeMapper()
+        field_type = python_mapper.map_field_type(field, model_details)
+        is_model = field_type.endswith("Model")
+        return cls(
+            original_name=field.name,
+            python_name=python_escape_reserved_words(snake_to_lower_camel(field.name)),
+            type=field_type,
+            is_model=is_model,
+        )
+
+
+@dataclass
+class PythonEntity:
+    original_name: str
+    python_name: str
+
+    @classmethod
+    def from_stella_entity(cls, entity: StellaEntity):
+        return cls(
+            original_name=entity.name,
+            python_name=python_escape_reserved_words(entity.name) + "EntityId",
+        )
+
+--- .//code_generators/python/reserved_words.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+
+def python_escape_reserved_words(word: str) -> str:
+    reserved_words = {
+        "False",
+        "None",
+        "True",
+        "and",
+        "as",
+        "assert",
+        "async",
+        "await",
+        "break",
+        "class",
+        "continue",
+        "def",
+        "del",
+        "elif",
+        "else",
+        "except",
+        "finally",
+        "for",
+        "from",
+        "global",
+        "if",
+        "import",
+        "in",
+        "is",
+        "lambda",
+        "nonlocal",
+        "not",
+        "or",
+        "pass",
+        "raise",
+        "return",
+        "try",
+        "while",
+        "with",
+        "yield",
+    }
+    return f"{word}_" if word in reserved_words else word
+
+--- .//code_generators/python/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//code_generators/python/field_type_mapper.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from typing import Dict
+
+from stellanow_cli.core.enums import FieldType
+from stellanow_cli.core.filed_type_mapper import FieldTypeMapper
+
+
+class PythonFieldTypeMapper(FieldTypeMapper):
+    @property
+    def type_mappings(self) -> Dict[FieldType, str]:
+        return {
+            FieldType.DECIMAL: "float",
+            FieldType.INTEGER: "int",
+            FieldType.BOOLEAN: "bool",
+            FieldType.STRING: "str",
+            FieldType.DATE: "date",
+            FieldType.DATETIME: "datetime",
+            FieldType.MODEL: "Any",
+            FieldType.ANY: "Any",
+        }
+
+--- .//code_generators/python/templates/model.template ---
+{% include '.header.template' %}
+from pydantic import BaseModel
+{% set standard_imports = [] -%}
+{%- for field in fields -%}
+    {%- if field.type in ['date', 'datetime'] and 'datetime' not in standard_imports -%}
+        {% set _ = standard_imports.append('datetime') %}
+    {%- endif -%}
+{%- endfor %}
+{%- if standard_imports -%}
+from {{ ', '.join(standard_imports) }} import {{ 'date, datetime' if 'datetime' in standard_imports else 'date' }}
+{%- endif %}
+{%- for model in referencedModels %}
+from models.{{ model | camel_to_snake }} import {{ model }}
+{% endfor %}
+
+class {{ className }}(BaseModel):
+    {%- for field in fields %}
+    {{ field.original_name }}: {{ field.type }}
+    {%- endfor %}
+
+
+{% include '.footer.template' %}
+--- .//code_generators/python/templates/message.template ---
+{% include '.header.template' %}
+{% set standard_imports = [] -%}
+{%- for field in fields -%}
+    {%- if field.type in ['date', 'datetime'] and 'datetime' not in standard_imports -%}
+        {% set _ = standard_imports.append('datetime') %}
+    {%- endif -%}
+{%- endfor -%}
+{%- if standard_imports -%}
+from {{ ', '.join(standard_imports) }} import {{ 'date, datetime' if 'datetime' in standard_imports else 'date' }}
+{%- endif %}
+
+from stellanow_sdk_python.messages.message_base import StellaNowMessageBase
+{% for model in referencedModels -%}
+from models.{{ model | camel_to_snake }} import {{ model }}
+{% endfor %}
+
+class {{ className }}Message(StellaNowMessageBase):
+    {% for entity in entities -%}
+    {{ entity.python_name }}: str
+    {% endfor -%}
+    {% for field in fields -%}
+    {{ field.original_name }}: {{ field.type }}
+    {% endfor %}
+    def __init__(self, {% for entity in entities %}{{ entity.python_name }}: str{% if not loop.last or fields %}, {% endif %}{% endfor %}{% for field in fields %}{{ field.original_name }}: {{ field.type }}{% if not loop.last %}, {% endif %}{% endfor %}):
+        super().__init__(
+            event_name="{{ eventName }}",
+            entities=[{% for entity in entities %}{"type": "{{ entity.original_name }}", "id": {{ entity.python_name }}}{% if not loop.last %}, {% endif %}{% endfor %}],
+            {% for entity in entities -%}
+            {{ entity.python_name }}={{ entity.python_name }},
+            {% endfor -%}
+            {% for field in fields -%}
+            {{ field.original_name }}={{ field.original_name }}{% if not loop.last %},{% endif %}
+            {% endfor -%}
+        )
+
+
+{% include '.footer.template' %}
+--- .//code_generators/python/code_generator.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+import difflib
+import json
+import re
+from datetime import datetime
+from typing import Dict, List
+
+from stellanow_api_internals.datatypes.workflow_mgmt import StellaEventDetailed, StellaModelDetailed
+
+from stellanow_cli.code_generators.common.code_generator import CodeGenerator
+from stellanow_cli.code_generators.python.dataclass import PythonEntity, PythonField
+from stellanow_cli.core.enums import StellaCommentStructure, StellaLanguage
+from stellanow_cli.core.utils.string_utils import camel_to_snake, remove_comments, snake_to_camel
+from stellanow_cli.exceptions.cli_exceptions import (
+    StellaNowCLINamespaceNotFoundException,
+    StellaNowCLINoEntityAssociatedWithEventException,
+)
+
+
+class PythonCodeGenerator(CodeGenerator):
+    @staticmethod
+    def generate_message_class(
+        event: StellaEventDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        template = PythonCodeGenerator.load_template(f"message")
+
+        comment_start, comment_end = StellaCommentStructure.PYTHON.value
+
+        fields = [PythonField.from_stella_field(field, model_details) for field in event.fields]
+        entities = [PythonEntity.from_stella_entity(entity) for entity in event.entities]
+
+        if not entities:
+            raise StellaNowCLINoEntityAssociatedWithEventException()
+
+        has_model_fields = any(field.is_model for field in fields)
+        referenced_models = {
+            f"{field.type}Model" if not field.type.endswith("Model") else field.type
+            for field in fields
+            if field.is_model
+        }
+
+        rendered = template.render(
+            className=snake_to_camel(event.name),
+            eventName=event.name,
+            entities=entities,
+            fields=fields,
+            hasModelFields=has_model_fields,
+            referencedModels=referenced_models,
+            eventJson=json.dumps(event.model_dump(), indent=4),
+            eventId=event.id,
+            timestamp=datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            commentStart=comment_start,
+            commentEnd=comment_end,
+        )
+
+        return rendered
+
+    @staticmethod
+    def generate_model_class(
+        model: StellaModelDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        template = PythonCodeGenerator.load_template(f"model")
+        comment_start, comment_end = StellaCommentStructure.PYTHON.value
+        fields = [PythonField.from_stella_field(field, model_details) for field in model.fields.root]
+
+        referenced_models = {
+            f"{field.type}Model" if not field.type.endswith("Model") else field.type
+            for field in fields
+            if field.is_model
+        }
+
+        className = snake_to_camel(model.name)
+        if not className.endswith("Model"):
+            className += "Model"
+
+        rendered = template.render(
+            className=className,
+            fields=fields,
+            referencedModels=referenced_models,
+            modelJson=json.dumps(model.model_dump(), indent=4),
+            modelId=model.id,
+            timestamp=datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            commentStart=comment_start,
+            commentEnd=comment_end,
+        )
+
+        return rendered
+
+    @staticmethod
+    def get_file_name_for_event_name(event_name: str) -> str:
+        return f"{camel_to_snake(event_name)}_message.py"
+
+    @staticmethod
+    def get_file_name_for_model_name(model_name: str) -> str:
+        return f"{camel_to_snake(model_name)}_model.py"
+
+    @staticmethod
+    def get_language() -> str:
+        return StellaLanguage.PYTHON.value
+
+    @classmethod
+    def _get_diff(
+        cls, generate_method, item, existing_code: str, model_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        module_search = re.search(r"module_name\s*=\s*['\"](.+?)['\"]", existing_code)
+        if module_search is None:
+            raise StellaNowCLINamespaceNotFoundException()
+
+        module_name = module_search.group(1)
+
+        new_code = generate_method(item, model_details, module_name=module_name)
+
+        existing_code_no_comments = remove_comments(existing_code)
+        new_code_no_comments = remove_comments(new_code)
+
+        diff = difflib.unified_diff(
+            existing_code_no_comments.splitlines(keepends=True),
+            new_code_no_comments.splitlines(keepends=True),
+        )
+
+        return [
+            line
+            for line in diff
+            if line.startswith("- ") or line.startswith("+ ") and not (line.startswith("---") or line.startswith("+++"))
+        ]
+--- .//code_generators/typescript/dataclass.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from dataclasses import dataclass
+from typing import Dict
+
+from stellanow_api_internals.datatypes.workflow_mgmt import (
+    StellaEntity,
+    StellaField,
+    StellaModelDetailed,
+    StellaModelField,
+)
+
+from stellanow_cli.code_generators.typescript.field_type_mapper import TypeScriptFieldTypeMapper
+from stellanow_cli.code_generators.typescript.reserved_words import typescript_escape_reserved_words
+from stellanow_cli.core.utils.string_utils import snake_to_lower_camel
+
+@dataclass
+class TypeScriptField:
+    original_name: str
+    typescript_name: str
+    type: str
+    is_model: bool
+
+    @classmethod
+    def from_stella_field(cls, field: StellaField | StellaModelField, model_details: Dict[str, StellaModelDetailed]):
+        typescript_mapper = TypeScriptFieldTypeMapper()
+        field_type = typescript_mapper.map_field_type(field, model_details)
+        is_model = field_type.endswith("Model")
+        return cls(
+            original_name=field.name,
+            typescript_name=typescript_escape_reserved_words(snake_to_lower_camel(field.name)),
+            type=field_type,
+            is_model=is_model,
+        )
+
+@dataclass
+class TypeScriptEntity:
+    original_name: str
+    typescript_name: str
+
+    @classmethod
+    def from_stella_field(cls, entity: StellaEntity):
+        return cls(
+            original_name=entity.name,
+            typescript_name=typescript_escape_reserved_words(snake_to_lower_camel(entity.name)) + "Id",
+        )
+
+    def to_entity_type_declaration(self):
+        return f'new EntityType(\'{self.original_name}\', {self.typescript_name})'
+--- .//code_generators/typescript/reserved_words.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+def typescript_escape_reserved_words(word: str) -> str:
+    reserved_words = [
+        "break", "case", "catch", "class", "const", "continue", "debugger",
+        "default", "delete", "do", "else", "enum", "export", "extends", "false",
+        "finally", "for", "function", "if", "import", "in", "instanceof", "new",
+        "null", "return", "super", "switch", "this", "throw", "true", "try",
+        "typeof", "var", "void", "while", "with", "as", "implements", "interface",
+        "let", "package", "private", "protected", "public", "static", "yield"
+    ]
+    return f"{word}_" if word in reserved_words else word
+--- .//code_generators/typescript/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//code_generators/typescript/field_type_mapper.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from typing import Dict
+
+from stellanow_cli.core.enums import FieldType
+from stellanow_cli.core.filed_type_mapper import FieldTypeMapper
+
+class TypeScriptFieldTypeMapper(FieldTypeMapper):
+    @property
+    def type_mappings(self) -> Dict[FieldType, str]:
+        return {
+            FieldType.DECIMAL: "number",
+            FieldType.INTEGER: "number",
+            FieldType.BOOLEAN: "boolean",
+            FieldType.STRING: "string",
+            FieldType.DATE: "string",  # Assuming ISO string for simplicity
+            FieldType.DATETIME: "string",  # Assuming ISO string for simplicity
+            FieldType.MODEL: "any",  # Fallback, overridden by specific model types
+            FieldType.ANY: "any",
+        }
+--- .//code_generators/typescript/templates/model.template ---
+{%- include '.header.template' %}
+{%- set referenced_models = [] %}
+
+import type { ToJSON } from 'stellanow-sdk';
+import { Converters } from 'stellanow-sdk';
+{%- for field in fields %}
+    {%- if field.is_model and field.type not in referenced_models %}
+        {%- do referenced_models.append(field.type) %}
+    {%- endif %}
+{%- endfor %}
+{%- if referenced_models %}
+{%- for model in referenced_models %}
+import type { {{ model }} } from './models/{{ model | replace('Model', '') }}.js';
+{%- endfor %}
+{%- endif %}
+
+export class {{ className }} implements ToJSON {
+    constructor({%- for field in fields %}
+        public readonly {{ field.typescript_name }}: {{ field.type }}{%- if not loop.last %},{% endif %}
+    {%- endfor %}) {}
+
+    public toJSON(): object {
+        return { {%- for field in fields %}
+            {{ field.original_name }}: Converters.convert(this.{{ field.typescript_name }}){%- if not loop.last %},{% endif %}
+        {%- endfor %}
+        };
+    }
+}
+{%- include '.footer.template' %}
+--- .//code_generators/typescript/templates/message.template ---
+{%- include '.header.template' %}
+
+import type { ToJSON } from 'stellanow-sdk';
+import { StellaNowMessageBase, Converters, EntityType } from 'stellanow-sdk';
+{%- set referenced_models = [] %}
+{%- for field in fields %}
+    {%- if field.is_model and field.type not in referenced_models %}
+        {%- do referenced_models.append(field.type) %}
+    {%- endif %}
+{%- endfor %}
+{%- if referenced_models %}
+{%- for model in referenced_models %}
+import type { {{ model }} } from './models/{{ model | replace('Model', '') }}.js';
+{%- endfor %}
+{%- endif %}
+
+export class {{ className }} extends StellaNowMessageBase implements ToJSON {
+    constructor({%- for entity in entities %}
+        public readonly {{ entity.typescript_name }}: string,{%- endfor %}{% for field in fields %}
+        public readonly {{ field.typescript_name }}: {{ field.type }}{%- if not loop.last %},{% endif %}
+    {%- endfor %}) {
+        super('{{ eventName }}', [{{ entitiesList }}]);
+    }
+
+    public toJSON(): object {
+        return { {%- for field in fields %}
+            {{ field.original_name }}: Converters.convert(this.{{ field.typescript_name }}),
+            {%- endfor %}
+            ...super.toJSON()
+        };
+    }
+}
+{%- include '.footer.template' %}
+--- .//code_generators/typescript/code_generator.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import difflib
+import json
+from datetime import datetime
+from typing import Dict, List
+
+from stellanow_api_internals.datatypes.workflow_mgmt import StellaEventDetailed, StellaModelDetailed
+
+from stellanow_cli.code_generators.common.code_generator import CodeGenerator
+from stellanow_cli.code_generators.typescript.dataclass import TypeScriptEntity, TypeScriptField
+from stellanow_cli.core.enums import StellaCommentStructure, StellaLanguage
+from stellanow_cli.core.utils.string_utils import remove_comments, snake_to_camel
+from stellanow_cli.exceptions.cli_exceptions import (
+    StellaNowCLINoEntityAssociatedWithEventException,
+)
+
+class TypescriptCodeGenerator(CodeGenerator):
+    @staticmethod
+    def generate_message_class(
+        event: StellaEventDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        template = TypescriptCodeGenerator.load_template("message")
+        comment_start, comment_end = StellaCommentStructure.JAVA_SCRIPT.value
+        fields = [TypeScriptField.from_stella_field(field=field, model_details=model_details) for field in event.fields]
+        entities = [TypeScriptEntity.from_stella_field(entity) for entity in event.entities]
+
+        if not entities:
+            raise StellaNowCLINoEntityAssociatedWithEventException()
+
+        rendered = template.render(
+            className=snake_to_camel(event.name),
+            eventName=event.name,
+            entitiesList=", ".join([entity.to_entity_type_declaration() for entity in entities]),
+            entities=entities,
+            fields=fields,
+            eventJson=json.dumps(event.model_dump(), indent=4),
+            eventId=event.id,
+            timestamp=datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            commentStart=comment_start,
+            commentEnd=comment_end,
+        )
+        return rendered
+
+    @staticmethod
+    def generate_model_class(
+        model: StellaModelDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        template = TypescriptCodeGenerator.load_template("model")
+        comment_start, comment_end = StellaCommentStructure.JAVA_SCRIPT.value
+        fields = [TypeScriptField.from_stella_field(field=field, model_details=model_details) for field in model.fields.root]
+
+        class_name = snake_to_camel(model.name)
+        if not class_name.endswith("Model"):  # Only append if not already present
+            class_name += "Model"
+
+        rendered = template.render(
+            className=class_name,
+            fields=fields,
+            modelJson=json.dumps(model.model_dump(), indent=4),
+            modelId=model.id,
+            timestamp=datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            commentStart=comment_start,
+            commentEnd=comment_end,
+        )
+        return rendered
+
+    @staticmethod
+    def get_file_name_for_event_name(event_name: str) -> str:
+        return f"{snake_to_camel(event_name)}Message.ts"
+
+    @staticmethod
+    def get_file_name_for_model_name(model_name: str) -> str:
+        return f"{snake_to_camel(model_name)}Model.ts"
+
+    @staticmethod
+    def get_language() -> str:
+        return StellaLanguage.TYPESCRIPT.value
+
+    @classmethod
+    def _get_diff(
+        cls, generate_method, item, existing_code: str, models_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        new_code = generate_method(item, models_details)
+        existing_code_no_comments = remove_comments(existing_code)
+        new_code_no_comments = remove_comments(new_code)
+        diff = difflib.unified_diff(
+            existing_code_no_comments.splitlines(keepends=True), new_code_no_comments.splitlines(keepends=True)
+        )
+        return [
+            line
+            for line in diff
+            if line.startswith("- ") or line.startswith("+ ") and not (line.startswith("---") or line.startswith("+++"))
+        ]
+
+    @classmethod
+    def get_message_diff(
+        cls, event: StellaEventDetailed, existing_code: str, models_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        return cls._get_diff(cls.generate_message_class, event, existing_code, models_details)
+
+    @classmethod
+    def get_model_diff(
+        cls, model: StellaModelDetailed, existing_code: str, models_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        return cls._get_diff(cls.generate_model_class, model, existing_code, models_details)
+--- .//code_generators/__init__.py ---
+
+--- .//code_generators/common/__init__.py ---
+
+--- .//code_generators/common/templates/.footer.template ---
+{%- set json_data = eventJson if eventJson is defined else modelJson %}
+/*
+Generated from:
+{{ json_data }}
+*/
+--- .//code_generators/common/templates/.header.template ---
+{%- set id = eventId if eventId is defined else modelId -%}
+/*
+This file is auto-generated by StellaNowCLI. DO NOT EDIT.
+
+ID: {{ id if id else '' }}
+Generated: {{ timestamp }}
+*/
+--- .//code_generators/common/code_generator.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+from abc import ABC, abstractmethod
+from pathlib import Path
+from typing import Dict, List
+
+from jinja2 import Environment, FileSystemLoader, Template
+from stellanow_api_internals.datatypes.workflow_mgmt import StellaEventDetailed, StellaModelDetailed
+
+from stellanow_cli.core.utils.string_utils import camel_to_snake, snake_to_camel
+
+
+class CodeGenerator(ABC):
+    def __init__(self):
+        self.env = self._create_jinja_environment()
+
+    @classmethod
+    def _create_jinja_environment(cls) -> Environment:
+        current_file_path = Path(__file__).parent
+        language_templates_path = current_file_path / f"../{cls.get_language()}/templates"
+        shared_templates_path = current_file_path / "templates"  # Shared templates directory
+
+        env = Environment(
+            loader=FileSystemLoader([language_templates_path, shared_templates_path]),
+            extensions=["jinja2.ext.do"]
+        )
+        env.filters["camel_to_snake"] = camel_to_snake
+        env.filters["snake_to_camel"] = snake_to_camel
+        return env
+
+    @classmethod
+    def load_template(cls, template_name: str) -> Template:
+        env = cls._create_jinja_environment()
+        return env.get_template(f"{template_name}.template")
+
+    @abstractmethod
+    def generate_message_class(
+        self, event: StellaEventDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        pass
+
+    @abstractmethod
+    def generate_model_class(
+        self, model: StellaModelDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        pass
+
+    @staticmethod
+    @abstractmethod
+    def get_file_name_for_event_name(event_name: str) -> str:
+        pass
+
+    @staticmethod
+    @abstractmethod
+    def get_file_name_for_model_name(model_name: str) -> str:
+        pass
+
+    @staticmethod
+    @abstractmethod
+    def get_language() -> str:
+        pass
+
+    @classmethod
+    @abstractmethod
+    def _get_diff(
+        cls, generate_method, item, existing_code: str, model_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        pass
+
+    @classmethod
+    def get_message_diff(
+        cls, event: StellaEventDetailed, existing_code: str, model_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        return cls._get_diff(cls.generate_message_class, event, existing_code, model_details)
+
+    @classmethod
+    def get_model_diff(
+        cls, model: StellaModelDetailed, existing_code: str, models_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        return cls._get_diff(cls.generate_model_class, model, existing_code, models_details)
+
+--- .//code_generators/csharp/dataclass.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from dataclasses import dataclass
+from typing import Dict
+
+from stellanow_api_internals.datatypes.workflow_mgmt import (
+    StellaEntity,
+    StellaField,
+    StellaModelDetailed,
+    StellaModelField,
+)
+
+from stellanow_cli.code_generators.csharp.field_type_mapper import CSharpFieldTypeMapper
+from stellanow_cli.code_generators.csharp.reserved_words import csharp_escape_reserved_words
+from stellanow_cli.core.utils.string_utils import camel_to_snake, snake_to_camel, snake_to_lower_camel
+
+
+@dataclass
+class CSharpField:
+    original_name: str
+    csharp_name: str
+    type: str
+    is_model: bool
+
+    @classmethod
+    def from_stella_field(cls, field: StellaField | StellaModelField, model_details: Dict[str, StellaModelDetailed]):
+        csharp_mapper = CSharpFieldTypeMapper()
+        field_type = csharp_mapper.map_field_type(field, model_details)
+        is_model = field_type.endswith("Model")
+        return cls(
+            original_name=field.name,
+            csharp_name=csharp_escape_reserved_words(snake_to_camel(camel_to_snake(field.name))),
+            type=field_type,
+            is_model=is_model,
+        )
+
+    def to_constructor_parameter_declaration(self):
+        return f"{self.type} {self.csharp_name}"
+
+
+@dataclass
+class CSharpEntity:
+    original_name: str
+    csharp_name: str
+
+    @classmethod
+    def from_stella_field(cls, entity: StellaEntity):
+        return cls(
+            original_name=entity.name,
+            csharp_name=csharp_escape_reserved_words(snake_to_lower_camel(entity.name)) + "Id",
+        )
+
+    def to_entity_type_declaration(self):
+        return f'new EntityType("{self.original_name}", {self.csharp_name})'
+
+    def to_constructor_parameter_declaration(self):
+        return f"string {self.csharp_name}"
+
+
+@dataclass
+class CSharpModel:
+    original_name: str
+    csharp_name: str
+
+--- .//code_generators/csharp/reserved_words.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+
+def csharp_escape_reserved_words(word: str) -> str:
+    reserved_words = [
+        "abstract",
+        "as",
+        "base",
+        "bool",
+        "break",
+        "byte",
+        "case",
+        "catch",
+        "char",
+        "checked",
+        "class",
+        "const",
+        "continue",
+        "decimal",
+        "default",
+        "delegate",
+        "do",
+        "double",
+        "else",
+        "enum",
+        "event",
+        "explicit",
+        "extern",
+        "false",
+        "finally",
+        "fixed",
+        "float",
+        "for",
+        "foreach",
+        "goto",
+        "if",
+        "implicit",
+        "in",
+        "int",
+        "interface",
+        "internal",
+        "is",
+        "lock",
+        "long",
+        "namespace",
+        "new",
+        "null",
+        "object",
+        "operator",
+        "out",
+        "override",
+        "params",
+        "private",
+        "protected",
+        "public",
+        "readonly",
+        "ref",
+        "return",
+        "sbyte",
+        "sealed",
+        "short",
+        "sizeof",
+        "stackalloc",
+        "static",
+        "string",
+        "struct",
+        "switch",
+        "this",
+        "throw",
+        "true",
+        "try",
+        "typeof",
+        "uint",
+        "ulong",
+        "unchecked",
+        "unsafe",
+        "ushort",
+        "using",
+        "virtual",
+        "void",
+        "volatile",
+        "while",
+    ]
+
+    return f"{word}_" if word in reserved_words else word
+
+--- .//code_generators/csharp/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//code_generators/csharp/field_type_mapper.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from typing import Dict
+
+from stellanow_cli.core.enums import FieldType
+from stellanow_cli.core.filed_type_mapper import FieldTypeMapper
+
+
+class CSharpFieldTypeMapper(FieldTypeMapper):
+    @property
+    def type_mappings(self) -> Dict[FieldType, str]:
+        return {
+            FieldType.DECIMAL: "decimal",
+            FieldType.INTEGER: "int",
+            FieldType.BOOLEAN: "bool",
+            FieldType.STRING: "string",
+            FieldType.DATE: "DateOnly",
+            FieldType.DATETIME: "DateTime",
+            FieldType.MODEL: "object",
+            FieldType.ANY: "object",
+        }
+
+--- .//code_generators/csharp/templates/model.template ---
+{% include '.header.template' %}
+
+
+namespace {{ namespace }}.Models;
+
+public record {{ className }}Model(
+    {%- for field in fields %}
+    [property: Newtonsoft.Json.JsonProperty("{{ field.original_name }}")] {{ field.type }} {{ field.csharp_name }}{{ "," if not loop.last }}
+    {%- endfor %}
+    );
+
+{% include '.footer.template' %}
+--- .//code_generators/csharp/templates/message.template ---
+
+{% include '.header.template' %}
+
+using StellaNowSDK.Messages;
+{% if hasModelFields %}
+using {{ namespace }}.Models;
+{% endif %}
+
+namespace {{ namespace }};
+
+public record {{ className }}Message(
+    {%- for entity in entities %}
+    [property: Newtonsoft.Json.JsonIgnore] string {{ entity.csharp_name }},
+    {%- endfor %}
+    {%- for field in fields %}
+    [property: Newtonsoft.Json.JsonProperty("{{ field.original_name }}")] {{ field.type }} {{ field.csharp_name }}{{ "," if not loop.last }}
+    {%- endfor %}
+    ) : StellaNowMessageBase("{{ eventName }}", new List<EntityType>{ {{ entitiesList }} });
+
+{% include '.footer.template' %}
+--- .//code_generators/csharp/code_generator.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import difflib
+import json
+import re
+from datetime import datetime
+from typing import Dict, List
+
+from stellanow_api_internals.datatypes.workflow_mgmt import StellaEventDetailed, StellaModelDetailed
+
+from stellanow_cli.code_generators.common.code_generator import CodeGenerator
+from stellanow_cli.code_generators.csharp.dataclass import CSharpEntity, CSharpField
+from stellanow_cli.core.enums import StellaCommentStructure, StellaLanguage
+from stellanow_cli.core.utils.string_utils import remove_comments, snake_to_camel
+from stellanow_cli.exceptions.cli_exceptions import (
+    StellaNowCLINamespaceNotFoundException,
+    StellaNowCLINoEntityAssociatedWithEventException,
+)
+
+
+class CsharpCodeGenerator(CodeGenerator):
+    @staticmethod
+    def generate_message_class(
+        event: StellaEventDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        template = CsharpCodeGenerator.load_template(f"message")
+
+        namespace = kwargs.get("namespace", "StellaNowSDK.Messages")
+        comment_start, comment_end = StellaCommentStructure.C_SHARP.value
+
+        fields = [CSharpField.from_stella_field(field=field, model_details=model_details) for field in event.fields]
+        entities = [CSharpEntity.from_stella_field(entity) for entity in event.entities]
+
+        if not entities:
+            raise StellaNowCLINoEntityAssociatedWithEventException()
+
+        has_model_fields = any(field.is_model for field in fields)
+
+        rendered = template.render(
+            className=snake_to_camel(event.name),
+            eventName=event.name,
+            constructorArguments=", ".join(
+                [
+                    ", ".join([entity.to_constructor_parameter_declaration() for entity in entities]),
+                    ", ".join([field.to_constructor_parameter_declaration() for field in fields]),
+                ]
+            ),
+            entitiesList=", ".join([entity.to_entity_type_declaration() for entity in entities]),
+            entities=entities,
+            fields=fields,
+            namespace=namespace,
+            hasModelFields=has_model_fields,
+            eventJson=json.dumps(event.model_dump(), indent=4),
+            eventId=event.id,
+            timestamp=datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            commentStart=comment_start,
+            commentEnd=comment_end,
+        )
+
+        return rendered
+
+    @staticmethod
+    def generate_model_class(
+        model: StellaModelDetailed, model_details: Dict[str, StellaModelDetailed], **kwargs
+    ) -> str:
+        template = CsharpCodeGenerator.load_template(f"model")
+
+        namespace = kwargs.get("namespace", "StellaNowSDK.Messages")
+        comment_start, comment_end = StellaCommentStructure.C_SHARP.value
+
+        fields = [
+            CSharpField.from_stella_field(field=field, model_details=model_details) for field in model.fields.root
+        ]
+
+        rendered = template.render(
+            className=snake_to_camel(model.name),
+            fields=fields,
+            namespace=namespace,
+            modelJson=json.dumps(model.model_dump(), indent=4),
+            modelId=model.id,
+            timestamp=datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            commentStart=comment_start,
+            commentEnd=comment_end,
+        )
+
+        return rendered
+
+    @staticmethod
+    def get_file_name_for_event_name(event_name: str) -> str:
+        return f"{snake_to_camel(event_name)}Message.cs"
+
+    @staticmethod
+    def get_file_name_for_model_name(model_name: str) -> str:
+        return f"{snake_to_camel(model_name)}Model.cs"
+
+    @staticmethod
+    def get_language() -> str:
+        return StellaLanguage.CSHARP.value
+
+    @classmethod
+    def _get_diff(
+        cls, generate_method, item, existing_code: str, models_details: Dict[str, StellaModelDetailed]
+    ) -> List[str]:
+        namespace_search = re.search(r"namespace (.*);", existing_code)
+        if namespace_search is None:
+            raise StellaNowCLINamespaceNotFoundException()
+
+        namespace = namespace_search.group(1)
+
+        new_code = generate_method(item, models_details, namespace=namespace)
+
+        existing_code_no_comments = remove_comments(existing_code)
+        new_code_no_comments = remove_comments(new_code)
+
+        diff = difflib.unified_diff(
+            existing_code_no_comments.splitlines(keepends=True), new_code_no_comments.splitlines(keepends=True)
+        )
+
+        return [
+            line
+            for line in diff
+            if line.startswith("- ") or line.startswith("+ ") and not (line.startswith("---") or line.startswith("+++"))
+        ]
+
+--- .//commands/configure/configure_group.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import click
+
+from .code_generator import configure_code_generators_cmd
+
+
+@click.group()
+def configure() -> None:
+    """Sets up the necessary credentials and configurations for a specific profile or for the DEFAULT profile if none
+    is specified."""
+    ...
+
+
+configure.add_command(configure_code_generators_cmd)
+
+--- .//commands/configure/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//commands/configure/code_generator.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+import click
+
+from stellanow_cli.core.context import StellaNowContext, pass_stella_context
+from stellanow_cli.core.decorators import prompt
+from stellanow_cli.core.validators import password_validator, url_validator, uuid_validator
+from stellanow_cli.services.code_generator.code_generator import CodeGeneratorService, CodeGeneratorServiceConfig
+
+
+@click.command()
+@prompt("--base_url", callback=url_validator)
+@prompt("--username")
+@prompt("--password", callback=password_validator, hide_input=True)
+@prompt("--organization_id", callback=uuid_validator)
+@pass_stella_context
+def code_generator_service(
+    stella_ctx: StellaNowContext,
+    base_url: str,
+    username: str,
+    password: str,
+    organization_id: str,
+) -> None:
+    """Sets up the necessary credentials and configurations for a specific profile or for the DEFAULT profile if none
+    is specified."""
+    code_generator_config = CodeGeneratorServiceConfig(
+        base_url=base_url,
+        username=username,
+        password=password,
+        organization_id=organization_id,
+    )
+    stella_ctx.save_service_config(CodeGeneratorService.service_name(), code_generator_config.to_profile_data())
+
+
+configure_code_generators_cmd = code_generator_service
+
+--- .//commands/_init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//commands/data_dna_stream_tester/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//commands/data_dna_stream_tester/send_game_state_data.py ---
+"""
+Copyright (C) 2022-2023 Stella Technologies (UK) Limited.
+
+This software is the proprietary information of Stella Technologies (UK) Limited.
+Use, reproduction, or redistribution of this software is strictly prohibited without
+the express written permission of Stella Technologies (UK) Limited.
+All rights reserved.
+"""
+
+import json
+import os
+import tempfile
+import typing as t
+import uuid
+import zipfile
+from dataclasses import asdict, dataclass, field
+from datetime import datetime
+from time import sleep
+
+import click
+import paho.mqtt.client as mqtt
+from loguru import logger
+
+from stellanow_cli.core.validators import url_validator, uuid_validator, zip_file_validator
+
+
+@dataclass
+class EntityTypeIds:
+    entityTypeDefinitionId: str
+    entityId: str
+
+
+@dataclass
+class Metadata:
+    eventTypeDefinitionId: str
+    entityTypeIds: t.List[EntityTypeIds]
+    messageId: str = field(default_factory=lambda: str(uuid.uuid4()))
+    messageOriginDateUTC: str = field(default_factory=lambda: datetime.utcnow().isoformat() + "Z")
+
+
+@dataclass
+class Value:
+    metadata: Metadata
+    payload: str
+
+
+@dataclass
+class Key:
+    organizationId: str
+    projectId: str
+
+
+@dataclass
+class MsgWrapper:
+    key: Key
+    value: Value
+
+
+def create_message(org_id, project_id, event_type, entity_type, entity_id, payload) -> MsgWrapper:
+    entity_type_ids = EntityTypeIds(entityTypeDefinitionId=entity_type, entityId=entity_id)
+    metadata = Metadata(eventTypeDefinitionId=event_type, entityTypeIds=[entity_type_ids])
+    value = Value(metadata=metadata, payload=payload)
+    key = Key(organizationId=org_id, projectId=project_id)
+
+    return MsgWrapper(key=key, value=value)
+
+
+def on_connect(client, userdata, flags, reason_code, properties):  # noqa
+    if reason_code == 0:
+        logger.info("Connected to MQTT Broker!")
+    else:
+        logger.error(f"Failed to connect, return code {reason_code}\n")
+
+
+def on_publish(client, userdata, mid, reason_code, properties):  # noqa
+    logger.info(f"Message published: {mid}")
+
+
+@click.command()
+@click.option("--mqtt_username", required=True, prompt=True, help="Username to authenticate with MQTT broker.")
+@click.option(
+    "--mqtt_password", required=True, prompt=True, hide_input=True, help="Password to authenticate with MQTT broker."
+)
+@click.option("--mqtt_broker", required=True, prompt=True, callback=url_validator, help="MQTT broker to connect to.")
+@click.option("--mqtt_port", default=8083, help="Port for MQTT broker connection, default is 8883 for SSL.")
+@click.option(
+    "--input_file",
+    required=True,
+    prompt=True,
+    type=click.Path(exists=True),
+    callback=zip_file_validator,
+    help="File containing game state data to send.",
+)
+@click.option("--org_id", required=True, prompt=True, callback=uuid_validator, help="Stella Now Organization I D.")
+@click.option("--project_id", required=True, prompt=True, callback=uuid_validator, help="Stella Now Project ID.")
+@click.option("--event_type", required=True, prompt=True, help="Event type definition ID for the game state data.")
+@click.option("--entity_type", required=True, prompt=True, help="Entity type definition ID for the game state data.")
+@click.option("--entity_id", required=True, prompt=True, help="Entity ID for the game state data.")
+@click.option(
+    "--infinite",
+    default=False,
+    is_flag=True,
+    help="If set, the game state data will be sent continuously until the process is interrupted.",
+)
+def simulate_game_match(
+    mqtt_username: str,
+    mqtt_password: str,
+    mqtt_broker: str,
+    mqtt_port: int,
+    input_file: str,
+    org_id: str,
+    project_id: str,
+    event_type: str,
+    entity_type: str,
+    entity_id: str,
+    infinite: bool,
+    *args,
+    **kwargs,
+) -> None:
+    """Simulate a full match of a game by sending game state data to a MQTT broker."""
+    ...
+
+    topic = f"in/{org_id}"
+
+    # Initialize the MQTT Client
+    client = mqtt.Client(
+        mqtt.CallbackAPIVersion.VERSION2, transport="websockets", protocol=mqtt.MQTTv5, client_id="tools-cli"
+    )
+    client.username_pw_set(mqtt_username, mqtt_password)
+    client.on_connect = on_connect
+    client.on_publish = on_publish
+
+    # Configure SSL/TLS
+    client.tls_set()  # Default parameters for SSL. Adjust as necessary for your broker's configuration.
+
+    # Connect to the MQTT Broker
+    client.connect(mqtt_broker, mqtt_port, 60)
+
+    # Start the network loop in a separate thread
+    client.loop_start()
+
+    try:
+        while True:
+            # Unpack the ZIP file and process each JSON file
+            with tempfile.TemporaryDirectory() as temp_dir:
+                with zipfile.ZipFile(input_file, "r") as zip_ref:
+                    zip_ref.extractall(temp_dir)  # Extract files to the temporary directory
+                    for root, dirs, files in os.walk(temp_dir):
+                        sorted_files = sorted(files, key=lambda x: os.path.getmtime(os.path.join(root, x)))
+                        for filename in sorted_files:
+                            if filename.endswith(".json"):
+                                file_path = os.path.join(root, filename)
+                                with open(file_path, "r") as f:
+                                    data = json.load(f)
+                                    message = json.dumps(
+                                        asdict(
+                                            create_message(
+                                                org_id, project_id, event_type, entity_type, entity_id, json.dumps(data)
+                                            )
+                                        )
+                                    )
+                                    # Uncomment the next line to publish
+                                    client.publish(topic, payload=message, qos=1)
+                                    logger.info(f"Published {filename}")
+
+                                    sleep(0.1)
+            if not infinite:
+                break  # Exit the outer loop if infinite processing is not required
+    finally:
+        client.loop_stop()  # Stop the network loop
+        client.disconnect()  # Disconnect from the MQTT broker
+
+    client.loop_stop()
+    client.disconnect()
+
+
+simulate_game_match_cmd = simulate_game_match
+
+--- .//commands/data_dna_stream_tester/data_dna_stream_tester_group.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import click
+
+from stellanow_cli.commands.data_dna_stream_tester.send_game_state_data import simulate_game_match_cmd
+
+
+@click.group(
+    context_settings=dict(
+        ignore_unknown_options=True,
+    )
+)
+@click.pass_context
+def data_dna_stream_tester(ctx: click.Context, *args, **kwargs) -> None:
+    """Group of commands related to interaction with sending test data into Data DNA ingestor."""
+    ...
+
+
+data_dna_stream_tester.add_command(simulate_game_match_cmd)
+
+--- .//commands/code_generator/plan.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import glob
+import os
+from typing import List
+
+import click
+from loguru import logger
+
+from stellanow_cli.core.helpers import SkippedFile
+from stellanow_cli.core.utils.logger_utils import log_summary
+from stellanow_cli.core.validators import uuid_validator
+from stellanow_cli.services.code_generator.code_generator import CodeGeneratorService, pass_code_generator_service
+from stellanow_cli.services.code_generator.tools import process_file
+
+
+@click.command()
+@click.option(
+    "--project_id",
+    "-p",
+    required=True,
+    prompt=True,
+    callback=uuid_validator,
+    help="UUID of the project associated with the organization saved in your configuration file.",
+)
+@click.option("--input_dir", "-i", default=".", help="The directory to read generated classes from.")
+@pass_code_generator_service
+def plan(service: CodeGeneratorService, project_id: str, input_dir: str, **kwargs):
+    """Compares currently generated classes with the specifications fetched from the API and provides a summary of
+    changes."""
+    logger.error("Command is currently turned off for all languages.")
+
+    # workflow_client = service.create_workflow_client(project_id=project_id)
+    # generators = {".cs": CsharpCodeGenerator()}
+    # skipped_files: List[SkippedFile] = []
+    # files_found = 0
+    #
+    # for filename in glob.iglob(f"{input_dir}/**", recursive=True):
+    #     if os.path.isdir(filename):
+    #         continue
+    #
+    #     _, ext = os.path.splitext(filename)
+    #     if ext not in generators:
+    #         continue
+    #
+    #     files_found += 1
+    #     generator = generators[ext]
+    #
+    #     logger.info(f"==============================\nComparison for file: {filename}")
+    #     reasons = process_file(filename=filename, workflow_client=workflow_client, generator=generator)
+    #     if reasons:
+    #         skipped_files.append(SkippedFile(filename, ", ".join(reasons)))
+    #
+    # if files_found == 0:
+    #     logger.warning("No recognized files found to process. Nothing to plan.")
+    #     return
+    #
+    # log_summary(skipped_files)
+
+
+plan_cmd = plan
+
+--- .//commands/code_generator/models.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import click
+from loguru import logger
+from prettytable import PrettyTable
+
+from stellanow_cli.core.validators import uuid_validator
+from stellanow_cli.services.code_generator.code_generator import CodeGeneratorService, pass_code_generator_service
+
+
+@click.command()
+@click.option(
+    "--project_id",
+    required=True,
+    prompt=True,
+    callback=uuid_validator,
+    help="UUID of the project associated with the organization saved in your configuration file.",
+)
+@pass_code_generator_service
+def models(service: CodeGeneratorService, project_id: str, *args, **kwargs) -> None:
+    """Fetches the latest models specifications from the API and output a list of the models into the terminal prompt."""
+    workflow_client = service.create_workflow_client(project_id=project_id)
+    _models = workflow_client.get_models()
+
+    table = PrettyTable(["ModelID", "Model Name", "Created At", "Updated At"])
+
+    for model in _models:
+        table.add_row([model.id, model.name, model.createdAt, model.updatedAt])
+
+    logger.info(table)
+
+    for model in _models:
+        logger.info(f"ID: {model.id}, Name: {model.name}")
+
+
+models_cmd = models
+
+--- .//commands/code_generator/generate.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import importlib
+from typing import Any, List
+
+import click
+from loguru import logger
+
+from stellanow_cli.core.enums import StellaLanguage
+from stellanow_cli.core.utils.logger_utils import log_processed_and_skipped_result
+from stellanow_cli.core.validators import uuid_validator
+from stellanow_cli.exceptions.cli_exceptions import (
+    StellaNowCLILanguageNotSupportedException,
+    StellaNowCLINamespaceNotProvidedException,
+)
+from stellanow_cli.services.code_generator.code_generator import CodeGeneratorService, pass_code_generator_service
+from stellanow_cli.services.code_generator.tools import (
+    collect_all_model_references,
+    collect_model_references,
+    fetch_model_details,
+    generate_event_files,
+    generate_model_files,
+)
+
+
+@click.command()
+@click.option("--namespace", "-n", default="", help="The namespace for the generated classes.")  # if empty raise in C#
+@click.option(
+    "--project_id",
+    required=True,
+    prompt=True,
+    callback=uuid_validator,
+    help="UUID of the project associated with the organization saved in your configuration file.",
+)
+@click.option("--destination", "-d", default=".", help="The directory to save the generated classes.")
+@click.option("--force", "-f", is_flag=True, help="Overwrite existing files.")
+@click.option("--event_names", "-e", multiple=True, help="List of specific events to generate.")
+@click.option(
+    "--language",
+    "-l",
+    type=click.Choice([lang.value for lang in StellaLanguage], case_sensitive=False),
+    default="csharp",
+    help="The programming language for the generated classes.",
+)
+@pass_code_generator_service
+def generate(
+    service: CodeGeneratorService,
+    project_id: str,
+    destination: str,
+    force: bool,
+    event_names: List[str],
+    language: str,
+    **kwargs: dict[str, Any],
+):
+    """Fetches the latest event specifications from the API and generates corresponding class code in the desired
+    programming language."""
+    workflow_client = service.create_workflow_client(project_id=project_id)
+
+    if language == "csharp" and not kwargs.get("namespace"):
+        raise StellaNowCLINamespaceNotProvidedException
+
+    logger.info("Generating...")
+
+    generator_className = f"{language.capitalize()}CodeGenerator"
+    try:
+        print(f"stellanow_cli.code_generators.{language}_code_generator")
+        print(generator_className)
+        generator_class = getattr(
+            importlib.import_module(f"stellanow_cli.code_generators.{language}.code_generator"), generator_className
+        )
+    except ImportError:
+        raise StellaNowCLILanguageNotSupportedException(language)
+
+    events = workflow_client.get_events(include_inactive=True)
+
+    if event_names:
+        events = [event for event in events if event.name in event_names]
+
+    model_refs = collect_model_references(workflow_client=workflow_client, events=events)
+    all_model_refs = collect_all_model_references(workflow_client=workflow_client, model_ids=model_refs)
+    models_details = fetch_model_details(workflow_client=workflow_client, model_refs=all_model_refs)
+
+    models_processed, models_skipped = generate_model_files(
+        generator_class=generator_class, models_details=models_details, destination=destination, force=force, **kwargs
+    )
+    events_not_found, events_processed, events_skipped = generate_event_files(
+        generator_class=generator_class,
+        events=events,
+        event_names=event_names,
+        workflow_client=workflow_client,
+        models_details=models_details,
+        destination=destination,
+        force=force,
+        **kwargs,
+    )
+
+    all_skipped_files = models_skipped + events_skipped
+
+    log_processed_and_skipped_result(models_processed + events_processed, all_skipped_files, events_not_found)
+
+
+generate_cmd = generate
+
+--- .//commands/code_generator/events.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import click
+from loguru import logger
+from prettytable import PrettyTable
+
+from stellanow_cli.core.validators import uuid_validator
+from stellanow_cli.services.code_generator.code_generator import CodeGeneratorService, pass_code_generator_service
+
+
+@click.command()
+@click.option(
+    "--project_id",
+    required=True,
+    prompt=True,
+    callback=uuid_validator,
+    help="UUID of the project associated with the organization saved in your configuration file.",
+)
+@pass_code_generator_service
+def events(service: CodeGeneratorService, project_id: str, *args, **kwargs) -> None:
+    """Fetches the latest event specifications from the API and output a list of the events into the terminal prompt."""
+    workflow_client = service.create_workflow_client(project_id=project_id)
+    _events = workflow_client.get_events(include_inactive=True)
+
+    table = PrettyTable(["EventID", "Event Name", "Is Active", "Created At", "Updated At"])
+
+    # Populate the table with data from your SkippedFile instances
+    for event in _events:
+        table.add_row([event.id, event.name, event.isActive, event.createdAt, event.updatedAt])
+
+    logger.info(table)
+
+    for event in _events:
+        logger.info(f"ID: {event.id}, Name: {event.name}")
+
+
+events_cmd = events
+
+--- .//commands/code_generator/code_generator_service_group.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+import click
+
+from stellanow_cli.commands.code_generator.events import events_cmd
+from stellanow_cli.commands.code_generator.generate import generate_cmd
+from stellanow_cli.commands.code_generator.models import models_cmd
+from stellanow_cli.commands.code_generator.plan import plan_cmd
+from stellanow_cli.core.context import StellaNowContext, pass_stella_context
+from stellanow_cli.core.decorators import option_with_config_lookup
+from stellanow_cli.core.validators import password_validator, url_validator, uuid_validator
+from stellanow_cli.services.code_generator.code_generator import CodeGeneratorService, CodeGeneratorServiceConfig
+
+
+@click.group(
+    context_settings=dict(
+        ignore_unknown_options=True,
+    )
+)
+@option_with_config_lookup(
+    "--base_url",
+    service_class=CodeGeneratorService,
+    callback=url_validator,
+    help="Base Service url",
+)
+@option_with_config_lookup("--username", service_class=CodeGeneratorService, help="Base Service Api key")
+@option_with_config_lookup(
+    "--password",
+    service_class=CodeGeneratorService,
+    callback=password_validator,
+    hide_input=True,
+    help="Base Service Api Secret",
+)
+@option_with_config_lookup(
+    "--organization_id",
+    service_class=CodeGeneratorService,
+    callback=uuid_validator,
+    hide_input=True,
+    help="Name of Organization",
+)
+@pass_stella_context
+@click.pass_context
+def code_generator_service(
+    ctx: click.Context,
+    stella_ctx: StellaNowContext,
+    base_url: str,
+    username: str,
+    password: str,
+    organization_id: str,
+    *args,
+    **kwargs
+) -> None:
+    ctx.obj = CodeGeneratorService(
+        CodeGeneratorServiceConfig(
+            base_url=base_url,
+            username=username,
+            password=password,
+            organization_id=organization_id,
+        )
+    )
+
+    stella_ctx.add_service(service=ctx.obj)
+
+
+code_generator_service.add_command(events_cmd)
+code_generator_service.add_command(generate_cmd)
+code_generator_service.add_command(plan_cmd)
+code_generator_service.add_command(models_cmd)
+
+--- .//commands/code_generator/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//_run.py ---
+#!/usr/bin/env python
+
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+from stellanow_cli.cli import cli
+
+if __name__ == "__main__":
+    cli()
+
+--- .//services/service.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+from dataclasses import asdict, dataclass
+
+from ..core.profile_manager import ProfileData
+
+
+@dataclass
+class StellaNowServiceConfig:
+    def to_profile_data(self) -> ProfileData:
+        return asdict(self)
+
+
+class StellaNowService:
+    def __init__(self, config: StellaNowServiceConfig) -> None:  # noqa
+        raise NotImplementedError("This method should be implemented by subclasses.")
+
+    @classmethod
+    def service_name(cls) -> str:
+        raise NotImplementedError("This method should be implemented by subclasses and return the service name.")
+
+--- .//services/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//services/code_generator/tools.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+import os
+import re
+from typing import Any, Callable, Dict, List, Set, Tuple
+
+from loguru import logger
+from stellanow_api_internals.clients.workflow_manager_client import WorkflowManagerClient
+from stellanow_api_internals.datatypes.workflow_mgmt import (
+    StellaEvent,
+    StellaEventDetailed,
+    StellaFieldType,
+    StellaModelDetailed,
+    StellaModelFieldType,
+)
+
+# from stellanow_cli.code_generators import CsharpCodeGenerator
+from stellanow_cli.code_generators.common.code_generator import CodeGenerator
+from stellanow_cli.core.enums import StellaDataStructure
+from stellanow_cli.core.helpers import ProcessedFile, SkippedFile, ensure_destination_exists
+from stellanow_cli.exceptions.cli_exceptions import StellaNowCLIException
+
+
+def collect_model_references(workflow_client: WorkflowManagerClient, events: List[StellaEvent]) -> Set[str]:
+    model_refs = set()
+    for event in events:
+        detailed_event = workflow_client.get_event_details(event.id)
+        for field in detailed_event.fields:
+            if isinstance(field.fieldType, dict):
+                field_type = StellaFieldType(**field.fieldType)
+            else:
+                field_type = field.fieldType
+
+            if field_type.value == StellaDataStructure.MODEL:
+                model_refs.add(field_type.modelRef)
+    return model_refs
+
+
+def collect_all_model_references(workflow_client: WorkflowManagerClient, model_ids: Set[str]) -> Set[str]:
+    all_model_refs = set(model_ids)
+    checked_model_refs = set()
+
+    while model_ids:
+        current_id = model_ids.pop()
+        if current_id in checked_model_refs:
+            continue
+
+        model_details = workflow_client.get_model_details(current_id)
+        for field in model_details.fields.root:
+            if isinstance(field.fieldType, Dict):
+                field_type = StellaModelFieldType(**field.fieldType)
+            else:
+                field_type = field.fieldType
+            if field_type.value == StellaDataStructure.MODEL and field_type.modelRef:
+                if field_type.modelRef not in all_model_refs:
+                    model_ids.add(field_type.modelRef)
+                    all_model_refs.add(field_type.modelRef)
+
+        checked_model_refs.add(current_id)
+
+    return all_model_refs
+
+
+def fetch_model_details(workflow_client: WorkflowManagerClient, model_refs: set) -> Dict[str, StellaModelDetailed]:
+    models_details: Dict[str, StellaModelDetailed] = {}
+    for model_id in model_refs:
+        models_details[model_id] = workflow_client.get_model_details(model_id)
+    return models_details
+
+
+def _generate_files(
+    items: List[Any],
+    generate_method: Callable[[Any, Dict[str, StellaModelDetailed], Any], str],
+    get_file_name_method: Callable[[str], str],
+    models_details: Dict[str, StellaModelDetailed],
+    destination: str,
+    force: bool,
+    is_model: bool = False,
+    **kwargs,
+) -> Tuple[List[ProcessedFile], List[SkippedFile]]:
+    processed_files = []
+    skipped_files = []
+
+    for item in items:
+        logger.info(f"Generating class for item: {item.name}")
+
+        if is_model:
+            file_path = os.path.join(destination, "Models", get_file_name_method(item.name))
+        else:
+            file_path = os.path.join(destination, get_file_name_method(item.name))
+
+        if not force and os.path.exists(file_path):
+            logger.info("Skipped ...")
+            skipped_files.append(SkippedFile(item.name, "File Already Exist"))
+            continue
+
+        try:
+            code = generate_method(item, models_details, **kwargs)
+            ensure_destination_exists(os.path.dirname(file_path))
+            with open(file_path, "w") as file:
+                file.write(code)
+            processed_files.append(ProcessedFile(item.name))
+        except StellaNowCLIException as e:
+            logger.info("Skipped ...")
+            skipped_files.append(SkippedFile(item.name, e.message))
+
+    return processed_files, skipped_files
+
+
+def generate_model_files(
+    generator_class: CodeGenerator,
+    models_details: Dict[str, StellaModelDetailed],
+    destination: str,
+    force: bool,
+    **kwargs,
+) -> Tuple[List[ProcessedFile], List[SkippedFile]]:
+    return _generate_files(
+        items=list(models_details.values()),
+        generate_method=generator_class.generate_model_class,
+        get_file_name_method=generator_class.get_file_name_for_model_name,
+        models_details=models_details,
+        destination=destination,
+        force=force,
+        is_model=True,
+        **kwargs,
+    )
+
+
+def generate_event_files(
+    generator_class: CodeGenerator,
+    events: List[StellaEvent],
+    event_names: List[str],
+    workflow_client: WorkflowManagerClient,
+    models_details: Dict[str, StellaModelDetailed],
+    destination: str,
+    force: bool,
+    **kwargs,
+) -> Tuple[Set[str], List[ProcessedFile], List[SkippedFile]]:
+    events_not_found = set(event_names) if event_names else set()
+    events_to_generate: List[StellaEventDetailed] = []
+
+    for event in events:
+        if event_names and event.name not in event_names:
+            continue
+        event_detailed = workflow_client.get_event_details(event.id)
+        events_not_found.discard(event.name)
+        events_to_generate.append(event_detailed)
+
+    processed_files, skipped_files = _generate_files(
+        items=events_to_generate,
+        generate_method=generator_class.generate_message_class,
+        get_file_name_method=generator_class.get_file_name_for_event_name,
+        models_details=models_details,
+        destination=destination,
+        force=force,
+        **kwargs,
+    )
+
+    return events_not_found, processed_files, skipped_files
+
+
+def process_file(filename: str, workflow_client: WorkflowManagerClient, generator: CodeGenerator) -> List[str]:
+    with open(filename, "r") as f:
+        existing_code = f.read()
+
+    auto_generated_comment = "This file is auto-generated by StellaNowCLI. DO NOT EDIT."
+    if auto_generated_comment not in existing_code:
+        return ["Not Auto-Generated"]
+
+    id_search = re.search(
+        r"(Event|Model) ID: ([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})",
+        existing_code,
+    )
+    if id_search is None:
+        return ["Event or Model ID Not Found"]
+
+    id_type, id_value = id_search.groups()
+
+    try:
+        if id_type == StellaDataStructure.EVENT:
+            event_detail = workflow_client.get_event_details(id_value)
+            model_refs = collect_model_references(workflow_client=workflow_client, events=[event_detail])
+            all_model_refs = collect_all_model_references(workflow_client=workflow_client, model_ids=model_refs)
+            models_details = fetch_model_details(workflow_client=workflow_client, model_refs=all_model_refs)
+            diff = list(
+                generator.get_message_diff(
+                    event=event_detail, existing_code=existing_code, models_details=models_details
+                )
+            )
+        else:
+            model = workflow_client.get_model_details(id_value)
+            all_model_refs = collect_all_model_references(workflow_client=workflow_client, model_ids={id_value})
+            models_details = fetch_model_details(workflow_client=workflow_client, model_refs=all_model_refs)
+            diff = list(
+                generator.get_model_diff(
+                    model=model, existing_code=existing_code, models_details=models_details
+                )
+            )
+
+        if diff:
+            logger.warning("Changes Detected:")
+            logger.info("".join(diff))
+            return []
+        else:
+            logger.success(f"No changes detected.")
+            return []
+    except StellaNowCLIException as e:
+        return [e.message]
+
+--- .//services/code_generator/__init__.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+
+--- .//services/code_generator/code_generator.py ---
+"""
+Copyright (C) 2022-2025 Stella Technologies (UK) Limited.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+"""
+from dataclasses import dataclass
+from typing import Optional
+
+from stellanow_api_internals.clients.workflow_manager_client import WorkflowManagerClient
+
+from stellanow_cli.core.decorators import make_stella_context_pass_decorator
+from stellanow_cli.services.service import StellaNowService, StellaNowServiceConfig
+
+CODE_GENERATOR_SERVICE_NAME = "code-generator-service"
+OIDC_CLIENT_ID = "tools-cli"
+
+
+@dataclass
+class CodeGeneratorServiceConfig(StellaNowServiceConfig):
+    base_url: str
+    username: str
+    password: str
+    organization_id: str
+
+
+class CodeGeneratorService(StellaNowService):
+    def __init__(self, config: CodeGeneratorServiceConfig) -> None:  # noqa
+        self._config = config
+
+    @classmethod
+    def service_name(cls) -> str:
+        return CODE_GENERATOR_SERVICE_NAME
+
+    def create_workflow_client(self, project_id: Optional[str]) -> WorkflowManagerClient:
+        return WorkflowManagerClient(
+            base_url=self._config.base_url,
+            username=self._config.username,
+            password=self._config.password,
+            organization_id=self._config.organization_id,
+            project_id=project_id,
+        )
+
+
+pass_code_generator_service = make_stella_context_pass_decorator(CodeGeneratorService)
+

@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "~=8.1"
+prettytable = "~=3.8"
+loguru = "~=0.7.2"
+paho-mqtt = "~=2.0.0"
+stellanow-api-internals = "~=0.0.3"
+jinja2 = "~=3.1.6"
+
+[dev-packages]
+autoflake = "*"
+isort = "~=5.13.2"
+vulture = "*"
+black = "~=25.1.0"
+ipython = "*"
+safety = "*"
+mypy = "*"
+autopep8 = "*"
+pytest = "*"
+pytest-mock = "*"
+twine = "~=6.1.0"
+freezegun = "*"
+
+[requires]
+python_version = "3.11"

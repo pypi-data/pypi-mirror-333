@@ -1,0 +1,20 @@
+{% include '.header.template' %}
+from pydantic import BaseModel
+{% set standard_imports = [] -%}
+{%- for field in fields -%}
+    {%- if field.type in ['date', 'datetime'] and 'datetime' not in standard_imports -%}
+        {% set _ = standard_imports.append('datetime') %}
+    {%- endif -%}
+{%- endfor %}
+{%- if standard_imports -%}
+from {{ ', '.join(standard_imports) }} import {{ 'date, datetime' if 'datetime' in standard_imports else 'date' }}
+{%- endif %}
+{%- for model in referencedModels %}
+from models.{{ model | camel_to_snake }} import {{ model }}
+{% endfor %}
+
+class {{ className }}(BaseModel):
+    {%- for field in fields %}
+    {{ field.original_name }}: {{ field.type }}
+    {%- endfor %}
+{% include '.footer.template' %}

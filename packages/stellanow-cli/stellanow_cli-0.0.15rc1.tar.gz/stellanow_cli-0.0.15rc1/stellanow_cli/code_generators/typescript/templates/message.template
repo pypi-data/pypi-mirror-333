@@ -1,0 +1,33 @@
+{%- include '.header.template' %}
+
+import type { ToJSON } from 'stellanow-sdk';
+import { StellaNowMessageBase, Converters, EntityType } from 'stellanow-sdk';
+{%- set referenced_models = [] %}
+{%- for field in fields %}
+    {%- if field.is_model and field.type not in referenced_models %}
+        {%- do referenced_models.append(field.type) %}
+    {%- endif %}
+{%- endfor %}
+{%- if referenced_models %}
+{%- for model in referenced_models %}
+import type { {{ model }} } from './models/{{ model | replace('Model', '') }}.js';
+{%- endfor %}
+{%- endif %}
+
+export class {{ className }} extends StellaNowMessageBase implements ToJSON {
+    constructor({%- for entity in entities %}
+        public readonly {{ entity.typescript_name }}: string,{%- endfor %}{% for field in fields %}
+        public readonly {{ field.typescript_name }}: {{ field.type }}{%- if not loop.last %},{% endif %}
+    {%- endfor %}) {
+        super('{{ eventName }}', [{{ entitiesList }}]);
+    }
+
+    public toJSON(): object {
+        return { {%- for field in fields %}
+            {{ field.original_name }}: Converters.convert(this.{{ field.typescript_name }}),
+            {%- endfor %}
+            ...super.toJSON()
+        };
+    }
+}
+{%- include '.footer.template' %}

@@ -1,0 +1,7 @@
+{%- set json_data = eventJson if eventJson is defined else modelJson %}
+
+{{ commentDef.start }}
+{{ commentDef.middle }} Generated from:
+{% for line in json_data.splitlines() %}{{ commentDef.middle }}{{ line }}
+{% endfor %}
+{{ commentDef.end }}
