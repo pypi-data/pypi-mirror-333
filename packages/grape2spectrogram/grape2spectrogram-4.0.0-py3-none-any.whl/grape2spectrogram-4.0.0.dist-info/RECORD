@@ -1,0 +1,9 @@
+grape2spectrogram/__init__.py,sha256=Pv0B7SQP27czPknBPPXE9iNIHYcounI21vY-Ga8lV98,29
+grape2spectrogram/eclipse_calc.py,sha256=bSBLKPHetRJa_DexfgikAoy86KZLZKAz8F93tSYY4no,7425
+grape2spectrogram/reader.py,sha256=ipM2QITCUl3FCr9UE0WFSX-1H2_xWsvZp-3j_iOWJ-4,9395
+grape2spectrogram/solarContext.py,sha256=YkqXWD84ico1Yp3npOg1Yfg344IniQQPgu0IRki4bAw,5151
+grape2spectrogram/spectrogram.py,sha256=-7xuiMGbHX3Oi3CtPVvZRSAJz3tjbXuHIgJzT81Edmw,8304
+grape2spectrogram-4.0.0.dist-info/METADATA,sha256=eK_YSZ6QevkOtG8Xy8ggGa7KsSHFX0umRzYapNEV4Hw,1468
+grape2spectrogram-4.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+grape2spectrogram-4.0.0.dist-info/entry_points.txt,sha256=x-M1mdc8LptD-d8mh2wmGylvoOHUBKY9ry7jkl8taTs,54
+grape2spectrogram-4.0.0.dist-info/RECORD,,
