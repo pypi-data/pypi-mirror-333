@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: image-style-repaint
+Version: 0.1.1
+Summary: Generate styled image using bailian/wanx-style-repaint-v1
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: requests>=2.32.3
+
+# Image Style Repaint
+
+Generate styled image using wanx-style-repaint-v1
+
+## Usage
+```
+> pip install image-style-repaint
+> image-style-repaint --api_token <API TOKEN> --output output.jpg <IMAGE URL>
+OR
+> isr --api_token <API TOKEN>  --output output <IMAGE URL>
+```
+
+or you can use.env file to store your api key, and then run the command:
+```
+DASHSCOPE_API_KEY=<SK TOKEN>
+```
+
+
+
+
