@@ -1,0 +1,50 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile.api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../mlruns:/app/mlruns
+      - ../out/models:/app/out/models
+    environment:
+      - MLFLOW_TRACKING_URI=file:///app/mlruns
+      - MLOPTIFLOW_ARTIFACT_ROOT=/app/mlruns
+      - ENABLE_MONITORING=${ENABLE_MONITORING:-false}
+      - KAFKA_BROKERS=kafka:9092
+    depends_on:
+      - kafka
+    networks:
+      - mloptiflow-net
+
+  kafka:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile.kafka
+    ports:
+      - "9092:9092"
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+    depends_on:
+      - zookeeper
+    networks:
+      - mloptiflow-net
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.1
+    ports:
+      - "2181:2181"
+    environment:
+      - ZOOKEEPER_CLIENT_PORT=2181
+      - ZOOKEEPER_TICK_TIME=2000
+    networks:
+      - mloptiflow-net
+
+networks:
+  mloptiflow-net:
+    driver: bridge
