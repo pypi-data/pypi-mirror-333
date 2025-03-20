@@ -1,0 +1,11 @@
+duckduckgo-search
+feedgen
+python-slugify
+
+[dev]
+wheel
+pytest
+ruff
+black
+pip-tools
+twine

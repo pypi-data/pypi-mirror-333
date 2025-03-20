@@ -1,0 +1,32 @@
+[project]
+name = "ddg2rss"
+version = "1.0.1"
+authors = [{name = "Thibaut_S", email = "py@spriet.online"}]
+readme = "README.md"
+description = "Convert DuckduckGo News to RSS feed"
+requires-python = ">=3.11"
+keywords = ["rss","feed","ddg",]
+license = {text = "MIT-License"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "duckduckgo-search",
+    "feedgen",
+    "python-slugify",
+]
+
+[project.optional-dependencies]
+dev = [
+    "wheel",
+    "pytest",
+    "ruff",
+    "black",
+    "pip-tools",
+    "twine"
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/Thibaut_S/ddg2rss"
+"Bug Tracker" = "https://gitlab.com/Thibaut_S/ddg2rss/-/issues"
+
