@@ -1,0 +1,46 @@
+SAMPLE GEOCACHING PUZZLE
+=============================
+
+This file contains various example encoded texts and coordinates that
+can be used to test gc-utils functionality.
+
+---------------------------------------------------------------------
+CAESAR CIPHER (ROT13):
+---------------------------------------------------------------------
+Urer vf n fvzcyr grkg rapbqrq jvgu EBG13.
+(Hint: This is a simple message encoded with ROT13)
+
+---------------------------------------------------------------------
+VIGENÈRE CIPHER:
+---------------------------------------------------------------------
+Key: CACHE
+Rwzt kt e emffiye hruohhf jklk GECMH ey vjg dga.
+(Hint: This is a message encoded with CACHE as the key)
+
+---------------------------------------------------------------------
+ATBASH CIPHER:
+---------------------------------------------------------------------
+Zgyzhsrmt kfaaov hrvksvihz.
+(Hint: Geocaching puzzle ciphertext)
+
+---------------------------------------------------------------------
+MORSE CODE:
+---------------------------------------------------------------------
+.... .. -.. -.. . -. / -.-. --- --- .-. -.. .. -. .- - . ... / .-- .... . .-. . / -.-- --- ..- / .-- .. .-.. .-.. / ..-. .. -. -.. / - .... . / -.-. .- -.-. .... .
+(Hint: HIDDEN COORDINATES WHERE YOU WILL FIND THE CACHE)
+
+---------------------------------------------------------------------
+COORDINATES IN DIFFERENT FORMATS:
+---------------------------------------------------------------------
+Decimal: 47.602050, -122.324194
+DDM: N 47° 36.123 W 122° 19.452
+DMS: N 47° 36' 7.38" W 122° 19' 27.1"
+
+These coordinates should all be approximately the same location.
+
+---------------------------------------------------------------------
+DISTANCE CALCULATION EXAMPLE:
+---------------------------------------------------------------------
+From: N 47° 36.123 W 122° 19.452 (Seattle area)
+To: N 40° 42.768 W 074° 00.360 (New York area)
+Distance: Approximately 3,900 km or 2,400 miles 
