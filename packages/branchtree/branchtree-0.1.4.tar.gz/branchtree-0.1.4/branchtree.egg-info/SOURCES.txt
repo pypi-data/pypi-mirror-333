@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+branchtree/__init__.py
+branchtree/__main__.py
+branchtree/cli.py
+branchtree/git.py
+branchtree/tree.py
+branchtree.egg-info/PKG-INFO
+branchtree.egg-info/SOURCES.txt
+branchtree.egg-info/dependency_links.txt
+branchtree.egg-info/entry_points.txt
+branchtree.egg-info/requires.txt
+branchtree.egg-info/top_level.txt
