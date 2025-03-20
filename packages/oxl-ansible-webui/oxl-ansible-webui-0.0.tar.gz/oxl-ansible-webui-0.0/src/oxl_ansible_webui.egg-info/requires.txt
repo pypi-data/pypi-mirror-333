@@ -1,0 +1,16 @@
+Django==5.0.*
+PyYAML
+ansible-core
+ansibleguy-runner==2.4.0.post5
+crontab
+django-auto-logout
+djangorestframework-api-key==2.*
+djangorestframework==3.*
+drf-spectacular
+fontawesomefree
+grafana-django-saml2-auth
+gunicorn
+premailer
+pycryptodome
+pytz
+pyyaml

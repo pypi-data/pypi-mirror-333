@@ -1,0 +1,2 @@
+recursive-include src/oxl_ansible_webui/*
+include requirements.txt
