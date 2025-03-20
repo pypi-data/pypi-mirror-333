@@ -1,0 +1,16 @@
+rapidstats-0.1.0.dist-info/METADATA,sha256=cxHpoLfMw4nh2syX_7Gp2tL2HAp_lqTjzvH7jTotnEc,3106
+rapidstats-0.1.0.dist-info/WHEEL,sha256=jABKVkLC9kJr8mi_er5jOqpiQUjARSLXDUIIxDqsS50,96
+rapidstats-0.1.0.dist-info/licenses/LICENSE,sha256=KobfgMPydVDOBrTmq0Foipe0uCgfoFgMKG-8H-SWJQs,1099
+rapidstats/metrics.py,sha256=JIeI7y3VqUOBRO96g8v0LRcykjOFQU-sZOZWKurhXzo,27178
+rapidstats/polars.py,sha256=EwABx4LjfWlSAh6MiWWu5SK_UkaUAJqmfvTF1VGKQlI,2450
+rapidstats/preprocessing.py,sha256=p0fc1PdJWfm_KVIKp48gPJcc0m5yjs7-kCXog3tfcJU,3606
+rapidstats/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rapidstats/_bootstrap.py,sha256=3w0tw6PYuj9jhp8ULhWy1-w7dElyst3mGT6inyvM3E8,37040
+rapidstats/_corr.py,sha256=bZ_AusWHyOQ9S1Oc_3JoP-jqlSdpPTQU2RI8dpOHnj4,5269
+rapidstats/_distributions.py,sha256=Is_GJkhHuqy0P-UZEXqj0MCEH9_1k1pFlCxtzGhLkLs,1347
+rapidstats/_general.py,sha256=86KcADI9vmN_phT49AcdDHu7oaZjBYhtGpEV5FDxAjk,1331
+rapidstats/_rustystats.pyi,sha256=YVI15qsAqiqjxcts5LSQn6Kho9k9EAEwkNId2QGK8oE,2982
+rapidstats/_utils.py,sha256=ko5A6sxMFx-WtZyKNJV0Qe9bn4_UHvmzLl8GGyn7z3I,3115
+rapidstats/__init__.py,sha256=NufD0yWdmc7_D1qFsC-chwJDmUR_CRD3ttdsWn1uByo,192
+rapidstats/_rustystats.cp312-win_amd64.pyd,sha256=zebOyC3yh8QEEC3_Nq7hTp0yKDJMnMqMA7R20dge8c4,50235392
+rapidstats-0.1.0.dist-info/RECORD,,
