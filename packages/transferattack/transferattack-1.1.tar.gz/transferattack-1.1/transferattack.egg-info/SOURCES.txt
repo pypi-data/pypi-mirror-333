@@ -1,0 +1,8 @@
+README.md
+setup.py
+transferattack.egg-info/PKG-INFO
+transferattack.egg-info/SOURCES.txt
+transferattack.egg-info/dependency_links.txt
+transferattack.egg-info/not-zip-safe
+transferattack.egg-info/requires.txt
+transferattack.egg-info/top_level.txt
