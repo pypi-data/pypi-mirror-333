@@ -1,0 +1,5 @@
+setup.py
+gfw_api_python_client.egg-info/PKG-INFO
+gfw_api_python_client.egg-info/SOURCES.txt
+gfw_api_python_client.egg-info/dependency_links.txt
+gfw_api_python_client.egg-info/top_level.txt
