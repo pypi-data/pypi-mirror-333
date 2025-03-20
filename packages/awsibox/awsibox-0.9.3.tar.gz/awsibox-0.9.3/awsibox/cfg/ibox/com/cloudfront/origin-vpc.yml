@@ -1,0 +1,10 @@
+global:
+  CloudFrontDistribution:
+    - IBOX_BASE:
+        DistributionConfig:
+          Origins:
+            - Default:
+                VpcOriginConfig:
+                  VpcOriginId: >-
+                    GetAtt("CloudFrontVpcOriginListenerHttpsInternal", "Id") if "ListenerHttpsInternal" in cfg.Resources
+                      else get_expvalue("CloudFrontVpcOriginListenerHttpsDefaultInternal", "LoadBalancerApplicationStack")

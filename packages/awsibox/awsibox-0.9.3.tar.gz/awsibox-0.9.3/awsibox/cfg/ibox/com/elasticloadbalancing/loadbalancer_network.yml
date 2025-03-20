@@ -1,0 +1,82 @@
+global:
+  Parameter:  
+    - LoadBalancerNetwork:
+        Description: "Comma delimited list of enabled LoadBalancerNetwork - empty for mapped value - none to disable"
+        AllowedValues: ["", "none", "External", "Internal", "External,Internal"]
+  Condition:
+    - LoadBalancerNetworkExternal:
+        Or(
+          And(
+            Condition("LoadBalancerNetworkOverride"),
+            Or(
+              Equals(Ref("LoadBalancerNetwork"), "External"),
+              Equals(Ref("LoadBalancerNetwork"), "External,Internal"),
+            )
+          ),
+          And(
+            Not(Condition("LoadBalancerNetworkOverride")),
+            Or(
+              Equals(get_endvalue("LoadBalancerNetwork"), "External"),
+              Equals(get_endvalue("LoadBalancerNetwork"), "External,Internal"),
+            )
+          )
+        )
+    - LoadBalancerNetworkInternal:
+        Or(
+          And(
+            Condition("LoadBalancerNetworkOverride"),
+            Or(
+              Equals(Ref("LoadBalancerNetwork"), "Internal"),
+              Equals(Ref("LoadBalancerNetwork"), "External,Internal"),
+            )
+          ),
+          And(
+            Not(Condition("LoadBalancerNetworkOverride")),
+            Or(
+              Equals(get_endvalue("LoadBalancerNetwork"), "Internal"),
+              Equals(get_endvalue("LoadBalancerNetwork"), "External,Internal"),
+            )
+          )
+        )
+    - LoadBalancerNetworkNone:
+        And(
+          Not(Condition("LoadBalancerNetworkExternal")),
+          Not(Condition("LoadBalancerNetworkInternal")),
+        )
+    - LoadBalancerNetworkExternalOrInternal:
+        Or(
+          Condition("LoadBalancerNetworkExternal"),
+          Condition("LoadBalancerNetworkInternal"),
+        )
+  EC2SecurityGroup:
+    - LoadBalancerNetwork:
+        Export: "${AWS::StackName}"
+        Condition: LoadBalancerNetworkExternalOrInternal
+        GroupDescription: 'Enable access to NetworkLoadBalancer'
+        SecurityGroupIngress: {}
+  ElasticLoadBalancingV2LoadBalancer:
+    - NetworkExternal:
+        IBOX_ENABLED: True
+        IBOX_OUTPUT:
+          - _:
+              Value: Ref(IBOX_RESNAME)
+              Export: Export(Sub('%s-${AWS::StackName}' % IBOX_RESNAME))
+          - _DNS:
+              Value: GetAtt(IBOX_RESNAME, 'DNSName')
+              Export: Export(Sub('%sDNS-${AWS::StackName}' % IBOX_RESNAME))
+        Condition: LoadBalancerNetworkExternal
+        SecurityGroups:
+          - GetAtt('SecurityGroupLoadBalancerNetwork', 'GroupId')
+    - NetworkInternal:
+        IBOX_ENABLED: True
+        IBOX_OUTPUT:
+          - _:
+              Value: Ref(IBOX_RESNAME)
+              Export: Export(Sub('%s-${AWS::StackName}' % IBOX_RESNAME))
+          - _DNS:
+              Value: GetAtt(IBOX_RESNAME, 'DNSName')
+              Export: Export(Sub('%sDNS-${AWS::StackName}' % IBOX_RESNAME))
+        Condition: LoadBalancerNetworkInternal
+        SecurityGroups:
+          - GetAtt('SecurityGroupLoadBalancerNetwork', 'GroupId')
+  LoadBalancerNetwork: none

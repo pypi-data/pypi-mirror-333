@@ -1,0 +1,92 @@
+IBoxLoader: !include
+  - com/autoscaling/capacity.yml
+  - com/ecs/task.yml
+  - com/ecs/service-elasticloadbalancing.yml
+  - res/cloudfront/vpc_origin.yml
+
+global:
+  ApplicationAutoScalingScalableTarget:
+    - ECSService:
+        IBOX_ENABLED: True
+        ScheduledActions:
+          - Down:
+              Enabled: 'no'
+              CapacityMax: k
+              CapacityMin: CapacityMin
+              Schedule: 'cron(00 22 * * ? *)'
+          - Up:
+              Enabled: 'no'
+              CapacityMax: k
+              CapacityMin: CapacityMin
+              Schedule: 'cron(00 06 * * ? *)'
+  ApplicationAutoScalingScalingPolicy:
+    - Cpu:
+        IBOX_ENABLED: True
+    - Custom:
+        TargetTrackingScalingPolicyConfiguration:
+          CustomizedMetricSpecification:
+            Dimensions:
+              - Cluster:
+                  Name: ClusterName
+                  Value: Select(1, Split("/", Ref("Service")))
+              - Service:
+                  Name: ServiceName
+                  Value: GetAtt('Service', 'Name')
+  CloudFrontDistribution:
+    - IBOX_BASE:
+        DistributionConfig:
+          Origins:
+            - Default:
+                CustomOriginConfig:
+                  HTTPSPort.IBOX_CODE: If(
+                    f"{IBOX_CURNAME}Override", Ref(IBOX_CURNAME), get_endvalue("ElasticLoadBalancingV2ListenerECSLoadBalancerApplicationExternalHttpsPort"))
+  CloudWatchAlarm:
+    - ECSCPUHigh:
+        AlarmActions: [Ref('ApplicationAutoScalingScalingPolicyUp')]
+    - ECSCPULow:
+        AlarmActions: [Ref('ApplicationAutoScalingScalingPolicyDown')]
+  EC2SecurityGroup:
+    - EcsService:
+        IBOX_NO_OUTPUT: True
+        Condition: ECSTaskDefinitionBaseNetworkModeAwsVpc
+        GroupDescription: Enable access to Service
+        SecurityGroupIngress: {}
+  ECSService:
+    - Base:
+        IBOX_ENABLED: True
+        LaunchType.IBOX_AUTO_PO:
+          AllowedValues: ['', 'EC2', 'FARGATE']
+          Value: get_endvalue(IBOX_CURNAME)
+        LaunchType.IBOX_CODE: If('ECSTasksLaunchOnFargate', get_endvalue(IBOX_CURNAME), Ref('AWS::NoValue'))
+        LaunchType: EC2
+  ECSTaskDefinition:
+    - IBOX_BASE:
+        ContainerDefinitions:
+          - IBOX_BASE:
+              RestartPolicy:
+                Enabled.IBOX_AUTO_PO: {}
+                Enabled: False
+                # Do not restart on OOM, this way it can be captured by events
+                IgnoredExitCodes: [137]
+                RestartAttemptPeriod.IBOX_AUTO_PO:
+                  Description: A period of time (in seconds) that the container must run for before a restart can be attempted. [60-1800]
+                RestartAttemptPeriod: 300
+
+dev: &cfg_dev
+  CloudWatchAlarm:
+    TargetExternal5XX:
+      EvaluationPeriods: 0
+    TargetInternal5XX:
+      EvaluationPeriods: 0
+  ApplicationAutoScalingScalableTargetECSServiceScheduledActions:
+    Down:
+      Enabled: 'yes'
+    Up:
+      Enabled: 'yes'
+
+stg: *cfg_dev
+
+
+IBoxLoaderAfter: !include
+  - com/cloudfront/origin-vpc.yml
+  #- com/ecs/fargate-spot.yml
