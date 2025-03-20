@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: iqr_outlier
+Version: 0.1
+Summary: A simple library to detect and remove outliers using IQR.
+Home-page: https://github.com/abhi-2301-git/iqr_outlier
+Author: Abhinav Masih
+Author-email: abhnv.msh@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
