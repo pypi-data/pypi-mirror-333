@@ -1,0 +1,30 @@
+# test.yaml
+theorem-names: "thm,lem"
+figure-prefix: Fig
+table-prefix: Tab
+equation-prefix: Eq
+theorem-thm-prefix: Theorem
+theorem-lem-prefix: Lemma
+number-reset-level: 2
+non-arabic-numbers: true
+section-src-format-1: "第{h1_zh}章"
+section-src-format-2: "Section {h1}.{h2}."
+section-cref-format-1: "chapter {h1}"
+section-cref-format-2: "第{h1}.{h2}节"
+table-src-format: "Table {h1}-{h2}-{tab_id}"
+table-cref-format: "table {tab_id} (in Section {h1}.{h2})"
+figure-src-format: "Figure {h1}.{h2}:{fig_id}"
+figure-cref-format: "as shown in Fig. {num}"
+equation-src-format: "\\qquad({h1}-{h2}-{eq_id})"
+subfigure-src-format: "[{subfig_sym}({subfig_id})]"
+subfigure-symbols: "αβγδεζηθικλμνξοπρστυφχψω"
+custom-lot: true
+custom-lof: true
+lot-title: "Table List"
+lof-title: "图片目录"
+list-leader-type: "hyphen"
+data-export-path: "data.json"
+multiple-ref-suppress: false
+multiple-ref-separator: "、"
+multiple-ref-last-separator: "\\ &\\ "
+multiple-ref-to: "\\ to\\ "
