@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: pysmd
+Version: 0.1
+Summary: pySMD: First-Principles Shadow Molecular Dynamics Framework
+Author-email: "Ilia M. Mazin" <imazin@lanl.gov>, Yu Zhang <zhy@lanl.gov>, "Anders M.N. Niklasson" <zhy@lanl.gov>
+Maintainer-email: "Ilia M. Mazin" <imazin@lanl.gov>
+License: Apache-2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+
+# pySMD
+
+Placeholder for soon-to-be published First-Principles Shadow Molecular Dynamics framework.
+
