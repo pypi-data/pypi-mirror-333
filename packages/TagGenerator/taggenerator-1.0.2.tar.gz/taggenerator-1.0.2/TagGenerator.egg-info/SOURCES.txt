@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+QrCode/__init__.py
+QrCode/admin.py
+QrCode/apps.py
+QrCode/models.py
+QrCode/tests.py
+QrCode/urls.py
+QrCode/views.py
+TagGenerator.egg-info/PKG-INFO
+TagGenerator.egg-info/SOURCES.txt
+TagGenerator.egg-info/dependency_links.txt
+TagGenerator.egg-info/requires.txt
+TagGenerator.egg-info/top_level.txt
