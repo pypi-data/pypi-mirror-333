@@ -1,0 +1,10 @@
+orman_news_reader/__init__.py,sha256=ZKdOflTDlc6_Pmn9zzjb8tHXS-an2DufAtmDwBbN1uE,407
+orman_news_reader/__main__.py,sha256=F0wr_uGTHZCpd9jR_th1VyWKNDLSWC3MB7RVYl5XbKI,2782
+orman_news_reader/google_rss_extractor.py,sha256=96dq4XqemT-RHVdJ8lB7ZYijLsgyc6ZaeBkFPwtg-Ss,19039
+orman_news_reader/html_generator.py,sha256=c2XKsHXgtMHGnv5VUNZNI-39784cOA8KmRiWyAAI-10,7009
+orman_news_reader/reader_mode.py,sha256=68UdCgFND37xIkYaB09qkJeiDGbJuRYkyRcMpMIoAkA,11272
+orman_news_reader/selenium_redirect_tracker.py,sha256=47YfJHhBRzgw3f7_Bqn6ooqi7nId9Fjq7FUAaqKTKYI,2960
+orman_news_reader-0.3.4.dist-info/METADATA,sha256=Wts3kck_WAR-YzZtRaMPWJDxLT7F64WRaPlf72yVCaA,6631
+orman_news_reader-0.3.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+orman_news_reader-0.3.4.dist-info/entry_points.txt,sha256=lBPCLsVYWhDX0hqIY1P06AaFcJ92ab8bPvSWxGO4thM,318
+orman_news_reader-0.3.4.dist-info/RECORD,,
