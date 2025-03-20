@@ -1,0 +1,8 @@
+mathgeoalgebra/__init__.py,sha256=tQ8vs_BvUWeOm5ZZoaBalPTYb6JCXg1afeKNmPkOuS8,164
+mathgeoalgebra/algebra.py,sha256=d9-Vn8C_54ooZdcDpTUGp79jJi8rHnWCzEimTp_AU0Y,263
+mathgeoalgebra/geometry.py,sha256=UNyeMN33tqajyZ-7pxkvSjywZXU60FIMgN2C2y37dFw,402
+mathgeoalgebra/matrix.py,sha256=e55yKGjQVtUdwI7wJ9Uxh2_czxpQ3aeSjz8sN89fAW8,393
+mathgeoalgebra-1.0.0.dist-info/METADATA,sha256=na4yhfusBr2DwYiE3EL5tb2xEoMltZiTurGyI7E1o1M,257
+mathgeoalgebra-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mathgeoalgebra-1.0.0.dist-info/top_level.txt,sha256=2dw52yXjIvqiJTpFULJcDR9-RZmxKDCyr1jnAR9C-wc,15
+mathgeoalgebra-1.0.0.dist-info/RECORD,,
