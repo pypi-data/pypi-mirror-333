@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinIO 文件上传</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>文件上传至 MinIO</h2>
+    <div class="upload-form">
+
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()" id="upload-button">上传</button>
+    </div>
+
+    <h3>文件访问地址：</h3>
+    <div id="fileUrl"></div>
+    <div id="preview"></div>
+
+    <script>
+        async function uploadFile() {
+            const fileInput = document.getElementById("fileInput");
+            if (!fileInput.files.length) {
+                alert("请选择一个文件！");
+                return;
+            }
+
+            const file = fileInput.files[0];
+
+            // 1. 请求后端获取预签名 URL
+            const response = await fetch("/get_presigned_url", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ file_name: file.name })
+            });
+
+            const data = await response.json();
+            if (!data.upload_url) {
+                alert("获取预签名 URL 失败");
+                return;
+            }
+
+            // 2. 使用预签名 URL 上传文件
+            const uploadResponse = await fetch(data.upload_url, {
+                method: "PUT",
+                body: file,
+                headers: { "Content-Type": file.type }
+            });
+
+            if (uploadResponse.ok) {
+                const fileUrl = data.file_url;
+                const fileUrlElement = document.getElementById("fileUrl");
+                fileUrlElement.innerHTML = `<a href="${fileUrl}" target="_blank">${fileUrl}</a>`;
+
+                const previewElement = document.getElementById("preview");
+                previewElement.innerHTML = ""; // 清空之前的预览内容
+
+                if (file.type.startsWith("image/")) {
+                    // 如果是图片，显示预览
+                    previewElement.innerHTML = `<img src="${fileUrl}" alt="上传的图片" style="max-width: 300px; margin-top: 10px;">`;
+                } else if (file.type.startsWith("audio/")) {
+                    // 如果是音频，显示音频播放器
+                    previewElement.innerHTML = `<audio controls style="margin-top: 10px;">
+                        <source src="${fileUrl}" type="${file.type}">
+                        您的浏览器不支持音频播放。
+                    </audio>`;
+                } else if (file.type.startsWith("video/")) {
+                    // 如果是视频，显示视频播放器
+                    previewElement.innerHTML = `<video controls style="max-width: 500px; margin-top: 10px;">
+                        <source src="${fileUrl}" type="${file.type}">
+                        您的浏览器不支持视频播放。
+                    </video>`;
+                }
+            } else {
+                alert("上传失败！");
+            }
+        }
+    </script>
+</body>
+</html>
