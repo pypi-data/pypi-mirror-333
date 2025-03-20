@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: lean-ds
+Version: 0.1.0
+Summary: A short description
+Home-page: https://github.com/yourname/lean-ds  # Or wherever your code is hosted
+Author: Your Name
+Author-email: Your Name <you@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
