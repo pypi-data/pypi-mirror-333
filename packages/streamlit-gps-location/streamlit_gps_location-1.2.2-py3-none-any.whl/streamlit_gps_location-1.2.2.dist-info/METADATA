@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: streamlit-gps-location
+Version: 1.2.2
+Summary: Streamlit component that allows you to get GPS location from browser
+Home-page: UNKNOWN
+Author: Loc Dac
+Author-email: daclocbd123@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=0.63
+Provides-Extra: devel
+Requires-Dist: wheel; extra == "devel"
+Requires-Dist: pytest==7.4.0; extra == "devel"
+Requires-Dist: playwright==1.48.0; extra == "devel"
+Requires-Dist: requests==2.31.0; extra == "devel"
+Requires-Dist: pytest-playwright-snapshot==1.0; extra == "devel"
+Requires-Dist: pytest-rerunfailures==12.0; extra == "devel"
+
+# streamlit-gps-location
+
+Streamlit component that allows you to get GPS location from browser
+
+## Installation instructions
+
+```sh
+pip install streamlit-gps-location
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from streamlit_gps_location import gps_location_button
+
+data = gps_location_button(
+    buttonText="Get my location"
+)
+
+st.write(data)
+```
+
+
