@@ -1,0 +1,11 @@
+datahub.cpython-310-x86_64-linux-gnu.so,sha256=yxXG1Db7g1tsZullXHkk6FIY6RdOg2pl8AZF7yiEkOU,1208984
+datahub.cpython-312-x86_64-linux-gnu.so,sha256=eJNbm--VxpUUHIE1bQysFantOIf8VtNQYe5v8CAwLD8,1443120
+datahub.pyi,sha256=uf30Vvjkw1Pc-iF8c97jh5liX6nxDdt1RrFEtejaFEQ,815
+datahub/protos/martrix_pb2.pyi,sha256=-27Vq8GYkmK2CEwpJFCmeJvaWoYmlSHdK7mSq9WxNoU,1342
+datahub/protos/quote_pb2.pyi,sha256=xOOhTfyQyjFK5Bn10rw0qKz8UrNTE64KtCFLNnaGOBk,24628
+datahub/protos/session_pb2.pyi,sha256=8UUmtlXxFbOBJq6afpyxg3hHCTSwA6sfaWOdoawDNHo,2955
+datahub.build/.gitignore,sha256=aEiIwOuxfzdCmLZe4oB1JsBmCUxwG8x-u-HBCV9JT8E,1
+datahub_binary-0.4.3.dist-info/METADATA,sha256=BdLcwak_XkNeDyvT42cm8KIIyAEzpBvHLrfL34-Hi_E,657
+datahub_binary-0.4.3.dist-info/WHEEL,sha256=ioNivK4u0DxJob89I7xrxcN2gUlLG7vDbVThdmyNM2Q,146
+datahub_binary-0.4.3.dist-info/top_level.txt,sha256=J0rzqYfZghMgpObWaPGhQtV88I-KXrgArDvi_ddf6ZA,8
+datahub_binary-0.4.3.dist-info/RECORD,,
