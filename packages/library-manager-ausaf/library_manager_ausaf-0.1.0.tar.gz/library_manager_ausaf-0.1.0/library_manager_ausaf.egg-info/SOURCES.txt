@@ -1,0 +1,9 @@
+README.md
+setup.py
+library_manager/__init__.py
+library_manager/library_manager.py
+library_manager_ausaf.egg-info/PKG-INFO
+library_manager_ausaf.egg-info/SOURCES.txt
+library_manager_ausaf.egg-info/dependency_links.txt
+library_manager_ausaf.egg-info/requires.txt
+library_manager_ausaf.egg-info/top_level.txt

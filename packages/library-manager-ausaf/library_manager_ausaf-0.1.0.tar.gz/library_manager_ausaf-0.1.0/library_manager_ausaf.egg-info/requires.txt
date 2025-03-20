@@ -1,0 +1,11 @@
+os
+json
+typing
+time
+pyfiglet
+inquirer
+tabulate
+yaspin
+colorama
+termcolor
+yaspin.spinners

@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: library_manager_ausaf
+Version: 0.1.0
+Summary: A powerful and easy-to-use Python library for managing your personal book collection effortlessly. Add, search, track, and organize your books with a simple command-line interface.
+Home-page: https://github.com/yourusername/my_library
+Author: Ausaf Ul Islam
+Author-email: ausafkhan7777@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: os
+Requires-Dist: json
+Requires-Dist: typing
+Requires-Dist: time
+Requires-Dist: pyfiglet
+Requires-Dist: inquirer
+Requires-Dist: tabulate
+Requires-Dist: yaspin
+Requires-Dist: colorama
+Requires-Dist: termcolor
+Requires-Dist: yaspin.spinners
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
