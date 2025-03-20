@@ -1,0 +1,15 @@
+gltf_builder/__init__.py,sha256=Xi2qK8hVTitPrkZ5L9cg5elNDx8RD5MGprBLU2pqUKE,780
+gltf_builder/accessor.py,sha256=sGRNgGsJaR6K-uHkDHkQd4DwzeEg07VyQ4j8YAd-1Nk,2050
+gltf_builder/buffer.py,sha256=tzwn8U-urCwWg8Dgb2l4KxCNO7niUXLaYqCMCfOzsCc,1196
+gltf_builder/builder.py,sha256=JSXPqXvX8KhMHOExvGeFsXXmfAWz0mC7wNHeF5BGT9k,4359
+gltf_builder/element.py,sha256=fP81KLtm0XqhccihATM28ymTStazDoYr2FlB5CD0kCI,4984
+gltf_builder/holder.py,sha256=X0L9RSqggIXFPGeCw_KL6JGrDgBlof4V3IHNoHM0bBk,2373
+gltf_builder/mesh.py,sha256=5a38RBBfq44uxoYTX_IarM0SaaGNSDR2pk40iyMckvY,1202
+gltf_builder/node.py,sha256=Z7nERd9DbVxYS05vOtMLvnw0Vf5zK0klqQHNn-anLTI,2349
+gltf_builder/primitives.py,sha256=2XZ2fSuzAmyIpXWevldr8XiEG3GYG41RzwHfWPya0rU,1309
+gltf_builder/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gltf_builder/view.py,sha256=QV-I2Ijw5CzwqMbMh23zwk90niFHkzz1yQwPZ6dG_9A,4979
+gltf_builder-0.1.4.dist-info/METADATA,sha256=oMPd_kULxjkkX_QvUiOB7lUWM2reKaqMgAbTleXRuFQ,2324
+gltf_builder-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gltf_builder-0.1.4.dist-info/licenses/LICENSE,sha256=j8O9BTuJS21MnKJ62Cz3uk-TwGdb6KMD20zrDgQYPiQ,1068
+gltf_builder-0.1.4.dist-info/RECORD,,
