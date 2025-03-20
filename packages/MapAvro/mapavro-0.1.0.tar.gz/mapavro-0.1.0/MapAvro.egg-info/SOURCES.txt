@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+./MapAvro/__init__.py
+./MapAvro/avroConverter.py
+MapAvro/__init__.py
+MapAvro/avroConverter.py
+MapAvro.egg-info/PKG-INFO
+MapAvro.egg-info/SOURCES.txt
+MapAvro.egg-info/dependency_links.txt
+MapAvro.egg-info/requires.txt
+MapAvro.egg-info/top_level.txt
+tests/test.py
