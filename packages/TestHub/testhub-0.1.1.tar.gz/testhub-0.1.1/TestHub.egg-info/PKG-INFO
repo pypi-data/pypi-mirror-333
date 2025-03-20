@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: TestHub
+Version: 0.1.1
+Summary: Library for interacting with TestHub APIs, ChatGPT, and more.
+Home-page: https://github.com/yourusername/TestHub
+Author: Dearygt.
+Author-email: test.hub.kys.gay@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TestHub
+
+TestHub is a Python library that allows you to interact with various APIs, including bypassing URLs, ChatGPT API, and more. Join our discord
+https://discord.gg/3wKTDFMwvN
+## Features
+
+- **Bypass URL API**
+- **ChatGPT API** (based on GPT-4)
+- **Image Generation API**
+
+## Installation
+
+You can install TestHub via pip:
+
+```bash
+pip install TestHub
