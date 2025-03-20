@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeExtractor Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      position: relative;
+      overflow: auto;
+    }
+    .config-example {
+      background-color: #fffde7;
+      padding: 15px;
+      border-left: 4px solid #ffd600;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CodeExtractor Demo</h1>
+  
+  <!-- CodeExtractor: {
+    "urlTemplate": "https://jsfiddle.net/api/post/library/pure/?code={code}",
+    "buttonText": "Open in JSFiddle"
+  } -->
+  
+  <p>This demo shows how the CodeExtractor utility works. Hover over any code block to see the "Open in JSFiddle" button.</p>
+  
+  <div class="config-example">
+    <h3>Markdown Configuration:</h3>
+    <p>This page configures CodeExtractor through an HTML comment:</p>
+    <pre><code>&lt;!-- CodeExtractor: {
+  "urlTemplate": "https://jsfiddle.net/api/post/library/pure/?code={code}",
+  "buttonText": "Open in JSFiddle"
+} --&gt;</code></pre>
+  </div>
+  
+  <h2>Example JavaScript Code:</h2>
+  <pre><code>function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// Calculate first 10 Fibonacci numbers
+for (let i = 0; i < 10; i++) {
+  console.log(fibonacci(i));
+}</code></pre>
+
+  <h2>Example CSS Code:</h2>
+  <pre><code>.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.item {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}</code></pre>
+
+  <h2>Manual Extraction:</h2>
+  <p>You can also create a button to manually extract code from a specific element:</p>
+  <button id="extractButton">Extract and Open First Code Block</button>
+
+  <script src="extractor.js"></script>
+  <script>
+    // Initialize the extractor
+    const extractor = new CodeExtractor();
+    
+    // Set up manual extraction button
+    document.getElementById('extractButton').addEventListener('click', () => {
+      extractor.extractFromElement('pre > code:first-of-type');
+    });
+  </script>
+</body>
+</html>
