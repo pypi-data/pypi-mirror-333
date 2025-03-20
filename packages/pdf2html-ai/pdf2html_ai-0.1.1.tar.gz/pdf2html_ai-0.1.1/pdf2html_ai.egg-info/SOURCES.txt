@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+pdf2html_ai/__init__.py
+pdf2html_ai/html_converter.py
+pdf2html_ai/image_handler.py
+pdf2html_ai/processor.py
+pdf2html_ai/utils.py
+pdf2html_ai.egg-info/PKG-INFO
+pdf2html_ai.egg-info/SOURCES.txt
+pdf2html_ai.egg-info/dependency_links.txt
+pdf2html_ai.egg-info/requires.txt
+pdf2html_ai.egg-info/top_level.txt
+tests/test_local_pdf.py
+tests/test_url_pdf.py
