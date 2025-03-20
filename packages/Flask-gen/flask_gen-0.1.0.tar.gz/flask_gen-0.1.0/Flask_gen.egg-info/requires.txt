@@ -1,0 +1,5 @@
+Flask<3.0.0,>=2.0.0
+Flask-SQLAlchemy<3.0.0,>=2.5.0
+Flask-Migrate<4.0.0,>=3.0.0
+python-dotenv<2.0.0,>=0.15.0
+SQLAlchemy<2.0,>=1.4
