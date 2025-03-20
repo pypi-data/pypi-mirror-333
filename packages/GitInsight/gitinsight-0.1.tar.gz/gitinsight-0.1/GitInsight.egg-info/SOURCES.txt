@@ -1,0 +1,13 @@
+README.md
+setup.py
+ gitinsight/__init__.py
+ gitinsight/analyzer.py
+ gitinsight/cli.py
+ gitinsight/utils.py
+GitInsight.egg-info/PKG-INFO
+GitInsight.egg-info/SOURCES.txt
+GitInsight.egg-info/dependency_links.txt
+GitInsight.egg-info/entry_points.txt
+GitInsight.egg-info/requires.txt
+GitInsight.egg-info/top_level.txt
+tests/test_analyzer.py

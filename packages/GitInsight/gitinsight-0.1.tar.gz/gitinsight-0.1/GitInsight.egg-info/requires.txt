@@ -1,0 +1,4 @@
+gitpython
+click
+matplotlib
+pandas

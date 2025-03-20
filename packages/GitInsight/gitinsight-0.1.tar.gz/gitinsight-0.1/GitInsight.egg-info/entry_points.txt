@@ -1,0 +1,2 @@
+[console_scripts]
+gitinsight = gitinsight.cli:analyze
