@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dummygen-cli"
+version = "0.0.4"
+description = "A simple Python script to generate dummy file of specified size."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Ervan Kurniawan", email = "ervankurniawan41@gmail.com" },
+]
+dependencies = [
+    "rich>=13.9.4",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+dummygen-cli = "dummygen_cli.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/karvanpy/dummygen-cli"
+Issues = "https://github.com/karvanpy/dummygen-cli/issues"
+
+[tool.setuptools]
+packages = ["dummygen_cli"]
+package-dir = { "" = "src" }

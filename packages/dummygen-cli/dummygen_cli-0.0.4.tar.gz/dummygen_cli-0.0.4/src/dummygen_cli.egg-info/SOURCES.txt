@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/dummygen_cli/__init__.py
+src/dummygen_cli/__main__.py
+src/dummygen_cli/dummygen_cli.py
+src/dummygen_cli.egg-info/PKG-INFO
+src/dummygen_cli.egg-info/SOURCES.txt
+src/dummygen_cli.egg-info/dependency_links.txt
+src/dummygen_cli.egg-info/entry_points.txt
+src/dummygen_cli.egg-info/requires.txt
+src/dummygen_cli.egg-info/top_level.txt
