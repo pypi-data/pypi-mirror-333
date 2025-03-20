@@ -1,0 +1,110 @@
+# SPDX-FileCopyrightText: Copyright (c) 2025 Cisco and/or its affiliates.
+# SPDX-License-Identifier: Apache-2.0
+
+---
+version: '3'
+
+silent: true
+set: [pipefail]
+shopt: [globstar]
+
+verbose: false
+
+tasks:
+  default:
+    cmds:
+      - task -l
+
+  python-bindings:build:
+    desc: "Build the Python bindings"
+    cmds:
+      - uv run maturin develop --uv
+
+  python-bindings:build:release:
+    desc: "Release the Python bindings"
+    cmds:
+      - uv run maturin develop --uv --release
+
+  python-bindings:lint:
+    desc: "Lint the Python bindings"
+    cmds:
+      - uv run ruff check
+      - uv run ruff format --check
+      - uv run mypy agp_bindings
+
+  python-bindings:test:
+    desc: "Test the Python bindings"
+    deps:
+      - python-bindings:build
+    cmds:
+      - uv run pytest -s
+
+  python-bindings:packaging:
+    desc: "Generate the Python bindings for python versions 3.9, 3.10, 3.11, 3.12 and 3.13"
+    vars:
+      PROFILE: '{{.PROFILE | default "debug"}}'
+      RELEASE:
+        sh: '[[ {{.PROFILE}} == "release" ]] && echo "--release" || echo ""'
+      TARGET: '{{.TARGET | default ""}}'
+    cmds:
+      - rustup target add {{.TARGET}}
+      - for:
+          matrix:
+            PYTHON: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        cmd: |
+          uv python install {{.ITEM.PYTHON}}
+          uv python pin {{.ITEM.PYTHON}}
+      - |
+        uv sync
+        PYTHONS=(3.9 3.10 3.11 3.12)
+
+        unameOut="$(uname -s)"
+        case "${unameOut}" in
+            Linux*)     machine=Linux;;
+            Darwin*)    machine=Mac;;
+            CYGWIN*)    machine=Cygwin;;
+            MINGW*)     machine=MinGw;;
+            MSYS_NT*)   machine=MSys;;
+            *)          machine="UNKNOWN:${unameOut}"
+        esac
+
+        # TODO(msardara) figure out why this fails on windows with python 3.13
+        if [[ $machine == "Linux" || $machine == "Mac" ]]; then
+          PYTHONS+=(3.13)
+        fi
+
+        uv run maturin build {{.RELEASE}} \
+          --out dist                      \
+          --target {{.TARGET}}            \
+          --frozen                        \
+          -i                              \
+          ${PYTHONS[@]}
+
+  python-bindings:example:server:
+    desc: "Run the server example"
+    cmds:
+      - uv run python ./examples/gateway.py
+
+  python-bindings:example:alice:
+    desc: "Run the Alice example"
+    cmds:
+      - |
+        uv run python ./examples/agent.py \
+          -l cisco/default/alice          \
+          -g http://localhost:12345
+
+  python-bindings:example:bob:
+    desc: "Run the Bob example"
+    cmds:
+      - |
+        uv run python ./examples/agent.py   \
+          -l cisco/default/bob              \
+          -r cisco/default/alice            \
+          -g http://localhost:12345         \
+          -m "The city of the big ben"      \
+          -i 1
+
+  python-bindings:generate-stub:
+    desc: "Generate stub file for the Python bindings"
+    cmds:
+      - cargo run --bin stub_gen
