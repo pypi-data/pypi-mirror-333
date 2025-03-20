@@ -1,0 +1,11 @@
+README.txt
+setup.py
+monitor/__init__.py
+monitor/configp.py
+monitor/main.py
+screen_watcher_ig.egg-info/PKG-INFO
+screen_watcher_ig.egg-info/SOURCES.txt
+screen_watcher_ig.egg-info/dependency_links.txt
+screen_watcher_ig.egg-info/entry_points.txt
+screen_watcher_ig.egg-info/requires.txt
+screen_watcher_ig.egg-info/top_level.txt
