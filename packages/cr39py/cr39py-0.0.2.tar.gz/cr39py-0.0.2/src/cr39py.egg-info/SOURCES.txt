@@ -1,0 +1,101 @@
+.gitattributes
+.gitignore
+.pre-commit-config.yaml
+.readthedocs.yaml
+CITATION.cff
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/ci.yml
+.github/workflows/pre-commit.yml
+.github/workflows/publish.yml
+.github/workflows/requirements.txt
+docs/Makefile
+docs/make.bat
+docs/source/acknowledgements.rst
+docs/source/bibliography.bib
+docs/source/bibliography.rst
+docs/source/citation.rst
+docs/source/conf.py
+docs/source/index.rst
+docs/source/installation.rst
+docs/source/_static/logo_190px.png
+docs/source/notebooks/analyze_wrf.ipynb
+docs/source/notebooks/applying_cuts_to_a_scan_object.ipynb
+docs/source/notebooks/filtration_stacks.ipynb
+docs/source/notebooks/nuclear_reaction_data.ipynb
+docs/source/notebooks/images/wrf_diagram.png
+src/cr39py/__init__.py
+src/cr39py.egg-info/PKG-INFO
+src/cr39py.egg-info/SOURCES.txt
+src/cr39py.egg-info/dependency_links.txt
+src/cr39py.egg-info/requires.txt
+src/cr39py.egg-info/top_level.txt
+src/cr39py/core/__init__.py
+src/cr39py/core/ci.py
+src/cr39py/core/data.py
+src/cr39py/core/exportable_class.py
+src/cr39py/core/types.py
+src/cr39py/core/units.py
+src/cr39py/core/data/calibration/wrf_calibrations.yml
+src/cr39py/core/data/nuclear/D(D,n)He-3.h5
+src/cr39py/core/data/nuclear/D(D,p)T.h5
+src/cr39py/core/data/nuclear/He-3(D,p)A.h5
+src/cr39py/core/data/srim/Deuteron in Al.txt
+src/cr39py/core/data/srim/Deuteron in Borosilicate.txt
+src/cr39py/core/data/srim/Deuteron in CR-39.txt
+src/cr39py/core/data/srim/Deuteron in Mylar.txt
+src/cr39py/core/data/srim/Deuteron in Polycarbonate.txt
+src/cr39py/core/data/srim/Deuteron in Ta.txt
+src/cr39py/core/data/srim/Deuteron in W.txt
+src/cr39py/core/data/srim/Proton in Al.txt
+src/cr39py/core/data/srim/Proton in Borosilicate.txt
+src/cr39py/core/data/srim/Proton in CR-39.txt
+src/cr39py/core/data/srim/Proton in Mylar.txt
+src/cr39py/core/data/srim/Proton in Polycarbonate.txt
+src/cr39py/core/data/srim/Proton in Ta.txt
+src/cr39py/core/data/srim/Proton in W.txt
+src/cr39py/core/data/srim/Triton in Al.txt
+src/cr39py/core/data/srim/Triton in Borosilicate.txt
+src/cr39py/core/data/srim/Triton in CR-39.txt
+src/cr39py/core/data/srim/Triton in Mylar.txt
+src/cr39py/core/data/srim/Triton in Polycarbonate.txt
+src/cr39py/core/data/srim/Triton in Ta.txt
+src/cr39py/core/data/srim/Triton in W.txt
+src/cr39py/core/data/srim/proton_Al_remove_ranging.h5
+src/cr39py/core/data/test/test_alphas.cpsa
+src/cr39py/core/data/test/test_wrf_G093_6hr.cpsa
+src/cr39py/etch/__init__.py
+src/cr39py/etch/tools.py
+src/cr39py/filtration/__init__.py
+src/cr39py/filtration/layer.py
+src/cr39py/filtration/srim.py
+src/cr39py/filtration/stack.py
+src/cr39py/models/__init__.py
+src/cr39py/models/fusion.py
+src/cr39py/models/response.py
+src/cr39py/scan/__init__.py
+src/cr39py/scan/_cli.py
+src/cr39py/scan/base_scan.py
+src/cr39py/scan/cpsa.py
+src/cr39py/scan/cut.py
+src/cr39py/scan/subset.py
+src/cr39py/scan/wrf.py
+tests/__init__.py
+tests/core/__init__.py
+tests/core/test_exportable_class.py
+tests/etch/__init__.py
+tests/etch/test_tools.py
+tests/filtration/__init__.py
+tests/filtration/test_layer.py
+tests/filtration/test_srim.py
+tests/filtration/test_stack.py
+tests/models/__init__.py
+tests/models/test_fusion.py
+tests/models/test_response.py
+tests/scan/__init__.py
+tests/scan/test_base_scan.py
+tests/scan/test_cpsa.py
+tests/scan/test_cut.py
+tests/scan/test_subset.py
+tests/scan/test_wrf.py

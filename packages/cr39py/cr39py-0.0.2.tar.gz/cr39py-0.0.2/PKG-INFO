@@ -1,0 +1,41 @@
+Metadata-Version: 2.2
+Name: cr39py
+Version: 0.0.2
+Summary: Python package for analyzing CR-39 particle track data
+Author: Peter Heuer
+Keywords: CR-39,nuclear,particle,plasma,HED,physics
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fast_histogram
+Requires-Dist: flexparser<0.4
+Requires-Dist: h5py>=3.8.0
+Requires-Dist: ipython
+Requires-Dist: matplotlib>=3.7.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pint>=0.24.3
+Requires-Dist: scipy>=1.14.1
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: setuptools>=66.0.0
+Requires-Dist: pyyaml>=6.0.2
+Provides-Extra: docs
+Requires-Dist: astroid>=3; extra == "docs"
+Requires-Dist: sphinx>=7.3.7; extra == "docs"
+Requires-Dist: sphinx-autoapi>=3.3.3; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.3.0rc1; extra == "docs"
+Requires-Dist: sphinxcontrib-bibtex>=2.6.2; extra == "docs"
+Requires-Dist: ipykernel>=6.29.5; extra == "docs"
+Requires-Dist: nbsphinx>=0.9.5; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: pytest>=8.3.1; extra == "tests"
+Requires-Dist: pytest-cov>=6.0.0; extra == "tests"
+Requires-Dist: pytest-xdist>=3.6.1; extra == "tests"
+
+# cr39py
+[![codecov](https://codecov.io/gh/pheuer/cr39py/branch/main/graph/badge.svg?token=K0JA0QCH3S)](https://codecov.io/gh/pheuer/cr39py)
+![ci workflow](https://github.com/pheuer/cr39py/actions/workflows/ci.yml/badge.svg)
+![rtd](https://readthedocs.org/projects/cr39py/badge/?version=latest&style=flat)
+
+Code for designing experiments using CR-39, calculating etch times for CR-39 processing, and analyzing CR-39 track data.
+
+Documentation: https://cr39py.readthedocs.io/en/latest/
