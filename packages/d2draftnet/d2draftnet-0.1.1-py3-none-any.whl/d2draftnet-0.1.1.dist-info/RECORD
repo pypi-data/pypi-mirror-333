@@ -1,0 +1,12 @@
+d2draftnet/__init__.py,sha256=JyHB8yuvkKBvM1ur1RxRd6pFiL0R3q_16EyzdW1CzGY,66
+d2draftnet/collect_data1.py,sha256=d3zzPqq-ckKlDmzzCWKPeAwKkuqTOIxXxfzaRsZm49k,5879
+d2draftnet/collect_data_old.py,sha256=XCPBYoIioeSZ1bszVMk0qPYbBCVlLfnaoDInxzoVjrc,10285
+d2draftnet/collect_match_ids.py,sha256=bsbAqDQxeyf9viyg5pjGNf8qkqbX1LfsF7AN2XHtMGc,362
+d2draftnet/config.py,sha256=MPowS3QhKDxl_ecNmW6iGkc4JS8Fu8rgOAkkE7EAqD0,2762
+d2draftnet/embedding_model.py,sha256=RQuIE6n7vZODXMw9XO-lm30PwtX6yny8DYfsUwf3U1M,4209
+d2draftnet/odds_calculator.py,sha256=BFObG90ShpnPMtgBX5DQWzOHO4Ha9E9kgVj-N1FfE3Q,1316
+d2draftnet/predict_embedding_model.py,sha256=8xBDPuGHnkeVxuWITepip_RxK5MO4zR89uSMk4nYuZU,1631
+d2draftnet/train_embedding_model.py,sha256=S92RrD6R1w5UaX3Kn5hnTQmh3eVt7OIZnThyr6NdABk,10746
+d2draftnet-0.1.1.dist-info/METADATA,sha256=KgAl7aMF79AzkV9yrxiHZgAMP3gnZq4LVMQwR5vxj5s,646
+d2draftnet-0.1.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+d2draftnet-0.1.1.dist-info/RECORD,,
