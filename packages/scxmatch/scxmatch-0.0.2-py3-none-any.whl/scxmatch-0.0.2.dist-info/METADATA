@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: scxmatch
+Version: 0.0.2
+Summary: Python implementation for single-cell cross match test, an efficient implementation of Rosenbaum's test.
+Project-URL: Homepage, https://github.com/bionetslab/scxmatch
+Project-URL: Issues, https://github.com/bionetslab/scxmatch/issues
+Author-email: Anna Moeller <anna.moeller@fau.de>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: <3.10,>=3.9
+Requires-Dist: anndata<0.11,>=0.10.9
+Requires-Dist: scanpy<2,>=1.10.3
+Requires-Dist: scipy<2,>=1.13.1
+Description-Content-Type: text/markdown
+
+Python Implementation of https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/Multivariate-distributions.pdf
