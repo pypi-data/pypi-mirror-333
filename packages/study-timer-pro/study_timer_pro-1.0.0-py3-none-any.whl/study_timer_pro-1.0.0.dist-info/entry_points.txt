@@ -1,0 +1,2 @@
+[console_scripts]
+study-timer-pro = src.main:main

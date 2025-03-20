@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: study-timer-pro
+Version: 1.0.0
+Summary: A feature-rich Pomodoro timer with analytics and distraction blocking
+Home-page: https://github.com/RishabhRai280/study-timer-pro
+Author: Your Name
+Author-email: rairishabh280@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Education
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Requires-Dist: pygame
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: psutil
+Requires-Dist: plyer
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
