@@ -1,0 +1,10 @@
+plato/client.py,sha256=77vlQIascis-eIKOtdIFl0EkmYd1-gGni-gQ3p7eIxE,6941
+plato/config.py,sha256=950To1jog5UW86lRWM2PaeV_9i0eAXZgUia4nUncSwk,658
+plato/models/__init__.py,sha256=Hw9SzvsfNaFHA-v8Mdgzstzk_FmXEplD6r_eVH0uhEY,106
+plato/models/env.py,sha256=m8bZnLMvpZJAwUzzGUE3PQ4o_fEUkbYXq0HDr_Vg0ho,5863
+plato/models/task.py,sha256=fPSM8gvj8RZA1ZrwGDFDUxI-kcMJ1FtJf8cRbq-L14Q,2091
+plato/test/test_env.py,sha256=3W7Tkiv7c464MqEkMi6GWKQODvzRzNsPK6qbnYUMthQ,1305
+plato/test/test_run.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plato_sdk-1.0.0.dist-info/METADATA,sha256=OW8QRNCj9wdRGBSuLTPpUHXGusnMxbTCvw6B96NMBQw,666
+plato_sdk-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+plato_sdk-1.0.0.dist-info/RECORD,,
