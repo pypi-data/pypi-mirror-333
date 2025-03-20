@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: whisperkey
+Version: 0.1.1
+Summary: Whisper key
+License: MIT
+Author: Daniel
+Author-email: danielratmiroff@pm.me
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: appdirs (>=1.4.4,<2.0.0)
+Requires-Dist: dbus-python (>=1.3.2,<2.0.0)
+Requires-Dist: notify2 (>=0.3.1,<0.4.0)
+Requires-Dist: openai (>=1.66.2,<2.0.0)
+Requires-Dist: psutil (>=7.0.0,<8.0.0)
+Requires-Dist: pyaudio (>=0.2.14,<0.3.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: pynput (==1.7.8)
+Requires-Dist: pyperclip (>=1.9.0,<2.0.0)
+Project-URL: documentation, https://github.com/Danielratmiroff/whisper-key#readme
+Project-URL: homepage, https://github.com/Danielratmiroff/whisper-key
+Project-URL: issues, https://github.com/Danielratmiroff/whisper-key/issues
+Project-URL: repository, https://github.com/Danielratmiroff/whisper-key
+Description-Content-Type: text/markdown
+
+# 🎙️ WhisperKey
+
+[![PyPI version](https://img.shields.io/pypi/v/whisperkey.svg)](https://pypi.org/project/whisperkey/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/pypi/pyversions/whisperkey)](https://pypi.org/project/whisperkey/)
+
+**WhisperKey** is a lightweight application that lets you transcribe speech to text. Simply press a keyboard shortcut, speak, and get your transcription copied directly to your clipboard.
+
+## ✨ Features
+
+- 🔑 **Global Hotkey**: Start/stop recording with Alt+G from anywhere on your system
+- 📋 **Clipboard Integration**: Automatically copies transcriptions to your clipboard
+- 🔒 **Privacy-Focused**: Audio recordings are stored temporarily in your local cache
+
+## 🚀 Installation
+
+### Prerequisites
+
+- Python 3.12 or higher
+- OpenAI API key
+
+### Using pip
+
+```bash
+pip install whisperkey
+```
+
+### From source
+
+```bash
+git clone https://github.com/Danielratmiroff/whisper-key.git
+cd whisper-key
+poetry install # or pip install poetry 
+```
+
+## ⚙️ Configuration
+
+Before using WhisperKey, you need to set up your OpenAI API key:
+
+```bash
+export OPENAI_API_KEY="your-api-key-here"
+```
+
+For permanent configuration, add this to your shell profile file (`.bashrc`, `.zshrc`, etc.).
+
+## 🎮 Usage
+
+1. Start WhisperKey:
+   ```bash
+   whisperkey
+   ```
+
+2. Press **Alt+G** to start recording
+
+3. Press **Alt+G** again to stop recording
+
+4. The transcription will be processed and automatically copied to your clipboard
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request from your forked repository
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgements
+
+- [OpenAI Whisper](https://openai.com/research/whisper) for the speech recognition API
+- [PyAudio](https://people.csail.mit.edu/hubert/pyaudio/) for audio recording capabilities
+- [pynput](https://pypi.org/project/pynput/) for keyboard shortcut handling
+
