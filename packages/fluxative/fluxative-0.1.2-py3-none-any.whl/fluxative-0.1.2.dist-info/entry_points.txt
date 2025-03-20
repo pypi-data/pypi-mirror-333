@@ -1,0 +1,5 @@
+[console_scripts]
+fluxative = src.llmgentool:main
+
+[uvx]
+fluxative = src.llmgentool:main
