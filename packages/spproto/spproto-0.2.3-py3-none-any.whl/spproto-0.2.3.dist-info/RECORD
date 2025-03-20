@@ -1,0 +1,17 @@
+spproto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spproto/auth.py,sha256=enLYM25fnAiaZ8VPxeI6_Yvoex_fRbOSPkYwT30snWc,1807
+spproto/client.py,sha256=0enwfCWdscQj8jtOryShuo0y5OjCaL7kV-5yt2AjROM,645
+spproto/connection.py,sha256=xCMS2LhnobbVMe6VuGgRjExcO1y06Sul5yiCItBD5vM,562
+spproto/key.py,sha256=aoUMYaqonMEtVprmJ8Nx4T93uNct9gCJf2LOSMVmoJU,446
+spproto/server.py,sha256=POfADHBIHrK8dplQjckKAVgEzmD5Gwnf7Dp9LkBYSg8,861
+spproto/protocol/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spproto/protocol/abc.py,sha256=5w9alFbn06wTXd1eB1XnXJTbbgEqH1W9RoUQWgtPiN0,227
+spproto/protocol/message.py,sha256=n1Ca8jg-KV3uWGQRnfEcGkYR9WJoOlYnZ9gS5IVlM5U,1553
+spproto/protocol/signed.py,sha256=HnBlNVElBTTuiXcuzKL69fqNklsC3dvp_76kUueEbJ8,814
+spproto/transport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spproto/transport/abc.py,sha256=TEFiSb-BNwCuZzpaYZpjd5H9jUwdvN2cl9HL11PLfmE,214
+spproto/transport/stream.py,sha256=mW18ITRhIG6-9uCvJ5p6fxQocBOv17hK2K_bGudevMI,873
+spproto-0.2.3.dist-info/METADATA,sha256=IcvgK8aw8xEMF0mUGWHLr3JmfwEZJvsJjRWt8inAvr8,4053
+spproto-0.2.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spproto-0.2.3.dist-info/licenses/LICENSE,sha256=PP5KI6Zssl7OC5KJRHJVFm4xDmImBIDA6X0SGywJKhU,1071
+spproto-0.2.3.dist-info/RECORD,,
