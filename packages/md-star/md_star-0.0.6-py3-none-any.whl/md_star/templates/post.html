@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+    <header>
+        <h1>{{ post.title }}</h1>
+        {% if post.updated_humanized %}
+        <time datetime="{{ post.updated_iso }}" title="{{ post.updated }}">{{ post.updated_humanized }}</time>
+        {% endif %}
+    </header>
+    <div>
+        {{ post.content|safe }}
+    </div>
+</article>
+{% endblock %}
+
+{% block head %}
+{% if post.schema_article %}
+<script type="application/ld+json">
+    {{ post.schema_article | safe }}
+</script>
+{% endif %}
+{% endblock %}
