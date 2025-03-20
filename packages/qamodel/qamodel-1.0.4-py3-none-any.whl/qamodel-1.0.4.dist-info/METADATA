@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: qamodel
+Version: 1.0.4
+Summary: A QA dataset processing and RNN-based model library
+Author: sachin kumar
+Author-email: sachin18449kumar@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: summary

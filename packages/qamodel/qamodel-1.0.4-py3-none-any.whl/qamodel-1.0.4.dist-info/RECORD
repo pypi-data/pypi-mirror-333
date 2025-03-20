@@ -1,0 +1,12 @@
+qamodel/__init__.py,sha256=95JE7gxbKZPiaQhMNKwwqoHRoJ_sRrpeTcbYkZE4T2w,197
+qamodel/data_loader.py,sha256=z1ZAPpdRxmcmj4mdx7fggrlpCcQlODfODLV6wJ9dbwU,136
+qamodel/dataset.py,sha256=4B4tpcAOpKUqtEd3Sklk3Vq-5Ythl17PQnI-p1kv6Xg,1509
+qamodel/model.py,sha256=1k4PnPhFo5DBh_NdGtr_un5VkkOnoPrO-I3zFeYI064,608
+qamodel/tokenizer.py,sha256=aDvf3dWHURNbQ01jvLKUO7Hx7rqcbTOARAxPY3p63R4,961
+qamodel/train.py,sha256=dUoQ4ILYPpPTSo1F1jJNbNttDtJXFUd84My4mHxHbmU,2059
+qamodel/utils.py,sha256=pJRu0w4M-0TIKOjNuIKEbwidzZbE1AzJ-GQsBNG5wMw,448
+qamodel-1.0.4.dist-info/LICENSE,sha256=5FbISZuvzdcjS3OdlbtWnoYeI6ytD1O0wRZd1kGWXGI,1069
+qamodel-1.0.4.dist-info/METADATA,sha256=7OLsKLILnUd4FOpyZCg9ar2ms7o7EOTzYYx6w9_ASKc,483
+qamodel-1.0.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+qamodel-1.0.4.dist-info/top_level.txt,sha256=q5COlD0js67UpUEK0E02UJ_J4Jzl3S8CQfjQs15s5oM,8
+qamodel-1.0.4.dist-info/RECORD,,
