@@ -1,0 +1,13 @@
+pythonrun/__init__.py,sha256=mRlf4Q6AovL-e4HdVmwJxQNYjqlewC33GKLZVE99hKA,240
+pythonrun/_version.py,sha256=hxRyNA9GhsJS6O5satpMcYgElP-0OFofhiSaNPcl_7A,511
+pythonrun/cli.py,sha256=SKwxtaWcA_u4tPV6jv8Tg7XYdX87GUkXSgbt1Zdn03E,139
+pythonrun/main.py,sha256=Fjiw1zg3SNN9f8_uCc16tv7mw8--QsVTbD54-4F_UE0,7719
+pythonrun/package_mapping.json,sha256=IpbjXZuoD6GNvx0GzclS6BNXy26Yk3nhRyg8-SQX0vg,540
+pythonrun/stdlib_modules.json,sha256=Garnf6arQy3LN0j9ebvvn5DHahedOZp8I67bRDUpZ5k,5473
+pythonrun/utils.py,sha256=ALUTAiVuOoJ79rhrS4TH2IY5U7i2HWGyJ2a7Zd96dtY,11334
+pythonrun-1.1.6.dist-info/LICENSE,sha256=WtAe4h08a6cuWEgB2RFPLu5DDqSVrTX78isQvlKTkXU,1064
+pythonrun-1.1.6.dist-info/METADATA,sha256=X9WnovqJAosR26FH1a1IJN4G9G2FUD8l2sehwnVXWAc,4539
+pythonrun-1.1.6.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pythonrun-1.1.6.dist-info/entry_points.txt,sha256=qBcEV0YQjvWzmbKF0ZAgFkwmhGdSCbbUh4rERVAvZkg,50
+pythonrun-1.1.6.dist-info/top_level.txt,sha256=awqSZeykGaxGG5VqsCJoeOQFoPRQ3NK7YGyPaqXXllo,10
+pythonrun-1.1.6.dist-info/RECORD,,
