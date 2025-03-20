@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: zhanshop_py
+Version: 1.0.0
+Summary: 张启全的python框架
+Author: 张启全
+Author-email: admin@zhanshop.cn
+Requires-Python: >=3.10
+License-File: LICENSE

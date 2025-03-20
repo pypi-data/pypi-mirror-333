@@ -1,0 +1,6 @@
+flask
+flask_redis
+pymysql
+pycryptodome
+qiniu
+apscheduler
