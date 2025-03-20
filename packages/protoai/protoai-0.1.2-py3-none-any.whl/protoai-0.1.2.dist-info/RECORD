@@ -1,0 +1,12 @@
+protoai/__init__.py,sha256=WiAZvH73M62Zp3e23b1TgYtlB9naOi1YqxhJUvGlpN0,29
+protoai/app.py,sha256=4nESXxc2uH7baPg23vsMIWg5d8tK2sZfvUKEEfJLVI8,26
+protoai/message.py,sha256=VZYUo8kyk97aHD0I-okqeWysCrkIrIlIwbSWFc2SjRM,3215
+protoai/typing.py,sha256=qpxDLrGEqVJAF_7GJQhcrlL-30vzLRVb-5Yf5FvSGnI,473
+protoai/config/__init__.py,sha256=ehqQ2hbKDSd0Q6_tTGK_dyAbfz4KNlq-aDEJAAlPLCM,50
+protoai/config/base.py,sha256=J9Py5FvTspAU4U-HZSF2-rVGMJ6oTG1LrawWhXEfMzU,2392
+protoai/config/logger.py,sha256=DX4iDpe9f841z8gQE0muRfS9dgMB4mqIICPRefXOo6c,556
+protoai-0.1.2.dist-info/LICENSE,sha256=VG7vzg73H8oli7U5JGXBKQ9ITNPHVemRBzLSNwzqiV8,1063
+protoai-0.1.2.dist-info/METADATA,sha256=HZxXyoAepXKNNXYqyCzhBCbzPuk5dRhqk-foouOSJWs,1551
+protoai-0.1.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+protoai-0.1.2.dist-info/top_level.txt,sha256=qM8kyIKKuiaLLjvsb48jlF3jGZ7TY28B_J8ZrsoiANQ,8
+protoai-0.1.2.dist-info/RECORD,,
