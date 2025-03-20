@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: devox-load-tester
+Version: 0.1
+Summary: A penetration testing load tester tool
+Author: Your Name
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.text
+Dynamic: author
+Dynamic: classifier
+Dynamic: summary
