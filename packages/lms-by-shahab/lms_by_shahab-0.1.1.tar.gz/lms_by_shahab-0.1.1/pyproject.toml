@@ -1,0 +1,17 @@
+[project]
+name = "lms-by-shahab"
+version = "0.1.1"
+description = "It Is A Real Library Management System using MySQL as a Database"
+authors = [
+    { name = "Shahabuddin", email = "voyagersvrs135@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "inquirer>=3.4.0",
+    "mysql-connector-python>=9.2.0",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+lms = "lms_by_shahab.main:main"

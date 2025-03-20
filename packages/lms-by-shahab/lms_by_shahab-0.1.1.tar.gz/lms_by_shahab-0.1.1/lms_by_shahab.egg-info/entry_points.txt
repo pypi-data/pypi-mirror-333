@@ -1,0 +1,2 @@
+[console_scripts]
+lms = lms_by_shahab.main:main
