@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: pkg_cs
+Version: 0.1.0
+Summary: A Python package
+Author-email: Annie Thomas <annie.thomas1@ibm.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
