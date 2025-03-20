@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mkdocs-tccp-docs-styles"
+version = "0.2.10"
+description = "MkDocs plugin for TCCP documentation styles"
+authors = [
+    {name = "Jeff Bendixsen", email = "jeff_bendixsen@trimble.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.7"
+readme = "docs/index.md"
+dependencies = [
+    "mkdocs>=1.0.0",
+]
+
+[project.entry-points."mkdocs.plugins"]
+"tccp-docs-styles" = "mkdocs_tccp_docs_styles:TCCPDocsStylesPlugin"
+
+[tool.setuptools]
+packages = ["mkdocs_tccp_docs_styles", "mkdocs_tccp_docs_styles.styles"]
+license-files = [ "LICENSE" ]
+
+[tool.setuptools.package-data]
+"mkdocs_tccp_docs_styles" = ["styles/*.css", "assets/*.svg"]

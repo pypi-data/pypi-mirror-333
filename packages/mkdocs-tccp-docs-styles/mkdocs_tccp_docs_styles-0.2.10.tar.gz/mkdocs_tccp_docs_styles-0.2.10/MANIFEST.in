@@ -1,0 +1,2 @@
+include mkdocs_tccp_docs_styles/styles/*.css
+include mkdocs_tccp_docs_styles/assets/*.svg
