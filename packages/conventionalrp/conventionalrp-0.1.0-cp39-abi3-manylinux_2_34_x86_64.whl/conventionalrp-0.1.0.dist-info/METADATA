@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: conventionalrp
+Version: 0.1.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: HydroRoll Conventional Role Play SDK
+Keywords: hydroroll
+Home-Page: https://hydroroll.team/
+Author: yourname
+Author-email: HsiangNianian <leader@hydroroll.team>
+License: AGPLv3.0
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+Project-URL: homepage, https://hydroroll.team/
+Project-URL: repository, https://github.com/HydroRoll-Team/conventional_role_play
+Project-URL: documentation, https://crp.hydroroll.team/
+
+
