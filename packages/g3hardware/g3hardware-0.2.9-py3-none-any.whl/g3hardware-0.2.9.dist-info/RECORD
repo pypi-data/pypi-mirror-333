@@ -1,0 +1,10 @@
+g3hardware/__init__.py,sha256=5SXtVcGYP_ijWgrK1IXhQaVCuxOlGVmp1iCzn5wYIiQ,410
+g3hardware/_g3hardware.py,sha256=egnWuZFOhOBEEOe80iKCe4LwmZL8_Z5ZE9pI9RE0Lh0,55965
+g3hardware/api.py,sha256=GhHG1tRqWHJyLk5Put7UliSEYH9SFRFV4RqW2VIe-_Y,949
+g3hardware/config.yaml,sha256=xFVtzaRY7UYeOjfXciLAgIAswD8xaL9BvWc91ft1tO4,17613
+g3hardware/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+g3hardware-0.2.9.dist-info/LICENCE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+g3hardware-0.2.9.dist-info/METADATA,sha256=jJkCTFmz4qPthS-Hm3WW9K3C_PWEP_kH16JhcRUfmtk,1202
+g3hardware-0.2.9.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+g3hardware-0.2.9.dist-info/top_level.txt,sha256=d3WrTNWiflQVK7UTSCONUl5pj5QjZqlLrDA2PDlbLi0,11
+g3hardware-0.2.9.dist-info/RECORD,,
