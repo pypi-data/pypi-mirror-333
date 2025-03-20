@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pymsod"
+version = "0.1.2"
+description = "Python API to find and return path to OneDrive"
+authors = ["Dominik Braun <dome.braun@fau.de>"]
+license = "GNU 3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
