@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: grampa
+Version: 0.0.1
+Summary: Gaussian Random Magnetic Fields Approximation
+Project-URL: Homepage, https://github.com/ErikOsinga/magneticfields
+Author-email: Erik Osinga <your_email@example.com>
+License: MIT License
+        Copyright (c) 2025 Erik Osinga
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: astropy
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: psutil
+Requires-Dist: pyfc
+Requires-Dist: pyfftw
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# Gaussian Random-fields Approximation for Magnetic-fields with Python Algorithms (GRAMPA)
+
+Modelling magnetic fields as Gaussian random fields following a certain power spectrum and electron density profile as explained in Murgia+2004.
+Built for analysing Faraday rotation experiments of Galaxy clusters but could be more generally used for other magnetised plasmas depending on the properties. 
+
+magneticfieldmodels.ipynb shows an example for educational purposes.
+
+
+
+If you use this code, please cite Osinga et al. 2022 (https://ui.adsabs.harvard.edu/abs/2022A%26A...665A..71O/abstract) and Osinga et al. 2025 (https://arxiv.org/abs/2408.07178). If you use the lognormal density fluctuations, please cite Khadir+2025 (in prep.) and PyFC (https://www.piwheels.org/project/pyfc/)

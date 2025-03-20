@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "grampa"
+version = "0.0.1"
+authors = [{ name="Erik Osinga", email="your_email@example.com" }]
+description = "Gaussian Random Magnetic Fields Approximation"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "astropy",
+    "pyFFTW",
+    "psutil",
+    "scikit-image",
+    "pyFC"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/ErikOsinga/magneticfields"
