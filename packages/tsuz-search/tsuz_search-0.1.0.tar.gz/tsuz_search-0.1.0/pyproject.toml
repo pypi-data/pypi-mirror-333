@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsuz_search"
+version = "0.1.0"
+description = "A Python client for the tasnif.soliq.uz search API"
+readme = "README.md"
+authors = [{ name = "Aslon Khamidov", email = "hamidovaslon1@gmail.com" }]
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.25.0",
+    "pydantic>=2.0.0"
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.0.0"
+]
+
+[tool.setuptools]
+packages = ["tsuz_search"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
