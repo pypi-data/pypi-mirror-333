@@ -1,0 +1,2 @@
+[console_scripts]
+autotz = autotz.main:main
