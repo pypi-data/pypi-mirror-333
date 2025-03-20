@@ -1,0 +1,2 @@
+[console_scripts]
+faucet_extractor_poc = faucet_extractor_poc.extract:main
