@@ -1,0 +1,17 @@
+flask_mvc/__init__.py,sha256=IL2rDSRlH5hBQqESL-yzskVCfNiXsAnI3aGvyXVwtww,120
+flask_mvc/__version__.py,sha256=QiiYsv0kcJaB8wCWyT-FnI2b6be87HA-CrrIUn8LQhg,22
+flask_mvc/flask_mvc.py,sha256=xJGKXtqpGP99oFTT-JWk9Lmbbg801BWRgqw6s_rx73I,1629
+flask_mvc/helpers/html/input_method_helper.py,sha256=j-i3UUHJkfHe5m3UKyDxwC-HnE8qUXYwVHGTIh8XyVc,2075
+flask_mvc/helpers/html/__pycache__/input_method_helper.cpython-310.pyc,sha256=f_mk14hrEVbsKHdIvQUs53pR1veRaBr4J_6rh51LGCw,2623
+flask_mvc/interfaces/controller.py,sha256=G48Ak9suCE9XYAgC6-lqKGLWl6uWQpZ5vbuuW2aoNPQ,350
+flask_mvc/middlewares/blueprint_middleware.py,sha256=TLeXTVfr2ILSgsfX5W8v6ivh2S88VuBextAKN_HEdYw,1562
+flask_mvc/middlewares/callback_middleware.py,sha256=SER4Y4yroO7JkFvd9_HsIcieh295v55vnn0hkwwOliY,3529
+flask_mvc/middlewares/http/custom_request_middleware.py,sha256=hZaEk89dg4we1UQ6cEX-3FYDYbslzx7hold8new-0Xg,391
+flask_mvc/middlewares/http/method_override_middleware.py,sha256=WX3x4hCby_DP-5C1l9-lvXn2heiQ_svcb5wBTkVWHXI,1074
+flask_mvc/middlewares/http/namespace_middleware.py,sha256=U0yhbSsl6JDnA7giOm89dr87xZePpvOEr9aPL-G3PrQ,1810
+flask_mvc/middlewares/http/router_middleware.py,sha256=Jl4DFXR7iASK63Xl4rJ2dAH0MWUCgMKBTNh4UD_tBV0,6102
+flask_mvc_core-0.0.6.dist-info/LICENSE,sha256=YmshRdhU1s-hPDLyIMxWt0RnznqqUIp1RqT0ndruBHI,1110
+flask_mvc_core-0.0.6.dist-info/METADATA,sha256=GnIQKZ9n_YAD-1DDSNUVtDDKavQvyCA4oPXa_sUSv9s,647
+flask_mvc_core-0.0.6.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+flask_mvc_core-0.0.6.dist-info/top_level.txt,sha256=QP_jUPAD8CrmOxmsYD16IstC2bF0w4Dv5LJuEqJC6fE,10
+flask_mvc_core-0.0.6.dist-info/RECORD,,
