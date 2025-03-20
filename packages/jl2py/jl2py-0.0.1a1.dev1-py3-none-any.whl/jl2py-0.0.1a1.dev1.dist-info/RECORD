@@ -1,0 +1,13 @@
+jl2py/__init__.py,sha256=XendKPJiJuDRhS5dc6eax_NM7L9u6C-_NcbcOy2JrOk,32
+jl2py/__main__.py,sha256=bI9SSsTqBmoA6Q161pIC_lJ0NPnPIYujzL5YllWj9f0,95
+jl2py/hello.py,sha256=LLg5S3_dSq6x2W_EWq0_7JWyhFaGG6jmyqTnPaGCg84,79
+jl2py/math.py,sha256=YzeXWAVYezeBHC2IlensPALCmzn_p7WvZmSE85Ad2Dk,91
+jl2py/math_utils.py,sha256=xv4n2_QtztSmH_J9ey8siDrgPyeKKq7q_K-FBUsoE2c,79
+jl2py/sub_hello/__init__.py,sha256=XendKPJiJuDRhS5dc6eax_NM7L9u6C-_NcbcOy2JrOk,32
+jl2py/sub_hello/__main__.py,sha256=O8E_PkqDEzSMkHEF8dD061wcBv42njD-k7J-PZBl9xk,97
+jl2py/sub_hello/hello.py,sha256=9sdGzWwo3JHbQ7sd2axX78VCXk9BAE4Sgzb_dkuasSM,214
+jl2py-0.0.1a1.dev1.dist-info/LICENSE,sha256=B8XoniWc8cpjydJLzcSKJoTSmQyEgxJLVDvcg-Sgpjw,1069
+jl2py-0.0.1a1.dev1.dist-info/METADATA,sha256=HV88US5dSNXd6qCJyAvJOWnRmqCS156l4kkeWpBnbbc,7349
+jl2py-0.0.1a1.dev1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+jl2py-0.0.1a1.dev1.dist-info/top_level.txt,sha256=7AfB34_4nWt40vbsnvF7lGZAeuekxeWvFzxNeAbgkvM,6
+jl2py-0.0.1a1.dev1.dist-info/RECORD,,
