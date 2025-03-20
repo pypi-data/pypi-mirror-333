@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mallickboy
+Version: 0.1.0
+Summary: This is my custom library for python
+Home-page: https://github.com/mallickboy
+Author: Tamal Mallick
+Author-email: contact@mallickboy.com
+License: Free to use and open for customization if provided appropriate credit to the author.
+Description-Content-Type: text/plain
+
+ 
+        *****************************************************
+        Message : This mallickboy library has been developed by Tamal Mallick (github/mallickboy)
+
+        Modules included:
+        1. runtime - Decorator to measure the runtime of any program
+        2. rle - Run-Length Encoding (aaabbc → a3b2c)
+
+        *****************************************************
+        
