@@ -1,0 +1,142 @@
+Metadata-Version: 2.2
+Name: dldna
+Version: 0.1.6
+Summary: Deep Learning DNA: Surviving Architectures and Profound Principles
+Home-page: https://github.com/Quantum-Intelligence-Frontier/dldna
+Author: Seon Yong Park
+Author-email: baida21@naver.com
+License: CC BY-NC 4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: transformers>=4.30
+Requires-Dist: datasets>=2.10
+Requires-Dist: tqdm>=4.60
+Requires-Dist: pillow>=9.0
+Requires-Dist: opencv-python>=4.5
+Requires-Dist: seaborn_image
+Requires-Dist: torchinfo
+Requires-Dist: pyhessian
+Requires-Dist: bayesian-optimization
+Requires-Dist: botorch
+Provides-Extra: visualization
+Requires-Dist: manim; extra == "visualization"
+Provides-Extra: dev
+Requires-Dist: torchinfo; extra == "dev"
+Requires-Dist: pyhessian; extra == "dev"
+Requires-Dist: gudhi; extra == "dev"
+Requires-Dist: PyWavelets; extra == "dev"
+Requires-Dist: bayesian-optimization; extra == "dev"
+Requires-Dist: botorch; extra == "dev"
+Requires-Dist: sentencepiece; extra == "dev"
+Provides-Extra: colab
+Requires-Dist: transformers>=4.30; extra == "colab"
+Requires-Dist: datasets>=2.10; extra == "colab"
+Requires-Dist: tqdm>=4.60; extra == "colab"
+Requires-Dist: pillow>=9.0; extra == "colab"
+Requires-Dist: opencv-python>=4.5; extra == "colab"
+Requires-Dist: sentencepiece; extra == "colab"
+Provides-Extra: all
+Requires-Dist: manim; extra == "all"
+Requires-Dist: torchinfo; extra == "all"
+Requires-Dist: seaborn_image; extra == "all"
+Requires-Dist: pyhessian; extra == "all"
+Requires-Dist: gudhi; extra == "all"
+Requires-Dist: PyWavelets; extra == "all"
+Requires-Dist: bayesian-optimization; extra == "all"
+Requires-Dist: botorch; extra == "all"
+Requires-Dist: sentencepiece; extra == "all"
+Requires-Dist: transformers>=4.30; extra == "all"
+Requires-Dist: datasets>=2.10; extra == "all"
+Requires-Dist: tqdm>=4.60; extra == "all"
+Requires-Dist: pillow>=9.0; extra == "all"
+Requires-Dist: opencv-python>=4.5; extra == "all"
+Requires-Dist: jupyter>=1.0.0; extra == "all"
+Requires-Dist: notebook>=6.5.0; extra == "all"
+Requires-Dist: ipykernel>=6.29.0; extra == "all"
+Requires-Dist: ipywidgets>=8.1.0; extra == "all"
+Requires-Dist: seaborn; extra == "all"
+Requires-Dist: torch>=1.13; extra == "all"
+Requires-Dist: torchvision>=0.14; extra == "all"
+Requires-Dist: torchaudio>=0.13; extra == "all"
+Requires-Dist: tensorboard>=2.8; extra == "all"
+Requires-Dist: numpy>=1.22; extra == "all"
+Requires-Dist: pandas>=1.5; extra == "all"
+Requires-Dist: matplotlib>=3.5; extra == "all"
+Requires-Dist: scikit-learn>=1.0; extra == "all"
+Requires-Dist: scipy>=1.8; extra == "all"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Deep Learning DNA: Surviving Architectures and Profound Principles
+
+[![PyPI version](https://badge.fury.io/py/dldna.svg)](https://badge.fury.io/py/dldna)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+**A journey into the core technologies and key architectures of deep learning.**
+
+This package, `dldna`, provides code and resources accompanying the book "Deep Learning DNA: Surviving Architectures and Profound Principles". It delves into the essential techniques and pivotal architectures that have shaped the field of deep learning, offering a practical, hands-on complement to the book's conceptual explanations.
+
+**Key Features:**
+
+*   **Code Examples:** Explore implementations of fundamental deep learning concepts and architectures.
+*   **Focus on Efficiency:** Learn how to build and train models with an emphasis on computational efficiency.
+*   **Accompanying Material:** This package is designed to be used alongside the book "Deep Learning DNA", providing interactive code to enhance your learning experience.
+
+**Installation:**
+
+*   **Minimal Installation (Recommended for Colab):**
+
+    ```bash
+    pip install dldna[colab]
+    ```
+    This option installs only the packages that are *not* typically pre-installed in Google Colab.
+
+*   **Standard Installation (All Dependencies):**
+    ```bash
+    pip install dldna
+    ```
+    install_requires
+
+*   **Full Installation (Including Optional and Development Dependencies):**
+
+    ```bash
+    pip install dldna[all]
+    ```
+    This installs all dependencies, including `manim` (for visualization) and development tools.
+
+
+**Requirements:**
+
+The specific requirements depend on the installation option you choose. See `setup.py` for the complete list of dependencies.  The minimal installation for Colab requires:
+
+*   Python >= 3.7
+*   transformers
+*   datasets
+*   tqdm
+*   pillow
+*   opencv-python
+*   sentencepiece
+
+**Usage:**
+
+```python
+# Example usage (replace with a simple, illustrative example)
+import dldna
+
+# ... your code here ...
+
+print(dldna.__version__)  # Check the installed version
