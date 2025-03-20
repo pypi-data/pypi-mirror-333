@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: atropy_core
+Version: 0.0.1
+Summary: Scripts for generating input files and plotting output files
+Author-email: Julian Mangott <julian.mangott@uibk.ac.at>, Lukas Einkemmer <lukas.einkemmer@uibk.ac.at>, Martina Prugger <martina.prugger@ipp.mpg.de>, Stefan Brunner <stefan.brunner@student.uibk.ac.at>
+Requires-Python: >=3.10
