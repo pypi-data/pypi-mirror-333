@@ -1,0 +1,2 @@
+[console_scripts]
+fixnow = fixnow.fixnow:main
