@@ -1,0 +1,70 @@
+Metadata-Version: 2.2
+Name: doc-page-extractor
+Version: 0.0.6
+Summary: doc page extractor can identify text and format in images and return structured data.
+Home-page: https://github.com/Moskize91/doc-page-extractor
+Author: Tao Zeyu
+Author-email: i@taozeyu.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python<5.0,>=4.11.0
+Requires-Dist: pillow<11.0,>=10.3
+Requires-Dist: pyclipper<2.0,>=1.2.0
+Requires-Dist: onnxruntime<2.0,>=1.19.0
+Requires-Dist: numpy<2.0,>=1.24.0
+Requires-Dist: shapely<3.0,>=2.0.0
+Requires-Dist: transformers<5.0,>=4.48.0
+Requires-Dist: doclayout_yolo>=0.0.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# doc page extractor
+
+English | [中文](./README_zh-CN.md)
+
+## Introduction
+
+doc page extractor can identify text and format in images and return structured data.
+
+## Installation
+
+```shell
+pip install doc-page-extractor
+```
+
+## Using CUDA
+
+Please refer to the introduction of [PyTorch](https://pytorch.org/get-started/locally/) and select the appropriate command to install according to your operating system.
+
+## Example
+
+```python
+from PIL import Image
+from doc_page_extractor import DocExtractor
+
+extractor = DocExtractor(
+  model_dir_path=model_path, # Folder address where AI model is downloaded and installed
+  device="cpu", # If you want to use CUDA, please change to device="cuda:0".
+)
+with Image.open("/path/to/your/image.png") as image:
+  result = extractor.extract(
+  image=image,
+  lang="ch", # Language of image text
+)
+for layout in result.layouts:
+  for fragment in layout.fragments:
+    print(fragment.rect, fragment.text)
+```
+
+## Acknowledgements
+
+The code of `doc_page_extractor/onnxocr` in this repo comes from [OnnxOCR](https://github.com/jingsongliujing/OnnxOCR).
+
+- [DocLayout-YOLO](https://github.com/opendatalab/DocLayout-YOLO)
+- [OnnxOCR](https://github.com/jingsongliujing/OnnxOCR)
+- [layoutreader](https://github.com/ppaanngggg/layoutreader)
