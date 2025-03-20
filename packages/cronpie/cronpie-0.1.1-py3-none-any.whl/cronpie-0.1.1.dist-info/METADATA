@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: cronpie
+Version: 0.1.1
+Summary: A simple cron job scheduler with less boilerplate code
+Author: Marjon Godito
+Requires-Dist: schedule==1.1.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
