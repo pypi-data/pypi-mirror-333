@@ -1,0 +1,10 @@
+terraforge/__init__.py,sha256=4fsXkfby8AyXXvSkJMubEu4x2VaEBv8UkPGAPuFh8rY,238
+terraforge/core.py,sha256=LLB0cZSzJyLP-rZwTuq-o5HtMWDObU6GosiKMu5K4VU,4214
+terraforge/utils.py,sha256=-tyaNBEPI3GY46BzI1aq4FcacY01_dHP5LPErmXZjq4,1714
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_terraforge.py,sha256=CgV-DYQkLPtuwB5QfOUIqSObjHE4tfRQUPj1toHDqLs,3314
+terraforge-0.1.0.dist-info/LICENSE,sha256=SOb8NPFj1DRmDMJLJ6w3cZCw0oQKX3uX0PqIQJ16iAA,556
+terraforge-0.1.0.dist-info/METADATA,sha256=mJ1XsenNNIqfzOOVlimkV8ro8zaUB4hbzBaq0ucW_Rg,4556
+terraforge-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+terraforge-0.1.0.dist-info/top_level.txt,sha256=T9ixLVOd_MSgwE83lq0-NfX_6anpPdAGJKS3mQVwPaw,17
+terraforge-0.1.0.dist-info/RECORD,,
