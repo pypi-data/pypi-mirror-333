@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-03-06 08:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: it\n"
+"Language-Name: Italian\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: design.plone.opendata\n"
+
+#: ../profiles.zcml:22
+msgid "Create example content to showcase the new website"
+msgstr ""
+
+#: ../content/dataset.py:23
+msgid "Data di rilascio"
+msgstr ""
+
+#: ../content/dataset.py:27
+msgid "Data di ultima modifica"
+msgstr ""
+
+#: ../profiles/default/types/OpendataDataset.xml
+msgid "Edit"
+msgstr ""
+
+#: ../controlpanel/opendata.py:14
+msgid "Email Organizzazione"
+msgstr ""
+
+#: ../content/dataset.py:73
+msgid "Frequenza di aggiornamento"
+msgstr ""
+
+#: ../content/dataset.py:33
+msgid "I temi attraverso cui classificare il Dataset. La proprietà lega l’oggetto Dataset a uno o più oggetti di tipo skos:Concept (specificato mediante un URI - Uniform Resource Identifier)"
+msgstr ""
+
+#: ../content/dataset.py:103
+msgid "Licenza"
+msgstr ""
+
+#: ../controlpanel/opendata.py:31
+#: ../profiles/default/controlpanel.xml
+msgid "Opendata"
+msgstr ""
+
+#: ../profiles/default/types/OpendataDataset.xml
+msgid "Opendata Dataset"
+msgstr ""
+
+#: ../profiles.zcml:13
+msgid "Package to configure a new design.plone.opendata site"
+msgstr ""
+
+#: ../content/dataset.py:32
+msgid "Temi"
+msgstr ""
+
+#: ../content/dataset.py:57
+msgid "Titolare"
+msgstr ""
+
+#: ../profiles.zcml:30
+msgid "Uninstall design.plone.opendata setup."
+msgstr ""
+
+#: ../profiles/default/types/OpendataDataset.xml
+msgid "View"
+msgstr ""
+
+#: ../profiles.zcml:22
+msgid "design.plone.opendata: Example content"
+msgstr ""
+
+#: ../profiles.zcml:13
+msgid "design.plone.opendata: Install"
+msgstr ""
+
+#: ../profiles.zcml:30
+msgid "design.plone.opendata: Uninstall"
+msgstr ""
+
+#. Default: "Titolare"
+#: ../content/dataset.py:50
+msgid "opendata_holder_label"
+msgstr ""

@@ -1,0 +1,14 @@
+setuptools
+Plone
+plone.api
+plone.restapi
+rdflib
+
+[test]
+zest.releaser[recommended]
+zestreleaser.towncrier
+plone.app.testing
+plone.restapi[test]
+pytest
+pytest-cov
+pytest-plone>=0.5.0

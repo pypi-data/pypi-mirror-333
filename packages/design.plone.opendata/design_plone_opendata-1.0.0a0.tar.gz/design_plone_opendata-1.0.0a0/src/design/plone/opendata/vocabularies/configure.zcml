@@ -1,0 +1,19 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <utility
+      factory=".themes.DataThemesVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="design.plone.opendata.themes"
+      />
+  <utility
+      factory=".frequencies.DataFrequenciesVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="design.plone.opendata.frequencies"
+      />
+  <utility
+      factory=".licenses.LicensesVocabulary"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      name="design.plone.opendata.licenses"
+      />
+
+</configure>
