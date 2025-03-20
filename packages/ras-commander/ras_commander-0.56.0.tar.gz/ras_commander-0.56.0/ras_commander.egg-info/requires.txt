@@ -1,0 +1,12 @@
+h5py
+numpy
+pandas
+requests
+tqdm
+scipy
+xarray
+geopandas
+matplotlib
+shapely
+pathlib
+rasterstats
