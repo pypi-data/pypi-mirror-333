@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.8
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: t.kreuzer@fz-juelich.de
+author_name: Tim Kreuzer
+data_format: string
+file_extension: ''
+has_binder: false
+has_settings: false
+kind: server
+labextension_name: jupyterlab_data_mount
+mimetype: ''
+mimetype_name: ''
+project_short_description: A JupyterLab extension to mount external data storage
+python_name: jupyterlab_data_mount
+repository: https://github.com/jsc-jupyter/jupyterlab-data-mount
+test: false
+viewer_name: ''
+
