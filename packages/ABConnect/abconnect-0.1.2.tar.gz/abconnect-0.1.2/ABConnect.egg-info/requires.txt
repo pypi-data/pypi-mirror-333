@@ -1,0 +1,10 @@
+pandas
+openpyxl
+beautifulsoup4
+chardet
+requests
+
+[dev]
+pytest
+build
+twine
