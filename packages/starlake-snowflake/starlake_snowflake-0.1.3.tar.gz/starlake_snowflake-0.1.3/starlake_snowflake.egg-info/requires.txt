@@ -1,0 +1,15 @@
+starlake-orchestration>=0.2.5
+croniter
+sqlalchemy
+snowflake
+snowflake-snowpark-python
+
+[aws]
+
+[azure]
+
+[gcp]
+
+[shell]
+
+[snwoflake]
