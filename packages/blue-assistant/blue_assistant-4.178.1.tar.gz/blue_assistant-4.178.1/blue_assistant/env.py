@@ -1,0 +1,33 @@
+import os
+from blue_options.env import load_config, load_env
+
+load_env(__name__)
+load_config(__name__)
+
+
+BLUE_ASSISTANT_TEXT_DEFAULT_MODEL = os.getenv(
+    "BLUE_ASSISTANT_TEXT_DEFAULT_MODEL",
+    "",
+)
+
+BLUE_ASSISTANT_TEXT_MAX_TOKENS_str = os.getenv("BLUE_ASSISTANT_TEXT_MAX_TOKENS", "")
+try:
+    BLUE_ASSISTANT_TEXT_MAX_TOKENS = int(BLUE_ASSISTANT_TEXT_MAX_TOKENS_str)
+except Exception:
+    BLUE_ASSISTANT_TEXT_MAX_TOKENS = 2000
+
+
+BLUE_ASSISTANT_IMAGE_DEFAULT_MODEL = os.getenv(
+    "BLUE_ASSISTANT_IMAGE_DEFAULT_MODEL",
+    "",
+)
+
+BLUE_ASSISTANT_IMAGE_DEFAULT_QUALITY = os.getenv(
+    "BLUE_ASSISTANT_IMAGE_DEFAULT_QUALITY",
+    "",
+)
+
+BLUE_ASSISTANT_IMAGE_DEFAULT_SIZE = os.getenv(
+    "BLUE_ASSISTANT_IMAGE_DEFAULT_SIZE",
+    "",
+)
