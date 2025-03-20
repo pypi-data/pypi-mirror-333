@@ -1,0 +1,8 @@
+impresso_pipelines/__init__.py,sha256=iNf_-xiBJRcdyqquD8nzIUvCUoMX_iN8scAeJD-iAxk,76
+impresso_pipelines/langident/__init__.py,sha256=l1vNL2oac8GerzPQRgl9jQjehNbTvdcvP86Ts8MAHBQ,50
+impresso_pipelines/langident/langident_pipeline.py,sha256=zTywDXt-dGyIkXSPWG75Try7AX2y63TkhoHsKM_inhs,2718
+impresso_pipelines/ocrqa/__init__.py,sha256=jby2KIHwAGZgHAbUn0G6FjsLhyJhilmtSxJPJaxptOQ,42
+impresso_pipelines/ocrqa/ocrqa_pipeline.py,sha256=mlZfdlcY19jP_ZZO7mmkqTEcWDQi2DTyMkW_8nAd2lA,5703
+impresso_pipelines-0.2.3.dist-info/METADATA,sha256=F6S6EbLB-rWBScOwBHDzCVXR7BqCHYz-nNdZfBfEpwg,4655
+impresso_pipelines-0.2.3.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+impresso_pipelines-0.2.3.dist-info/RECORD,,
