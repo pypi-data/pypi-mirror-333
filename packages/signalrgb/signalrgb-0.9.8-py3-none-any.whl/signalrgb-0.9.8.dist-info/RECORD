@@ -1,0 +1,9 @@
+signalrgb/__init__.py,sha256=xG0tozZ1qv1oHwSf6mGxvfbXsNZx_UqtrrB3uFZ6lRo,472
+signalrgb/cli.py,sha256=EgcUZEajkqPyN9eTqYeqGAwhSmzUq5wf2lZxS2PaKdg,24320
+signalrgb/client.py,sha256=TUGRks3bIReE1mq4EiPTqoAhPplxiDgwMaPyQGAel3E,25883
+signalrgb/model.py,sha256=QaeFC8e8oTqABy1qNcJUf8fuVeFpcbv0LcnFTS9eJXk,10214
+signalrgb-0.9.8.dist-info/METADATA,sha256=tKw2B-AWwE2VFzq4w9G_gTgAHJWrcVieJrdul8OiohQ,7228
+signalrgb-0.9.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+signalrgb-0.9.8.dist-info/entry_points.txt,sha256=Aj4fnvL1QXnWBahU-BVb8mzYA_YQDgSFjEMA8pi5yGA,48
+signalrgb-0.9.8.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+signalrgb-0.9.8.dist-info/RECORD,,
