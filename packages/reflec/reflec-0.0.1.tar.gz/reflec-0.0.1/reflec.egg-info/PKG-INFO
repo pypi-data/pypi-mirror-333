@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: reflec
+Version: 0.0.1
+Summary: Deep learning framework
+Home-page: https://github.com/enpotid/reflec
+Author: enpotid
+License: MIT
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy==2.0.2
+
+# reflec
+**deep learning framework**
