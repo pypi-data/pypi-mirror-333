@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/icinga_passify_bareos.egg-info/PKG-INFO
+src/icinga_passify_bareos.egg-info/SOURCES.txt
+src/icinga_passify_bareos.egg-info/dependency_links.txt
+src/icinga_passify_bareos.egg-info/entry_points.txt
+src/icinga_passify_bareos.egg-info/requires.txt
+src/icinga_passify_bareos.egg-info/top_level.txt
