@@ -1,0 +1,3 @@
+[console_scripts]
+image-style-repaint = style_repaint:main
+isr = style_repaint:main
