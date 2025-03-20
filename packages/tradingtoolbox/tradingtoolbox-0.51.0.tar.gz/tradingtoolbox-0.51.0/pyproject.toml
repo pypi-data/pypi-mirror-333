@@ -1,0 +1,86 @@
+[project]
+name = "tradingtoolbox"
+version = "0.51.0"
+description = "Add your description here"
+authors = [
+    { name = "Alpha Zen", email = "" }
+]
+dependencies = [
+    "clickhouse-connect>=0.7.16",
+    "python-dateutil>=2.9.0.post0",
+    "pandas>=2.2.2",
+    "python-binance>=1.0.19",
+    "rich>=13.8.1",
+    "pydantic>=2.9.2",
+    "uvloop>=0.20.0",
+    "pyarrow>=17.0.0",
+    "loguru>=0.7.2",
+    "orjson>=3.10.6",
+    "msgspec>=0.18.6",
+    "ccxt>=4.4.12",
+    "arrow>=1.3.0",
+    "pytest-asyncio>=0.24.0",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+license = { text = "MIT" }
+
+# [project.scripts]
+# "dev" = "tradingtoolbox:dev"
+
+[tool.rye.scripts]
+dev = {cmd = 'rye run python testing/dev_testing.py'}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.2.2",
+    "pip>=24.1.1",
+    "pre-commit>=3.7.1",
+    "commitizen>=3.27.0",
+    "pyright>=1.1.371",
+    "mkdocs-material>=9.5.38",
+    "mkdocstrings[python]>=0.26.1",
+    "mkdocs-git-revision-date-localized-plugin>=1.2.9",
+    "mkdocs-git-committers-plugin-2>=2.3.0",
+    "mkdocs-git-authors-plugin>=0.9.0",
+    "mike>=2.1.3",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-literate-nav>=0.6.1",
+    "mkdocs-section-index>=0.3.9",
+    "mkdocs-autorefs>=1.2.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tradingtoolbox"]
+
+[tool.maturin]
+profile = "release"
+python-source = "src"
+module-name = 'tradingtoolbox.rs'
+manifest-path = "rs/Cargo.toml"
+features = ["pyo3/extension-module"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+norecursedirs = ["docker"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+
+[tool.ruff.lint]
+# Enable Pyflakes and pycodestyle rules.
+select = ["E", "F"]
+# Never enforce `E501` (line length violations).
+ignore = ["E501"]
+# Never try to fix `F401` (unused imports).
+unfixable = ["F401", "F841"]
