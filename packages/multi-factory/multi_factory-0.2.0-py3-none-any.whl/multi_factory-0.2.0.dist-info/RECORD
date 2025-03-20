@@ -1,0 +1,12 @@
+multi_factory/__init__.py,sha256=fJ84EwMNTsHEWk0mLdPV6k6lZmcnhvKWrcrx75NPr_Y,380
+multi_factory/base.py,sha256=ayjSbUU3ZThtXxcuaXgVSEebJ-0pNJtrMSRvPGnp4h8,4136
+multi_factory/errors.py,sha256=shRJ2TYIqb7AT3GCEH9bI-BfgyWFVZm4RwPHnVgvlZo,580
+multi_factory/json_to_domain.py,sha256=UAxF9ieszJQFzyg-bBLzHlA-IyRnEK1FrHQKv1b6EqI,8023
+multi_factory/meta.py,sha256=78oCPY0jKPSf4svwK52YBtRlCgVok8Cbxyh2FrKK9OQ,4782
+multi_factory/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multi_factory/types.py,sha256=5olXsp-0DbAlXifLH15IwrVSHpCcObnLlUIqyn797hQ,347
+multi_factory/utils.py,sha256=nJKuyOi6GWU9hyV4d4Zpy0YmElizE1Bj4AII87YGmhk,860
+multi_factory-0.2.0.dist-info/LICENSE,sha256=SvQTGoPqTwbwbjmCvhE0UzgwTKIbEb2Xsb7orztkyWI,1069
+multi_factory-0.2.0.dist-info/METADATA,sha256=3NUawBPPntL2TS_Huzpk8Jkmdc_v2WzVAbcEF1rhgYg,5381
+multi_factory-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+multi_factory-0.2.0.dist-info/RECORD,,
