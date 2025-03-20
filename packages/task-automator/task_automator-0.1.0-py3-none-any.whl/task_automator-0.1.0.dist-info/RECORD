@@ -1,0 +1,10 @@
+task_automator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+task_automator/automator.py,sha256=UBsX4JOJMfQkmGY3AOFI8vKKbnh4U0ZNGCPVV3XMyeU,2205
+task_automator/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+task_automator/examples/automation_tree.py,sha256=bT81fdr3W-1HrR9nHMKsZKt6M8naO_HIUNMJv5yQnlk,1606
+task_automator/examples/automations.py,sha256=eBHMfGXUbCgzAeQmmHPxmv7vWazrAFtMHQ9rNv01Asw,1172
+task_automator/github_utils.py,sha256=f1YPA-qs7NAfJOoTYehB7Jjl3eF_uY4vud8cammX1JU,1907
+task_automator-0.1.0.dist-info/LICENSE,sha256=dnxSB1g5BTMzbwnB4UUeuO1PvTHuWZ-rXLIfdmZBafo,1527
+task_automator-0.1.0.dist-info/METADATA,sha256=AZIHJvJsy6dSiE5uFoVOTGfmVlIof_Xv1u8eKaVjEXk,3364
+task_automator-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+task_automator-0.1.0.dist-info/RECORD,,
