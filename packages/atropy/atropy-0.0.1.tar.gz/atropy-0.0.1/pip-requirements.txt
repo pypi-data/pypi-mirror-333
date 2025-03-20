@@ -1,0 +1,10 @@
+netCDF4
+networkx
+numba==0.60.0
+numpy==1.26.4
+matplotlib
+pygraphviz
+regex
+scipy
+xarray
+xarray-datatree
