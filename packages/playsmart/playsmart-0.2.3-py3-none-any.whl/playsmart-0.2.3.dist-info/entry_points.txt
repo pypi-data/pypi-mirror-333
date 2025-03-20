@@ -1,0 +1,2 @@
+[console_scripts]
+playsmart = playsmart:__main__.cli
