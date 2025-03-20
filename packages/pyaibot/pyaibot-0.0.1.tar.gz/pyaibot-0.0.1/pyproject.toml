@@ -1,0 +1,18 @@
+[project]
+name = "pyaibot"
+version = "0.0.1"
+description = "AI百宝箱"
+authors = [
+    { name = "jiaosenvip" },
+    { name = "jiaosenvip", email = "jiaosenvip@163.com" },
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = ["pywebview"]
+keywords = ["ai", "aibot", "gpt"]
+[project.urls]
+HomePage = "https://github.com/jiaosenvip/pyaibot"
+[project.scripts]
+aibot = "pyaibot:main"
+pyaibot = "pyaibot:main"

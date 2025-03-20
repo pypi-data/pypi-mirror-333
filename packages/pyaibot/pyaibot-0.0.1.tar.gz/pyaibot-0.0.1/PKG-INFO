@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: pyaibot
+Version: 0.0.1
+Summary: AI百宝箱
+Author: jiaosenvip
+Author-email: jiaosenvip <jiaosenvip@163.com>
+License: MIT
+Project-URL: HomePage, https://github.com/jiaosenvip/pyaibot
+Keywords: ai,aibot,gpt
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pywebview
+
+# AI 百宝箱
+
+## 简介
+
+pyaibot 是基于 webview 实现的 AI 百宝箱。
+
+## 运行
+
+```bash
+aibot
+```
