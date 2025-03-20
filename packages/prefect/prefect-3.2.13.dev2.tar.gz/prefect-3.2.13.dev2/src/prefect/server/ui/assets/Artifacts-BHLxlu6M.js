@@ -1,0 +1,2 @@
+import{d as o,j as c,c as r,o as n,k as a,l as e,p as t,aP as p,aQ as _}from"./index-Cixz26l0.js";import{u as f}from"./usePageTitle-BPkBun_K.js";const C=o({__name:"Artifacts",setup(l){return f("Artifacts"),(u,d)=>{const s=c("p-layout-default");return n(),r(s,{class:"artifacts"},{header:a(()=>[e(t(_))]),default:a(()=>[e(t(p))]),_:1})}}});export{C as default};
+//# sourceMappingURL=Artifacts-BHLxlu6M.js.map
