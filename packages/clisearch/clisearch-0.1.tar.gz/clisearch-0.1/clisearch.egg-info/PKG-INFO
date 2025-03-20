@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: clisearch
+Version: 0.1
+Requires-Dist: click
+Dynamic: requires-dist

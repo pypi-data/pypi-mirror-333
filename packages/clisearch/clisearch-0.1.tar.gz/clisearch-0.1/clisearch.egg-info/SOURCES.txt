@@ -1,0 +1,10 @@
+pyproject.toml
+setup.py
+clisearch.egg-info/PKG-INFO
+clisearch.egg-info/SOURCES.txt
+clisearch.egg-info/dependency_links.txt
+clisearch.egg-info/entry_points.txt
+clisearch.egg-info/requires.txt
+clisearch.egg-info/top_level.txt
+search/__init__.py
+search/main.py
