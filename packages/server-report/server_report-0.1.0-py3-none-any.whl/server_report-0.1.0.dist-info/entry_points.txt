@@ -1,0 +1,2 @@
+[console_scripts]
+health-report-run = health_package.manage:main
