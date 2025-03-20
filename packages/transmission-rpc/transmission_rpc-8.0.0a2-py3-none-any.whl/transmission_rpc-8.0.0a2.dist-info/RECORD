@@ -1,0 +1,14 @@
+transmission_rpc/__init__.py,sha256=4f4ilankjTAWYqQ2b2wUiGvdu8P3Hd_LuVDPgDlQZBg,2645
+transmission_rpc/_unix_socket.py,sha256=1kIgZjNfgWuTi7Y7jUqWMoQRQK8JsEC7lRK1EJjltFE,1769
+transmission_rpc/client.py,sha256=DduQ86_IL2p7daTmzCsjqfJ3968Lr0nej1EOmSRUanw,48534
+transmission_rpc/constants.py,sha256=9x_Orm5yN8SdztjBmzyVsfJ0xttZhpHfCaFTO_k4IYM,10708
+transmission_rpc/error.py,sha256=H3qq_PAZtGjKRiiRHPNepM8y598XwH5cC41tXHE2BPo,1833
+transmission_rpc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transmission_rpc/session.py,sha256=0Fhs-w6oPvMfUrke01v5eVSzeKlafZaeEcJLQdGPZHk,12496
+transmission_rpc/torrent.py,sha256=YJFephAuhnHUI_foeQWapW_9m4sWQ7NBT-LKIA2afnM,24723
+transmission_rpc/types.py,sha256=PqTYI9w5jggicQqxCBcGHaXijH2gr6nl89jmW1aXA3A,3349
+transmission_rpc/utils.py,sha256=tERq5b3Ec6ghF_Szqt1SRT7H82QdJiGN02C5gW5YIOw,320
+transmission_rpc-8.0.0a2.dist-info/licenses/LICENSE,sha256=IpIxCKgfRx3LLjVkn5_N-gTLCX6EJfwPlqyQwMWzi48,1127
+transmission_rpc-8.0.0a2.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+transmission_rpc-8.0.0a2.dist-info/METADATA,sha256=us5Nu14g78B6h-PeLix28yEOl0DawgM9F4g7Pm1kmaQ,4303
+transmission_rpc-8.0.0a2.dist-info/RECORD,,
