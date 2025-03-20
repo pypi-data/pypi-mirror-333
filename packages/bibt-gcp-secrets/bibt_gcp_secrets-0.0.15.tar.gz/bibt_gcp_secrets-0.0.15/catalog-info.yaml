@@ -1,0 +1,27 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bibt-gcp-secrets
+  title: bibt-gcp-secrets
+  description: "BITS Blue Team Utilities: GCP Secret Manager Module"
+  links:
+    - url: https://bibt-gcp-secrets.broadinstitute.org
+      title: bibt-gcp-secrets
+      icon: dashboard
+  tags:
+    - bits
+    - bits-tools
+    - security
+  annotations:
+    backstage.io/kubernetes-id: bibt-gcp-secrets
+    github.com/project-slug: broadinstitute/bibt-gcp-secrets
+    google.com/cloudbuild-project-slug: bits-gke-clusters
+    google.com/cloudbuild-repo-name: bibt-gcp-secrets
+    google.com/cloudbuild-location: us-east4
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: library
+  owner: bits-blue-team
+  lifecycle: production
+  system: bibt-libraries
