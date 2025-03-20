@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: ecotrade
+Version: 0.1.7
+Summary: An Ecotrade package to manage the software infrastructure
+Author: Zyber Pireci & Vishva Teja Janne
+Author-email: supporto@ecotrade.bio
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+Ecotrade PY
+
+rm -rf dist/
+python setup.py sdist bdist_wheel
+python -m twine upload -u __token__ -p pypi-AgEIcHlwaS5vcmcCJGFjMjZhNDA1LTg0OTEtNDQ5ZS1iODBjLWI2ODFkOTIwNjc4YwACKlszLCIwMTdmNzJhYi0yYmY0LTQ2MDktYjI0Yy02ZDVkYTBlZjNlM2YiXQAABiDuddemgIJc16zLLNMzyAiUowwHuIKXIAr4tG6y8Hgh2g dist/*
+
+
+python -m pip install --upgrade ecotrade
