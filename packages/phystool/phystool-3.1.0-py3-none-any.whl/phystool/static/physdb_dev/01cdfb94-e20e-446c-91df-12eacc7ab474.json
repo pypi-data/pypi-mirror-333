@@ -1,0 +1,23 @@
+{
+    "file_type": "figure",
+    "title": "Inclusion d'image, QCM (1)",
+    "tags": {
+        "topic": [
+            "Cinématique",
+            "Dynamique",
+            "Énergie"
+        ],
+        "cursus": [
+            "1MDF",
+            "1MOS",
+            "2MDF",
+            "2MOS"
+        ],
+        "difficulty": [
+            "P"
+        ]
+    },
+    "used_by": [
+        "9d1f2b06-fc3a-4eb4-8f7e-dadc8f0f0888"
+    ]
+}

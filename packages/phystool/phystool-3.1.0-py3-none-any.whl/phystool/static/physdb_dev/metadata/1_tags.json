@@ -1,0 +1,23 @@
+{
+    "topic": [
+        "Cinématique",
+        "Dynamique",
+        "Hydrostatique",
+        "MOH",
+        "Rotation",
+        "Statique",
+        "Énergie"
+    ],
+    "cursus": [
+        "1MDF",
+        "1MOS",
+        "2MDF",
+        "2MOS",
+        "3CSa",
+        "3MOS"
+    ],
+    "difficulty": [
+        "E",
+        "P"
+    ]
+}

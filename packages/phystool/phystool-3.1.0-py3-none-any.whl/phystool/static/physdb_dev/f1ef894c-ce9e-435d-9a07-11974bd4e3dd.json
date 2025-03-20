@@ -1,0 +1,20 @@
+{
+    "file_type": "qcm",
+    "title": "Question à choix multiple avec insertion ...",
+    "tags": {
+        "topic": [
+            "Cinématique",
+            "Dynamique",
+            "Énergie"
+        ],
+        "cursus": [
+            "1MOS",
+            "2MDF",
+            "2MOS"
+        ],
+        "difficulty": [
+            "P"
+        ]
+    },
+    "figures": []
+}
