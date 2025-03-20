@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: xencode
+Version: 0.1.0
+Summary: XEncode: Un fork de JavaScript junto a Python
+Home-page: https://github.com/tuusuario/xencode
+Author: Tu Nombre
+Author-email: tu.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# XEncode
+
+XEncode es un lenguaje de programación inspirado en JavaScript y Python. Permite ejecutar archivos `.xcc` de manera sencilla.
+
+## Instalación
+
+Puedes instalarlo con pip:
+
+```bash
+pip install xencode
