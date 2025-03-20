@@ -1,0 +1,15 @@
+pyyaml
+numpy<2.0.0,>=1.16
+pillow
+matplotlib
+tqdm
+scipy
+loguru
+prettytable
+requests
+
+[extra]
+torch
+torchvision
+kornia
+opencv-python
