@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: byted-overpass-flow-fpa-news-event-rank-service
+Version: 0.0.1
+Summary: A simple package named byted_overpass_flow_fpa_news_event_rank_service
+Home-page: https://github.com/artifact/byted_overpass_flow_fpa_news_event_rank_service.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
