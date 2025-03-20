@@ -1,0 +1,99 @@
+from typing import Callable, Sequence
+from gps_pip import PipInstant, PipDuration
+from enum import Enum
+import numpy as np
+
+def init(Callable[Response]) -> DTT: ...
+
+def default_fft_params() -> TestParams: ...
+
+class PipDuration(PipDuration): ...
+
+class PipInstant(PipInstant): ...
+
+class ViewSet:
+    @staticmethod
+    def from_channels(channels: Sequence[Channel]) -> ViewSet
+    @staticmethod
+    def from_channel_names(channel_names: Sequence[str]) -> ViewSet
+
+class Channel:
+    def __init__(self, channel_name: String, data_type: NDSDataType, rate_hz: float):
+        self.channel_name: str = ...
+        self.rate_hz: float = ...
+        self.data_type: NDSDataType = ...
+    @property
+    def channel_name(self) -> str: ...
+    @property
+    del data_type(self) -> NDSDataType: ...
+    @property
+    del rate_hz(self) -> float: ...
+
+class NDSDataType(Enum):
+        Int16 = 1
+        Int32 = 2
+        Int64 = 3
+        Float32 = 4
+        Float64 = 5
+        Complex64 = 6
+        UInt32 = 7
+        Complex128 = 8
+        UInt64 = 9
+        UInt16 = 10
+        Int8 = 11
+        UInt8 = 12
+
+class ResponseToUser:
+    class AllMessages(Tuple[Dict[str, str]]): ...
+    class ScopeViewResult:
+        def __init__(self):
+            self.id: int = ...
+            self.result: AnalysisResult = ...
+
+
+class AnalysisResult:
+    class TimeHistoryReal:
+        def __init__(self):
+            self.channel: Channel = ...
+            self.value: TimeDomainArray = ...
+
+class TimeDomainArray:
+    def __init__(self):
+        self.start_gps_pip: PipInstant = ...
+        self.rate_hz: float = ...
+        self.accumulation_stats: AccumulationStats = ...
+        self.data: np.array = ...
+
+class NDS2Cache:
+    def __init__(self, data_flow: DataFlow, size_bytes: int, default_file_path: str): ...
+    def as_ref(self) -> DataSourceRef: ...
+
+
+class DataSourceRef:
+    def now(self) -> PipInstant
+
+
+class DataFlow(Enum):
+    Unordered = 1
+    Ordered = 2
+
+class DTT:
+    def set_data_source(self, data_source: DataSourceRef) -> None: ...
+
+    def set_test_params(self, params: TestParams) -> None: ...
+
+    def run_test(self) -> None: ...
+
+    def no_op(self) -> None: ...
+
+    def new_fixed_scope_view(self, id: int, start_pip: PipInstant, end_pip: PipInstant,
+                                view_set: ViewSet) -> None: ....
+
+    def new_online_scope_view(self, id: int, span_pip: PipDuration,
+                                 view_set: ViewSet) -> None: ...
+
+    def set_fixed_scope_view(self, id: int, start_pip: PipInstant, end_pip: PipInstant) -> None: ...
+
+    def set_online_scope_view(self, id: int, span_pip: PipDuration) -> None: ...
+
+    def close_scope_view(self, id: int) -> None: ...

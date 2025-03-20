@@ -1,0 +1,15 @@
+dttlib-0.1.0.dist-info/METADATA,sha256=Z6V_BQTN8OCtbAKBFwVjAX1NOs3joW54F2WJYamIsvg,548
+dttlib-0.1.0.dist-info/WHEEL,sha256=onp8xfiJDlByry6P15Xq91zUzMWpmesd2MXzbMLwu0A,106
+dttlib.libs/libcds-36e63e5e.so.0.1.0,sha256=ea4Q9HzJG19JaQ8IZeGcWdqNfac29oVzyAtjNdR00gM,72089
+dttlib.libs/libfftw3-a6418943.so.3,sha256=9AMDFwxUWy4MOQOSaaVEARiyClKi4rQvDjxepGGXBzo,2249569
+dttlib.libs/libfftw3f-e7fe66ab.so.3,sha256=uMYudNWgSlxP24s6Ma8uMr1qgLuz1UPLHzeMLjuLdzg,2348833
+dttlib.libs/libgds-sigp-26f99c01.so,sha256=V-EtG6k5Yq8igiILzv6AkDjx_8Lk_mIUsRXg4tx4XgM,2713673
+dttlib.libs/libndsclient-e6683dda.so.1,sha256=qgMIqEm2kMWfMcgkN3QyacVVumGLl7DTRbZKYyBiKhU,89417
+dttlib.libs/libndscxx-a49bc7fc.so.1,sha256=7RndaFnsJZWGbmnslKL5SDdlR4SdCzHi9fAoj4P7N7M,490145
+dttlib.libs/libpcre2-8-19c62625.so.0,sha256=EE6i8Zy0NEjNUlYajR-Nk1ywRzHkvt-HtoJKeFWTgJo,633809
+dttlib.libs/libsasl2-0e214d8c.so.2,sha256=u__ZdQ5oPsj0o0At5HqBZR0cgTpsFj8BGIE4uhsCNCA,117305
+dttlib/__init__.py,sha256=L7UhbeXBFuGgQPcm9TzTfdaOkGqKm-WPMQ5JEECDghE,107
+dttlib/__init__.pyi,sha256=trCgXBFiFUANauKfLIA5tIPERqxcc-CjFmwYQpWwHJc,2696
+dttlib/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dttlib/dttlib.abi3.so,sha256=MI6_ROvWY8hSHIuDccKvM_Sw6Zw-cwmYiqs8W4iHX8A,14232913
+dttlib-0.1.0.dist-info/RECORD,,
