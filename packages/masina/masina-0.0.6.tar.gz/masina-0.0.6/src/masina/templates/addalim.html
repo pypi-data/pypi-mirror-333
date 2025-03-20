@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>Add to {{table_name}}</head>
+<br>
+<form method="post" action="/addalim" enctype="multipart/form-data">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <label>Date</label>
+            </div>
+            <div class="col">
+                <input type="datetime-local" name="data" required/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label>Type</label>
+            </div>
+            <div class="col">
+                <select id="cars" name="type">
+                        {% for tt in types_of_costs %}
+                            <option value={{tt}}>{{tt}}</option>
+                        {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Brutto[€]</label>
+            </div>
+            <div class="col">
+                <input type="number" name="brutto" step="any" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Qty.[L/KwH]</label>
+            </div>
+            <div class="col">
+                <input type="number" name="amount" step="any" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Refuel</label>
+            </div>
+            <div class="col">
+                <input type="text" name="refuel"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Other</label>
+            </div>
+            <div class="col">
+                <input type="text" name="other"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Recharges</label>
+            </div>
+            <div class="col">
+                <input type="text" name="recharges"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Km stand</label>
+            </div>
+            <div class="col">
+                <input type="number" name="km"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Comment</label>
+            </div>
+            <div class="col">
+                <select id="aa" name="Comment">
+                        {% for tt in electric_providers %}
+                            <option value={{tt}}>{{tt}}</option>
+                        {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>File</label>
+            </div>
+            <div class="col">
+                <input type="file" name="rfile">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="submit" name="add_alim"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+<br>
+<li><a href="/importtable">import table</a></li>
+<br>
+
+{% endblock %}
