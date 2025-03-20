@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+asciititle.egg-info/PKG-INFO
+asciititle.egg-info/SOURCES.txt
+asciititle.egg-info/dependency_links.txt
+asciititle.egg-info/top_level.txt
+my_ascii_lib/__init__.py
+my_ascii_lib/ascii.py
+my_ascii_lib/font_loader.py
+my_ascii_lib/fonts/blurvision.json
