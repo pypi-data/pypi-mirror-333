@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: gochocolatego
+Version: 1.4.post1
+Summary: A project manager CLI tool.
+Author: Chocolateisfr
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+
+# CHOCOLATE INSTALLTION METHOD SWITCHED TO MAKEFILE, CHECKOUT THE GITHUB PYPI Won't get updates anymore.
+[github](https://github.com/frchocolate/chocolate)
