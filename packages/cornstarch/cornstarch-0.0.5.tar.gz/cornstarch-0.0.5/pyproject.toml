@@ -1,0 +1,98 @@
+[project]
+name = "cornstarch"
+description = "A multimodal model training toolkit"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+requires-python = ">=3.10"
+version = "0.0.5"
+authors = [
+    {name = "Insu Jang", email = "insujang@umich.edu"}
+]
+maintainers = [
+    {name = "Insu Jang", email = "insujang@umich.edu"}
+]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "torch>=2.5.0",
+    "triton<=3.1.0",
+    "transformers>=4.49.0", # packages below this line are for colossalai
+    "loguru",
+    "simple_parsing",
+    "datasets",
+    "tyro",
+    "flash-attn",
+    "numpy",
+    "tqdm",
+    "psutil",
+    "packaging",
+    "pre-commit",
+    "rich",
+    "click",
+    "fabric",
+    "contexttimer",
+    "ninja",
+    "safetensors",
+    "einops",
+    "pydantic",
+    "ray",
+    "sentencepiece",
+    "google",
+    "protobuf",
+    "peft",
+    "bitsandbytes>=0.39.0",
+    "rpyc==6.0.0",
+    "fastapi",
+    "uvicorn==0.29.0",
+    "galore_torch",
+    "diffusers==0.29.0",
+    "timm",
+]
+
+[project.urls]
+Homepages = "https://cornstarch-org.github.io"
+Issues = "https://github.com/cornstarch-org/Cornstarch/issues"
+
+
+[project.optional-dependencies]
+dev = [
+    "torch>=2.3.0",
+    "ruff",
+    "black>=23.0",
+    "isort>=5.12",
+    "pytest<=8.1",
+    "pytest-mock",
+    "expecttest",
+    "accelerate",
+]
+
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings",
+]
+
+colossalai = [
+    "colossalai==0.4.6",
+]
+
+[tool.ruff]
+# Never enforce `E501` (line length violations).
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+env = [
+    "TORCHDYNAMO_DISABLE=1",
+]
+
+[build-system]
+requires = ["setuptools>=63.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cornstarch*"]
+exclude = ["examples", "tests"]
