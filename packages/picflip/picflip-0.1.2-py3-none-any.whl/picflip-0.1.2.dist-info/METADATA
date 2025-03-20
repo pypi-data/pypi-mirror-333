@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: picflip
+Version: 0.1.2
+Summary: Picflip - fix your images by removing backgrounds and converting to PNG!
+Home-page: https://github.com/divpreeet/picflip
+Author: Divpreet Singh
+Author-email: divpreetsingh68@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rembg
+Requires-Dist: Pillow
+Requires-Dist: cairosvg
+Requires-Dist: onnxruntime
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+picflip is a terminal application that does everything you would want to do with a image, remove their bg's and convert them to png!
+
+remove backgrounds or convert JPG, WEBP, and even SVG images to PNG's with just a couple of commands!
+
+Usage:
+  picflip remove <input_image> <output_image>
+  picflip convert <input_image> <output_image>
+  picflip usage
