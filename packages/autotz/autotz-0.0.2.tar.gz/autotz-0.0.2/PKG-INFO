@@ -1,0 +1,91 @@
+Metadata-Version: 2.2
+Name: autotz
+Version: 0.0.2
+Summary: A simple tool to update the system timezone based on IP geolocation
+Home-page: https://github.com/thorphar/autotz
+Author: Harry Thorpe
+Author-email: info@harrythorpe.co.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# autotz
+
+A simple CLI tool to automatically update the system timezone based on IP geolocation.
+
+## Installation
+
+You can install `autotz` using pip:
+
+```sh
+pip install autotz# autotz
+
+A simple CLI tool to automatically update the system timezone based on IP geolocation.
+
+## Installation
+
+You can install `autotz` using pip:
+
+```sh
+pip install autotz
+```
+
+## Usage
+
+Simply run the following command:
+
+```sh
+autotz
+```
+
+It will detect your timezone based on IP and update it automatically.
+
+### Running with sudo
+
+Since modifying the system timezone requires elevated privileges, you may need to run:
+
+```sh
+sudo autotz
+```
+
+## License
+
+MIT License
+
+
+```
+
+## Usage
+
+Simply run the following command:
+
+```sh
+autotz
+```
+
+It will detect your timezone based on IP and update it automatically.
+
+### Running with sudo
+
+Since modifying the system timezone requires elevated privileges, you may need to run:
+
+```sh
+sudo autotz
+```
+
+## License
+
+MIT License
+
