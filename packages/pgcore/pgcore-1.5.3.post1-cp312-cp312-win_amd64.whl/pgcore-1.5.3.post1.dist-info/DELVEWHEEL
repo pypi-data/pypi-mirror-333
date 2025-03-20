@@ -1,0 +1,2 @@
+Version: 1.9.0
+Arguments: ['C:\\Users\\Carsten\\src\\gimli\\venv-build-py312\\Scripts\\delvewheel', 'repair', 'C:/Users/carsten/src/gimli/build-py312/wheelhouse/pgcore-1.5.3.post1-cp312-cp312-win_amd64.whl', '--add-path', 'C:/Users/carsten/src/gimli/build-py312/bin/']
