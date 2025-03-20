@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: dttlib
+Version: 0.1.3
+Summary: A frequency domain analysis tool for LIGO data
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# DTT
+A frequency-domain analysis tool for LIGO data.
+
+# C library dependencies
+This library depends on libgds-sigp for some math functions 
+and libcds for some time functions.
+
+# Building as python module.
+
+From the command line, build with 
+
+```aiignore
+maturin develop
+```
+
+
