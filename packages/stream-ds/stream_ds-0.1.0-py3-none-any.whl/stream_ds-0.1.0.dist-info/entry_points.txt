@@ -1,0 +1,2 @@
+[console_scripts]
+lds = sds.cli:main
