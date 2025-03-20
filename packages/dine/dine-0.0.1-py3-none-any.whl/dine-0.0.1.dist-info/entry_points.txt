@@ -1,0 +1,2 @@
+[console_scripts]
+dine = dine.cli:app
