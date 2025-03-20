@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: experimenter
+Version: 0.3
+Summary: Lightweight experiment base class, to organize machine learning research projects.
+Project-URL: Homepage, https://github.com/facundoq/experimenter
+Project-URL: Documentation, https://github.com/facundoq/experimenter
+Project-URL: Repository, https://github.com/facundoq/experimenter
+Project-URL: Issues, https://github.com/facundoq/experimenter/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: texttable
+Requires-Dist: argcomplete
+
+# experimenter
+Lightweight experiment base class, to organize machine learning research projects.
