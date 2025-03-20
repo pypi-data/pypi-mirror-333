@@ -1,0 +1,6 @@
+setup.py
+byted_py_spy/__init__.py
+byted_py_spy.egg-info/PKG-INFO
+byted_py_spy.egg-info/SOURCES.txt
+byted_py_spy.egg-info/dependency_links.txt
+byted_py_spy.egg-info/top_level.txt
