@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "python-builder"
+version = "0.4.2"
+description = "Implementation of generic python builder"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.1.0",
+    "pydantic>=2.10.6",
+    "pytest>=8.3.3",
+    "ruff>=0.9.9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[options]
+packages = "python_builder"
+include_package_data = true
+
+[options.package_data]
+python_builder = "py.typed"
