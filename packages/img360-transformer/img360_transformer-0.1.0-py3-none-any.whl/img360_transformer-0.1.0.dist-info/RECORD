@@ -1,0 +1,8 @@
+img360_transformer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+img360_transformer/batch_process.py,sha256=D1HWu5CnrD0Qdg172UDXSl00pY0B9eZhqmbla1wS50c,1227
+img360_transformer/gui.py,sha256=8zSpYLNSOquf3g1koyJ4mBwI3xuF05iu8j_x4kXIcpA,2120
+img360_transformer/utils.py,sha256=O6XqhaEhpLmp8TFj95jogexol5CKkmc1hpRs2pyg3gc,1549
+img360_transformer-0.1.0.dist-info/LICENSE,sha256=L0KZHisu0iJOJwAyyXfNtqVH-pFmQmIYeLUB5h9Spfc,11540
+img360_transformer-0.1.0.dist-info/METADATA,sha256=42r9W0--avO6UhwDsRP5YODKkOau9F8vJavfsLsPc0U,15882
+img360_transformer-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+img360_transformer-0.1.0.dist-info/RECORD,,
