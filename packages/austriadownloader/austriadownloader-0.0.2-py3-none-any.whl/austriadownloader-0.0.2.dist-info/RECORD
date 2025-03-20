@@ -1,0 +1,13 @@
+austriadownloader/__init__.py,sha256=P1zAu36UxIQg5mRK14Dw1uXn1-Ys535SuvRC8dEW2j4,186
+austriadownloader/austria_data/__init__.py,sha256=M0NZuQ7-112l8K2h1eayVvSmvQrufrOcD5AYKgIf_Is,1
+austriadownloader/austria_data/matched_metadata.gpkg,sha256=HF-uouluxxClENzDS3yk1eRvb4-2L-ulI_7EY5ttZuA,249856
+austriadownloader/austria_data/metadata_creation.py,sha256=dfegwHLrayXxIPy2yvTHZjpCBVLoha2Pstin3YySUUg,8125
+austriadownloader/configmanager.py,sha256=BWVPxZzzbFrw8b3jac6blnzSRpndbDu203FnbxKt8I8,5618
+austriadownloader/data.py,sha256=_RTstyWNxsHUjowgo6ekppZ2ZUoRBk4iAUSdHwzmnIM,3297
+austriadownloader/download.py,sha256=3NMLUBsVA4i9h3DvkWHGLkT-Go20L-LGWGqry0klq58,20546
+austriadownloader/downloadmanager.py,sha256=nTFFsTUSHEvYQ1g3Sab7PSjG8RuVok2lQ5ZqovF2dkg,4375
+austriadownloader/downloadstate.py,sha256=uq5syOtfIdPcesINQ3Uw1nhzTBfFbTKOE2flg1pf1OU,2300
+austriadownloader-0.0.2.dist-info/LICENSE,sha256=bpBgo5-S_ZaIR44u5i7-Ba6Th2-pQdyHFl1cE87UMhw,1065
+austriadownloader-0.0.2.dist-info/METADATA,sha256=vukEIY0PM2WcAhqlzT1jb4ZOtS7RF9RvMFdAtIBPbLQ,6949
+austriadownloader-0.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+austriadownloader-0.0.2.dist-info/RECORD,,
