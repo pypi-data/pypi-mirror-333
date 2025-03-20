@@ -1,0 +1,13 @@
+dynamodbfaker/__init__.py,sha256=xN7byJb7DSRrFJIiDu0zEkKUoJJ-JM3xNAdiyv0SlZ4,73
+dynamodbfaker/aws.py,sha256=7OZTjaHvrqHa2RAJaZFmhiHZIwZ_0Pit7mBEw4u162E,275
+dynamodbfaker/cli.py,sha256=O-Guo4k2sEIyA_ZVn4B3-Zcr64Qe4uxvYcB3X7WO4HY,1397
+dynamodbfaker/config.py,sha256=5nAZWg1hIJyTAEBnixH35zaX3ebsyHm-HtBJI-3YNsg,4130
+dynamodbfaker/dynamodb.py,sha256=t0dgmrKH2yn8M0tu9AAA2FqT_R6z6WvyTqB5y4ReK-4,577
+dynamodbfaker/dynamodbfaker.py,sha256=RqKFRDtUwstb0y3dUkKNcWjIusDq6i1-UdnMIk-DLbY,6977
+dynamodbfaker/util.py,sha256=s6lz1xKuXsn0HcCWIIaI29etfEf-bssrHIS6OKznQro,4124
+dynamodbfaker-1.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dynamodbfaker-1.1.0.dist-info/METADATA,sha256=UaqycWFYCctd4Eg9EyxFrk8k9yJgOPVKk7kETaBK4ZM,9376
+dynamodbfaker-1.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+dynamodbfaker-1.1.0.dist-info/entry_points.txt,sha256=MO_oJmDTnJoyxqyZQZRYRKs3pa6Ph1uRU39oeyVgS3Q,57
+dynamodbfaker-1.1.0.dist-info/top_level.txt,sha256=kumN774IO79SRBtfZTL2Y-oL9d5CupjVNNgC0jbgLRQ,14
+dynamodbfaker-1.1.0.dist-info/RECORD,,
