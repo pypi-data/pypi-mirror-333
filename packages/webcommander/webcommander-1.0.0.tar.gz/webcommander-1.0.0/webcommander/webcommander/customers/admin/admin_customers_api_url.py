@@ -1,0 +1,11 @@
+class AdminCustomersApiUrl:
+    ADMIN_CUSTOMERS = '/api/v4/admin/customers'
+    CREATE_CUSTOMER_FIELDS = '/api/v4/create-customer-fields'
+    CUSTOMER_RESET_PASSWORD = '/api/v4/admin/customers/{id}/reset-password'
+    CUSTOMER_CHANGE_PASSWORD = '/api/v4/admin/customers/{id}/change-password'
+    CUSTOMER_ADDRESSES = '/api/v4/admin/customers/{id}/addresses'
+    CUSTOMER_DETAILS = '/api/v4/admin/customers/{id}'
+    CUSTOMER_RESET_PASSWORD = '/api/v4/admin/customers/{id}/reset-password'
+    CUSTOMER_CHANGE_PASSWORD = '/api/v4/admin/customers/{id}/change-password'
+    CUSTOMER_ADDRESSES = '/api/v4/admin/customers/{id}/addresses'
+    CUSTOMER_DETAILS = '/api/v4/admin/customers/{id}'

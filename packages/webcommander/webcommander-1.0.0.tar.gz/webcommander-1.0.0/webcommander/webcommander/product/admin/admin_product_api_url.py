@@ -1,0 +1,10 @@
+class AdminProductApiUrl:
+    PRODUCT = "/api/v4/admin/products"
+    PRODUCT_INFO = "/api/v4/admin/products/{product_id}"
+    PRODUCT_COUNT = "/api/v4/admin/products/count"
+    PRODUCT_VARIATION = "/api/v4/admin/products/{product_id}/variations"
+    PRODUCT_DELETE = "/api/v4/admin/products/{product_id}"
+    PRODUCT_INVENTORIES = "/api/v4/admin/products/{product_id}/inventories"
+    PRODUCT_IMAGES = "/api/v4/admin/products/{product_id}/image"
+    PRODUCT_IMAGE_DELETE = "/api/v4/admin/products/{product_id}/images/{image_id}"
+    PRODUCT_ADD_REVIEWS = "/api/v4/admin/products/{product_id}/reviews"
