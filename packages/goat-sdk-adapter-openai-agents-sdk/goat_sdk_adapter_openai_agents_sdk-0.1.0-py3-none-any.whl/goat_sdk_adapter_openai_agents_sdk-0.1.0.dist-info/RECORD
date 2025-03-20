@@ -1,0 +1,5 @@
+goat_adapters/openai_agents_sdk/__init__.py,sha256=mVaALQ2wR6kXL2_W6NevvCZxDSfCSQ2k54W0Mnc9Foo,80
+goat_adapters/openai_agents_sdk/adapter.py,sha256=F2644ccfEbx6XFwq5IIC3Ka4f4a0CmbK9sr1QSgecF0,1305
+goat_sdk_adapter_openai_agents_sdk-0.1.0.dist-info/METADATA,sha256=JpcmkqCO6_mhmPyJtXtyqM_cP8G5c_Q-qbTZdCKvOCo,770
+goat_sdk_adapter_openai_agents_sdk-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+goat_sdk_adapter_openai_agents_sdk-0.1.0.dist-info/RECORD,,
