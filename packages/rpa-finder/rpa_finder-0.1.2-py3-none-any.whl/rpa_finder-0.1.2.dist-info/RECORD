@@ -1,0 +1,12 @@
+rpa_finder/ReactionSystem.py,sha256=oKDAFYXXCu48M-9oaybXAgXgZ7xPwU4KN_C2c-BaJpM,37300
+rpa_finder/__init__.py,sha256=r_cKr7sbAG8wXvZQ-5WkC2eXGKMDWp6Xe_hNXu43MT0,21
+rpa_finder/linalg.py,sha256=yX_n0CoX2IrzPNp5Vms12KaYGSAkeMD96QXlIZ6KYBc,2585
+rpa_finder/reaction_system.py,sha256=YM0pUqS_oem_vI2w0EpdaTXjd7xUqsYas94yOWA7oRw,41548
+rpa_finder/sandbox.py,sha256=h_dRR0A0cgPtuHvsnBpL1bpK7vKW9x_nGhItDDQcgxQ,3692
+rpa_finder/utils.py,sha256=BZScF9bvmUIUenMVr85pKOhehoCvapcdDTCmtFSdxRM,1510
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_reactionsystem.py,sha256=SSzQc-_gnnH8wjZuyJUDUDPLcTF3V9P-jkDBCzwv86w,12286
+rpa_finder-0.1.2.dist-info/METADATA,sha256=f2s2dtK2X6Jx8eYDDHyl_3dOJfceIWFhP26Gn7pWOMw,5257
+rpa_finder-0.1.2.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+rpa_finder-0.1.2.dist-info/top_level.txt,sha256=Vf5BqwEb8PcDFr8fVKEhxvVj-hYSu4DmqSKrqbIAGO0,17
+rpa_finder-0.1.2.dist-info/RECORD,,
