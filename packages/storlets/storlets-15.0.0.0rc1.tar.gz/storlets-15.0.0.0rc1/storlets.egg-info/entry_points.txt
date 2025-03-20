@@ -1,0 +1,9 @@
+[console_scripts]
+sbus = storlets.sbus.cli:main
+
+[paste.filter_factory]
+storlet_handler = storlets.swift_middleware.storlet_handler:filter_factory
+
+[storlets.gateways]
+docker = storlets.gateway.gateways.docker:DockerStorletGateway
+stub = storlets.gateway.gateways.stub:StubStorletGateway

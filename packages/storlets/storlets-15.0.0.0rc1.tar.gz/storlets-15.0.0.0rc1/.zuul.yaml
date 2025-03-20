@@ -1,0 +1,48 @@
+- project:
+    templates:
+      - openstack-python3-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+    check:
+      jobs:
+        - storlets-functional
+        - storlets-functional-jammy
+        - storlets-functional-centos-9-stream
+    gate:
+      jobs:
+        - storlets-functional
+        - storlets-functional-jammy
+
+
+# TODO(gmann): As per the 2025.1 testing runtime, we need to run at least
+# one job on jammy. This job can be removed in the next cycle (2025.1).
+- job:
+    name: storlets-functional-jammy
+    description: This job testing on Ubuntu jammy(22.04)
+    parent: storlets-functional
+    nodeset: ubuntu-jammy
+
+- job:
+    name: storlets-functional
+    pre-run: playbooks/storlets-functional/pre.yaml
+    run: playbooks/storlets-functional/run.yaml
+    post-run: playbooks/storlets-functional/post.yaml
+    nodeset: ubuntu-noble
+    timeout: 2400
+    irrelevant-files:
+      - ^api-ref/.*$
+      - ^doc/.*$
+      - ^releasenotes/.*$
+      - ^.gitignore$
+      - ^.gitreview$
+      - ^.mailmap$
+      - ^AUTHORS$
+      - ^CHANGELOG$
+      - ^README.rst$
+      - ^tests/unit/.*$
+
+- job:
+    name: storlets-functional-centos-9-stream
+    parent: storlets-functional
+    nodeset: centos-9-stream
+    voting: false
