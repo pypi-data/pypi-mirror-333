@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ezyapi
+Version: 0.0.5
+Summary: API 생성 및 프로젝트 관리를 위한 프레임워크
+Home-page: https://github.com/3x-haust/Python_Ezy_API
+Author: 3xhaust, nck90
+Author-email: s2424@e-mirim.hs.kr, s2460@e-mirim.hs.kr
+Keywords: 3xhaust,nck90,python api,ezy api,backend,cli
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+This is the English version of the README.  
+[한국어 버전은 여기를 클릭하세요.](./README-ko.md)
