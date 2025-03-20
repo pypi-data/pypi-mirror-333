@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+bonkprice/__init__.py
+bonkprice.egg-info/PKG-INFO
+bonkprice.egg-info/SOURCES.txt
+bonkprice.egg-info/dependency_links.txt
+bonkprice.egg-info/requires.txt
+bonkprice.egg-info/top_level.txt

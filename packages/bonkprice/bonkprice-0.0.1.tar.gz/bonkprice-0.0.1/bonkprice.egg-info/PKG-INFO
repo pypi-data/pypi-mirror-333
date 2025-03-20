@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: bonkprice
+Version: 0.0.1
+Summary: A Bonk Blockchain python lib for market data and price view and more ...
+Author-email: RibbitX <mail@ribbitx.com>
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# bonkprice
+
+A Python package created with PyPi Builder.

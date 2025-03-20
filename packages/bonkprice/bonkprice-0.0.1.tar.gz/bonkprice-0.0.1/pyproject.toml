@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bonkprice"
+version = "0.0.1"
+description = "A Bonk Blockchain python lib for market data and price view and more ..."
+authors = [{ name = "RibbitX", email = "mail@ribbitx.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+dependencies = ["requests"]
