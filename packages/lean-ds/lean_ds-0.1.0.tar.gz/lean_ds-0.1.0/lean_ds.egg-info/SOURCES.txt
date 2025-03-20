@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+lds/__init__.py
+lds/cli.py
+lds/core.py
+lean_ds.egg-info/PKG-INFO
+lean_ds.egg-info/SOURCES.txt
+lean_ds.egg-info/dependency_links.txt
+lean_ds.egg-info/entry_points.txt
+lean_ds.egg-info/top_level.txt
