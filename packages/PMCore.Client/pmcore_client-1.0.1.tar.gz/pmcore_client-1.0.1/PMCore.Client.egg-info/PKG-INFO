@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: PMCore.Client
+Version: 1.0.1
+Summary: PMCore Client 文档
+Home-page: https://github.com/wz101010/pm-sdk-python
+Author: zhen
+Author-email: norepley@paomo.fun
+Keywords: PMCore.Client
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<3.0.0,>=1.25.3
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
