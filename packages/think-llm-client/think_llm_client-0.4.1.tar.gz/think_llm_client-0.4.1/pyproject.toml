@@ -1,0 +1,69 @@
+[project]
+name = "think-llm-client"
+version = "0.4.1"
+description = "A flexible SDK for LLM and VLM model interactions with CLI support"
+authors = [
+    { name = "ThinkThinking", email = "yezhenjie@outlook.de" }
+]
+dependencies = [
+    "openai>=1.65.4",
+    "rich>=13.0.0",  # CLI interface
+    "python-dotenv>=0.19.0",  # Environment variables
+    "anthropic>=0.49.0",  # Anthropic API
+    "httpx[socks]",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["llm", "ai", "cli", "openai", "gpt", "vision"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+select = ["E", "F", "B", "I"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[project.urls]
+Homepage = "https://github.com/thinkthinking/think-llm-client"
+Documentation = "https://github.com/thinkthinking/think-llm-client#readme"
+Repository = "https://github.com/thinkthinking/think-llm-client.git"
+Issues = "https://github.com/thinkthinking/think-llm-client/issues"
+
+[tool.hatch.metadata]
+allow-direct-references = true

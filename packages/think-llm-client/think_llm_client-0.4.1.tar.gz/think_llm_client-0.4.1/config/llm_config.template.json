@@ -1,0 +1,125 @@
+{
+  "llm": {
+    "providers": {
+      "deepseek": {
+        "api_key": "<DEEPSEEK_API_KEY>",
+        "api_url": "https://api.deepseek.com",
+        "model": {
+          "deepseek-chat": {
+            "max_completion_tokens": 8192,
+            "temperature": 0.6
+          }
+        }
+      },
+      "anthropic": {
+        "api_key": "<ANTHROPIC_API_KEY>",
+        "api_url": "https://api.anthropic.com/v1/",
+        "model": {
+          "claude-3-7-sonnet-20250219": {
+            "max_completion_tokens": 4096,
+            "temperature": 0.7
+          },
+          "claude-3-5-sonnet-latest": {
+            "max_completion_tokens": 4096,
+            "temperature": 0.7
+          },
+          "claude-3-opus-20240229": {
+            "max_completion_tokens": 4096,
+            "temperature": 0.7
+          }
+        }
+      },
+      "openai": {
+        "api_key": "<OPENAI_API_KEY>",
+        "api_url": "https://api.openai.com/v1",
+        "model": {
+          "gpt-4": {
+            "max_completion_tokens": 8192
+          },
+          "gpt-3.5-turbo": {
+            "max_completion_tokens": 4096
+          }
+        }
+      },
+      "siliconflow": {
+        "api_key": "<SILICONFLOW_API_KEY>",
+        "api_url": "https://api.siliconflow.cn/v1/",
+        "model": {
+          "Pro/deepseek-ai/DeepSeek-V3": {
+            "max_completion_tokens": 4096
+          }
+        }
+      }
+    }
+  },
+  "vlm": {
+    "providers": {
+      "openai": {
+        "api_key": "<OPENAI_API_KEY>",
+        "api_url": "https://api.openai.com/v1",
+        "model": {
+          "gpt-4-vision": {
+            "max_completion_tokens": 4096
+          }
+        }
+      },
+      "qwen": {
+        "api_key": "<QWEN_API_KEY>",
+        "api_url": "https://dashscope.aliyuncs.com/api/v1",
+        "model": {
+          "qwen-vl-plus": {
+            "max_completion_tokens": 2048
+          }
+        }
+      }
+    }
+  },
+  "reasoning": {
+    "providers": {
+      "deepseek": {
+        "api_key": "<DEEPSEEK_API_KEY>",
+        "api_url": "https://api.deepseek.com",
+        "model": {
+          "deepseek-reasoner": {
+            "max_completion_tokens": 8192,
+            "temperature": 0.6  // 可选参数，不设置则使用 OpenAI 的默认值
+          }
+        }
+      },
+      "siliconflow": {
+        "api_key": "<SILICONFLOW_API_KEY>",
+        "api_url": "https://api.siliconflow.cn/v1/",
+        "model": {
+          "deepseek-ai/DeepSeek-R1": {
+            "max_completion_tokens": 8192,
+            "temperature": 0.6  // 可选参数，不设置则使用 OpenAI 的默认值
+          },
+          "Pro/deepseek-ai/DeepSeek-R1": {
+            "max_completion_tokens": 8192,
+            "temperature": 0.6  // 可选参数，不设置则使用 OpenAI 的默认值
+          }
+        }
+      },
+      "openrouter": {
+        "api_key": "<OPENROUTER_API_KEY>",
+        "api_url": "https://openrouter.ai/api/v1",
+        "model": {
+          "deepseek/deepseek-r1": {
+            "max_completion_tokens": 8192,
+            "temperature": 0.6  // 可选参数，不设置则使用 OpenAI 的默认值
+          }
+        }
+      },
+      "volces": {
+        "api_key": "<VOLCES_API_KEY>",
+        "api_url": "https://ark.cn-beijing.volces.com/api/v3",
+        "model": {
+          "ep-20250206124624-tbtvg": {
+            "max_completion_tokens": 8192,
+            "temperature": 0.6  // 可选参数，不设置则使用 OpenAI 的默认值
+          }
+        }
+      }
+    }
+  }
+}
