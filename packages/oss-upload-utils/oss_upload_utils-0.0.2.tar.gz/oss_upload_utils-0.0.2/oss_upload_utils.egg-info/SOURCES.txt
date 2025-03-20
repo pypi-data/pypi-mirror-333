@@ -1,0 +1,7 @@
+setup.py
+oss_upload_utils/__init__.py
+oss_upload_utils.egg-info/PKG-INFO
+oss_upload_utils.egg-info/SOURCES.txt
+oss_upload_utils.egg-info/dependency_links.txt
+oss_upload_utils.egg-info/requires.txt
+oss_upload_utils.egg-info/top_level.txt

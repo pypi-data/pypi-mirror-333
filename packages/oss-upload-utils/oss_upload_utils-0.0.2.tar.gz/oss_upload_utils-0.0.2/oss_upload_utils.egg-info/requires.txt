@@ -1,0 +1,7 @@
+beautifulsoup4
+ftfy
+html2text
+loguru
+oss2
+rarfile
+setuptools
