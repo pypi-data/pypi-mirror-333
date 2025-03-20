@@ -1,0 +1,137 @@
+## EazyML Responsible-AI: Counterfactual
+![Python](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)  ![PyPI package](https://img.shields.io/badge/pypi%20package-0.0.68-brightgreen) ![Code Style](https://img.shields.io/badge/code%20style-black-black)
+
+![EazyML](https://github.com/EazyML/eazyml-docs/raw/refs/heads/master/EazyML_logo.png)
+
+`eazyml-counterfactual` is a python package that helps users optimize predictive outcomes by generating counterfactual explanations.
+EazyML revolutionizes machine learning by introducing counterfactual inference, automating the process of identifying optimal changes to variables that shift outcomes from unfavorable to favorable. This approach overcomes the limitations of manual "what-if" analysis, enabling models to provide actionable, prescriptive insights alongside their predictions.
+
+Designed for post-prediction analysis, this package answers questions like:
+- "What minimal changes to input features can reverse an unfavorable prediction?"
+- "How can I achieve a desired outcome by tweaking feature values?"
+
+### Features
+- **Prescriptive Insights**: Automatically recommend actionable steps to achieve desired outcomes by identifying optimal feature modifications.
+- **Outcome Optimization**: Calculates the likelihood of favorable outcomes and determines optimal adjustments to improve predictions while respecting user-defined constraints.
+- **Flexible Feature Selection**: Allows users to manually specify relevant features from the training dataset for counterfactual inference.
+- **Custom Model Integration**: Accepts pre-trained machine learning models and user-defined preprocessing steps for seamless inference.
+- **Classification and Regression Support**: Handles both classification and regression problems.
+
+`eazyml-counterfactual` is ideal for scenarios like loan approvals, customer churn prevention, and healthcare treatment planning.`
+
+## Installation
+### User installation
+The easiest way to install counterfactual package is using pip:
+```bash
+pip install -U eazyml-counterfactual
+```
+### Dependencies
+EazyML Counterfactual requires :
+- pandas
+- eazyml-automl
+- openpyxl
+- scikit-learn
+- scipy
+
+## Usage
+Counterfactual inference can be applied by initializing the EazyML framework and obtaining actionable insights for new test data. It is important to note that counterfactual inference is a post-prediction analysis. This means it can only be applied after the model is built and predictions are made.
+
+#### Imports
+```python
+from eazyml_counterfactual import ez_init, ez_cf_inference
+```
+
+#### Initialize and Read Data
+```python
+# Initialize the EazyML automl library.
+_ = ez_init()
+
+# Specify the training dataset (Replace with the correct data path).
+train_data_path = "path_to_your_training_data.csv"
+
+# Load the predicted test dataset (Replace with the correct file path).
+# Ensure the `ez_predict` function is configured to generate predictions along with probability scores.
+predicted_data_path = "path_to_your_predicted_test_data.csv"
+pred_df = pd.read_csv(predicted_data_path)
+```
+
+#### Set Input Parameters
+```python
+# Specify the outcome (target variable)
+outcome = "target"  # Replace with your target variable name
+
+# List the features used during model training
+selected_features = ['feature1', 'feature2', 'feature3']
+
+# Retrieve model information from the `build_model_response`.
+model_info = build_model_response["model_info"]
+
+# Define variants
+variants = ['feature1', 'feature2']
+```
+
+#### Counterfactual Inference
+```python
+# Select test record for inference
+test_index_no = 0
+test_data = pred_df.loc[[test_index_no]]
+
+# Customize options for counterfactual inference
+cf_options = {"variants": variants, "outcome_ordinality": "1", "train_data": train_data_path}
+
+# Call the EazyML APIs for counterfactual inference
+result, optimal_transition_df = ez_cf_inference(
+    test_data=test_data,
+    outcome=outcome,
+    selected_features=selected_features,
+    model_info=model_info,  
+    options=cf_options
+)
+```
+
+#### Sample Output Preview
+```python
+# Summarizes whether an optimal transition was found and the improvement in outcome probability.
+result = {
+    "success": True,
+    "message": "Optimal transition found",
+    "summary": {
+        "Actual Outcome": "0",
+        "Optimal Outcome": "1",
+        "Improvement in Probability": 0.416
+    }
+}
+
+# Details the feature changes needed to achieve the optimal outcome.
+optimal_transition_df = pd.DataFrame({
+    "Feature": ["Feature1", "Feature1", "Feature3"],
+    "Actual": [13.0, 32554.0, 2.29],
+    "Optimal": [15.6, 29203.22, 2.29],
+    "Percentage Change": [20.0, -10.3, 0.0],
+    "Absolute Change": [2.6, -3350.78, 0.0]
+})
+```
+
+
+You can find more information in the [documentation](https://eazyml.readthedocs.io/en/latest/packages/eazyml_cf.html).
+
+## Useful links, other packages from EazyML family
+- [Documentation](https://docs.eazyml.com)
+- [Homepage](https://eazyml.com)
+- If you have questions or would like to discuss a use case, please contact us [here](https://eazyml.com/trust-in-ai)
+- Here are the other packages from EazyML suite:
+
+    - [eazyml-automl](https://pypi.org/project/eazyml-automl/): eazyml-automl provides a suite of APIs for training, optimizing and validating machine learning models with built-in AutoML capabilities, hyperparameter tuning, and cross-validation.
+    - [eazyml-data-quality](https://pypi.org/project/eazyml-data-quality/): eazyml-data-quality provides APIs for comprehensive data quality assessment, including bias detection, outlier identification, and drift analysis for both data and models.
+    - [eazyml-counterfactual](https://pypi.org/project/eazyml-counterfactual/): eazyml-counterfactual provides APIs for optimal prescriptive analytics, counterfactual explanations, and actionable insights to optimize predictive outcomes to align with your objectives.
+    - [eazyml-insight](https://pypi.org/project/eazyml-insight/): eazyml-insight provides APIs to discover patterns, generate insights, and mine rules from your datasets.
+    - [eazyml-xai](https://pypi.org/project/eazyml-xai/): eazyml-xai provides APIs for explainable AI (XAI), offering human-readable explanations, feature importance, and predictive reasoning.
+    - [eazyml-xai-image](https://pypi.org/project/eazyml-xai-image/): eazyml-xai-image provides APIs for image explainable AI (XAI).
+
+## License
+This project is licensed under the [Proprietary License](https://github.com/EazyML/eazyml-docs/blob/master/LICENSE).
+
+---
+
+Maintained by [EazyML](https://eazyml.com)  
+© 2025 EazyML. All rights reserved.
