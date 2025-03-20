@@ -1,0 +1,12 @@
+dash
+dash-bio
+numpy
+pandas
+plotly
+dash-bootstrap-components
+dash-table
+notebook
+matplotlib
+tqdm
+scikit-learn
+scipy
