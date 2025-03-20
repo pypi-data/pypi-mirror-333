@@ -1,0 +1,64 @@
+Metadata-Version: 2.2
+Name: wecom-audit
+Version: 0.1.2
+Summary: Python wrapper for WeChat Work (WeCom) Audit API. © 2025 puyuan.tech, Ltd. All rights reserved.
+Home-page: https://github.com/droomo/wecom-audit
+Author: droomo, Grainstone
+Author-email: th@droomo.com
+Project-URL: Bug Tracker, https://github.com/droomo/wecom-audit/issues
+Project-URL: Source Code, https://github.com/droomo/wecom-audit
+Keywords: wecom,wechat work,audit,企业微信,企微,消息获取,会话存档,puyuan.tech
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
+
+# WeCom Audit
+
+企业微信会话存档API的Python封装，提供简单易用的接口来获取企业微信的会话记录。
+
+## 安装
+
+```bash
+pip install wecom-audit
+```
+
+## 功能特点
+
+- 支持获取会话记录
+- 支持下载媒体文件
+- 提供简单易用的Python API
+- 基于企业微信官方C语言SDK封装
+
+## 依赖项
+
+- Python >= 3.11
+- CMake
+- OpenSSL开发库
+
+## 版权
+
+© 2025 puyuan.tech, Ltd. All rights reserved.
+
+## 许可证
+
+MIT
+
+## 贡献
+
+欢迎提交问题和Pull Request！ 
