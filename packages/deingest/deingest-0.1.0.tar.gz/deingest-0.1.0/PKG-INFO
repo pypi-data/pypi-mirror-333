@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: deingest
+Version: 0.1.0
+Summary: Reverse a gitingest digest file to restore the original repository structure.
+Home-page: https://github.com/jrazi/deingest
+Author: Javad Razi
+Author-email: javad.razigiglou@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: click>=7.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
