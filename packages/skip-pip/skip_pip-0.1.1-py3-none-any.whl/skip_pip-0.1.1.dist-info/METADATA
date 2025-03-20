@@ -1,0 +1,34 @@
+Metadata-Version: 2.2
+Name: skip-pip
+Version: 0.1.1
+Summary: A pip wrapper that installs packages from requirements files while skipping packages that fail.
+Home-page: https://github.com/saiadupa/skip-pip
+Author: Your Name
+Author-email: adupanithinsai@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# Skip-Pip
+
+Skip-Pip is a command-line tool that acts like pip but with enhanced resilience during package installation. When installing from a requirements file, it skips packages that fail to install while continuing with the rest.
+
+## Features
+
+- **Resilient Installation:** Installs each package individually from requirements files.
+- **Error Logging:** Prints error details for packages that fail to install.
+- **Familiar Interface:** Supports standard pip commands and arguments.
+
+## Installation
+
+You can install Skip-Pip via pip (after publishing on PyPI):
+
+```bash
+pip install skip-pip
