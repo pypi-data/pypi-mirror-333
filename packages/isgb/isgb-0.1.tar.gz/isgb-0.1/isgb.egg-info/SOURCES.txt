@@ -1,0 +1,6 @@
+isgb/__init__.py
+isgb.egg-info/PKG-INFO
+isgb.egg-info/SOURCES.txt
+isgb.egg-info/dependency_links.txt
+isgb.egg-info/requires.txt
+isgb.egg-info/top_level.txt
