@@ -1,0 +1,14 @@
+[console_scripts]
+uns_2dpgplot = unsiotools.simulations.c2dpgplot:commandLine
+uns_2dplot = unsiotools.simulations.c2dplot:commandLine
+merging_time = unsiotools.simulations.ccod:commandLineMT
+uns_cod = unsiotools.simulations.ccod:commandLine
+uns_inert = unsiotools.simulations.cinert:commandLine
+uns_plot_inert = unsiotools.simulations.cplotinert:commandLine
+post_build_movie = unsiotools.simulations.cmovie:commandLine
+post_build_movie2 = unsiotools.simulations.c2dplot:commandLinePbm2
+process_analysis = unsiotools.simulations.cuns_analysis:commandLine
+remove_sim_halo = unsiotools.simulations.creducesim:commandLine
+ramses2gadget = unsiotools.simulations.cramses2gadget:commandLine
+test_cfalcon = unsiotools.examples.test_cfalcon:commandLine
+
