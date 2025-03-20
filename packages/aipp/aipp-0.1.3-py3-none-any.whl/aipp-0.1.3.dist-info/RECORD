@@ -1,0 +1,13 @@
+src/aipp/__init__.py,sha256=3tIbUvlMWEanY6PuhU59oYVkMBTBbdR1HJJ1sDxBBfo,96
+src/aipp/builder.py,sha256=0j-mrDnkUbbNvOuZZoQGssbeg4FqCpEvx5BPPqbl3AQ,4487
+src/aipp/processors.py,sha256=HKcU1-yFGqNqM8TYgmO2TPASmntPBS-brzFLAafsMxU,8463
+src/aipp/processors/__init__.py,sha256=HyC9KUX3O4NHVu6DTFdCEQZqtb_IuOGyRiNpItwKGxE,667
+src/aipp/processors/base.py,sha256=87ZT1bBzKPqR8nwJyEV5Nv18F088eP18tqszlzLuHU4,689
+src/aipp/processors/formatting.py,sha256=AuBDNV7t9nOE2zJdKN33doWJvrzGRIS5NBcpnHoCSKo,1445
+src/aipp/processors/reasoning.py,sha256=vH-lI_jmNZuIvRu3CMponzJMN6j1HxxNowBleAq_ND8,2009
+src/aipp/processors/role.py,sha256=N6vfIqivgqfI4lnd-wyCJbIIzg-eBgaKLNbkJPT1q4I,638
+src/aipp/processors/structured.py,sha256=VoJtrPV-1XThKE6jBkAQunlzNypKEh4U7NdNaswqoO8,1409
+aipp-0.1.3.dist-info/METADATA,sha256=7_lAxPQO2QyYxVcC2T6ivKHik133L5M-HSBo8j91cwU,5369
+aipp-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aipp-0.1.3.dist-info/licenses/LICENSE,sha256=ReuYWxqSV34yoz01y9AGKlYpFlZDkeL2df9pdjE2Hkg,1065
+aipp-0.1.3.dist-info/RECORD,,
