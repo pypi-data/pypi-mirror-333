@@ -1,0 +1,7 @@
+requests
+loguru
+pandas
+pyyaml
+tqdm
+prefect
+rich
