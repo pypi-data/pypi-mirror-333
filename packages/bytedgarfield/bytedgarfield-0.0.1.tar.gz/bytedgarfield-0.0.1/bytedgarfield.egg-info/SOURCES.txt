@@ -1,0 +1,6 @@
+setup.py
+bytedgarfield/__init__.py
+bytedgarfield.egg-info/PKG-INFO
+bytedgarfield.egg-info/SOURCES.txt
+bytedgarfield.egg-info/dependency_links.txt
+bytedgarfield.egg-info/top_level.txt
