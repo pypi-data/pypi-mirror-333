@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "pomodoro-app-cli"
+version = "1.3.0"
+description = "🌟 Pomodoro CLI 🍅⏳ A simple and practical Pomodoro tool for your terminal! 📱💻 Organize your time efficiently with countdowns and sound alerts. Perfect for boosting productivity with focus and breaks! 🚀"
+authors = ["Gustavo Soares <gustavo.soares.cdc@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/GussSoares/pomodoro-cli"
+repository = "https://github.com/GussSoares/pomodoro-cli"
+keywords = ["pomodoro", "cli", "terminal", "linux", "python", "curses", "timer"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [
+    {include = "pomodoro"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyfiglet = "^1.0.2"
+rich = "^13.9.4"
+inquirerpy = "^0.3.4"
+
+[tool.poetry.scripts]
+pomodoro = "pomodoro.main:main"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+# 1. Enable flake8-bugbear (`B`) rules, in addition to the defaults.
+select = ["E4", "E7", "E9", "F", "B"]
+
+# 2. Avoid enforcing line-length violations (`E501`)
+ignore = ["E501"]
+
+# 3. Avoid trying to fix flake8-bugbear (`B`) violations.
+unfixable = ["B"]
+
+# 4. Ignore `E402` (import violations) in all `__init__.py` files, and in selected subdirectories.
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/{tests,docs,tools,misc}/*" = ["E402"]
+
+[tool.ruff.format]
+# 5. Use single quotes in `ruff format`.
+quote-style = "single"
