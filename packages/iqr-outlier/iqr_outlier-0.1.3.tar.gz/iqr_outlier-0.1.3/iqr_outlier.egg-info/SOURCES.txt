@@ -1,0 +1,7 @@
+README.md
+setup.py
+iqr_outlier.egg-info/PKG-INFO
+iqr_outlier.egg-info/SOURCES.txt
+iqr_outlier.egg-info/dependency_links.txt
+iqr_outlier.egg-info/requires.txt
+iqr_outlier.egg-info/top_level.txt
