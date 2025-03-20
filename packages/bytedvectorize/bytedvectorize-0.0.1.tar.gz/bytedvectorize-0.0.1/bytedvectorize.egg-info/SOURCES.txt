@@ -1,0 +1,6 @@
+setup.py
+bytedvectorize/__init__.py
+bytedvectorize.egg-info/PKG-INFO
+bytedvectorize.egg-info/SOURCES.txt
+bytedvectorize.egg-info/dependency_links.txt
+bytedvectorize.egg-info/top_level.txt
