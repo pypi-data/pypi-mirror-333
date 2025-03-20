@@ -1,0 +1,10 @@
+zangetsu_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zangetsu_data/bigquery.py,sha256=vOOHZZTTkaObVZ7x2bgeQoiKerhvALomWDH5BiJqN3I,673
+zangetsu_data/common_database.py,sha256=bb-aUfA3Kb50sxoWKMPzPkgf1Uk1vuqdtfBM0S5tWVc,20419
+zangetsu_data/postgresql.py,sha256=cZMxdHsZrcWNjJQPteDvqlKmPD-dEt_Rr85a7avRajM,3715
+zangetsu_data/settings.py,sha256=f1SvYjf1GUlFTn5UiV-3FYGud4tPjyWWE8m83sgxzKY,535
+zangetsu_data/spreadsheet.py,sha256=5dufMKgbuoB7I1N7EOxeiwHvr2o8jhEUIpr8C-HqcCY,21712
+zangetsu_data-0.1.0.dist-info/METADATA,sha256=_BvqYez6e4WU4N7P6N3vsccwPq-Fo742_BLkEpHPzXw,832
+zangetsu_data-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+zangetsu_data-0.1.0.dist-info/top_level.txt,sha256=oIQ3qNQlIJt7-Lhb_7jWxWDsYJSddkDu1qqEvBZws7s,14
+zangetsu_data-0.1.0.dist-info/RECORD,,
