@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+promptpal/__init__.py
+promptpal/promptpal.py
+promptpal/promptpal_ui.py
+promptpal.egg-info/PKG-INFO
+promptpal.egg-info/SOURCES.txt
+promptpal.egg-info/dependency_links.txt
+promptpal.egg-info/requires.txt
+promptpal.egg-info/top_level.txt
+promptpal/roles/__init__.py
+promptpal/roles/role.py
+promptpal/roles/role_schema.py
+promptpal/roles/role_schema.yaml
+promptpal/roles/roles.yaml
