@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_winzy_time_in_words.py
+winzy_time_in_words/__init__.py
+winzy_time_in_words/time_in_words.py
+winzy_time_in_words.egg-info/PKG-INFO
+winzy_time_in_words.egg-info/SOURCES.txt
+winzy_time_in_words.egg-info/dependency_links.txt
+winzy_time_in_words.egg-info/entry_points.txt
+winzy_time_in_words.egg-info/requires.txt
+winzy_time_in_words.egg-info/top_level.txt
