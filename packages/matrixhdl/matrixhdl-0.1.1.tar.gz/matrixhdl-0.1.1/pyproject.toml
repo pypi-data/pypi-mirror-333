@@ -1,0 +1,26 @@
+[project]
+name = "matrixhdl"
+version = "0.1.1"
+description = ""
+authors = [
+    {name = "lixinbingg",email = "lixinbingg@163.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+"openpyxl"
+]
+
+[tool.poetry]
+packages = [{include = "matrixhdl", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+export_command    = "matrixhdl.mh_export:main"
+hyperlink_command = "matrixhdl.hyperlink:main"
+import_command    = "matrixhdl.import:main"
+ports_command     = "matrixhdl.ports:main"
