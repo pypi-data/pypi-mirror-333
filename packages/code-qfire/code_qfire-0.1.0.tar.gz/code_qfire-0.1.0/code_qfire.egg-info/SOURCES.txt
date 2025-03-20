@@ -1,0 +1,10 @@
+README.md
+setup.py
+code_qfire/__init__.py
+code_qfire/main.py
+code_qfire.egg-info/PKG-INFO
+code_qfire.egg-info/SOURCES.txt
+code_qfire.egg-info/dependency_links.txt
+code_qfire.egg-info/entry_points.txt
+code_qfire.egg-info/requires.txt
+code_qfire.egg-info/top_level.txt

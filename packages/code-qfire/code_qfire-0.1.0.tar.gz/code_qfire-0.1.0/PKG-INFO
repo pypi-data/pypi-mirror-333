@@ -1,0 +1,34 @@
+Metadata-Version: 2.2
+Name: code-qfire
+Version: 0.1.0
+Summary: A lightweight code optimization tool
+Home-page: https://github.com/yourusername/code-qfire
+Author: Your Name
+Author-email: your-email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: termcolor
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# CODE-QFIRE
+CODE-QFIRE is a lightweight tool that scans code for inefficiencies and suggests optimizations.
+
+## Features:
+- Detects nested loops (O(nÂ²) inefficiency)
+- Finds unused variables
+- Identifies slow SQL queries (`SELECT * FROM` without indexing)
+
+## Usage:
+```bash
+code-qfire scan my_script.py
