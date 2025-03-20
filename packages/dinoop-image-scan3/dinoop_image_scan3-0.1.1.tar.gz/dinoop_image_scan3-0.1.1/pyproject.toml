@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["dinoop_grypescan", "dinoop_trivyscan2"]
+
+[project]
+name = "dinoop_image_scan3"
+version = "0.1.1"
+description = "package for image scan"
+authors = [{name = "dinoop", email = "dinoop@example.com"}]
+dependencies = []
