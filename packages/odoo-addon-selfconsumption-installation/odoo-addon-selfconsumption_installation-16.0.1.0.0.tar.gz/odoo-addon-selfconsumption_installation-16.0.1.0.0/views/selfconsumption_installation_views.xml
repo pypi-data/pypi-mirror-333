@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="selfconsumption_installation_menu"
+        name="Self-consumption Installation"
+        sequence="100"
+        web_icon="selfconsumption_installation,static/description/icon.png"
+    />
+
+    <record id="selfconsumption_installation_form" model="ir.ui.view">
+        <field name="name">selfconsumption_installation.form</field>
+        <field name="mode">primary</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="arch" type="xml">
+            <form string="Self-consumption Installation">
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable': '1'}" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button string="Customer" type="object" icon="fa-user"
+                            name="action_view_customer"
+                            attrs="{'invisible':[('partner_id', '=', False)]}">
+                        </button>
+                        <button class="oe_stat_button" type="object" icon="fa-eur"
+                            name="action_view_sale_orders">
+                            <field string="Ventas" name="sale_orders_count" widget="statinfo" />
+                        </button>
+                        <button class="oe_stat_button" type="object" icon="fa-shopping-cart"
+                            name="action_view_purchase_orders">
+                            <field string="Compras" name="purchase_orders_count" widget="statinfo" />
+                        </button>
+                        <button class="oe_stat_button" type="object" icon="fa-file-text-o"
+                            name="action_view_analytic_account" string="Analytic account"
+                            attrs="{'invisible':[('analytic_account_id', '=', False)]}">
+                        </button>
+                        <button class="oe_stat_button" type="object" icon="fa-file-text-o"
+                            name="action_view_invoices">
+                            <field string="Facturas" name="invoices_count" widget="statinfo" />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page name="project" string="Proyecto">
+                            <group>
+                                <group name="group-left">
+                                    <field name="code" />
+                                    <field name="partner_id"
+                                        domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]" />
+                                    <field name="company_id" invisible="1" />
+                                    <field name="installer_id"
+                                        domain="[('category_id.id', '=', installer_tag)]" />
+                                    <field name="analytic_account_id" />
+                                    <field name="installer_tag" invisible='1' />
+                                </group>
+                                <group name="group-right">
+                                    <field name="surge" />
+                                    <field name="activation_date" />
+                                    <field name="lead_code" />
+                                    <field name="project_phase" />
+                                    <field name="typology" />
+                                    <field name="subgroup" />
+                                    <field name="model_shortlisted" />
+                                    <field name="power_shortlisted"
+                                        attrs="{'invisible':[('rated_power_execution', '>', 0)]}" />
+                                    <field name="rated_power_execution"
+                                        attrs="{'invisible':[('rated_power_execution', '=', 0)]}" />
+                                    <field name="maintenance_contact"
+                                        options="{'no_create': True, 'no_create_edit':True}" />
+                                </group>
+
+                            </group>
+                            <group string="Notas preelegido">
+                                <field nolabel="1" name="notes_shortlisted" colspan='2' />
+                            </group>
+                        </page>
+                        <page name="suministro" string="Suministro">
+                            <group>
+                                <group name="group-left">
+                                    <field name="bill_recieved" />
+                                    <field name="partner_id2" />
+                                    <field name="partner_id2_name" />
+                                    <field name="partner_id2_surname" />
+                                    <field name="partner_id2_vat" />
+                                    <field name="supply_street" />
+                                    <field name="supply_municipality" />
+                                    <field name="supply_zip" />
+                                    <field name="supply_region" />
+                                    <field name="supply_state" />
+                                </group>
+                                <group name="group-right">
+                                    <field name="supply_comercial" />
+                                    <field name="supplier_id"
+                                        domain="[('category_id.id', '=', supplier_tag)]" />
+                                    <field name="supplier_tag" invisible='1' />
+                                    <field name="cups" />
+                                    <field name="contract_power" />
+                                    <field name="fixed_toll_cost" />
+                                    <field name="energy_cost" />
+                                    <field name="annual_energy_consumed" />
+                                    <field name="access_pricelist" />
+                                    <field name="phase" />
+                                </group>
+                            </group>
+                        </page>
+                        <page name="location" string="Ubicación">
+                            <group>
+                                <group>
+                                    <field name="installation_address" />
+                                    <field name="installation_zip" />
+                                    <field name="installation_city" />
+                                    <field name="gmaps_address" />
+                                    <field name="gmaps_link" widget="url" />
+                                    <field name="stake_out_date" />
+                                    <field name="estimated_inclination" />
+                                </group>
+                                <group>
+                                    <field name="cover_type_id" />
+                                    <field name="roof_height" />
+                                    <field name="catastral" />
+                                    <field name="utm_coords" />
+                                    <field name="stake_out_completed" />
+                                    <field name="heritage_protection" />
+                                </group>
+
+                            </group>
+                            <group string="Notas ubicación">
+                                <field nolabel="1" name="location_notes" colspan='2' />
+                            </group>
+
+                        </page>
+                        <page name="simulation" string="Simulación">
+                            <group>
+                                <field name="project_simulation_ids" nolabel="1" colspan="2">
+                                    <tree>
+                                        <field name="blueprint" optional="show" />
+                                        <field name="rated_power_simulation" optional="show" />
+                                        <field name="peak_power_simulation" optional="show" />
+                                        <field name="energy_consumed" optional="show" />
+                                        <field name="generator_energy" optional="show" />
+                                        <field name="self_consumption" optional="show" />
+                                        <field name="solar_cover" optional="show" />
+                                        <field name="annual_perfomance" optional="show" />
+                                        <field name="shading" optional="show" />
+                                        <field name="co2_avoided" optional="show" />
+                                        <field name="pvsol_notes" optional="show" />
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="blueprint" />
+                                                <field name="rated_power_simulation" />
+                                                <field name="peak_power_simulation" />
+                                                <field name="energy_consumed" />
+                                                <field name="generator_energy" />
+                                            </group>
+                                            <group>
+                                                <field name="self_consumption" />
+                                                <field name="solar_cover" />
+                                                <field name="annual_perfomance" />
+                                                <field name="shading" />
+                                                <field name="co2_avoided" />
+                                            </group>
+
+                                        </group>
+                                        <group string='Inverters'>
+                                            <field name='inverter_ids' nolabel='1' colspan='2'>
+                                                <tree editable='1'>
+                                                    <field name='inverter_id'
+                                                        options="{'no_create': True, 'no_create_edit':True}" />
+                                                    <field name='power' />
+                                                </tree>
+                                            </field>
+                                        </group>
+                                        <group string='Modules'>
+                                            <field name='module_ids' nolabel='1' colspan='2'>
+                                                <tree editable='1'>
+                                                    <field name='module_id'
+                                                        options="{'no_create': True, 'no_create_edit':True}" />
+                                                    <field name='power' />
+                                                    <field name='number_of_modules' />
+                                                </tree>
+                                            </field>
+                                        </group>
+                                        <group string="Notas PVSOL">
+                                            <field nolabel="1" name="pvsol_notes" colspan='2' />
+                                        </group>
+                                    </form>
+
+                                </field>
+                            </group>
+                        </page>
+                        <page name="execution" string="Ejecución">
+                            <group>
+                                <group>
+                                    <field name="blueprint_chosen"
+                                        domain="[('id', 'in', project_simulation_ids)]"
+                                        options="{'no_create': True, 'no_create_edit':True}" />
+                                    <field name="construction_start_date" />
+                                    <field name="construction_end_date" />
+                                    <field name="week_construction" />
+                                    <field name="cnmc_connection_type" />
+                                    <field name="installation_typology_execution" />
+                                    <field name="construction_address" />
+                                    <field name="peak_power_execution" />
+                                    <field name="rated_power_execution" />
+                                    <field name="nature_of_supply" />
+                                    <field name="mains_voltage" />
+                                    <field name="new_or_expansion" />
+                                    <field name="zero_injection" />
+                                    <field name="supply_connection" />
+                                </group>
+                                <group string='Cover'>
+                                    <field name="cover_type_execution_id" />
+                                    <field name="anchorage_type" />
+                                    <field name="structure_type" />
+                                    <field name="structure_inclination" />
+                                    <field name="structure_orientation" />
+                                    <field name="media_aux" />
+                                    <field name="structure" />
+                                    <field name="cover_extra_info" />
+                                </group>
+                            </group>
+                            <group string='Modules'>
+                                <field name='module_ids' nolabel='1' colspan='2'>
+                                    <tree editable='1'>
+                                        <field name='module_id'
+                                            options="{'no_create': True, 'no_create_edit':True}" />
+                                        <field name='power' />
+                                        <field name='intensisty' />
+                                        <field name='number_of_modules' />
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string='Inverters'>
+                                <field name='inverter_ids' nolabel='1' colspan='2'>
+                                    <tree editable='1'>
+                                        <field name='inverter_id'
+                                            options="{'no_create': True, 'no_create_edit':True}" />
+                                        <field name='power' />
+                                        <field name='intensity' />
+                                        <field name='serial_number' />
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string='Electric lines'>
+                                <field name='line_ids' nolabel='1' colspan='2'>
+                                    <tree editable='1'>
+                                        <field name='type' />
+                                        <field name='lenght' />
+                                        <field name='channeling' />
+                                        <field name='permisible_intensity' />
+                                        <field name='section' />
+                                        <field name='voltage_drop_percentage' />
+                                        <field name='voltage_drop' />
+                                        <field name='voltage' />
+                                        <field name='wire_type' />
+                                    </tree>
+                                </field>
+                            </group>
+                            <group>
+                                <group string='CGP'>
+                                    <field name='gcp_location' />
+                                    <field name='gcp_fuse_rated_current' />
+                                    <field name='gcp_lga_section' />
+                                    <field name='gcp_fuseholder_type' />
+                                    <field name='gcp_general_switch' />
+                                </group>
+                                <group string='Meter location'>
+                                    <field name='dc_safety_fuse' />
+                                    <field name='dc_fuseholder_type' />
+                                </group>
+                                <group string='PV Line'>
+                                    <field name='pv_line_meter_type' />
+                                    <field name='pv_line_meter_sn' />
+                                    <field name='pv_registrar_number' />
+                                    <field name='pv_safety_fuse' />
+                                    <field name='pv_disconectors' />
+                                </group>
+                                <group>
+                                    <field name="civil_construction" />
+                                    <field name="extra_element_1" />
+                                    <field name="extra_element_2" />
+                                    <field name="extra_element_3" />
+                                </group>
+                                <group string='Monitorization'>
+                                    <field name="monitorization_email" />
+                                    <field name="monitorization_password" />
+                                    <field name="monitorization_public_link"
+                                        attrs="{'invisible':[('surge', 'not in', ['org', 'col'])]}" />
+                                </group>
+                            </group>
+                            <group string="Notas diseño">
+                                <field nolabel="1" name="design_notes" colspan='2' />
+                            </group>
+
+                        </page>
+                        <page string="City Council">
+                            <group string='Urban planning legislation'>
+                                <group>
+                                    <field name="license_type" />
+                                    <field name="requested_by" />
+                                    <field name="presented_date" />
+                                    <field name="file_number" />
+                                    <field name="license_concession" />
+                                    <field name="end_of_work_notified" />
+                                </group>
+                                <group>
+                                    <field name="bonification" />
+                                    <field name="heritage_protection" readonly='1' />
+                                    <field name="icio_bonification_requested_by" />
+                                    <field name="pay_taxes" />
+                                    <field name="customer_shipments" />
+                                </group>
+                            </group>
+                            <group string='Requirements'>
+                                <field name='legal_requirements_ids' nolabel='1' colspan='2'>
+                                    <tree editable='1'>
+                                        <field name='type' />
+                                        <field name='limit_date' />
+                                        <field name='response_date' />
+                                        <field name='done' />
+                                        <field name='manager_id' />
+                                        <field name='notes' colspan='2' />
+                                    </tree>
+                                </field>
+                            </group>
+                            <group>
+                                <group string="OVP">
+                                    <field name="ovp_request" />
+                                    <field name="ovp_request_date" />
+                                    <field name="ovp_approval_date" />
+                                    <field name="ovp_ammount" />
+                                </group>
+                                <group string="IBI bonification">
+                                    <field name="ibi_bonification_requested_by" />
+                                    <field name="ibi_bonification_request_date" />
+                                    <field name="ibi_bonification" />
+                                </group>
+                            </group>
+                            <group string="Notas licencia">
+                                <field nolabel="1" name="license_notes" colspan='2' />
+                            </group>
+                        </page>
+                        <page string="Subvención">
+                            <group>
+                                <group>
+                                    <field name="subvention_selection" />
+                                    <field name="subvention_type" />
+                                    <field name="subvention_request_date" />
+                                    <field name="file_number_subvention" />
+                                    <field name="subvention_funds_approval_date" />
+                                </group>
+                                <group>
+                                    <field name="subvention_justification_deadline" />
+                                    <field name="subvention_justification_submission_date" />
+                                    <field name="subvention_requirement_date" />
+                                    <field name="subvention_response_date" />
+                                    <field name="subvention_concession" />
+                                </group>
+
+                            </group>
+                            <group string="Notas subvención">
+                                <field nolabel="1" name="subvention_notes" colspan='2' />
+                            </group>
+                        </page>
+                        <page string="Tramitación">
+                            <group>
+                                <group>
+                                    <field name="cau" />
+                                    <field name="supplier_id"
+                                        domain="[('category_id.id', '=', supplier_tag)]" />
+                                </group>
+                                <group string="Supplier">
+                                    <field name="file_number_processing" />
+                                    <field name="aditional_files" />
+                                    <field name="management_contact"
+                                        domain="['|', ('category_id.id', '=', management_contact_tag), ('parent_id.category_id.id', '=', management_contact_tag)]" />
+                                    <field name="management_contact_tag" invisible='1' />
+                                    <field name="technical_conditions" />
+                                    <field name="cta" />
+                                </group>
+                                <group string="Project">
+                                    <field name="approval_number" />
+                                    <field name="approval_date" />
+                                </group>
+                                <group string="Industy">
+                                    <field name="installer_send_date" />
+                                    <field name="registry_send_date" />
+                                    <field name="cie_resgistry_date" />
+                                    <field name="cie_registry_state" />
+                                    <field name="periodic_inspection" />
+                                    <field name="inspection_date" />
+                                </group>
+                                <group string='Comercial'>
+                                    <field name="documentation_sent" />
+                                    <field name="meter_verification" />
+                                </group>
+                            </group>
+                            <group string="Notas tramitación">
+                                <field nolabel="1" name="transaction_notes" colspan='2' />
+                            </group>
+                        </page>
+                        <page string="Roles">
+                            <group>
+                                <field nolable="1" name="role_ids" colspan='2'>
+                                    <tree editable="bottom">
+                                        <field name="role_id" />
+                                        <field name="responsible_ids" widget="many2many_tags"
+                                            domain="[('id', 'in', responsible_candidates_ids)]" />
+                                        <field name="responsible_candidates_ids" invisible="1" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string='IRVE'>
+                            <group>
+                                <group>
+                                    <field name="irve_execution_date"/>
+                                    <field name="irve_execution_end_date"/>
+                                    <field name="irve_installer_id" domain="[('category_id.id', '=', installer_tag)]"/>
+                                </group>
+                            </group>
+                            <group string='Electric lines'>
+                                <field name="irve_line_ids" nolabel='1' colspan='2'>
+                                    <tree editable='1'>
+                                        <field name='type' />
+                                        <field name='lenght' />
+                                        <field name='channeling' />
+                                        <field name='permisible_intensity' />
+                                        <field name='section' />
+                                        <field name='voltage_drop_percentage' />
+                                        <field name='voltage_drop' />
+                                        <field name='voltage' />
+                                        <field name='wire_type' />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Participants">
+                            <group string='General Information'>
+                                <field name="partner_id2" />
+                                <field name="representative_id" />
+                                <field name="cups" />
+                                <field name="cau" />
+                                <field name="total_associated_supplies" />
+                                <field name="distribution_coefficient_sum" />
+                            </group>
+                            <group string='Associated supplies'>
+                                <field name="associated_supply_ids" nolabel='1' colspan='2'>
+                                    <tree editable='1'>
+                                        <field name='partner_id'/>
+                                        <field name='firstname'/>
+                                        <field name='lastname'/>
+                                        <field name='vat'/>
+                                        <field name='cups'/>
+                                        <field name='distribution_coefficient'/>
+                                        <field name='cadastral_reference'/>
+                                        <field name='supplier_id'/>
+                                        <field name='contracted_power'/>
+                                        <field name='email'/>
+                                        <field name='phone'/>
+                                        <field name='personal_data_policy'/>
+                                        <field name='promotions'/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string='Milestones'>
+                            <group>
+                                <group string='Initial phase'>
+                                    <group>
+                                        <field name="activation_date" />
+                                        <field name="first_milestone_payed" />
+                                        <field name="personalized_studies" />
+                                        <field name="documentation_delivered" />
+                                        <field name="stake_out_date" />
+                                    </group>
+                                    <group>
+                                        <field name="stake_out_completed" />
+                                        <field name="draft_ready_for_submission" />
+                                        <field name="draft_sent" />
+                                        <field name="draft_sent_date" />
+                                        <field name="contract_signed" />
+                                    </group>
+                                </group>
+                                <group string='Execution phase'>
+                                    <group>
+                                        <field name="payment_method_chosen" />
+                                        <field string="Responsible statement or License"
+                                            name="license_concession" />
+                                        <field string="Access point" name="technical_conditions" />
+                                        <field name="distribution_agreement_signed" />
+                                        <field name="second_milestone_payed" />
+                                        <field name="third_milestone_payed" attrs="{'invisible':[('surge', 'not in', ['o3', 'ims', 'lre', 'eru'])]}"/>
+                                        <field name="payment_date" />
+                                        <field name="representation_letter_received" />
+                                    </group>
+                                    <group>
+                                        <field name="construction_scheduled" />
+                                        <field string="Installation date"
+                                            name="construction_start_date" />
+                                        <field name="installation_date_confirmed" />
+                                        <field name="responsible_statement_presented" />
+                                        <field name="installation_date_reminder" />
+                                        <field name="end_of_work_completed" />
+                                    </group>
+                                </group>
+                                <group string='Tramitation phase'>
+                                    <field string="Installation registered"
+                                        name="cie_registry_state" />
+                                    <field string="Date of obtanining COVE"
+                                        name="registry_send_date" />
+                                    <field string="CTA" name="cta" />
+                                    <field string="Client documentation sent"
+                                        name="documentation_sent" />
+                                    <field string="AC activated" name="meter_verification" />
+                                    <field name="fourth_milestone_payed" attrs="{'invisible':[('surge', 'not in', ['o3', 'ims', 'lre', 'eru'])]}"/>
+                                </group>
+                                <group string='Final phase'>
+                                    <field name="payment_pending" />
+                                    <field name="ibi_bonification" string="IBI bonification" />
+                                    <field name="notification_one_month_after_execution" />
+                                    <field name="notification_one_year_after_execution" />
+                                    <field name="notification_warranty_expired" />
+                                </group>
+                                <group string='IRVE'>
+                                    <field name="irve_restated" />
+                                    <field name="irve_scheduled" />
+                                    <field name="irve_executed" />
+                                    <field name="irve_billed" />
+                                    <field name="irve_processing_status" />
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="selfconsumption_installation_tree" model="ir.ui.view">
+        <field name="model">selfconsumption.installation</field>
+        <field name="mode">primary</field>
+        <field name="name">selfconsumption_installation_tree</field>
+        <field name="arch" type="xml">
+            <tree default_order='code'>
+                <field name="code" />
+                <field name="name" />
+                <field name="lead_code" />
+                <field name="activation_date" />
+                <field name="installer_id" />
+                <field name="surge" />
+                <field name="typology" />
+                <field name="subgroup" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="selfconsumption_installation_view_search" model="ir.ui.view">
+        <field name="name">selfconsumption_installation.search</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter
+                    string="Active"
+                    name="filter_active"
+                    domain="[('status', '=', 'active')]"
+                />
+                <filter
+                    string="Deactivated"
+                    name="filter_deactivated"
+                    domain="[('status', '=', 'deactivated')]"
+                />
+                <filter
+                    string="In service"
+                    name="filter_in_service"
+                    domain="[('status', '=', 'in-service')]"
+                />
+                <filter
+                    string="executed"
+                    name="filter_executed"
+                    domain="[('status', '=', 'executed')]"
+                />
+            </search>
+        </field>
+    </record>
+
+
+    <record id="selfconsumption_installation_action" model="ir.actions.act_window">
+        <field name="name">Installations</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="domain">[]</field>
+        <field name="view_mode">tree,form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_id" ref="selfconsumption_installation_tree" />
+    </record>
+
+    <menuitem
+        id="menu_selfconsumption_installation"
+        name="Installations "
+        sequence="3"
+        action="selfconsumption_installation_action"
+        parent="selfconsumption_installation_menu"
+    />
+
+    <menuitem
+        id="installation_config_views"
+        parent="selfconsumption_installation_menu"
+        name="Configuración"
+    />
+
+    <menuitem id="photovoltaic_inverter_menu" parent="installation_config_views"
+        action="photovoltaic_products.photovoltaic_inverter_action" sequence="60" />
+
+    <menuitem id="photovoltaic_module_menu" parent="installation_config_views"
+        action="photovoltaic_products.photovoltaic_module_action" sequence="60" />
+
+</odoo>

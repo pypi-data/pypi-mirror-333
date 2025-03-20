@@ -1,0 +1,45 @@
+{
+    'name': 'Self-consumption Installation',
+    'version': '16.0.1.0.0',
+    'depends': [
+        "project", 
+        "sale", 
+        "purchase", 
+        "account",
+        "contacts",
+        "hr",
+        "photovoltaic_products",
+        "res_partner_custom"
+    ],
+    'author': 'Librecoop',
+    'license': 'LGPL-3',
+    'author_email': 'librecoop@protonmail.com',
+    'category': 'Sales',
+    'description': '''
+        This module extends Odoo project management capabilities to adapt it to use for Ecooo's autoconsumption project needs.
+    ''',
+    'installable': True,
+    'application': True,
+    "data": [
+        "security/ir.model.access.csv",
+        "data/installation.role.csv",
+        "data/res.partner.category.csv",
+        "views/selfconsumption_installation_views.xml",
+        "views/sale_order_views.xml",
+        "views/purchase_order_views.xml",
+        "views/account_move_views.xml",
+        "views/installation_new_view.xml",
+        "views/installation_supply_view.xml",
+        "views/installation_processing_views.xml",
+        "views/installation_location_view.xml",
+        "views/installation_simulation_view.xml",
+        "views/installation_milestone_view.xml",
+        "views/installation_implementation_view.xml",
+        "views/installation_license_view.xml",
+        "views/installation_subvention_view.xml",
+        "views/installation_role_views.xml",
+        "views/installation_event_views.xml",
+        "views/res_partner.xml",
+        "views/res_config_settings.xml"
+    ],
+}

@@ -1,0 +1,50 @@
+<odoo>
+    <record id="installation_supply_tree" model="ir.ui.view">
+        <field name="name">installation.supply.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" create="0" default_order='code'>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="bill_recieved"/>
+                <field name="partner_id2_vat" optional="show"/>
+                <field name="partner_id2" optional="show"/>
+                <field name="partner_id2_name" optional="show"/>
+                <field name="partner_id2_surname" optional="show"/>
+                <field name="supply_street" optional="show"/>
+                <field name="supply_municipality" optional="show"/>
+                <field name="supply_zip" optional="show"/>
+                <field name="supply_region" optional="show"/>
+                <field name="supply_state" optional="show"/>
+                <field name="supply_comercial" optional="show"/>
+                <field name="supplier_id" domain="[('category_id.id', '=', supplier_tag)]" optional="show"/>
+                <field name="supplier_tag" invisible='1'/>
+                <field name="cups" optional="show"/>
+                <field name="contract_power" optional="show"/>
+                <field name="fixed_toll_cost" optional="show"/>
+                <field name="energy_cost" optional="show"/>
+                <field name="annual_energy_consumed" optional="show"/>
+                <field name="access_pricelist" optional="show"/>
+                <field name="phase" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_supply_action" model="ir.actions.act_window">
+        <field name="name">Suministro</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_supply">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_supply_tree"/>
+        <field name="act_window_id" ref="installation_supply_action"/>
+    </record>
+    <menuitem
+        id="installation_supply"
+        parent="installation_extra_views"
+        action="installation_supply_action"
+        name="Suministro"
+    />
+</odoo>

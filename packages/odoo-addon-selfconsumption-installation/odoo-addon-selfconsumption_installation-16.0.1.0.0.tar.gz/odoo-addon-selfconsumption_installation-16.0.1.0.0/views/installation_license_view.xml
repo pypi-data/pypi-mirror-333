@@ -1,0 +1,42 @@
+<odoo>
+    <record id="installation_license_tree" model="ir.ui.view">
+        <field name="name">installation.license.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" create="0" default_order='code'>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="license_type" optional="show"/>
+                <field name="requested_by" optional="show"/>
+                <field name="presented_date" optional="show"/>
+                <field name="file_number" optional="show"/>
+                <field name="license_concession" optional="show"/>
+                <field name="end_of_work_notified" optional="show"/>
+                <field name="bonification" optional="show"/>
+                <field name="heritage_protection" readonly='1'/>
+                <field name="icio_bonification_requested_by"/>
+                <field name="pay_taxes" optional="show"/>
+                <field name="customer_shipments" optional="show"/>
+                <field name="license_notes" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_license_action" model="ir.actions.act_window">
+        <field name="name">City Council</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_license">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_license_tree"/>
+        <field name="act_window_id" ref="installation_license_action"/>
+    </record>
+    <menuitem
+        id="installation_license"
+        parent="installation_extra_views"
+        action="installation_license_action"
+        name="City Council"
+    />
+</odoo>

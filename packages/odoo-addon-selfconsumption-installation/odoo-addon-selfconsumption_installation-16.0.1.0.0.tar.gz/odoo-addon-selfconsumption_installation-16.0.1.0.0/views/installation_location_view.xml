@@ -1,0 +1,42 @@
+<odoo>
+    <record id="installation_location_tree" model="ir.ui.view">
+        <field name="name">installation.location.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" create="0" default_order='code'>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="installation_address" optional="show"/>
+                <field name="installation_zip" optional="show"/>
+                <field name="installation_city" optional="show"/>
+                <field name="gmaps_address" optional="show"/>
+                <field name="gmaps_link" widget="url" optional="show"/>
+                <field name="stake_out_date" optional="show"/>
+                <field name="estimated_inclination" optional="show"/>
+                <field name="cover_type_id" optional="show"/>
+                <field name="roof_height" optional="show"/>
+                <field name="catastral" optional="show"/>
+                <field name="utm_coords" optional="show"/>
+                <field name="location_notes" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_location_action" model="ir.actions.act_window">
+        <field name="name">Ubicación</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_location">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_location_tree"/>
+        <field name="act_window_id" ref="installation_location_action"/>
+    </record>
+    <menuitem
+        id="installation_location"
+        parent="installation_extra_views"
+        action="installation_location_action"
+        name="Ubicación"
+    />
+</odoo>

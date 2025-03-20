@@ -1,0 +1,41 @@
+<odoo>
+    <record id="installation_subvention_tree" model="ir.ui.view">
+        <field name="name">installation.subvention.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" create="0" default_order='code'>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="subvention_selection" optional="show"/>
+                <field name="subvention_type" optional="show"/>
+                <field name="subvention_request_date" optional="show"/>
+                <field name="file_number_subvention" optional="show"/>
+                <field name="subvention_funds_approval_date" optional="show"/>
+                <field name="subvention_justification_deadline" optional="show"/>
+                <field name="subvention_justification_submission_date" optional="show"/>
+                <field name="subvention_requirement_date" optional="show"/>
+                <field name="subvention_response_date" optional="show"/>
+                <field name="subvention_concession" optional="show"/>
+                <field name="subvention_notes" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_subvention_action" model="ir.actions.act_window">
+        <field name="name">Subvención</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_subvention">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_subvention_tree"/>
+        <field name="act_window_id" ref="installation_subvention_action"/>
+    </record>
+    <menuitem
+        id="installation_subvention"
+        parent="installation_extra_views"
+        action="installation_subvention_action"
+        name="Subvención"
+    />
+</odoo>
