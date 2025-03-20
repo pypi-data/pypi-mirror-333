@@ -1,0 +1,15 @@
+DESCRIPTION.rst
+LICENSE
+README.md
+pyproject.toml
+qwiic_vl53l5cx/__init__.py
+qwiic_vl53l5cx/qwiic_vl53l5cx.py
+qwiic_vl53l5cx/vl53l5cx_bin/default_configuration.bin
+qwiic_vl53l5cx/vl53l5cx_bin/default_xtalk.bin
+qwiic_vl53l5cx/vl53l5cx_bin/firmware.bin
+qwiic_vl53l5cx/vl53l5cx_bin/get_nvm_cmd.bin
+sparkfun_qwiic_vl53l5cx.egg-info/PKG-INFO
+sparkfun_qwiic_vl53l5cx.egg-info/SOURCES.txt
+sparkfun_qwiic_vl53l5cx.egg-info/dependency_links.txt
+sparkfun_qwiic_vl53l5cx.egg-info/requires.txt
+sparkfun_qwiic_vl53l5cx.egg-info/top_level.txt
