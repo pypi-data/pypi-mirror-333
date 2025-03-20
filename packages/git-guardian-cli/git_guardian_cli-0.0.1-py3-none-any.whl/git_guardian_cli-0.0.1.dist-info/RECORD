@@ -1,0 +1,10 @@
+git_guardian/__init__.py,sha256=jqNKM_7iWyFPjIgtE5NvWMkq_WZ58Imp4VnCpVJbFN0,14
+git_guardian/cli.py,sha256=sr6kKzbKtSS1-YKiW7Pzb7M9pGBK3garoYRHzz2v0rA,1173
+git_guardian/hook_manager.py,sha256=oTNODcuox6zn91ksnU0DRgphzDXbEYR28i3d16kk3wo,910
+git_guardian/reporter.py,sha256=JTZX5KbSxoH3QQRKZ30iX6V4XaVVhGIglrCBcsV8CKI,787
+git_guardian/scanner.py,sha256=uVFEcl17_MsxBViqdywZqa6mCoSkWIwKxLQxwVleU5o,4196
+git_guardian_cli-0.0.1.dist-info/METADATA,sha256=sEZM-yU4uHJDnQbLlEi3l6c3-QTiF5egmhL0Up5TKFs,4236
+git_guardian_cli-0.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+git_guardian_cli-0.0.1.dist-info/entry_points.txt,sha256=i7ClUekRl--YcNQ3L3G5mWlmjRoAsyeJ9Wq_j2o6CuA,54
+git_guardian_cli-0.0.1.dist-info/top_level.txt,sha256=BeL2RTbhp_EEhACwe1nbj1TxqE_hFn38yDLkitmHTYc,13
+git_guardian_cli-0.0.1.dist-info/RECORD,,
