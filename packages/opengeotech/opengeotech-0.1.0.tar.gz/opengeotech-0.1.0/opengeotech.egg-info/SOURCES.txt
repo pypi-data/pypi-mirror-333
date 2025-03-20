@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+opengeotech/__init__.py
+opengeotech/soil_mechanics.py
+opengeotech.egg-info/PKG-INFO
+opengeotech.egg-info/SOURCES.txt
+opengeotech.egg-info/dependency_links.txt
+opengeotech.egg-info/top_level.txt
+opengeotech/tests/__init__.py
+opengeotech/tests/test_soil_mechanics.py

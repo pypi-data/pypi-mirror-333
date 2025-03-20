@@ -1,0 +1,48 @@
+Metadata-Version: 2.2
+Name: opengeotech
+Version: 0.1.0
+Summary: A simple geotechnical engineering package
+Home-page: https://github.com/OpenGeotechnical/opengeotech-python
+Author: OpenGeotech Contributors
+Author-email: OpenGeotech Contributors <opengeotechnical@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/OpenGeotechnical/opengeotech-python
+Project-URL: Bug Tracker, https://github.com/OpenGeotechnical/opengeotech-python/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# OpenGeoTech
+
+A simple Python package for geotechnical engineering calculations.
+
+## Installation
+
+```bash
+pip install opengeotech
+```
+
+## Usage
+
+```python
+from opengeotech import effective_stress
+
+# Calculate effective stress
+sigma_prime = effective_stress(total_stress=100, pore_water_pressure=40)
+print(f"Effective stress: {sigma_prime} kPa")  # Output: Effective stress: 60 kPa
+```
+
+## Features
+
+- Calculate effective stress in soil
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
