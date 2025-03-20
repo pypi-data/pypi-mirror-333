@@ -1,0 +1,2 @@
+[console_scripts]
+skip-pip = pip_wrapper:main
