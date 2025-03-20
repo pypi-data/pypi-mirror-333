@@ -1,0 +1,64 @@
+[project]
+name = "promptpy"
+description = "A Python command line input and validation library"
+readme = "README.md"
+authors = [
+    { name = "Neil Martin", email = "neil@fourtrees.tech" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "rich>=13.9.4",
+]
+dynamic = ["version"]
+license = "MIT"
+keywords = ["prompt", "cli", "command line interface"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Repository = "https://github.com/fourtreestech/promptpy"
+Documentation = "https://promptpy.readthedocs.io/"
+
+[tool.hatch.version]
+path = "src/promptpy/__init__.py"
+
+[tool.mypy]
+packages = ["src.promptpy"]
+
+[tool.pytest.ini_options]
+addopts = "--cov-report term-missing --cov=promptpy tests/"
+
+[tool.tox]
+requires = ["tox>=4.24"]
+env_list = ["3.13", "3.12", "3.11", "3.10", "3.9"]
+
+[tool.tox.env_run_base]
+description = "Run tests under {base_python}"
+deps = ["pytest>=8", "pytest-cov>=6", "pytest-randomly>=3"]
+commands = [["pytest"]]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "pytest-randomly>=3.16.0",
+    "sphinx>=7.4.7",
+    "sphinx-rtd-theme>=3.0.2",
+    "tox>=4.24.2",
+]
