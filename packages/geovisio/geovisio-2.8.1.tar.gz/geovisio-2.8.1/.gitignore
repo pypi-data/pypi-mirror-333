@@ -1,0 +1,13 @@
+pictures
+*.env
+*.log
+picfs
+env
+.pytest_cache
+instance
+__pycache__
+config.py
+docker/models/
+.vscode/
+site/
+*.mo
