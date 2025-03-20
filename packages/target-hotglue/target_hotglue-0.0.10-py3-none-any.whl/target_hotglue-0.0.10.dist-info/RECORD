@@ -1,0 +1,14 @@
+target_hotglue/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+target_hotglue/auth.py,sha256=jU3yL5mtlf8p2VWsfoR_TaMjp8_APpQNPtPgHRIUIBc,3925
+target_hotglue/client.py,sha256=mN2mOQ99kayXjZmVR1MZ-UvmFtp0Zjo8GS99hf8vqtY,6349
+target_hotglue/common.py,sha256=PbtSXsj46YoVu9lZo-AfLft0sL8mxMADCymFjgh0t9E,259
+target_hotglue/lambda.py,sha256=TKD7F0BqQc6LdSvdCJ9W9JNclxBN9Q5aZ5CY2D_50ws,3477
+target_hotglue/rest.py,sha256=PGLQGF6I9qm1Fm9gAt1qEXaJj2Im_Bvv0Xr5Z0txjxo,3569
+target_hotglue/sinks.py,sha256=RzEHMkNHnf8PVSYta-IsSCxXRsDwEMRdRyYDHCGlrpk,449
+target_hotglue/target.py,sha256=DnVX299wy0CLHtCRcXCZvuJCzwwSJNjTzTJRf63a7J8,10231
+target_hotglue/target_base.py,sha256=H-67LyyYbJo5Pqg2bD45fujOei0W_uui7pfLG6N8Gy0,20886
+target_hotglue/tests/__init__.py,sha256=Z9FO6MA6D_tNn7mrdRyjym-_nCJZFeV_0jaFTHzHAHI,37
+target_hotglue/tests/test_core.py,sha256=GQxSrKr8hnQX0KfSbo31cU-VpmE5fsti5-8jWr2RqUE,662
+target_hotglue-0.0.10.dist-info/METADATA,sha256=qekBwyyIbhPgyxfV1nt9gQIPYTjkx53EzKd0uCeGsiI,641
+target_hotglue-0.0.10.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+target_hotglue-0.0.10.dist-info/RECORD,,
