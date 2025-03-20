@@ -1,0 +1,17 @@
+petroscope/__init__.py,sha256=GaH7n48jNEWO5yEBMotYqys4Q98r4OJj56pcTjVuByg,283
+petroscope/examples/segm_balancer.py,sha256=zUKeZ79YdTsVH7uXGvCNvYMib8XCfjKRW4jv19ckbk4,1429
+petroscope/examples/segm_resunet_inference.py,sha256=uwPOrKesewpXQugr7P-KSzoCmy-FLgf2sGRzegFPg44,1154
+petroscope/segmentation/__init__.py,sha256=pHjmVfzaTgnPnKJ5G9Ugi2H0nVFLhUUKt1lFRWR-Kpc,190
+petroscope/segmentation/classes.py,sha256=0qODlZiyZFyudt8EL7pg4JTdPyitSwjrVkPo0ZjglhE,4749
+petroscope/segmentation/eval.py,sha256=FmbMharfrc9GekFikod1zK6g2hHsMNqe-Q4T2-qdywg,9301
+petroscope/segmentation/metrics.py,sha256=HZ-Fe61D1Dl46USgJ1TzTHS4J7E3DhsQ_r9UQob-r4c,8494
+petroscope/segmentation/model.py,sha256=pJR2PK5k-gNRjePvIzo7JKw1NxpoMqg-67NhK3UNt6Y,1365
+petroscope/segmentation/balancer/__init__.py,sha256=ekh5NYOUuWKC21N6cN09MMeWce9zlB_0gxiwr8Aox2o,43
+petroscope/segmentation/balancer/balancer.py,sha256=eeQuhk0yBGg1kV58ZomSCcYG-Ki4uDy-FWAJUidrVWs,25488
+petroscope/segmentation/models/__init__.py,sha256=Rs6VY4Nd0dtflPvLC2Zp0KwWEl6GVdyLvqmeyganCFQ,78
+petroscope/segmentation/models/color_cluster/model.py,sha256=IZ8igi9VXDL240iOTcDlGlg9Lusvsw0AcRxwK2vr6sY,538
+petroscope-0.0.8.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+petroscope-0.0.8.dist-info/METADATA,sha256=4pewKBfTDUuBb-PACdlrZmqW0gd-UsrBIVvkRLt2h5A,7495
+petroscope-0.0.8.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+petroscope-0.0.8.dist-info/top_level.txt,sha256=_-qT374Q1iPuMhZFi-1vVNNdSdpPmUiasuKTNXZzgwM,11
+petroscope-0.0.8.dist-info/RECORD,,
