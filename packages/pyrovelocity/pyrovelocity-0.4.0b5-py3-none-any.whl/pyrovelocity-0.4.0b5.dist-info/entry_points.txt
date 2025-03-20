@@ -1,0 +1,4 @@
+[console_scripts]
+pyrovelocity=pyrovelocity.workflows.cli:main
+pyrovelocity-notebooks=pyrovelocity.workflows.notebooks:cli
+
