@@ -1,0 +1,187 @@
+# Wagtail Block Exchange
+
+A Wagtail plugin that allows copying and pasting blocks between pages, even across different Wagtail instances.
+
+## Features
+
+- Copy any StreamField block to a persistent clipboard
+- Paste blocks into any compatible StreamField
+- Works with all common Wagtail block types:
+  - Basic blocks (CharBlock, TextBlock, etc.)
+  - StructBlock, ListBlock, and StreamBlock
+  - RichTextBlock with preserved formatting
+  - ImageChooserBlock with automatic image reference resolution
+  - DocumentChooserBlock with document restoration
+  - PageChooserBlock with proper page linking
+  - DateTimeBlock and related date/time fields
+  - SnippetChooserBlock with model-aware restoration
+- Block clipboard accessible from the Wagtail admin menu
+- Compatible with any Wagtail project, not just FlexiblePages
+- Cross-instance compatibility for sharing blocks between Wagtail sites
+
+## Installation
+
+### From PyPI
+
+```bash
+pip install wagtail-block-exchange
+```
+
+### Manual Installation
+
+1. Clone this repository or download the source code
+2. Install the package in development mode:
+
+```bash
+cd wagtail-block-exchange
+pip install -e .
+```
+
+### Configuration
+
+1. Add `wagtail_block_exchange` to your `INSTALLED_APPS` in your Django settings:
+
+```python
+INSTALLED_APPS = [
+    # ...
+    'wagtail_block_exchange',
+    # ...
+]
+```
+
+2. Run migrations:
+
+```bash
+python manage.py migrate wagtail_block_exchange
+```
+
+3. Collect static files:
+
+```bash
+python manage.py collectstatic
+```
+
+## Usage
+
+### Copying blocks
+
+1. Edit any page with StreamField blocks
+2. Hover over a block to reveal its menu (with move, duplicate, and delete options)
+3. Click the "Copy to Clipboard" button in the block menu
+4. The block will be added to your clipboard for later use
+
+### Managing the clipboard
+
+1. Click on "Block Clipboard" in the Wagtail admin menu
+2. View all your copied blocks
+3. Delete blocks from the clipboard when no longer needed
+
+### Pasting blocks
+
+1. From the Block Clipboard page, click "Paste to Page" on any block
+2. Select the destination page
+3. The block will be added to the first compatible StreamField
+4. You'll be redirected to the edited page to see the result
+
+### Using the Insert Block Dialog
+
+When adding a new block to a StreamField, you'll see a section for "Clipboard Items" below the standard block types. Click on any clipboard item to insert it at the current location.
+
+### For End Users
+
+This package comes with pre-built JavaScript files, so users don't need to run any JavaScript build commands. Just install the package with pip and you're ready to go.
+
+### For Developers
+
+If you're making changes to the JavaScript code, you'll need to rebuild the JavaScript files:
+
+```bash
+# Install JavaScript dependencies
+npm install
+
+# Build the JavaScript bundle
+npm run build
+
+# Run collectstatic to copy the built files
+python manage.py collectstatic
+```
+
+## Development
+
+### Frontend Development
+
+The plugin uses modern JavaScript with ES6 modules, bundled using Webpack.
+
+1. Install frontend dependencies:
+
+```bash
+cd wagtail_block_exchange
+npm install
+```
+
+2. Start the development server:
+
+```bash
+npm run dev
+```
+
+3. Build for production:
+
+```bash
+npm run build
+```
+
+### Python Development
+
+1. Create a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Install development dependencies:
+
+```bash
+pip install -e ".[testing]"
+```
+
+3. Run tests:
+
+```bash
+pytest
+```
+
+## Releasing
+
+This package is designed to be easily installable without requiring end users to have npm or to build JavaScript files themselves. The package includes pre-built JavaScript files.
+
+### Using the Build Script
+
+To build the package with pre-built JavaScript files, run:
+
+```bash
+python build_package.py
+```
+
+This script will:
+
+1. Clean up previous build directories
+2. Build the JavaScript files using npm (if available)
+3. Copy the built files to the right locations
+4. Build both source and wheel distributions
+5. Verify that the JavaScript files are included in the distributions
+
+For more details, see the `RELEASE.md` file.
+
+## License
+
+This plugin is released under the MIT License.
+
+## Credits
+
+Developed by Rich Ross at Micro Team.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

@@ -1,0 +1,70 @@
+{% extends "wagtailadmin/base.html" %}
+{% load i18n wagtailadmin_tags %}
+
+{% block titletag %}{% trans "Block Clipboard" %}{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% versioned_static 'wagtail_block_exchange/css/block-exchange.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script src="{% versioned_static 'wagtail_block_exchange/js/block-exchange.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Block Clipboard" icon="clipboard" %}
+
+    <div class="nice-padding">
+        <p>
+            {% trans "This is where you can find blocks you've copied from pages. You can paste them into other pages from here." %}
+        </p>
+
+        {% if clipboard_items %}
+            <div class="clipboard-list">
+                {% for item in clipboard_items %}
+                    <div class="clipboard-item" data-clipboard-id="{{ item.id }}">
+                        <div class="clipboard-item__header">
+                            <h3 class="clipboard-item__title">
+                                {% if item.label and "Block from page" not in item.label %}
+                                    {{ item.label }}
+                                {% else %}
+                                    {{ item.block_type_display }} block copied from 
+                                    {% if item.source_page %}
+                                        <a href="{% url 'wagtailadmin_pages:edit' item.source_page %}">
+                                            {% if item.source_page_title %}{{ item.source_page_title }}{% else %}Page{% endif %} #{{ item.source_page }}
+                                        </a>
+                                    {% else %}
+                                        unknown page
+                                    {% endif %}
+                                {% endif %}
+                            </h3>
+                            <div class="clipboard-item__actions">
+                                <button class="button paste-block-button" data-clipboard-id="{{ item.id }}">
+                                    <i class="icon icon-paste"></i> {% trans "Paste to Page" %}
+                                </button>
+                                <button class="button delete-clipboard-item-button" data-clipboard-id="{{ item.id }}">
+                                    <i class="icon icon-bin"></i> {% trans "Remove" %}
+                                </button>
+                            </div>
+                        </div>
+                        <div class="clipboard-item__meta">
+                            <span>{% trans "Block type:" %} <strong>{{ item.block_type }}</strong></span>
+                            <span>•</span>
+                            <span>{% trans "Copied:" %} {{ item.timestamp|date:"M j, Y H:i" }}</span>
+                        </div>
+                        <div class="clipboard-item__preview">
+                            {{ item.preview }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="clipboard-empty">
+                <p>{% trans "You haven't copied any blocks to your clipboard yet." %}</p>
+                <p>{% trans "To copy a block, edit a page and click the 'Copy to Clipboard' button in the block menu." %}</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %} 

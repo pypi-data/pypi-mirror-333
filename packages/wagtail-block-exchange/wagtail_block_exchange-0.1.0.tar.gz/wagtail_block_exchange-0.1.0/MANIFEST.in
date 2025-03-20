@@ -1,0 +1,22 @@
+include LICENSE
+include README.md
+include RELEASE.md
+include package.json
+include webpack.config.js
+include .eslintrc.js
+include setup.cfg
+include build_package.py
+
+# Static files
+recursive-include static *
+recursive-include wagtail_block_exchange/static *
+recursive-include wagtail_block_exchange/templates *
+recursive-include wagtail_block_exchange/locale *
+
+# Explicitly include the built JS files
+include static/wagtail_block_exchange/js/dist/wagtail_block_exchange.js
+include wagtail_block_exchange/static/wagtail_block_exchange/js/dist/wagtail_block_exchange.js
+
+# Include Python files
+recursive-include wagtail_block_exchange *.py
+recursive-include migrations *.py 
