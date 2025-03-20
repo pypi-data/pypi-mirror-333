@@ -1,0 +1,55 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Subversion (SVN)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y subversion
+          svn --version  # Verify installation
+          svnadmin --version  # Verify installation
+
+      - name: Install dependencies
+        run: |
+          pip install .[development,test]
+
+      - run: codespell                                                 # Check for typo's
+      - run: isort --diff dfetch                                       # Checks import order
+      - run: black --check dfetch                                      # Checks code style
+      # - run: flake8 dfetch                                           # Checks pep8 conformance
+      - run: pylint dfetch                                             # Checks pep8 conformance
+      - run: ruff check dfetch                                         # Check using ruff
+      - run: mypy --strict dfetch                                      # Check types
+      - run: doc8 doc                                                  # Checks documentation
+      - run: pydocstyle dfetch                                         # Checks doc strings
+      - run: bandit -r dfetch                                          # Checks security issues
+      - run: xenon -b B -m A -a A dfetch                               # Check code quality
+      - run: pytest --cov=dfetch  tests                                # Run tests
+      - run: coverage run --source=dfetch --append -m behave features  # Run features tests
+      - run: coverage xml -o coverage.xml                              # Create XML report
+      - run: pyroma --directory --min=10 .                             # Check pyproject
+
+      - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@master
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: coverage.xml
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        if: "${{ (!!env.CODACY_PROJECT_TOKEN) }}"

@@ -1,0 +1,10 @@
+# This is a generated file by dfetch. Don't edit this, but edit the manifest.
+# For more info see https://dfetch.rtfd.io/en/latest/getting_started.html
+dfetch:
+  branch: master
+  hash: a49df5f5ddba75dca9cb946918277657
+  last_fetch: 09/02/2025, 20:06:22
+  patch: ''
+  remote_url: https://github.com/paxtonhare/demo-magic.git
+  revision: 8f338e9771502f71a77d6c779aed2dae614fdb0d
+  tag: ''

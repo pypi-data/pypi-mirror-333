@@ -1,0 +1,35 @@
+name: Landing-page
+
+on:
+  push:
+    branches:
+      - main
+      - feature/simplify-landing-page
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install .[docs]
+          pip install sphinx_design
+
+      - name: Build landing-page
+        run: |
+          cd doc/landing-page
+          make html
+      - name: Publish
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+        with:
+          dir: doc/landing-page/_build/html
+          repo: dfetch-org/dfetch-org.github.io
+          branch: main
+          token: ${{ secrets.GH_DFETCH_ORG_DEPLOY }}

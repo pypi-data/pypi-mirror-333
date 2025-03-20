@@ -1,0 +1,17 @@
+manifest:
+  version: 0.0
+
+  remotes:
+  - name: github
+    url-base: https://github.com/
+
+  projects:
+  - name: demo-magic
+    repo-path: paxtonhare/demo-magic.git
+    dst: doc/generate-casts/demo-magic
+    src: '*.sh'
+
+  - name: plantuml-c4
+    repo-path: plantuml-stdlib/C4-PlantUML.git
+    dst: doc/static/uml/styles/plantuml-c4
+    src: '*.puml'
