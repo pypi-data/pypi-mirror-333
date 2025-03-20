@@ -1,0 +1,25 @@
+[project]
+name = "healthinsight"
+version = "0.0.1"
+description = "A unified package for health indicators and indices e.g. BMI, BAI, etc."
+authors = [{ name = "Olajide Oluwafemi Richard", email = "olajidericharhard44@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+homepage = "https://github.com/Femvrich001/healthInsight-pkg"
+repository = "https://github.com/Femvrich001/healthInsight-pkg"
+keywords = ["health", "bmi", "bai", "body indices", "health insights"]
+
+
+# Add dependencies here (e.g., Pandas, NumPy)
+# pandas = "^1.5.3"
+# numpy = "^1.23.0"
+
+[project.optional-dependencies]
+dev = ["pytest", "radon"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
