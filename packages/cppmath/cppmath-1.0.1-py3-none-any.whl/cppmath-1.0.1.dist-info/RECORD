@@ -1,0 +1,12 @@
+cppmath/__init__.py,sha256=7KIvRITumX671682CAvaYPkzpVCn-kHD8ksNu_h6g0k,3065
+cppmath/cache.py,sha256=aamHovwFScdT5RZgTpO8YpuQwvPvP7LyCKmzd4Rw_3A,21929
+cppmath/core.py,sha256=kFDZWuPTLtpKXzih5737PCcMgTpX3rm6xvRLRqRvU78,5015
+cppmath/integration.py,sha256=n0Qq1zV5fIBzM3kBb3zyisPiiE83WVbWHT5A0K08o58,8696
+cppmath/linear.py,sha256=oXYTu0FICeOEqB1laQGzzuM2mueQp_1SaQYvPOdAeFs,15083
+cppmath/optimization.py,sha256=DJn9Rs9vfBBmsaIHnOsUiciu2Eee3mSvBVyZ0y5dq0k,10544
+cppmath/utils.py,sha256=a_Xi68Xya0U3LS8ogX0tXB7CYUc3tvEnQKfLvZyJqHo,11165
+cppmath-1.0.1.dist-info/LICENSE,sha256=vPE3yNW_zKy3M1C1sS4Hmm5KnPJksMSIgXjBN7NvpzQ,1086
+cppmath-1.0.1.dist-info/METADATA,sha256=XtochallFcbYd-7ifB0zcxJP5dvi-Ldme6P9NGqphOo,2160
+cppmath-1.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+cppmath-1.0.1.dist-info/top_level.txt,sha256=jY5ghAcsEoFf-7K3dyXhOAxPDbIy0njqpRJUjzXvCF0,8
+cppmath-1.0.1.dist-info/RECORD,,
