@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+stitch_ai/__init__.py
+stitch_ai/sdk.py
+stitch_ai.egg-info/PKG-INFO
+stitch_ai.egg-info/SOURCES.txt
+stitch_ai.egg-info/dependency_links.txt
+stitch_ai.egg-info/entry_points.txt
+stitch_ai.egg-info/requires.txt
+stitch_ai.egg-info/top_level.txt
+tests/test_sdk.py
