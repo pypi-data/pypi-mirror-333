@@ -1,0 +1,10 @@
+llm_trainer/__init__.py,sha256=gF9b04VRRn0bat0ZGOJqXdehhvFXG-qLAvuQlvHTi6o,166
+llm_trainer/dataset/DataLoader.py,sha256=NJVdKS5UuD21Dqrte1ybqGZmSVqXOnCiZdV2Q-rg5fA,2673
+llm_trainer/dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_trainer/dataset/create_dataset.py,sha256=gseHWEbQoFNDM1ETo4_tZqyudvdXQz66kBQDa-aTckc,7041
+llm_trainer/trainer/LLMTrainer.py,sha256=0DYUzEVGJcMx68hhqyu0ftrSq4rfUYh5W7mTk68d8OM,12709
+llm_trainer/trainer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_trainer-0.0.10.dist-info/METADATA,sha256=5jBoSZ-hRHq4kpcse7GqPbcWCKiA14_c43_pTtZowTk,6303
+llm_trainer-0.0.10.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+llm_trainer-0.0.10.dist-info/top_level.txt,sha256=LtRFg28i0QIG7iBCD2t095oSco99LCtkijibS9cMGik,12
+llm_trainer-0.0.10.dist-info/RECORD,,
