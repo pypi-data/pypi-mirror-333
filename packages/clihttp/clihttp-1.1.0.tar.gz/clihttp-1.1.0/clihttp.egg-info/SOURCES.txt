@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+clihttp/__init__.py
+clihttp/cli.py
+clihttp.egg-info/PKG-INFO
+clihttp.egg-info/SOURCES.txt
+clihttp.egg-info/dependency_links.txt
+clihttp.egg-info/entry_points.txt
+clihttp.egg-info/requires.txt
+clihttp.egg-info/top_level.txt

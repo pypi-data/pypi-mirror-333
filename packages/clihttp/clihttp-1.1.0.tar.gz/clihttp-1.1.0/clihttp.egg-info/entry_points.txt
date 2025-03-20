@@ -1,0 +1,2 @@
+[console_scripts]
+clihttp = clihttp.cli:main
