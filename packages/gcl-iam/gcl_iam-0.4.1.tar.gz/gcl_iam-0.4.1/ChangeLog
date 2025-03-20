@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.4.1
+-----
+
+* Update HTTP status code for InvalidAuthTokenError in error handling middleware
