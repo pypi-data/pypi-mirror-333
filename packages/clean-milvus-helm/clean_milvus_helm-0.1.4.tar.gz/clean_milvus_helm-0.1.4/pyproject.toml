@@ -1,0 +1,28 @@
+[project]
+name = "clean-milvus-helm"
+version = "0.1.4"
+description = "A tool to clean up old Helm releases"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+dependencies = [
+    "argparse>=1.4.0",
+]
+requires-python = ">=3.7"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+clean-milvus-helm = "clean_milvus_helm.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clean_milvus_helm"]
+
+[tool.hatch.build]
+artifacts = [
+    "src/clean_milvus_helm/*.py",
+]
