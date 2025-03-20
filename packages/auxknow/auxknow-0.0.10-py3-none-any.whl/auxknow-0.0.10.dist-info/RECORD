@@ -1,0 +1,10 @@
+auxknow/__init__.py,sha256=63naReAptrETShsCfSdKGNX5VnbzrDg17v6L5jdMM2k,330
+auxknow/auxknow.py,sha256=IOSleR6Q-ZCQNy-voxLp4HBgH6ZQAupSMSNUh08Vtjg,33760
+auxknow/auxknow_search.py,sha256=4XRRfkQRvWCVYg334hfqRAFqivWZjExUSCFgM-TNUaw,2512
+auxknow/constants.py,sha256=R4tbAqAACGmJOjx4OSrRbjphGSu_zOgePcqpQATEvDY,642
+auxknow/printer.py,sha256=wENtpUUagIMFGPRdJu8mwqJAr2Lm7ZCSTmIzCeHWDxk,9420
+auxknow-0.0.10.dist-info/LICENSE,sha256=21Lj2q2SYKHMY4768_a3pr3q0jY2VYamAHipoodhMDc,34273
+auxknow-0.0.10.dist-info/METADATA,sha256=8i02ExcDj5DKy4eMarWAUA5obo7rKKTtCtmTa6p_zvE,6307
+auxknow-0.0.10.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+auxknow-0.0.10.dist-info/top_level.txt,sha256=znOl-iEc4fD-Flh2QVgaOlrD8Pm4jsvbk5WBORyofzc,8
+auxknow-0.0.10.dist-info/RECORD,,
