@@ -1,0 +1,13 @@
+prefix=/Users/mshamrai/Code/macapptree/.conda
+exec_prefix=/Users/mshamrai/Code/macapptree/.conda
+libdir=/Users/mshamrai/Code/macapptree/.conda/lib
+sharedlibdir=/Users/mshamrai/Code/macapptree/.conda/lib
+includedir=/Users/mshamrai/Code/macapptree/.conda/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
