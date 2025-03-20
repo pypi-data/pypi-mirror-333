@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pasqui.egg-info/PKG-INFO
+pasqui.egg-info/SOURCES.txt
+pasqui.egg-info/dependency_links.txt
+pasqui.egg-info/requires.txt
+pasqui.egg-info/top_level.txt
+src/__init__.py
+src/module1.py
+src/module2.py
+src/module3.py
+src/module4.py

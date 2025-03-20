@@ -1,0 +1,13 @@
+pdfplumber
+python-docx
+openai
+tiktoken
+pandas
+scipy
+langchain
+kor
+requests
+markdownify
+scikit-learn
+langchain-community
+langchain-openai
