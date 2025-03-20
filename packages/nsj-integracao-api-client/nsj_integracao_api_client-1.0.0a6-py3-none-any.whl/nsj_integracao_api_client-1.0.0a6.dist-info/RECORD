@@ -1,0 +1,15 @@
+nsj_integracao_api_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/client_console copy.py,sha256=j_Lz-H0UiRqPY54pGAzsyfAggyIB-aTpH_9gL0kl6zQ,7445
+nsj_integracao_api_client/client_console.py,sha256=4zmH0F5kXfTkY2P6CFSt769XhRNSYW0oGivpkcZbJnA,9804
+nsj_integracao_api_client/dao/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/dao/integracao.py,sha256=QA29BA3KwNZmgHNmh2tdC4I2YNPzCLim9Fy_1yrV7ko,4239
+nsj_integracao_api_client/dto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/entity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/infra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/infra/injector_factory.py,sha256=5XKhtJuSlAvSrtjr4UwToyGVo0swrZtSlf7mabZAhco,4113
+nsj_integracao_api_client/service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/service/integrador.py,sha256=P4V0XUZbm85IYSfssWFq5R26vu9dvwwPY1fiX6D9LsU,38473
+nsj_integracao_api_client-1.0.0a6.dist-info/METADATA,sha256=udefbX1d5prEcm0i0lKePTBojUyXdqiAUeQT-q6NAmM,1263
+nsj_integracao_api_client-1.0.0a6.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+nsj_integracao_api_client-1.0.0a6.dist-info/top_level.txt,sha256=FjWIgsVfsw17Fyk-F7-LI0BVSwxNx4Q7lqjGXQvN2C8,26
+nsj_integracao_api_client-1.0.0a6.dist-info/RECORD,,
