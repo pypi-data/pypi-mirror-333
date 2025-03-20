@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <record id="view_email_template_tree_inherit" model="ir.ui.view">
+    <field name="name">view.email_template.tree.inherit</field>
+    <field name="model">mail.template</field>
+    <field name="inherit_id" ref="mail.email_template_tree"/>
+
+    <field name="arch" type="xml">
+      <field name="name" position="after">
+        <field name="category" />
+      </field>
+    </field>
+  </record>
+
+  <record id="view_email_template_form_inherit" model="ir.ui.view">
+    <field name="name">view.email_template.form.inherit</field>
+    <field name="model">mail.template</field>
+    <field name="inherit_id" ref="mail.email_template_form"/>
+
+    <field name="arch" type="xml">
+      <field name="model_id" position="after">
+        <field name="category" />
+      </field>
+    </field>
+  </record>
+
+  <record id="view_email_template_search_inherit" model="ir.ui.view">
+    <field name="name">view.email_template.search.inherit</field>
+    <field name="model">mail.template</field>
+    <field name="inherit_id" ref="mail.view_email_template_search"/>
+
+    <field name="arch" type="xml">
+      <filter name="smtpserver" position="before">
+        <filter string="Category" name="category" domain="[]" context="{'group_by': 'category'}"/>
+      </filter>
+    </field>
+  </record>
+
+  <record id="action_email_template_tree_all_inherit" model="ir.actions.act_window">
+    <field name="name">Email Templates</field>
+    <field name="res_model">mail.template</field>
+    <field name="context">{'search_default_category': True}</field>
+  </record>
+
+</odoo>
