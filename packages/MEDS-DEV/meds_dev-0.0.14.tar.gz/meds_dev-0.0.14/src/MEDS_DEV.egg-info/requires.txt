@@ -1,0 +1,13 @@
+meds==0.3.3
+es-aces==0.6.1
+hydra-core
+meds-evaluation==0.0.3
+validators
+
+[dev]
+pre-commit<4
+
+[tests]
+pytest
+pytest-cov
+meds_testing_helpers

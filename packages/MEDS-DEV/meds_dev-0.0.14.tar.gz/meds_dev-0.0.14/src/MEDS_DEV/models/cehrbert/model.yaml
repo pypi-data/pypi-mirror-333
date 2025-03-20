@@ -1,0 +1,23 @@
+metadata:
+  description: >-
+    The CEHR-BERT model. See the referenced paper for full details. This version of the CEHR-BERT model uses
+    default hyperparameters. TODO(@ChaoPang): Add more details here.
+  links:
+    - https://proceedings.mlr.press/v158/pang21a.html
+  contacts:
+    - name: "Chao Pang"
+      github_username: "ChaoPang"
+commands:
+  unsupervised:
+    train: >-
+      python {model_dir}/pretrain_cehrbert.py output_dir={output_dir}
+      dataset_dir={dataset_dir} demo={demo}
+  supervised:
+    train: >-
+      python {model_dir}/finetune_cehrbert.py output_dir={output_dir}
+      model_initialization_dir={model_initialization_dir}
+      dataset_dir={dataset_dir} labels_dir={labels_dir} demo={demo}
+    predict: >-
+      python {model_dir}/generate_cehrbert_predictions.py labels_dir={labels_dir}
+      output_dir={output_dir} split={split} dataset_dir={dataset_dir}
+      model_initialization_dir={model_initialization_dir}
