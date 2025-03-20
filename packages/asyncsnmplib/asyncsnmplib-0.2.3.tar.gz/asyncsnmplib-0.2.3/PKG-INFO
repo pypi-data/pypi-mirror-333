@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: asyncsnmplib
+Version: 0.2.3
+Summary: Library for async SNMP queries
+Home-page: https://github.com/cesbit/asyncsnmplib
+Download-URL: https://github.com/cesbit/asyncsnmplib/tarball/v0.2.3
+Author: Cesbit
+Author-email: info@cesbit.com
+License: UNKNOWN
+Keywords: snmp,async
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+[![CI](https://github.com/cesbit/asyncsnmplib/workflows/CI/badge.svg)](https://github.com/cesbit/asyncsnmplib/actions)
+[![Release Version](https://img.shields.io/github/release/cesbit/asyncsnmplib)](https://github.com/cesbit/asyncsnmplib/releases)
+
+# Python Async SNMP Library
+
+## Installation
+
+```
+pip install asyncsnmplib
+```
+
+
