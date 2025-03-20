@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bonky"
+version = "0.0.1"
+description = "Test"
+authors = [{ name = "ribbitx", email = "mail@ribbitx.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+dependencies = ["requests"]

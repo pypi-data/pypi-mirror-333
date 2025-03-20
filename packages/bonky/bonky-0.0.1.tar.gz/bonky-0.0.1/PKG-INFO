@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: bonky
+Version: 0.0.1
+Summary: Test
+Author-email: ribbitx <mail@ribbitx.com>
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# bonky
+
+A Python package created with PyPi Builder.

@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+bonky/__init__.py
+bonky.egg-info/PKG-INFO
+bonky.egg-info/SOURCES.txt
+bonky.egg-info/dependency_links.txt
+bonky.egg-info/requires.txt
+bonky.egg-info/top_level.txt
