@@ -1,0 +1,79 @@
+Metadata-Version: 2.4
+Name: crypto-podcast-summarizer
+Version: 0.1.6
+Summary: A tool to download, transcribe, summarize, and generate voice summaries for crypto-related podcasts.
+Author-email: Abhinay Yarlagadda <Abhinay.Yarlagadda@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Keywords: AI,crypto,podcast,summarizer,transcription
+Requires-Python: >=3.8
+Requires-Dist: feedparser>=6.0.10
+Requires-Dist: google-genai>=0.1.0
+Requires-Dist: kokoro>=0.1
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: openai-whisper>=20231117
+Requires-Dist: requests>=2.31.0
+Requires-Dist: soundfile>=0.12.1
+Requires-Dist: torch>=2.0.0
+Description-Content-Type: text/markdown
+
+# Crypto Podcast Summarizer
+
+A Python tool to download podcast episodes, transcribe them, generate summaries, and optionally create voice summaries, tailored for crypto-related content.
+
+## Prerequisites
+
+This tool requires ffmpeg for audio processing. Please install it based on your operating system:
+
+**macOS:**
+
+```bash
+brew install ffmpeg
+```
+
+**Windows**
+
+```bash
+choco install ffmpeg
+```
+
+**Linux**
+
+```bash
+sudo apt-get install ffmpeg
+```
+
+## Installation
+```
+pip install crypto-podcast-summarizer
+```
+
+## Usage
+```bash
+crypto-podcast-summarizer
+```
+
+## Google API Key Setup
+
+This tool uses the Google GenAI API for generating summaries. You must provide an API key to enable this functionality.
+
+### Obtaining a Google GenAI API Key
+
+1. **Visit [Google AI Studio](https://aistudio.google.com/apikey).**
+2. Click **Get API Key**.
+3. Select an existing Google project or create a new one.
+4. Enable the Generative AI API if prompted.
+5. Copy your newly generated API key and paste it when prompted.
+
+### Providing the API Key
+
+When you run the tool (e.g., `crypto-podcast-summarizer`) for the first time, you will be prompted to enter your Google GenAI API key. The key will then be saved to `api_key.txt` in the current directory for future use.
+
+#### Alternative Method
+
+If you prefer not to be prompted, you can:
+1. Create a file named `api_key.txt` in the same directory as the tool.
+2. Paste your API key into this file before running the tool.
+
+
+
