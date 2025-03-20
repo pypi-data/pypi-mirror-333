@@ -1,0 +1,6 @@
+pandas
+mysql-connector-python
+pillow
+python-docx
+openpyxl
+PyMuPDF
