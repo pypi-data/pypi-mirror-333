@@ -1,0 +1,8 @@
+def test_func():
+    return True
+
+    async def load_bytecode(self, bucket: Bucket) -> t.Optional[bytes]:  # type: ignore[override]
+        code = await self.client.get(self.get_bucket_name(bucket.key))  # type: ignore
+
+x = 1  # type: ignore
+y = 2  # noqa
