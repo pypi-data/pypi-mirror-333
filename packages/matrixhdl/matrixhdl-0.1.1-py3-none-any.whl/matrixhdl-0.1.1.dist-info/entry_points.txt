@@ -1,0 +1,6 @@
+[console_scripts]
+export_command=matrixhdl.mh_export:main
+hyperlink_command=matrixhdl.hyperlink:main
+import_command=matrixhdl.import:main
+ports_command=matrixhdl.ports:main
+
