@@ -1,0 +1,9 @@
+LICENSE
+README.md
+blockrand_q_designer.py
+setup.py
+blockrand_q_designer.egg-info/PKG-INFO
+blockrand_q_designer.egg-info/SOURCES.txt
+blockrand_q_designer.egg-info/dependency_links.txt
+blockrand_q_designer.egg-info/requires.txt
+blockrand_q_designer.egg-info/top_level.txt
