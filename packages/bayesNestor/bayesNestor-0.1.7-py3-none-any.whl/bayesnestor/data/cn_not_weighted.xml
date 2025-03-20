@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<BIF VERSION="0.3">
+  <NETWORK>
+    <NAME>cn_not_weighted</NAME>
+    <VARIABLE TYPE="nature">
+      <NAME>AAM</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>Active_Reflective_Dim</NAME>
+      <OUTCOME>Active</OUTCOME>
+      <OUTCOME>Reflective</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>BO</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>CT</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>EX</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>LG</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>MS</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>QU</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>SU</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>Sensory_Intuitive_Dim</NAME>
+      <OUTCOME>Sensory</OUTCOME>
+      <OUTCOME>Intuitive</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>Sequential_Global_Dim</NAME>
+      <OUTCOME>Sequential</OUTCOME>
+      <OUTCOME>Global</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>TAM</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>VAM</NAME>
+      <OUTCOME>Yes</OUTCOME>
+      <OUTCOME>No</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <VARIABLE TYPE="nature">
+      <NAME>Visual_Verbal_Dim</NAME>
+      <OUTCOME>Visual</OUTCOME>
+      <OUTCOME>Verbal</OUTCOME>
+      <PROPERTY />
+    </VARIABLE>
+    <DEFINITION>
+      <FOR>AAM</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.3333333333333333 0.6666666666666667 0.3333333333333333 0.6666666666666667 0.5 0.5 0.5 0.5 0.3333333333333333 0.6666666666666667 0.3333333333333333 0.6666666666666667 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.6666666666666666 0.33333333333333337 0.6666666666666666 0.33333333333333337 0.5 0.5 0.5 0.5 0.6666666666666666 0.33333333333333337 0.6666666666666666 0.33333333333333337 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>Active_Reflective_Dim</FOR>
+      <TABLE>0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>BO</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>CT</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>EX</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.8 0.19999999999999996 0.6 0.4 0.6 0.4 0.4 0.6 0.6 0.4 0.4 0.6 0.4 0.6 0.2 0.8 0.8 0.19999999999999996 0.6 0.4 0.6 0.4 0.4 0.6 0.6 0.4 0.4 0.6 0.4 0.6 0.2 0.8 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>LG</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <TABLE>0.0 1.0 0.3333333333333333 0.6666666666666667 0.3333333333333333 0.6666666666666667 0.6666666666666666 0.33333333333333337 0.3333333333333333 0.6666666666666667 0.6666666666666666 0.33333333333333337 0.6666666666666666 0.33333333333333337 1.0 0.0 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>MS</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>QU</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.5 0.5 0.6666666666666666 0.33333333333333337 0.3333333333333333 0.6666666666666667 0.5 0.5 0.5 0.5 0.6666666666666666 0.33333333333333337 0.3333333333333333 0.6666666666666667 0.5 0.5 0.5 0.5 0.6666666666666666 0.33333333333333337 0.3333333333333333 0.6666666666666667 0.5 0.5 0.5 0.5 0.6666666666666666 0.33333333333333337 0.3333333333333333 0.6666666666666667 0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>SU</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.0 1.0 0.5 0.5 0.5 0.5 1.0 0.0 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>Sensory_Intuitive_Dim</FOR>
+      <TABLE>0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>Sequential_Global_Dim</FOR>
+      <TABLE>0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>TAM</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.3333333333333333 0.6666666666666667 0.3333333333333333 0.6666666666666667 0.5 0.5 0.5 0.5 0.3333333333333333 0.6666666666666667 0.3333333333333333 0.6666666666666667 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.6666666666666666 0.33333333333333337 0.6666666666666666 0.33333333333333337 0.5 0.5 0.5 0.5 0.6666666666666666 0.33333333333333337 0.6666666666666666 0.33333333333333337 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>VAM</FOR>
+      <GIVEN>Active_Reflective_Dim</GIVEN>
+      <GIVEN>Sensory_Intuitive_Dim</GIVEN>
+      <GIVEN>Visual_Verbal_Dim</GIVEN>
+      <GIVEN>Sequential_Global_Dim</GIVEN>
+      <TABLE>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </TABLE>
+    </DEFINITION>
+    <DEFINITION>
+      <FOR>Visual_Verbal_Dim</FOR>
+      <TABLE>0.5 0.5 </TABLE>
+    </DEFINITION>
+  </NETWORK>
+</BIF>
