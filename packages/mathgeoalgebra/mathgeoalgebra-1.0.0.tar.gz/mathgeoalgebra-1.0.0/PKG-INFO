@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: mathgeoalgebra
+Version: 1.0.0
+Summary: A custom package for geometry, algebra and matrix
+Author: Rozykul Islam
+License: MIT
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary

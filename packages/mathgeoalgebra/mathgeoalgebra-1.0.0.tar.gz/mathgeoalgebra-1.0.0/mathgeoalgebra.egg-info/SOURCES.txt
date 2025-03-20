@@ -1,0 +1,10 @@
+setup.py
+mathgeoalgebra/__init__.py
+mathgeoalgebra/algebra.py
+mathgeoalgebra/geometry.py
+mathgeoalgebra/matrix.py
+mathgeoalgebra.egg-info/PKG-INFO
+mathgeoalgebra.egg-info/SOURCES.txt
+mathgeoalgebra.egg-info/dependency_links.txt
+mathgeoalgebra.egg-info/requires.txt
+mathgeoalgebra.egg-info/top_level.txt
