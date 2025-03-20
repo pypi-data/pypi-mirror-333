@@ -1,0 +1,86 @@
+Metadata-Version: 2.2
+Name: pytubex-yt
+Version: 1.1.1
+Summary: A CLI-based YouTube video & audio downloader
+Author: JfrzxCode
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: yt-dlp
+Requires-Dist: requests
+Requires-Dist: colorama
+
+# PyTubeX - YouTube Video & Audio Downloader
+
+## Overview
+PyTubeX is a command-line tool for downloading YouTube videos and audio files with high quality. It uses `yt-dlp` for efficient downloading and supports MP3 and MP4 formats.
+
+## Features
+- Download YouTube videos in MP4 format.
+- Extract audio in high-quality MP3 format.
+- Automatic folder organization.
+- Simple and intuitive CLI interface.
+- Saves download history.
+
+## Installation
+
+You can install PyTubeX directly from PyPI:
+
+```sh
+pip install pytubex-yt
+```
+
+Or, clone the repository:
+
+```sh
+git clone https://github.com/jfrzz/PyTubeX.git
+```
+
+Navigate into the folder:
+
+```sh
+cd PyTubeX
+```
+
+Ensure you have Python installed, then manually install dependencies:
+
+```sh
+pip install colorama requests yt_dlp
+```
+
+## Usage
+Run the script:
+
+```sh
+python -m pytubex
+```
+
+### Options:
+1. **Download Video (MP4)** - Enter a YouTube URL to download as MP4.
+2. **Download Audio (MP3)** - Enter a YouTube URL to download as MP3.
+3. **View Download History** - Displays previously downloaded files.
+4. **Exit** - Closes the program.
+
+## Folder Structure
+```
+PyTubeX/
+│── downloads/
+│   ├── MP3/
+│   ├── MP4/
+│── pytubex.py
+│── history.txt
+│── README.md
+```
+
+## Dependencies
+- Python 3.6+
+- `yt-dlp`
+- `requests`
+- `colorama`
+
+## License
+This project is licensed under the MIT License.
+
+## Author
+Developed by **@JfrzxCode**.
+
