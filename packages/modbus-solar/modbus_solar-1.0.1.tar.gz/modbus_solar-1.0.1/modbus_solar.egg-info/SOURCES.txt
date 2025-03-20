@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+modbus_solar.egg-info/PKG-INFO
+modbus_solar.egg-info/SOURCES.txt
+modbus_solar.egg-info/dependency_links.txt
+modbus_solar.egg-info/entry_points.txt
+modbus_solar.egg-info/requires.txt
+modbus_solar.egg-info/top_level.txt

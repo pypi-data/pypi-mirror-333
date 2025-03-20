@@ -1,0 +1,2 @@
+[console_scripts]
+modbus-solar-get-all = modbus_solar:get_all

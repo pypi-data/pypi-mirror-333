@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: modbus_solar
+Version: 1.0.1
+Summary: A small package to pull stats from a Renogy Solar Charge Controller
+Home-page: https://gitlab.com/boopzz/modbus-solar
+Author: boopzz
+Author-email: boopzz <boopzz@pm.me>
+License: MIT
+Project-URL: Homepage, https://gitlab.com/boopzz/modbus-solar
+Project-URL: Issues, https://gitlab.com/boopzz/modbus-solar/issues
+Keywords: modbus,solar,renogy
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Modbus Solar
+
+[![pypi](https://img.shields.io/pypi/v/modbus-solar.svg)](https://pypi.org/project/modbus-solar/)
+[![python](https://img.shields.io/pypi/pyversions/modbus-solar.svg)](https://pypi.org/project/modbus-solar/)
+[![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
+
+## Intro
+
+This project is to pull stats out of a Renogy DCC50S solar charge controller.
+
+The connection will be made via Modbus/RS485.
+
+The end state will be to output stats in `json` format ready to be ingested into something like an InfluxDb instance or to publish to a MQTT Topic.
+
+## Pre-Reqs
+
+You require a Modbus/RS485 connector, most probably will be a USB varient. Most applications will be using a small IoT device or Raspberry Pi to serve the USB device and then connect back to a logging system of some sort.
+
+The Modbus parameters are hard coded but variabalised for the device ID and the salve address which could change.
+
+## Using
+
+### To install
+
+```bash
+pip install modbus-solar
+```
+
+### To Use
+
+1. `python`
+
+    ```python
+    from modbus_solar import get_all
+
+    stats = get_all()
+    print(stats)
+    ```
+
+1. `bash`
+
+    ```bash
+    modbus-solar-get-all
+    ```
+
+## Releases
+
+My aim is to keep to [semver versioning](https://semver.org/)
+
+The pipeline will push to PyPi so this should be the main way of getting the recent packages. But the pipeline will also create releases in Gitlab for versions that are tagged
+
+## Development
+
+My development has taken place using NixOS, I've included the `shell.nix` for anyone that requires it.
+
+However the build pipeline is performed using the basic python:3.11 image from Gitlab.
