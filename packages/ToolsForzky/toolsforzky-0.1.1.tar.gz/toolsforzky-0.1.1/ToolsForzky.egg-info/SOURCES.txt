@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ToolsForzky/ToolsForzky.py
+ToolsForzky/_init_.py
+ToolsForzky.egg-info/PKG-INFO
+ToolsForzky.egg-info/SOURCES.txt
+ToolsForzky.egg-info/dependency_links.txt
+ToolsForzky.egg-info/top_level.txt
