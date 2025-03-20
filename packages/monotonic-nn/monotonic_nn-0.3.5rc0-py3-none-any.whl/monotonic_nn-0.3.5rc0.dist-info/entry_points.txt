@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+airt = airt._modidx:d
+
