@@ -1,0 +1,7 @@
+numpy
+pandas
+scikit-rf
+matplotlib
+scipy
+scikit-learn
+art
