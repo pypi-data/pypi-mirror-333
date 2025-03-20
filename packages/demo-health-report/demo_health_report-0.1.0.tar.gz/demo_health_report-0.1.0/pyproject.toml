@@ -1,0 +1,16 @@
+ [tool.poetry]
+name = "demo-health-report"
+version = "0.1.0"
+description = "demo"
+authors = ["Amrutha <amamrutha04@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "health_report"}]  # ✅ Moved to correct location
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django = "^4.0"
+djangorestframework = "^3.14"
+
+[tool.poetry.scripts]
+health-report = "manage:main"  # ✅ Corrected script entry
