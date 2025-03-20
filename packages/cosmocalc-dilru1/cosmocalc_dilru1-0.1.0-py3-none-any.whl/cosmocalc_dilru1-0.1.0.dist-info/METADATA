@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: cosmocalc-dilru1
+Version: 0.1.0
+Summary: A package for cosmological calculations
+Author-email: dilruwan <dilrushanaka@gmail.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
