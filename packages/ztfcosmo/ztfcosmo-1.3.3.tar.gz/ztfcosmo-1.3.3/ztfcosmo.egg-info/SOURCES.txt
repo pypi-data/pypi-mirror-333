@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ztfcosmo/__init__.py
+ztfcosmo/io.py
+ztfcosmo/lightcurve.py
+ztfcosmo/spectrum.py
+ztfcosmo/utils.py
+ztfcosmo.egg-info/PKG-INFO
+ztfcosmo.egg-info/SOURCES.txt
+ztfcosmo.egg-info/dependency_links.txt
+ztfcosmo.egg-info/not-zip-safe
+ztfcosmo.egg-info/requires.txt
+ztfcosmo.egg-info/top_level.txt
