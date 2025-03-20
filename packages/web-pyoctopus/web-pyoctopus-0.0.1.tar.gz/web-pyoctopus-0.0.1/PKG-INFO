@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: web-pyoctopus
+Version: 0.0.1
+Summary: PyOctopus Python Web Framework built for learning purposes.
+Home-page: UNKNOWN
+Author: Muhammad Rajib
+Author-email: muhammadrajib199701@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+PyOctopus Python Web Framework built for learning purposes.
+
