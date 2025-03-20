@@ -1,0 +1,93 @@
+[project]
+name = "bada"
+version = "0.1.1"
+description = "Package for analysis of biophysical assays, such as DSF"
+readme = "README.md"
+authors = [
+    { name = "Willi Gottstein", email = "willi.gottstein@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "dtaidistance>=2.3.13",
+    "numpy>=2.2.3",
+    "pandas>=2.2.3",
+    "pandera>=0.23.0",
+    "plotly>=6.0.0",
+    "scipy>=1.15.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.396",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "pytest>=8.3.5",
+    "ruff>=0.9.9",
+    "pre-commit>=4.1.0",
+]
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
+
+[tool.pyright]
+include = ["src"]
+exclude = [".venv"]
+venvPath = "."
+venv = ".venv"
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.13"
+typeCheckingMode = "basic"
+
+
+[tool.ruff]
+lint.select = ["E", "F", "I"]
+lint.fixable = ["I"]
+lint.extend-fixable = ["I"]
+line-length = 100
+fix = true
+
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["bada"]
+force-sort-within-sections = true
+combine-as-imports = true
+
+[tool.ruff.format]
+skip-magic-trailing-comma = false
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
