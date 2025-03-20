@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: macrosim
+Version: 0.0.1
+Summary: Macroeconomic simulation engine with PySR symbolic regression
+License: MIT
+Author: Ege Güney Kıymaç
+Author-email: guneykiymac@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: jedi (>=0.18.2)
+Requires-Dist: numpy (>=1.24.3)
+Requires-Dist: pandas (>=2.0.2)
+Requires-Dist: pysr (>=1.5.2)
+Requires-Dist: scikit-learn (>=1.2.2)
+Project-URL: Homepage, https://github.com/GongJr0/MacroSim
+Description-Content-Type: text/markdown
+
+# MacroSim
+ 
+
