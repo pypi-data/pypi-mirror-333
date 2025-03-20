@@ -1,0 +1,94 @@
+# import pandas as pd
+# import numpy as np
+# import pymc as pm
+# import bambi as bmb
+# import arviz as az
+# from scia.preprocess import prepare_scd
+# from scia.utils import revise_names
+
+# def bayesplm(data, dvar="values", pvar="phase", mvar="mt", 
+#              model="W", contrast_level="first", contrast_slope="first",
+#              trend=True, level=True, slope=True,
+#              random_trend=False, random_level=False, random_slope=False,
+#              fixed=None, random=None, update_fixed=None, samples=1000):
+#     """
+#     Bayesian Piecewise Linear Model using MCMC.
+
+#     Parameters:
+#     - data (pd.DataFrame): Single-case dataset.
+#     - dvar (str): Dependent variable column.
+#     - pvar (str): Phase variable column.
+#     - mvar (str): Measurement time variable column.
+#     - model (str): Dummy coding model (default: "W").
+#     - contrast_level (str): Contrast method for level change.
+#     - contrast_slope (str): Contrast method for slope change.
+#     - trend (bool): Include trend parameter.
+#     - level (bool): Include level parameter.
+#     - slope (bool): Include slope parameter.
+#     - random_trend (bool): Include random trend effect.
+#     - random_level (bool): Include random level effect.
+#     - random_slope (bool): Include random slope effect.
+#     - fixed (str): Custom fixed-effects formula (overrides default).
+#     - random (str): Custom random-effects formula (overrides default).
+#     - update_fixed (str): Modify fixed-effects model.
+#     - samples (int): Number of MCMC samples (default: 1000).
+
+#     Returns:
+#     - pd.DataFrame: Bayesian regression model summary.
+#     """
+
+#     # Prepare the data
+#     data = prepare_scd(data)
+#     case_names = data["case"].unique()
+
+#     # Create dummy variables for phases and interactions
+#     data = data.copy()
+#     data["phaseB"] = (data[pvar] == "B").astype(int)  # Dummy for Phase B
+#     data["interB"] = data[mvar] * data["phaseB"]      # Interaction term
+
+#     # Define the fixed effects formula
+#     if fixed is None:
+#         fixed = f"{dvar} ~ 1"
+#         if trend:
+#             fixed += f" + {mvar}"
+#         if level:
+#             fixed += f" + phaseB"
+#         if slope:
+#             fixed += f" + interB"
+
+#     # Modify fixed effects if update_fixed is provided
+#     if update_fixed:
+#         fixed = f"{fixed} {update_fixed}"
+
+#     # Define random effects formula
+#     if random is None and len(case_names) > 1:
+#         random = "1|case"
+#     if any([random_trend, random_level, random_slope]):
+#         random_parts = []
+#         if random_level:
+#             random_parts.append(f"phaseB|case")
+#         if random_slope:
+#             random_parts.append(f"interB|case")
+#         if random_trend:
+#             random_parts.append(f"{mvar}|case")
+#         random = " + ".join(random_parts)
+
+#     # Fit the Bayesian model using Bambi
+#     model_formula = fixed
+#     if random:
+#         model_formula += f" + ({random})"
+
+#     model = bmb.Model(model_formula, data=data)
+#     idata = model.fit(draws=samples, chains=2)
+
+#     # Extract posterior summaries using a different approach
+#     # Use arviz's summary function which properly handles the conversion
+#     summary_df = az.summary(idata, kind="stats")
+#     summary_df = summary_df.reset_index()
+#     summary_df = summary_df.rename(columns={"index": "Variable", "mean": "Estimate"})
+    
+#     # Extract the 95% HDI directly from the summary
+#     result_df = summary_df[["Variable", "Estimate", "hdi_3%", "hdi_97%"]]
+#     result_df = result_df.rename(columns={"hdi_3%": "Lower 95% CI", "hdi_97%": "Upper 95% CI"})
+
+#     return result_df
