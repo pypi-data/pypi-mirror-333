@@ -1,0 +1,7 @@
+README.md
+chbencode.py
+pyproject.toml
+chbencode.egg-info/PKG-INFO
+chbencode.egg-info/SOURCES.txt
+chbencode.egg-info/dependency_links.txt
+chbencode.egg-info/top_level.txt
