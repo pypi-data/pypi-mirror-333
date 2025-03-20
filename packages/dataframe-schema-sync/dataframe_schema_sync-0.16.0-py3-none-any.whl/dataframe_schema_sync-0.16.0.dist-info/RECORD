@@ -1,0 +1,8 @@
+dataframe_schema_sync/__init__.py,sha256=3Msc5baw88UJubVj5AVFB8tExkT2OFIsNWe2leaoHhc,23
+dataframe_schema_sync/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataframe_schema_sync/schema_inference.py,sha256=4DrrLEwQU6Q_mXskA_AlyF5Dy9DO4TaGeiFtt2oU5wk,20236
+dataframe_schema_sync-0.16.0.dist-info/LICENSE,sha256=PmXYgTt2lpACeHiHTQIHeMwcCdxA2dsOuiP7j4zq8sM,1069
+dataframe_schema_sync-0.16.0.dist-info/METADATA,sha256=khIXu-ba2wG_BdvSWYld5m0zBCM9Yq2PxW2rjJH82SM,5233
+dataframe_schema_sync-0.16.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+dataframe_schema_sync-0.16.0.dist-info/top_level.txt,sha256=yfaOR2BqU8o4p3NmlUF02JuGKsC7YBVR6Mn6BScx1KU,22
+dataframe_schema_sync-0.16.0.dist-info/RECORD,,
