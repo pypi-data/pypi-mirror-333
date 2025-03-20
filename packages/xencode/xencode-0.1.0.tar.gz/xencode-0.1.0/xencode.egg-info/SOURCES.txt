@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+xencode/__init__.py
+xencode/compiler.py
+xencode.egg-info/PKG-INFO
+xencode.egg-info/SOURCES.txt
+xencode.egg-info/dependency_links.txt
+xencode.egg-info/entry_points.txt
+xencode.egg-info/top_level.txt
