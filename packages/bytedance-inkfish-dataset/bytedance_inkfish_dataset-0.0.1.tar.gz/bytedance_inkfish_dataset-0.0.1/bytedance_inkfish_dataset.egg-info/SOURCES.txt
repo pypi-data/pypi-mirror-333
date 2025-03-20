@@ -1,0 +1,6 @@
+setup.py
+bytedance_inkfish_dataset/__init__.py
+bytedance_inkfish_dataset.egg-info/PKG-INFO
+bytedance_inkfish_dataset.egg-info/SOURCES.txt
+bytedance_inkfish_dataset.egg-info/dependency_links.txt
+bytedance_inkfish_dataset.egg-info/top_level.txt
