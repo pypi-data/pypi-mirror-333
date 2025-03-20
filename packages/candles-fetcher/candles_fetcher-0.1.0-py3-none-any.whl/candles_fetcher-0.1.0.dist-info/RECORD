@@ -1,0 +1,6 @@
+binance_candle_fetcher/__init__.py,sha256=hA_h4bJdLw4T2u5V42NqbeejbTeL1-wgA5320Zj5fGw,85
+binance_candle_fetcher/fetch_candles.py,sha256=JsIzMqvjyqQKqgonR2mvkA-_THKm6iy7RAMA_5e15Ok,1713
+candles_fetcher-0.1.0.dist-info/METADATA,sha256=EubszH_tqOHUn5U9lpCSd8UHnPOaajhGNowt6ll0zTY,836
+candles_fetcher-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+candles_fetcher-0.1.0.dist-info/top_level.txt,sha256=9SOggTt1NRM6Rw-Lo0v484xC06umOIstpvUmZacQyhw,23
+candles_fetcher-0.1.0.dist-info/RECORD,,
