@@ -1,0 +1,14 @@
+nonebot/adapters/chaoxing/__init__.py,sha256=eZo5zcI8azHjPds30s-yTNgQI9FfrnfINUlGJynWXSU,116
+nonebot/adapters/chaoxing/adapter.py,sha256=gZrOKG3se6wNpx7qYL0tKrOPX56bDhwNYMdX5iAR0uo,7720
+nonebot/adapters/chaoxing/bot.py,sha256=ovshTqE_ROlVrgY0fvXcaeQFSTmAvr8xmqV3t1nA9To,3553
+nonebot/adapters/chaoxing/config.py,sha256=L4ltZi5qoKJfdgxfe-jJiTTZSIxon4ORiBWXxv-BYMU,103
+nonebot/adapters/chaoxing/event.py,sha256=0meTjXZ5E1Bm0wfkYpcdwiT_T1ZrFNHuRziSZP7zuJs,6890
+nonebot/adapters/chaoxing/exception.py,sha256=ASxOl3M70i2JNSWP_cduPLGZe9NxJPynUALg-IhdU5w,2410
+nonebot/adapters/chaoxing/message.py,sha256=iCpGT4lwyJ7DPlH8TUjsHtVaCSM1VIeJa_MwxOznhpY,4267
+nonebot/adapters/chaoxing/utils.py,sha256=Da3e8YsduM6U03klbaIijhkQ6SOyFHxVphZhcdCcYtA,289
+nonebot/adapters/chaoxing/res/im.html,sha256=qadm2m3PvV5oZc5FlGPVBLrg45XI4QMJb7iDQPVNXf4,7537
+nonebot_adapter_chaoxing-0.0.8.dist-info/LICENSE,sha256=XYC8tbmjxuzlnTvTJ_P6oWVZsUc2EGEoekhi-jndBGU,1079
+nonebot_adapter_chaoxing-0.0.8.dist-info/METADATA,sha256=vh3lVURMLlspj8hWPzq8g0ZhPbIgJ4K1g3FQ-rQ-pdc,2216
+nonebot_adapter_chaoxing-0.0.8.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+nonebot_adapter_chaoxing-0.0.8.dist-info/top_level.txt,sha256=UbTJda3tqCl6lnlSQGIWohDsoFmeaM0N2eRJSkbK5nY,8
+nonebot_adapter_chaoxing-0.0.8.dist-info/RECORD,,
