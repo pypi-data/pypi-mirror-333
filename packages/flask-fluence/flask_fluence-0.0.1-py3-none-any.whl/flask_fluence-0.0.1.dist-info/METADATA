@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: flask-fluence
+Version: 0.0.1
+Summary: Server-side component system for Flask
+Author-email: Stefane Fermigier <sf@abilian.com>
+Requires-Python: >=3.12
+Requires-Dist: flask-super>=0.2.9
+Requires-Dist: flask>=3.1.0
+Requires-Dist: jinja2-simple-tags>=0.6.1

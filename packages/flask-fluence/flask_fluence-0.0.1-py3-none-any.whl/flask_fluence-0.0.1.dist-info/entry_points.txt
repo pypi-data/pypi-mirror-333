@@ -1,0 +1,2 @@
+[console_scripts]
+flask-fluent = flask_fluence:main
