@@ -1,0 +1,94 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "isda_streaming"
+dynamic = ["version"]
+description = "A light-weight streaming library for the ISDA course at TU Berlin."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Rudi Poepsel Lemaitre", email = "r.poepsellemaitre@tu-berlin.de" },
+    { name = "Lennart Behme", email = "lennart.behme@tu-berlin.de" },
+]
+maintainers = [{ name = "ISDA Team", email = "isda@dima.tu-berlin.de" }]
+keywords = ["data streams"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = ["numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+dev = ["pdoc~=15.0", "pre-commit~=4.0"]
+
+[project.urls]
+Homepage = "https://git.tu-berlin.de/dima/isda/isda-streaming"
+Repository = "https://git.tu-berlin.de/dima/isda/isda-streaming"
+
+[tool.hatch.version]
+path = "isda_streaming/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "scripts/*",
+  "assets/*",
+  ".gitlab-ci.yml",
+  ".pre-commit-config.yaml",
+]
+
+[tool.ruff]
+line-length = 99
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "A",    # flake8-builtins
+    "ANN",  # flake8-annotations
+    "B",    # flake8-bugbear
+    "COM",  # flake8-commas
+    "C4",   # flake8-comprehensions
+    "C90",  # mccabe
+    "D",    # pydocstyle
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "FURB", # refurb
+    "I",    # isort
+    "ICN",  # flake8-import-conventions
+    "ISC",  # flake8-implicit-str-concat
+    "N",    # pep8-naming
+    "NPY",  # Numpy checks
+    "PERF", # perflint
+    "PIE",  # flake8-pie
+    "PL",   # pylint
+    "PT",   # flake8-pytest-style
+    "PTH",  # flake8-use-pathlib
+    "PYI",  # flake8-pyi
+    "Q",    # flake8-quotes
+    "RET",  # flake8-return
+    "RUF",  # ruff-specific rules
+    "S",    # flake8-bandit
+    "SIM",  # flake8-simplify
+    "TC",   # flake8-typing-checking
+    "UP",   # pyupgrade
+    "W",    # pycodestyle warnings
+]
+ignore = [
+    "ANN401", # any-type
+    "COM812", # missing-trailing-comma
+    "EM",     # flake8-errmsg
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+ignore_missing_imports = true
+plugins = ["numpy.typing.mypy_plugin"]
+strict = true
+warn_unused_ignores = false
