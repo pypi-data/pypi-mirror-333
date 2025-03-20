@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: Ggeeeometric
+Version: 0.1.1
+Summary: laba4
+Author: Spy
+Author-email: chupacabra2.0666@gmail.com
+Requires-Python: >=3.10.0,<3.14
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: sympy (>=1.13,<2.0)
