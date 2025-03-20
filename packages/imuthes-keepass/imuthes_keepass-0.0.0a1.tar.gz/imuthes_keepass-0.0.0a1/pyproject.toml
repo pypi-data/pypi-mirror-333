@@ -1,0 +1,72 @@
+[project]
+name = "imuthes-keepass" 
+version = "0.0.0.a1"
+description = "Keepass Tools"
+license = { text = "LGPL-3.0-or-later" }
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+authors = [
+    { name = "Bernhard Radermacher", email = "bernhard.radermacher@netlink-consulting.com" }
+]
+classifiers = [
+    "Topic :: Software Development",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Topic :: Utilities"
+]
+dependencies = [
+    "imuthes (>=0.0.0a3,<1.4.0)",
+    "pykeepass (>=4.1.1.post1,<5.0.0)",
+    "fastapi (>=0.115.11,<0.116.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+]
+
+[project.urls]
+repository = "https://gitlab.com/imuthes/keepass"
+
+[tool.poetry]
+packages = [
+    { include = "imuthes/keepass" }
+]
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = ">=25.1.0"
+ruff = "^0.9.10"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.0.0"
+
+[tool.poetry.group.compile]
+optional = true
+
+[tool.poetry.group.compile.dependencies]
+pyinstaller = "^6.12.0"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py313']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 120
+target-version = 'py313'
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    'ignore:Deprecated call to `pkg_resources.declare_namespace:DeprecationWarning',
+    'ignore:pkg_resources is deprecated as an API:DeprecationWarning',
+]
+addopts = "--cov=imuthes --cov-report html:__coverage"
