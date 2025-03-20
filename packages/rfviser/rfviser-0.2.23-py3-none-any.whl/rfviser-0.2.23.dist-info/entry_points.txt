@@ -1,0 +1,2 @@
+[console_scripts]
+rfviser-build-client = rfviser._client_autobuild:build_client_entrypoint
