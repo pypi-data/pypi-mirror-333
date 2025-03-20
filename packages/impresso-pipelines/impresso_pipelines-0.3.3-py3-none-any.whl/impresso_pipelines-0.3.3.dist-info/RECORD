@@ -1,0 +1,9 @@
+impresso_pipelines/.gitignore,sha256=zyN8ev9E775uUC5kXD4G2gOmnXvetDOSEI7zNIFDQX4,10
+impresso_pipelines/__init__.py,sha256=iNf_-xiBJRcdyqquD8nzIUvCUoMX_iN8scAeJD-iAxk,76
+impresso_pipelines/langident/__init__.py,sha256=-IRhvd1Xm-30hZtc8sXec_Y3fUJ_y8M5eBvkYo8ypdo,305
+impresso_pipelines/langident/langident_pipeline.py,sha256=1Av84W2Cqds4KCHJEp99D1MgJq7QYrgW9MRF1nlDXTM,2704
+impresso_pipelines/ocrqa/__init__.py,sha256=Y5ZzgYhBeIqq7jGzS6iy4ivBNpx6A6mmQ7vnfgzC-Ng,414
+impresso_pipelines/ocrqa/ocrqa_pipeline.py,sha256=Lu8sjd5Q9zReMA6lC8sydBQPx296_2A8wDgW7pBTJJM,5691
+impresso_pipelines-0.3.3.dist-info/METADATA,sha256=ViP5RRgb73dhYKWyPg3lwQ18LqKbHSf3I8JoOJMHrrw,5116
+impresso_pipelines-0.3.3.dist-info/WHEEL,sha256=WGfLGfLX43Ei_YORXSnT54hxFygu34kMpcQdmgmEwCQ,88
+impresso_pipelines-0.3.3.dist-info/RECORD,,
