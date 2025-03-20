@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: Final-CPP-Project
+Version: 0.4.4
+Summary: A collection of utility functions for AWS services
+Home-page: https://github.com/Jiyoung0716/Final_CPP_Project
+Author: x24142816-JiyoungKim
+Author-email: x24142816@student.ncirl.ie
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3==1.37.8
+Requires-Dist: botocore==1.37.8
+Requires-Dist: Django==4.2.19
+Requires-Dist: setuptools==59.6.0
+Requires-Dist: gunicorn==23.0.0
+Requires-Dist: Pillow==11.1.0
+
+# utils - AWS Utilities Library
+
+`utils` is a Python library that provides various utility functions to interact with AWS services such as S3, DynamoDB, SQS, and CloudWatch.
+
+## Features
+
+- **CloudWatch**: Create log groups and streams, and write logs to CloudWatch.
+- **DynamoDB**: Save and update user data and worktime in DynamoDB.
+- **S3**: Manage files in S3 storage.
+- **SQS**: Send and receive messages from SQS.
+- **SNS**: Send notifications using SNS.
+
+## Installation
+
+You can install this library using `pip`:
+
+```bash
+pip install utils
+
