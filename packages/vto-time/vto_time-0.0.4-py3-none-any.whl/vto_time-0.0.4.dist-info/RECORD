@@ -1,0 +1,13 @@
+vto_time/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vto_time/admin.py,sha256=wSiNRnht8rBBPMIlbkTZBKRtRnxr13jiJdV6niu9CXg,736
+vto_time/apps.py,sha256=uE7yHP2e4dYf_6s_Bbi5qJ3B67vn5zcQrqe_IhEOsuY,147
+vto_time/models.py,sha256=yjw75cAZxrJWSNAEIIXeDyZdYx9ThKvk3R5YcibPD7Y,2059
+vto_time/urls.py,sha256=l59l7CBvILumHB9uEYdCzOI9mwJgt5-NEfiOn4e4n_E,149
+vto_time/views.py,sha256=Y1juW3mW9gcs8qvUYyszDUVoM3o9mn74_AXaLi4VbPs,164
+vto_time/migrations/0001_initial.py,sha256=lNnjDdtr1gY7Ak1o41MWjxh6_7z1lCIDcWCLk0SOVOE,2144
+vto_time/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vto_time/templates/time/tz_list.dtl,sha256=OpEn3ON4FX9uQFyfW4gFu-nysUqJHVx2Xs4xInYxeYs,957
+vto_time-0.0.4.dist-info/METADATA,sha256=Ue7KLGJAkJx8Cu54yxpiXN-sAFwb0o4T5UApi_sXzFM,412
+vto_time-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vto_time-0.0.4.dist-info/licenses/LICENSE,sha256=ObKz2Ts26RpIqtTMhHd5Vi4NY4e3Lvl7b81TvoQWqa4,1059
+vto_time-0.0.4.dist-info/RECORD,,
