@@ -1,0 +1,2 @@
+[console_scripts]
+passify-bareos = passify_bareos.passify_bareos:main
