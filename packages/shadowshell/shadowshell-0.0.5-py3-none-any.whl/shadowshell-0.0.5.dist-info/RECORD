@@ -1,0 +1,11 @@
+githshell/__init__.py,sha256=fnrNtsL4wQ0uvdyJRpFWpqpQlIqdNFXrtGPKEDaL8qk,158
+githshell/git_shell.py,sha256=6QKrAWlrAV-H72FY7zljD-YctHsGACHx0H4mrwO-hho,338
+logshell/__init__.py,sha256=g0m8wAIo7tp6GsLKH8HW95replDaXwmhjRv6mSM7iRw,210
+logshell/logger.py,sha256=yazr8pcaDoFBSELcxLzLp1fjsBWbEsASM14d6r-9-eo,416
+logshell/logger_factory.py,sha256=saQJhEx-1F8IZ-py50oHnXoi98IbFsjRDoLjuknFZdI,343
+logshell/adapter/__init__.py,sha256=43rvMYNm7SegPVrnLCKur1Zarf-PX8mheCCvciMzPxU,175
+logshell/adapter/console_logger.py,sha256=MC02D1S9bObY7T-X_NNEYPDr7VcQ89gJi_Y5zFbSVzo,474
+shadowshell-0.0.5.dist-info/METADATA,sha256=RvqND1vJWDjpWvJhkev1BEJrVNKsH7_8KMpQ7gXZBlw,303
+shadowshell-0.0.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+shadowshell-0.0.5.dist-info/top_level.txt,sha256=n4Wqs2X3ybx4jMjWvwcZSyz7Zq9YIAQx64zmOwV-lCM,19
+shadowshell-0.0.5.dist-info/RECORD,,
