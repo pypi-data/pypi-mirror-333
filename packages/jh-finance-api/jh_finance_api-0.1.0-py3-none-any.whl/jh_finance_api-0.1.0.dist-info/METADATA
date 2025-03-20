@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: jh-finance-api
+Version: 0.1.0
+Summary: Discovering Financial Market Secrets
+Author: JH
+Requires-Python: >=3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+Welcome
