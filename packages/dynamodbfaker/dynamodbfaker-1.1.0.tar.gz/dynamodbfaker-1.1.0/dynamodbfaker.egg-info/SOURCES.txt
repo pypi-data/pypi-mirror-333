@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+dynamodbfaker/__init__.py
+dynamodbfaker/aws.py
+dynamodbfaker/cli.py
+dynamodbfaker/config.py
+dynamodbfaker/dynamodb.py
+dynamodbfaker/dynamodbfaker.py
+dynamodbfaker/util.py
+dynamodbfaker.egg-info/PKG-INFO
+dynamodbfaker.egg-info/SOURCES.txt
+dynamodbfaker.egg-info/dependency_links.txt
+dynamodbfaker.egg-info/entry_points.txt
+dynamodbfaker.egg-info/requires.txt
+dynamodbfaker.egg-info/top_level.txt
+tests/test_dynamodbfaker.py
