@@ -1,0 +1,8 @@
+glan2_dedup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+glan2_dedup/build.py,sha256=NGfliNMFWbT8gLo1fKaG3-s_c_e6hq90PYiVandW2TM,3977
+glan2_dedup/build_test.py,sha256=feTMaGwM7jDgoUlf1FP3i0baEixyAgvl2KL8kb6t8Yg,1133
+glan2_dedup/minhash_index.py,sha256=-9Vz_2OIRN5yZx15dITPckYM2PyrjhIlyDHX2-3mMhg,4248
+glan2_dedup-0.1.0.dist-info/METADATA,sha256=WA1RZtZBbYO11mPSbPwI54RGq9puwSvAxKxuq4O1J94,268
+glan2_dedup-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+glan2_dedup-0.1.0.dist-info/top_level.txt,sha256=GabX4JkrDV0KZoHrMtcM2exLbAeq6wmqqIGWdTYDFCA,12
+glan2_dedup-0.1.0.dist-info/RECORD,,
