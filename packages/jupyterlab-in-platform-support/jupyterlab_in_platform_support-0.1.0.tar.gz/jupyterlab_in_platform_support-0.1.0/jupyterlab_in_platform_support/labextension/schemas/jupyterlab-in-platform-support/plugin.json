@@ -1,0 +1,20 @@
+{
+  "title": "OSS In Platform Support Settings",
+  "description": "Voice Atlas for JupyterLab Settings",
+  "properties": {
+    "atlasId-ips": {
+      "type": "string",
+      "title": "Atlas ID",
+      "description": "This is the Atlas ID of the SCME's support Atlas.",
+      "default": "19d6fc3f-f928-4d51-afb6-da2e1bf266c3"
+    },
+    "chatlasURL-ips": {
+      "type": "string",
+      "title": "Chatlas URL",
+      "description": "Chatlas URL.",
+      "default": "https://bot.voiceatlas.com/v1/chatlas.js"
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
