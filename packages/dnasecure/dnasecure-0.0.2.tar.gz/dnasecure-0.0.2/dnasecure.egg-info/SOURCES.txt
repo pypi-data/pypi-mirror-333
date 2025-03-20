@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+dnasecure/__init__.py
+dnasecure/__main__.py
+dnasecure/cli.py
+dnasecure/core.py
+dnasecure.egg-info/PKG-INFO
+dnasecure.egg-info/SOURCES.txt
+dnasecure.egg-info/dependency_links.txt
+dnasecure.egg-info/entry_points.txt
+dnasecure.egg-info/requires.txt
+dnasecure.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_dnasecure.py
