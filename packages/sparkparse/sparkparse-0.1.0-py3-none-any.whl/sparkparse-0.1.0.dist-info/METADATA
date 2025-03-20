@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: sparkparse
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.11
+Requires-Dist: dash-ag-grid>=31.3.0
+Requires-Dist: dash-bootstrap-components<2,>=1.6.0
+Requires-Dist: dash-cytoscape>=1.0.2
+Requires-Dist: falsa>=0.0.3
+Requires-Dist: ipykernel>=6.29.5
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: plotly>=6.0.0
+Requires-Dist: polars>=1.24.0
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pyspark>=3.5.5
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: ruff>=0.9.9
+Description-Content-Type: text/markdown
+
+# sparkparse
+
+identify spark bottlenecks without breaking your neck
+
+![example](docs/sparkparse.png)
+
+## design goals
+
+- simplified ui that highlights bottlenecks and their causes
+- node drill-down for detailed information and metric distribution
+- generation of base models and dataframes for extensible analysis
+
+## TODOs
+
+- [ ] structured node details like project columns and scan sources
+- [ ] task histograms on node click
+- [ ] hotspot highlighting by metrics other than duration (spill, records, etc.)
+- [ ] metric capture via context manager / decorator
+- [ ] reading from cloud storage

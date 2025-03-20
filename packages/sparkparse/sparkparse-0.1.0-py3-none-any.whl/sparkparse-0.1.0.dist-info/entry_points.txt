@@ -1,0 +1,2 @@
+[console_scripts]
+sparkparse = sparkparse.app:app
