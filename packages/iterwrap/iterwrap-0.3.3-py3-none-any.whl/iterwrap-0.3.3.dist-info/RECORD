@@ -1,0 +1,16 @@
+iterwrap/__init__.py,sha256=A7hX9AO-MH7mteIDmXE3AfoavItuxO1sTEHMrHbNA3E,522
+iterwrap/argparser.py,sha256=51rXMW2b-i8rc3kexcPLMMZVxg6BNcQjG6HuL1Fo2Kw,20011
+iterwrap/function.py,sha256=dejsCL2kbXLgSViM3TqEeitQV1k3ao9SE0V0E-MSV4o,12900
+iterwrap/generator.py,sha256=QTf73l-dZq9H44X3rlI3IG-JZDJl4ywbnOBACpteW94,2739
+iterwrap/test.py,sha256=Xbsv87FxjSFXDn-5h-sOZhwdS-9z-Wt5zWOLk_7tNe0,600
+iterwrap/utils.py,sha256=u0LKQQcck-pBM2IM6CdDB5i4tSM0zld87DccoudcYp0,8578
+iterwrap-0.3.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+iterwrap-0.3.3.dist-info/METADATA,sha256=Nvhjl2TTLYJd_lm9g6LX0lCJso2G39nSTmyoUP0kkoU,1457
+iterwrap-0.3.3.dist-info/PKG-INFO-B650M-D2H-safeBackup-0001,sha256=uhfHhnUmi3GGJxi9wm0jC--k1q_m63rmtCljXLxBqJE,1395
+iterwrap-0.3.3.dist-info/SOURCES-B650M-D2H-safeBackup-0001.txt,sha256=RSZfyjrw2AYcjYs1e0NA-lypCx2UWfakcEPXXeQUKro,344
+iterwrap-0.3.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+iterwrap-0.3.3.dist-info/dependency_links-B650M-D2H-safeBackup-0001.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+iterwrap-0.3.3.dist-info/requires-B650M-D2H-safeBackup-0001.txt,sha256=NLiUJNfmc9At15s7JURiwvqMEjUi9G5PMGRrmMYzNSM,5
+iterwrap-0.3.3.dist-info/top_level-B650M-D2H-safeBackup-0001.txt,sha256=GDT6JoTqN4gcHhyGBot8XH1GEuy4S0dyTBSscrPwtKs,9
+iterwrap-0.3.3.dist-info/top_level.txt,sha256=GDT6JoTqN4gcHhyGBot8XH1GEuy4S0dyTBSscrPwtKs,9
+iterwrap-0.3.3.dist-info/RECORD,,
