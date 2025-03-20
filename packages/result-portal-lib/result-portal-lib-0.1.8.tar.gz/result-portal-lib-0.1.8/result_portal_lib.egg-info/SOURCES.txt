@@ -1,0 +1,11 @@
+README.md
+setup.py
+result_portal_lib/__init__.py
+result_portal_lib/aws_utils.py
+result_portal_lib/complaint_manager.py
+result_portal_lib/models.py
+result_portal_lib.egg-info/PKG-INFO
+result_portal_lib.egg-info/SOURCES.txt
+result_portal_lib.egg-info/dependency_links.txt
+result_portal_lib.egg-info/requires.txt
+result_portal_lib.egg-info/top_level.txt
