@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mm-base1
+Version: 0.2.1
+Requires-Python: >=3.12
+Requires-Dist: aiofiles~=24.1.0
+Requires-Dist: fastapi[all]~=0.115.11
+Requires-Dist: gunicorn~=23.0.0
+Requires-Dist: itsdangerous~=2.2.0
+Requires-Dist: jinja2~=3.1.6
+Requires-Dist: mm-mongo~=0.3.6
+Requires-Dist: mm-telegram~=0.0.5
+Requires-Dist: pytelegrambotapi~=4.26.0
+Requires-Dist: wtforms~=3.2.1
