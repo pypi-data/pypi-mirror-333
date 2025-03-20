@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypesten"
+version = "0.0.2"
+description = "Core logic for popular dutch card game 'pesten'."
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]

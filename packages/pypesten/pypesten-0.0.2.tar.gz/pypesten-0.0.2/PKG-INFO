@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: pypesten
+Version: 0.0.2
+Summary: Core logic for popular dutch card game 'pesten'.
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+Core logic for popular dutch card game 'pesten'.
+
+Use `twine upload dist/*`
