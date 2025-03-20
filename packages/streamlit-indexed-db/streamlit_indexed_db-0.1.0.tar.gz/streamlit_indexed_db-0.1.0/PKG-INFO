@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: streamlit-indexed-db
+Version: 0.1.0
+Summary: A streamlit componente that allows you to request and receive data from indexedDB
+Author: Pedro Corradini
+Author-email: pedro.hcorradini05@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=1.2
+Requires-Dist: jinja2
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# streamlit-indexed-db
+
+A streamlit componente that allows you to request and receive data from indexedDB
+
+## Installation instructions 
+
+```sh
+pip install streamlit-indexed-db
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from streamlit_indexed_db import streamlit_indexed_db
+
+value = streamlit_indexed_db()
+
+st.write(value)
