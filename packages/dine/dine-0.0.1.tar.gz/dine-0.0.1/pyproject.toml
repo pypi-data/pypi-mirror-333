@@ -1,0 +1,18 @@
+[project]
+name = "dine"
+version = "0.0.1"
+description = "Exportando datos del Instituto Nacional de Estadística de España"
+readme = "README.md"
+authors = [{ name = "David Gasquez", email = "davidgasquez@gmail.com" }]
+requires-python = ">=3.13.2"
+dependencies = ["httpx>=0.28.1", "polars>=1.24.0", "typer>=0.15.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+dine = "dine.cli:app"
+
+[dependency-groups]
+dev = ["ipykernel>=6.29.5"]

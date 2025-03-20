@@ -1,0 +1,46 @@
+# DINE 🦕
+
+Exportando datos del [Instituto Nacional de Estadística](https://www.ine.es/) a Parquet, haciendolas más fácilmente accesibles y manejables.
+
+## 🔍 Recursos
+
+- [API JSON](https://www.ine.es/dyngs/DAB/index.htm?cid=1099) - API JSON de INE
+- [Tablas INE](https://www.ine.es/dyngs/INEbase/listaoperaciones.htm) - Listado de operaciones estadísticas
+- [Microdatos INE](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176918&menu=resultados&idp=1254735976595) - Acceso a microdatos de encuestas
+- [API INE](https://www.ine.es/dyngs/DataLab/es/manual.html?cid=1259945948443) - Documentación de la API
+- [Tempus3](https://www.ine.es/dyngs/IOE/es/operacion.htm?numinv=30714) - Sistema de difusión de información estadística
+
+## 🚀 Instalación
+
+Puedes instalar la librería `dine` usando `uv` o `pip`.
+
+```bash
+uv pip install dine
+```
+
+Una vez instalada, puedes usar la librería desde tu código.
+
+```python
+import dine
+import polars as pl
+
+table: pl.DataFrame = dine.get_table("123456789")
+```
+
+O, si lo prefieres, puedes usar el comando `dine` desde la terminal.
+
+```bash
+dine download 123456789
+```
+
+## 🔧 Desarrollo
+
+Para contribuir al proyecto, se puede usar el siguiente comando para instalar las dependencias necesarias y ejecutar el proyecto.
+
+```bash
+make install
+```
+
+## 📝 Licencia
+
+Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
