@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: meddiscover
+Version: 0.1.0
+Summary: MedDiscover is an AI-powered tool designed to assist biomedical researchers by leveraging Retrieval-Augmented Generation (RAG) with fine-tuned LLMs on PubMed literature. It enables efficient document retrieval, knowledge extraction, and interactive querying from biomedical research papers, helping researchers find relevant insights quickly. The package supports both GPU-based embeddings (MedCPT) and CPU-friendly alternatives (GPT-4 embeddings), making it accessible for a wide range of users.
+License: CC BY-NC-ND 4.0
+Author: VatsalPatel18
+Author-email: vatsal1804@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: faiss-cpu (>=1.10.0,<2.0.0)
+Requires-Dist: gradio (>=5.20.1,<6.0.0)
+Requires-Dist: nltk (>=3.9.1,<4.0.0)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: openai (>=1.65.4,<2.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: pypdf2 (>=3.0.1,<4.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: rouge-score (>=0.1.2,<0.2.0)
+Requires-Dist: scipy (>=1.15.2,<2.0.0)
+Requires-Dist: statsmodels (>=0.14.4,<0.15.0)
+Requires-Dist: torch (>=2.6.0,<3.0.0)
+Requires-Dist: transformers (>=4.49.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# MedDiscover
+MedDiscover is an AI-powered tool designed to assist biomedical researchers using RAG-LLM models fine-tuned on PubMed literature.
+
