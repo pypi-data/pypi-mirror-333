@@ -1,0 +1,10 @@
+vto_users/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vto_users/admin.py,sha256=tA2EJvjWotogZGXT53EFhHLAa6i5yaUzPLO8brt6a2o,11283
+vto_users/apps.py,sha256=zrPIeB2RmvUT0ecg7B5NroJlqFx_TzXA4vyckIyPSh4,149
+vto_users/models.py,sha256=ymX-nd1_kKh06UCkZh97BC67VKtQU2-0Eji8ghPcO6g,1888
+vto_users/migrations/0001_initial.py,sha256=QhJTJwWiHE0b1pK6EYQdFk4XG2OGNiB6I9F9rvrjl-8,2916
+vto_users/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vto_users-0.0.1.dist-info/METADATA,sha256=tlbfJZ4YfgD_1nxqVMM4IjUSPNK4KQotjzUw-BugqsQ,370
+vto_users-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vto_users-0.0.1.dist-info/licenses/LICENSE,sha256=ObKz2Ts26RpIqtTMhHd5Vi4NY4e3Lvl7b81TvoQWqa4,1059
+vto_users-0.0.1.dist-info/RECORD,,

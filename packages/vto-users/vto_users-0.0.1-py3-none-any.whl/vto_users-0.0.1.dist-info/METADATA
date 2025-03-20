@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: vto-users
+Version: 0.0.1
+Summary: Just a personal test app, not intended for use by anyone else
+Project-URL: Repository, https://github.com/venteto/vto-users
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# vto_users
+Just a personal test app, not intended for use by anyone else
