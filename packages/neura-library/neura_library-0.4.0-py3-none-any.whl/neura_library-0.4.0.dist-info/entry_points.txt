@@ -1,0 +1,2 @@
+[console_scripts]
+neuralib_brainrender = neuralib.atlas.brainrender.main_app:main
