@@ -1,0 +1,10 @@
+jsqlib/__init__.py,sha256=sPMtb460yzHoLcWbbydvkyJOZEmpCWFFYIyVNif884Y,317
+jsqlib/core.py,sha256=KP7xf0i0tEVSW1l9NtNBIxKnBoMR5X0cdtDein2mUXQ,16796
+jsqlib/engine.py,sha256=297eQC0Thg_sf9yFqQT5klO0_PwKeT8Y5HYoqcaptY4,3456
+jsqlib/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsqlib/helpers/common.py,sha256=7VM5qC-q7C2nNyiRdBFGhauPbEDgtqAvHgIzBTdx6-Q,12064
+jsqlib/helpers/constants.py,sha256=Xk3_Znc5OHt0QU_q7iOlmlODcnVNcN3UL9p9leeuRRM,2221
+jsqlib/helpers/types.py,sha256=3ZJ9HBw9K0FRu46Y-L9bEadmXzwzCUggOzjwyuMv8q0,910
+jsqlib-0.10a0.dist-info/METADATA,sha256=wthnqyJzseTP38XnSckWegZuLqQHrdsT5VvgtrJUMHo,3883
+jsqlib-0.10a0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+jsqlib-0.10a0.dist-info/RECORD,,
