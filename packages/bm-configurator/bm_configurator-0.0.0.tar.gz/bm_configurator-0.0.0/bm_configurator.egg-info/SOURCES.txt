@@ -1,0 +1,10 @@
+README.md
+setup.py
+bm_configurator/__init__.py
+bm_configurator/config.py
+bm_configurator/configurator.py
+bm_configurator.egg-info/PKG-INFO
+bm_configurator.egg-info/SOURCES.txt
+bm_configurator.egg-info/dependency_links.txt
+bm_configurator.egg-info/requires.txt
+bm_configurator.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+PyYAML>=5.4
+psutil>=5.8
+nvidia-ml-py>=12.535.77
