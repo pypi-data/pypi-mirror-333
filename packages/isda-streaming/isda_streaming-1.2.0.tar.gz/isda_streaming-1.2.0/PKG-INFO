@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: isda-streaming
+Version: 1.2.0
+Summary: A light-weight streaming library for the ISDA course at TU Berlin.
+Project-URL: Homepage, https://git.tu-berlin.de/dima/isda/isda-streaming
+Project-URL: Repository, https://git.tu-berlin.de/dima/isda/isda-streaming
+Author-email: Rudi Poepsel Lemaitre <r.poepsellemaitre@tu-berlin.de>, Lennart Behme <lennart.behme@tu-berlin.de>
+Maintainer-email: ISDA Team <isda@dima.tu-berlin.de>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: data-streams
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Requires-Dist: numpy<3,>=1.24
+Provides-Extra: dev
+Requires-Dist: pdoc~=15.0; extra == 'dev'
+Requires-Dist: pre-commit~=4.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# ISDA Streaming
+
+`isda-streaming` is a minimal library intended to learn working with data streams.
+
+The implementation is highly simplified and adapted to the requirements of the course
+"Informationssysteme und Datenanalyse" at TU Berlin. Therefore, it should not be taken
+as a reference to implement a complete data streams management system.
+
+If you notice any errors or inconsistencies, please report them in the course forum or
+as an issue in our GitLab repository.
+
+## Installation
+
+```bash
+pip install isda-streaming
+```
+
+You can also clone and install the project locally:
+
+```bash
+git clone https://git.tu-berlin.de/dima/isda/isda-streaming
+cd isda-streaming
+pip install .
+```
+
+## Usage
+
+See the [documentation](https://dima.gitlab-pages.tu-berlin.de/isda/isda-streaming) for detailed
+instructions. In general, all public classes are importable from the top-level
+`isda_streaming` module:
+
+```python
+from isda_streaming import DataStream
+
+ds = DataStream().from_csv("/path/to/collection.csv")
+```
+
+## Contributing
+
+If you want to contribute a bug fix or feature to `isda_streaming`, please open an issue
+first to ensure that your intended contribution fits into the project.
+
+Different to a user installation, you also need to install the `dev` requirements and
+activate `pre-commit` in your copy of the repository before making a commit.
+
+```bash
+# Activate your virtual environment first
+pip install ".[dev]"
+pre-commit install
+```
