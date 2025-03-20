@@ -1,0 +1,14 @@
+codesight/__init__.py,sha256=v576j6qrLPpsuxtNgzaDS565_NHe5q3bJQ0UwVan_Ps,99
+codesight/cli.py,sha256=z4qIrdONp2-s7Hsv-FCwBdcYVttkyHLIj9DJptpncgE,7191
+codesight/config.py,sha256=HkfWwxr-7uReJUCHZJ3UgNa043tT0vOMH9EYXOrOMM0,2434
+codesight/core.py,sha256=Oock-O5NXtgAtKWs9Noq6vUa4JMosFvky62VGAfKg9I,7605
+codesight/exclusions.py,sha256=WPZwl2-rqh3ZtUGP5aAc2Yvnv96x-UnuKzT3P67EPb8,5925
+codesight/formatter.py,sha256=Oti2QB9e7_okPEo-fl-7ybW-AtZGHiMQDgJk3AJQ07o,8755
+codesight/run.py,sha256=LvhU4X-95ln3nKDxHxIHozq3sFLGrZfdylJ0q9IhBTQ,1127
+codesight/terminal.py,sha256=cSRYI3yENxzH4KPGDVHVkP1WA_UP9ABhLId-UNxI7n8,10934
+codesight/templates/analyzer.py,sha256=MVwlWSPyF0eZcLahiEePmVUGTrxnPG0Zvi9Joon1y5M,1157
+codesight/templates/config.template.json,sha256=i0Sz8BEP9WBX_CiCRXamM76T-2vPUdvI8wyTCIudrHk,280
+codesight-0.1.4.dist-info/METADATA,sha256=tW92NjUjejMrNXvE-8fZQpOCIEhRU5p03WLJ6mwHG6s,1702
+codesight-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+codesight-0.1.4.dist-info/entry_points.txt,sha256=czGmDSrZZkpZje724-FLvr6ped3H4K9p1fyrpb7fpjM,49
+codesight-0.1.4.dist-info/RECORD,,
