@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% endblock %}
+
+{% block head %}
+{% if schema_profile_page %}
+<script type="application/ld+json">
+    {{ schema_profile_page | safe }}
+</script>
+{% endif %}
+{% endblock %}

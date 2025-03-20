@@ -1,0 +1,39 @@
+site:
+  url: "127.0.0.1:8000"
+  name: "MD Star"
+  alternate_name:
+    - md-star
+  author: "Chris"
+  locale: "en"
+  timezone: "UTC"
+  keywords:
+    - Blog
+    - CMS
+    - Markdown
+    - MD Star
+  description: "Markdown to HTML"
+  sort_by: "created"
+  article_type: "Article"
+  about:
+    type: Person
+    name: "Chris"
+    alternate_name: ""
+    description: ""
+    same_as:
+  socials:
+    x: ""
+    instagram: ""
+    github: ""
+    linkedin: ""
+
+paths:
+  content: "content"
+  output: "dist"
+  public: "public"
+  drafts: "draft"
+
+projects:
+  - name: ""
+    description: ""
+    link: ""
+    icon: ""
