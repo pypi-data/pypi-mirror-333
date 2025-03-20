@@ -1,0 +1,45 @@
+Metadata-Version: 2.2
+Name: pxsstray
+Version: 1.2
+Summary: A small utility that controls dpms and screensaver status from the tray
+Author-email: Sam Coulter <sam.w.coulter@gmail.com>
+Project-URL: Homepage, https://github.com/samwcoulter/pxsstray
+Project-URL: Issues, https://github.com/samwcoulter/pxsstray/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: X11 Applications
+Classifier: Topic :: Desktop Environment :: Screen Savers
+Classifier: Topic :: Utilities
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pyside6
+Requires-Dist: python-xlib
+
+# pxsstray : Python XSet S Tray 
+
+This is a small utility that provides a `pxsstray` script command which creates a tray icon with right click context menu you can use to enable or disable the X display screensaver or DPMS.
+
+![Screenshot of the tray context menu](doc/screenshot.png "Tray Context Menu")
+
+## Installation
+
+```
+pip install --upgrade pxsstray
+```
+
+### pyenv
+
+If using pyenv, you can use the following command to find the location of pxsstray on your system
+
+```
+pyenv which pxsstray
+```
+
+Then add the following line (adjusting based on output from above) to the end of your `~/.config/i3/config` configuration file
+
+```
+exec --no-startup-id ~/.pyenv/versions/3.12.3/bin/pxsstray
+```
+
+
