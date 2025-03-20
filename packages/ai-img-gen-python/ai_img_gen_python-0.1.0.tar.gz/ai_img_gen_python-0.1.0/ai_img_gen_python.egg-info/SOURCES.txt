@@ -1,0 +1,11 @@
+README.md
+setup.py
+ai_img_gen_python.egg-info/PKG-INFO
+ai_img_gen_python.egg-info/SOURCES.txt
+ai_img_gen_python.egg-info/dependency_links.txt
+ai_img_gen_python.egg-info/requires.txt
+ai_img_gen_python.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
+tests/test_exceptions.py
+tests/test_types.py
