@@ -1,0 +1,15 @@
+compas>=2
+compas_viewer
+compas_model
+
+[dev]
+attrs>=17.4
+black>=22.12.0
+bump-my-version
+compas_invocations2
+invoke>=0.14
+ruff
+sphinx_compas2_theme
+twine
+wheel
+build
