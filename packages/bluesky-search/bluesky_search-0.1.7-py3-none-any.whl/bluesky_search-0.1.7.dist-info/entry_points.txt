@@ -1,0 +1,2 @@
+[console_scripts]
+bluesky-search = bluesky_search.cli:main
