@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: docassemble.baseball
+Version: 0.0.6
+Summary: A docassemble extension.
+Home-page: https://docassemble.org
+Author: Jonathan Pyle
+Author-email: admin@admin.com
+License: The MIT License (MIT)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
+
+A docassemble extension about baseball.
+
+This is a new version, just as a test.
+
+This is an even newer version, testing the twine upload process.
+
+This is a newer version still, testing the new sdist process.
+
+Verifying that the new sdist process still works.
+
+Trying it again to make sure that twine knows what it is doing
