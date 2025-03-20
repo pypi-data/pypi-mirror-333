@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: aimat
+Version: 0.1.0
+Summary: AIMAT: AI Music Artist Toolkit - Simplified AI Music workflows.
+Author: Eric Browne
+License: MIT
+Requires-Dist: python-osc
+Requires-Dist: docker
+Requires-Dist: psutil
