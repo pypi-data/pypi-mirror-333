@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+query_table/__init__.py
+query_table/_version.py
+query_table/enums.py
+query_table/main.py
+query_table.egg-info/PKG-INFO
+query_table.egg-info/SOURCES.txt
+query_table.egg-info/dependency_links.txt
+query_table.egg-info/requires.txt
+query_table.egg-info/top_level.txt
