@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: vto-frontend
+Version: 0.0.2
+Summary: Just a personal test app, not intended for use by anyone else
+Project-URL: Repository, https://github.com/venteto/vto-frontend
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: markdown>=3.7
+Description-Content-Type: text/markdown
+
+# vto_frontend
+Just a personal test app, not intended for use by anyone else
