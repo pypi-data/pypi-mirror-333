@@ -1,0 +1,15 @@
+stitch_ai/__init__.py,sha256=NbNRlSJOcPOy3YfeGLCZx1-J0RdxFWCnBsghcxyJMww,146
+stitch_ai/sdk.py,sha256=HavUWn9sFEqTyRVaCc2u5_cJZ6B8Hc5a2TlRDedSUHw,6121
+stitch_ai/api/__init__.py,sha256=yyGzA4RUXNbVaFdBlm8ZtpS6g8XbOyjHnIK4V0M51m4,166
+stitch_ai/api/client.py,sha256=8hQnm7KFO1je_JAz4e1m18nOFQWdQFjYhbaq717rTBY,4544
+stitch_ai/cli/__init__.py,sha256=8BoXyXeNuXQU7NBDf46roie5sWTpPlK5xgsFzwnqTCQ,149
+stitch_ai/cli/main.py,sha256=yCo72i9wL3yM2cZOSq493Q1Kb7tJA6QIurr6q4XeRFU,5824
+stitch_ai/processors/__init__.py,sha256=lYuZi-3bI6NRSYDU24X7_1uVnTa4ZTtCuqmZJUKnGpw,261
+stitch_ai/processors/memory_processor.py,sha256=AtjGreoJHrdBityxUIpqgzLhJpSAKYIpYDzX_rb6sWM,7115
+stitch_ai/processors/text_processor.py,sha256=0bkpAisN4b7o8h6qqacrPAU-_H56xQPILlUUy82zMdk,1380
+stitch_ai-0.2.2.dist-info/LICENSE,sha256=g-1zMjyO1engnl_Tk5Ct4c511--TKX4gAjIErVsUgik,1066
+stitch_ai-0.2.2.dist-info/METADATA,sha256=-bawPhOfX6zXj4YdYYXGMsMQrqPUQC9ba3KZ_Rsmiuk,2270
+stitch_ai-0.2.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+stitch_ai-0.2.2.dist-info/entry_points.txt,sha256=BQ0dZoDZY3-7Ke8obgPQSRQLXMf2H-KvSaBdWejHtPw,46
+stitch_ai-0.2.2.dist-info/top_level.txt,sha256=K4rvpjzvXCo6roJU4CuUL99e26IFNHSfaV7jvKsKBE0,10
+stitch_ai-0.2.2.dist-info/RECORD,,
