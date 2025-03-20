@@ -1,0 +1,10 @@
+django_graphql_app_setup/__init__.py,sha256=UgS3wqICYR4FdrYCiCiP6fwWAZU9l_xLd3kVa4J0oWg,102
+django_graphql_app_setup/apps.py,sha256=4DsXFqbAXiZLr_jgsKS-Ld4mqTiFMeLBsjTxw1REP4Q,165
+django_graphql_app_setup/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_graphql_app_setup/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_graphql_app_setup/management/commands/startgqlapp.py,sha256=m6ktu1iUJ07CgnO3MQrhTYgZu1L6FAe60G_lbA4GcCc,7448
+django_graphql_app_setup-0.2.4.dist-info/LICENSE,sha256=WzsdXWL6IeR9qUrdTjLenF6mvRwEuaUfJwfL2bCNwcI,1073
+django_graphql_app_setup-0.2.4.dist-info/METADATA,sha256=vQvw2143VxpXhgSk-rRKO1QltyqSDIt--b3oILYJlyE,1973
+django_graphql_app_setup-0.2.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+django_graphql_app_setup-0.2.4.dist-info/top_level.txt,sha256=FR2HI0Wc8vxGDN7S4aFhYxc9y_NufEffF8hN0OAdWq4,25
+django_graphql_app_setup-0.2.4.dist-info/RECORD,,
