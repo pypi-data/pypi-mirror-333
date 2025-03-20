@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: claude-logging
+Version: 0.1.0
+Summary: Save logs of claude code, and convert them into HTML
+Author: Antonio Cuni
+License: MIT
+Project-URL: Homepage, https://github.com/antocuni/claude-logging
+Project-URL: Bug Tracker, https://github.com/antocuni/claude-logging/issues
+Keywords: claude,logging,ansi,terminal,html,conversion
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Terminals
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Claude Logging
+
+Automatically keep logs of "claude code" sessions, and convert them to HTML.
+
+## Features
+
+- Processes ANSI escape sequences in terminal output
+- Strips control characters and preserves text formatting
+- Converts terminal output to styled HTML
+- Supports syntax highlighting, bold text, and colors
+- Includes line numbering and theme toggling in the HTML output
+
+## Installation
+
+```bash
+pip install claude-logging
+```
+
+
+## License
+
+MIT License
