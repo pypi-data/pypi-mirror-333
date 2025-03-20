@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "niceboard"
+version = "0.3.1"
+description = "A Python client for the Niceboard API"
+authors = [
+ {name = "Dean Singh", email = "dean.singh@gmail.com"},
+]
+dependencies = [
+ "requests>=2.25.0",
+ "geopy>=2.2.0",
+ "tenacity>=8.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+ "pytest>=6.0",
+ "pytest-cov>=2.0",
+ "pytest-mock>=3.10.0",
+ "responses>=0.23.0",
+ "python-dotenv>=1.0.0",
+ "black>=21.0",
+ "isort>=5.0",
+ "mypy>=0.900",
+ "flake8>=3.9",
+ "types-requests>=2.25.0",
+ "twine>=4.0.0"
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests as integration tests (excluded from CI)",
+    "destructive: marks tests that modify data"
+]
+# Define how to run tests in different environments
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[project.urls]
+Homepage = "https://github.com/workflowing/niceboard"
