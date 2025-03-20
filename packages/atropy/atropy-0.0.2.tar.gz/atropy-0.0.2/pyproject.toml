@@ -1,0 +1,53 @@
+[project]
+name = "atropy"
+version = "0.0.2"
+authors = [
+  { name="Julian Mangott", email="julian.mangott@uibk.ac.at" },
+  { name="Lukas Einkemmer", email="lukas.einkemmer@uibk.ac.at" },
+  { name="Martina Prugger", email="martina.prugger@ipp.mpg.de" },
+  { name="Stefan Brunner", email="stefan.brunner@student.uibk.ac.at" }
+]
+description = "Wrapper for the atropy_core C++ library"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+dependencies = [
+  "atropy_core",
+  "sympy",
+]
+requires-python = ">=3.10"
+classifiers = []
+
+[project.urls]
+Homepage = "https://atropy.gitlab.io/"
+GitLab = "https://gitlab.com/atropy/atropy"
+
+[build-system]
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[tool.scikit-build]
+wheel.packages = ["atropy"]
+build-dir = "build"
+cmake.args = ['-G Unix Makefiles']
+cmake.build-type = "Release"
+# TODO: Define whether OpenMP and MKL should be enabled
+cmake.define = {OPENMP="OFF", MKL_ENABLED="OFF", PYBIND11_ENABLED="ON"}
+cmake.source-dir = "./atropy/core"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # pydocstyle
+    # "D",
+    # isort
+    "I",
+]

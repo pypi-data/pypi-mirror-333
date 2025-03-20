@@ -1,0 +1,3 @@
+[submodule "atropy/core"]
+	path = atropy/core
+	url = git@gitlab.com:atropy/atropos.git

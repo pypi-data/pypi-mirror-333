@@ -1,0 +1,90 @@
+Metadata-Version: 2.2
+Name: atropy
+Version: 0.0.2
+Summary: Wrapper for the atropy_core C++ library
+Author-Email: Julian Mangott <julian.mangott@uibk.ac.at>, Lukas Einkemmer <lukas.einkemmer@uibk.ac.at>, Martina Prugger <martina.prugger@ipp.mpg.de>, Stefan Brunner <stefan.brunner@student.uibk.ac.at>
+License: MIT License
+         Copyright (c) 2024 Julian Mangott, Lukas Einkemmer, Martina Prugger, Stefan Brunner
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+         
+Project-URL: Homepage, https://atropy.gitlab.io/
+Project-URL: GitLab, https://gitlab.com/atropy/atropy
+Requires-Python: >=3.10
+Requires-Dist: atropy_core
+Requires-Dist: sympy
+Description-Content-Type: text/markdown
+
+# `atropy`: Wrapper for the `atropy_core` C++ library
+
+## Objective
+`atropy` is a python wrapper for `atropy_core`, which solves the chemical master equation (CME) and is described further at https://gitlab.com/atropy/atropy_core.git.
+
+`atropy` allows the user to build models and run simulations, using the functions in `atropy/core/generator.py`. Examples of use can be found in `atropy/src/examples` or also on the project website https://atropy.gitlab.io/.
+
+## Requirements
+- CMake (3.27 or later)
+- C++20 compatible C++ compiler
+- Fortran compiler (if OpenBLAS is used)
+- Eigen 3.4
+- HDF5 (1.10.x)
+- Intel MKL
+- netCDF4
+- OpenMP
+- Python (>=3.10)
+
+## Installation
+
+The package can be found on PyPI and the installation can thus be exuecuted using uv by astral or the classical pip download. We recommend the approach using uv, due to faster installation times.
+
+### uv installation
+
+Generate a uv virtual environment by executing
+```shell
+uv venv <environment_name> --python <python_version>
+```
+
+The environment can be found in the current shell directory.
+
+Next activate the environment with
+```shell
+source <path_to_environment>/bin/activate
+```
+
+Now one can download `atropy` using the python packaging index
+```shell
+uv pip install atropy
+```
+
+The package is installed in `<path_to_environment>/lib/python<python_version>/site-packages` with all the dependencies, which were also downloaded from PyPI.
+
+### pip installation
+
+Using classical pip installation execute
+```shell
+pip install atropy
+```
+
+Again using a virtual environment is still recommended.
+
+## Example problems
+
+After installation several example problems can be run. Those can be found in `<path_to_atropy>/src/examples`. One can run a problem by executing
+```shell
+python3 <path_to_atropy>/src/examples/run_lambda_phage.py
+```
+
+If successful, output files should be generated in the current working directory.
