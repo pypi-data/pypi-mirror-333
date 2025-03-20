@@ -1,0 +1,114 @@
+{% macro thead(report, with_lineno_col=False) %}
+        <thead class="thead-light">
+            <tr>
+              {% if with_lineno_col %}
+              <th scope="col">1</th>
+              {% endif %}
+              {% for h in report.headers %}
+                <th
+                  scope="col"
+                  {% if report.cols_alert[loop.index - 1] != "" %}class="{{ report.cols_alert[loop.index - 1] }}"{% endif %}
+                  data-toggle="popover"
+                  title="{{ report.headers_title[loop.index - 1]}}"
+                  data-content="{{ report.headers_description[loop.index - 1] | commonmark2html | escape}}"
+                  >{{ h }}</th>
+              {% endfor %}
+            </tr>
+        </thead>
+{% endmacro %}
+
+{% macro preview(report, source_data) %}
+<div class="table-responsive-sm">
+    <table class="table-striped table-bordered table-sm table-hover">
+        {{ thead(report) }}
+        <tbody>
+            {% for row in source_data.preview_rows %}
+            <tr>
+                {% for val in row %}
+                <td
+                {% if report.cols_alert[loop.index - 1] != "" %}class="{{ report.cols_alert[loop.index - 1] }}"{% endif %}
+                >{{ val }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endmacro %}
+
+{% macro body_errors(report, source_data, print_mode) %}
+
+        {{ body_errors_screen(report, source_data) }}
+
+{% endmacro %}
+
+{% macro body_errors_screen(report, source_data) %}
+<div class="table-responsive-sm">
+    <table class="table-sm table-bordered table-striped table-hover">
+        {{ thead(report, True) }}
+        <tbody>
+            {% for row in report.body_errors_grouped_by_rows %}
+            <tr>
+                {# Line no #}
+                {% if 'row' in row.errors %}
+                <th class="table-danger" data-toggle="popover" title="{{ row.errors.row.title }}" data-content="{{ row.errors.row.content }}">
+                    {{ row.row_number }}
+                </th>
+                {% if row.errors.row.type == 'blank-row' and not
+                source_data.data_rows[row.row_number -2] %}
+                {% for _ in report.headers %}
+                <td class="table-danger" data-toggle="popover" title="{{ row.errors.row.title }}" data-content="{{ row.errors.row.content }}"></td>
+                {% endfor %}
+                {% endif %}
+                {% else %}
+                <th>{{ row.row_number }}</th>
+                {% endif %}
+
+                {# normal columns #}
+                {% for d in source_data.data_rows[row.row_number - 2] %}
+                {% if loop.index in row.errors %}
+                <td class="table-danger" data-toggle="popover"
+                    title="{{row.errors[loop.index].title}}"
+                    data-content="{{ row.errors[loop.index].content }}">{{ d }}</td>
+                    {% elif 'row' in row.errors %}
+                <td class="table-danger" data-toggle="popover"
+                    title="{{row.errors.row.title }}"
+                    data-content="{{ row.errors.row.content }}">{{ d }}</td>
+                    {% else %}
+                    <td>{{ d }}</td>
+                {% endif %}
+                {%- endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endmacro %}
+
+{% macro error_statistics(report) %}
+
+{% set structure_errors = report.error_stats["structure-errors"] %}
+{% if structure_errors['count'] != 0 %}
+<p>{{ _('Erreurs de structure') }} ({{ structure_errors['count'] }}) :</p>
+<ul>
+    {% for item in structure_errors['count_by_type'] %}
+    <li>{{ item[0] }} ({{ item[1] }})</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>{{ _('Aucune erreur de structure') }}.</p>
+{% endif %}
+
+{% set value_errors = report.error_stats['body-errors'] %}
+{% if value_errors['count'] > 0 %}
+<p>Erreurs de contenu ({{ value_errors['count'] }} sur {{ value_errors['rows-count'] }} ligne{% if value_errors['rows-count'] > 1 %}s{% endif %}) :</p>
+<ul>
+    {% for type, count in value_errors['count_by_type'] %}
+    <li>{{ type }} ({{ count }})</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>{{ _('Aucune erreur de contenu') }}</p>
+{% endif %}
+
+{% endmacro %}
