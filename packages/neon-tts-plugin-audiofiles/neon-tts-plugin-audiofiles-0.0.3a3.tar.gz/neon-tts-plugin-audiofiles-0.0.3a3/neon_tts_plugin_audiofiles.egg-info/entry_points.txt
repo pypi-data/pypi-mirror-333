@@ -1,0 +1,2 @@
+[mycroft.plugin.tts]
+neon-tts-plugin-audiofiles = neon_tts_plugin_audiofiles:AudioFileTTS
