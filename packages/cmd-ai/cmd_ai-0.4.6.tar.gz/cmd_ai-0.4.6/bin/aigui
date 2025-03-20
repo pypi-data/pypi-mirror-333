@@ -1,0 +1,6 @@
+#!/bin/bash
+   input=$(zenity --text-info --editable --title="Input Text" --width=600 --height=400)
+
+   if [ -n "$input" ]; then
+       cmd_ai -r -g -n charlie "$input" | zenity --text-info --title="Command Output" --width=600 --height=400
+   fi
