@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: prt-rl
+Version: 0.1.2
+Summary: Python Research Toolkit - Reinforcement Learning
+Author-email: Gavin Strunk <gavin.strunk@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: gymnasium>=1.1.1
+Requires-Dist: imageio>=2.37.0
+Requires-Dist: inputs>=0.5
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: mlflow>=2.20.4
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: psutil>=7.0.0
+Requires-Dist: pygame>=2.6.1
+Requires-Dist: pynput>=1.8.0
+Requires-Dist: pynvml>=12.0.0
+Requires-Dist: scipy>=1.15.2
+Requires-Dist: tensordict==0.6.2
+Requires-Dist: torch>=2.6.0
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: vmas>=1.5.0
+Description-Content-Type: text/markdown
+
+<p align="center">
+<picture>
+<img src="docs/_static/prt-rl-logo-title.png" width="1024" style="max-width: 100%;">
+</picture>
+</p>
+
+My code related to learning and using RL outside of a specific project
+
+The documentation website is at [https://reinforcement-learning.readthedocs.io/](https://reinforcement-learning.readthedocs.io/)
+
+# Installation
+PRT-RL uses pyenv to manage the python version and poetry for package management. This library can be setup using other tools for these purposes.
+
+
+# Getting Started
+
+# Related Libraries
+* stable baselines
+* openai spinup
+* TorchRL
+* RLlib
+* Tianshou
+* CleanRL
