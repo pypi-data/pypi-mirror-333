@@ -1,0 +1,13 @@
+fastapi-slim
+attrs>=23.2.0
+pydantic
+stac_pydantic>=3
+stac-fastapi.types==3.0.0
+stac-fastapi.api==3.0.0
+stac-fastapi.extensions==3.0.0
+orjson
+overrides
+geojson-pydantic
+pygeofilter==0.3.1
+jsonschema
+slowapi==0.1.9
