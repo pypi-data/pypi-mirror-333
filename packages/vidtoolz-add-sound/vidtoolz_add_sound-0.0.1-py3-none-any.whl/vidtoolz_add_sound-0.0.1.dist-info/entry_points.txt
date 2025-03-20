@@ -1,0 +1,2 @@
+[vidtoolz_plugins]
+addsound = vidtoolz_add_sound:addsound_plugin
