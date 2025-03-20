@@ -1,0 +1,9 @@
+# 3rd-party extensions that we watch in CI
+# used notably to display versions
+
+[extensions]
+hggit=
+evolve=
+topic=
+loggingmod =
+configexpress =

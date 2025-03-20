@@ -1,0 +1,19 @@
+syntax: glob
+*.swp
+*\#
+*.\#*
+*~
+*.pyc
+build/
+*.egg-info/
+dist/
+venv/
+venv?/
+
+*.orig
+*.rej
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/

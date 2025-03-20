@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -e
+
+HG_GIT_REVISION="$HEPTAPOD_CI_HG_GIT_REVISION"  # may not be defined
+HG_GIT_UPDATE="$HEPTAPOD_CI_HG_GIT_UPDATE"  # may also be undefined
+
+set -u
+
+# putting aside any hg-git checkout in a vendor/ subdirectory in
+# order to be really, really sure not to create side effects
+# on builds that really don't want an intermediate hg-git version to be in
+# their way.
+HG_GIT_LOCAL_REPO=vendor/hg-git
+HG_GIT_REMOTE_REPO=https://foss.heptapod.net/mercurial/hg-git
+
+if [ "$HG_GIT_UPDATE" = "true" ]; then
+    if test -z "$HG_GIT_REVISION"; then
+        HG_GIT_REVISION=default
+    fi
+
+    if test -d "$HG_GIT_LOCAL_REPO"; then
+        echo "Updating the hg-git clone found at $HG_GIT_LOCAL_REPO to revision $HG_GIT_REVISION"
+        hg -R $HG_GIT_LOCAL_REPO pull -r $HG_GIT_REVISION $HG_GIT_REMOTE_REPO
+        hg -R $HG_GIT_LOCAL_REPO update -r $HG_GIT_REVISION
+    else
+        echo "Cloning hg-git to $HG_GIT_LOCAL_REPO at revision $HG_GIT_REVISION"
+        hg clone -r $HG_GIT_REVISION $HG_GIT_REMOTE_REPO $HG_GIT_LOCAL_REPO
+    fi
+    echo "pip-installing $HG_GIT_LOCAL_REPO"
+    pip3 install --user -e $HG_GIT_LOCAL_REPO
+fi
+
+echo "pip-installing all missing requirements"
+grep -Ev "Mercurial|hg-evolve" install-requirements.txt > ci-install.reqs
+# everything should already be in place for most builds but we can still
+# have some version changes between rebuilds of the base images
+pip3 install --user -r ci-install.reqs --upgrade
+pip3 install --user -r test-requirements.txt --upgrade
+
+echo "Version of Mercurial and extensions"
+HGRCPATH=ci/ext3rd.hgrc hg version --debug
+
+echo "Details of Mercurial installation"
+hg debuginstall
+

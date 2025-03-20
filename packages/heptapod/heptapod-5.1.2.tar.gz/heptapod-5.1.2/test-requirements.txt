@@ -1,0 +1,6 @@
+pytest==6.2.5
+pytest-cov<3.0.0
+coverage>=7.5
+webtest
+mercurial_testhelpers>=0.2.0dev0
+flake8

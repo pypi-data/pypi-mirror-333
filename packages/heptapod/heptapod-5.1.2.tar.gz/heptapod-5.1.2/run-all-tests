@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+RUNNER=$PYTEST
+PYVERSION=$ENFORCE_PYVERSION
+SKIP_FLAKE8=$HEPTAPOD_CI_SKIP_LINT
+
+set -u
+
+if test -z "$SKIP_FLAKE8"; then
+    echo "Running flake8"
+    flake8 heptapod setup.py hgext3rd
+    echo "flake8 OK"
+fi
+
+if [ -z "$RUNNER" ]; then
+    RUNNER=py.test
+fi
+
+if [ -n "$PYVERSION" ]; then
+    if $RUNNER --version 2>&1 | grep -E "python$PYVERSION[.][0-9]+/(site|dist)-packages" > /dev/null; then
+        echo "pytest is running Python $PYVERSION as expected"
+    else
+        echo "Expected to run with Python $PYVERSION, but runner '$RUNNER' does not:" >&2
+        echo >&2
+        echo "$RUNNER --version" >&2
+        $RUNNER --version >&2
+        exit 1
+    fi
+fi
+
+# vendor/ subdirectory is used in CI for some 'live' dependencies (e.g., hg-git)
+$RUNNER --ignore vendor/ \
+        --doctest-modules \
+        --cov heptapod --cov hgext3rd.heptapod \
+        --cov-report term-missing \
+        --cov-fail-under 100 \
+        $@

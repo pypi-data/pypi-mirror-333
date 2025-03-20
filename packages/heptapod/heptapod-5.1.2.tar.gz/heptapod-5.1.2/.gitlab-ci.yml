@@ -1,0 +1,104 @@
+stages:
+  - main
+  - compat
+  - downstream
+
+variables:
+  BASE_IMAGES_TAG: $CI_COMMIT_HG_BRANCH
+  BASE_IMAGES_COLLECTION: registry.heptapod.net:443/heptapod/ci-images
+  BASE_IMAGES_MERCURIAL: $BASE_IMAGES_COLLECTION/mercurial
+
+check-sdist:
+  stage: compat
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH =~ /^branch\/(default,stable)$/'
+    - when: never
+  image: python:3.9
+  needs: []
+  script:
+    - pip3 install .
+    - python3 -c "import hgext3rd.heptapod; import heptapod"
+    - HGRCPATH=heptapod/required.hgrc hg hpd-versions
+
+.tests:
+   script:
+      - ci/install-dependencies
+      - ./run-all-tests
+
+.tests-no-lint:
+  extends:
+    - .tests
+  variables:
+    HEPTAPOD_CI_SKIP_LINT: "yes"
+
+.unless-hg-git-triggered: &unless-hg-git-triggered
+  if: '$HG_GIT_TRIGGERING_SHA'
+  when: never
+
+.only_py_heptapod_default:
+  rules:
+    # only the hg-git compat job is relevant for pipeline triggered
+    # by upstream hg-git pipelines
+    - <<: *unless-hg-git-triggered
+    - if: '$CI_COMMIT_HG_BRANCH == "default"'
+    - when: never
+
+tests-current:
+   # only the hg-git compat job is relevant for job triggered by upstream
+   # hg-git pipelines
+   rules:
+     # only the hg-git compat job is relevant for pipeline triggered
+     # by upstream hg-git pipelines
+     - <<: *unless-hg-git-triggered
+     - when: always
+   extends:
+     - .tests
+   stage: main
+   image: ${BASE_IMAGES_MERCURIAL}/hg-current:${BASE_IMAGES_TAG}
+
+
+tests-hg-stable:
+   extends:
+     - .tests-no-lint
+     - .only_py_heptapod_default
+   allow_failure: true
+   stage: compat
+   image: ${BASE_IMAGES_MERCURIAL}/hg-stable:${BASE_IMAGES_TAG}
+   variables:
+    HEPTAPOD_CI_HG_GIT_UPDATE: "true"
+    HEPTAPOD_CI_HG_GIT_REVISION: "1.0.x"
+
+tests-hg-default:
+   extends:
+     - .tests-no-lint
+     - .only_py_heptapod_default
+   allow_failure: true
+   stage: compat
+   image: ${BASE_IMAGES_MERCURIAL}/hg-default:${BASE_IMAGES_TAG}
+
+tests-hg-git-default:
+  rules:
+    - if: '$CI_COMMIT_HG_BRANCH == "default"'
+    # upstream hg-git can in theory trigger for any branch of py-heptapod
+    - if: '$HG_GIT_TRIGGERING_SHA'
+    - when: never
+  allow_failure: true
+  variables:
+    HEPTAPOD_CI_HG_GIT_UPDATE: "true"
+    HEPTAPOD_CI_HG_GIT_REVISION: $HG_GIT_TRIGGERING_SHA
+  extends:
+    - .tests-no-lint
+  stage: compat
+  image: ${BASE_IMAGES_MERCURIAL}/hg-stable:${BASE_IMAGES_TAG}
+
+hgitaly:
+  rules:
+    - <<: *unless-hg-git-triggered
+    - if: '$CI_COMMIT_BRANCH =~ /^branch\/.*/'  # named branch (not a topic)
+    - when: never
+  stage: downstream
+  trigger:
+    project: heptapod/hgitaly
+    branch: branch/$CI_COMMIT_HG_BRANCH
+    strategy: depend
