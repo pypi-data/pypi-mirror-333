@@ -1,0 +1,9 @@
+apolo_kube_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apolo_kube_client/client.py,sha256=y7weWJJQ_llIMiEV1ub840LplNlfx_x3pO385XGuTPc,9299
+apolo_kube_client/config.py,sha256=H4j8yes0qtHeRcP7zq7vFkTeQ7hh_7Lt-6dSe-fOW10,851
+apolo_kube_client/errors.py,sha256=hH8OxXz0oS3XOMee9iAWfuLt7Q7uiz85X_P5ocJ2nvY,465
+apolo_kube_client/py.typed,sha256=sow9soTwP9T_gEAQSVh7Gb8855h04Nwmhs2We-JRgZM,7
+apolo_kube_client-25.3.0.dist-info/LICENSE,sha256=pVb_3JM8l6iiZEkZq5-wPiL4om6oL4_xY0E9uzimRWg,582
+apolo_kube_client-25.3.0.dist-info/METADATA,sha256=69xoVKcH5b_rAtfER1qX3R9yTMoajYZS9v622c7uWGg,710
+apolo_kube_client-25.3.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+apolo_kube_client-25.3.0.dist-info/RECORD,,
