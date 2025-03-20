@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: echofire
+Version: 0.1.18
+Summary: Realistic Voice Agent Testing - Automate end-to-end evaluation of voice agents with human-like audio simulation
+Author: Dylan Huang
+Author-email: dhuang@fireworks.ai
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiofiles (>=23.0.0,<24.0.0)
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: dotenv (>=0.9.9,<0.10.0)
+Requires-Dist: human-id (>=0.2.0,<0.3.0)
+Requires-Dist: numpy (>=1.24.0,<2.0.0)
+Requires-Dist: openai (>=1.0.0,<2.0.0)
+Requires-Dist: pydantic (>=2.0.0,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: rich (>=13.0.0,<14.0.0)
+Requires-Dist: scipy (>=1.10.0,<2.0.0)
+Requires-Dist: sounddevice (>=0.4.6,<0.5.0)
+Requires-Dist: soundfile (>=0.12.1,<0.13.0)
+Requires-Dist: typer (>=0.15.2,<0.16.0)
+Requires-Dist: websockets (>=11.0.0,<12.0.0)
+Description-Content-Type: text/markdown
+
+# EchoFire 
+
+**Realistic Voice Agent Testing**  
+
+> Automate end-to-end evaluation of voice agents with human-like audio simulation.  
+
+```mermaid
+flowchart LR
+    A[Record Session With Voice Agent] --> B[Write Tests w/ LLM Judge + Built-in Functions]
+    B --> C{Parallel Test Execution}
+    C -->|Multiple Iterations| D1[Run Test 1]
+    C -->|Multiple Iterations| D2[Run Test 2]
+    C -->|Multiple Iterations| D3[Run Test ...]
+    D1 --> E[Share Results & Collaborate]
+    D2 --> E
+    D3 --> E
+    E --> F[Build Datasets for Fine-Tuning]
+    F --> G[Improve Models & Prompts]
+    G --> A
+```
+
+### Why EchoFire?  
+- 🚫 **Manual testing sucks**: Listening to every agent response isn't scalable.  
+- 🤖 **Synthetic TTS isn't real**: Simulate *actual* human speech patterns, background noise, and ASR edge cases.  
+- 🔥 **Test everything**: Validate ASR accuracy, intent logic, and agent responses in one flow.  
+- 💻 **Works locally**: Run tests on your machine with a simple CLI - no cloud deployment needed.
+- 🔄 **CI/CD ready**: Integrate voice agent testing into your continuous integration pipeline.
