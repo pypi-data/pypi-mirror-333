@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: bytedance_custom_rate_limiter
+Version: 0.0.1
+Summary: A simple package named bytedance_custom_rate_limiter
+Home-page: https://github.com/artifact/bytedance_custom_rate_limiter.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
