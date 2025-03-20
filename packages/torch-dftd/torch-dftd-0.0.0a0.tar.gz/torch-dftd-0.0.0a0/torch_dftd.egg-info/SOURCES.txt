@@ -1,0 +1,4 @@
+torch_dftd.egg-info/PKG-INFO
+torch_dftd.egg-info/SOURCES.txt
+torch_dftd.egg-info/dependency_links.txt
+torch_dftd.egg-info/top_level.txt
