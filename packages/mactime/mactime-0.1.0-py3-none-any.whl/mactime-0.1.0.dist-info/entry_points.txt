@@ -1,0 +1,4 @@
+[console_scripts]
+mactime = mactime.cli:main
+whenwhat = mactime.cli:main
+ww = mactime.cli:main

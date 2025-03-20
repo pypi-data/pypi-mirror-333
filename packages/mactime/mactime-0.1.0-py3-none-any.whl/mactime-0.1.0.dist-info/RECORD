@@ -1,0 +1,15 @@
+mactime/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mactime/__main__.py,sha256=4XaStri7n33JqM8W6l9vbvW367g7mU3UoW8Kzh9-GTM,69
+mactime/_cli_interface.py,sha256=rMUCFzgPtRBz2pC9gpNZl3RpVOALZ3mws00ufCGViVw,9781
+mactime/cli.py,sha256=ZbZm0Ydjxp0AxmKQWivR0IGUNghaT5_q3lbkMMx7B98,15832
+mactime/constants.py,sha256=CHNd2ZopoiLziarDsg2zllBpBGJuE8jgf-9cHvHZ05Q,2267
+mactime/core.py,sha256=a3sqSCtwXLKYXLuB9s622gDDXiO7f2odJY7i5Sp3LCE,8945
+mactime/errors.py,sha256=3ueyOWXAQdrU8f08xTQ6BHpLLs5IHQtXQjGMHLSyaf0,2203
+mactime/logger.py,sha256=c1-wcB5Cu28lE5lxKeE8dWgxMDZKBynbGEDoSLRa5cU,91
+mactime/utils.py,sha256=tHNcHSP5BBvR-4JlUUpirJQy7IBlZACEvmGT0GSKPEA,10749
+mactime/vendored/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mactime/vendored/argparse_color_formatter.py,sha256=a5oMdXC6lAzSecHOi1Ep7Lryr-h9DXQ3VAxjk_rxMtA,15043
+mactime-0.1.0.dist-info/METADATA,sha256=HCEMESXV--J3QGAa2A7PlQLjshCsNRUZtA_RduVSMlQ,9281
+mactime-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mactime-0.1.0.dist-info/entry_points.txt,sha256=FN7MLJa2pLIJJRnHbTQkpsU_qxPTWGFn_4fYB_Tpt1c,95
+mactime-0.1.0.dist-info/RECORD,,
