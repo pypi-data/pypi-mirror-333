@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: tradelibs
+Version: 0.1.1
+Summary: Một thư viện hỗ trợ tính toán nhanh cho giao dịch tiền điện tử
+Author-email: dinhluyen93 <dinhluyenbk93@gmail.com>
+License: MIT
+Project-URL: Documentation, https://github.com/dinhluyen93/tradelibs/docs
+Project-URL: Source, https://github.com/dinhluyen93/tradelibs
+Project-URL: Homepage, https://github.com/dinhluyen93/tradelibs
+Project-URL: Tracker, https://github.com/dinhluyen93/tradelibs/issues
+Project-URL: Release Notes, https://example.com/tradelibs/releases
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.2.2
+
+# aethorlibs
+
+[![PyPI version](https://badge.fury.io/py/aethorlibs.svg)](https://badge.fury.io/py/aethorlibs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+aethorlibs là một thư viện Python cung cấp các công cụ tính toán nhanh cho giao dịch tiền điện tử. Nó bao gồm các chỉ báo kỹ thuật phổ biến và các hàm tiện ích để phân tích dữ liệu thị trường.
+
+## Tính năng
+
+*   **Chỉ báo kỹ thuật:**
+    *   Exponential Moving Average (EMA)
+    *   Simple Moving Average (SMA)
+    *   Keltner Bands (KBANDS)
+    *   Bollinger Bands (BBANDS)
+    *   Relative Strength Index (RSI)
+    *   Money Flow Index (MFI)
+    *   Average True Range (ATR)
+
+*   **Hiệu suất cao:** Sử dụng NumPy cho các phép tính số học nhanh chóng.
+
+## Cài đặt
+
+Bạn có thể cài đặt `aethorlibs` bằng pip:
+
+```bash
+pip install aethorlibs

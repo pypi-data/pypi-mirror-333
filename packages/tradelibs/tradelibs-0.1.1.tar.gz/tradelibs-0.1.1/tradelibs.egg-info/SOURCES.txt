@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+tradelibs.egg-info/PKG-INFO
+tradelibs.egg-info/SOURCES.txt
+tradelibs.egg-info/dependency_links.txt
+tradelibs.egg-info/requires.txt
+tradelibs.egg-info/top_level.txt

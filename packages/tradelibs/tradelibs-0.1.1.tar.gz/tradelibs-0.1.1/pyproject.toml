@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tradelibs"
+version = "0.1.1"
+dependencies = [
+    "numpy>=2.2.2"
+]
+authors = [
+  {name = "dinhluyen93", email = "dinhluyenbk93@gmail.com"}
+]
+requires-python = ">=3.10"
+description = "Một thư viện hỗ trợ tính toán nhanh cho giao dịch tiền điện tử"
+readme = "README.md"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries"
+]
+
+[project.urls]
+"Documentation" = "https://github.com/dinhluyen93/tradelibs/docs"
+"Source" = "https://github.com/dinhluyen93/tradelibs"
+"Homepage" = "https://github.com/dinhluyen93/tradelibs"
+"Tracker" = "https://github.com/dinhluyen93/tradelibs/issues"
+"Release Notes" = "https://example.com/tradelibs/releases"
