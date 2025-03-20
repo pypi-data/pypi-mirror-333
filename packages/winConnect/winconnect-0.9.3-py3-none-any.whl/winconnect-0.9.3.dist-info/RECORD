@@ -1,0 +1,13 @@
+winConnect/WinConnectBase.py,sha256=fDfqtyPyvylw9T1q6oWMn1UUKQt9y70du26RQFXDiE0,15287
+winConnect/WinConnectClient.py,sha256=nanfzEuIVFSRjZVVz6AegHGOueETnPNJL4SF9IDScig,2425
+winConnect/WinConnectDaemon.py,sha256=ezy0yG7fbOBvktYXFRs6YFilVm_JP-NPnG1SX9NKvLQ,2277
+winConnect/__init__.py,sha256=LSQ8o82_L9mAFwflF_cuE7xdly3QiFpOUBL8azQ93JE,147
+winConnect/__meta__.py,sha256=eYdIa2Okd4byNUTv6xLsAoWnmu9smRXnfG9-uCGYMno,350
+winConnect/errors.py,sha256=8JmKpnWkwElBBvG3tyy2pKs5K_FXN8HZSbaAmPlQo7Q,434
+winConnect/exceptions.py,sha256=aDF6yKgmcZ8QxsO0jAM-nASZmQX9oUxdZp-alijOTjs,1567
+winConnect/utils.py,sha256=mTR67hAoA76I-jfnjMhdjGYysGbYay4tvjyfv_vgP40,886
+winconnect-0.9.3.dist-info/LICENSE,sha256=9z7cJZ7s-46DjeHoEndx7EvqFJr6QkMYp4WlAFsW4pc,1092
+winconnect-0.9.3.dist-info/METADATA,sha256=8UEP7sroNi1evxzREvEHYEHam-2_0TDD9H3FPp9FM-g,3350
+winconnect-0.9.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+winconnect-0.9.3.dist-info/top_level.txt,sha256=S8xzK64tPlgtkRV02rXYlODzltBPzdMgk6jVVYEunkg,11
+winconnect-0.9.3.dist-info/RECORD,,
