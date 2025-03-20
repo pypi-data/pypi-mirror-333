@@ -1,0 +1,2 @@
+[console_scripts]
+chromy = chromy.chromy:main

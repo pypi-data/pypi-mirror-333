@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "chromy-cli"
+version = "0.1.1"
+description = "A simple CLI to create and manage Chrome extensions."
+readme = "README.md"
+authors = [{ name = "mvlware", email = "mal@mvlware.xyz" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "colorama",
+    "blessed",
+    "inquirer"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+
+
+[project.scripts]
+chromy = "chromy.chromy:main"
