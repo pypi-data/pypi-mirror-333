@@ -1,0 +1,3 @@
+[console_scripts]
+tacview_client=tacview_client.cli:app
+
