@@ -1,0 +1,2 @@
+[console_scripts]
+fast-reading=fast_reading:main
