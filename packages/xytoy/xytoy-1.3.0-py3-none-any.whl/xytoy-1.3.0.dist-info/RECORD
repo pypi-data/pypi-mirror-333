@@ -1,0 +1,13 @@
+xytoy/__init__.py,sha256=wZIhWxS-ES5GstWMLGGMgjh_MM-2xjv-94alA1N9FMg,28
+xytoy/cli.py,sha256=BRnpP-cJTvDdzpRtGCXG5b4M606_tNdnS4hfwEu_zYo,646
+xytoy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xytoy/settings.py,sha256=igvqjZfxer2oqIPZe2CZLIoj1jg-kDrji9y0HIGd3oc,1051
+xytoy/c/__init__.py,sha256=gONkbzTkgHJRPOKJ_NFN7TaFA325Yty-WJHBuzfmtjM,1297
+xytoy/cache/__init__.py,sha256=srYgysVWXK53tuRzx3eKtcn7MeFrj7-H70bWra0lyG4,2900
+xytoy/nb/__init__.py,sha256=tP6108pYu4sCq3sJguhBcnyDOR0bEYnz9LtQbUAURuc,3347
+xytoy-1.3.0.dist-info/LICENSE,sha256=d5JGb6R7KcmPy_Sj-mqtzdZTx7rRmklhtIuL5b0ASQQ,1062
+xytoy-1.3.0.dist-info/METADATA,sha256=jZMpcSYR4VtHMGHA39s9kaUcFaFoiULQbkdH3X7E5aQ,4404
+xytoy-1.3.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+xytoy-1.3.0.dist-info/entry_points.txt,sha256=q8Ovj9ntzUs-ljfE-b41BQBHfq6BsNyGk8om6ZFrGb4,44
+xytoy-1.3.0.dist-info/top_level.txt,sha256=DlnFmFIQC-JHIe-ACdr5Nfq59EU_N7ruzju1WWm_d1c,6
+xytoy-1.3.0.dist-info/RECORD,,
