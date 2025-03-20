@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pytest-clean-database"
+version = "1.0.0"
+description = "A pytest plugin that cleans your database up after every test."
+authors = ["Roman Vlasenko <klavionik@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "pytest_clean_db", from = "src" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Pytest",
+    "Typing :: Typed"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+pytest = ">=7.0,<9"
+pymysql = { version = ">=1.0,<2.0.0", optional = true }
+psycopg = { version = ">=3.0,<4.0.0", optional = true }
+
+[tool.poetry.extras]
+mysql = ["pymysql"]
+psql = ["psycopg"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."pytest11"]
+clean-db = "pytest_clean_db.plugin"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.14.1"
+psycopg = "^3.0.0"
+pymysql = {extras = ["rsa"], version = "^1.0.0"}
+types-pymysql = "^1.1.0.20241103"
