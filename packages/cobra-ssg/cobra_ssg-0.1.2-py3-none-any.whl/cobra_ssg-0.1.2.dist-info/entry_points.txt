@@ -1,0 +1,3 @@
+[console_scripts]
+cobra-ssg=cobra_ssg.cli:main
+
