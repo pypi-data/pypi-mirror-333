@@ -1,0 +1,14 @@
+crispio/__init__.py,sha256=14Xm5FwbZ3gVbrQ4_D-Vzv2eVNPl8z6iuN2QzC3e_-8,212
+crispio/annotate.py,sha256=2Sf4Pd93B6JdOlkF29YacI9r2qmUsSHRUC0qhL0jhB0,2285
+crispio/cli.py,sha256=WdQNhr-aZP0fwUVcpxPqQxXf-G50gmLDTDha85OPKEs,9973
+crispio/crosstalk.py,sha256=JniFR2_5FaVLEpv5nXEUyZsL8qKQqOP1nYAoWfdGhmI,1456
+crispio/features.py,sha256=LSussYZFi8-o5VcZCBMaRVXZwwV9MkQuLrq6gGe2-JM,5351
+crispio/map.py,sha256=NWwgbYHEmAzGwWlDYuhtuau58PvcdvSGnTEJYKUqMvY,20485
+crispio/sequences.yml,sha256=-ywuTFgrdeqv9tkfhp0xnBUgGxwPeU6mKhBqUT3NIUc,268
+crispio/utils.py,sha256=vXA7iUwts7Pr1Z1e4fENDwB7h1oZnditneEmVFtORj8,512
+crispio-0.0.3.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+crispio-0.0.3.dist-info/METADATA,sha256=NBqZDk5WewpLzkLapjo3CZcqw_3t1XQPpjCzUQ6WaIs,20276
+crispio-0.0.3.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+crispio-0.0.3.dist-info/entry_points.txt,sha256=l0DwA3nLxztF7LVVpC4TqMZdbr3s7fbNQ42LqICHnS4,111
+crispio-0.0.3.dist-info/top_level.txt,sha256=Odjof-HilxoBGuyHdNtZULs715kYf85IxdFWUHai87c,8
+crispio-0.0.3.dist-info/RECORD,,
