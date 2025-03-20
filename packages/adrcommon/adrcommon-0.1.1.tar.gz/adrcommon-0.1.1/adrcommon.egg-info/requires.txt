@@ -1,0 +1,9 @@
+openai
+cheroot
+mergedeep
+pyyaml
+boto3
+pymongo
+pydantic
+pydantic-mongo
+ndjson
