@@ -1,0 +1,12 @@
+requests
+minio
+black
+flake8
+isort
+pyscaffold
+pytest
+pytest_mock
+PyYAML
+pandas
+geojson
+shapely
