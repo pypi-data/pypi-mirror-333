@@ -1,0 +1,10 @@
+LICENSE
+README.md
+download.py
+setup.py
+sikumim.egg-info/PKG-INFO
+sikumim.egg-info/SOURCES.txt
+sikumim.egg-info/dependency_links.txt
+sikumim.egg-info/entry_points.txt
+sikumim.egg-info/requires.txt
+sikumim.egg-info/top_level.txt
