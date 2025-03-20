@@ -1,0 +1,4 @@
+[console_scripts]
+upsunvalidator=upsunvalidator.__main__:cli
+upv=upsunvalidator.__main__:cli
+
