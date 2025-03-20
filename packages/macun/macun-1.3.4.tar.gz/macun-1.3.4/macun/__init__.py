@@ -1,0 +1,1 @@
+from macun import main

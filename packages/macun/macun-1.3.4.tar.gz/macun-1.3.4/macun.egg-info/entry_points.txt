@@ -1,0 +1,2 @@
+[console_scripts]
+macun = macun.main:main
