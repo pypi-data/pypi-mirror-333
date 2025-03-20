@@ -1,0 +1,7 @@
+setup.py
+xbeastx/__init__.py
+xbeastx.egg-info/PKG-INFO
+xbeastx.egg-info/SOURCES.txt
+xbeastx.egg-info/dependency_links.txt
+xbeastx.egg-info/requires.txt
+xbeastx.egg-info/top_level.txt

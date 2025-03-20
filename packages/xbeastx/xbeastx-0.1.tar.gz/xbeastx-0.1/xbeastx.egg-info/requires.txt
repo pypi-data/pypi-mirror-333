@@ -1,0 +1,10 @@
+Flask
+Telethon
+APScheduler
+requests
+pytz
+pyrogram
+pymongo
+colorama
+localdb.json
+lolpy
