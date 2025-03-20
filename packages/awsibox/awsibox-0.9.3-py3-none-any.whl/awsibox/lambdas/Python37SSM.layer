@@ -1,0 +1,47 @@
+# vim: ft=python
+import boto3
+import os
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+env = os.environ.get("Env")
+envRole = os.environ.get("EnvRole")
+
+
+def set(config={}, env=env, envRole=envRole):
+    for n, v in config.items():
+        globals()[n] = v[env]
+
+    set_ssm(envRole)
+
+
+def set_ssm(envRole):
+    pList = []
+    client = boto3.client("ssm")
+    paginator = client.get_paginator("describe_parameters")
+    response_iterator = paginator.paginate(
+        ParameterFilters=[
+            {
+                "Key": "Name",
+                "Values": [f"/{envRole}/"],
+                "Option": "Contains",
+            }
+        ],
+    )
+
+    for r in response_iterator:
+        for p in r["Parameters"]:
+            pList.append(p["Name"])
+
+    while pList:
+        pList_sub = pList[0:10]
+        response = client.get_parameters(Names=pList_sub, WithDecryption=True)
+        for p in response["Parameters"]:
+            name = p["Name"].split("/")[2]
+            name = name.replace("-", "_").upper()
+
+            globals()[name] = p["Value"]
+            logger.info(f"Success adding parameter {name} to cfg.")
+        del pList[0:10]

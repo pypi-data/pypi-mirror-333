@@ -1,0 +1,245 @@
+# vim: ft=python
+# DOWNLOAD/USE UP TO DATE BOTO3 REMOVE IF
+# https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html >= 1.26.6
+import sys
+import time
+
+# from pprint import pprint
+from ast import literal_eval
+from functools import reduce
+from pip._internal import main
+
+SERVICES_GLOBAL = ["cloudfront"]
+TAG_PREFIX = "IBoxCcrAws:"
+
+main(
+    [
+        "install",
+        "-I",
+        "-q",
+        "boto3",
+        "--target",
+        "/tmp/",
+        "--no-cache-dir",
+        "--disable-pip-version-check",
+    ]
+)
+sys.path.insert(0, "/tmp/")
+#
+
+# warning order is important
+# as crhelper import boto3 it must be imported after main
+# otherway lambda will still use inline boto3 and not updated one
+import boto3
+import logging
+from crhelper import CfnResource
+
+logger = logging.getLogger(__name__)
+logging_handler = logging.StreamHandler()
+logger.addHandler(logging_handler)
+logger.setLevel(logging.INFO)
+logger.propagate = False
+
+
+# Initialise the helper
+helper = CfnResource(
+    json_logging=False,
+    log_level="DEBUG",
+    boto_level="CRITICAL",
+    polling_interval=1,
+    sleep_on_delete=10,
+)
+
+try:
+    # Init code goes here
+    pass
+except Exception as e:
+    helper.init_failure(e)
+
+
+def update_props_from_tag():
+    tag_key = TAG_PREFIX + res_pid.split(":")[-1]
+    response = tag_client.get_resources(TagFilters=[{"Key": tag_key}])
+    if response["ResourceTagMappingList"]:
+        for n in response["ResourceTagMappingList"][0]["Tags"]:
+            if tag_key in n["Key"]:
+                for t in n["Value"].split():
+                    tag_name = t.split("==")[0]
+                    if tag_name in update_keys:
+                        props[tag_name] = t.split("==")[1]
+
+
+def prepare_for_get(data):
+    get_conf = ibox_conf["Action"].get("Get", ibox_conf["Action"]["Wait"])
+
+    return getattr(client, get_conf["Method"]), {
+        n: data[v] for n, v in get_conf["Keys"].items()
+    }
+
+
+def update_props_from_get():
+    if not ibox_conf["Action"].get("Get"):
+        return
+    get_method, props_get = prepare_for_get(props)
+    response = get_method(**props_get)
+    for n, v in atts.items():
+        if n in update_keys:
+            props[n] = reduce(dict.get, v.split("."), response)
+
+
+def wait_for(data):
+    get_method, props_get = prepare_for_get(data)
+    while True:
+        response = get_method(**props_get)
+        for n, v in ibox_conf["Action"]["Wait"]["For"].items():
+            if reduce(dict.get, n.split("."), response) == v:
+                return
+            logger.info("Waiting for status....")
+            time.sleep(30)
+
+
+def do_action(tag=True, wait=True):
+    data = {}
+    action_method = getattr(client, method)
+    response = action_method(**props)
+    for n, v in atts.items():
+        data[n] = reduce(dict.get, v.split("."), response)
+
+    if wait and ibox_conf["Action"].get("Wait"):
+        wait_for(data)
+
+    if tag:
+        # tag resource using arn/pid as tag name
+        arn = data["Arn"]
+        tag_key = TAG_PREFIX + arn.split(":")[-1]
+        tag_value = " ".join([n + "==" + data[n] for n in update_keys])
+        response = tag_client.tag_resources(
+            ResourceARNList=[arn],
+            Tags={
+                tag_key: tag_value,
+            },
+        )
+        if response.get("FailedResourcesMap"):
+            logger.error(response)
+
+    return data
+
+
+@helper.create
+def create(event, context):
+    try:
+        data = do_action()
+    except Exception as e:
+        logger.error(e)
+        arn = res_pid
+    else:
+        helper.Data.update(data)
+        arn = data["Arn"]
+
+    logger.info(f"End -- Lid: {res_lid} Pid: {arn} Method: {method}")
+    return arn
+
+
+@helper.update
+def update(event, context):
+    for n in ibox_conf["Action"]["Update"].get("DenyKeys", []):
+        # delete keys not used by update
+        props.pop(n, "")
+    update_props_from_tag()
+    update_props_from_get()
+    data = do_action()
+    helper.Data.update(data)
+
+    logger.info(f"End -- Lid: {res_lid} Pid: {res_pid} Method: {method}")
+    return res_pid
+
+
+@helper.delete
+def delete(event, context):
+    props.clear()
+    update_props_from_tag()
+    update_props_from_get()
+    if props:
+        do_action(tag=False, wait=False)
+
+    logger.info(f"End -- Lid: {res_lid} Pid: {res_pid} Method: {method}")
+    return res_pid
+
+
+def parse_dict_for_int(data):
+    if isinstance(data, list):
+        value = [parse_dict_for_int(k) for k in data]
+    elif isinstance(data, dict):
+        value = {i: parse_dict_for_int(k) for i, k in data.items()}
+    elif isinstance(data, str) and data.isdecimal():
+        value = int(data)
+    elif data in ["True", "False"]:
+        value = literal_eval(data)
+    else:
+        value = data
+
+    return value
+
+
+def setup(event, context):
+    global client
+    global tag_client
+    global atts
+    global method
+    global props
+    global update_keys
+    global res_pid
+    global res_lid
+    global ibox_conf
+
+    action = event["RequestType"]
+    res_lid = event["LogicalResourceId"]
+    res = event["ResourceProperties"]
+    req_id = event["RequestId"]
+    resp_url = event["ResponseURL"]
+    res_pid = event.get("PhysicalResourceId")
+    res_before = event.get("OldResourceProperties", {})
+
+    logger.info(f"RequestId: {req_id} - ResponseURL: {resp_url}")
+
+    ibox_conf = res["IBoxConf"]
+    service = ibox_conf["Service"]
+    atts = ibox_conf["Atts"]
+    update_keys = ibox_conf["Action"]["Update"]["Keys"]
+
+    if service in SERVICES_GLOBAL:
+        boto3_regional = boto3.session.Session(region_name="us-east-1")
+        client = boto3_regional.client(service)
+        tag_client = boto3_regional.client("resourcegroupstaggingapi")
+    else:
+        client = boto3.client(service)
+        tag_client = boto3.client("resourcegroupstaggingapi")
+
+    method = ibox_conf["Action"][action]["Method"]
+
+    if action == "Update":
+        for n in ibox_conf["Action"][action].get("ReplaceKeys", []):
+            # compare provious and current value using reduce
+            if reduce(dict.get, n.split("."), res["Props"]) != reduce(
+                dict.get, n.split("."), res_before["Props"]
+            ):
+                # update must become a create
+                event["RequestType"] = "Create"
+                method = ibox_conf["Action"]["Create"]["Method"]
+                break
+
+    props = parse_dict_for_int(res["Props"])
+
+    logger.info(
+        f"Begin -- Lid: {res_lid} Pid: {res_pid} "
+        f"Service: {service} Method: {method}"
+    )
+
+
+def lambda_handler(event, context):
+    try:
+        setup(event, context)
+    except Exception as e:
+        logger.error(e)
+    finally:
+        helper(event, context)

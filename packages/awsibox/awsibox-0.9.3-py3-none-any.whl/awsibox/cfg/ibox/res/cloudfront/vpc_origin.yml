@@ -1,0 +1,82 @@
+global:
+  CloudFrontVpcOrigin:
+    - ECSHttpsDefaultInternal:
+        IBOX_ENABLED: False
+        IBOX_OUTPUT:
+          - _:
+              Value: Ref(IBOX_RESNAME)
+              Export: Export(Sub(f"CloudFrontVpcOrigin{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}"))
+        VpcOriginEndpointConfig:
+          Arn: Ref("LoadBalancerApplicationInternal")
+          Name: Sub(f"{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}-${EnvRole}-443")
+          OriginProtocolPolicy: https-only
+    - ECSLoadBalancerApplicationInternalHttps:
+        IBOX_ENABLED: False
+        IBOX_OUTPUT:
+          - _:
+              IBOX_ENABLED_IF: len(getattr(cfg, "CloudFrontDistribution", {})) == 0
+              Value: Ref(IBOX_RESNAME)
+              Export: Export(Sub(f"CloudFrontVpcOrigin{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}"))
+        VpcOriginEndpointConfig:
+          Arn: get_expvalue('LoadBalancerApplicationInternal', 'LoadBalancerApplicationStack')
+          Name: get_subvalue(f"{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}-${EnvRole}-${1M}", f'{IBOX_LINKED_OBJ_NAME}Port')
+          OriginProtocolPolicy: https-only
+          HTTPSPort: get_endvalue(f'{IBOX_LINKED_OBJ_NAME}Port')
+
+  CloudFormationCustomResource:
+    - CloudFrontVpcOriginECSHttpsDefaultInternal:
+        IBOX_ENABLED: False
+        IBOX_OUTPUT:
+          - _:
+              Value: GetAtt(IBOX_RESNAME, "Id")
+              Export: Export(Sub(f"CloudFrontVpcOrigin{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}"))
+        ServiceToken: ImportValue("LambdaCCRAWSResource")
+        IBoxConf: &ccr_aws_ibox_conf_vpc_origin
+          Service: cloudfront
+          Action:
+            Create:
+              Method: create_vpc_origin
+            Delete:
+              Method: delete_vpc_origin
+            Update:
+              Method: update_vpc_origin
+              Keys:
+                Id: Id
+                IfMatch: ETag
+              DenyKeys: []
+              ReplaceKeys:
+                - VpcOriginEndpointConfig.Name
+            Get:
+              Method: get_vpc_origin
+              Keys:
+                Id: Id
+            Wait:
+              For:
+                VpcOrigin.Status: Deployed
+          Atts:
+            Arn: VpcOrigin.Arn
+            Id: VpcOrigin.Id
+            IfMatch: ETag
+        Props:
+          VpcOriginEndpointConfig:
+            Arn: Ref("LoadBalancerApplicationInternal")
+            Name: Sub(f"{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}-${EnvRole}-443")
+            OriginProtocolPolicy: https-only
+            HTTPPort: 80
+            HTTPSPort: 443
+    - CloudFrontVpcOriginECSLoadBalancerApplicationInternalHttps:
+        IBOX_ENABLED: False
+        IBOX_OUTPUT:
+          - _:
+              IBOX_ENABLED_IF: len(getattr(cfg, "CloudFrontDistribution", {})) == 0
+              Value: GetAtt(IBOX_RESNAME, "Id")
+              Export: Export(Sub(f"CloudFrontVpcOrigin{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}"))
+        ServiceToken: ImportValue("LambdaCCRAWSResource")
+        IBoxConf: *ccr_aws_ibox_conf_vpc_origin
+        Props:
+          VpcOriginEndpointConfig:
+            Arn: get_expvalue('LoadBalancerApplicationInternal', 'LoadBalancerApplicationStack')
+            Name: get_subvalue(f"{IBOX_LINKED_OBJ_INDEX}" "-${AWS::StackName}-${EnvRole}-${1M}", f'{IBOX_LINKED_OBJ_NAME}Port')
+            OriginProtocolPolicy: https-only
+            HTTPPort: 80
+            HTTPSPort: get_endvalue(f'{IBOX_LINKED_OBJ_NAME}Port')

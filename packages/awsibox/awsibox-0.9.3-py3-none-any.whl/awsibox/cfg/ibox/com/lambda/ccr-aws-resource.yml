@@ -1,0 +1,37 @@
+IBoxLoader: !include
+  - com/lambda/layers.yml
+
+global:
+  Lambda:
+    - CCRAWSResource:
+        IBOX_LINKED_OBJ:
+          Role**: {}
+        Architectures:
+          - arm64
+        Code:
+          ZipFile: str(IBOX_INDEXNAME)
+        Description: 'Custom Resource to create aws Resources with a bad CF implementation'
+        Export: True
+        Layers:
+          - LambdaLayerVersionPython39CRHelper
+        Runtime: python3.11
+        Timeout: 600
+  IAMPolicy:
+    - LambdaCCRAWSResource:
+        Roles:
+          - Ref('RoleLambdaCCRAWSResource')
+        PolicyDocument:
+          Statement:
+            - 1:
+                Action:
+                  - 'cloudfront:CreateVpcOrigin'
+                  - 'cloudfront:DeleteVpcOrigin'
+                  - 'cloudfront:UpdateVpcOrigin'
+                  - 'cloudfront:GetVpcOrigin'
+                Effect: Allow
+                Resource: '*'
+  IAMRole:
+    - LambdaCCRAWSResource:
+        IBOX_SOURCE_OBJ: IAMRoleLambda
+        ManagedPolicyArns++++:
+          - 'arn:aws:iam::aws:policy/ResourceGroupsTaggingAPITagUntagSupportedResources'
