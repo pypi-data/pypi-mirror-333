@@ -1,0 +1,9 @@
+cdk_cloudformation_netapp_fsxn_snapmirror/__init__.py,sha256=JUY6xZ8ZQVycF9P-iQjHsw-OL5pnRerKJwDW4kjvd0E,46104
+cdk_cloudformation_netapp_fsxn_snapmirror/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_cloudformation_netapp_fsxn_snapmirror/_jsii/__init__.py,sha256=wpjvLI2bSIRCYStvE7C7He9ULfUrr2yENqUMCrMiyn8,1504
+cdk_cloudformation_netapp_fsxn_snapmirror/_jsii/netapp-fsxn-snapmirror@1.3.0-alpha.7.jsii.tgz,sha256=j23Xkf8hF8ahorbDhQ3Q7h5XD4PFjyNS3yUJnr4xL3Q,28601
+cdk_cloudformation_netapp_fsxn_snapmirror-1.3.0a7.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_cloudformation_netapp_fsxn_snapmirror-1.3.0a7.dist-info/METADATA,sha256=LtOr9tQMH7KoFdyktm2OFMJYMZtOjuwAzK5k4c1vhaI,4109
+cdk_cloudformation_netapp_fsxn_snapmirror-1.3.0a7.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+cdk_cloudformation_netapp_fsxn_snapmirror-1.3.0a7.dist-info/top_level.txt,sha256=K6rxvAlwmfaC5DzOTgqXwhvmk5UHkbMuZ0pcjX9JLYs,42
+cdk_cloudformation_netapp_fsxn_snapmirror-1.3.0a7.dist-info/RECORD,,
