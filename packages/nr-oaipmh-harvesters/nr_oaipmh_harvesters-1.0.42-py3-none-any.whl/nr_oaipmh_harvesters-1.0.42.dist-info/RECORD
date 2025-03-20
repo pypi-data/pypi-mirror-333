@@ -1,0 +1,9 @@
+nr_oaipmh_harvesters/config.py,sha256=iSRoTOMHGtGOhE_p0E6IxWh7_9nG-pv3gp2L1ft4PQQ,115
+nr_oaipmh_harvesters/ext.py,sha256=R1BiJlxeEAoVYwhpGrqUt_7KD2c4Kmxb1BkemhdCvQA,525
+nr_oaipmh_harvesters/nusl/__init__.py,sha256=ReOxqNkq3SgY_bhRmVe1iFNfA4VoRW-eGcXH3V7JmqI,102
+nr_oaipmh_harvesters/nusl/transformer.py,sha256=jxRSu4oFcyxf10fRCpXsZ32gA319D2Xkk2TogvoDT84,41527
+nr_oaipmh_harvesters-1.0.42.dist-info/METADATA,sha256=8AKRwJ0n8qAjksCNfi7xxz8Ug-STOe9zvwHgV2jy1d8,820
+nr_oaipmh_harvesters-1.0.42.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+nr_oaipmh_harvesters-1.0.42.dist-info/entry_points.txt,sha256=0NoyRyW7LbrrlH4vp5xB6i4u6gzxXNnKfQMEjGIqxE0,185
+nr_oaipmh_harvesters-1.0.42.dist-info/top_level.txt,sha256=xkfdyW9N-fj2SOkNE4e893O0lD38hAGuX5npXoLjRCM,21
+nr_oaipmh_harvesters-1.0.42.dist-info/RECORD,,
