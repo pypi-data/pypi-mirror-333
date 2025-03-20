@@ -1,0 +1,9 @@
+obdii/__init__.py,sha256=92HanqBP2YRiXSKKG4KlSmRT-ScL6AqOl8vCCmURpY8,256
+obdii/basetypes.py,sha256=gi7LDHUQnz_v-RYXZMQomMRzpTNIU_criColOjOcgGE,2208
+obdii/commands.py,sha256=5TAIUjddh6_xa0akQWgyfby4T7vj8RHU_BJahthgHQ4,1092
+obdii/connection.py,sha256=7QkYOYNprP1KY5APblREoV06KU2G2b05OfvvBa1pegU,4099
+py_obdii-0.0.2a0.dist-info/LICENSE,sha256=DqkPi0HVx51HRc429WdQt7L59OQDznDcd4F8z293xBM,1079
+py_obdii-0.0.2a0.dist-info/METADATA,sha256=Sh_zFf-WguZCjoz_Re4gjmNybVIEx5UTfJ7YW6dqewU,5568
+py_obdii-0.0.2a0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+py_obdii-0.0.2a0.dist-info/top_level.txt,sha256=UsSA2kV9Wm51yzSVGyUR-1XZuNiHm3IUz4rD5wvO7Tc,6
+py_obdii-0.0.2a0.dist-info/RECORD,,
