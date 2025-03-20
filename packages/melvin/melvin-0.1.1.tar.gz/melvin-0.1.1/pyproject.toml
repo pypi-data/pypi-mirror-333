@@ -1,0 +1,94 @@
+[project]
+name = "melvin"
+version = "0.1.1"
+description = "[private preview] Tecton Melvin"
+authors = [{ name = "Tecton, Inc.", email = "support@tecton.ai" }]
+dependencies = [
+    "pandas>=2.2.1",
+    "tecton-client>=0.3.0",
+    "typing_extensions>=4.5",
+    "langchain-core>0.3",
+    "langchain>=0.3",
+    "cloudpickle>=2.0.0",
+    "diskcache>=5.6.3",
+    "streamlit>=1.43.0",
+    "langchain-community>=0.3.0",
+    "tecton==1.1.5",
+    "tecton-runtime==1.1.5",
+    "tecton[rift]==1.1.5",
+    "streamlit-flow-component>=0.0.1",
+    "logfire>=0.1.1",
+    "langchain-openai>=0.1.23",
+    "lancedb==0.18.0",
+    "snowflake-connector-python>=3.11.0",
+    "black>=24.1.0",
+    "plotly>=5.22.0",
+    "openai>=1.1.0",
+    "matplotlib>=3.8.0",
+    "ipywidgets>=8.1.5",
+    "watchdog>=0.10.0",
+    "llama-index>=0.1.0",
+]
+readme = "README.pypi.md"
+requires-python = ">=3.9"
+license = { text = "Tecton Proprietary" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: Other/Proprietary License",
+]
+
+[project.urls]
+Homepage = "https://tecton.ai"
+Documentation = "https://docs.tecton.ai"
+
+[project.scripts]
+melvin = "melvin.cli:main"
+
+# Temporarily commented out for PyPI upload
+# [tool.hatch.version]
+# source = "vcs"
+# 
+# [tool.hatch.build.hooks.vcs]
+# version-file = "src/tecton_gen_ai/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/melvin"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+managed = true
+dev-dependencies = [
+    "setuptools",
+    "wheel",
+    "pytest",
+    "pytest-cov>=5.0.0",
+    "pytest-asyncio",
+    "pre-commit>=3.7.1",
+    "pylint>=3.2.6",
+    "ruff>=0.6.3",
+    "langchain-openai>=0.1.23",
+    "langchain-anthropic",
+    "lancedb>=0.12.0",
+    "jupyterlab>=4.2.5",
+]
+
+[tool.uv.workspace]
+members = ["demo/marshmallow-demo"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.coverage.run]
+source = ['src/tecton_gen_ai']
+omit = ['*/testing/*']
+
+[tool.pytest.ini_options]
+addopts = "-p pytest_cov -vvv --cov=src --cov-report=term-missing:skip-covered"

@@ -1,0 +1,31 @@
+get-started:
+    @echo 'Checking that you have `aqua` installed'
+    @echo 'If you need it, I recommend using `brew install aquaproj/aqua/aqua`'
+    aqua version
+
+    @echo ''
+    @echo 'Checking that you have `uv` installed (should come from aqua)'
+    uv version
+
+ruff-check:
+    uv run ruff check --fix
+
+pylint:
+    uv run --all-extras pylint **/*.py
+
+lint: ruff-check pylint
+
+format:
+    uv run ruff format
+
+check: lint format
+
+test:
+    uv run --all-extras pytest tests
+
+build:
+    rm -rf dist
+    uv build
+
+publish: build
+    uvx twine upload dist/*
