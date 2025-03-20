@@ -1,0 +1,5 @@
+exclude .gitignore
+exclude mkdocs.yml
+exclude Makefile
+exclude tests/*
+include experiments/datasets/statlog/results/results/acc_regret.png
