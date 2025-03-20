@@ -1,0 +1,2 @@
+[console_scripts]
+fastapi-create = fastapi_create.main:app
