@@ -1,0 +1,2 @@
+pydantic>=1.10.21
+starlette>=0.38.0
