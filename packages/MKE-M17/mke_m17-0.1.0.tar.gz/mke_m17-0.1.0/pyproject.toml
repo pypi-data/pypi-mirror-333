@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=66.1.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MKE_M17"
+version = "0.1.0"
+authors = [
+    { name = "Quy-An", email = "quyan18b@gmail.com" },
+]
+description = "A Python driver for the L9110 motor controller over I2C"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "smbus2>=0.4.3"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
