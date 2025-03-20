@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="design.plone.contenttypes"
+    >
+  <browser:page
+      name="opendata-catalog"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      class=".dcatapit.RDFView"
+      permission="zope2.View"
+      layer="..interfaces.IBrowserLayer"
+      />
+  <browser:page
+      name="download"
+      for=".dcatapit.IRDFView"
+      class=".dcatapit.RDFDownload"
+      permission="zope2.View"
+      layer="..interfaces.IBrowserLayer"
+      />
+</configure>

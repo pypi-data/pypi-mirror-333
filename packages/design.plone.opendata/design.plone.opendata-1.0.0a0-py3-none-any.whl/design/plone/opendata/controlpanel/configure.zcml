@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="design.plone.opendata"
+    >
+
+  <adapter
+      factory=".opendata.ControlPanelConfigletPanel"
+      name="opendata-controlpanel"
+      />
+
+  <browser:page
+      name="opendata-controlpanel"
+      for="plone.base.interfaces.IPloneSiteRoot"
+      class=".opendata.ControlPanel"
+      permission="cmf.ManagePortal"
+      layer="..interfaces.IBrowserLayer"
+      />
+
+</configure>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layers>
+  <layer interface="design.plone.opendata.interfaces.IBrowserLayer"
+         name="design.plone.opendata"
+  />
+</layers>
