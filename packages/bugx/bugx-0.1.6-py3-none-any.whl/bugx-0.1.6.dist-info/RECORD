@@ -1,0 +1,13 @@
+bugx/README.md,sha256=AR2aHi9AxNTQbCnAeuj0aTMcDyBSKvvbDQe_uNl6b2s,1572
+bugx/__about__.py,sha256=JKTD63hheP_MaLKWnG9NgJBNqrjVWpMCIImin7WE25I,2301
+bugx/__init__.py,sha256=CMlIDkCQAygvN0Z-4sw_NYnvttHnNA1ZDPfIcGXISFw,694
+bugx/__main__.py,sha256=jReJu9SS4xM-KSEqAu4OnQapYFG-Njn3XirtHkTx2gg,331
+bugx/bugreport_extractor.py,sha256=KyfgJyoTbMexffO7IZnoiwAYVlruKE-xWQ-fhfQjG20,19120
+bugx/cli.py,sha256=iFX5A3qk2KNW1I3AuvOesX6n_EAUYVJYB891xlR86ro,4297
+bugx/cli_constants.py,sha256=6KW2Q6sK4z51kpAJTm8hHGc371OYstSKIyRlSlJdczg,2510
+bugx/utils.py,sha256=VdrhYf2kySBMCWBjgxXT2xtDqngdXL0YG8shY0BrhO0,1643
+bugx/watcher.py,sha256=ZyWKb3DnamedEq7bLFtwQl25LytY3DMem4ccnP7444M,1931
+bugx-0.1.6.dist-info/METADATA,sha256=x5MzlPPcP8ta5g1lseyLPGKt-WDzJm_skazZePhbmjk,1286
+bugx-0.1.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bugx-0.1.6.dist-info/entry_points.txt,sha256=8Ov431H6zUe3uWy7ImtbY2EI_wuturBKxky4LvYb8LE,43
+bugx-0.1.6.dist-info/RECORD,,
