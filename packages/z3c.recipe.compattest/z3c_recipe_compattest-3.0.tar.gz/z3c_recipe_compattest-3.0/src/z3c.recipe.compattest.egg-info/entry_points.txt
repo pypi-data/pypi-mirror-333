@@ -1,0 +1,2 @@
+[zc.buildout]
+default = z3c.recipe.compattest.recipe:Recipe
