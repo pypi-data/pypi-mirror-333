@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mrsdk/__init__.py
+mrsdk/cli.py
+mrsdk/client.py
+mrsdk/exceptions.py
+mrsdk.egg-info/PKG-INFO
+mrsdk.egg-info/SOURCES.txt
+mrsdk.egg-info/dependency_links.txt
+mrsdk.egg-info/entry_points.txt
+mrsdk.egg-info/requires.txt
+mrsdk.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
