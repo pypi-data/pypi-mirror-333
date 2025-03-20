@@ -1,0 +1,6 @@
+aiohttp>=3.8.0
+attrs>=21.0.0
+multidict>=4.0.0
+yarl>=1.0.0
+frozenlist>=1.0.0
+typing-extensions>=4.0.0
