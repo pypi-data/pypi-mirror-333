@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pvga
+Version: 0.1.2
+Summary: PVGA is a powerful virus-focused assembler that does both assembly and polishing.
+Home-page: https://github.com/SoSongzhi/PVGA
+Author: zhisong
+Author-email: songzhics@gmail.com
+Requires-Python: >=3.7
+License-File: LICENSE
