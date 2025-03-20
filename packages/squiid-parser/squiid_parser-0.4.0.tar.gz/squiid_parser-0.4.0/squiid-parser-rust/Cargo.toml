@@ -1,0 +1,45 @@
+[package]
+name = "squiid-parser"
+version = "1.5.2"
+description = "The algebraic expression parser for Squiid Calculator."
+repository = "https://gitlab.com/ImaginaryInfinity/squiid-calculator/squiid-parser"
+license = "GPL-3.0"
+readme = "README.md"
+categories = ["text-processing", "parser-implementations", "mathematics"]
+keywords = ["parser", "math", "algebra", "rpn", "shunting-yard"]
+authors = [
+    "Connor Sample <tabulatejarl8@gmail.com>",
+    "Finian Wright <turbowafflz@gmail.com>",
+]
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+strip = "symbols"
+lto = true
+
+[lib]
+name = "squiid_parser"
+crate-type = ["lib", "cdylib"]
+path = "src/lib.rs"
+
+# example binary stuff
+[[bin]]
+name = "parser_example"
+path = "src/main.rs"
+required-features = ["bin"]
+
+[dependencies]
+log = { version = "0.4.22", optional = true }
+rustyline = { version = "15.0.0", optional = true }
+env_logger = { version = "0.11.6", optional = true }
+logos = "0.15.0"
+thiserror = "2.0.12"
+semver = { version = "1.0.25", optional = true }
+
+[features]
+default = ["logging"]
+bin = ["dep:rustyline", "dep:env_logger", "logging"]
+logging = ["dep:log"]
+ffi = ["dep:semver"]
