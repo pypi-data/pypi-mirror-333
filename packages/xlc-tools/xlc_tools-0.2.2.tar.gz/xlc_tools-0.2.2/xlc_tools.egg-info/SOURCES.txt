@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+xlc_tools/__init__.py
+xlc_tools/generate.py
+xlc_tools.egg-info/PKG-INFO
+xlc_tools.egg-info/SOURCES.txt
+xlc_tools.egg-info/dependency_links.txt
+xlc_tools.egg-info/entry_points.txt
+xlc_tools.egg-info/requires.txt
+xlc_tools.egg-info/top_level.txt
+xlc_tools.egg-info/zip-safe
