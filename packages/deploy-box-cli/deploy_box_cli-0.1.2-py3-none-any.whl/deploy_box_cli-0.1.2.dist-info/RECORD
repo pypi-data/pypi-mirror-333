@@ -1,0 +1,12 @@
+deploy_box_cli/__init__.py,sha256=K5SiDdEGYMpdqXThrqwTqECJJBOQNTQDrnpc2K5mzKs,21
+deploy_box_cli/cli.py,sha256=ku78f_J4H1MXxLVXICQreq61TCw0htGa3FAE6suX9Xg,1431
+deploy_box_cli/helpers/__init__.py,sha256=K5SiDdEGYMpdqXThrqwTqECJJBOQNTQDrnpc2K5mzKs,21
+deploy_box_cli/helpers/auth.py,sha256=AkHqSUv1GkaMm6HlfksLlu_ZxshXzyrkydMXSuFGiOs,6932
+deploy_box_cli/helpers/deployment.py,sha256=CItk_Ly6h8xD5TR_NEB-Av6BjRDWqfr8iwdrpTi0yc4,6516
+deploy_box_cli/helpers/docker.py,sha256=on57cgGw9lbANlLsMrYShBaJS8QZE5LTsOSgZwQV1yQ,1855
+deploy_box_cli/helpers/menu.py,sha256=-m05PL55f8HS6BFrW00FKVGKsS1o24M-s4dLEhVx33U,1163
+deploy_box_cli-0.1.2.dist-info/METADATA,sha256=IYwmlgGpYo5NNgQK6ztTZZHDpIoZ6JzazZ_B4LN0bZ8,416
+deploy_box_cli-0.1.2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+deploy_box_cli-0.1.2.dist-info/entry_points.txt,sha256=5zbk35NzaAPWk4ymgObkGRAvnNFs5Rhbm7lvHHo3TZU,59
+deploy_box_cli-0.1.2.dist-info/top_level.txt,sha256=fJRbEie4PmecSAhf9iVsj0SFvgj2Pi44Xhr8LuL7I4U,15
+deploy_box_cli-0.1.2.dist-info/RECORD,,
