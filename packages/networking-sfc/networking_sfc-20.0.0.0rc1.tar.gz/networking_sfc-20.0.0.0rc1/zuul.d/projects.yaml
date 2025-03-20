@@ -1,0 +1,29 @@
+- project:
+    check:
+      jobs:
+        - networking-sfc-functional
+        - networking-sfc-tempest
+        - networking-sfc-tempest-multinode:
+            voting: false
+    gate:
+      jobs:
+        - networking-sfc-functional
+        - networking-sfc-tempest
+    periodic:
+      jobs:
+        - networking-sfc-tempest-periodic
+    periodic-weekly:
+      jobs:
+        - openstack-tox-py312:
+            required-projects:
+              - openstack/neutron
+        - openstack-tox-py312-with-oslo-master:
+            required-projects:
+              - openstack/neutron
+        - networking-sfc-functional
+        - networking-sfc-tempest
+    experimental:
+      jobs:
+        - openstack-tox-py312-with-oslo-master:
+            required-projects:
+              - openstack/neutron
