@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: rook-helper
+Version: 0.0.1
+Summary: Helper
+Home-page: https://bitbucket.org/rook-workspace/rook_helpers/src
+Download-URL: https://bitbucket.org/rook-workspace/rook_helpers/src/develop
+Author: Tomas Rosas
+Author-email: tomas.rosas@tryrook.io
+License: MIT
+Keywords: Rook,helper
