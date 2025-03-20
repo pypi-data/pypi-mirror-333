@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: gr11prctl
+Version: 0.0.2
+Summary: A Python package for Grade 11 practical programs.
+Home-page: https://github.com/TanujairamV/gr11prctl
+Author: Tanujairam
+Author-email: tanujairam.v@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# gr11prctl
+
+A Python library containing practical programs for Grade 11.
+
+## Installation
+```bash
+pip install gr11prctl 
+```
+
+## Usage
+```python
+import gr11prctl
+gr11prctl.code()  # Displays available programs
+```
+
+## Author
+[Tanujairam](https://github.com/TanujairamV)
