@@ -1,0 +1,8 @@
+botrun_hatch_client/__init__.py,sha256=j698FQlbE1Hd-4aZdioOR6bbx5egMHC5aK4IZNA96ls,99
+botrun_hatch_client/client.py,sha256=EiVN768wlqhhKMfB5T8hTOTCdAVgln6pr43LvkXWjz4,3322
+botrun_hatch_client/hatch_client.py,sha256=S0z9Gj75BJd4iqTHWTpLPNA0IbxC8VokX3M8MT8S0KM,4008
+botrun_hatch_client/storage_client.py,sha256=w-ODSjUugz8dkXR_8eQhZXYVCQ7LilYrmLnIV__Idtc,3221
+botrun_hatch_client/user_setting_client.py,sha256=wiLxMwyLy3gbfkd3zQ3u0ZfIo34Oc2LcD-0bvuOk89E,2393
+botrun_hatch_client-5.3.131.dist-info/METADATA,sha256=zdVZwCWwoIGb6IViks8N6KoKbWsOG2fz1-AVJqCMyqg,2976
+botrun_hatch_client-5.3.131.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+botrun_hatch_client-5.3.131.dist-info/RECORD,,
