@@ -1,0 +1,10 @@
+blender_mcp_vxai/__init__.py,sha256=Lai2F4DiDByVgQeRHTnv1MHqBMnupU_z2Xu5S-42plo,83
+blender_mcp_vxai/addon/blender_mcp_addon.py,sha256=FF25ezF_yJ8zAXmUaF-p_qa_AoecTwvNxUuqluOyXEg,18145
+blender_mcp_vxai/server/__init__.py,sha256=BkmBZHFW5K-tGZ3WaoR8LOasSMZzqWJB5m-tax-smMk,41
+blender_mcp_vxai/server/server.py,sha256=y6Ap4Pb57fO2zqYpe99xQAagIiJCYfZBmPD28_vJvJQ,30742
+blender_mcp_vxai-0.1.0.dist-info/LICENSE,sha256=Eclkuo5LQ8H04dmAA8b1Cu2OzX81BdBVVkn1fxUI7D0,1062
+blender_mcp_vxai-0.1.0.dist-info/METADATA,sha256=tZtazovphpdTvH4Ksb5Umnk2D8RVC6JG6wxcFCBKhdc,3508
+blender_mcp_vxai-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+blender_mcp_vxai-0.1.0.dist-info/entry_points.txt,sha256=Wixim5VLyUIcakblfSq8YvlOFhJXO76d0q7WGFBtxJU,73
+blender_mcp_vxai-0.1.0.dist-info/top_level.txt,sha256=43nySrmrjyhhFdDDjLBZUetstARsBIzjWCaPNuuK8Tk,17
+blender_mcp_vxai-0.1.0.dist-info/RECORD,,

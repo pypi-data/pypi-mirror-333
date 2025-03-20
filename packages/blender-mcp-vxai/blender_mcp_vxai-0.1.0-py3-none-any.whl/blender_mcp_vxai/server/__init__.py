@@ -1,0 +1,1 @@
+"""Server module for Blender MCP VxAI""" 
