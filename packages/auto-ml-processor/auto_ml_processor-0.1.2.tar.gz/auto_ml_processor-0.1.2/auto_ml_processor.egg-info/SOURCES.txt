@@ -1,0 +1,9 @@
+README.md
+setup.py
+auto_ml_processor/__init__.py
+auto_ml_processor/processor.py
+auto_ml_processor.egg-info/PKG-INFO
+auto_ml_processor.egg-info/SOURCES.txt
+auto_ml_processor.egg-info/dependency_links.txt
+auto_ml_processor.egg-info/requires.txt
+auto_ml_processor.egg-info/top_level.txt
