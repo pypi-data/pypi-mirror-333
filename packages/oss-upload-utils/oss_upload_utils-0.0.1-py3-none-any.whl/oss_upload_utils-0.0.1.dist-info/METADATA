@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: oss-upload-utils
+Version: 0.0.1
+Summary: oss文件上传
+Home-page: https://github.com/Coxhuang/get_time
+Author: MindLullaby
+Author-email: 3203939025@qq.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
