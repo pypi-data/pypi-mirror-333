@@ -1,0 +1,9 @@
+README.md
+setup.py
+gpl_maths/__init__.py
+gpl_maths/maths.py
+gpl_maths.egg-info/PKG-INFO
+gpl_maths.egg-info/SOURCES.txt
+gpl_maths.egg-info/dependency_links.txt
+gpl_maths.egg-info/requires.txt
+gpl_maths.egg-info/top_level.txt
