@@ -1,0 +1,11 @@
+ScaleRPy/__init__.py,sha256=eSsrpDprIK-nuXuhpmhAXXaphDAQsnc12LwyljgMucw,125
+ScaleRPy/man_dat.py,sha256=02Dvd2-77mIz113ScCy-VdafQIn5jsGot-t_tZLIq-c,11481
+ScaleRPy/fitting/fit_funcs.py,sha256=h26v4iHfyec86ymLB5P35q6IShiHqb6e0rx7MYEZI_I,8920
+ScaleRPy/formatting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ScaleRPy/formatting/density_contours.py,sha256=1WkMgO8rER8K_GqTrbjDmHQeLbMRK2RKsAFqZBVcO2s,1338
+ScaleRPy/formatting/tol_colors.py,sha256=FJygqi55NqhmolRExwWYzxYNq9lNJu7PxLQAXj6Dy5A,16198
+scalerpy-1.1.1.dist-info/LICENSE,sha256=SbvpEU5JIU3yzMMkyzrI0dGqHDoJR_lMKGdl6GZHsy4,11558
+scalerpy-1.1.1.dist-info/METADATA,sha256=Pjj-YIF96QXXU1qAYk2Aj1x9W3tUwTPN8IA0mUJr70s,19897
+scalerpy-1.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+scalerpy-1.1.1.dist-info/top_level.txt,sha256=2HkLK-Ll_Hx-B5CNF7S0xbfI38xqYVL5ER2VfRrozE8,9
+scalerpy-1.1.1.dist-info/RECORD,,
