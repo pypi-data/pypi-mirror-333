@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+navlungo_client.egg-info/PKG-INFO
+navlungo_client.egg-info/SOURCES.txt
+navlungo_client.egg-info/dependency_links.txt
+navlungo_client.egg-info/requires.txt
+navlungo_client.egg-info/top_level.txt
