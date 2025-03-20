@@ -1,0 +1,45 @@
+Metadata-Version: 2.3
+Name: imuthes
+Version: 0.0.0a3
+Summary: Several Tools
+Author: Bernhard Radermacher
+Author-email: bernhard.radermacher@netlink-consulting.com
+Requires-Python: >=3.13,<4.0
+Classifier: Topic :: Software Development
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Topic :: Utilities
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: hakisto (>=0.3.4a1,<0.4.0)
+Requires-Dist: setuptools (>=76.0.0,<77.0.0)
+Description-Content-Type: text/markdown
+
+# Imuthes
+
+Collection of tools (most in sub-packages). 
+
+Logging implemented via [Hakisto](https://pypi.org/project/hakisto).
+
+## Top Level Tools
+
+### Classes 
+
+#### Mapping
+
+Convenience abstract class for simple mapping. Inherit and implement `__init__`.
+
+#### NamedMapping
+
+Mapping that makes items available as attributes.
+
+#### Singleton
+
+Thread safe singleton class. Add as a super-class.
+
+---
+
+- alchemy
+- sap
+
+
