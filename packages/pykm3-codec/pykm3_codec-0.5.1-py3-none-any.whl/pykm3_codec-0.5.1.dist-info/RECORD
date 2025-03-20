@@ -1,0 +1,10 @@
+pykm3_codec/__init__.py,sha256=fMmxQCS6FmVvwrWeVw0jIruuFSYINudDMdyuvLSaJVI,660
+pykm3_codec/byte_converter.py,sha256=Mh6QRCQafQ3zqcFX12qYwdKE_Kja2hWMTbwB1cAooH0,814
+pykm3_codec/character_maps.py,sha256=XO7hKuECsEf0DtPXB4Qi7ElRmqJD5Tke5mbF33-cDzY,7668
+pykm3_codec/pk_codecs.py,sha256=_63F6Q36R1CGENZHRp0vDzZqpOICzlufeRvdfodydrQ,4991
+pykm3_codec/registry.py,sha256=bQ-oXXbI7biSEPgHjXZr8YU7OLmpZ71N5Js9k8Ev57o,5706
+pykm3_codec-0.5.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pykm3_codec-0.5.1.dist-info/METADATA,sha256=Bw2iKAtTklaysRobVqZiaCu2j4s7xh6WchQF7doPzbQ,3342
+pykm3_codec-0.5.1.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+pykm3_codec-0.5.1.dist-info/top_level.txt,sha256=wYX0SNQr-NlUXRE1G9tt-Fi0EI4_vSPyUD4yUkm5msI,12
+pykm3_codec-0.5.1.dist-info/RECORD,,
