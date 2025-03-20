@@ -1,0 +1,52 @@
+Metadata-Version: 2.2
+Name: mlops_wrapper
+Version: 0.1.1
+Summary: a unified mlflow wrapper for standardized ML model logging and registration.
+Author-email: akaay <s.a.ashok91@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 AK
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/copernicium-112/mlops_wrapper
+Project-URL: Issues, https://github.com/copernicium-112/mlops_wrapper/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mlflow>=1.0.0
+Requires-Dist: boto3>=1.0.0
+
+# mlops-wrapper
+custom python wrapper around mlflow
+
+a unified mlflow wrapper that standardizes experiment tracking, artifact logging, and model registration across teams and projects. by providing decorators and base classes, this wrapper reduces boilerplate code and enforces best practices for mlflow usage.
+
+## features
+
+- **consistent logging**: standardized interface for logging parameters, metrics, and artifacts.
+- **model registry integration**: automatically register models in mlflow’s model registry.
+- **decorator & base class**: use a python decorator (`@mlflow_experiment`) or extend `baseexperiment` to minimize boilerplate code.
+- **error handling**: automatically logs exceptions and ensures mlflow runs are closed gracefully.
+- **flexible storage**: works with local or remote mlflow servers; supports s3 or local file system artifact stores.
+
+
+## usage
+
+yet to be written
