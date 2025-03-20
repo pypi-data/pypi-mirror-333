@@ -1,0 +1,2 @@
+include vision_engine/__init__.py
+recursive-include vision_engine *.py
