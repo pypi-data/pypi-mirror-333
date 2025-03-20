@@ -1,0 +1,31 @@
+# Python setup folders
+build/
+*.egg-info
+numjuggler/version.py
+
+# Byte-compiled
+*.pyc
+
+# Editor
+.ropeproject/
+
+/.gtm/
+
+# Environments
+.cache/
+.idea/
+
+# Dev.scripts results
+numjuggler.dot
+numjuggler.pdf
+numjuggler.sfood1
+numjuggler.sfood2
+
+# Pytest and Coverage
+*.log
+.coverage
+htmlcov/
+
+# Travis tests
+travis_tests/*.diff
+travis_tests/*.res

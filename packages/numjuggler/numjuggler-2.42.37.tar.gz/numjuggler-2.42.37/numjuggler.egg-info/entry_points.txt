@@ -1,0 +1,2 @@
+[console_scripts]
+numjuggler = numjuggler.main:main
