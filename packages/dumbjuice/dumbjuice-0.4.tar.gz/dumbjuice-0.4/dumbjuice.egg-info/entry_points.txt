@@ -1,0 +1,2 @@
+[console_scripts]
+dumbjuice = dumbjuice.__init__:build
