@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+spectralmatch/__init__.py
+spectralmatch/global_histogram_match.py
+spectralmatch/handlers.py
+spectralmatch/local_histogram_match.py
+spectralmatch/utils.py
+spectralmatch.egg-info/PKG-INFO
+spectralmatch.egg-info/SOURCES.txt
+spectralmatch.egg-info/dependency_links.txt
+spectralmatch.egg-info/requires.txt
+spectralmatch.egg-info/top_level.txt
