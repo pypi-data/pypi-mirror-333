@@ -1,0 +1,11 @@
+fantasia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fantasia/config.yaml,sha256=_etYfDER6S8OKNC75Y4dpZR8i-6Rw1a0RncqeMC0Yjg,3307
+fantasia/constants.yaml,sha256=S1yLt5wT4v4Q24aEQceKOU31LX8fh-Fy7oZtw8aQ0G8,2924
+fantasia/main.py,sha256=rFiuEeyTrEskw6RZNnTME4NTg5xHA1dSqls-74A62kg,10523
+fantasia/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fantasia/src/embedder.py,sha256=Z8s-y9NbHINp6qv7fA-XZr6GEFEnQEsJunYphPHUeLc,13869
+fantasia/src/helpers.py,sha256=8-0Po5LpLeQC4e9IHKghjOFxY0TiAh1fmElT6dHolRc,2561
+fantasia/src/lookup.py,sha256=zNmaswXsP6RE7fQzvTsIB8yP1ZjleuFHIcRZX1floAs,21229
+fantasia-0.10.0.dist-info/METADATA,sha256=2SPDCzAYvynXM2Y62keSKfD1MNAIRYuUGUD9EnzV2hw,4538
+fantasia-0.10.0.dist-info/WHEEL,sha256=kLuE8m1WYU0Ig0_YEGrXyTtiJvKPpLpDEiChiNyei5Y,88
+fantasia-0.10.0.dist-info/RECORD,,
