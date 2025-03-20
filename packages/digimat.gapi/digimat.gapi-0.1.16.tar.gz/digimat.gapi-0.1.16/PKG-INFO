@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: digimat.gapi
+Version: 0.1.16
+Summary: Digimat Google API tools
+Home-page: http://www.digimat.ch
+Author: Frederic Hess
+Author-email: fhess@splust.ch
+License: PSF
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: gspread
+Requires-Dist: requests
+Requires-Dist: strict_rfc3339
+Requires-Dist: httplib2
+Requires-Dist: oauth2client
+Requires-Dist: google-api-python-client
+Requires-Dist: setuptools
