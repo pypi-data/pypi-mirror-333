@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/autoprox/__init__.py
+src/autoprox/main.py
+src/autoprox/run.py
+src/autoprox.egg-info/PKG-INFO
+src/autoprox.egg-info/SOURCES.txt
+src/autoprox.egg-info/dependency_links.txt
+src/autoprox.egg-info/entry_points.txt
+src/autoprox.egg-info/requires.txt
+src/autoprox.egg-info/top_level.txt
