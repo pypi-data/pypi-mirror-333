@@ -1,0 +1,41 @@
+
+[build-system]
+requires = ["setuptools>=76.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmosskillav2"
+version = "0.1.3"
+description = "Python Terminal Emulator with Enhanced Developer Utilities"
+readme = "README.md"
+authors = [
+    {name = "CMosSkillAV2 Developer", email = "example@example.com"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Terminals",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "build>=1.2.2.post1",
+    "colorama>=0.4.6",
+    "setuptools>=76.0.0",
+    "twine>=6.1.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cmosskillav2/cmosskillav2"
+"Bug Tracker" = "https://github.com/cmosskillav2/cmosskillav2/issues"
+
+[project.scripts]
+cmosskillav2 = "cmosskillav2.__main__:main"
