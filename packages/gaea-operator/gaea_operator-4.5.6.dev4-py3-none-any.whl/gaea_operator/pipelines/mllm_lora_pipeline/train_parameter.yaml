@@ -1,0 +1,90 @@
+- label: "训练轮数"
+  min: 1
+  max: 1000
+  # defaultValue: 80
+  defaultValue: 5
+  step: 1
+  name: "epoch"
+  help: "模型训练的最大轮数"
+  type: "inputNumber"
+
+- label: "数据读取进程数量"
+  min: 1
+  max: 8
+  defaultValue: 2
+  step: 1
+  name: "workerNum"
+  help: "训练数据读取进程数量"
+  type: "inputNumber"
+
+- label: "模型训练batch大小"
+  min: 1
+  max: 64
+  defaultValue: 1
+  step: 1
+  name: "batchSize"
+  help: "是指一次训练(Iteration)所包含的样本数。 BatchSize越大，显存占用越大"
+  type: "inputNumber"
+
+- label: "基础学习率"
+  min: 0.00001
+  max: 0.5
+  defaultValue: 0.00001
+  step: 0.00001
+  name: "learning_rate"
+  formatter: "%f"
+  help: "模型训练的基础学习率"
+  type: "inputNumber"
+
+- label: "是否开启梯度累加"
+  options:
+    - "True"
+    - "False"
+  name: "gradient_checkpointing"
+  defaultIndex: 0
+  help: "通过多次小批量计算梯度，再累加起来一起更新模型参数，达到跟大 batch size 类似的训练效果"
+  type: "Select"
+
+- label: "单样本的tokens最大长度"
+  min: 512
+  max: 4096
+  defaultValue: 4096
+  step: 1
+  name: "max_length"
+  help: "单样本的tokens最大长度"
+  type: "inputNumber"
+
+- label: "冻结llm权重"
+  options:
+    - "True"
+    - "False"
+  name: "freeze_llm"
+  defaultIndex: 1
+  help: "冻结llm权重"
+  type: "Select"
+
+- label: "冻结vit权重"
+  options:
+    - "True"
+    - "False"
+  name: "freeze_vit"
+  defaultIndex: 0
+  help: "冻结vit权重"
+  type: "Select"
+
+- label: "冻结aligner权重"
+  options:
+    - "True"
+    - "False"
+  name: "freeze_aligner"
+  defaultIndex: 0
+  help: "冻结aligner权重"
+  type: "Select"
+
+- label: "模型结构类型"
+  options:
+    - "一见多模态大模型-Lite"
+  name: "networkArchitecture"
+  defaultIndex: 0
+  help: "模型类型越大训练资源越多，训练越慢，精度越高"
+  type: "Select"
