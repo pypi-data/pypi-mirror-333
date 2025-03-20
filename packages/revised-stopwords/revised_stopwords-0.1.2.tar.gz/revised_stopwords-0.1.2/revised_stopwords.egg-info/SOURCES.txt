@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+revised_stopwords/__init__.py
+revised_stopwords/stopwords.py
+revised_stopwords.egg-info/PKG-INFO
+revised_stopwords.egg-info/SOURCES.txt
+revised_stopwords.egg-info/dependency_links.txt
+revised_stopwords.egg-info/requires.txt
+revised_stopwords.egg-info/top_level.txt
