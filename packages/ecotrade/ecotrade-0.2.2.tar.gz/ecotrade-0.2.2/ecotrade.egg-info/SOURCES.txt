@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ecotrade/comunications.py
+ecotrade/database.py
+ecotrade/sharepoint.py
+ecotrade.egg-info/PKG-INFO
+ecotrade.egg-info/SOURCES.txt
+ecotrade.egg-info/dependency_links.txt
+ecotrade.egg-info/top_level.txt
