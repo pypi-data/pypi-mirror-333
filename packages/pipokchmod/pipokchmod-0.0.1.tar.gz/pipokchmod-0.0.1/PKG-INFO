@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: pipokchmod
+Version: 0.0.1
+Summary: My Package
+Author: Nikollai
+Author-email: nikolai_22_05@mail.ru
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary

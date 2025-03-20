@@ -1,0 +1,5 @@
+setup.py
+pipokchmod.egg-info/PKG-INFO
+pipokchmod.egg-info/SOURCES.txt
+pipokchmod.egg-info/dependency_links.txt
+pipokchmod.egg-info/top_level.txt
