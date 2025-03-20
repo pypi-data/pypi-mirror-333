@@ -1,0 +1,11 @@
+magedata_sdk/__init__.py,sha256=A_H5lSOOmd7qHQDq0BfnOeKa1eFNP5SGAY_9ZnMnVkA,363
+magedata_sdk/client.py,sha256=-6zEgIGbviQx4dW1nGWqEhMjSZ4eP_1Vc0wJPtX3HCE,11210
+magedata_sdk/config.py,sha256=66VmT3HasggwHONGqIhMJgLt4BdTeDfq7SV-TN2jYH8,2148
+magedata_sdk/exceptions.py,sha256=i9OXodmRyeSXSCNDffL5rzJpXZJF0wZXUzP92Ckrn8c,594
+magedata_sdk/models.py,sha256=fogwVKb2NmYHkaH03As7OXDFv_IvVhdSHr7S-IirYcQ,1764
+magedata_sdk/processors.py,sha256=XHvRSuPDvn_2sutObwc7crS_kuP3vAr_TSYuX1UUiPc,3391
+magedata_sdk-0.0.2.dist-info/LICENSE,sha256=Efra8Hsn73nlIwUqIAZsRSMZaXx0qELZiFNPdWLhFb4,3994
+magedata_sdk-0.0.2.dist-info/METADATA,sha256=mcbK-1WMasAygSgyzKdtkJEs_DxoVvD8r2F-EVp_qOU,10082
+magedata_sdk-0.0.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+magedata_sdk-0.0.2.dist-info/top_level.txt,sha256=FK-9nhRL0mTMU0RFzWmcDbg1km6fiSN1hAXuSc6Q3hc,13
+magedata_sdk-0.0.2.dist-info/RECORD,,
