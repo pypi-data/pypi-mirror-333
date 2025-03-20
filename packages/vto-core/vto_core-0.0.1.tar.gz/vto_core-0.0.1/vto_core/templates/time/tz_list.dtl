@@ -1,0 +1,34 @@
+{% extends 'base_site.dtl' %}
+{% block title %}TZ List{% endblock %}
+{% block content %}
+<h2>IANA Time Zone List</h2>
+
+<table id="jsData" class="display">
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Src File</th>
+        <th>Aliases</th>
+        <th>STD Offset</th>
+        <th>DST Offset</th>
+        <th>STD Abbr</th>
+        <th>DST Abbr</th>
+    </thead>
+
+<tbody>
+    {% for object in object_list %}
+        <tr>
+            <td>{{ object.identifier }}</td>
+            <td>{{ object.get_tz_type_display }}</td>
+            <td>{{ object.get_src_file_display }}</td>
+            <td>{{ object.aliases }}</td>
+            <td style="text-align:right; padding-right:2em;">{{ object.std.offset }}</td>
+            <td style="text-align:right; padding-right:2em;">{{ object.dst.offset }}</td>
+            <td>{{ object.std }}</td>
+            <td>{{ object.dst }}</td>
+
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+{% endblock %}
