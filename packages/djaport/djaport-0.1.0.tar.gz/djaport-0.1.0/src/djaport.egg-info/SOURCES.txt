@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/djaport/__init__.py
+src/djaport/mixins.py
+src/djaport/runner.py
+src/djaport.egg-info/PKG-INFO
+src/djaport.egg-info/SOURCES.txt
+src/djaport.egg-info/dependency_links.txt
+src/djaport.egg-info/requires.txt
+src/djaport.egg-info/top_level.txt
+src/djaport/templates/report.html
