@@ -1,0 +1,3 @@
+pandas
+numpy
+bump2version
