@@ -1,0 +1,2 @@
+[console_scripts]
+dtx_to_wif = dtx_to_wif:run_dtx_to_wif

@@ -1,0 +1,59 @@
+.gitignore
+.pre-commit-config.yaml
+ReadMe.md
+license.txt
+pyproject.toml
+setup.cfg
+src/dtx_to_wif/__init__.py
+src/dtx_to_wif/dtx_reader.py
+src/dtx_to_wif/pattern_data.py
+src/dtx_to_wif/py.typed
+src/dtx_to_wif/run_dtx_to_wif.py
+src/dtx_to_wif/version.py
+src/dtx_to_wif/wif_reader.py
+src/dtx_to_wif/wif_writer.py
+src/dtx_to_wif.egg-info/PKG-INFO
+src/dtx_to_wif.egg-info/SOURCES.txt
+src/dtx_to_wif.egg-info/dependency_links.txt
+src/dtx_to_wif.egg-info/entry_points.txt
+src/dtx_to_wif.egg-info/top_level.txt
+tests/test_dtx_reader.py
+tests/test_dtx_to_wif.py
+tests/test_read_specific_data.py
+tests/test_wif_reader.py
+tests/data/bad_dtx/missing color_table warp.dtx
+tests/data/bad_dtx/missing color_table weft.dtx
+tests/data/bad_dtx/missing liftplan.dtx
+tests/data/bad_dtx/missing tieup.dtx
+tests/data/bad_dtx/missing treadling.dtx
+tests/data/bad_dtx/too many treadles in treadling.dtx
+tests/data/bad_dtx/warp_color too big.dtx
+tests/data/bad_dtx/warp_color too small.dtx
+tests/data/bad_dtx/weft_color too big.dtx
+tests/data/bad_dtx/weft_color too small.dtx
+tests/data/bad_wif/default warp color too big.wif
+tests/data/bad_wif/default warp color too small.wif
+tests/data/bad_wif/default weft color too big.wif
+tests/data/bad_wif/default weft color too small.wif
+tests/data/bad_wif/missing liftplan.wif
+tests/data/bad_wif/missing tieup.wif
+tests/data/bad_wif/missing treadling.wif
+tests/data/bad_wif/missing_color_table_warp.wif
+tests/data/bad_wif/missing_color_table_weft.wif
+tests/data/bad_wif/too many treadles in treadline.wif
+tests/data/bad_wif/warp_color too big.wif
+tests/data/bad_wif/warp_color too small.wif
+tests/data/bad_wif/weft_color too big.wif
+tests/data/bad_wif/weft_color too small.wif
+tests/data/basic_dtx/many color liftplan and zeros.dtx
+tests/data/basic_dtx/many color multiple treadles and zeros.dtx
+tests/data/basic_dtx/many color single treadles.dtx
+tests/data/basic_dtx/level2/two color liftplan.dtx
+tests/data/basic_dtx/level2/two color multiple treadles.dtx
+tests/data/basic_dtx/level2/two color single treadles.dtx
+tests/data/desired_basic_wif/many color liftplan and zeros.wif
+tests/data/desired_basic_wif/many color multiple treadles and zeros.wif
+tests/data/desired_basic_wif/many color single treadles.wif
+tests/data/desired_basic_wif/two color liftplan.wif
+tests/data/desired_basic_wif/two color multiple treadles.wif
+tests/data/desired_basic_wif/two color single treadles.wif
