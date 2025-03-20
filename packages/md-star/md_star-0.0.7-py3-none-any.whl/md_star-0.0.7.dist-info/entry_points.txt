@@ -1,0 +1,2 @@
+[console_scripts]
+mdstar = md_star.cli:main
