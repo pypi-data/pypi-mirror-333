@@ -1,0 +1,8 @@
+README.md
+setup.py
+gruntable_print_name/__init__.py
+gruntable_print_name/main.py
+gruntable_print_name.egg-info/PKG-INFO
+gruntable_print_name.egg-info/SOURCES.txt
+gruntable_print_name.egg-info/dependency_links.txt
+gruntable_print_name.egg-info/top_level.txt
