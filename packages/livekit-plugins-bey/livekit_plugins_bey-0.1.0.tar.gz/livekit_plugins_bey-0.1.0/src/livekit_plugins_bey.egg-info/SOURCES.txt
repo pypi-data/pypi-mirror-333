@@ -1,0 +1,7 @@
+pyproject.toml
+setup.cfg
+src/livekit/plugins/bey/__init__.py
+src/livekit_plugins_bey.egg-info/PKG-INFO
+src/livekit_plugins_bey.egg-info/SOURCES.txt
+src/livekit_plugins_bey.egg-info/dependency_links.txt
+src/livekit_plugins_bey.egg-info/top_level.txt
