@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: panel-material-ui
+Version: 0.0.1a5
+Summary: An extension to bring MaterialUI components to Panel.
+Project-URL: Homepage, https://github.com/panel-extensions/panel-material-ui
+Project-URL: Source, https://github.com/panel-extensions/panel-material-ui
+Author-email: Philipp Rudiger <philipp.jfr@gmail.com>
+Maintainer-email: Philipp Rudiger <philipp.jfr@gmail.com>
+License: BSD
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.10
+Requires-Dist: packaging
+Requires-Dist: panel>=1.6.2a2
+Provides-Extra: dev
+Requires-Dist: mkdocs-material; extra == 'dev'
+Requires-Dist: mkdocstrings[python]; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-asyncio; extra == 'dev'
+Requires-Dist: pytest-rerunfailures; extra == 'dev'
+Requires-Dist: pytest-xdist; extra == 'dev'
+Requires-Dist: watchfiles; extra == 'dev'
+Provides-Extra: mypy
+Requires-Dist: mypy; extra == 'mypy'
+Requires-Dist: types-requests; extra == 'mypy'
+Requires-Dist: typing-extensions; extra == 'mypy'
+Description-Content-Type: text/markdown
+
+# ✨ Welcome to panel-material-ui
+
+[![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://img.shields.io/github/actions/workflow/status/panel-extensions/panel-material-ui/ci.yml?style=flat-square&branch=main)](https://github.com/panel-extensions/panel-material-ui/actions/workflows/ci.yml)
+[![conda-forge](https://img.shields.io/conda/vn/conda-forge/panel-material-ui?logoColor=white&logo=conda-forge&style=flat-square)](https://prefix.dev/channels/conda-forge/packages/panel-material-ui)
+[![pypi-version](https://img.shields.io/pypi/v/panel-material-ui.svg?logo=pypi&logoColor=white&style=flat-square)](https://pypi.org/project/panel-material-ui)
+[![python-version](https://img.shields.io/pypi/pyversions/panel-material-ui?logoColor=white&logo=python&style=flat-square)](https://pypi.org/project/panel-material-ui)
+
+An extension to bring MaterialUI components to Panel.
+
+## Installation
+
+Install `panel-material-ui` via `pip`:
+
+```bash
+pip install panel-material-ui
+```
+
+## ❤️ Contributions
+
+Contributions and co-maintainers are very welcome! Please submit issues or pull requests to the [GitHub repository](https://github.com/panel-extensions/panel-material-ui). Check out the [DEVELOPER_GUIDE](DEVELOPER_GUIDE.md) for more information.
