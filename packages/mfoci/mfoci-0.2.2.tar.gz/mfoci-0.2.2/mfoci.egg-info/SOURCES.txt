@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+mfoci/__init__.py
+mfoci.egg-info/PKG-INFO
+mfoci.egg-info/SOURCES.txt
+mfoci.egg-info/dependency_links.txt
+mfoci.egg-info/requires.txt
+mfoci.egg-info/top_level.txt

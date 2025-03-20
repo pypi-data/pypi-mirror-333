@@ -1,0 +1,108 @@
+Metadata-Version: 2.2
+Name: mfoci
+Version: 0.2.2
+Summary: Financial market analysis tool implementing the MFOCI algorithm for factor selection
+Author-email: Marcus Rockel <corram@outlook.de>
+License: MIT
+Project-URL: Homepage, https://github.com/Corrram/mfoci
+Project-URL: Documentation, https://mfoci.readthedocs.io
+Project-URL: Issue Tracker, https://github.com/Corrram/mfoci/issues
+Keywords: finance,markets,analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.0
+Requires-Dist: pandas>=2.2
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: matplotlib>=3.9
+Requires-Dist: statsmodels>=0.14
+Requires-Dist: jinja2>=3.1
+Requires-Dist: yfinance>=0.2
+Requires-Dist: tqdm>=4.66
+Requires-Dist: twine>=6.1.0
+Provides-Extra: dev
+Requires-Dist: copul>=0.0.10; extra == "dev"
+Requires-Dist: pytest>=8.3.2; extra == "dev"
+Requires-Dist: pytest-cov>=5.0.0; extra == "dev"
+Requires-Dist: pytest-pycharm>=0.7.0; extra == "dev"
+Requires-Dist: pytest-xdist>=3.6.1; extra == "dev"
+Requires-Dist: ruff>=0.9.10; extra == "dev"
+Requires-Dist: setuptools>=72.1.0; extra == "dev"
+Requires-Dist: sphinx>=7.4; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=2.0.0; extra == "dev"
+Requires-Dist: twine>=6.1.0; extra == "dev"
+
+# Factor selection with MFOCI
+
+`mfoci` is a Python package designed for financial analysts and researchers who need to retrieve and analyze stock market data.
+ This package implements the MFOCI algorithm for factor selection in financial data. Supported are also LASSO and k-FOCI factor selection methods as well as data retrieval from Fama-French and Yahoo Finance.
+
+## Installation
+
+Install `mfoci` using pip:
+
+```bash
+pip install mfoci
+```
+
+
+## Quick Usage
+
+```python
+from mfoci import get_fama_french_data, load_stock_returns
+from mfoci import select_factors
+
+# Fetch data
+tickers = ["MSFT", "AAPL", "NVDA", "AMZN", "META", "GOOG"]
+response_vars = load_stock_returns(tickers, start_date="2013-01-02", end_date="2024-01-01")
+factors = get_fama_french_data("2013-01-03", end_date="2024-01-01")
+
+# MFOCI factor selection
+mfoci_selected, t_values = select_factors(factors, response_vars, "mfoci")
+```
+
+
+## Further usage
+
+```python
+from mfoci import get_fama_french_data, load_stock_returns, load_volatility_index
+from mfoci import filter_for_common_indices, select_factors
+
+# Fetch Fama-French factors
+factors = get_fama_french_data("2004-01-01", end_date="2024-01-01")
+
+# Load stock returns for specific tickers
+tickers = ["MSFT", "AAPL", "NVDA", "AMZN", "META", "GOOG"]
+response_vars = load_stock_returns(tickers, start_date="2013-01-01", end_date="2024-01-01")
+
+# Load VIX data
+response_vars = load_volatility_index("^VIX", start_date="2004-01-01", end_date="2024-01-01")
+
+# Filter for common dates
+factors, response_vars = filter_for_common_indices(factors, response_vars)
+
+# Factor selection using LASSO
+lasso_selected, coef = select_factors(factors, response_vars, "lasso")
+
+# KFOCI factor selection (ensure Rscript is installed and path is set)
+r_path = "C:/Program Files/R/R-4.3.3/bin/x64/Rscript"
+kfoci_gauss_selected = select_factors(
+    factors, response_vars, "kfoci", r_path=r_path, kernel="rbfdot"
+)
+kfoci_laplace_selected = select_factors(
+    factors, response_vars, "kfoci", r_path=r_path, kernel="laplacedot"
+)
+
+# MFOCI factor selection
+mfoci_selected, t_values = select_factors(factors, response_vars, "mfoci")
+```
