@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: ops-tracing
+Version: 0.9.0
+Summary: Tracing for ops
+Project-URL: Repository, https://github.com/canonical/operator
+Project-URL: Issues, https://github.com/canonical/operator/issues
+Project-URL: Documentation, https://ops.readthedocs.io
+Project-URL: Changelog, https://github.com/canonical/operator/blob/main/CHANGES.md
+Author-email: "The Charm Tech team at Canonical Ltd." <charm-tech@lists.launchpad.net>
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: OpenTelemetry
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Requires-Dist: opentelemetry-sdk~=1.30
+Requires-Dist: otlp-json>=0.9.7
+Requires-Dist: pydantic
+Description-Content-Type: text/markdown
+
+FIXME
+
+relation names
+
+example
+
+How do I series?
+- system ca list
+- certifi ca list
+- cert provider
+- integration testing
