@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: ledger-analytics
+Version: 0.0.1
+Summary: The Python interface to Ledger Investing's analytics infrastructure
+Project-URL: Homepage, https://github.com/LedgerInvesting/ledger-analytics/
+Project-URL: Repository, https://github.com/LedgerInvesting/ledger-analytics/
+Author: Ledger Investing
+Requires-Python: >3.10
+Requires-Dist: bermuda-ledger
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: iniconfig==2.0.0; extra == 'dev'
+Requires-Dist: isort==6.0.1; extra == 'dev'
+Requires-Dist: packaging==24.2; extra == 'dev'
+Requires-Dist: pluggy==1.5.0; extra == 'dev'
+Requires-Dist: pytest==8.3.5; extra == 'dev'
+Requires-Dist: ruff==0.9.10; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# LedgerAnalytics Python
+
+`ledger-analytics` is the Python interface to [Ledger Investing](https://ledgerinvesting.com)'s remote
+analytics infrastructure.
+
+To use with a local app (which should be running on `localhost:8000`),
+set your `LEDGER_ANALYTICS_API_KEY` environment variable.
+
+The typical Python workflow is, then:
+
+```python
+from ledger_analytics import AnalyticsClient
+from bermuda import meyers_tri
+
+client = AnalyticsClient()
+
+triangle = client.triangle.get()
+
+# Get the Bermuda Triangle object
+bermuda_triangle = triangle.get()
+
+# Fit a development model
+dev_model = client.development_model.fit(
+   config={
+       "triangle_name": "meyers",
+       "model_name": "chain_ladder",
+       "model_type": "ChainLadder",
+       "model_config": {},
+    }
+)
+
+# delete triangle
+triangle.delete()
+```
+
+The `LegderAnalytics` class can also be used as a simple context manager:
+
+```python
+from ledger_analytics import LedgerAnalytics
+
+with AnalyticsClient() as client:
+    triangle = client.triangle.create(
+        config={
+            "triangle_name": "test_meyers_triangle",
+            "triangle_data": meyers_tri.to_dict(),
+        )
+    )
+    triangle.delete()
+```
