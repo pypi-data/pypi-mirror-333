@@ -1,0 +1,44 @@
+connections:
+  # SQLite configuration examples
+  dev-db:
+    type: sqlite
+    path: /path/to/dev.db
+    # Password is optional
+    password: 
+
+  prod-sqlite:
+    type: sqlite
+    path: /path/to/prod.db
+    password: optional_password    # Optional
+
+  # PostgreSQL configuration examples
+  # Standard configuration
+  test-db:
+    type: postgres
+    host: postgres.example.com
+    port: 5432
+    dbname: test_db
+    user: test_user
+    password: test_pass
+
+  # URL configuration
+  # Use postgresql://host:port/dbname?sslmode=verify-full&sslcert=/path/to/cert.pem
+  prod-db:
+    type: postgres
+    url: postgresql://postgres.example.com:5432/prod-db?sslmode=verify-full
+    user: prod_user
+    password: prod_pass
+    
+  # Full SSL configuration example
+  secure-db:
+    type: postgres
+    host: secure-db.example.com
+    port: 5432
+    dbname: secure_db
+    user: secure_user
+    password: secure_pass
+    ssl:
+      mode: verify-full
+      cert: /path/to/client-cert.pem
+      key: /path/to/client-key.pem
+      root: /path/to/ca.crt
