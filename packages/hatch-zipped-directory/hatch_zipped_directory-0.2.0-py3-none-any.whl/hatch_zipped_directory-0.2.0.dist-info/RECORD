@@ -1,0 +1,10 @@
+hatch_zipped_directory/__init__.py,sha256=VZ_QPnPKwTGo5xZ2g80XnjSjp8AeMvyPt5aRVONbe5g,107
+hatch_zipped_directory/builder.py,sha256=24IDbL7GtfHBhGAphoMo3wGbYjL_BhzvsL8i1iVrjrM,6437
+hatch_zipped_directory/hooks.py,sha256=9vfyX2pQBf6j9FpC33_BcH00CxyoinIZsezAtM-CjEM,159
+hatch_zipped_directory/metadata.py,sha256=QjiZVNjVllgcwXQwxHow3QQ_RDP2TFJ7rQ0Lp4eO4wo,1736
+hatch_zipped_directory/utils.py,sha256=OBtP96xuOXOsQK4p0hYnYYxITVAZLypiKcqxh1454xI,552
+hatch_zipped_directory-0.2.0.dist-info/METADATA,sha256=F6jPUvrSybQEUS5dD_oK9fwqSVpra0aPFofgdrJ4MXs,7354
+hatch_zipped_directory-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_zipped_directory-0.2.0.dist-info/entry_points.txt,sha256=bu3ZVrfgkI6w3O5HZGrMWmQvEvgmBIR57BePEIGTBFc,56
+hatch_zipped_directory-0.2.0.dist-info/licenses/LICENSE.txt,sha256=MiwigZK8cEqkFwaNYKULtIqUChD9WSRX0l8QaaVFyvY,1099
+hatch_zipped_directory-0.2.0.dist-info/RECORD,,
