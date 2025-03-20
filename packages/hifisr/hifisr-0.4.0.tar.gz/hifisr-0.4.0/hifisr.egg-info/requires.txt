@@ -1,0 +1,8 @@
+biopython
+pysam
+pandas
+numpy
+openpyxl
+xlsxwriter
+matplotlib
+polars
