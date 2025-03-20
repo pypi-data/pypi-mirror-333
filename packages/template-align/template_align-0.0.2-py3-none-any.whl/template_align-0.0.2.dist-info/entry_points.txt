@@ -1,0 +1,2 @@
+[console_scripts]
+template-align = template_align.main:main
