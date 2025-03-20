@@ -1,0 +1,10 @@
+geogif/__init__.py,sha256=iZYNKHN_rIBhZuu1D23zMgZm6jbZEvv657YguHtfzD0,376
+geogif/cli.py,sha256=F-us9x5GyFfs6ZdVDTYN-Hy1M7SlaaO7RdBs9IMBYZs,4364
+geogif/core.py,sha256=XRdwveFjTLxF1nOL79g55MOg9Ia1G7Fv9_gBsiOWaWM,14856
+geogif/geoframe.py,sha256=FKLVtOfqBGimUAt67XkmdTNYSc3ROaRjr-BV7JS2yaI,527
+realgeogif-0.1.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+realgeogif-0.1.0.dist-info/METADATA,sha256=ZFSu0Bl2QI3bMW8hXWWqL-pa4-j1gswwhMxvAnglabI,6367
+realgeogif-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+realgeogif-0.1.0.dist-info/entry_points.txt,sha256=0DJxMIBH0ujgStTc1jAXuMMHR-YSndIp12SzzEhWQrU,43
+realgeogif-0.1.0.dist-info/top_level.txt,sha256=RkMKvr__zD0Lo9mitfXFEr3cGFoRHktNPHEkxNvzaDM,7
+realgeogif-0.1.0.dist-info/RECORD,,
