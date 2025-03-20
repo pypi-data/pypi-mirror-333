@@ -1,0 +1,11 @@
+libvcell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libvcell/_internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libvcell/_internal/native_calls.py,sha256=0hJmGiJNWVn2cMtI_s_zeGILTNgwB4HHzStsNhf9Dfw,2572
+libvcell/_internal/native_utils.py,sha256=fYrYo8nDpsSGUm1ajJdtuceTKfkyupXQhlkahJdF4dQ,2074
+libvcell/lib/libvcell.dylib,sha256=ExQzr0WdVOih8X4UjtM0_QFu-aiHkIlyA8lANkKjcuU,89692992
+libvcell/libvcell.py,sha256=wXAHy7qhA6NKce2czh7q4hsobvTX2Opix0nvC68Q2AU,910
+libvcell/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libvcell-0.0.3.dist-info/LICENSE,sha256=Nyxd3VfB4wK1rRoHJRCnCeRnrfEjHDoZ4TGF77HOBOA,1068
+libvcell-0.0.3.dist-info/METADATA,sha256=fNxpNrP_7qtvGZYcHv5N-dCP9gbP3NXYlRkkU4yC4XU,3399
+libvcell-0.0.3.dist-info/WHEEL,sha256=tjpzqlfAk8mUbPoBfpeLMeqLnOEOC_mFnnCpzmaMG8k,106
+libvcell-0.0.3.dist-info/RECORD,,
