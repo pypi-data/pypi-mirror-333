@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "latex_generator_fotonchicc"
+version = "0.0.1"
+authors = [
+  { name="fotonchicc", email="sv.markelova11@gmail.com" },
+]
+description = "A library to generate LaTeX code for tables and images."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License"
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
