@@ -1,0 +1,104 @@
+Metadata-Version: 2.2
+Name: MapAvro
+Version: 0.1.4
+Summary: A package for converting Bengali text to Avro and vice versa.
+Author: Shahriar Kabir Nahin
+License: MIT License
+        
+        Copyright (c) 2025 SKNahin
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/SKNahin/MapAvro
+Project-URL: Bug Tracker, https://github.com/SKNahin/MapAvro/issues
+Project-URL: Documentation, https://github.com/SKNahin/MapAvro/blob/main/README.md
+Keywords: Bengali,Avro,Romanized Bengali,Bengali Romanization,Bangla
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bnunicodenormalizer
+
+# AvroConverter
+
+A Python package for bidirectional conversion between Bengali (Bangla) text and Avro phonetic typing.
+
+## Overview
+
+AvroConverter provides a robust solution for converting between Bengali Unicode text and Avro phonetic transliteration. It enables seamless transformation of Bengali text to its phonetic representation and vice versa.
+
+## Features
+
+- **Bengali to Avro Conversion**: Convert Bengali Unicode text to Avro phonetic representation
+- **Avro to Bengali Conversion**: Convert Avro phonetic text to Bengali Unicode
+
+
+## Installation
+
+```bash
+pip install MapAvro
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from MapAvro import AvroConverter
+
+# Initialize the converter
+converter = AvroConverter()
+
+# Convert Bengali to Avro
+bengali_text = "আমি বাংলায় গান গাই।"
+avro_text = converter.bengali_to_avro(bengali_text)
+print(avro_text)  # Output: "ami banglay gan gai."
+
+# Convert Avro to Bengali
+avro_input = "ami banglay gan gai."
+bengali_output = converter.avro_to_bengali(avro_input)
+print(bengali_output)  # Output: "আমি বাংলায় গান গাই।"
+```
+
+## Technical Details
+
+The conversion is based on character mapping tries that efficiently handle the transformation between Bengali and Avro representations. The package also includes text normalization capabilities to handle edge cases and ensure consistent input/output.
+
+The core components are:
+
+- `AvroConverter`: Main class that handles bidirectional conversion
+
+
+## Requirements
+
+- Python 3.6+
+
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
