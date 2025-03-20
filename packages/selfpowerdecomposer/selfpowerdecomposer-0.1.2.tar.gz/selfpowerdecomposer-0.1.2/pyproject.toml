@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selfpowerdecomposer"
+version = "0.1.2"
+authors = [
+    {name = "SelfPower Team", email = "lordrichado@gmail.com"},
+]
+description = "Large integer compression and secure encoding using self-power decomposition"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: System :: Archiving :: Compression",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = [
+    "gmpy2>=2.0.8",
+    "numpy>=1.19.0",
+    "matplotlib>=3.3.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/joirichi/selfpowerdecomposer"
+"Bug Tracker" = "https://github.com/joirichi/selfpowerdecomposer/issues" 
