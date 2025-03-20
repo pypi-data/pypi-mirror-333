@@ -1,0 +1,23 @@
+[project]
+name = "experimenter"
+version = "0.2"
+description = "Invariance, Same-Equivariance and other measures for Neural Networks. Support for PyTorch (now) and TensorFlow (coming)."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "texttable",
+    "argcomplete"
+]
+
+# if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+
+[project.urls]
+Homepage = "https://github.com/facundoq/experimenter"
+Documentation = "https://github.com/facundoq/experimenter"
+Repository = "https://github.com/facundoq/experimenter"
+Issues = "https://github.com/facundoq/experimenter/issues"
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple/"
+publish-url = "https://pypi.org/legacy/"

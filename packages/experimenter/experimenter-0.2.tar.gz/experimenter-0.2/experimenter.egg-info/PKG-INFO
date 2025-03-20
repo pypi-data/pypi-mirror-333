@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: experimenter
+Version: 0.2
+Summary: Invariance, Same-Equivariance and other measures for Neural Networks. Support for PyTorch (now) and TensorFlow (coming).
+Home-page: https://github.com/facundoq/experimenter
+Author: Facundo Manuel Quiroga
+Author-email: facundoq@gmail.com
+Project-URL: Homepage, https://github.com/facundoq/experimenter
+Project-URL: Documentation, https://github.com/facundoq/experimenter
+Project-URL: Repository, https://github.com/facundoq/experimenter
+Project-URL: Issues, https://github.com/facundoq/experimenter/issues
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: texttable
+Requires-Dist: argcomplete
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-python
+
+# experimenter
+Lightweight experiment base class, to organize machine learning research projects.
