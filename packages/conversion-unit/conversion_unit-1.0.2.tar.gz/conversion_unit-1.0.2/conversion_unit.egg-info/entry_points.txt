@@ -1,0 +1,2 @@
+[console_scripts]
+convert = conversion_unit:cli
