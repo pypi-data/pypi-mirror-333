@@ -1,0 +1,10 @@
+DESCRIPTION.rst
+LICENSE
+README.md
+pyproject.toml
+qwiic_lsm6dso.py
+sparkfun_qwiic_lsm6dso.egg-info/PKG-INFO
+sparkfun_qwiic_lsm6dso.egg-info/SOURCES.txt
+sparkfun_qwiic_lsm6dso.egg-info/dependency_links.txt
+sparkfun_qwiic_lsm6dso.egg-info/requires.txt
+sparkfun_qwiic_lsm6dso.egg-info/top_level.txt
