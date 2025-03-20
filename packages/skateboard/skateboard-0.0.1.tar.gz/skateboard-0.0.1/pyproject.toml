@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "skateboard"
+version = "0.0.1"
+authors = [
+  { name="Thomas Godden", email="thomas.godden@outlook.com" },
+]
+description="A minimal eel+ECharts dashboard interface"
+dependencies = ["numpy", "eel"]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]

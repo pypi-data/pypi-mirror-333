@@ -1,0 +1,41 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skateboard</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="/eel.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script src="skateboard.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<h1 id="pageTitle">Skateboard 🛹</h1>
+
+<div id="mainContainer">
+    <template id="headerTemplate">
+        <div class="gridElement">
+            <h2>Header Text</h2>
+        </div>
+    </template>
+
+    <template id="paragraphTemplate">
+        <div class="gridElement borderBox">
+            <p>Paragraph text</p>
+        </div>
+    </template>
+
+    <template id="dividerTemplate">
+        <div class="gridElement fullWidth">
+            <hr>
+        </div>
+    </template>
+
+    <template id="valueChartTemplate">
+        <div class="gridElement borderBox">
+            <div class="valueChart"></div>
+        </div>
+    </template>
+</div>
+</body>
