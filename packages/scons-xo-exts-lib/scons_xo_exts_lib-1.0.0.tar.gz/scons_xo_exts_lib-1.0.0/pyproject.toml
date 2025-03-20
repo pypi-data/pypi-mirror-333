@@ -1,0 +1,16 @@
+[project]
+name = "scons-xo-exts-lib"
+dynamic = [
+    "description",
+    "version",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "scons>=4.8.1",
+]
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = [
+    "flit_core >=3.2,<4",
+]
