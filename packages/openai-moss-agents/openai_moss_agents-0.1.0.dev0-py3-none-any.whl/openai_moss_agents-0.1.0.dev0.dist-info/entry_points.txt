@@ -1,0 +1,2 @@
+[console_scripts]
+openai-moss-agents = openai_moss_agents:main
