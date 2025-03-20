@@ -1,0 +1,13 @@
+asciititle/__init__.py,sha256=4q-ksyB9u08OLPBegP2J-HezQIKxyGMp_9sjqWRD6Bw,39
+asciititle/asciititle.py,sha256=Q9E8tLkIMGpn_d2eRqVj5YAaDftPq2jNbSjJsZoITEY,1180
+asciititle/custom_fonts.py,sha256=YXudKNamWvgq_hp0UIU6odDMRlgrbs9QACK1FnHpLyA,691
+asciititle/title.py,sha256=Q9E8tLkIMGpn_d2eRqVj5YAaDftPq2jNbSjJsZoITEY,1180
+my_ascii_lib/__init__.py,sha256=XrUsNcRdqQLkJ7DWbWMklnwOCV0duGkCHA4-A74ixhA,121
+my_ascii_lib/ascii.py,sha256=2-YTG2hlKAZukHYog0YfYGiWcoKKu5FHJSgsS4P06QI,1391
+my_ascii_lib/font_loader.py,sha256=JB0smrCtdFu0nCe100bbjNJw8E-bx006ggXRFs5k3Jc,1058
+my_ascii_lib/fonts/blurvision.json,sha256=klEcrwJLgk8jAZAt_Qm74wgznQAXDqznOPn0ydeuJTI,13104
+asciititle-0.1.0.dist-info/LICENSE,sha256=aPf2EevrFDmFwnA6JoBUWGI7nhKjjqrc-n8tqkrmNu8,1066
+asciititle-0.1.0.dist-info/METADATA,sha256=n6YKPcbfxVudczQoJgcPAYode-HtV7TuPRRtKT1BSOI,502
+asciititle-0.1.0.dist-info/WHEEL,sha256=Wyh-_nZ0DJYolHNn1_hMa4lM7uDedD_RGVwbmTjyItk,91
+asciititle-0.1.0.dist-info/top_level.txt,sha256=yS_F38-d-AmVUgk-buCygcoQBpzMCLSQ-JA40gFy8Bc,13
+asciititle-0.1.0.dist-info/RECORD,,
