@@ -1,0 +1,2 @@
+[console_scripts]
+kishuboard = kishuboard.server:main
