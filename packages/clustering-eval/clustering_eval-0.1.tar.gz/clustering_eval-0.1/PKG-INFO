@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: clustering_eval
+Version: 0.1
+Summary: A package for evaluating clustering algorithms using NCQI.
+Home-page: https://github.com/Mojtaba-jahanian/Cosine-Clustering-Index-CCI-
+Author: Mojtaba Jahanian
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: tensorflow
+Requires-Dist: matplotlib
+Requires-Dist: pandas
