@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "at-external-fmp"
+version = "1.0.1"
+description = "Provides an API client for retrieving financial data from the Financial Modeling Prep API, organized into structured modules for various financial metrics."
+requires-python = ">=3.11"
+authors = [
+    {name = "Rui Chen"}
+]
+readme = "README.md"
+
+[project.urls]
+"Homepage" = "https://github.com/apex-trader/at-external-fmp"
+"Bug Tracker" = "https://github.com/apex-trader/at-external-fmp/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"at_external_fmp" = ["py.typed"]

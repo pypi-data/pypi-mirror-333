@@ -1,0 +1,122 @@
+from pydantic import BaseModel, Field
+
+class CompanyProfile(BaseModel):
+    symbol: str = Field(..., description="Stock ticker symbol")
+    price: float = Field(..., description="Current stock price")
+    marketCap: float = Field(..., description="Total market value of the company's outstanding shares")
+    beta: float = Field(..., description="Measure of stock volatility relative to the market")
+    lastDividend: float = Field(..., description="Most recent dividend payment per share")
+    range: str = Field(..., description="Price range (high/low) for a specific period")
+    change: float = Field(..., description="Absolute price change")
+    changePercentage: float = Field(..., description="Percentage price change")
+    volume: int = Field(..., description="Number of shares traded in the current period")
+    averageVolume: int = Field(..., description="Average number of shares traded over a specific period")
+    companyName: str = Field(..., description="Full legal name of the company")
+    currency: str = Field(..., description="Currency in which the stock is traded")
+    cik: str = Field(..., description="Central Index Key assigned by the SEC")
+    isin: str = Field(..., description="International Securities Identification Number")
+    cusip: str = Field(..., description="Committee on Uniform Securities Identification Procedures number")
+    exchangeFullName: str = Field(..., description="Full name of the stock exchange")
+    exchange: str = Field(..., description="Abbreviated name of the stock exchange")
+    industry: str = Field(..., description="Industry classification of the company")
+    website: str = Field(..., description="Company's official website URL")
+    description: str = Field(..., description="Brief overview of the company's business")
+    ceo: str = Field(..., description="Name of the Chief Executive Officer")
+    sector: str = Field(..., description="Broader market sector classification")
+    country: str = Field(..., description="Country where the company is headquartered")
+    fullTimeEmployees: str = Field(..., description="Number of full-time employees")
+    phone: str = Field(..., description="Company's contact phone number")
+    address: str = Field(..., description="Company's headquarters street address")
+    city: str = Field(..., description="City of company headquarters")
+    state: str = Field(..., description="State or province of company headquarters")
+    zip: str = Field(..., description="Postal code of company headquarters")
+    image: str = Field(..., description="URL to company logo or image")
+    ipoDate: str = Field(..., description="Date of initial public offering")
+    defaultImage: bool = Field(..., description="Indicates if a default image is being used")
+    isEtf: bool = Field(..., description="Indicates if the security is an Exchange Traded Fund")
+    isActivelyTrading: bool = Field(..., description="Indicates if the stock is currently being traded")
+    isAdr: bool = Field(..., description="Indicates if the security is an American Depositary Receipt")
+    isFund: bool = Field(..., description="Indicates if the security is an investment fund")
+
+class CompanyNote(BaseModel):
+    cik: str = Field(..., description="Central Index Key assigned by the SEC")
+    symbol: str = Field(..., description="Stock ticker symbol")
+    title: str = Field(..., description="Title of the company note or filing")
+    exchange: str = Field(..., description="Exchange where the stock is traded")
+
+class StockPeer(BaseModel):
+    symbol: str = Field(..., description="Stock ticker symbol")
+    companyName: str = Field(..., description="Full legal name of the company")
+    price: float = Field(..., description="Current stock price")
+    mktCap: int | float = Field(..., description="Total market value of the company's outstanding shares")
+
+class DelistedCompany(BaseModel):
+    symbol: str = Field(..., description="Former stock ticker symbol")
+    companyName: str = Field(..., description="Full legal name of the company")
+    exchange: str = Field(..., description="Exchange where the stock was traded")
+    ipoDate: str = Field(..., description="Date of initial public offering")
+    delistedDate: str = Field(..., description="Date when the stock was removed from the exchange")
+
+class EmployeeCount(BaseModel):
+    symbol: str = Field(..., description="Stock ticker symbol")
+    cik: str = Field(..., description="Central Index Key assigned by the SEC")
+    acceptanceTime: str = Field(..., description="Time when the filing was accepted by the SEC")
+    periodOfReport: str = Field(..., description="Reporting period covered by the filing")
+    companyName: str = Field(..., description="Full legal name of the company")
+    formType: str = Field(..., description="Type of SEC form filed")
+    filingDate: str = Field(..., description="Date when the form was filed")
+    employeeCount: int = Field(..., description="Total number of employees reported")
+    source: str = Field(..., description="Source of the employee count data")
+
+class MarketCapitalization(BaseModel):
+    symbol: str = Field(..., description="Stock ticker symbol")
+    date: str = Field(..., description="Date of the market capitalization data")
+    marketCap: float = Field(..., description="Total market value of the company's outstanding shares")
+
+class SharesFloat(BaseModel):
+    symbol: str = Field(..., description="Stock ticker symbol")
+    date: str | None = Field(None, description="Date of the shares float data")
+    freeFloat: float | None = Field(None, description="Percentage of shares available for public trading")
+    floatShares: int | float | None = Field(None, description="Number of shares available for public trading")
+    outstandingShares: int | float | None = Field(None, description="Total number of shares issued by the company")
+
+class MergerAcquisition(BaseModel):
+    symbol: str = Field(..., description="Stock ticker symbol of the acquiring company")
+    companyName: str = Field(..., description="Name of the acquiring company")
+    cik: str = Field(..., description="Central Index Key of the acquiring company")
+    targetedCompanyName: str = Field(..., description="Name of the company being acquired")
+    targetedCik: str | None = Field(None, description="Central Index Key of the targeted company")
+    targetedSymbol: str | None = Field(None, description="Stock ticker symbol of the targeted company")
+    transactionDate: str = Field(..., description="Date when the transaction was announced")
+    acceptedDate: str = Field(..., description="Date when the transaction was completed or accepted")
+    link: str = Field(..., description="URL to the official filing or announcement")
+
+class Executive(BaseModel):
+    title: str = Field(..., description="Job title or position of the executive")
+    name: str = Field(..., description="Full name of the executive")
+    pay: float | None = Field(None, description="Total compensation amount")
+    currencyPay: str = Field(..., description="Currency of the compensation")
+    gender: str = Field(..., description="Gender of the executive")
+    yearBorn: int | None = Field(None, description="Birth year of the executive")
+    active: bool | None = Field(None, description="Indicates if the executive is currently active")
+
+class ExecutiveCompensation(BaseModel):
+    symbol: str = Field(..., description="Stock ticker symbol")
+    companyName: str = Field(..., description="Full legal name of the company")
+    filingDate: str = Field(..., description="Date when the compensation was filed")
+    acceptedDate: str = Field(..., description="Date when the filing was accepted")
+    nameAndPosition: str = Field(..., description="Name and position of the executive")
+    year: int = Field(..., description="Fiscal year of the compensation")
+    salary: float = Field(..., description="Base salary amount")
+    bonus: float = Field(..., description="Cash bonus amount")
+    stockAward: float = Field(..., description="Value of stock-based compensation")
+    optionAward: float | None = Field(None, description="Value of stock options granted")
+    incentivePlanCompensation: float = Field(..., description="Performance-based incentive compensation")
+    allOtherCompensation: float = Field(..., description="Additional compensation not in other categories")
+    total: float = Field(..., description="Total compensation amount")
+    link: str = Field(..., description="URL to the official filing document")
+
+class ExecutiveCompensationBenchmark(BaseModel):
+    industryTitle: str = Field(..., description="Industry sector or classification")
+    year: int = Field(..., description="Year of the benchmark data")
+    averageCompensation: float = Field(..., description="Average executive compensation for the industry")

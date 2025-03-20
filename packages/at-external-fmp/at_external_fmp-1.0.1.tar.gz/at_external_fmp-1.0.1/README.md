@@ -1,0 +1,125 @@
+# at-external-fmp
+
+A Python library that provides a structured API client for retrieving financial data from the Financial Modeling Prep (FMP) API. This package organizes various financial metrics and data points into well-structured modules for easy access and integration.
+
+## Overview
+
+The `at-external-fmp` package offers a comprehensive interface to the Financial Modeling Prep API, allowing you to access a wide range of financial data including:
+
+- Company profiles and information
+- Stock quotes and price data
+- Financial statements
+- Market performance metrics
+- News and calendar events
+- Analyst recommendations
+- ESG scores
+- Cryptocurrency and forex data
+- ETF and mutual fund information
+- Economic indicators
+- And much more
+
+## Installation
+
+```bash
+pip install at-external-fmp
+```
+
+## Requirements
+
+- Python 3.11 or higher
+- An API key from Financial Modeling Prep
+
+## Configuration
+
+Set your FMP API key as an environment variable:
+
+```bash
+export FMP_API_KEY="your_api_key_here"
+```
+
+Alternatively, you can use a `.env` file in your project root:
+```
+FMP_API_KEY=your_api_key_here
+```
+
+## Usage
+
+The library is designed with an async-first approach, making it suitable for high-performance applications. Each module provides specific functionality for different types of financial data.
+
+### Basic Example
+
+```python
+import asyncio
+from at_common_fmp import company, quote
+
+async def main():
+    # Get company profile
+    profile_data = await company.profile("AAPL")
+    print(f"Company Name: {profile_data[0]['companyName']}")
+    
+    # Get current stock quote
+    quote_data = await quote.quote("AAPL")
+    print(f"Current Price: ${quote_data[0]['price']}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Available Modules
+
+- **analyst**: Access analyst recommendations, price targets, and upgrades/downgrades
+- **calendar**: Retrieve earnings calendars, IPO calendars, stock splits, and dividend dates
+- **chart**: Get historical price data and technical indicators
+- **company**: Access company profiles, executive information, and corporate data
+- **crypto**: Retrieve cryptocurrency quotes and information
+- **directory**: Access directories of stocks, ETFs, and other financial instruments
+- **economics**: Get economic indicators and data
+- **esg**: Access Environmental, Social, and Governance scores
+- **etf_and_mutual_funds**: Retrieve ETF and mutual fund data
+- **forex**: Access foreign exchange rates and data
+- **index**: Get market index data
+- **market_hours**: Check market trading hours and holidays
+- **market_performance**: Access sector performance, gainers, losers, and market metrics
+- **news**: Retrieve financial news and press releases
+- **quote**: Get real-time and historical stock quotes
+- **search**: Search for stocks, ETFs, and other financial instruments
+- **statements**: Access financial statements including income statements, balance sheets, and cash flow statements
+
+## Rate Limiting
+
+The library includes built-in rate limiting to prevent exceeding the API's rate limits. By default, it's configured to make a maximum of 5 requests per second.
+
+## Error Handling
+
+The client includes automatic retry logic with exponential backoff for handling temporary API issues.
+
+## Development
+
+### Setup Development Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/apex-trader/at-external-fmp.git
+cd at-external-fmp
+
+# Install development dependencies
+pip install -e ".[dev]"
+```
+
+### Running Tests
+
+```bash
+pytest
+```
+
+## License
+
+[License information]
+
+## Contributing
+
+[Contribution guidelines]
+
+## Support
+
+For questions and support, please open an issue on the [GitHub repository](https://github.com/apex-trader/at-external-fmp/issues).
