@@ -1,0 +1,11 @@
+bpplang/_default_hook_methods.py,sha256=QRLLGaofT7LotPjvOw-6JGemJYKrhXPRjIUBLL__OoA,2128
+bpplang/bpp_typing.py,sha256=mq3lHzQQJT6-Ytn_EjUu5Dg4FD_EG-eAhXMi1sNTKFM,661
+bpplang/functions.py,sha256=5FIzqqug62thj4PChjHsFdArJYDTF4LUr1ZdRtTSZYI,13130
+bpplang/hooks.py,sha256=TdNGXwDTAZuV9QULXXeRCByqshCc-Hlzi9e7TNrjV3Q,384
+bpplang/parsing.py,sha256=xexrlDCaxJSALuzkUAcUFDud8gX_0b6wxAh2cEQSiS4,8317
+bpplang/utils.py,sha256=pKfiITbPKIHIlXCuk1_eeFvNbSglSxbiW-RUshVpTOw,1003
+bpplang-0.1.1.dist-info/LICENSE,sha256=qR-6oZSlz-FoY8h5FPfCopgd88-XXM1_v4m3MssQ7nI,1068
+bpplang-0.1.1.dist-info/METADATA,sha256=ZfXVKSCueFU8aYEYEIT-3qG1YxxIGOKW04CRTRtDvIY,577
+bpplang-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+bpplang-0.1.1.dist-info/top_level.txt,sha256=7udCQOz8FYPwwVNecYVqQ1I07P9MKRycoFWZCLPRIxI,8
+bpplang-0.1.1.dist-info/RECORD,,
