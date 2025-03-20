@@ -1,0 +1,13 @@
+[project]
+name = "aiocrystal"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "fastapi[standard,standart]>=0.115.11",
+    "flask>=3.1.0",
+    "pydantic>=2.10.6",
+    "requests>=2.32.3",
+]
