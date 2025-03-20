@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pytable_formatter/__init__.py
+src/pytable_formatter/cell.py
+src/pytable_formatter/enums.py
+src/pytable_formatter/table.py
+src/pytable_formatter/utils.py
+src/pytable_formatter.egg-info/PKG-INFO
+src/pytable_formatter.egg-info/SOURCES.txt
+src/pytable_formatter.egg-info/dependency_links.txt
+src/pytable_formatter.egg-info/top_level.txt
+tests/test_cell.py
+tests/test_formatting.py
+tests/test_table.py
