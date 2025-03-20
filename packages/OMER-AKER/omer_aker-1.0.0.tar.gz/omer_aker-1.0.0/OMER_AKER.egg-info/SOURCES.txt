@@ -1,0 +1,6 @@
+setup.py
+OMER_AKER.egg-info/PKG-INFO
+OMER_AKER.egg-info/SOURCES.txt
+OMER_AKER.egg-info/dependency_links.txt
+OMER_AKER.egg-info/requires.txt
+OMER_AKER.egg-info/top_level.txt
