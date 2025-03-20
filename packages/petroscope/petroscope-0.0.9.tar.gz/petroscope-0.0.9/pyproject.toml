@@ -1,0 +1,41 @@
+[project]
+name = "petroscope"
+version = "0.0.9"
+authors = [
+  { name="Alexander Khvostikov", email="khvostikov@cs.msu.ru" },
+]
+description = "Package containing a set of tools to process and analyze geological microscopic images."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyyaml",
+    "numpy>=1.16, <2.0.0",
+    "pillow",
+    "matplotlib",
+    "tqdm",
+    "scipy",
+    "loguru",
+    "prettytable",
+    "requests"
+]
+
+[tool.setuptools]
+packages = ["petroscope"]
+
+[project.optional-dependencies]
+extra = [
+    "torch",
+    "torchvision",
+    "kornia",
+    "opencv-python"
+]
+
+[project.urls]
+Homepage = "https://github.com/xubiker/petroscope"
+Issues = "https://github.com/xubiker/petroscope/issues"
