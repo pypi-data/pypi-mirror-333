@@ -1,0 +1,2 @@
+[console_scripts]
+canaime-login = loginCanaime.main:cli_main
