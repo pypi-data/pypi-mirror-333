@@ -1,0 +1,13 @@
+numpy
+platformdirs
+torch>=2.2.1
+boto3
+lightning>=2.2.1
+nest_asyncio
+ngcsdk==3.50.0
+pooch
+pydantic>=2.7.0
+pydantic[email]>=2.7.0
+pytorch-lightning>=2.2.1
+pyyaml
+tqdm
