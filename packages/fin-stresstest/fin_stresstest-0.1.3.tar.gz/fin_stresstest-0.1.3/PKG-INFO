@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: fin-stresstest
+Version: 0.1.3
+Summary: Herramienta para análisis de escenarios de estrés financiero
+Home-page: https://github.com/LuisHCalderon/StressTest
+Author: Luis Humberto Calderon Baldeón
+Author-email: luis.calderon.b@uni.pe
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: seaborn>=0.11.0
+Requires-Dist: statsmodels>=0.12.0
+Requires-Dist: yfinance>=0.2.0
+
+# fin-stresstest
+
+[![PyPI version](https://badge.fury.io/py/fin-stresstest.svg)](https://badge.fury.io/py/fin-stresstest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+
+Una biblioteca Python para realizar pruebas de estrés financiero y análisis de escenarios de riesgo.
+
+## Características
+
+- Generación de escenarios de estrés basados en datos históricos
+- Modelado de extremos mediante Teoría de Valores Extremos (EVT)
+- Captura de dependencias no lineales con modelos de cópulas
+- Simulación histórica y paramétrica
+- Cálculo de métricas de riesgo (VaR, Expected Shortfall)
+- Visualización avanzada de resultados
+- Herramientas para análisis de sensibilidad
+- Utilidades para manipulación de datos financieros
+- Carga automática de datos desde Yahoo Finance
+
+## Instalación
+
+```bash
+pip install fin-stresstest
