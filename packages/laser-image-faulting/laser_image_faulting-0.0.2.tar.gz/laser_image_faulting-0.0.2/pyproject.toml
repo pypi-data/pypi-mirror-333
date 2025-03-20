@@ -1,0 +1,50 @@
+[project]
+name = "laser-image-faulting"
+version = "0.0.2"
+description = "Laser image fault detection package"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "numpy",
+    "pillow",
+    "pyarmor (>=9.1.1,<10.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "laser-image-faulting"
+version = "0.0.19"
+description = "faulting algorithm - pass 2 ndarrays"
+authors = ["Your Name <your.email@example.com>"]
+packages = [
+    { include = "laser_image_faulting" }
+]
+
+[tool.poetry.dependencies]
+python = "3.11"
+numpy = "1.26.4"
+torch = "*"
+pillow = "*"
+
+[tool.setuptools.package-data]
+"laser_image_faulting" = [
+    "pyarmor_runtime_000000/*",
+    "*.py",
+    "*.so",
+    "*.pyd"
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+    "pyarmor>=9.1.1"  # For development and building only
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = ["tests*", "docs*"]
