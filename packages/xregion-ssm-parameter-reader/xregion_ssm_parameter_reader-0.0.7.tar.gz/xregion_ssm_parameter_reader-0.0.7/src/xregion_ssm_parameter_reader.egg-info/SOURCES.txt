@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/xregion-ssm-parameter-reader/__init__.py
+src/xregion-ssm-parameter-reader/py.typed
+src/xregion-ssm-parameter-reader/_jsii/__init__.py
+src/xregion-ssm-parameter-reader/_jsii/xregion-ssm-parameter-reader@0.0.7.jsii.tgz
+src/xregion_ssm_parameter_reader.egg-info/PKG-INFO
+src/xregion_ssm_parameter_reader.egg-info/SOURCES.txt
+src/xregion_ssm_parameter_reader.egg-info/dependency_links.txt
+src/xregion_ssm_parameter_reader.egg-info/requires.txt
+src/xregion_ssm_parameter_reader.egg-info/top_level.txt
