@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: syrenka
+Version: 0.1.0
+Summary: syrenka is mermaid.js markdown generator
+Author-email: Bartlomiej Cieszkowski <bartlomiej.cieszkowski@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.12
