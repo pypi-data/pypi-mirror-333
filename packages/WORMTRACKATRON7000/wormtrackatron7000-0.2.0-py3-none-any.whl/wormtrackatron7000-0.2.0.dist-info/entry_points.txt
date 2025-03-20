@@ -1,0 +1,2 @@
+[console_scripts]
+wormtrack = wormtrackatron7000.main:main
