@@ -1,0 +1,2 @@
+[console_scripts]
+itc2kc = itc2kc:main
