@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: handlerutil
+Version: 0.0.1
+Summary: Let you manage handlers, decorate function with handlers and iterate collections with handlers!
+Project-URL: Github repo, https://github.com/akvilary/handlerutil
+Project-URL: Bug tracker, https://github.com/akvilary/handlerutil/issues
+Project-URL: Release notes in Telegram, https://t.me/handlerutil
+Author-email: Andrey Smirnov <smirnovcode@mail.ru>
+License-File: LICENSE
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# handlerutil
+**handlerutil** is simple and powerful handler's managment tool.
+
+## How to install
+You could install from PyPi:
+```console
+$ python3 -m pip install handlerutil
+```
