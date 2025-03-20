@@ -1,0 +1,78 @@
+Metadata-Version: 2.4
+Name: dice-api
+Version: 2025.3.1
+Summary: A web API for DICE services
+Project-URL: Homepage, https://github.com/uobdic/dice-api
+Project-URL: Bug Tracker, https://github.com/uobdic/dice-api/issues
+Project-URL: Discussions, https://github.com/uobdic/dice-api/discussions
+Project-URL: Changelog, https://github.com/uobdic/dice-api/releases
+Author-email: Luke Kreczko <kreczko@cern.ch>
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Requires-Dist: dice-lib>=2024.1.1
+Requires-Dist: fastapi>=0.104.1
+Requires-Dist: uvicorn>=0.24.0.post1
+Requires-Dist: xrdsum>=2023.12.1
+Provides-Extra: dev
+Requires-Dist: pytest-cov>=3; extra == 'dev'
+Requires-Dist: pytest>=6; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: furo>=2023.08.17; extra == 'docs'
+Requires-Dist: myst-parser>=0.13; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints; extra == 'docs'
+Requires-Dist: sphinx-copybutton; extra == 'docs'
+Requires-Dist: sphinx-inline-tabs; extra == 'docs'
+Requires-Dist: sphinx>=7.0; extra == 'docs'
+Requires-Dist: sphinxcontrib-mermaid; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest-cov>=3; extra == 'test'
+Requires-Dist: pytest>=6; extra == 'test'
+Description-Content-Type: text/markdown
+
+# DICE API
+
+[![Actions Status][actions-badge]][actions-link]
+[![PyPI version][pypi-version]][pypi-link]
+[![PyPI platforms][pypi-platforms]][pypi-link]
+
+[![GitHub Discussion][github-discussions-badge]][github-discussions-link]
+
+<!-- SPHINX-START -->
+
+<!-- prettier-ignore-start -->
+[actions-badge]:            https://github.com/uobdic/dice-api/workflows/CI/badge.svg
+[actions-link]:             https://github.com/uobdic/dice-api/actions
+[pypi-link]:                https://pypi.org/project/dice-api/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/dice-api
+[pypi-version]:             https://img.shields.io/pypi/v/dice-api
+
+<!-- prettier-ignore-end -->
+
+DICE API is a FastAPI-based API for the Data Intensive Computing Environment.
+The aim is to provide a simple, easy-to-use API for admin-interaction
+
+## Getting started
+
+```bash
+docker run \
+    --net=host \
+    -v /opt/cvmfs/cms.cern.ch/SITECONF/local:/cvmfs/cms.cern.ch/SITECONF/T2_UK_SGrid_Bristol:ro \
+    -v /etc/hadoop:/etc/hadoop:ro \
+    -v /etc/alternatives/hadoop-conf:/etc/alternatives/hadoop-conf:ro \
+    -ti kreczko/dice-api:latest
+```
