@@ -1,0 +1,61 @@
+body {
+    background-color: #121213;
+    color:#e8e7e1;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 10px;
+}
+
+
+#mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+h1 {
+    font-weight: 800; /* Bold */
+}
+
+p {
+    margin: 5px;
+}
+
+hr {
+    background-color: rgb(60, 60, 60); 
+    height: 1px; 
+    border: 0;
+}
+
+.valueChart {
+    width: 100%;
+    height: 300px;
+}
+
+.gridElement {
+    padding: 5px;
+
+    min-width: 200px;
+    margin: 0;
+}
+
+.borderBox {
+    border: 1px solid #ffffff11;
+    border-radius: 1.5px;
+
+    background-color: #161719;
+    box-shadow: 0px 10px 20px #00000017;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+.halfWidth{
+    width: 49%;
+}
+
+.thirdWidth{
+    width: 32%;
+}
