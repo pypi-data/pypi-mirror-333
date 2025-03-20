@@ -1,0 +1,2 @@
+[console_scripts]
+lifreader = main:main
