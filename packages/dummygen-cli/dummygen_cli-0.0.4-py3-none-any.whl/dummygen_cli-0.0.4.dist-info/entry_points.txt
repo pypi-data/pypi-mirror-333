@@ -1,0 +1,2 @@
+[console_scripts]
+dummygen-cli = dummygen_cli.__main__:main
