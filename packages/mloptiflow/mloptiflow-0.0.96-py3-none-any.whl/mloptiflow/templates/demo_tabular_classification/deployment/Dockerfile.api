@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y curl
+RUN pip install poetry
+
+WORKDIR /app
+
+COPY ./pyproject.toml ./poetry.lock* /app/
+
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-cache --no-ansi --no-root
+
+COPY . /app/
+
+ENV PYTHONPATH=/app
+ENV MODEL_PATH=/app/mlruns
+ENV MLFLOW_TRACKING_URI=file:///app/mlruns
+ENV MLOPTIFLOW_ARTIFACT_ROOT=/app/mlruns
+
+CMD ["poetry", "run", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
