@@ -1,0 +1,74 @@
+Metadata-Version: 2.3
+Name: matrixhdl
+Version: 0.1.7
+Summary: Matrix HDL is a tool that aggregates Verilog RTL code in a matrix style.
+Author: lixinbingg
+Author-email: lixinbingg@163.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: openpyxl
+Description-Content-Type: text/markdown
+
+# PYPI readme_en.md
+
+[中文文档](README_zhcn.md)
+
+Matrix HDL is a tool that aggregates Verilog RTL code in a matrix style. It helps users build and develop the hierarchy of Verilog RTL code using a spreadsheet. Therefore, this tool can convert Verilog RTL code to and from spreadsheets. Due to this feature, Matrix HDL can serve as an entry point for AI to interpret Verilog RTL code, enabling users to input the hierarchical relationships of Verilog RTL to AI tools for interpretation.
+
+It uses four Python scripts to convert Verilog RTL code:
+
+1. mh_import : This script converts Verilog RTL code into a spreadsheet format. Its parameters are as follows:
+    - -o:  Specifies the output spreadsheet file in .xlsx format.
+    - -v :  Specifies a directory. All .v files in this directory need to be parsed. The script will automatically read all .v files and establish their hierarchical relationships.
+    - -f:   Specifies a text file that lists all the .v code to be parsed.
+    - -level:   Specifies the hierarchy level. If you only need to parse up to a specified level, you can specify a number. If not provided, the entire hierarchy will be parsed.
+    - -top:  When there are multiple top - level modules, you can use this parameter to specify the top - level module, and other levels will be automatically removed. If not provided, the entire hierarchy will be parsed.
+    - -full:   If this parameter is provided, all logical descriptions of the .v files will be included in the .xlsx file. If not specified, when a .v file does not contain sub - modules, only its ports will be listed on the special sheet page @module. Also, if the logical description is too long, it will be automatically discarded.
+        
+        Example: (Multiple .v files to be parsed are stored in the code directory, and these codes will be aggregated into a single file: code.xlsx)
+        
+        ```
+        mh_import -v code/ -o code.xlsx
+        ```
+        
+2. mh_hyperlink:  This script adds hyperlinks to the code aggregation in spreadsheet format. Modules and sub - modules on each sheet page can be automatically navigated to the upper or lower level via hyperlinks. Simply follow it with the .xlsx file.
+    
+    Example: (code.xlsx is the generated file without hyperlink relationships. Running the following script will add hyperlinks to module names and sub - module names)
+    
+    ```
+    mh_hyperlink code.xlsx
+    ```
+    
+3. mh_export: This script exports the code aggregation in spreadsheet format to .v files.
+    - -single:  If this parameter is provided, the code will be exported to a single .v file, and the file name is given by -o. If not provided, the code will be exported to a directory, and the directory name is given by -o, with one sheet page corresponding to one .v file.
+    - -o：Specifies the directory name or file name.
+    
+    Examples:
+    
+    ```
+    mh_export code.xlsx -single -o top  #top.v
+    mh_export code.xlsx -o top   #top/ xxx.v etc
+    ```
+    
+4. mh_ports: This script imports the ports of .v files into the special page @module of the .xlsx file (this page lists a module name and its ports in each column, and the description of this module will not appear in the .xlsx file). If it's a single .v file, you can directly follow it with this .v file. For batch import, use the -f or -v option.
+    
+    -o :  Specifies the .xlsx file that accepts the import. It only modifies the @module page. If the module name exists, it will be updated; if not, a new column will be added at the end.
+    
+    -f : Followed by a list file. When you need to import multiple files, you can list them in this file.
+    
+    -v: Followed by a directory name. It will automatically search for .v files in this directory.
+    
+   Examples:
+
+    
+    ```
+    mh_ports uart.v -o code.xlsx
+    mh_export -v code/ -o code.xlsx
+    ```
+    
+
+Please install the matrixhdl package and execute these four scripts to convert between Verilog RTL code and spreadsheet format.
