@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: HC_Attendance_Station
+Version: 0.0.6
+Summary: Classroom attendance using a USB magstripe reader
+Author-email: Joseph Deer <python@hocking.edu>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: keyring
+Requires-Dist: pyusb
+Requires-Dist: tzdata
+Requires-Dist: keyboard
+
+# HC Attendance Station
+
+This package installs the program to take attendance using a student id with a magnetic stripe.
