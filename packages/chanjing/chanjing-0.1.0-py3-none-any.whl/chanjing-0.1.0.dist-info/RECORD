@@ -1,0 +1,11 @@
+chanjing/__init__.py,sha256=wh1NjBlEKAg1IZLzn6evLl5gSAj-xgJB70mgLNkvBEE,247
+chanjing/core.py,sha256=JOQfqBYhOFaQeFb-v4-i6rnhaQUMo0zFsg1cJaKxgHM,5003
+chanjing/schemas.py,sha256=6gP_ZFiIYwQtvrXRUCzxY_IIB5GqhQZwNb6DVuJynaw,1947
+chanjing/synthesis.py,sha256=l4uvl3EeU-QaCxvUO9Jh0ZJwt7yAijnleeSMKBhk8ig,4611
+chanjing/user_info.py,sha256=lxZNpT4jEluC-sTcFgKAe6_MUFzQ-vra9VN65LsxwY8,744
+chanjing/customised/audio.py,sha256=X6HFVkCB1cUxw3-x4e7cK_7Tlne4qlOibe6_EHEpM98,1929
+chanjing/customised/person.py,sha256=u9hZ9-1Ol6mWXaGrFu6a3lDqPCPSPz-776FNOzMyt_M,2606
+chanjing-0.1.0.dist-info/METADATA,sha256=Oi6ovXQ788PPVr_fcEdJhCRU3PjPCj3oU0Zdbpqmngo,6238
+chanjing-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+chanjing-0.1.0.dist-info/licenses/LICENSE,sha256=hs6xJ8P7cNPC3hHg2075qrdS6-Y-51LgJTzeIoiBLYA,1095
+chanjing-0.1.0.dist-info/RECORD,,
