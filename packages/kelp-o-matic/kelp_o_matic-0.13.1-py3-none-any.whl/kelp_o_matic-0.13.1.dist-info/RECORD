@@ -1,0 +1,15 @@
+kelp_o_matic/__init__.py,sha256=md65h9zNo5BxJFnO5Q7mEUBonSQtqeB_ioXN-UPEbaI,128
+kelp_o_matic/cli.py,sha256=jmpeG5FELigp9oAB3ixcoEx-AoCft_WjKavPo8JDtZE,4648
+kelp_o_matic/hann.py,sha256=IfIxQ0qdeOfSg4mrvirZ5ACnlwTo54zVwFsretyFOD4,7741
+kelp_o_matic/lib.py,sha256=8g2VJqhGnK0JVPv8kJrWMjyrsQpUPlkmUGDkX2xb4n8,5209
+kelp_o_matic/managers.py,sha256=xxxo4rJYOr9ZmMxfuy_4mumOzHD6ooGpqWFvyuXQ_Vo,8691
+kelp_o_matic/models.py,sha256=UcsuGiMN7OCxdTXoy85bYryElj_QGsSG57oODpL_N5I,5458
+kelp_o_matic/utils.py,sha256=nM0-r-8nY9aG73CigkETNLp5XDLMvnXz6JPpuycW6pg,1881
+kelp_o_matic/geotiff_io/__init__.py,sha256=ehEeIgSQDHVMj_90KKnWmXXMbLXc9gahljFy70Sj6Ic,176
+kelp_o_matic/geotiff_io/geotiff_reader.py,sha256=lZ0VXSi3ywpukT8c8cC2WFIdHvGCVXrvi0Yeg5wdYXM,2882
+kelp_o_matic/geotiff_io/geotiff_writer.py,sha256=2ztK1KVSxwEx2HV2n-WTr69SN5dlS91WzXeCoklDEv4,2434
+kelp_o_matic-0.13.1.dist-info/METADATA,sha256=6m3rzmljmdksMszrUcIYFnrKqkxd1MImzOTteDjLOEE,1850
+kelp_o_matic-0.13.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+kelp_o_matic-0.13.1.dist-info/entry_points.txt,sha256=Geat6fCYsSZg5UResNjrGXOlFan6DlBGeqwVBNDVVKo,45
+kelp_o_matic-0.13.1.dist-info/licenses/LICENSE.txt,sha256=geCYBkNUWgW2f2ZDyBtBAWCjtjtQb0aEpbmPNI0bkDo,1059
+kelp_o_matic-0.13.1.dist-info/RECORD,,
