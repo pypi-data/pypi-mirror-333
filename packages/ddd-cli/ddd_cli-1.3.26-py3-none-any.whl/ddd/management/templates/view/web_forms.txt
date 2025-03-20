@@ -1,0 +1,157 @@
+from django import forms
+from django.core import validators
+
+class {{ entity_name.capitalize() }}Form(forms.Form):
+    """
+    Formulario para crear una nueva instancia de {{ entity_name.lower() }}.
+    """
+
+    # Title
+    title = forms.CharField(
+        label='Titulo',
+        max_length=40,
+        required=True,
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Mete Titulo',
+            'class': 'titulo_form_{{ entity_name.lower() }}'
+        }),
+        validators=[
+            validators.MinLengthValidator(4, 'El titulo es demasiado corto'),
+            validators.MaxLengthValidator(30, 'El titulo es demasiado largo'),
+            validators.RegexValidator(
+                '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]*$',
+                'El titulo está mal formado',
+                'invalid_title'
+            )
+        ]
+    )
+
+    # Content
+    content = forms.CharField(
+        label='Contenido',
+        widget=forms.Textarea,
+        validators=[
+            validators.MinLengthValidator(4, 'El contenido es demasiado corto'),
+            validators.MaxLengthValidator(30, 'El contenido es demasiado largo'),
+            validators.RegexValidator(
+                '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]*$',
+                'El contenido está mal formado',
+                'invalid_content'
+            )
+        ]
+    )
+    content.widget.attrs.update({
+        'placeholder': 'Mete Contenido',
+        'class': 'contenido_form_{{ entity_name.lower() }}',
+        'id': 'contenido_form'
+    })
+
+    # Publicado
+    public_options = [
+        (True, 'Si'),
+        (False, 'No')
+    ]
+    public = forms.TypedChoiceField(
+        label='¿Publicado?',
+        choices=public_options
+    )
+
+
+class {{ entity_name.capitalize() }}EditForm(forms.Form):
+    """
+    Formulario para editar una instancia existente de {{ entity_name.lower() }}.
+    """
+
+    # ID
+    id = forms.IntegerField(
+        label='ID',
+        widget=forms.HiddenInput()
+    )
+
+    # Title
+    title = forms.CharField(
+        label='Titulo',
+        max_length=40,
+        required=True,
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Mete Titulo',
+            'class': 'titulo_form_{{ entity_name.lower() }}'
+        }),
+        validators=[
+            validators.MinLengthValidator(4, 'El titulo es demasiado corto'),
+            validators.MaxLengthValidator(30, 'El titulo es demasiado largo'),
+            validators.RegexValidator(
+                '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]*$',
+                'El titulo está mal formado',
+                'invalid_title'
+            )
+        ]
+    )
+
+    # Content
+    content = forms.CharField(
+        label='Contenido',
+        widget=forms.Textarea,
+        validators=[
+            validators.MinLengthValidator(4, 'El contenido es demasiado corto'),
+            validators.MaxLengthValidator(30, 'El contenido es demasiado largo'),
+            validators.RegexValidator(
+                '^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]*$',
+                'El contenido está mal formado',
+                'invalid_content'
+            )
+        ]
+    )
+    content.widget.attrs.update({
+        'placeholder': 'Mete Contenido',
+        'class': 'contenido_form_{{ entity_name.lower() }}',
+        'id': 'contenido_form'
+    })
+
+    # Publicado
+    public_options = [
+        (True, 'Si'),
+        (False, 'No')
+    ]
+    public = forms.TypedChoiceField(
+        label='¿Publicado?',
+        choices=public_options
+    )
+
+
+class {{ entity_name.capitalize() }}ViewForm(forms.Form):
+    """
+    Formulario de solo lectura para ver una instancia de {{ entity_name.lower() }}.
+    """
+
+    # Title
+    title = forms.CharField(
+        label='Titulo',
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Titulo',
+            'class': 'titulo_form_{{ entity_name.lower() }}',
+            'readonly': 'readonly'
+        })
+    )
+
+    # Content
+    content = forms.CharField(
+        label='Contenido',
+        widget=forms.Textarea(attrs={
+            'readonly': 'readonly',
+            'class': 'contenido_form_{{ entity_name.lower() }}'
+        })
+    )
+
+    # Publicado
+    public_options = [
+        (True, 'Si'),
+        (False, 'No')
+    ]
+    public = forms.TypedChoiceField(
+        label='¿Publicado?',
+        choices=public_options,
+        widget=forms.Select(attrs={
+            'disabled': 'disabled'
+        })
+    )
