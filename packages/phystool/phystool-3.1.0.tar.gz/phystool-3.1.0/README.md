@@ -1,0 +1,87 @@
+# Phystool
+
+This repository provides some tools to handle physics lecture notes, exercises,
+tests... It is based on four complementary elements:
+
+1. **phystool**: Manages a database of LaTeX documents with additional metadata
+2. **physnoob**: Provides some the of **phystool**'s functionalities in a GUI
+3. **physvim**: [optional] Implements vim commands to interact with
+   **phystool**
+4. **phystex**: [optional] LaTeX classes and packages that are compatible with
+   **phystool**
+
+
+## Physnoob
+
+A Qt GUI that lets you interact with **phystool**. It is automatically installed
+at the same time as **phystool**.
+
+
+## Physvim
+
+Defines a set of commands that allows vim to interact with **phystool**. Simply
+add the following line in your `~/.vimrc` file and update **Vundle**:
+
+    Plugin 'https://bitbucket.org/jdufour/physvim.git'
+
+
+## Phystex
+
+The LaTeX classes and packages can be fully customised as long as the
+`~/.phystool/phystool.conf` is correctly set. To get started, it is possible
+to use the classes and packages available in:
+
+    git clone git@bitbucket.org:jdufour/phystex.git
+
+---
+
+# Installation
+
+Install **phystool** within your python environment:
+
+    pip install git+https://bitbucket.org/jdufour/phystool.git@stable
+
+To correctly display compilation messages, in particular the file paths,
+`texmf.cnf` needs to contain:
+
+    max_print_line=1000
+
+
+## Requirements
+
++ Python 3.12
++ [ripgrep](https://github.com/BurntSushi/ripgrep)
++ [bat](https://github.com/sharkdp/bat)
++ [delta](https://github.com/dandavison/delta)
+
+
+## Git
+
+If the database is already managed by git (i.e. the database's directory
+contains a `.git` directory), no automatic action will be performed.
+
+Otherwise, the program will automatically attempt to initialise a new git
+repository. The remote repository can be set interactively but, to ensure that
+nothing is overwritten, it must be totally empty during for the initialization
+process to succeed. 
+
+---
+
+# Development
+
+## Virtualenv settings
+
+add the following to `postactivate`
+
+    PHYSTOOL_DIR=/path/to/git/dir
+    PHYSTOOL_SRC_DIR=$PHYSTOOL_DIR/src/phystool
+    cd $PHYSTOOL_SRC_DIR
+    export GIT_CLIFF_WORKDIR=$PHYSTOOL_DIR
+    export QT_LOGGING_RULES="qt.pyside.libpyside.warning=true"
+    alias pt="python -m phystool"
+
+the virtualenv must contain a static folder with:
+
++ README.md
++ themes.gitconfig (a config list of delta themes)
++ physdb_dev (a toy db that can be copied)
