@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ldc-gitingest
+Version: 0.0.2
+Summary: Python3 library that makes the gitingest library available to llm-dataset-converter.
+Home-page: https://github.com/waikato-llm/ldc-gitingest
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+The **ldc-gitingest** library is an extension to **llm-dataset-converter**
+integrating the **gitingest** library (https://github.com/cyclotruc/gitingest).
+
+
+Changelog
+=========
+
+0.0.2 (2025-03-14)
+------------------
+
+- added support for placeholders
+- `from-gitingest-pt`: fixed loading URLs/dirs from text files (`-I`)
+
+
+0.0.1 (2025-01-07)
+------------------
+
+- initial release
+

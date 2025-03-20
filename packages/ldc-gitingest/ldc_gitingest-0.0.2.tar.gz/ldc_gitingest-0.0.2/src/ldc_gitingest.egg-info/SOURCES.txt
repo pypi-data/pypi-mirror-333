@@ -1,0 +1,16 @@
+CHANGES.rst
+DESCRIPTION.rst
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/ldc_gitingest/__init__.py
+src/ldc_gitingest/class_lister.py
+src/ldc_gitingest.egg-info/PKG-INFO
+src/ldc_gitingest.egg-info/SOURCES.txt
+src/ldc_gitingest.egg-info/dependency_links.txt
+src/ldc_gitingest.egg-info/entry_points.txt
+src/ldc_gitingest.egg-info/requires.txt
+src/ldc_gitingest.egg-info/top_level.txt
+src/ldc_gitingest/pretrain/__init__.py
+src/ldc_gitingest/pretrain/_gitingest.py
