@@ -1,0 +1,37 @@
+Metadata-Version: 2.2
+Name: infinityfree
+Version: 0.1.0
+Summary: A bypasser tool for infinityfree module
+Home-page: https://github.com/yourusername/infinityfree
+Author: Your Name
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pycryptodome
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+from infinityfree import Bypasse #import Bypasse
+
+#in here please do not use cookies args
+
+#url must place first and header as second if exists
+r1 = Bypasse.get(url="http://bdghackers.rf.gd/", verify=False)
+
+#post example 
+
+#r1 = Bypasse.post(url="http://elentinaai.ct.ws/", data='hi')
+
+#output
+print(r1.text)
