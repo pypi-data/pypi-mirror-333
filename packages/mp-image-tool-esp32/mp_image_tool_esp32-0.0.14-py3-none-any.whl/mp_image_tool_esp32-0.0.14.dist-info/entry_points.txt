@@ -1,0 +1,2 @@
+[console_scripts]
+mp-image-tool-esp32 = mp_image_tool_esp32.main:main
