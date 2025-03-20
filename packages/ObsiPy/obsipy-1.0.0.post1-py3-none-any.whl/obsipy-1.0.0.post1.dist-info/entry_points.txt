@@ -1,0 +1,3 @@
+[console_scripts]
+allure-test=scripts.test_runner:run
+
