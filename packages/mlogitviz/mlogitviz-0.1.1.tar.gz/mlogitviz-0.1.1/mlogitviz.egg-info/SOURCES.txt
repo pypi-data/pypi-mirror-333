@@ -1,0 +1,11 @@
+README.md
+setup.py
+mlogitviz/__init__.py
+mlogitviz/exceptions.py
+mlogitviz/model.py
+mlogitviz/visualization.py
+mlogitviz.egg-info/PKG-INFO
+mlogitviz.egg-info/SOURCES.txt
+mlogitviz.egg-info/dependency_links.txt
+mlogitviz.egg-info/requires.txt
+mlogitviz.egg-info/top_level.txt
