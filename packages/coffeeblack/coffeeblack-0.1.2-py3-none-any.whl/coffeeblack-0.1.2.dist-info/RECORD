@@ -1,0 +1,13 @@
+coffeeblack/__init__.py,sha256=7H5U8CXntCQ7PXpDi5PxdpBkY3FQdlckTXM8PNPxofU,373
+coffeeblack/core.py,sha256=NerEM7rtkCpPvsSq-XPV3CYMtd6q8n-YJt78rgwIXtE,65478
+coffeeblack/types.py,sha256=PVmBpDTfojqKcCsjze2g-6nK_Oo5C2q6o9wcZwJU7tg,1931
+coffeeblack/utils/__init__.py,sha256=Z8VBneLVeravhCkWZwZmL4THJ3JSnf313ZjkQAOwuTo,50
+coffeeblack/utils/app_manager.py,sha256=ZOK-LWtF2DRDiO360HXQIqNPpWDEJ7Fo2xkUJp-5w4s,17243
+coffeeblack/utils/debug.py,sha256=RNPpx15VcVzQrwS3pYmur5UdTtATIbZ_E4wKspoDNAU,3472
+coffeeblack/utils/screenshot.py,sha256=-isOVK_f-VcOjKRrl05q7M4-RsZE8AKR4ww7iIbJ74E,15070
+coffeeblack/utils/window.py,sha256=A2BrDgkOCTexX4Nco3Q3o4XIPeFJbGjiDjjiC7X0Nec,11454
+coffeeblack-0.1.2.dist-info/LICENSE,sha256=X_UJH_UDf5O-l9yHulOZrwM33XoVcgCK_nXQFTIDLBk,1068
+coffeeblack-0.1.2.dist-info/METADATA,sha256=FBxLAQUNe2E7yeD5HgyCqTXCDgrmsDQuv4B0zsswCOg,2664
+coffeeblack-0.1.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+coffeeblack-0.1.2.dist-info/top_level.txt,sha256=Ujd7H9OYBaZ4-2hvaPrD1qxdvWw2PJArmiwa-l9T0sg,12
+coffeeblack-0.1.2.dist-info/RECORD,,
