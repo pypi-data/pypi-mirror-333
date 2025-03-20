@@ -1,0 +1,138 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_template_category
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20230126\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-12 19:39+0000\n"
+"PO-Revision-Date: 2025-03-12 20:45+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: mail_template_category
+#: model_terms:ir.ui.view,arch_db:mail_template_category.view_mail_template_category_search
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: mail_template_category
+#: model_terms:ir.actions.act_window,help:mail_template_category.action_mail_template_category_form
+msgid "Assign categories to your mail templates to filter them."
+msgstr "Asigna categorías a tus plantillas de email para filtrarlas."
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template__category
+#: model_terms:ir.ui.view,arch_db:mail_template_category.view_email_template_search_inherit
+msgid "Category"
+msgstr "Categoría"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__child_ids
+msgid "Child Tags"
+msgstr "Subcategorías"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__color
+msgid "Color"
+msgstr ""
+
+#. module: mail_template_category
+#: model_terms:ir.actions.act_window,help:mail_template_category.action_mail_template_category_form
+msgid "Create a Category"
+msgstr "Crea una categoría"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: mail_template_category
+#: model:ir.actions.act_window,name:mail_template_category.action_email_template_tree_all_inherit
+#: model:ir.model,name:mail_template_category.model_mail_template
+msgid "Email Templates"
+msgstr "Plantillas de email"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__id
+msgid "ID"
+msgstr ""
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mail_template_category
+#: model:ir.model,name:mail_template_category.model_mail_template_category
+msgid "Mail Template Category"
+msgstr ""
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__parent_id
+msgid "Parent Category"
+msgstr "Categoría padre"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__parent_path
+msgid "Parent Path"
+msgstr "Dirección padre"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__partner_ids
+msgid "Partners"
+msgstr ""
+
+#. module: mail_template_category
+#: model_terms:ir.ui.view,arch_db:mail_template_category.view_mail_template_category_search
+msgid "Search template category"
+msgstr "Busca una categoría de plantilla"
+
+#. module: mail_template_category
+#: model:ir.model.fields,field_description:mail_template_category.field_mail_template_category__name
+msgid "Tag Name"
+msgstr "Nombre de categoría"
+
+#. module: mail_template_category
+#: model:ir.actions.act_window,name:mail_template_category.action_mail_template_category_form
+#: model:ir.ui.menu,name:mail_template_category.mail_template_category_menu
+#: model_terms:ir.ui.view,arch_db:mail_template_category.view_mail_template_category_form
+#: model_terms:ir.ui.view,arch_db:mail_template_category.view_mail_template_category_tree
+msgid "Template categories"
+msgstr "Categorías de plantilla"
+
+#. module: mail_template_category
+#: model:ir.model.fields,help:mail_template_category.field_mail_template_category__active
+msgid "The active field allows you to hide the category without removing it."
+msgstr "El campo activo te permite ocultar la categoría sin borrarla."
