@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+vvdutils/__init__.py
+vvdutils/mttest.py
+vvdutils.egg-info/PKG-INFO
+vvdutils.egg-info/SOURCES.txt
+vvdutils.egg-info/dependency_links.txt
+vvdutils.egg-info/not-zip-safe
+vvdutils.egg-info/requires.txt
+vvdutils.egg-info/top_level.txt
