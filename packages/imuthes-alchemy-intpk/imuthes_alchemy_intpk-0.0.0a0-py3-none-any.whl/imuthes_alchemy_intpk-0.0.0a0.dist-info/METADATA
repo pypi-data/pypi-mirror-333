@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: imuthes-alchemy-intpk
+Version: 0.0.0a0
+Summary: Imuthes Alchemy Base for integer PK
+License: LGPL-3.0-or-later
+Author: Bernhard Radermacher
+Author-email: bernhard.radermacher@netlink-consulting.com
+Requires-Python: >=3.13,<3.14
+Classifier: Topic :: Software Development
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Topic :: Utilities
+Requires-Dist: imuthes-alchemy-columns (>=0.0.0a0,<0.0.1)
+Requires-Dist: imuthes-alchemy-types (>=0.0.0a0,<0.0.1)
+Requires-Dist: sqlalchemy-history (>=2.1.4,<3.0.0)
+Project-URL: Repository, https://gitlab.com/imuthes/alchemy-intpk
+Description-Content-Type: text/markdown
+
+# Imuthes - Alchemy - Integer Primary Key
+
+Using an integer as Primary Key for all tables.
+
+In addition, almost every table has an unique key that serves as a pseudo PK.
+
+
