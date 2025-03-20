@@ -1,0 +1,2 @@
+recursive-include bayesnestor/data *.xml
+recursive-include bayesnestor/core/io/validation_files *.xsd *.dtd
