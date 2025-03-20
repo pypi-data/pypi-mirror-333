@@ -1,0 +1,95 @@
+Metadata-Version: 2.2
+Name: norminette_prune
+Version: 0.1.0
+Summary: Outil de vérification des normes de code pour l'entreprise
+Author-email: Arnout <bastien@prune.sh>
+Project-URL: Homepage, https://gitlab.com/bastien_arnout/norminette
+Keywords: norminette,django,code-quality
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <4.0,>=3.12
+Description-Content-Type: text/markdown
+
+# Prune's Norminette
+
+## What is it for?
+
+The norminette automatically checks the organization of files in a Django project as well as code rules.
+This allows for the same code standard between projects and makes it easier to navigate.
+
+## Prerequisites
+
+- To be installed on a Prune Django project that uses poetry or UV
+- SSH access to the project: verify that you have SSH access to the Gitlab project of the norminette
+
+## UV project
+
+### Installation
+
+In `pyproject.toml`, add in the `dependencies = []` or `dev[]` section :
+
+```none
+dependencies = [
+"norminette @ git+ssh://git@gitlab.com/bastien_arnout/norminette.git",
+]
+```
+
+To synchronize the results, run the following command in the console:
+
+ ```bash
+ uv sync
+ ``` 
+ Ou
+ ```bash
+ uv lock
+ ```
+
+### Running the norminette
+
+To run the package, simply enter in the console :
+```bash
+norminette
+```
+
+### Updating the norminette
+Don't hesitate to run `uv sync --upgrade` sometimes, the norminette evolves with time and our practices!
+
+## Poetry project
+
+### Installation
+
+In `pyproject.toml`, add in the `[tool.poetry.group.dev.dependencies]` section :
+
+```
+[tool.poetry.group.dev.dependencies]
+norminette = { git = "git@gitlab.com:bastien_arnout/norminette.git" }
+```
+
+Then, run the following command :
+
+```bash
+poetry update norminette
+```
+
+### Running the norminette
+```bash
+poetry run norminette
+```
+
+### Updating the norminette
+Don't hesitate to run `poetry update norminette` sometimes, the norminette evolves with time and our practices!
+
+## Project architecture at Prune
+
+To access the documentation, please go to the link where you can find documentation in English and French.
+
+[Documentation](https://gitlab.com/bastien_arnout/prune-doc.git)
+
+If you want to download it directly, here is the link :
+
+[Download](https://gitlab.com/bastien_arnout/prune-doc/-/archive/main/prune-doc-main.zip)
+
+## Rules
+
+To see the different rules that the script checks, please go to the  `rules.md` file.

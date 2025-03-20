@@ -1,0 +1,2 @@
+[console_scripts]
+norminette_prune = norminette_prune.main:main
