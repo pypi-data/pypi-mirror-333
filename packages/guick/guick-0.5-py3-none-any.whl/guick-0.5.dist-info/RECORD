@@ -1,0 +1,8 @@
+guick/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guick/_version.py,sha256=FkqAs3Ah5qPKD8Iats3wdOyKjEsMopG03enx_SpEX3Y,527
+guick/gui.py,sha256=bceu_yASH4Sn9DCnoow6gxhBWN-ao4AiS3G0Ngn6Nh0,31914
+guick/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guick-0.5.dist-info/METADATA,sha256=Ksg0UlENJPBmoQM0a7mcNeLBCf1eGkE03eV_lNZs5Ww,3945
+guick-0.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+guick-0.5.dist-info/top_level.txt,sha256=2wvB83kzXDDU6HYqkW-aaIWVAWAw4QPsAe2V_Hsve8k,6
+guick-0.5.dist-info/RECORD,,
