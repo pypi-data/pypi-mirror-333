@@ -1,0 +1,63 @@
+id: 71316f0d150cc258cdf9f0909e8a6a5b
+on_created:
+  turn_id: de69c21e8fdddc497836e102b3ae9cbe
+  created: 1741612168
+current:
+  turn_id: 4524f0934f9f5a5abcdaca250ff35a1f
+  event:
+    event_id: 4524f0934f9f5a5abcdaca250ff35a1f
+    type: input
+    task_id: 71316f0d150cc258cdf9f0909e8a6a5b
+    messages:
+    - msg_id: fbf685e81af6b067fe44a7b8057bdef9
+      role: user
+      content: 你好啊
+      seq: complete
+      created: 1741612168.381
+  added:
+  - msg_id: chatcmpl-B9XAoUpYElFUKYzFD7tN3OonAenlj
+    finish_reason: stop
+    role: assistant
+    name: jojo
+    content: 你好！我是jojo，有什么我可以帮你的吗？
+    payloads:
+      completion_usage:
+        completion_tokens: 14
+        prompt_tokens: 53
+        total_tokens: 67
+        completion_tokens_details:
+          accepted_prediction_tokens: 0
+          audio_tokens: 0
+          reasoning_tokens: 0
+          rejected_prediction_tokens: 0
+        prompt_tokens_details:
+          audio_tokens: 0
+          cached_tokens: 0
+      model_conf:
+        model: gpt-4o
+        description: ''
+        service: openai
+        temperature: 0.7
+        n: 1
+        max_tokens: 2000
+        timeout: 30.0
+        request_timeout: 40.0
+        kwargs: {}
+        message_types: null
+        allow_streaming: true
+        top_p: null
+        reasoning: null
+        compatible: null
+        payloads: {}
+      prompt_info:
+        prompt_id: 0b7a58ebb2fddd1732498d29868da62e
+        desc: created from thread 71316f0d150cc258cdf9f0909e8a6a5b turn 4524f0934f9f5a5abcdaca250ff35a1f
+      task_info:
+        task_id: 71316f0d150cc258cdf9f0909e8a6a5b
+        task_name: jojo
+        process_id: 164e0213efd705f4816e3067e9428685
+        matrix_id: ghostos_streamlit_app
+        thread_id: 71316f0d150cc258cdf9f0909e8a6a5b
+    seq: complete
+    created: 1741612170.343
+  created: 1741612168
