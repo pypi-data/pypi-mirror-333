@@ -1,0 +1,11 @@
+aletk/ResultMonad.py,sha256=PcEyLm5r1OFtbPuD_53_syEeK5wXEXA9kAGabb7IDt4,8060
+aletk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aletk/_version.py,sha256=ESbJO0YD7TYfOUv_WDIJJgWELGepEWsoyhqVifEcXPA,511
+aletk/adapters.py,sha256=9IYfIg1UYC0FbzWonMWdrUDgtVaV-q5NZKrRQubhBPw,659
+aletk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aletk/utils.py,sha256=nvG-fRt4qIr-hBOFcpLN27mC0EEp877k3sf72O1rBE0,3800
+aletk-0.1.6.dist-info/LICENSE,sha256=hZFMbARrXo4zfuo80-Sg3-FT5_ceiSDf0QpjgJoUdGc,1085
+aletk-0.1.6.dist-info/METADATA,sha256=mrIbglrstdqk4f5azxBh5HqSVpbdbTvpQgWhiKh_CAA,980
+aletk-0.1.6.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+aletk-0.1.6.dist-info/top_level.txt,sha256=LYDb8QWbh4W4hIkF0TVg5ITKEsaj-pb_xcYQRGzLqUU,6
+aletk-0.1.6.dist-info/RECORD,,
