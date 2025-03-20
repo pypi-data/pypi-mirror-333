@@ -1,0 +1,14 @@
+translate_clix-1.0.0.dist-info/METADATA,sha256=PuSZik9k5JFPNvA9CK9fqrdm2jbuRCJE9ESzD57URNo,455
+translate_clix-1.0.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+translate_clix-1.0.0.dist-info/entry_points.txt,sha256=jYPO5b-KXVjXwQpfQPd-DSRqtiJuNq2wobK9deVlofg,85
+translate_clix-1.0.0.dist-info/licenses/LICENSE.txt,sha256=IDwQri-SNW1lhSLuYduX5dqtY0xdxBkLwL0joVEaM7Q,34675
+translate_clix/__init__.py,sha256=8JRXIaWbmnZDzScqnjMUOHP2ipLaYcHd7x6snhzBmNc,96
+translate_clix/lib/__init__.py,sha256=RTDGbx0asU_pzCZHG2fcbUR0x-u8JTB54a4gfom8EFo,391
+translate_clix/lib/api_handler/__init__.py,sha256=Lo0bBZDD-a3FZqz45sUe86wFceQtc_kn9WDX_oXb2p8,1156
+translate_clix/lib/api_handler/base_handler.py,sha256=iuwg7rRnFwLwsFsff2KWteBiCm25ikdYsDWVyCg30a0,2416
+translate_clix/lib/api_handler/v1_handler.py,sha256=ujIldHk3cDvnVZB0UGZcAZXpMBt50ukoSpk4aTJMrcw,2082
+translate_clix/lib/api_handler/v2_handler.py,sha256=kfrurX--wfCmdQs-bQDFrivW-QZG2fS1e1QIyBmUee4,2655
+translate_clix/lib/base.py,sha256=f7bceUlKPxoumD0vTEe6CsKJdMSJ0hP2nFbl_e41ycQ,3277
+translate_clix/lib/constants.py,sha256=XoTl48645PEw1I53StewIRaAFdlMY8R9Cix9y6aIJD8,1242
+translate_clix/translate_clix.py,sha256=T9NYpVG5IcC8NOtrFJ9HIh-X5RVY9hQcodae9-3DF2U,7946
+translate_clix-1.0.0.dist-info/RECORD,,

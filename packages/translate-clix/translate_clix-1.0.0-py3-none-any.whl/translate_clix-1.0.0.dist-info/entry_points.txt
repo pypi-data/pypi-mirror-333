@@ -1,0 +1,5 @@
+[console_scripts]
+translate-clix = translate_clix.translate_clix:app
+
+[gui_scripts]
+
