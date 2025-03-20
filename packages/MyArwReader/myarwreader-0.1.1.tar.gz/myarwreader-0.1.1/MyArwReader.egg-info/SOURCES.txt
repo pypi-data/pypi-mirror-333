@@ -1,0 +1,11 @@
+README.md
+setup.py
+MyArwReader/__init__.py
+MyArwReader/metadata.py
+MyArwReader/reader.py
+MyArwReader/utils.py
+MyArwReader.egg-info/PKG-INFO
+MyArwReader.egg-info/SOURCES.txt
+MyArwReader.egg-info/dependency_links.txt
+MyArwReader.egg-info/requires.txt
+MyArwReader.egg-info/top_level.txt
