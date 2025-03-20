@@ -1,0 +1,3 @@
+[console_scripts]
+cocommit=cocommit.cocommit:main
+

@@ -1,0 +1,14 @@
+cocommit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cocommit/add.py,sha256=j3WmhkbIef0M_1wCcIwBD7HAHWfvmTDU5BkQb-t4l6o,31
+cocommit/bedrock.py,sha256=IVRG9J6BlMUfCHGVRvTnco65gC7tqiWb6TBrt-ox1MA,598
+cocommit/cocommit.py,sha256=pQ1B23B0178xxF-BNQWUjBz-XEwokSKNWb_qv5u7nuM,1585
+cocommit/git_utils.py,sha256=PDWV5dS6Ao_kr1aUXkjJaTMTHbgyjbV0dwIAGUJ34Jo,336
+cocommit/llm_prompts/prompt.llm,sha256=PM9dvi9aShofrPWAVc6Asem_xJjMa8Qh5-vCNzKGEcg,1993
+cocommit/llm_prompts/test_prompt.llm,sha256=iKcLr6WQ2OAP_27djOrTOgZ8NqKRkokKNDjbWxhyrCI,33
+cocommit/prompt_utils.py,sha256=duyu1p1jHCN-Biahy4rvSNR1KARfRycs-GI-1-zxMSo,494
+cocommit/response_utils.py,sha256=XLtRbqXPt_aGstGTRNy_f-vEXl4HtZHY7tMpfB1J_aM,909
+cocommit-0.1.0.dist-info/LICENSE.txt,sha256=Jq3nol-QoZe1pJcRy-mANxtipKde7aBWDCEcgyDyN8s,1096
+cocommit-0.1.0.dist-info/METADATA,sha256=Q0I6ACVKmjZU7EzsZPD31H6jjKkq3VSVzXTHcF96VMU,1019
+cocommit-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+cocommit-0.1.0.dist-info/entry_points.txt,sha256=bidsWiFAFhNCH_fySsPqmKA7jAaPI2QQZVk_Z41P95o,51
+cocommit-0.1.0.dist-info/RECORD,,
