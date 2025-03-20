@@ -1,0 +1,12 @@
+md_to_docx/md_to_docx/__init__.py,sha256=ZoeDXspJi-cXFKrScMt3N_ypIFfj2vy8sA5DqeUda7E,336
+md_to_docx/md_to_docx/cli.py,sha256=TeFYWT8ygDaTbT-MXKiMx-T8JIC1qdnIEYVAAYOI3Fw,2029
+md_to_docx/md_to_docx/core.py,sha256=OM_ttnPotvMzoNtG00oIsv3HEieQoGOTuoHz3p-q2jo,30922
+md_to_docx/md_to_docx/server.py,sha256=yXKN1Rm_w5Rpkrk0LRLrUt3CJitIUTpJvk5DCHdC5i8,822
+md_to_docx/tests/__init__.py,sha256=Bv0yqEU7OvV9KXjHMeUtyXflpmgCVOXq34Aogq81Rk8,35
+md_to_docx/tests/test_md_to_docx.py,sha256=EuS82SW5pjCN8AGiUNUgJ0Lt0cLT5iDsLg5kp5AQecA,1138
+md_to_docx-0.1.1.dist-info/LICENSE,sha256=3h7UWdyGz11Yhla08QYqneq-Qc_7fIhwfDvTIkVK000,1099
+md_to_docx-0.1.1.dist-info/METADATA,sha256=tM1X8ykwVfGTEwU560oQboa8zZpUgDwV2W5jf736uts,4150
+md_to_docx-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+md_to_docx-0.1.1.dist-info/entry_points.txt,sha256=frBOvblUzxdWcPHKuTJaB3VrMbbCpSoLNb2g567EHBk,51
+md_to_docx-0.1.1.dist-info/top_level.txt,sha256=WgnNKx_j27b-JFlrpFocVTK1zbhCEUd4dZBohmXSq9Q,11
+md_to_docx-0.1.1.dist-info/RECORD,,
