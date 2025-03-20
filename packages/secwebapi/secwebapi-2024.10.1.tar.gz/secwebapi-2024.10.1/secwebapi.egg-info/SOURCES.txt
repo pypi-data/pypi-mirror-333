@@ -1,0 +1,8 @@
+README.md
+setup.py
+secwebapi/__init__.py
+secwebapi.egg-info/PKG-INFO
+secwebapi.egg-info/SOURCES.txt
+secwebapi.egg-info/dependency_links.txt
+secwebapi.egg-info/requires.txt
+secwebapi.egg-info/top_level.txt
