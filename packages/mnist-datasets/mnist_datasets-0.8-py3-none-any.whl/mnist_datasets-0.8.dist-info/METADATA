@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: mnist_datasets
+Version: 0.8
+Summary: A Python module to load mnist_datasets from scratch
+Home-page: https://github.com/ratulb/mnist_datasets
+Author: Ratul Buragohain
+Author-email: ratul75@hotmail.com
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# mnist_datasets
+A complete from-scratch implementation of mnist datasets.
