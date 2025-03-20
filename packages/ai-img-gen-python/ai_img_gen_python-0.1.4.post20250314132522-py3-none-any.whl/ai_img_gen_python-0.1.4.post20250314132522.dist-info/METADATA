@@ -1,0 +1,98 @@
+Metadata-Version: 2.2
+Name: ai-img-gen-python
+Version: 0.1.4.post20250314132522
+Summary: Python SDK for AI Image Generator API
+Home-page: https://github.com/skbhati199/ai-img-gen-python
+Author: skbhati199
+Author-email: skbhati199@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AI Image Generator Python SDK
+
+[![PyPI version](https://img.shields.io/pypi/v/ai-img-gen-python.svg)](https://pypi.org/project/ai-img-gen-python/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Versions](https://img.shields.io/pypi/pyversions/ai-img-gen-python.svg)](https://pypi.org/project/ai-img-gen-python/)
+
+A Python SDK for interacting with the AI Image Generator API.
+
+## Installation
+
+```bash
+pip install ai-img-gen-python
+```
+
+
+### Quick Start
+```python
+from ai_img_gen import AIImageGeneratorClient, ClientConfig, ImageGenerationOptions
+
+# Initialize the client
+client = AIImageGeneratorClient(
+    ClientConfig(
+        base_url="https://api.img-gen.ai",
+        api_key="your_api_key_here"
+    )
+)
+```
+
+# Generate an image
+```python
+options = ImageGenerationOptions(
+    width=512,
+    height=512,
+    prompt="A futuristic city with flying cars and neon lights",
+    model="dall-e-2",
+    format="png",
+    quality=90,
+    optimize=True
+)
+
+image_url = client.generate_image(options)
+print(f"Generated image URL: {image_url}")
+```
+
+7. Let's create a basic example:
+
+```python
+from ai_img_gen import AIImageGeneratorClient, ClientConfig, ImageGenerationOptions
+
+# Initialize the client
+client = AIImageGeneratorClient(
+    ClientConfig(
+        base_url="https://api.img-gen.ai",
+        api_key="your_api_key_here"
+    )
+)
+
+# Generate an image
+options = ImageGenerationOptions(
+    width=512,
+    height=512,
+    prompt="A futuristic city with flying cars and neon lights",
+    model="dall-e-2",
+    format="png",
+    quality=90,
+    optimize=True
+)
+
+image_url = client.generate_image(options)
+print(f"Generated image URL: {image_url}")
