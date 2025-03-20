@@ -1,0 +1,9 @@
+md2docx_python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+md2docx_python/src/__init__.py,sha256=VcsOIRsB2WG10xPy0LH-2fMGOeIPjtMQFZ_bCZo7LG0,58
+md2docx_python/src/docx2md_python.py,sha256=Y1bxpCpQ0wMZPfsvM9-dFep5rwIfoLr2Pl4JKMdKyvM,3003
+md2docx_python/src/md2docx_python.py,sha256=uXbsSWtUG2XPOGUdJfWrLPdnmGOGDvSyq1aUd5zZ_GE,1605
+md2docx_python-1.0.0.dist-info/LICENSE,sha256=mF7tmaotDRUgAmnvTwk-6tV7bODpNawe-2t2MeiczQU,1085
+md2docx_python-1.0.0.dist-info/METADATA,sha256=6esmIIQXXfzyxAWXPUn_f-B9diYD5yYR1ixv9b0GVGU,8202
+md2docx_python-1.0.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+md2docx_python-1.0.0.dist-info/top_level.txt,sha256=rOK4XMtHKsJoUvUFH2ltxFEtLvP5GW9cVfkxGdr2TnU,15
+md2docx_python-1.0.0.dist-info/RECORD,,
