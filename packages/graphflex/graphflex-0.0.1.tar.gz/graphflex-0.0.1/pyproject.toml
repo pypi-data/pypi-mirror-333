@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "graphflex"
+version = "0.0.1"
+description = "Flexible Framework for Graph Feature Engineering"
+authors = ["Bram Steenwinckel <bram.steenwinckel@ugent.be>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/predict-idlab/graphflex"
+repository = "https://github.com/predict-idlab/graphflex"
+documentation = "https://github.com/predict-idlab/graphflex"
+keywords = ["graph", "feafture-engineering"]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+tqdm ="^4.67"
+numpy = "^1.26"
+scikit-learn = "^1.6.1"
+pandas = "^2.2.3"
+rdflib-hdt = { version = ">=3.1", optional = true }
+dgl = { version = "==2.1.0", optional = true }
+torch = { version = "==2.0.1", optional = true }
+torchdata = { version = "==0.6.1", optional = true }
+PyYAML = { version = ">=6.0.2", optional = true }
+pydantic = { version = ">=2.10.6", optional = true }
+neo4j = { version = ">=5.28.1", optional = true }
+
+
+[tool.poetry.extras]
+dgl = ["dgl", "torch", "torchdata", "PyYAML", "pydantic"]
+neo4j = ["neo4j"]
+rdflib = ["rdflib-hdt"]
+full = ["dgl", "torch", "torchdata", "PyYAML", "pydantic", "neo4j", "rdflib"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
