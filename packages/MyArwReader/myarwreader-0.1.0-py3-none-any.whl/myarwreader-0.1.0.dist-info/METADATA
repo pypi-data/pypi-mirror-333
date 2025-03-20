@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: MyArwReader
+Version: 0.1.0
+Summary: A lightweight package to read metadata from Sony .ARW files
+Author: ARWEnthusiast
+License: MIT
+Requires-Python: >=3.6
+Requires-Dist: pyexiftool
+Dynamic: author
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
