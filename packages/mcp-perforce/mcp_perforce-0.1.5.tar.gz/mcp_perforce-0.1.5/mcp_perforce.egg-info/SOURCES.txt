@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+mcp_perforce/__init__.py
+mcp_perforce/main.py
+mcp_perforce/perforce.py
+mcp_perforce.egg-info/PKG-INFO
+mcp_perforce.egg-info/SOURCES.txt
+mcp_perforce.egg-info/dependency_links.txt
+mcp_perforce.egg-info/entry_points.txt
+mcp_perforce.egg-info/requires.txt
+mcp_perforce.egg-info/top_level.txt
