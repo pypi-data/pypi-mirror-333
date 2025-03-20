@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+pipli/__init__.py
+pipli/main.py
+pipli.egg-info/PKG-INFO
+pipli.egg-info/SOURCES.txt
+pipli.egg-info/dependency_links.txt
+pipli.egg-info/entry_points.txt
+pipli.egg-info/top_level.txt
