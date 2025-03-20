@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: primapy-aqua
+Version: 0.0.1
+Author: Prima
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires-python

@@ -1,0 +1,5 @@
+setup.py
+primapy_aqua.egg-info/PKG-INFO
+primapy_aqua.egg-info/SOURCES.txt
+primapy_aqua.egg-info/dependency_links.txt
+primapy_aqua.egg-info/top_level.txt
