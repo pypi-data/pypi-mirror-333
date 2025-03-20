@@ -1,0 +1,13 @@
+pillow
+
+[full]
+pythonmonkey
+pygobject
+pycairo
+
+[javascript]
+pythonmonkey
+
+[svg]
+pygobject
+pycairo
