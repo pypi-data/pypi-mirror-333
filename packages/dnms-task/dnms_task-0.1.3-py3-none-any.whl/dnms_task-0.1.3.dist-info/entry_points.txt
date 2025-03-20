@@ -1,0 +1,2 @@
+[iblrig.plugins]
+task_dnms = task:Session
