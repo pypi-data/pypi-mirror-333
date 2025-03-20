@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: scia
+Version: 1.100.1
+Summary: A Python package for eye-tracking data processing
+Home-page: https://github.com/Ahsankhodami/scia
+Author: Mohammad Ahsan Khodami
+Author-email: ahsan.khodami@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: openpyxl
+Requires-Dist: sklearn
+Requires-Dist: scipy
+Requires-Dist: statsmodels
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
