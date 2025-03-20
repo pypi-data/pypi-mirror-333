@@ -1,0 +1,2 @@
+[console_scripts]
+xlc-generate = xlc_tools.generate:main
