@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools","wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage_at1"
+version = "0.1.1"
+description = "A Python package with a submodule"
+authors = [{name = "Annie Thomas",email = "annie.thomas1@ibm.com"}]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.6"
+dependencies = []
+
+
+
