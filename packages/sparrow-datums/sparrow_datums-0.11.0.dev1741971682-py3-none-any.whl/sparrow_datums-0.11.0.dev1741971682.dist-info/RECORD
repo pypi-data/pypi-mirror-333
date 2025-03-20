@@ -1,0 +1,11 @@
+sparrow_datums/__init__.py,sha256=DXA5ACq9z1r9x3eri70szkOE8fiaE5nKioEa5MHDZ78,254
+sparrow_datums/chunk.py,sha256=jK5ga0xQn6iMjjbytpa9e9WI2xxHMm9pTQ3oz6nHRAw,7229
+sparrow_datums/chunk_test.py,sha256=WBKdRMY2cbUFoCsstV3B7thLxTc47PfsxtvFX9PolTY,1926
+sparrow_datums/chunk_types.py,sha256=JzSAHkZPrRXitoCWjRae-bdgVxw_IF-C5vD8-JUMUSI,2066
+sparrow_datums/chunk_types_test.py,sha256=GJgdbFeSPnQ_U49YgyHsGYTF3MpMXUNuquVK2UI1K-8,770
+sparrow_datums/exceptions.py,sha256=InGD1th3k4RyJFQMnHjNHyBUWch2baV5ssiEKxD6U5M,44
+sparrow_datums-0.11.0.dev1741971682.dist-info/LICENSE,sha256=czol7x6pEy5-fvVs8HhsFjG3fSqI1x-zw6hMAD90zVI,1074
+sparrow_datums-0.11.0.dev1741971682.dist-info/METADATA,sha256=y-wgzYQlU9BCyK_9yCTFoJ6oa9KH-vlyoxs0ZIIbE9w,408
+sparrow_datums-0.11.0.dev1741971682.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sparrow_datums-0.11.0.dev1741971682.dist-info/top_level.txt,sha256=4cSuvI-tqj9U5Z4arn0VI8kEjNy5NyuLxT6-pDPj8mI,15
+sparrow_datums-0.11.0.dev1741971682.dist-info/RECORD,,
