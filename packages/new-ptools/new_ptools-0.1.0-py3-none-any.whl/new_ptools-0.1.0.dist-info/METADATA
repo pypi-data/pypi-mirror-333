@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: new-ptools
+Version: 0.1.0
+Summary: A collection of utility classes for daily use.
+Home-page: https://github.com/yourusername/ptools
+Author: Your Name
+Author-email: your_email@example.com
+Requires-Dist: requests
+Requires-Dist: PyYAML
+
