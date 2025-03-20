@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/plato/client.py
+src/plato/config.py
+src/plato/models/__init__.py
+src/plato/models/env.py
+src/plato/models/task.py
+src/plato/test/test_env.py
+src/plato/test/test_run.py
+src/plato_sdk.egg-info/PKG-INFO
+src/plato_sdk.egg-info/SOURCES.txt
+src/plato_sdk.egg-info/dependency_links.txt
+src/plato_sdk.egg-info/requires.txt
+src/plato_sdk.egg-info/top_level.txt
