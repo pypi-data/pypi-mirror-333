@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: first_book
+Version: 1.0.1
+Summary: A Python library for test first books
+Home-page: https://github.com/kovalevskiy/first_book
+Download-URL: https://github.com/kovalevskiy
+Author: Rudolf Kovalevskiy
+Author-email: kovalevskiy2017@outlook.com
+License: MIT
+
+
+A Python library for test first books
