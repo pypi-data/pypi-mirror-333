@@ -1,0 +1,11 @@
+kimmdy_hydrolysis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kimmdy_hydrolysis/constants.py,sha256=nwjqlSpz9nedOq4YLDTzIOeZZlgxOtUIwSlr__xmuKo,209
+kimmdy_hydrolysis/kimmdy-yaml-schema.json,sha256=n4D1Ar1JJDwBp3QIUt-eSgKF1ijET1JoKk6WOPU9vI4,4655
+kimmdy_hydrolysis/minisasa.py,sha256=z4HuuO241Gzc6C0-YbtIF0_7RTFehKhfyUFgc15dS48,1910
+kimmdy_hydrolysis/reaction.py,sha256=N9rj6gc-cq3hx5uwEihp-2w659rg1b4V64wCDhvgwxM,19712
+kimmdy_hydrolysis/utils.py,sha256=ekyHhZ7oWW9Nq5CE9zIAVnmQcrFE4Q93D47y0MpPUIw,3569
+kimmdy_hydrolysis-0.1.dist-info/METADATA,sha256=OxnwfDKsPlwSRuAln8HfdK7x3NwxdAKRDaYfjHIDOUk,918
+kimmdy_hydrolysis-0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+kimmdy_hydrolysis-0.1.dist-info/entry_points.txt,sha256=rHpNgNIDkZu7H_OXHucVKfA0BmdZlo3V1n14nlJm7qw,85
+kimmdy_hydrolysis-0.1.dist-info/top_level.txt,sha256=uEz80rnoswwUz-lVrTwlvXRbN6Xp35pWk0QGrcwINog,18
+kimmdy_hydrolysis-0.1.dist-info/RECORD,,
