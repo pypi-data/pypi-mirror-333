@@ -1,0 +1,7 @@
+urllib3
+Jinja2
+PyYAML
+pandas
+openpyxl
+acicobra
+acimodel
