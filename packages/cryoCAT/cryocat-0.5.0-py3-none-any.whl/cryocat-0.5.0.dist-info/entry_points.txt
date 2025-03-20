@@ -1,0 +1,3 @@
+[console_scripts]
+tm_ana = cryocat.cli:tm_ana
+wedge_list = cryocat.cli:wedge_list
