@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "c1_cs"
+version = "0.1.0"
+description = "A Python package"
+authors = [{name = "Annie Thomas",email = "annie.thomas1@ibm.com"}]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.6"
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["c1_cs"]

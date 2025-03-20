@@ -1,0 +1,7 @@
+pyproject.toml
+src/c1_cs/__init__.py
+src/c1_cs/mymodule.py
+src/c1_cs.egg-info/PKG-INFO
+src/c1_cs.egg-info/SOURCES.txt
+src/c1_cs.egg-info/dependency_links.txt
+src/c1_cs.egg-info/top_level.txt
