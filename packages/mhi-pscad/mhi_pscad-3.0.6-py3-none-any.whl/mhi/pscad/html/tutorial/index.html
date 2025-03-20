@@ -1,0 +1,1376 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tutorial &#8212; MHI PSCAD Automation Library 3.0.6 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=c3365b21"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/index';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference Manual" href="../reference/index.html" />
+    <link rel="prev" title="Upgrading" href="../upgrading.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="3.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pscad_logo.svg" class="logo__image only-light" alt=""/>
+    <img src="../_static/pscad_logo.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">MHI PSCAD Automation Library v3.0</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><div></div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><div></div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upgrading.html">Upgrading</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#applications">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automation-library">Automation Library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#my-first-automation-script">My First Automation Script</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-tutorial">Running the Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-the-tutorial">Finding the Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-handling">Error Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-options">Launch Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#minimize-pscad">Minimize PSCAD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pscad-version">PSCAD Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fortran-version">Fortran Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#matlab-version">Matlab Version</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pscad-settings">PSCAD Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projects">Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-sets">Simulation Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#event-monitoring">Event Monitoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#event-handlers">Event Handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-handlers">Removing Handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-removal">Automatic Removal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-events">Build Events</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#build-run-messages">Build &amp; Run Messages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-messages">Build Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-messages">Run Messages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/index.html">MHI Common Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changes</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../upgrading.html"
+                          title="previous chapter">Upgrading</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../reference/index.html"
+                          title="next chapter">Reference Manual</a></p>
+  </div></div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Tutorial</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h1>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<section id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
+<p>The PSCAD Automation Library requires the following tools are installed:</p>
+<ul class="simple">
+<li><p>PSCAD (such as PSCAD 5.0)</p></li>
+<li><p>Python 3.x (such as Python 3.12.4)</p>
+<ul>
+<li><p>PIP - Python’s package manager (included with Python 3.7 and later)</p></li>
+<li><p>PyWin32 - Python extensions for Microsoft Windows</p></li>
+</ul>
+</li>
+</ul>
+<p>Installation of the above programs is beyond the scope of this tutorial.</p>
+</section>
+<section id="automation-library">
+<h3>Automation Library<a class="headerlink" href="#automation-library" title="Link to this heading">#</a></h3>
+<p>You can check which version of the PSCAD Automation Library is installed by executing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span>
+</pre></div>
+</div>
+<p>If multiple versions of Python have been installed, each installation could have its
+own copy of the Automation Library, so you may want specify the Python version being queried:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="o">-</span><span class="mf">3.7</span> <span class="o">-</span><span class="n">m</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span>
+</pre></div>
+</div>
+<p>PSCAD’s “Update Client” will automatically install the Automation Library
+into the latest Python 3.x installation.
+If you wish to add the Automation Library to a different Python 3.x installation,
+you would execute a <code class="docutils literal notranslate"><span class="pre">PIP</span> <span class="pre">install</span></code> command similar to the following
+from the <code class="docutils literal notranslate"><span class="pre">C:\Users\Public\Documents\Manitoba</span> <span class="pre">Hydro</span> <span class="pre">International\Python\Packages</span></code> directory:</p>
+<pre class="literal-block">py -3.7 -m pip install mhi_pscad-3.0.6-py3-none-any.whl</pre>
+<p>Beginning with PSCAD 5.1, the “Update Python Library” on the “Tools” ribbon
+may be used to install or update the Python Automation Library.</p>
+</section>
+</section>
+<section id="my-first-automation-script">
+<h2>My First Automation Script<a class="headerlink" href="#my-first-automation-script" title="Link to this heading">#</a></h2>
+<section id="running-the-tutorial">
+<h3>Running the Tutorial<a class="headerlink" href="#running-the-tutorial" title="Link to this heading">#</a></h3>
+<p>The following <a class="reference download internal" download="" href="../_downloads/328435b5bab37e21e66a548ce33e48ee/step-00.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> is the “simplest” PSCAD
+automation script that does something useful.
+It:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>launches PSCAD,</p></li>
+<li><p>loads the “Tutorial” workspace,</p></li>
+<li><p>runs all simulation sets in the “Tutorial” workspace, and</p></li>
+<li><p>quits PSCAD.</p></li>
+</ul>
+</div></blockquote>
+<p>To keep this first example simple, no error checking of any kind is done.
+Also, no feedback from the simulation is retrieved for the same reason.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">mhi.pscad</span>
+
+<span class="c1"># Launch PSCAD</span>
+<span class="n">pscad</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
+
+<span class="c1"># Load the tutorial workspace</span>
+<span class="n">pscad</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Public\Documents\PSCAD\5.0\Examples\tutorial\Tutorial.pswx&quot;</span><span class="p">)</span>
+
+<span class="c1"># Run all the simulation sets in the workspace</span>
+<span class="n">pscad</span><span class="o">.</span><span class="n">run_all_simulation_sets</span><span class="p">()</span>
+
+<span class="c1"># Exit PSCAD</span>
+<span class="n">pscad</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Many assumptions are being made here.</p>
+<ol class="arabic">
+<li><p>Certificate licensing is used, and a license certificate can be automatically acquired.</p>
+<p>Ensure “Retain certificate” is selected under “Certificate Licensing ➭ Termination Behaviour”
+and ensure you hold a valid certificate when you exit PSCAD before running the above script.</p>
+</li>
+<li><p>PSCAD 5.0 or later is installed.</p></li>
+<li><p>The “Public Documents” directory is located at <cite>C:\Users\Public\Documents</cite>.</p></li>
+</ol>
+</section>
+<section id="finding-the-tutorial">
+<h3>Finding the Tutorial<a class="headerlink" href="#finding-the-tutorial" title="Link to this heading">#</a></h3>
+<p>We can relax the last restriction by retrieving the location of “Examples” directory
+from PSCAD, and retrieving the “Tutorial” workspace relative to that.
+Doing so will allow the scripts in this tutorial to be downloaded and executed
+without modification by the reader.</p>
+<p>First, add <code class="docutils literal notranslate"><span class="pre">os</span></code> to the list of imports,
+so we can use the <code class="docutils literal notranslate"><span class="pre">os.path.join()</span></code> function.
+Then, before the <code class="docutils literal notranslate"><span class="pre">pscad.load()</span></code> statement,
+retrieve the <code class="docutils literal notranslate"><span class="pre">examples_folder</span></code> from PSCAD,
+and then append <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> to that folder to get the tutorial folder path.
+Finally, change the <code class="docutils literal notranslate"><span class="pre">pscad.load()</span></code> statement to load <code class="docutils literal notranslate"><span class="pre">&quot;Tutorial.pscx&quot;</span></code>,
+but with a <code class="docutils literal notranslate"><span class="pre">folder=tutorial_folder</span></code> option:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Locate the tutorial directory</span>
+<span class="n">tutorial_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pscad</span><span class="o">.</span><span class="n">examples_folder</span><span class="p">,</span> <span class="s2">&quot;tutorial&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load the tutorial workspace</span>
+<span class="n">pscad</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;Tutorial.pswx&quot;</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">tutorial_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See <a class="reference download internal" download="" href="../_downloads/d0b4ec6ccd0507079ed0a6bb9bd96fdb/step-01.py"><code class="xref download docutils literal notranslate"><span class="pre">the</span> <span class="pre">resulting</span> <span class="pre">script</span></code></a>.</p>
+</section>
+<section id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Link to this heading">#</a></h3>
+<p>Add <code class="docutils literal notranslate"><span class="pre">logging</span></code> to the current imports,
+and add the <code class="docutils literal notranslate"><span class="pre">logging.basicConfig</span></code> statement below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mhi.pscad</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">logging</span>
+
+<span class="c1"># Log &#39;INFO&#39; messages &amp; above.  Include level &amp; module name.</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+                    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(levelname)-8s</span><span class="s2"> </span><span class="si">%(name)-26s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you now run the <a class="reference download internal" download="" href="../_downloads/38a9bed193a9dbb7bd983102dfb6bbd0/step-02.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>,
+you should see something similar to following output.
+The paths, port numbers, and process ID’s may be different:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span>                  <span class="n">Automation</span> <span class="n">server</span> <span class="n">port</span><span class="p">:</span> <span class="mi">54879</span>
+<span class="n">INFO</span>     <span class="n">mhi</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">process</span>         <span class="n">Launching</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span> <span class="p">(</span><span class="n">x86</span><span class="p">)</span>\<span class="n">PSCADBeta</span> <span class="n">x64</span>\<span class="nb">bin</span>\<span class="n">win64</span>\<span class="n">PSCADBeta</span><span class="o">.</span><span class="n">exe</span>
+<span class="n">INFO</span>     <span class="n">mhi</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">process</span>             <span class="n">Args</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;/startup:au&#39;</span><span class="p">,</span> <span class="s1">&#39;/port:54879&#39;</span><span class="p">,</span> <span class="s1">&#39;/splash:false&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span>                  <span class="n">Connecting</span> <span class="n">to</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">54879</span>
+<span class="n">INFO</span>     <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">pscad</span>            <span class="n">Loading</span> <span class="p">[</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">Public</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">Pscad</span><span class="se">\\</span><span class="s1">Beta</span><span class="se">\\</span><span class="s1">Examples</span><span class="se">\\</span><span class="s1">tutorial</span><span class="se">\\</span><span class="s1">Tutorial.pswx&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">pscad</span>            <span class="n">Run</span> <span class="nb">all</span> <span class="n">simulation</span> <span class="n">sets</span>
+</pre></div>
+</div>
+<p>In the next steps, we’ll be adding additional logging to our script.
+The logging already built into the automation library can be squelched to warnings and above,
+so it is easier to see our own log messages.
+After the <code class="docutils literal notranslate"><span class="pre">logging.basicConfig(</span> <span class="pre">…</span> <span class="pre">)</span></code> line, add the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ignore INFO msgs from automation (eg, mhi.pscad, mhi.common, ...)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;mhi&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+
+<span class="n">LOG</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;main&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Next, add logging lines to print out the location of the “tutorial” directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Tutorial directory: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">tutorial_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you now run the <a class="reference download internal" download="" href="../_downloads/725f547e1dece6174b70156bb4742c84/step-03.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>,
+you should see something similar to following output.
+Again, the path may be different, which is of course the whole point of this exercise:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="n">Beta</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+</pre></div>
+</div>
+</section>
+<section id="error-handling">
+<h3>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h3>
+<p>If the automation library cannot launch PSCAD,
+it will log the reason why to the console and return the value <code class="docutils literal notranslate"><span class="pre">None</span></code>.
+Other problems may be signalled by an “Exception” being raised.
+A well behaved script must catch these exceptions, and properly clean up.
+This cleanup should include closing PSCAD.</p>
+<p>Replace the commands following the launch of PSCAD with the following,
+to create a more fault-tolerant <a class="reference download internal" download="" href="../_downloads/70bfc67eba56e194f90aa8e44d13f75a/step-04.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">pscad</span><span class="p">:</span>
+
+    <span class="c1"># Locate the tutorial directory</span>
+    <span class="n">tutorial_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pscad</span><span class="o">.</span><span class="n">examples_folder</span><span class="p">,</span> <span class="s2">&quot;tutorial&quot;</span><span class="p">)</span>
+    <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Tutorial directory: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">tutorial_dir</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Load the tutorial workspace</span>
+        <span class="n">pscad</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;Tutorial.pswx&quot;</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">tutorial_dir</span><span class="p">)</span>
+
+        <span class="c1"># Run all the simulation sets in the workspace</span>
+        <span class="n">pscad</span><span class="o">.</span><span class="n">run_all_simulation_sets</span><span class="p">()</span>
+
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c1"># Exit PSCAD</span>
+        <span class="n">pscad</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">LOG</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Failed to launch PSCAD&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Whether or not an exception occurs during the loading of the workspace
+or running all simulation sets, due to the <code class="docutils literal notranslate"><span class="pre">try:</span> <span class="pre">...</span> <span class="pre">finally:</span> <span class="pre">...</span></code> block,
+PSCAD will always be terminated before the script terminates.</p>
+</section>
+<section id="launch-options">
+<h3>Launch Options<a class="headerlink" href="#launch-options" title="Link to this heading">#</a></h3>
+<section id="minimize-pscad">
+<h4>Minimize PSCAD<a class="headerlink" href="#minimize-pscad" title="Link to this heading">#</a></h4>
+<p>When PSCAD is started, it normally opens the PSCAD window.
+During automation, it is sometimes desirable to launch PSCAD with its window
+“minimized”, reducing the amount “screen flickering”,
+as well as the chance a stray mouse click could “poison” a running automation.</p>
+<p>Add <code class="docutils literal notranslate"><span class="pre">minimized=True</span></code> to the <code class="docutils literal notranslate"><span class="pre">launch()</span></code> call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch PSCAD</span>
+<span class="n">pscad</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">minimize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run this new <a class="reference download internal" download="" href="../_downloads/efe62f74fc3586a4d9de062865b244db/step-05.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>.
+You should still see log messages in the Python Shell, and PSCAD appear in the Task Bar,
+but no PSCAD window should open.</p>
+</section>
+<section id="pscad-version">
+<h4>PSCAD Version<a class="headerlink" href="#pscad-version" title="Link to this heading">#</a></h4>
+<p>The <a class="reference internal" href="../reference/launching.html#mhi.pscad.launch" title="mhi.pscad.launch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">launch()</span></code></a> method does a bit of work behind the scenes.
+If more than one version of PSCAD is installed, it tries to pick the best version to run.
+“Best” in this context means:</p>
+<ul class="simple">
+<li><p>not an “Alpha” version, if other choices exist, then</p></li>
+<li><p>not a “Beta” version, if other choices exist, then</p></li>
+<li><p>not a 32-bit version, if other choices exist, finally</p></li>
+<li><p>the “lexically largest” version of the choices that remain.</p></li>
+</ul>
+<p>Instead of letting <code class="xref py py-meth docutils literal notranslate"><span class="pre">launch()</span></code> choose the version,
+the script can specify the exact version to use with the
+<code class="docutils literal notranslate"><span class="pre">version=...</span></code> and/or <code class="docutils literal notranslate"><span class="pre">x64=...</span></code> parameters.
+For example, to launch the 64-bit version of PSCAD 5.0, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pscad</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="n">x64</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The Automation Library may be queried to determine which versions of PSCAD are installed,
+using <a class="reference internal" href="../reference/launching.html#mhi.pscad.versions" title="mhi.pscad.versions"><code class="xref py py-func docutils literal notranslate"><span class="pre">mhi.pscad.versions()</span></code></a>.
+Replacing the <code class="docutils literal notranslate"><span class="pre">launch()</span></code> statement with the following will mimic
+its selection process:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">versions</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">versions</span><span class="p">()</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;PSCAD Versions: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">versions</span><span class="p">)</span>
+
+<span class="c1"># Skip any &#39;Alpha&#39; versions, if other choices exist</span>
+<span class="n">vers</span> <span class="o">=</span> <span class="p">[(</span><span class="n">ver</span><span class="p">,</span> <span class="n">x64</span><span class="p">)</span> <span class="k">for</span> <span class="n">ver</span><span class="p">,</span> <span class="n">x64</span> <span class="ow">in</span> <span class="n">versions</span> <span class="k">if</span> <span class="n">ver</span> <span class="o">!=</span> <span class="s1">&#39;Alpha&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">versions</span> <span class="o">=</span> <span class="n">vers</span>
+
+<span class="c1"># Skip any &#39;Beta&#39; versions, if other choices exist</span>
+<span class="n">vers</span> <span class="o">=</span> <span class="p">[(</span><span class="n">ver</span><span class="p">,</span> <span class="n">x64</span><span class="p">)</span> <span class="k">for</span> <span class="n">ver</span><span class="p">,</span> <span class="n">x64</span> <span class="ow">in</span> <span class="n">versions</span> <span class="k">if</span> <span class="n">ver</span> <span class="o">!=</span> <span class="s1">&#39;Beta&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">versions</span> <span class="o">=</span> <span class="n">vers</span>
+
+<span class="c1"># Skip any 32-bit versions, if other choices exist</span>
+<span class="n">vers</span> <span class="o">=</span> <span class="p">[(</span><span class="n">ver</span><span class="p">,</span> <span class="n">x64</span><span class="p">)</span> <span class="k">for</span> <span class="n">ver</span><span class="p">,</span> <span class="n">x64</span> <span class="ow">in</span> <span class="n">versions</span> <span class="k">if</span> <span class="n">x64</span><span class="p">]</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">versions</span> <span class="o">=</span> <span class="n">vers</span>
+
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;   After filtering: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">versions</span><span class="p">)</span>
+
+<span class="c1"># Of any remaining versions, choose the &quot;lexically largest&quot; one.</span>
+<span class="n">version</span><span class="p">,</span> <span class="n">x64</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">versions</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;   Selected PSCAD version: </span><span class="si">%s</span><span class="s2"> </span><span class="si">%d</span><span class="s2">-bit&quot;</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="mi">64</span> <span class="k">if</span> <span class="n">x64</span> <span class="k">else</span> <span class="mi">32</span><span class="p">)</span>
+
+<span class="c1"># Launch PSCAD</span>
+<span class="n">pscad</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">minimize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">,</span> <span class="n">x64</span><span class="o">=</span><span class="n">x64</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With the above changes to the <a class="reference download internal" download="" href="../_downloads/13ad2159fd3d8cfad2e1980cd1fc0ed1/step-06.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>, the output may be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+</pre></div>
+</div>
+</section>
+<section id="fortran-version">
+<h4>Fortran Version<a class="headerlink" href="#fortran-version" title="Link to this heading">#</a></h4>
+<p>In a similar fashion, the Automation Library may be queried for which versions of FORTRAN are installed,
+using <a class="reference internal" href="../reference/launching.html#mhi.pscad.fortran_versions" title="mhi.pscad.fortran_versions"><code class="xref py py-func docutils literal notranslate"><span class="pre">mhi.pscad.fortran_versions()</span></code></a>.</p>
+<p>Before the <code class="docutils literal notranslate"><span class="pre">launch()</span></code> line, add the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all installed FORTRAN compiler versions</span>
+<span class="n">fortrans</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">fortran_versions</span><span class="p">()</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;FORTRAN Versions: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fortrans</span><span class="p">)</span>
+
+<span class="c1"># Skip &#39;GFortran&#39; compilers, if other choices exist</span>
+<span class="n">vers</span> <span class="o">=</span> <span class="p">[</span><span class="n">ver</span> <span class="k">for</span> <span class="n">ver</span> <span class="ow">in</span> <span class="n">fortrans</span> <span class="k">if</span> <span class="s1">&#39;GFortran&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ver</span><span class="p">]</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">fortrans</span> <span class="o">=</span> <span class="n">vers</span>
+
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;   After filtering: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fortrans</span><span class="p">)</span>
+
+<span class="c1"># Order the remaining compilers, choose the last one (highest revision)</span>
+<span class="n">fortran</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fortrans</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;   Selected FORTRAN version: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fortran</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then create a collection of settings to pass in to PSCAD in the launch call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch PSCAD</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Launching: </span><span class="si">%s</span><span class="s2">  FORTRAN=</span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">fortran</span><span class="p">)</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;fortran_version&#39;</span><span class="p">:</span> <span class="n">fortran</span> <span class="p">}</span>
+<span class="n">pscad</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">minimize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">,</span> <span class="n">x64</span><span class="o">=</span><span class="n">x64</span><span class="p">,</span>
+                         <span class="n">settings</span><span class="o">=</span><span class="n">settings</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With the above changes to the <a class="reference download internal" download="" href="../_downloads/9421c324e319e4792d7f4e9ee868458c/step-06a.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>, the output may be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Automation Library retrieves the list of installed FORTRAN versions from the
+<cite>ProductsList.xml</cite> file.  When any version of FORTRAN is installed or uninstalled,
+run the <cite>Generate installed products list</cite> command from the Environment Medic
+utility in the PSCAD “Tools” menu.</p>
+</div>
+</section>
+<section id="matlab-version">
+<h4>Matlab Version<a class="headerlink" href="#matlab-version" title="Link to this heading">#</a></h4>
+<p>In a similar fashion, the Automation Library may be queried for which versions of Matlab are installed,
+using <a class="reference internal" href="../reference/launching.html#mhi.pscad.matlab_versions" title="mhi.pscad.matlab_versions"><code class="xref py py-func docutils literal notranslate"><span class="pre">mhi.pscad.matlab_versions()</span></code></a>.
+Matlab, unlike FORTRAN, is not required for PSCAD to run, so there may be no versions of Matlab installed.</p>
+<p>After the code to select the FORTRAN version, add the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all installed Matlab versions</span>
+<span class="n">matlabs</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">matlab_versions</span><span class="p">()</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Matlab Versions: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matlabs</span><span class="p">)</span>
+
+<span class="c1"># Get the highest installed version of Matlab:</span>
+<span class="n">matlab</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">matlabs</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">matlabs</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;   Selected Matlab version: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matlab</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then add <code class="docutils literal notranslate"><span class="pre">matlab_version=matlab</span></code> to the <code class="docutils literal notranslate"><span class="pre">settings</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Launch PSCAD</span>
+<span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Launching: </span><span class="si">%s</span><span class="s2">  FORTRAN=</span><span class="si">%r</span><span class="s2">   Matlab=</span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">fortran</span><span class="p">,</span> <span class="n">matlab</span><span class="p">)</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;fortran_version&#39;</span><span class="p">:</span> <span class="n">fortran</span><span class="p">,</span> <span class="s1">&#39;matlab_version&#39;</span><span class="p">:</span> <span class="n">matlab</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>With the above changes to the <a class="reference download internal" download="" href="../_downloads/ce1dfb2597a1ce3ef276c7905fe01af3/step-06b.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>, the output may be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Automation Library retrieves the list of installed Matlab versions from the
+<cite>ProductsList.xml</cite> file.  When any version of Matlab is installed or uninstalled,
+run the <cite>Generate installed products list</cite> command from the Environment Medic
+utility in the PSCAD “Tools” menu.</p>
+</div>
+</section>
+</section>
+<section id="pscad-settings">
+<h3>PSCAD Settings<a class="headerlink" href="#pscad-settings" title="Link to this heading">#</a></h3>
+<p>To ensure reliable, repeatable tests, the automation library may instruct PSCAD
+to use the default settings, ignoring any settings stored in the user profile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pscad</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">load_user_profile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In addition to passing in settings during launch,
+the <a class="reference internal" href="../reference/pscad.html#mhi.pscad.PSCAD.settings" title="mhi.pscad.PSCAD.settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pscad.settings()</span></code></a> method
+may be used to change any application settings to the desired value.</p>
+<p>The following <a class="reference download internal" download="" href="../_downloads/253f5cc6ac49d440294bba3e1bc3321c/settings.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> may be used to determine
+what settings exist, and their current values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">mhi.pscad</span>
+
+<span class="n">pscad</span> <span class="o">=</span> <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">minimize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pscad</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%33s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+
+<span class="n">pscad</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>And produces output similar to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                   AvoidLocalExec: YES
+                DetectedCoreCount: 
+                    EMTDC_Version: 
+                           Folder: 
+            LCP_MaxConcurrentExec: 8
+                      LCP_Version: 
+                      LanguageDir: $(HomeDir)\Languages\en-us
+                    MEDIC_Version: 
+                 MaxConcurrentSim: 8
+                  MenuTooltipFile: $(LanguageDir)\Tooltips\MenuTooltips.xml
+                   SocketPortBase: 30000
+          TerminateInactiveHelper: NO
+                      VersionText: Not installed
+                  active_graphics: 2_S_
+                adv_changed_color: red
+               adv_excluded_color: blue
+              adv_highlight_color: #ffff7538
+               adv_included_color: lime
+                       agent_show: True
+                autosave_interval: NO_ACTION
+                    backup_enable: True
+                    backup_folder: $(LocalDir)\FileBackups
+                      backup_freq: 60
+⋮               ⋮               ⋮               ⋮
+</pre></div>
+</div>
+<p>To change settings from their defaults, pass one or more <code class="docutils literal notranslate"><span class="pre">key=value</span></code> arguments
+to the <a class="reference internal" href="../reference/pscad.html#mhi.pscad.PSCAD.settings" title="mhi.pscad.PSCAD.settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pscad.settings()</span></code></a> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pscad</span><span class="o">.</span><span class="n">settings</span><span class="p">(</span><span class="n">MaxConcurrentSim</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">LCP_MaxConcurrentExec</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="projects">
+<h3>Projects<a class="headerlink" href="#projects" title="Link to this heading">#</a></h3>
+<p>To run all loaded projects one at a time, we first obtain a list of all projects.
+From this list, we filter out any libraries, which are not runnable.
+Then, for the remaining <a class="reference internal" href="../reference/project.html#mhi.pscad.Project" title="mhi.pscad.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> cases,
+we call the <a class="reference internal" href="../reference/project.html#mhi.pscad.Project.run" title="mhi.pscad.Project.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Project.run()</span></code></a> method on each one,
+in succession.</p>
+<p>Replace the <code class="docutils literal notranslate"><span class="pre">pscad.run_all_simulation_sets()</span></code> line with the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="c1"># Get a list of all projects</span>
+        <span class="n">projects</span> <span class="o">=</span> <span class="n">pscad</span><span class="o">.</span><span class="n">projects</span><span class="p">()</span>
+
+        <span class="c1"># Filter out libraries; only keep cases.</span>
+        <span class="n">cases</span> <span class="o">=</span> <span class="p">[</span><span class="n">prj</span> <span class="k">for</span> <span class="n">prj</span> <span class="ow">in</span> <span class="n">projects</span> <span class="k">if</span> <span class="n">prj</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Case&#39;</span><span class="p">]</span>
+
+        <span class="c1"># For each case ...</span>
+        <span class="k">for</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">cases</span><span class="p">:</span>
+            <span class="n">project</span> <span class="o">=</span> <span class="n">pscad</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="n">case</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Running &#39;</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">case</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">case</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">])</span>
+            <span class="n">project</span><span class="o">.</span><span class="n">run</span><span class="p">();</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Run &#39;</span><span class="si">%s</span><span class="s2">&#39; complete&quot;</span><span class="p">,</span> <span class="n">case</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This <a class="reference download internal" download="" href="../_downloads/4bf80f8ca53bd75c4279ae78ca72fa22/step-07.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> would produce:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;chatter&#39;</span> <span class="p">(</span><span class="n">Simple</span> <span class="n">case</span> <span class="k">with</span> <span class="n">chatter</span> <span class="n">elimination</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;chatter&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;fft&#39;</span> <span class="p">(</span><span class="n">Harmonic</span> <span class="n">Impedance</span> <span class="ow">and</span> <span class="n">FFT</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;fft&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;inputctrl&#39;</span> <span class="p">(</span><span class="n">Input</span> <span class="n">Control</span> <span class="n">Components</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;inputctrl&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;interpolation&#39;</span> <span class="p">(</span><span class="n">Simple</span> <span class="n">case</span> <span class="n">illustrating</span> <span class="n">interpolation</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;interpolation&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;legend&#39;</span> <span class="p">(</span><span class="n">Use</span> <span class="n">of</span> <span class="n">macros</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;legend&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;vdiv&#39;</span> <span class="p">(</span><span class="n">Single</span> <span class="n">Phase</span> <span class="n">Voltage</span> <span class="n">Divider</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;vdiv&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;simpleac&#39;</span> <span class="p">(</span><span class="n">A</span> <span class="n">Simple</span> <span class="n">AC</span> <span class="n">Power</span> <span class="n">System</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;simpleac&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;multirun&#39;</span> <span class="p">(</span><span class="n">A</span> <span class="n">Simple</span> <span class="n">Multiple</span> <span class="n">Run</span> <span class="n">Example</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;multirun&#39;</span> <span class="n">complete</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;pagearray&#39;</span> <span class="p">(</span><span class="n">Page</span> <span class="n">Inside</span> <span class="n">a</span> <span class="n">Page</span><span class="p">,</span> <span class="n">Arrays</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;pagearray&#39;</span> <span class="n">complete</span>
+</pre></div>
+</div>
+</section>
+<section id="simulation-sets">
+<h3>Simulation Sets<a class="headerlink" href="#simulation-sets" title="Link to this heading">#</a></h3>
+<p>When a workspace contains multiple projects,
+they may be required to run together or in a particular sequence.
+A simulation set is often used to control the collection of projects.</p>
+<p>Instead of blindly running all projects in the workspace, or simply all simulation sets,
+we may retrieve the list of simulations sets and run each simulation set individually,
+under the control of our script.
+If no simulation sets are found, we can fall back to running each project separately.</p>
+<p>Replace the code we just added, with this code instead:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="c1"># Get the list of simulation sets</span>
+        <span class="n">sim_sets</span> <span class="o">=</span> <span class="n">pscad</span><span class="o">.</span><span class="n">simulation_sets</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sim_sets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Simulation sets: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sim_sets</span><span class="p">)</span>
+
+            <span class="c1"># For each simulation set ...</span>
+            <span class="k">for</span> <span class="n">sim_set_name</span> <span class="ow">in</span> <span class="n">sim_sets</span><span class="p">:</span>
+                <span class="c1"># ... run it</span>
+                <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Running simulation set &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">sim_set_name</span><span class="p">)</span>
+                <span class="n">sim_set</span> <span class="o">=</span> <span class="n">pscad</span><span class="o">.</span><span class="n">simulation_set</span><span class="p">(</span><span class="n">sim_set_name</span><span class="p">)</span>
+                <span class="n">sim_set</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+                <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Simulation set &#39;</span><span class="si">%s</span><span class="s2">&#39; complete&quot;</span><span class="p">,</span> <span class="n">sim_set_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Get a list of all projects</span>
+            <span class="n">projects</span> <span class="o">=</span> <span class="n">pscad</span><span class="o">.</span><span class="n">projects</span><span class="p">()</span>
+
+            <span class="c1"># Filter out libraries; only keep cases.</span>
+            <span class="n">cases</span> <span class="o">=</span> <span class="p">[</span><span class="n">prj</span> <span class="k">for</span> <span class="n">prj</span> <span class="ow">in</span> <span class="n">projects</span> <span class="k">if</span> <span class="n">prj</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Case&#39;</span><span class="p">]</span>
+
+            <span class="c1"># For each case ...</span>
+            <span class="k">for</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">cases</span><span class="p">:</span>
+                <span class="n">project</span> <span class="o">=</span> <span class="n">pscad</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="n">case</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+
+                <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Running &#39;</span><span class="si">%s</span><span class="s2">&#39; (</span><span class="si">%s</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">case</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">case</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">])</span>
+                <span class="n">project</span><span class="o">.</span><span class="n">run</span><span class="p">();</span>
+                <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Run &#39;</span><span class="si">%s</span><span class="s2">&#39; complete&quot;</span><span class="p">,</span> <span class="n">case</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This version of the <a class="reference download internal" download="" href="../_downloads/bbe0919cc79b1f67eaaa7325234caad7/step-08.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> runs all projects simultaneously,
+producing the following output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Simulation</span> <span class="n">sets</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="n">simulation</span> <span class="nb">set</span> <span class="s1">&#39;default&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Simulation</span> <span class="nb">set</span> <span class="s1">&#39;default&#39;</span> <span class="n">complete</span>
+</pre></div>
+</div>
+<p>If, instead of loading <code class="docutils literal notranslate"><span class="pre">&quot;Tutorial.pswx&quot;</span></code>,
+we only loaded the <code class="docutils literal notranslate"><span class="pre">&quot;vdiv.pscx&quot;</span></code> project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="c1"># Load only the &#39;voltage divider&#39; project</span>
+        <span class="n">pscad</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;vdiv.pscx&quot;</span><span class="p">,</span> <span class="n">folder</span><span class="o">=</span><span class="n">tutorial_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>there are no simulation sets,
+so the <code class="docutils literal notranslate"><span class="pre">else:</span></code> path is taken in our <a class="reference download internal" download="" href="../_downloads/87de6810b4beaf6d0f3014b0cbe5e9fa/step-09.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>,
+and the <code class="docutils literal notranslate"><span class="pre">vdiv</span></code> project is run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;vdiv&#39;</span> <span class="p">(</span><span class="n">Single</span> <span class="n">Phase</span> <span class="n">Voltage</span> <span class="n">Divider</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;vdiv&#39;</span> <span class="n">complete</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="event-monitoring">
+<h2>Event Monitoring<a class="headerlink" href="#event-monitoring" title="Link to this heading">#</a></h2>
+<section id="event-handlers">
+<h3>Event Handlers<a class="headerlink" href="#event-handlers" title="Link to this heading">#</a></h3>
+<p>The Automation Library will allow you to observe the communications between
+the automation library and the PSCAD process.</p>
+<p>At the top of the file, add the following “Handler” class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Handler</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">evt</span><span class="p">:</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;TICK&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Following the successful launch of PSCAD, we can create an instance of our <code class="docutils literal notranslate"><span class="pre">Handler</span></code> class,
+and attach it to the PSCAD instance.  After the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">pscad:</span></code>, add the following three lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">pscad</span><span class="p">:</span>
+
+    <span class="n">handler</span> <span class="o">=</span> <span class="n">Handler</span><span class="p">()</span>
+    <span class="n">pscad</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s1">&#39;load-events&#39;</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+    <span class="n">pscad</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s1">&#39;build-events&#39;</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After downgrading some of the earlier <code class="docutils literal notranslate"><span class="pre">LOG.info(...)</span></code> messages to <code class="docutils literal notranslate"><span class="pre">LOG.debug(...)</span></code> message,
+if we run this <a class="reference download internal" download="" href="../_downloads/2cec8b7562522a99a8fccce5f5877d6b/step-10.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a>, we might see:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;files&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">Public</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">Pscad</span><span class="se">\\</span><span class="s1">5.0</span><span class="se">\\</span><span class="s1">Examples</span><span class="se">\\</span><span class="s1">tutorial</span><span class="se">\\</span><span class="s1">vdiv.pscx&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">Public</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">Pscad</span><span class="se">\\</span><span class="s1">5.0</span><span class="se">\\</span><span class="s1">Examples</span><span class="se">\\</span><span class="s1">tutorial</span><span class="se">\\</span><span class="s1">vdiv.pscx&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Case&#39;</span><span class="p">,</span> <span class="s1">&#39;Description&#39;</span><span class="p">:</span> <span class="s1">&#39;Single Phase Voltage Divider&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;files&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;vdiv&#39;</span> <span class="p">(</span><span class="n">Single</span> <span class="n">Phase</span> <span class="n">Voltage</span> <span class="n">Divider</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Workspace&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Builder&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Compile&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Compile&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Solver&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Solver&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;EMTDC MAKE&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;EMTDC MAKE&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Builder&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Mediator&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">,</span> <span class="s1">&#39;rank&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;EMTDC RUN&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Mediator&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">,</span> <span class="s1">&#39;rank&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Workspace&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;vdiv&#39;</span> <span class="n">complete</span>
+</pre></div>
+</div>
+<p>As messages are received from PSCAD, the automation library sends the message to each registered handler,
+by calling <code class="docutils literal notranslate"><span class="pre">handler.send(msg)</span></code>.
+The handler can do pretty much whatever it wants with the message.
+If it consumes the message, and doesn’t want any subsequent handler from seeing it,
+the handler should return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>After a period of time when no messages have been sent back from PSCAD,
+the automation library also sends a blank message to the handler, by calling <code class="docutils literal notranslate"><span class="pre">handler.send(None)</span></code>.
+This allows the handler a chance to do additional processing.
+For instance, the Automated Test Suite’s <code class="docutils literal notranslate"><span class="pre">ProgressHandler</span></code> uses those opportunities
+to send a <code class="docutils literal notranslate"><span class="pre">get-run-status</span></code> command to the various projects, in order to track <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">complete</span></code>.</p>
+</section>
+<section id="removing-handlers">
+<h3>Removing Handlers<a class="headerlink" href="#removing-handlers" title="Link to this heading">#</a></h3>
+<p>If the script decides a certain handler is no longer required,
+the script can remove it by calling <code class="docutils literal notranslate"><span class="pre">pscad.unsubscribe(</span> <span class="pre">eventname</span> <span class="pre">)</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">finally</span><span class="p">:</span>
+        <span class="c1"># Exit PSCAD</span>
+        <span class="n">pscad</span><span class="o">.</span><span class="n">unsubscribe</span><span class="p">(</span><span class="s1">&#39;build-events&#39;</span><span class="p">)</span>
+        <span class="n">pscad</span><span class="o">.</span><span class="n">unsubscribe</span><span class="p">(</span><span class="s1">&#39;load-events&#39;</span><span class="p">)</span>
+        <span class="n">pscad</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="automatic-removal">
+<h3>Automatic Removal<a class="headerlink" href="#automatic-removal" title="Link to this heading">#</a></h3>
+<p>Since the handler is receiving messages from PSCAD,
+it is usually in the best position to determine when a particular process is complete.
+The handler can indicate this to the automation library, by returning the special value <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>,
+or by raising the <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> exception.
+When this happens, the automation library will automatically remove the handler.</p>
+<p>For example, the <code class="docutils literal notranslate"><span class="pre">Load</span></code> process is complete when a load event is found
+with a <code class="docutils literal notranslate"><span class="pre">file-type</span></code> of <code class="docutils literal notranslate"><span class="pre">files</span></code> and a <code class="docutils literal notranslate"><span class="pre">status</span></code> of <code class="docutils literal notranslate"><span class="pre">END</span></code>.
+Change the Handler’s <code class="docutils literal notranslate"><span class="pre">send()</span></code> method to the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">evt</span><span class="p">:</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">evt</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;END&#39;</span> <span class="ow">and</span> <span class="n">evt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;file-type&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;files&#39;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">StopIteration</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;TICK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When this new <a class="reference download internal" download="" href="../_downloads/c79996154c27eab86a26f2b347a00167/step-12.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> is run, this output results:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;files&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">Public</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">Pscad</span><span class="se">\\</span><span class="s1">5.0</span><span class="se">\\</span><span class="s1">Examples</span><span class="se">\\</span><span class="s1">tutorial</span><span class="se">\\</span><span class="s1">vdiv.pscx&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">Public</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">Pscad</span><span class="se">\\</span><span class="s1">5.0</span><span class="se">\\</span><span class="s1">Examples</span><span class="se">\\</span><span class="s1">tutorial</span><span class="se">\\</span><span class="s1">vdiv.pscx&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Case&#39;</span><span class="p">,</span> <span class="s1">&#39;Description&#39;</span><span class="p">:</span> <span class="s1">&#39;Single Phase Voltage Divider&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;LoadEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;file-type&#39;</span><span class="p">:</span> <span class="s1">&#39;files&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;vdiv&#39;</span> <span class="p">(</span><span class="n">Single</span> <span class="n">Phase</span> <span class="n">Voltage</span> <span class="n">Divider</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Workspace&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Builder&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Compile&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Compile&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Solver&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Solver&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;EMTDC MAKE&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;EMTDC MAKE&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Project Builder&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Mediator&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">,</span> <span class="s1">&#39;rank&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;EMTDC RUN&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Mediator&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">,</span> <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="s1">&#39;vdiv&#39;</span><span class="p">,</span> <span class="s1">&#39;rank&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">{</span><span class="s1">&#39;event&#39;</span><span class="p">:</span> <span class="s1">&#39;BuildEvent&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Workspace&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;END&#39;</span><span class="p">}</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;vdiv&#39;</span> <span class="n">complete</span>
+<span class="n">WARNING</span>  <span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">pscad</span>            <span class="n">Not</span> <span class="n">currently</span> <span class="n">subscribed</span> <span class="n">to</span> <span class="n">load</span><span class="o">-</span><span class="n">events</span> <span class="n">events</span>
+</pre></div>
+</div>
+<p>The “Not currently subscribed to load-events events” message is generated
+because we are still trying to unsubscribe to “load-events”,
+but the handler uninstalled itself.</p>
+</section>
+<section id="build-events">
+<h3>Build Events<a class="headerlink" href="#build-events" title="Link to this heading">#</a></h3>
+<p>Build Events are generated when PSCAD builds and runs cases.
+A build event handler might be installed just before executing the run command,
+and removed just after the run command finished.
+Code to do thing might look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">handler</span> <span class="o">=</span> <span class="n">BuildEventHandler</span><span class="p">()</span>
+<span class="n">pscad</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s2">&quot;build-events&quot;</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+<span class="n">project</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">pscad</span><span class="o">.</span><span class="n">unsubscribe</span><span class="p">(</span><span class="s2">&quot;build-events&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is a lot of boiler-plate code.
+As a convenience, the automation library will perform the <code class="docutils literal notranslate"><span class="pre">subscribe</span></code> and <code class="docutils literal notranslate"><span class="pre">unsubscribe</span></code> calls itself,
+if the handler is passed to the <code class="docutils literal notranslate"><span class="pre">run(</span> <span class="pre">)</span></code> command directly:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="n">BuildEventHandler</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Add an import for <code class="docutils literal notranslate"><span class="pre">mhi.pscad.handler</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mhi.pscad</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">mhi.pscad.handler</span>
+</pre></div>
+</div>
+<p>Replace the <code class="docutils literal notranslate"><span class="pre">Handler</span></code> code from the previous section with the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BuildEventHandler</span><span class="p">(</span><span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">handler</span><span class="o">.</span><span class="n">BuildEvent</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">_build_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;BuildEvt: [</span><span class="si">%s</span><span class="s2">] </span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2"> </span><span class="si">%.3f</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here, we are extending a standard <code class="docutils literal notranslate"><span class="pre">BuildEvent</span></code> handler.
+Its <code class="docutils literal notranslate"><span class="pre">send()</span></code> method already looks for build event messages, and forwards them to the <code class="docutils literal notranslate"><span class="pre">_build_event()</span></code> method,
+as well as looks for  matching <code class="docutils literal notranslate"><span class="pre">BEGIN</span></code> and <code class="docutils literal notranslate"><span class="pre">END</span></code> messages,
+and returns <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> when the final <code class="docutils literal notranslate"><span class="pre">END</span></code> message is found.
+This standard <code class="docutils literal notranslate"><span class="pre">BuildEvent</span></code> handler in turn extends an <code class="docutils literal notranslate"><span class="pre">AbstractHandler</span></code>,
+which implements the required do-nothing <code class="docutils literal notranslate"><span class="pre">close()</span></code> method.
+As such, most of the required work has already been done for us.
+We just need to override <code class="docutils literal notranslate"><span class="pre">_build_event()</span></code>.</p>
+<p>Remove the previous <code class="docutils literal notranslate"><span class="pre">pscad.subscribe(</span> <span class="pre">)</span></code> call,
+and replace the <code class="docutils literal notranslate"><span class="pre">project.run()</span></code> call with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                <span class="n">project</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">BuildEventHandler</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>When this <a class="reference download internal" download="" href="../_downloads/111b16be446e2f465be14302078cdad0/step-13.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> is run, the following output is produced:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;vdiv&#39;</span> <span class="p">(</span><span class="n">Single</span> <span class="n">Phase</span> <span class="n">Voltage</span> <span class="n">Divider</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="n">Workspace</span><span class="o">/</span><span class="n">BEGIN</span> <span class="mf">0.187</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Project</span> <span class="n">Builder</span><span class="o">/</span><span class="n">BEGIN</span> <span class="mf">0.352</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Project</span> <span class="n">Compile</span><span class="o">/</span><span class="n">BEGIN</span> <span class="mf">0.354</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Project</span> <span class="n">Compile</span><span class="o">/</span><span class="n">END</span> <span class="mf">0.892</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Project</span> <span class="n">Solver</span><span class="o">/</span><span class="n">BEGIN</span> <span class="mf">1.144</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Project</span> <span class="n">Solver</span><span class="o">/</span><span class="n">END</span> <span class="mf">1.185</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">EMTDC</span> <span class="n">MAKE</span><span class="o">/</span><span class="n">BEGIN</span> <span class="mf">1.812</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">EMTDC</span> <span class="n">MAKE</span><span class="o">/</span><span class="n">END</span> <span class="mf">4.444</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Project</span> <span class="n">Builder</span><span class="o">/</span><span class="n">END</span> <span class="mf">4.576</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Mediator</span><span class="o">/</span><span class="n">BEGIN</span> <span class="mf">4.820</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">EMTDC</span> <span class="n">RUN</span><span class="o">/</span><span class="n">BEGIN</span> <span class="mf">4.832</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="n">vdiv</span><span class="p">]</span> <span class="n">Mediator</span><span class="o">/</span><span class="n">END</span> <span class="mf">5.280</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">BuildEvt</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="n">Workspace</span><span class="o">/</span><span class="n">END</span> <span class="mf">5.281</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;vdiv&#39;</span> <span class="n">complete</span>
+</pre></div>
+</div>
+<p>Our handler is just displaying the events as they occur.
+It could do more interesting things.
+For instance, when it receives a <code class="docutils literal notranslate"><span class="pre">BEGIN</span></code> message, it could record the <code class="docutils literal notranslate"><span class="pre">elapsed</span></code> time;
+when it receives a matching <code class="docutils literal notranslate"><span class="pre">END</span></code> message,
+it could subtract the <code class="docutils literal notranslate"><span class="pre">elapsed</span></code> time from the time it recorded earlier,
+giving the time required for each task:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BuildEventHandler</span><span class="p">(</span><span class="n">mhi</span><span class="o">.</span><span class="n">pscad</span><span class="o">.</span><span class="n">handler</span><span class="o">.</span><span class="n">BuildEvent</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_start</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">_build_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">project</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s1">&#39;BEGIN&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_start</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">elapsed</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sec</span> <span class="o">=</span> <span class="n">elapsed</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">project</span> <span class="k">if</span> <span class="n">project</span> <span class="k">else</span> <span class="s1">&#39;[All]&#39;</span>
+            <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">: </span><span class="si">%.3f</span><span class="s2"> sec&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">sec</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running this revised <a class="reference download internal" download="" href="../_downloads/9edd20e05a927072698668bde6bdb8c1/step-14.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> script would produce:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">PSCAD</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Beta&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;4.6.3&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;5.0.0&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">PSCAD</span> <span class="n">version</span><span class="p">:</span> <span class="mf">5.0.0</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">FORTRAN</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">After</span> <span class="n">filtering</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFortran 4.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 4.6.2&#39;</span><span class="p">,</span> <span class="s1">&#39;GFortran 8.1&#39;</span><span class="p">]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">FORTRAN</span> <span class="n">version</span><span class="p">:</span> <span class="n">GFortran</span> <span class="mf">8.1</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Matlab</span> <span class="n">Versions</span><span class="p">:</span> <span class="p">[]</span>
+<span class="n">INFO</span>     <span class="n">main</span>                          <span class="n">Selected</span> <span class="n">Matlab</span> <span class="n">version</span><span class="p">:</span> 
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Launching</span><span class="p">:</span> <span class="mf">5.0.0</span>  <span class="n">FORTRAN</span><span class="o">=</span><span class="s1">&#39;GFortran 8.1&#39;</span>   <span class="n">Matlab</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Tutorial</span> <span class="n">directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Public</span>\<span class="n">Documents</span>\<span class="n">Pscad</span>\<span class="mf">5.0</span>\<span class="n">Examples</span>\<span class="n">tutorial</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Running</span> <span class="s1">&#39;vdiv&#39;</span> <span class="p">(</span><span class="n">Single</span> <span class="n">Phase</span> <span class="n">Voltage</span> <span class="n">Divider</span><span class="p">)</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">vdiv</span> <span class="n">Project</span> <span class="n">Compile</span><span class="p">:</span> <span class="mf">0.770</span> <span class="n">sec</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">vdiv</span> <span class="n">Project</span> <span class="n">Solver</span><span class="p">:</span> <span class="mf">0.122</span> <span class="n">sec</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">vdiv</span> <span class="n">EMTDC</span> <span class="n">MAKE</span><span class="p">:</span> <span class="mf">2.624</span> <span class="n">sec</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">vdiv</span> <span class="n">Project</span> <span class="n">Builder</span><span class="p">:</span> <span class="mf">5.004</span> <span class="n">sec</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">vdiv</span> <span class="n">Mediator</span><span class="p">:</span> <span class="mf">0.482</span> <span class="n">sec</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="p">[</span><span class="n">All</span><span class="p">]</span> <span class="n">Workspace</span><span class="p">:</span> <span class="mf">6.075</span> <span class="n">sec</span>
+<span class="n">INFO</span>     <span class="n">main</span>                       <span class="n">Run</span> <span class="s1">&#39;vdiv&#39;</span> <span class="n">complete</span>
+</pre></div>
+</div>
+<p>The handler can store information collected during the run, that may be accessed afterwards.
+Of course, to do so, you would need to hold onto a reference to the handler:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">handler</span> <span class="o">=</span> <span class="n">BuildEventHandler</span><span class="p">()</span>
+<span class="n">project</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="n">handler</span> <span class="p">)</span>
+<span class="n">info</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">get_interesting_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="build-run-messages">
+<h2>Build &amp; Run Messages<a class="headerlink" href="#build-run-messages" title="Link to this heading">#</a></h2>
+<section id="build-messages">
+<h3>Build Messages<a class="headerlink" href="#build-messages" title="Link to this heading">#</a></h3>
+<p>When PSCAD builds a project, the build messages are recorded.
+The script can retrieve these build messages.</p>
+<p>After the <code class="docutils literal notranslate"><span class="pre">project.run(…)</span></code> line, add the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                <span class="n">project</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">BuildEventHandler</span><span class="p">());</span>
+                <span class="n">LOG</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Run &#39;</span><span class="si">%s</span><span class="s2">&#39; complete&quot;</span><span class="p">,</span> <span class="n">case</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+
+                <span class="n">messages</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">messages</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">  </span><span class="si">%s</span><span class="s2">  </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">scope</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This <a class="reference download internal" download="" href="../_downloads/a716f6927206eec2a2864d524c8a43a4/step-20.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> would produce:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⋮               ⋮               ⋮               ⋮
+INFO     main                       Run &#39;vdiv&#39; complete
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\LicenseConfig.cfg
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\Main.dta
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\Main.f
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\Main.o
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\Station.dta
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\Station.f
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\Station.o
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv.exe
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv.mak
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv.map
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv_1.config
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv_30000.bat
+vdiv  normal  Removed file: C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv_mak.bat
+vdiv  normal  Removed 13 files
+vdiv  normal  Completed cleaning of temporary files and data.
+vdiv  normal  Begin compiling with PSCAD Version 5.0.0
+vdiv  normal  Generating &#39;C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv.map&#39;.
+vdiv  normal  The total number of live nodes: 1
+vdiv  normal  Coding .mak file: &#39;C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\\vdiv.mak&#39;
+vdiv  normal  Time for Compile: 46ms  Make: 0ms
+vdiv  normal  Solve Time = 47ms
+vdiv  normal  Will execute (1): call C:\Program Files (x86)\GFortran\8.1\x86\bin\gf81vars.bat
+vdiv  normal  Will execute (1): call &quot;C:\Program Files (x86)\GFortran\8.1\x86\bin\gf81vars.bat&quot;
+vdiv  normal  Will execute (2): make -j -f vdiv.mak
+vdiv  normal  Will execute (2): &quot;C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\vdiv_mak.bat&quot;
+vdiv  normal  Creating EMTDC executable...
+vdiv  normal  C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86&gt;call &quot;C:\Program Files (x86)\GFortran\8.1\x86\bin\gf81vars.bat&quot; 
+vdiv  normal  Compiling &#39;Station.f&#39; into object code.
+vdiv  normal  Compiling &#39;Main.f&#39; into object code.
+vdiv  normal  Linking objects and libraries into binary &#39;vdiv.exe&#39;
+vdiv  normal  Finished compiling with PSCAD Version 5.0.0
+</pre></div>
+</div>
+<p>Here, we are just extracting the scope, status, and text of the messages.
+Other fields, such as label and component references could also be extracted.</p>
+</section>
+<section id="run-messages">
+<h3>Run Messages<a class="headerlink" href="#run-messages" title="Link to this heading">#</a></h3>
+<p>After EMTDC has run the project, the run messages may also be retrieved.
+Unlike the build messages, the run messages are returned as an unstructured blob of text.</p>
+<p>Immediately after the above code, add the following lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">output</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When run, this change to the <a class="reference download internal" download="" href="../_downloads/cd8026a5775ab40b3e97c4be604c5f63/step-21.py"><code class="xref download docutils literal notranslate"><span class="pre">script</span></code></a> adds the run messages to the output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⋮               ⋮               ⋮               ⋮
+vdiv  normal  C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86&gt;call &quot;C:\Program Files (x86)\GFortran\8.1\x86\bin\gf81vars.bat&quot; 
+vdiv  normal  Compiling &#39;Station.f&#39; into object code.
+vdiv  normal  Compiling &#39;Main.f&#39; into object code.
+vdiv  normal  Linking objects and libraries into binary &#39;vdiv.exe&#39;
+vdiv  normal  Finished compiling with PSCAD Version 5.0.0
+------------------------------------------------------------
+Initializing Simulation Run
+Executing &gt; &quot;C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86\\vdiv_30000.bat&quot;
+Communications: Connection established.
+C:\Users\Public\Documents\Pscad\5.0\Examples\tutorial\vdiv.gf81_x86&gt;call &quot;C:\Program Files (x86)\GFortran\8.1\x86\bin\gf81vars.bat&quot; 
+EMTDC(tm) Version 5.00 R#93051001
+Time Summary: Start Date: 10-16-2018
+Time Summary: Start Time: 13:10:06
+The actual plot step: &#39;250.000000&#39; 
+Time Summary: Stop Time: 13:10:06
+Time Summary: Elapsed Time: 00:00:00
+Time Summary: Total CPU Time: 47ms.
+Terminating connection.
+EMTDC run completed.
+
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../upgrading.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Upgrading</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../reference/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Reference Manual</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automation-library">Automation Library</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#my-first-automation-script">My First Automation Script</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-tutorial">Running the Tutorial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-tutorial">Finding the Tutorial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logging">Logging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-options">Launch Options</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#minimize-pscad">Minimize PSCAD</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pscad-version">PSCAD Version</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fortran-version">Fortran Version</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-version">Matlab Version</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pscad-settings">PSCAD Settings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-sets">Simulation Sets</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#event-monitoring">Event Monitoring</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#event-handlers">Event Handlers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-handlers">Removing Handlers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-removal">Automatic Removal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-events">Build Events</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-run-messages">Build &amp; Run Messages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-messages">Build Messages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-messages">Run Messages</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/tutorial/index.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Manitoba Hydro International Ltd..
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
