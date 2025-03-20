@@ -1,0 +1,8 @@
+pyspark_huggingface/__init__.py,sha256=DowO3AFUNcAlS4dQzWj2OviqDm16FhuUuh8euXjEC3E,81
+pyspark_huggingface/huggingface.py,sha256=toNObApIR2wjTT6bJ9ANews__rh_spv2oEd4SW46EZI,1813
+pyspark_huggingface/huggingface_sink.py,sha256=2_I-SxGTs6EqDCYAzdUbJTmJ1lQnEHowX4h_zrWBDFs,12637
+pyspark_huggingface/huggingface_source.py,sha256=G4SLmjAMGDgc_zhkyUaq6sM3uJHLgITHLHCNe5yeL0s,6462
+pyspark_huggingface-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyspark_huggingface-0.1.1.dist-info/METADATA,sha256=nj0Nw1vBKF8Gb3VbdSmt_1SzgkGzYVCfzQ97aZJaxHQ,821
+pyspark_huggingface-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pyspark_huggingface-0.1.1.dist-info/RECORD,,
