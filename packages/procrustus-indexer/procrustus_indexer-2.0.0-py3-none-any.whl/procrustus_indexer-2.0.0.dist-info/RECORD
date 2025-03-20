@@ -1,0 +1,9 @@
+procrustus_indexer/__init__.py,sha256=koaNHIudyB9l5tAR7zuXYoO_OPtuMcmaOmmWt6arY7g,71
+procrustus_indexer/indexer.py,sha256=C2ca72dcc83c4a1-78lQ_MRlFIFQdQWDfplVyp9n96w,2795
+procrustus_indexer/indexer_builder.py,sha256=26gaty5i8EDYs6emS8lY5_mCwhtsUBz3sjQ6o_XpLko,803
+procrustus_indexer/parsers/__init__.py,sha256=8cc0JwmTF_GqHGuH_h6mDn--ReSKkxnF9Ho0xx64AtE,62
+procrustus_indexer/parsers/json_parser.py,sha256=YWGMSiGlglnbyWT4YKKy-nQ8th0RJtVMgQ2Tjug2fTU,942
+procrustus_indexer/parsers/parser.py,sha256=3R5tBtQ9ajvoGChC-rEaKLMmyRQa3j57AcMgC2-OcGE,119
+procrustus_indexer-2.0.0.dist-info/METADATA,sha256=VV83k03sf1QmpwGJZKjPoP4NNb79vfbvXwNc0LqF8R4,1845
+procrustus_indexer-2.0.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+procrustus_indexer-2.0.0.dist-info/RECORD,,
