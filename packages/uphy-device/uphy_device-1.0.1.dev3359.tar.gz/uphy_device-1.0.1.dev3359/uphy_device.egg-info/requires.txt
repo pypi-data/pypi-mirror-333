@@ -1,0 +1,8 @@
+yarl>=1.15.2
+typer>=0.12.5
+rich>=13.9.2
+dearpygui>=2.0.0
+uphy-upgen>=1.0.1
+yarl>=1.12.1
+uphy
+ifaddr>=0.2.0
