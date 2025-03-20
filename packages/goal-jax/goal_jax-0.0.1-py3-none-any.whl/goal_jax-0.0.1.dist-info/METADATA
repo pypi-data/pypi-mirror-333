@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: goal-jax
+Version: 0.0.1
+Summary: (G)eometric (O)ptimiz(A)tion (L)ibraries
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jax
+Requires-Dist: optax
+Provides-Extra: test
+Requires-Dist: pytest>=7.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0; extra == "test"
+Provides-Extra: examples
+Requires-Dist: matplotlib; extra == "examples"
+Requires-Dist: scipy; extra == "examples"
+Requires-Dist: scikit-learn; extra == "examples"
+Requires-Dist: scipy-stubs; extra == "examples"
+Requires-Dist: seaborn; extra == "examples"
+Provides-Extra: gpu
+Requires-Dist: jax[cuda12]; extra == "gpu"
+
+![Tests](https://github.com/alex404/goal-jax/actions/workflows/tests.yml/badge.svg)
+![Demonstrations](https://github.com/alex404/goal-jax/actions/workflows/examples.yml/badge.svg)
+
+# goal-jax: Geometric OptimizAtion Libraries (in JAX!)
+
+A JAX implementation of information geometric algorithms and exponential families.
+
+## Overview
+
+`goal-jax` provides tools for working with exponential families and their geometry, including:
+
+* Efficient implementations of common exponential families
+* Optimization algorithms
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
