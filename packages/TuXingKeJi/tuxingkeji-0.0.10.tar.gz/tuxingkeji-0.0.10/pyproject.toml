@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "strenum",  "pyserial"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "TuXingKeJi"
+version = "0.0.10"
+authors = [
+  { name="chenghao", email="chenghao.wang@uphf.fr" },
+]
+description = "A python package for TuXingKeJi UAV control"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies =["strenum",  "pyserial"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/martinWANG2014/TuXingKeJi_SDK"
+"Bug Tracker" = "https://github.com/martinWANG2014/TuXingKeJi_SDK/issues"
