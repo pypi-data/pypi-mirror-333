@@ -1,0 +1,8 @@
+promql_parser-0.5.0.dist-info/METADATA,sha256=NmzwzoyFnLoK8rb2ofuO0r4KDPS-DIyzUDWo_hskc7o,1104
+promql_parser-0.5.0.dist-info/WHEEL,sha256=sdFrP3XByqcTTO3ny--vPFac5iSAItAJE95EAn_ugOs,111
+promql_parser-0.5.0.dist-info/licenses/LICENSE,sha256=0aJpfdaVXEsuQDTOka75oOC-nwMNCj75shg7pov5q6w,1086
+promql_parser/__init__.py,sha256=S_WJxolC7EN5itz4Z99Ml5faJ58UDXvlnVtiSvstGDM,135
+promql_parser/__init__.pyi,sha256=NtY7ezqz7zIxX2-tK7hjuaELZz-38rdbl1JM9a2BDZU,6261
+promql_parser/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+promql_parser/promql_parser.pypy311-pp73-darwin.so,sha256=D0lS4TjyKrfpMw9_MvV07C6xnK505mXeouMC4lVofT4,3429680
+promql_parser-0.5.0.dist-info/RECORD,,
