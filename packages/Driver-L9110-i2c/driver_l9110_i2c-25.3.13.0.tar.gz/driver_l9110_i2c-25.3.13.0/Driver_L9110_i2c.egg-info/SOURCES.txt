@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+Driver_L9110_i2c.egg-info/PKG-INFO
+Driver_L9110_i2c.egg-info/SOURCES.txt
+Driver_L9110_i2c.egg-info/dependency_links.txt
+Driver_L9110_i2c.egg-info/requires.txt
+Driver_L9110_i2c.egg-info/top_level.txt
+MKE_M17/L9110_I2C.py
+MKE_M17/__init__.py
