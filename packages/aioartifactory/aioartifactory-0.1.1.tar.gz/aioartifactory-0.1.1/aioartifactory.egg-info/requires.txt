@@ -1,0 +1,17 @@
+aiofiles
+aiohttp[speedups]
+tealogger
+
+[develop]
+build
+pytest-asyncio
+pytest-cov
+pytest
+ruff
+twine
+
+[test]
+pytest-asyncio
+pytest-cov
+pytest
+ruff
