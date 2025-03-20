@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+sds/__init__.py
+sds/cli.py
+sds/core.py
+stream_ds.egg-info/PKG-INFO
+stream_ds.egg-info/SOURCES.txt
+stream_ds.egg-info/dependency_links.txt
+stream_ds.egg-info/entry_points.txt
+stream_ds.egg-info/top_level.txt

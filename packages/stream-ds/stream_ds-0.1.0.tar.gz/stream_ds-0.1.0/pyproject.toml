@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stream-ds"
+version = "0.1.0"
+description = "A short description"
+readme = "README.md"
+authors = [
+  { name="Your Name", email="you@example.com" }
+]
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+requires-python = ">=3.7"
+
+# This is where you define your console script
+[project.scripts]
+lds = "sds.cli:main"
