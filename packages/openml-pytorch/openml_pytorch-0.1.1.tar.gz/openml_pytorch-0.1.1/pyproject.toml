@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "openml-pytorch"
+version = "0.1.1"
+description = ""
+authors = ["SubhadityaMukherjee <msubhaditya@gmail.com>", "Taniya Das <t.das@tue.nl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+onnx = "^1.16.2"
+openml = "^0.15.1"
+numpy = "<2.0.0"
+matplotlib = "^3.9.2"
+tensorboard = "^2.17.1"
+mkdocs-material = "^9.5.39"
+mkdocs-autorefs = "^1.2.0"
+mkdocs-redirects = "^1.2.1"
+mkdocs-jupyter = "^0.25.0"
+mkdocs-awesome-pages-plugin = "^2.9.3"
+mkdocstrings = "^0.26.1"
+mkdocstrings-python = "^1.11.1"
+mknotebooks = "^0.8.0"
+netron = "^8.1.3"
+torch = "^2.2.0"
+torchvision = "^0.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
