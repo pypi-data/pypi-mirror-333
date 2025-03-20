@@ -1,0 +1,2 @@
+[console_scripts]
+penifycli = penify_hook.main:main
