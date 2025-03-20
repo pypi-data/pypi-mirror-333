@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "MOD16-JPL"
+version = "1.0.1"
+description = "JPL implementation of the MOD16 evapotranspiration algorithm for high resolution instantaneous remote sensing imagery"
+readme = "README.md"
+authors = [
+    { name = "Gregory Halverson", email = "gregory.h.halverson@jpl.nasa.gov" },
+    { name = "Qiaozhen Mu", email = "qiaozhen@ntsg.umt.edu" },
+    { name = "Maosheng Zhao", email = "zhao@ntsg.umt.edu" },
+    { name = "Steven W. Running", email = "swr@ntsg.umt.edu" },
+    { name = "Claire S. Villanueva-Weeks", email = "claire.s.villanueva-weeks@jpl.gov" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "affine",
+    "astropy",
+    "geopandas",
+    "h5py",
+    "keras",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pillow",
+    "pygeos",
+    "pyproj",
+    "pyresample",
+    "rasterio",
+    "rasters",
+    "requests",
+    "scikit-image",
+    "scipy",
+    "shapely",
+    "six",
+    "sun-angles",
+    "tensorflow",
+    "urllib3",
+]
+
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "pytest>=6.0",
+    "pytest-cov",
+    "jupyter",
+    "pytest",
+    "twine"
+]
+
+[tool.setuptools.package-data]
+MOD16_JPL = ["*.txt", "*.csv", "*.tif"]
+
+[project.urls]
+"Homepage" = "https://github.com/JPL-Evapotranspiration-Algorithms/MOD16-JPL"
