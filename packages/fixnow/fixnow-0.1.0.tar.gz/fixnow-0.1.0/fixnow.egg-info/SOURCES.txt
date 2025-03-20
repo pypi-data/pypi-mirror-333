@@ -1,0 +1,8 @@
+README.md
+setup.py
+fixnow.egg-info/PKG-INFO
+fixnow.egg-info/SOURCES.txt
+fixnow.egg-info/dependency_links.txt
+fixnow.egg-info/entry_points.txt
+fixnow.egg-info/requires.txt
+fixnow.egg-info/top_level.txt
