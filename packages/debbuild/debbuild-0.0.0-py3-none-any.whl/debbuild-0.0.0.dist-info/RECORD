@@ -1,0 +1,9 @@
+debbuild/__init__.py,sha256=B1FGBn8xt4QJoZm3EKosvzqbS1wZRmkJ7IVK78lQKLk,14524
+debbuild/__main__.py,sha256=FZmM1wHAxDKQatCM8TRhoIxpz8o5dEeZH5xxdQn6IrY,980
+debbuild/tests/test_debbuild.py,sha256=0O2oMyen8oRkqQE7nFQDwUWJXH2ryN8SpJulx_vlVAM,3684
+debbuild-0.0.0.dist-info/LICENSE,sha256=tENHJgBzZ7iWicdjOUKerHcV2ZKlI9v87YCc8wEfcY8,1099
+debbuild-0.0.0.dist-info/METADATA,sha256=LNVYihGsZT23xk0YFAdUCKlvpgBxd8QXmxWogiZBuvU,4613
+debbuild-0.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+debbuild-0.0.0.dist-info/entry_points.txt,sha256=CMyYTH14l11y8O3raLAhB9Bz1GilCFyagUnTDh66MeM,52
+debbuild-0.0.0.dist-info/top_level.txt,sha256=dxXGuQN2mcri6y6NGwxoqmQzb96FH2JO_eUUsrWyUos,9
+debbuild-0.0.0.dist-info/RECORD,,
