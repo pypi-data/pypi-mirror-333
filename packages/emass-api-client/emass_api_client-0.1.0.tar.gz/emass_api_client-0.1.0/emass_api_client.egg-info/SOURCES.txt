@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+emass_api_client.egg-info/PKG-INFO
+emass_api_client.egg-info/SOURCES.txt
+emass_api_client.egg-info/dependency_links.txt
+emass_api_client.egg-info/requires.txt
+emass_api_client.egg-info/top_level.txt
