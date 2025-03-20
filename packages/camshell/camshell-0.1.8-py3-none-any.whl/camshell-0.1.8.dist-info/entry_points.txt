@@ -1,0 +1,3 @@
+[console_scripts]
+camshell=camshell.cli.cli:cli
+
