@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: logfire-python
+Version: 0.1.0
+Summary: Please use the `logfire` package instead.
+Project-URL: Homepage, https://pypi.org/project/logfire/
+Author-email: Pydantic Team <engineering@pydantic.dev>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 7 - Inactive
+Classifier: Topic :: Internet
+Description-Content-Type: text/markdown
+
+# logfire-python
+
+## Please use the [logfire](https://pypi.org/project/logfire/) package instead.
+
+_(This is a stub package to redirect to [logfire](https://pypi.org/project/logfire/), and shouldn't be installed directly.)_

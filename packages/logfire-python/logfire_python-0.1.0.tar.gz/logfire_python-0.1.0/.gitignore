@@ -1,0 +1,49 @@
+.vscode/**
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+.venv
+/venv/
+/env*/
+/.cache/
+/sandbox/
+*.py[cod]
+__pycache__/
+
+# Pants workspace files
+/.pants.*
+dist/
+/.pids
+
+# pdm python interpreter selector file
+/.pdm-python
+
+# ignore coverage files
+/.coverage.*
+/coverage.xml
+e2e-js-playwright-report
+
+.env
+node_modules
+
+# building logfire package wheels
+**/packages/**/*.whl
+*.egg-info/
+
+# logfire dir
+.logfire
+
+# scratch space
+/scratch/
+/.worktrees/
+
+# cargo build targets
+target/
+
+src/packages/e2e-tests/**/__failures__
+src/packages/e2e-tests/**/*.bad.png
+src/packages/e2e-tests/**/*.mask.png
+
+# Taskfile
+Taskfile.yml
