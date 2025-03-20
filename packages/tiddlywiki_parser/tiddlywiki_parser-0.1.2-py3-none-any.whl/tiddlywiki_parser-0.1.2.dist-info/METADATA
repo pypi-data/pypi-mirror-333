@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: tiddlywiki_parser
+Version: 0.1.2
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: beautifulsoup4>=4.8.0
+Requires-Dist: requests>=2.22.0
