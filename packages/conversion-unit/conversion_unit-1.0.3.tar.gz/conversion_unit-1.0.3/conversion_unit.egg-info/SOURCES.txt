@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+conversion_unit.egg-info/PKG-INFO
+conversion_unit.egg-info/SOURCES.txt
+conversion_unit.egg-info/dependency_links.txt
+conversion_unit.egg-info/entry_points.txt
+conversion_unit.egg-info/requires.txt
+conversion_unit.egg-info/top_level.txt
