@@ -1,0 +1,10 @@
+slimgui/__init__.py,sha256=T7mfE7IVyxU4HNxNOwaZevNMTSW2C6iLJRg5lZmYHHo,4485
+slimgui/integrations/__init__.py,sha256=CSR2VOIKJL-JnGG41PcfbQZQEPCw43jfeK_EUisNsFQ,9
+slimgui/integrations/base.py,sha256=rdTJ4nUkHJW_PSLIppQyQzHnd1OcF7XEoaOMoN-Yy4k,860
+slimgui/integrations/glfw.py,sha256=wcWHNbLZepA3-0-D9nm54upr6_QKrkhGU7CcKz0H5sk,6704
+slimgui/integrations/opengl.py,sha256=RA5pW6KYoHyK2gbhaaxKi1t5VyvaWxjY9bhCGjf6Dbc,12623
+slimgui/slimgui_ext.pyi,sha256=_o9Z372eAt6ys4RmSramsknHJmOeJgNFMGxfyiQx944,56563
+slimgui/slimgui_ext.pypy310-pp73-win_amd64.pyd,sha256=32hWan9crU9zoYYn9KALaLr8GI1AOR9jxZj2bNem3pM,3484160
+slimgui-0.0.5.dist-info/METADATA,sha256=h_xFJmHKevaZPlhymkwIkCzwJqEtaY-G_YvkAo_drGo,1559
+slimgui-0.0.5.dist-info/WHEEL,sha256=5Z0XCzcX-mR8QU1THldITmZCzids2kFzP2icEumbkPQ,113
+slimgui-0.0.5.dist-info/RECORD,,
