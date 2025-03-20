@@ -1,0 +1,134 @@
+Metadata-Version: 2.2
+Name: anyprompt
+Version: 0.4.0
+Summary: Automatically inspect and visualize LLM prompts and responses in your Python projects
+Author-email: anyprompt <ethan@ethicsgpt.ai>
+License: MIT
+Project-URL: Homepage, https://github.com/anyprompt/anyprompt
+Project-URL: Documentation, https://github.com/anyprompt/anyprompt
+Project-URL: Issues, https://github.com/anyprompt/anyprompt/issues
+Keywords: llm,prompt,ai,openai,anthropic,debug,visualization
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.95.0
+Requires-Dist: uvicorn>=0.22.0
+Requires-Dist: jinja2>=3.1.2
+Provides-Extra: all
+Requires-Dist: requests>=2.28.0; extra == "all"
+Requires-Dist: httpx>=0.24.0; extra == "all"
+Requires-Dist: aiohttp>=3.8.4; extra == "all"
+Dynamic: requires-python
+
+<h1 align="center">
+    <span style="font-size: 125px;">📦</span><br>
+    <span style="font-size: 125px;">anyprompt</span>
+  <br>
+  <a href="https://github.com/anyprompt/anyprompt">
+    <img src="https://img.shields.io/pypi/v/anyprompt.svg" alt="PyPI version">
+    <img src="https://img.shields.io/pypi/pyversions/anyprompt.svg" alt="Python versions">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+  </a>
+</h1>
+
+<p align="center">
+  <img src="https://i.imgur.com/mYwYC9V.png" alt="anyprompt" width="500">
+</p>
+
+---
+
+## Installation
+
+```bash
+pip install anyprompt
+```
+
+## What is anyprompt?
+
+**anyprompt** is a lightweight tool that automatically captures and visualizes LLM prompts in your Python projects. With a single import, you get a beautiful web interface to inspect all communications with AI providers.
+
+## Quick Start
+
+### Just import and go!
+
+```python
+import anyprompt  # Automatically starts at http://localhost:2400
+```
+
+That's it! Visit http://localhost:2400 in your browser to see your captured prompts.
+
+## Compatibility
+
+| Library | Status |
+|-------------------|--------|
+| **browser-use** | ✅ Supported |
+| **langchain** | ✅ Supported |
+| **openai** | ✅ Supported |
+| **anthropic** | ✅ Supported |
+| **requests** | ✅ Supported |
+| **httpx** | ✅ Supported |
+| **aiohttp** | ✅ Supported |
+| **urllib** | ✅ Supported |
+| **http.client** | ✅ Supported |
+
+## Examples
+
+### browser-use
+
+```python
+import anyprompt
+# This automatically starts the anyprompt server at http://localhost:2400
+# Then, use browser-use as normal!
+
+from langchain_openai import ChatOpenAI
+from browser_use import Agent
+import asyncio
+
+async def main():
+    agent = Agent(
+        task="Compare the price of gpt-4o and DeepSeek-V3",
+        llm=ChatOpenAI(model="gpt-4o"),
+    )
+    await agent.run()
+
+asyncio.run(main())
+```
+
+### LangChain
+
+```python
+import anyprompt
+# This automatically starts the anyprompt server at http://localhost:2400
+# Then, use browser-use as normal!
+
+from langchain_openai import ChatOpenAI
+from langchain.schema import HumanMessage
+
+# Initialize the LLM
+llm = ChatOpenAI(model="gpt-3.5-turbo")
+
+# Make a call - anyprompt will automatically capture it
+response = llm.invoke([HumanMessage(content="What's the capital of France?")])
+print(response.content)
+```
+
+## Privacy & Security
+
+- Runs locally on your machine
+- No data sent to external servers
+- All prompts stored locally in your project directory
+
+## ⭐ Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
