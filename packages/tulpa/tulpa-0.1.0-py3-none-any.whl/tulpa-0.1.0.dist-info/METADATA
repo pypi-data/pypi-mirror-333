@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: tulpa
+Version: 0.1.0
+Summary: Tools enabling generative AI to interact with the physical world
+Project-URL: Homepage, https://github.com/phillipdupuis/tulpa
+Project-URL: Repository, https://github.com/phillipdupuis/tulpa
+Author-email: Phillip Dupuis <phillip_dupuis@alumni.brown.edu>
+License: GNU General Public License v3.0
+License-File: LICENSE
+Requires-Python: >=3.9
+Provides-Extra: dev
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# tulpa
+
+[![PyPI version](https://badge.fury.io/py/tulpa.svg)](https://badge.fury.io/py/tulpa)
+[![Test](https://github.com/phillipdupuis/tulpa/actions/workflows/test.yml/badge.svg)](https://github.com/phillipdupuis/tulpa/actions/workflows/test.yml)
+[![Lint](https://github.com/phillipdupuis/tulpa/actions/workflows/lint.yml/badge.svg)](https://github.com/phillipdupuis/tulpa/actions/workflows/lint.yml)
+[![Coverage Status](https://codecov.io/github/phillipdupuis/tulpa/branch/main/graph/badge.svg)](https://codecov.io/github/phillipdupuis/tulpa)
+
+Tools enabling generative AI to interact with the physical world
+
+## Installation
+
+```bash
+pip install tulpa
+```
+
+With [uv](https://github.com/astral-sh/uv):
+
+```bash
+uv pip install tulpa
+```
+
+## Usage
+
+```python
+import tulpa
+
+# Add usage examples here
+```
+
+## Development
+
+This project uses modern Python tooling:
+
+- [uv](https://github.com/astral-sh/uv) for dependency management
+- [pytest](https://docs.pytest.org/) for testing
+- [ruff](https://github.com/astral-sh/ruff) for linting and formatting
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/phillipdupuis/tulpa.git
+cd tulpa
+
+# Install development dependencies
+uv pip install -e ".[dev]"
+```
+
+### Running Tests
+
+```bash
+pytest
+```
+
+### Code Quality
+
+```bash
+ruff check .
+ruff format .
+```
+
+## License
+
+[GNU General Public License v3.0](LICENSE)
