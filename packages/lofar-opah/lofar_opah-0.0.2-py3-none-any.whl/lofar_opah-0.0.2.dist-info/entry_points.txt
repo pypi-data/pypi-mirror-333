@@ -1,0 +1,2 @@
+[console_scripts]
+l2ss-opah-grafana-rpc-server = lofar_opah.grafana_rpc.server:main
