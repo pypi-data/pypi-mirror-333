@@ -1,0 +1,2 @@
+include ProcessOptimizer\model_systems\data\*_data.csv
+exclude ProcessOptimizer\model_systems\data\*.jpg
