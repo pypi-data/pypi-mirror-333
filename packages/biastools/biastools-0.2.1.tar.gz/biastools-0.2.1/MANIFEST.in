@@ -1,0 +1,6 @@
+include LICENSE
+include biastools/biastools_align.sh
+include biastools/biastools_compare.sh
+include biastools/biastools_simulation.sh
+include biastools/biastools_analysis.sh
+include biastools/biastools_predict.sh

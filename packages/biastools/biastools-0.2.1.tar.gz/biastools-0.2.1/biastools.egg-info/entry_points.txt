@@ -1,0 +1,3 @@
+[console_scripts]
+biastools = biastools.biastools:main
+biastools_scan = biastools.biastools_scan:main

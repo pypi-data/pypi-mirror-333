@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: biastools
+Version: 0.2.1
+Summary: The toolkits to analyze reference bias of short DNA read alignment.
+Home-page: https://github.com/maojanlin/biastools
+Download-URL: https://github.com/maojanlin/biastools/tarball/master
+Author: Mao-Jan Lin
+Author-email: mj.maojanlin@gmail.com
+License: MIT
+Keywords: biastools,reference bias,alignment
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
