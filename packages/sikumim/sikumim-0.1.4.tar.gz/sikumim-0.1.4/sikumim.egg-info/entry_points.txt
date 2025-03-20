@@ -1,0 +1,2 @@
+[console_scripts]
+dl_lec = download:main
