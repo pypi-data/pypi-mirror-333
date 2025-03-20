@@ -1,0 +1,10 @@
+numpy
+astropy
+pymoc
+healpy
+sfdmap2
+seaborn
+matplotlib-venn
+pyyaml
+pyregion==1.2.0
+humanfriendly
