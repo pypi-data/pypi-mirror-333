@@ -1,0 +1,9 @@
+services:
+  s3:
+    image: "minio/minio:latest"
+    command: server --console-address ":9001" /data
+    environment:
+      - MINIO_COMPRESSION_ENABLE="on"
+    ports:
+      - "9000:9000"
+      - "9001:9001"

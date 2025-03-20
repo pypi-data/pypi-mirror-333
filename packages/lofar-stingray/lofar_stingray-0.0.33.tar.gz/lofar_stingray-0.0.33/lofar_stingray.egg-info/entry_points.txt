@@ -1,0 +1,4 @@
+[console_scripts]
+l2ss-stingray-extract = lofar_stingray.extract:main
+l2ss-stingray-forward = lofar_stingray.forward:main
+l2ss-stingray-publish = lofar_stingray.publish:main

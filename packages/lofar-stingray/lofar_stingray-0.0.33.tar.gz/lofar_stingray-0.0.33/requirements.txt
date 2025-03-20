@@ -1,0 +1,7 @@
+numpy
+minio~=7.1.17
+lofar-station-client>=0.21 # Apache 2
+setuptools>=70.0.0
+logfmter # MIT
+prometheus-client # Apache 2
+pyzmq>=24 # LGPL + BSD

@@ -1,0 +1,4 @@
+.tox
+build
+stingray.egg-info
+venv

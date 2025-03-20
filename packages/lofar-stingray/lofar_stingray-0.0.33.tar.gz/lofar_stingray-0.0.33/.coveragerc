@@ -1,0 +1,6 @@
+[run]
+branch = True
+source = lofar_stingray
+
+[report]
+ignore_errors = True

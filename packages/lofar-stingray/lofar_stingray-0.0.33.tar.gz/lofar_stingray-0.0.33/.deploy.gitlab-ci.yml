@@ -1,0 +1,48 @@
+variables:
+  STATION: "LOFAR station to deploy on"
+
+stages:
+  - deploy
+
+deploy_nomad:
+  stage: deploy
+  image:
+    name: hashicorp/levant
+    entrypoint: [ "" ]
+  parallel:
+    matrix:
+      - COMPONENT:
+          - stingray
+          - stingray-bucket-replication
+  environment:
+    name: $STATION
+  script:
+    - |
+      if [ "${STATION}" == "dts-lab" ]; then
+          # dts-lab test station
+          HOSTNAME="dts-lab.lofar.net"
+          EXTRA_VARFILES="-var-file=infra/env/cs.yaml"
+      elif [ "${STATION::2}" == "rs" ]; then
+          # remote station
+          HOSTNAME="${STATION}c.control.lofar"
+          EXTRA_VARFILES="-var-file=infra/env/rs.yaml"
+      else
+          # core station
+          HOSTNAME="${STATION}c.control.lofar"
+          EXTRA_VARFILES="-var-file=infra/env/cs.yaml"
+      fi
+
+      # To deploy manually, get the env.yaml and the .levant.nomad file,
+      # and run docker run --rm -i --net=host -v /path/to/env.yaml:/env.yaml:ro hashicorp/levant deploy --var-file=/env.yaml /dev/stdin < /path/to/file.levant.nomad
+      levant deploy \
+        -address="http://${HOSTNAME}:4646" \
+        -var-file=infra/env/common.yaml ${EXTRA_VARFILES} \
+        -var image_tag="${CI_COMMIT_REF_SLUG}" \
+        -var station="${STATION}" \
+        -ignore-no-changes \
+        infra/jobs/station/${COMPONENT}.levant.nomad
+
+workflow:
+  name: 'deploy on $STATION'
+  rules:
+    - when: always

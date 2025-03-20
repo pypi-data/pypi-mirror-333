@@ -1,0 +1,7 @@
+numpy
+minio~=7.1.17
+lofar-station-client>=0.21
+setuptools>=70.0.0
+logfmter
+prometheus-client
+pyzmq>=24

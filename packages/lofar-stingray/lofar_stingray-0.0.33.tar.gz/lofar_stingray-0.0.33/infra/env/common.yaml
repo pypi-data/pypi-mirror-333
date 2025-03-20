@@ -1,0 +1,6 @@
+object_storage:
+  mc:
+    version: RELEASE.2024-08-26T10-49-58Z
+  user:
+    name: minioadmin
+    pass: minioadmin
