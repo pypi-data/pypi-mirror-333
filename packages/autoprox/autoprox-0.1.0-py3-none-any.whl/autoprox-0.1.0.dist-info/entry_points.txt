@@ -1,0 +1,2 @@
+[console_scripts]
+autoprox = autoprox.run:main
