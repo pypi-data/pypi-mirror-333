@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: mypackage_at1
+Version: 0.1.0
+Summary: A Python package with a submodule
+Home-page: https://github.ibm.com/ANNIE-THOMAS1/sample_building_blocks
+Author: Annie Thomas
+Author-email: Annie Thomas <annie.thomas1@ibm.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# sample_building_blocks
