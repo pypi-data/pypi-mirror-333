@@ -1,0 +1,57 @@
+# AdversarialAttackNN
+
+A library for adversarial attacks on neural networks. This package provides several common adversarial attack methods, including FGSM, PGD, and more, to test and evaluate the robustness of deep learning models. these are all gradient attacks
+
+## Features
+
+- Implementations of popular adversarial attack methods (e.g., FGSM, PGD, etc.).
+- Easy-to-use API for applying attacks to any PyTorch model.
+- Ability to customize attack parameters (e.g., epsilon, norm, targeted vs. untargeted attacks).
+- Built-in support for ensemble models.
+
+## Installation
+
+You can install `adversarialattacknn` directly from GitHub using `pip`:
+
+```bash
+pip install git+https://github.com/yourusername/adversarialattacknn.git
+```
+## Or you can install it locally by cloning the repository:
+
+```bash
+git clone https://github.com/yourusername/adversarialattacknn.git
+cd adversarialattacknn
+pip install -e .
+```
+
+## USAGE
+### Example: 
+```python
+import torch
+from adversarialattacknn import Attack
+
+# Initialize the model (replace with your own model)
+model = YourModel()
+
+# Example of using the Attack class
+attack = Attack(
+    attack='fgsm',
+    model_name='resnet18',  # or your custom model
+    epsilon=0.1,
+    targeted=False,
+    random_start=True,
+    norm='linfty',
+    loss='crossentropy'
+)
+
+# Sample data (replace with actual data)
+data = torch.randn((1, 3, 224, 224))  # Batch of images
+label = torch.tensor([0])  # Ground-truth label
+
+# Perform the attack
+perturbation = attack(data, label)
+
+# Apply perturbation to input data
+adversarial_example = data + perturbation
+```
+-santhoshkumar
