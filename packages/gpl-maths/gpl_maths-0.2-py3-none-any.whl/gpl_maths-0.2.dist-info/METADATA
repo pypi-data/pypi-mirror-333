@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: gpl_maths
+Version: 0.2
+Author: Suresh Maha Rajashekar
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: requires-dist
