@@ -1,0 +1,519 @@
+Metadata-Version: 2.3
+Name: pan-scm-cli
+Version: 0.1.2
+Summary: Network Engineer-friendly CLI for Palo Alto Networks Security Content Management
+Author: Calvin Remsburg
+Author-email: calvin@cdot.io
+Requires-Python: >=3.11,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cmd2 (>=2.4.3,<3.0.0)
+Requires-Dist: pan-scm-sdk (>=0.3.18)
+Requires-Dist: pandas (>=2.2.0,<3.0.0)
+Requires-Dist: pydantic (>=2.9.2,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: rich (>=13.7.0,<14.0.0)
+Description-Content-Type: text/markdown
+
+# PAN-SCM-CLI
+
+<div align="center">
+  
+![Palo Alto Networks](https://img.shields.io/badge/Palo_Alto_Networks-SCM-blue)
+![Python](https://img.shields.io/badge/Python-3.12.9-blue)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-0.1.0-orange.svg)]()
+
+  A network engineer-friendly command-line interface for 
+  Palo Alto Networks Strata Cloud Manager (SCM)
+
+</div>
+
+## Overview
+
+PAN-SCM-CLI provides a familiar networking-style CLI experience for interacting with Palo Alto Networks Strata Cloud Manager (SCM) API. This tool bridges the gap between traditional network engineering workflows and cloud security management, making SCM more accessible for network professionals who prefer CLI environments.
+
+The CLI offers command-line shortcuts, tab completion, help menus, and output formatting that will feel familiar to engineers with experience in network CLI environments.
+
+## Table of Contents
+
+- [Features](#features)
+- [Architecture](#architecture)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Authentication](#authentication)
+- [CLI Workflows](#cli-workflows)
+- [Usage Examples](#usage-examples)
+- [Command Reference](#command-reference)
+- [Development](#development)
+- [Project Structure](#project-structure)
+- [Technical Details](#technical-details)
+- [Package Import Structure](#package-import-structure)
+- [License](#license)
+- [Contributing](#contributing)
+
+## Features
+
+- **Familiar CLI Syntax**: networking-style commands with keyword-based arguments
+- **Context-Sensitive Help**: Use `?` anywhere to get context-specific help
+- **Tab Completion**: Quickly complete commands, folder names, and object names
+- **Command History**: Track and search command history stored in SQLite
+- **Partial Updates**: Update specific fields of existing objects without re-specifying everything
+- **Rich Terminal Output**: Colorized, formatted output with tables and JSON
+- **Authentication**: OAuth2 authentication with the SCM API
+- **Typed API Client**: Type-annotated SDK client for better code quality
+- **API Caching**: Efficient caching system for API responses
+- **Persistent State**: Maintains CLI state between sessions
+
+## Architecture
+
+The SCM CLI is built with a layered architecture that separates concerns and provides flexibility:
+
+```mermaid
+graph TD
+    A[User Input] --> B[CLI Layer]
+    B --> C[Command Implementation Layer]
+    C --> D[SDK Client Layer]
+    D --> E[Underlying SCM SDK]
+    E --> F[SCM API]
+    B <--> G[Database Layer]
+    D <--> H[Configuration Layer]
+    
+    classDef primary fill:#9ecae1,stroke:#3182bd,stroke-width:2px;
+    classDef secondary fill:#c6dbef,stroke:#6baed6,stroke-width:2px;
+    class B,C,D primary;
+    class E,F,G,H secondary;
+```
+
+1. **CLI Layer**: Handles user input, command parsing, and display
+2. **Command Implementation Layer**: Implements commands for each resource type
+3. **SDK Client Layer**: Abstracts the Palo Alto Networks SCM SDK
+4. **Configuration Layer**: Manages credentials and settings
+5. **Database Layer**: Stores command history and maintains state
+6. **Underlying SDK**: Communicates with the Palo Alto Networks SCM API
+
+## Requirements
+
+- Python 3.12.9 (managed with pyenv)
+- Poetry for dependency management
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/cdot65/pan-scm-cli.git
+cd pan-scm-cli
+
+# Install dependencies
+poetry install
+
+# Copy the example .env file and modify with your credentials
+cp .env.example .env
+nano .env  # Edit with your credentials
+
+# Run the CLI
+poetry run scm-cli
+```
+
+## Authentication
+
+The SCM CLI requires OAuth credentials to authenticate with the SCM API. These credentials must be provided in a `.env` file in the current directory with the following format:
+
+```
+SCM_CLIENT_ID=your_client_id_here
+SCM_CLIENT_SECRET=your_client_secret_here
+SCM_TSG_ID=your_tsg_id_here
+```
+
+You can also specify optional settings:
+
+```
+SCM_BASE_URL=https://api.strata.paloaltonetworks.com
+SCM_VERIFY_SSL=true
+```
+
+## CLI Workflows
+
+### Basic Navigation Workflow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant CLI
+    participant SCM
+    
+    User->>CLI: Start SCM CLI
+    CLI->>SCM: Initialize connection
+    SCM-->>CLI: Connection established
+    CLI-->>User: ✅ Client initialized successfully
+    
+    User->>CLI: configure
+    CLI-->>User: Entered configuration mode
+    
+    User->>CLI: edit folder Texas
+    CLI->>SCM: Verify folder exists
+    SCM-->>CLI: Folder verified
+    CLI-->>User: Entered folder Texas
+    
+    User->>CLI: exit
+    CLI-->>User: Exit to operational mode
+    
+    User->>CLI: quit
+    CLI-->>User: Exit CLI
+```
+
+### Address Object Management Workflow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant CLI
+    participant SCM API
+    participant Database
+    
+    User->>CLI: set address-object name webserver1 type ip-netmask value 192.168.1.10/32
+    CLI->>CLI: Parse command
+    CLI->>SCM API: Create address object
+    SCM API-->>CLI: Object created
+    CLI->>Database: Log command
+    CLI-->>User: ✅ created address-object webserver1
+    
+    User->>CLI: show address-object webserver1
+    CLI->>SCM API: Get object details
+    SCM API-->>CLI: Object details
+    CLI-->>User: Display object in JSON format
+    
+    User->>CLI: set address-object name webserver1 description "Updated desc"
+    CLI->>SCM API: Update address object
+    SCM API-->>CLI: Object updated
+    CLI->>Database: Log command
+    CLI-->>User: ✅ updated address-object webserver1
+    
+    User->>CLI: delete address-object webserver1
+    CLI->>SCM API: Delete address object
+    SCM API-->>CLI: Object deleted
+    CLI->>Database: Log command
+    CLI-->>User: ✅ deleted address-object webserver1
+```
+
+## Usage Examples
+
+### Basic Navigation
+
+```bash
+# Start the CLI 
+$ poetry run scm-cli
+Entering SCM CLI
+✅ Client initialized successfully
+
+# Enter configuration mode
+developer@scm> configure
+
+# Edit a specific folder
+developer@scm# edit folder Texas
+
+# Exit configuration mode
+developer(Texas)# exit
+
+# Exit the CLI
+developer@scm> quit
+```
+
+### Managing Address Objects
+
+```bash
+# Create a new address object
+developer(Texas)# set address-object name webserver1 type ip-netmask value 192.168.1.10/32 description "Web Server" tags "Production,HTTP"
+✅ - created address-object webserver1
+
+# Show details of an address object
+developer(Texas)# show address-object webserver1
+{
+  "name": "webserver1",
+  "type": "ip-netmask",
+  "value": "192.168.1.10/32",
+  "description": "Web Server",
+  "tags": ["Production", "HTTP"]
+}
+
+# Update just one field of an existing address object
+developer(Texas)# set address-object name webserver1 description "Primary Web Server"
+✅ - updated address-object webserver1
+
+# List all address objects in current folder
+developer(Texas)# show address-object
+Address Objects in Texas
+┌───────────┬────────────┬────────────────┬────────────────────┬────────────────┐
+│ Name      │ Type       │ Value          │ Description        │ Tags           │
+├───────────┼────────────┼────────────────┼────────────────────┼────────────────┤
+│ webserver1│ ip-netmask │ 192.168.1.10/32│ Primary Web Server │ Production, HTTP│
+└───────────┴────────────┴────────────────┴────────────────────┴────────────────┘
+
+# Delete an address object
+developer(Texas)# delete address-object webserver1
+✅ - deleted address-object webserver1
+```
+
+### Using Command History
+
+```bash
+# View command history
+developer(Texas)# history
+Command History (last 50 commands)
+┌─────┬────────────────────────────────────────────────────────────────────┬────────────────┐
+│ ID  │ Command                                                            │ Timestamp      │
+├─────┼────────────────────────────────────────────────────────────────────┼────────────────┤
+│ 123 │ set address-object name webserver1 type ip-netmask value 192.168...│ 10 minutes ago │
+│ 124 │ show address-object webserver1                                     │ 8 minutes ago  │
+└─────┴────────────────────────────────────────────────────────────────────┴────────────────┘
+
+# Filter history by command content
+developer(Texas)# history --filter "webserver"
+```
+
+## Command Reference
+
+### Navigation and Mode Commands
+
+- `configure` - Enter configuration mode
+- `edit folder <folder-name>` - Edit a specific folder
+- `exit` - Exit current mode or the CLI
+- `quit` - Exit the CLI
+
+### Address Object Commands
+
+- `set address-object name <n> type <type> value <value> [description <text>] [tags <tags>]` - Create/update an address object
+- `show address-object <n>` - Display address object details
+- `show address-object` - List all address objects in current folder
+- `show address-objects-filter [--name <n>] [--type <type>] [--value <val>] [--tag <tag>]` - Search and filter address objects
+- `delete address-object <n>` - Delete an address object
+
+### History Command
+
+- `history` - Show the last 50 commands (default)
+- `history --page <n>` - Navigate between pages of history
+- `history --limit <n>` - Change how many commands are shown per page
+- `history --folder <folder>` - Filter history by folder
+- `history --filter <text>` - Filter history by command content
+- `history --id <n>` - Show details of a specific history entry, including command output
+- `history --clear` - Clear the command history
+
+### Getting Help
+
+```mermaid
+flowchart TD
+    A[User needs help] --> B{What type of help?}
+    B -->|Command overview| C[Type 'help']
+    B -->|Specific command| D[Type 'help &lt;command&gt;']
+    B -->|Command-specific help| E[Append --help to any command]
+    B -->|Command completion| F[Press TAB key]
+    
+    C --> G[Display all available commands]
+    D --> H[Display detailed help for specific command]
+    E --> I[Show formatted help tables for the command]
+    F --> J[Auto-complete current input]
+    
+    style A fill:#f9f9f9,stroke:#666,stroke-width:2px
+    style B fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style C,D,E,F fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    style G,H,I,J fill:#f1f8e9,stroke:#558b2f,stroke-width:1px
+```
+
+There are several ways to get help in the SCM CLI:
+
+1. **Command help**: Type `help` to see all available commands, or `help <command>` to see detailed help for a specific command.
+
+2. **Using the `--help` flag**: Append `--help` to any command or subcommand to get detailed, context-specific help.
+   ```
+   scm> set --help
+   scm> set address-object --help
+   scm> edit folder --help
+   ```
+
+3. **Command examples**: The help system displays usage examples for each command and subcommand.
+   ```
+   scm> set address-object --help
+   
+   Examples:
+   set address-object test1 type ip-netmask value 1.1.1.1/32
+   set address-object test2 type fqdn value example.com
+   ```
+
+4. **Tab completion**: Press TAB to auto-complete commands, arguments, and values.
+
+## Development
+
+This project uses Poetry for dependency management and follows modern Python development practices.
+
+### Development Commands
+
+```bash
+# Install development dependencies
+poetry install
+
+# Run tests
+poetry run pytest
+
+# Run a specific test
+poetry run pytest tests/test_file.py::test_function -v
+
+# Format code
+poetry run black .
+poetry run isort .
+
+# Type checking
+poetry run mypy .
+
+# Linting
+poetry run flake8 .
+```
+
+## Project Structure
+
+```mermaid
+graph TD
+    A[pan-scm-cli/] --> B[pyproject.toml]
+    A --> C[README.md]
+    A --> D[src/]
+    A --> E[tests/]
+    
+    D --> F[scm_cli/]
+    F --> G[__init__.py]
+    F --> H[cli/]
+    F --> I[models/]
+    F --> J[utils/]
+    F --> K[docs/]
+    
+    H --> L[main.py]
+    H --> M[network/]
+    H --> N[object/]
+    
+    N --> O[address_object/]
+    N --> P[address_group/]
+    O --> Q[commands.py]
+    O --> R[models.py]
+    
+    J --> S[config.py]
+    J --> T[db.py]
+    J --> U[logging.py]
+    J --> V[sdk_client.py]
+    J --> W[state_manager.py]
+    
+    E --> X[test_cli.py]
+    E --> Y[test_config.py]
+    
+    classDef default fill:#ddd,stroke:#333,stroke-width:1px;
+    classDef core fill:#d4f1c5,stroke:#333,stroke-width:1px;
+    classDef config fill:#f6e8c3,stroke:#333,stroke-width:1px;
+    classDef tests fill:#c7eae5,stroke:#333,stroke-width:1px;
+    
+    class B,C config;
+    class G,L,Q,R,S,T,U,V,W core;
+    class X,Y tests;
+```
+
+```
+pan-scm-cli/
+├── pyproject.toml         # Project configuration and dependencies
+├── README.md              # Project documentation (this file)
+├── src/
+│   └── scm_cli/           # Main package directory
+│       ├── __init__.py    # Package initialization
+│       ├── cli/           # CLI implementation 
+│       │   ├── main.py    # Main CLI entry point
+│       │   ├── network/   # Network-related commands
+│       │   └── object/    # Object management commands
+│       ├── models/        # Data models
+│       ├── utils/         # Utility functions
+│       │   ├── config.py  # Configuration management
+│       │   ├── db.py      # Database interface
+│       │   ├── logging.py # Logging configuration
+│       │   └── sdk_client.py # SDK client abstraction
+│       └── docs/          # Documentation
+└── tests/                 # Test directory
+    ├── test_cli.py        # CLI tests
+    └── test_config.py     # Configuration tests
+```
+
+## Technical Details
+
+The SCM CLI is built on the following key components:
+
+1. **cmd2**: Extends Python's built-in cmd module with additional features like tab completion, colorization, and more complex command handling.
+
+2. **rich**: Provides rich text and beautiful formatting in the terminal, including tables, panels, and syntax highlighting.
+
+3. **python-dotenv**: Loads environment variables from .env files for configuration.
+
+4. **SQLite**: Stores command history and caches in a local database file.
+
+5. **pan-scm-sdk**: The official Palo Alto Networks SDK for interacting with the SCM API.
+
+6. **pydantic**: Handles data validation and serialization.
+
+## Package Import Structure
+
+The project uses a clean, consistent import structure to ensure compatibility when installed as a package:
+
+```mermaid
+graph TD
+    A[External Code] --> B[scm_cli Package]
+    B --> C[CLI Module]
+    B --> D[Utils Module]
+    B --> E[Models Module]
+    
+    C --> F[Object Commands]
+    C --> G[Network Commands]
+    
+    F --> H[Address Object]
+    F --> I[Address Group]
+    
+    D --> J[Config]
+    D --> K[SDK Client]
+    D --> L[Database]
+    
+    classDef external fill:#f9f9f9,stroke:#666,stroke-width:1px;
+    classDef package fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    classDef modules fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px;
+    classDef submodules fill:#f1f8e9,stroke:#558b2f,stroke-width:1px;
+    
+    class A external;
+    class B package;
+    class C,D,E modules;
+    class F,G,H,I,J,K,L submodules;
+```
+
+### Import Best Practices
+
+When working with this package, follow these import guidelines:
+
+1. **External imports** should use the package name without the src prefix:
+   ```python
+   from scm_cli.utils.config import load_oauth_credentials
+   ```
+
+2. **Internal relative imports** should be used within modules for closely related components:
+   ```python
+   from .models import AddressObjectAPI
+   ```
+
+3. **Parent-package imports** should use absolute imports from the package root:
+   ```python
+   from scm_cli.utils.decorators import timeit
+   ```
+
+## License
+
+[MIT License](LICENSE)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
