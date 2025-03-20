@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+morse_lab/__init__.py
+morse_lab/morse.py
+morse_lab/morse_dict.py
+morse_lab.egg-info/PKG-INFO
+morse_lab.egg-info/SOURCES.txt
+morse_lab.egg-info/dependency_links.txt
+morse_lab.egg-info/top_level.txt
+tests/test_japanese_to_english.py
+tests/test_morse_dicts.py
+tests/test_morse_to_text.py
+tests/test_text_to_morse.py
+tests/test_wabun_morse_conversion.py
