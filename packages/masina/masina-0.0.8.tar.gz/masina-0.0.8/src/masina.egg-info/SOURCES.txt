@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/masina/__init__.py
+src/masina/auto.py
+src/masina/control.py
+src/masina/gui_desktop.py
+src/masina/rmasina_app.py
+src/masina.egg-info/PKG-INFO
+src/masina.egg-info/SOURCES.txt
+src/masina.egg-info/dependency_links.txt
+src/masina.egg-info/requires.txt
+src/masina.egg-info/top_level.txt
+src/masina/GUI/add_auto.ui
+src/masina/GUI/filterWindow.ui
+src/masina/GUI/masina.ui
