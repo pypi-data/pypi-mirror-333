@@ -1,0 +1,9 @@
+README.md
+setup.py
+py_weatherdataai/__init__.py
+py_weatherdataai/client.py
+py_weatherdataai.egg-info/PKG-INFO
+py_weatherdataai.egg-info/SOURCES.txt
+py_weatherdataai.egg-info/dependency_links.txt
+py_weatherdataai.egg-info/requires.txt
+py_weatherdataai.egg-info/top_level.txt

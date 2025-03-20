@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: py_weatherdataai
+Version: 0.1.0
+Summary: A simple API client for WeatherDataAI
+Home-page: https://weatherdata.ai
+Author: Your Name
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
