@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+sparrow_datums/__init__.py
+sparrow_datums/chunk.py
+sparrow_datums/chunk_test.py
+sparrow_datums/chunk_types.py
+sparrow_datums/chunk_types_test.py
+sparrow_datums/exceptions.py
+sparrow_datums.egg-info/PKG-INFO
+sparrow_datums.egg-info/SOURCES.txt
+sparrow_datums.egg-info/dependency_links.txt
+sparrow_datums.egg-info/requires.txt
+sparrow_datums.egg-info/top_level.txt
