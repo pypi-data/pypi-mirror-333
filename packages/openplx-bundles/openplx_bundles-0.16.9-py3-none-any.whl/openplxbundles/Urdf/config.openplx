@@ -1,0 +1,5 @@
+
+config is BundleConfig:
+    name: "Urdf"
+    version: "0.16.9"
+    dependencies: ["Physics3D==0.16.9", "Visuals==0.16.9"]
