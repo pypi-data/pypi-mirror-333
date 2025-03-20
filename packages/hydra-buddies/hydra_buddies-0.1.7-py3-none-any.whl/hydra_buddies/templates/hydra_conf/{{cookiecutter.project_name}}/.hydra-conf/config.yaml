@@ -1,0 +1,13 @@
+defaults:
+  - secrets/login
+  - secrets/keys
+  - _self_
+  - database: default
+  - api: default
+  - logging: default
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+project:
+  name: {{cookiecutter.project_name}}
+  version: "0.1.0" 

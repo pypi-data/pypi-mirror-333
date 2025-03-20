@@ -1,0 +1,4 @@
+[console_scripts]
+buddy=hydra_buddies.cli:cli
+upversion=scripts.upversion:main
+
