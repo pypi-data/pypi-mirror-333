@@ -1,0 +1,9 @@
+sqlbear/__init__.py,sha256=g2dH7kylo3H6WKZVIxG44yB8Yv-oqyGI2UqVbvnMaTM,327
+sqlbear/_version.py,sha256=-b9ZZFECMl_Ta43t--bBNl5dlNm5SlbLuwA5OtaM5z0,22
+sqlbear/core.py,sha256=j6emZ8Bj_xR9H0XIp9Fn5H7J7CqbBq0UVMM3ABw-ukU,2342
+sqlbear/sql_helpers.py,sha256=ibB-7i6a38T6rPS0MV26uMqkHrOYgNW2kuuPZcyOnmk,14719
+sqlbear-0.1.1.dist-info/LICENSE,sha256=ZpPJm_hp_K2C13xiHQU0O8p2T0jstamyumiDjr6TnVY,1084
+sqlbear-0.1.1.dist-info/METADATA,sha256=wq6VTNuK_Hr8A1JxWs9uj_HWPmiY7GR86fOJdTuy1Po,1992
+sqlbear-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sqlbear-0.1.1.dist-info/top_level.txt,sha256=QTbi0ZwV0bB4GD6CKl2sS3w1fe3W9yT4MXIMmLPSBzE,8
+sqlbear-0.1.1.dist-info/RECORD,,
