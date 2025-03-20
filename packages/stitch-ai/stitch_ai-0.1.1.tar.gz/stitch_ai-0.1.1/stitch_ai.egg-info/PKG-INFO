@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: stitch_ai
+Version: 0.1.1
+Summary: Stitch AI SDK for managing memory spaces and memories
+Home-page: https://github.com/StitchAI/stitch-ai-cli-py
+Author: Stitch AI
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Stitch SDK
+
+Stitch SDK is a Python library that wraps the API for managing memory spaces and memories.
+
+## Installation
+
+```bash
+pip install stitch_ai
+```
+
+## Usage
+
+```python
+from stitch_ai import StitchSDK
+
+sdk = StitchSDK()
+sdk.create_space("my_space")
+```
