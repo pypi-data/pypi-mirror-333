@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/minenv/__init__.py
+src/minenv/py.typed
+src/minenv.egg-info/PKG-INFO
+src/minenv.egg-info/SOURCES.txt
+src/minenv.egg-info/dependency_links.txt
+src/minenv.egg-info/requires.txt
+src/minenv.egg-info/top_level.txt

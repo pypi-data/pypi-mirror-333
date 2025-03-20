@@ -1,0 +1,76 @@
+Metadata-Version: 2.2
+Name: minenv
+Version: 0.1.0
+Summary: A minimal module for working with dotenv files.
+Author-email: stefanlight8 <64615032+stefanlight8@users.noreply.github.com>
+Project-URL: Repository, https://github.com/stefanlight8/minenv.git
+Project-URL: Issues, https://github.com/stefanlight8/minenv/issues
+Keywords: minimal,dotenv,env
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.5; extra == "dev"
+
+# dotenv
+A minimal module for working with dotenv files.
+
+## Examples
+```py
+>>> from dotenv import load_dotenv, getenv
+>>> load_dotenv()
+```
+
+Load the dotenv file from `.env`. If any error occurs, nothing will happen.
+However, if the value is being retrieved from a `load_dotenv()` call:
+
+```py
+>>> env = load_dotenv()
+>>> print(env)  # `None` if all is alright.
+>>> print(env)  # In case of `Exception`, Houston, we have a problem.
+
+>>> load_dotenv(verbose=True)
+```
+
+In this case, if there's an exception, the function will raise it.
+
+```py
+>>> key: str = getenv("API_KEY")
+```
+
+`getenv()` returns the value from the environment by the key if it exists.
+If the key doesn't exist, `getenv()` will raise a `KeyError`.
+
+To avoid this exception:
+
+```py
+>>> max_connections: Union[str, int] = getenv("MAX_CONNECTIONS", default=100)
+```
+
+You can pass any value as the `default` argument, which prevents the exception!
+
+However, as you can see, `max_connections` might be `str`, which could be problematic.
+To avoid this, `getenv()` provides a way to cast the result:
+
+```py
+>>> max_connections: int = getenv("MAX_CONNECTIONS", into=int)
+```
+Now `max_connections` will be of type `int`.
+
+# Installation
+```sh
+> pip install git+https://github.com/stefanlight8/dotenv
+```
+
+## Requirements
+- Python 3.6<
