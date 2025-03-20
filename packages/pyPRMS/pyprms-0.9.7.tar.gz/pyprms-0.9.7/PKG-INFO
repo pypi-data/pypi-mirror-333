@@ -1,0 +1,67 @@
+Metadata-Version: 2.2
+Name: pyPRMS
+Version: 0.9.7
+Summary: Python library for Precipitation-Runoff Modeling System
+Author-email: Parker Norton <pnorton@usgs.gov>
+Maintainer-email: Parker Norton <pnorton@usgs.gov>
+Project-URL: Repository, https://github.com/EC-USGS/pyPRMS.git
+Keywords: PRMS,NHM,streamflow,hydrology,surface
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: <3.13,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: cartopy
+Requires-Dist: dask
+Requires-Dist: fsspec
+Requires-Dist: geopandas
+Requires-Dist: matplotlib
+Requires-Dist: netCDF4
+Requires-Dist: networkx>=2
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyproj
+Requires-Dist: rich
+Requires-Dist: shapely
+Requires-Dist: sphinx
+Requires-Dist: sphinx-autodoc-typehints
+Requires-Dist: sphinx-book-theme
+Requires-Dist: xarray
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: mypy_extensions; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: pytest-datafiles; extra == "dev"
+
+pyPRMS
+======
+[![ci-badge](https://github.com/EC-USGS/pyPRMS/actions/workflows/ci.yaml/badge.svg?branch=development)](https://github.com/EC-USGS/pyPRMS/actions?query=workflows%3CI)
+
+A Python library for working with the Precipitation-Runoff Modeling System (PRMS)
+
+----
+
+The pyPRMS library provides a set of python interfaces to read, modify, and write various files used by and for PRMS.
+
+pip install
+-----------
+The library can be installed using pip. The development branch contains the most
+up-to-date version of the software.
+
+To install from development branch use the following command::
+
+    pip install git+https://github.com/EC-USGS/pyPRMS.git
+
+To update from the development branch type::
+
+    pip install git+https://github.com/EC-USGS/pyPRMS.git --upgrade
+
+To uninstall pyPRMS type::
+
+    pip uninstall pyPRMS
+
+
+
+

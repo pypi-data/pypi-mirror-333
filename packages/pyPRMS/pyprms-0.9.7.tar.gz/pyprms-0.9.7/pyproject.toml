@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61"]   # , "setuptools-scm", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyPRMS"
+description = "Python library for Precipitation-Runoff Modeling System"
+readme = "README.md"
+dynamic = ["version"]
+requires-python = ">=3.10,<3.13"
+license = {file = "LICENSE"}
+authors = [{name = "Parker Norton", email = "pnorton@usgs.gov"}, ]
+maintainers = [{name = "Parker Norton", email = "pnorton@usgs.gov"}, ]
+keywords = ["PRMS", "NHM", "streamflow", "hydrology", "surface"]
+classifiers = ["Development Status :: 3 - Alpha",
+               "Programming Language :: Python :: 3", ]
+
+dependencies = ["cartopy",
+    "dask",
+    "fsspec",
+    "geopandas",
+    "matplotlib",
+    "netCDF4",
+    "networkx>=2",
+    "numpy",
+    "pandas",
+    "pyproj",
+    "rich",
+    "shapely",
+    "sphinx",
+    "sphinx-autodoc-typehints",
+    "sphinx-book-theme",
+    "xarray", ]
+
+[project.optional-dependencies]
+dev = ["mypy",
+       "mypy_extensions",
+       "pytest",
+       "pytest-cov",
+       "pytest-xdist",
+       "pytest-datafiles",]
+
+[project.urls]
+Repository = "https://github.com/EC-USGS/pyPRMS.git"
+
+[project.scripts]
+convert_params = "pyPRMS.utilities.convert_params:main"
+convert_cbh = "pyPRMS.utilities.convert_cbh:main"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.dynamic]
+version = {attr = "pyPRMS.version.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pyPRMS", "pyPRMS.*"]
+
+[tool.setuptools.package-data]
+"pyPRMS.xml" = ["*.xml"]

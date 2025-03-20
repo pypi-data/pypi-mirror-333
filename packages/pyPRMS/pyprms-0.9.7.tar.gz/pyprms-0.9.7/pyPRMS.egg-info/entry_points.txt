@@ -1,0 +1,3 @@
+[console_scripts]
+convert_cbh = pyPRMS.utilities.convert_cbh:main
+convert_params = pyPRMS.utilities.convert_params:main
