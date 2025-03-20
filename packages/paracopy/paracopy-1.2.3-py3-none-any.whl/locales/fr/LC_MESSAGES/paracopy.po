@@ -1,0 +1,809 @@
+# French translations for paracopy package.
+# Copyright (c) 2024 - 2025 Pierre-Yves Genest
+# This file is distributed under the same license as the paracopy package.
+# Pierre-Yves Genest <>, 2024-2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: paracopy\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-12 15:57+0100\n"
+"PO-Revision-Date: 2025-03-12 15:57+0100\n"
+"Last-Translator: Pierre-Yves Genest <>\n"
+"Language-Team: French <paracopy@bibliciel.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 47.1\n"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/copy.py, line: 97
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 100
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 159
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/source.py, line: 297
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/usb.py, line: 276
+msgid "Unknown error."
+msgstr "Erreur inconnue."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 50
+msgid "ParaCopy is only working with Linux."
+msgstr "ParaCopy fonctionne uniquement avec Linux."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 68
+msgid "ParaCopy support only Fedora ≥ 40."
+msgstr "ParaCopy supporte seulement Fedora ≥ 40."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 68
+#, python-brace-format
+msgid "ParaCopy does not support '{distro} {version}'."
+msgstr "ParaCopy ne supporte pas la distribution '{distro} {version}'."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 83
+msgid ""
+"The command pkexec is not available. Please install the polkit package.\n"
+"You can use the following command: `sudo dnf install polkit`."
+msgstr ""
+"L'utilitaire pkexec n'est pas disponible. Veuillez installer le package "
+"polkit.\n"
+"Vous pouvez utiliser la commande suivante : `sudo dnf install polkit`."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 160
+#, python-brace-format
+msgid ""
+"Some packages are missing: `{packages}`.\n"
+"Please install them."
+msgstr ""
+"Certains paquets sont manquants : `{packages}`.\n"
+"Installez-les."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 144
+#, python-brace-format
+msgid "Unable to install the required packages: `{packages}`."
+msgstr "Impossible d'installer les packages requis : `{packages}`."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 235
+#, python-brace-format
+msgid "New version {version} of ParaCopy is available. Please install it."
+msgstr ""
+"La version {version} de ParaCopy est disponible. Installez-la s'il-vous-"
+"plaît."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 241
+msgid "Unable to request PyPI."
+msgstr "Impossible de contacter PyPI."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/installation.py, line: 243
+msgid "PyPI does not return the correct format."
+msgstr "PyPI ne renvoie pas le bon format."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/copy_partition.py, line: 239
+msgid "Insufficient permissions."
+msgstr "Permissions insuffisantes."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/copy_partition.py, line: 223
+msgid "The number of destinations per copy process cannot be negative."
+msgstr ""
+"Le nombre de destinations par processus de copie ne peut pas être négatif."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/copy_partition.py, line: 231
+msgid "Error with the destinations."
+msgstr "Erreur avec les destinations."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/copy_partition.py, line: 234
+msgid "Source does not exist."
+msgstr "La source n'existe pas."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/copy_partition.py, line: 302
+msgid "There were errors for some destinations."
+msgstr "Il y a eu des erreurs pour certaines destinations."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 51
+msgid "Unable to unmount the internal source device."
+msgstr "Impossible de démonter le périphérique interne pour la source."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 66
+msgid "Unable to unmount the FAT32 content partition."
+msgstr "Impossible de démonter la partition FAT32."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 120
+msgid "Unable to initialize the source image file."
+msgstr "Impossible de d'initialiser l'image source."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 146
+msgid "Unable to initialize the partitions inside the source image."
+msgstr "Impossible d'initialiser les partitions de l'image source."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 166
+msgid "Unable to mount the source image to an internal device."
+msgstr "Impossible de monter l'image source sur un périphérique interne."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 191
+msgid "Unable to create the FAT32 content partition."
+msgstr "Impossible de r la partition FAT32."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 204
+msgid "Unable to mount the content partition."
+msgstr "Impossible de monter la partition."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 237
+msgid "An error occurred during the content copy."
+msgstr "Une erreur s'est produite pendant la copie."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 270
+msgid "An error occurred during content verification."
+msgstr "Une erreur s'est produite pendant la vérification de la copie."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/services/root/create_source.py, line: 303
+msgid "Unable to change owner and permissions."
+msgstr "Impossible de changer le propriétaire et les permissions."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/about/main.py, line: 25
+#, python-brace-format
+msgid ""
+"\n"
+"# ParaCopy\n"
+"**{version}**\n"
+"[Release Notes](https://codeberg.org/paracopy/paracopy/releases) &\n"
+"[Source Code](https://codeberg.org/paracopy/paracopy)\n"
+"\n"
+"Copyright (c) 2024 - 2025 Pierre-Yves Genest.\n"
+msgstr ""
+"\n"
+"# ParaCopy\n"
+"**{version}**\n"
+"[Notes de version](https://codeberg.org/paracopy/paracopy/releases) &\n"
+"[Code source](https://codeberg.org/paracopy/paracopy)\n"
+"\n"
+"Copyright (c) 2024 - 2025 Pierre-Yves Genest.\n"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/about/main.py, line: 34
+msgid ""
+"\n"
+"ParaCopy is licensed under the Affero GNU General Public License version 3.\n"
+"\n"
+"> ParaCopy is free software: you can redistribute it and/or modify it under "
+"the terms of the GNU Affero General Public License as published by the Free "
+"Software Foundation, version 3 of the License.\n"
+">\n"
+"> ParaCopy is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License "
+"for more details.\n"
+">\n"
+"> You should have received a copy of the GNU Affero General Public License "
+"along with ParaCopy. If not, see <https://www.gnu.org/licenses/>.\n"
+"\n"
+"*All rights reserved on the ParaCopy name and logo.*\n"
+msgstr ""
+"\n"
+"ParaCopy est sous licence Affero GNU General Public License version 3.\n"
+"\n"
+"> ParaCopy est un logiciel libre : vous pouvez le redistribuer et/ou le "
+"modifier selon les termes de la Affero GNU General Public License telle que "
+"publiée par la Free Software Foundation, version 3 de la Licence.\n"
+"> \n"
+"> ParaCopy est distribué dans l'espoir qu'il sera utile, mais SANS AUCUNE "
+"GARANTIE ; sans même la garantie implicite de VALEUR COMMERCIALE ou "
+"d'ADAPTATION A UN USAGE PARTICULIER. Voir la Affero GNU General Public "
+"License pour plus de détails.\n"
+"> \n"
+"> Vous devriez avoir reçu une copie de la Affero GNU General Public License "
+"avec ParaCopy. Si ce n'est pas le cas, voir [https://www.gnu.org/licenses/]"
+"().\n"
+"\n"
+"*Tous droits réservés sur le nom ParaCopy et le logo ParaCopy.*\n"
+"\n"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/about/main.py, line: 62
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 69
+msgid "About"
+msgstr "À propos"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/device.py, line: 41
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/device.py, line: 123
+msgid "Disconnected"
+msgstr "Déconnecté"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/device.py, line: 119
+msgid "Connected"
+msgstr "Connecté"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 69
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 240
+msgid "Start copy"
+msgstr "Lancer la copie"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 74
+msgid "Compute occupied space"
+msgstr "Calculer l'espace occupé"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 76
+msgid "Compute the occupied space for each destination currently connected."
+msgstr ""
+"Calcule l'espace occupé pour chaque destination actuellement connectée."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 84
+msgid "Source"
+msgstr "Source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 149
+msgid "A copy is in progress."
+msgstr "Une copie est en cours."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 157
+msgid "Occupied space is currently being calculated."
+msgstr "L'espace occupé est en cours de calcul."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 206
+msgid "Copy could not be started: no source selected."
+msgstr "La copie n'a pas pu commencer : pas de source sélectionnée."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 278
+msgid "No destination is currently connected."
+msgstr "Aucune destination n'est connectée."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 243
+#, python-brace-format
+msgid ""
+"You are about to launch a copy\n"
+"Source: {source}\n"
+"Destinations: {destinations}\n"
+"            "
+msgstr ""
+"Vous êtes sur le point de lancer une copie\n"
+"Source : {source}\n"
+"Destinations : {destinations}"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 255
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/creation.py, line: 62
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 112
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 130
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 78
+msgid "Cancel"
+msgstr "Annuler"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 256
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 49
+msgid "Copy"
+msgstr "Copier"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 374
+msgid "The copy failed."
+msgstr "La copie a échoué."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 377
+msgid "Copy complete!"
+msgstr "Copie terminée !"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 395
+msgid "Occupied space computation failed."
+msgstr "Le calcul de l'espace occupé a échoué."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 398
+msgid "Computation complete!"
+msgstr "Calcul terminé !"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/creation.py, line: 31
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/creation.py, line: 63
+msgid "Create a hub"
+msgstr "Créer un hub"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/creation.py, line: 53
+msgid "Number of rows"
+msgstr "Nombre de lignes"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/creation.py, line: 55
+msgid "Number of columns"
+msgstr "Nombre de colonnes"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 36
+msgid "Address"
+msgstr "Adresse"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 44
+msgid "Hub"
+msgstr "Hub"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 53
+#, python-brace-format
+msgid "{num_rows} rows x {num_columns} columns"
+msgstr "{num_rows} lignes x {num_columns} colonnes"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 59
+msgid "Delete this hub"
+msgstr "Supprimer ce hub"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 109
+msgid "Hub deletion"
+msgstr "Supression du hub"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 110
+msgid "Do you want to delete the hub?"
+msgstr "Voulez-vous supprimer ce hub ?"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/hub.py, line: 113
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 79
+msgid "Delete permanently"
+msgstr "Supprimer définitivement"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/main.py, line: 52
+msgid "none"
+msgstr "aucun"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/main.py, line: 56
+msgid "Copy device address"
+msgstr "Copier l'adresse du périphérique"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/main.py, line: 65
+msgid "Your hubs"
+msgstr "Vos hubs"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/main.py, line: 70
+msgid "Add a hub"
+msgstr "Ajouter un hub"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/main.py, line: 75
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 53
+msgid "Save"
+msgstr "Sauvegarder"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/main.py, line: 87
+msgid "Address of the last connected device"
+msgstr "Adresse du dernier périphérique connecté"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/hubs/main.py, line: 126
+msgid "The hubs have been saved."
+msgstr "Les hubs ont été sauvegardés."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 45
+msgid "Check now"
+msgstr "Vérifier maintenant"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 49
+msgid "Install missing"
+msgstr "Installer"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 54
+msgid "Update now"
+msgstr "Mettre à jour"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 58
+msgid "Operating system is Linux."
+msgstr "Le système d'exploitation est Linux;"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 59
+msgid "Linux distribution is supported."
+msgstr "La distribution Linux est supportée."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 60
+msgid "pkexec is installed."
+msgstr "pkexec est installé."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 62
+msgid "Required packages are installed."
+msgstr "Les paquets requis sont installés."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/installation/main.py, line: 66
+msgid "ParaCopy is up-to-date."
+msgstr "ParaCopy est à jour."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/about/installation.py, line: 40
+msgid "Installation Check"
+msgstr "Vérification de l'installation"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 54
+msgid "Hubs"
+msgstr "Hubs"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 59
+msgid "Sources"
+msgstr "Sources"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 64
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 47
+msgid "Settings"
+msgstr "Paramètres"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 123
+msgid "Quit ParaCopy"
+msgstr "Quitter ParaCopy"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 125
+msgid "Do you want to quit ParaCopy?"
+msgstr "Voulez-vous quitter Paraopy ?"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/about/installation.py, line: 76
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 131
+msgid "Quit"
+msgstr "Quitter"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 190
+msgid "ParaCopy — Copy Table"
+msgstr "ParaCopy — Table de Copie"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 196
+msgid "ParaCopy — Source Management"
+msgstr "ParaCopy — Gestion des Sources"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 202
+msgid "ParaCopy — Hub Management"
+msgstr "ParaCopy — Gestion des Hubs"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 208
+msgid "ParaCopy — Settings"
+msgstr "ParaCopy — Paramètres"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 214
+msgid "ParaCopy — About"
+msgstr "ParaCopy — À propos"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 208
+msgid "ParaCopy — Installation Check"
+msgstr "ParaCopy — Vérification de l'installation"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 38
+msgid "Number of destinations per copy process"
+msgstr "Nombre de destinations par processus de copie"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/about/installation.py, line: 40
+msgid "Installation settings"
+msgstr "Paramètres d'installation"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/about/installation.py, line: 40
+msgid "Check installation"
+msgstr "Vérification de l'installation"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/main.py, line: 36
+msgid "Create/Update shortcut"
+msgstr "Créer/Mettre à jour le raccourci"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 74
+msgid "Create or update ParaCopy desktop shortcut."
+msgstr "Crée ou met à jour le raccourci bureau de ParaCopy."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 59
+msgid "Global settings"
+msgstr "Paramètres de la copie"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 71
+msgid "System"
+msgstr "Système"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 80
+msgid "Language is updated after restart."
+msgstr "La langue est mise à jour après le redémarrage."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 59
+msgid "Copy settings"
+msgstr "Paramètres de la copie"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 69
+msgid ""
+"Number of destinations per copy process:\n"
+"- 0: a single process for all destinations.\n"
+"- 1 (2, 3, ...): 1 (2, 3, ...) destinations per copy process.\n"
+"More destinations per process increases copy speed, but if there are faulty "
+"destinations, this may cause errors."
+msgstr ""
+"Nombre de destinations par processus de copie :\n"
+"- 0 : un seul processus pour toutes les destinations,\n"
+"- 1 (2, 3, …) : 1 (2, 3, …) destinations par processus de copie.\n"
+"Plus de destinations par processus augmente la vitesse de copie, mais s'il y "
+"a des destinations défectueuses, cela peut causer des erreurs."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 96
+msgid "Settings have been saved."
+msgstr "Les paramètres ont été sauvegardés."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 297
+msgid "The shortcut has been created/updated."
+msgstr "Le raccourci a été créé/mis à jour."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/settings/main.py, line: 117
+msgid "Must be greater or equal than 0"
+msgstr "Doit être supérieur ou égal à 0"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 84
+msgid "Source Name"
+msgstr "Nom de la source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 119
+msgid "Choose the source folder"
+msgstr "Choisir le dossier de la source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 69
+msgid "Source folder for source image"
+msgstr "Dossier à copier"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 74
+msgid "Compute the size of the source"
+msgstr "Calculer la taille de la source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/main.py, line: 36
+msgid "Create source"
+msgstr "Créer la source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 107
+msgid ""
+"Folders inside the selected folder will be copied. The name of the selected "
+"folder will not be copied.Warning: Folders and file names must not contain "
+"accents or special characters!"
+msgstr ""
+"Les dossiers à l'intérieur du dossier sélectionné seront copiés. Le nom du "
+"dossier sélectionné ne le sera pas\n"
+"Attention : Les dossiers et noms de fichiers ne doivent pas comporter "
+"d'accents ou de caractères spéciaux !"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 103
+msgid "Choose cluster size"
+msgstr "Choisir la taille de bloc"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 148
+#, python-brace-format
+msgid ""
+"As a rule of thumb:\n"
+"- 2 {kb} = source size < 512 {mb}\n"
+"- 4 {kb} = 512 {mb} – 8 {gb}\n"
+"- 8 {kb} = 8 – 16 {gb}\n"
+"- 16 {kb} = 16 – 32 {gb}"
+msgstr ""
+"Comme règle empirique :\n"
+"- 2 {kb} = taille de la source < 512 {mb}\n"
+"- 4 {kb} = 512 {mb} – 8 {gb}\n"
+"- 8 {kb} = 8 – 16 {gb}\n"
+"- 16 {kb} = 16 – 32 {gb}"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 148
+msgid "Choose sector size"
+msgstr "Choisir la taille de secteur"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 161
+#, python-brace-format
+msgid ""
+"Check sector size for SD card or target USB disk. A good default value is "
+"512 {B}."
+msgstr ""
+"Vérifier la taille de secteur pour la carte SD ou clé USB cible. Une bonne "
+"valeur par défaut est 512 {B}."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 165
+msgid "Sector size of the last plugged disk"
+msgstr "Taille de secteur du dernier disque branché"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/main.py, line: 59
+msgid "Source size:"
+msgstr "Taille de la source :"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 149
+msgid "Source size computation is in progress."
+msgstr "Le calcul de la taille de la source est en cours."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 157
+msgid "Source is currently being created."
+msgstr "La source est en train d'être créée."
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 258
+msgid "Cannot be empty"
+msgstr "Ne peut pas être vide"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/copy/main.py, line: 395
+msgid "Source creation failed. "
+msgstr "La création de la source a échoué. "
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 297
+msgid "Source created!"
+msgstr "Source créée !"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 337
+msgid "Invalid size"
+msgstr "Taille invalide"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 375
+msgid "Choose the folder for the source"
+msgstr "Choisissez le dossier à utiliser pour la source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 392
+msgid "Invalid folder name"
+msgstr "Nom de dossier invalide"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/creation.py, line: 397
+msgid "A source with the same name already exists"
+msgstr "Une source avec le même nom existe déjà"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 47
+msgid "Delete source"
+msgstr "Supprimer la source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 71
+#, python-brace-format
+msgid "Delete source \"{source}\""
+msgstr "Supprimer la source \"{source}\""
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 73
+#, python-brace-format
+msgid "Do you want to delete the source \"{source}\" ?"
+msgstr "Voulez-vous supprimer la source \"{source}\" ?"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 100
+msgid "Name"
+msgstr "Nom"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 101
+msgid "Size"
+msgstr "Taille"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 102
+msgid "Block size"
+msgstr "Taille de bloc"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 103
+msgid "Cluster size"
+msgstr "Taille de secteur"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 104
+msgid "Creation date"
+msgstr "Date de création"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 116
+msgid "Folder where your sources are stored"
+msgstr "Dossier où vos sources sont stockées"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/list.py, line: 119
+msgid "Open the folder"
+msgstr "Ouvrir le dossier"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/main.py, line: 33
+msgid "Your sources"
+msgstr "Vos sources"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/source/main.py, line: 36
+msgid "Create a source"
+msgstr "Créer une source"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/utils/banners.py, line: 37
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/utils/banners.py, line: 53
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/utils/banners.py, line: 69
+msgid "Close"
+msgstr "Fermer"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/utils/progress.py, line: 69
+msgid "Remaining time: undetermined"
+msgstr "Temps restant : indéterminé"
+
+#
+# File: /home/pygenest/Projets/ParaCopy/paracopy/paracopy/src/view/utils/progress.py, line: 69
+#, python-brace-format
+msgid "Remaining time: {estimated_time_left}"
+msgstr "Temps restant : {estimated_time_left}"
