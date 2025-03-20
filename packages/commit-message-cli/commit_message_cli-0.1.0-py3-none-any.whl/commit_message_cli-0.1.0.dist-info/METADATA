@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: commit-message-cli
+Version: 0.1.0
+Summary: CLI tool to generate commit messages using AI
+Home-page: https://github.com/smoothdev-io/commit-message-cli
+License: MIT
+Keywords: git,commit,ai,cli
+Author: Brendan Putek
+Author-email: brendan.putek@smoothdev.io
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Repository, https://github.com/smoothdev-io/commit-message-cli
+Description-Content-Type: text/markdown
+
+# Commit Message CLI
+
+A command-line tool to generate commit messages using AI.
+
+## Configuration
+
+The tool can be configured in two ways:
+
+### 1. Environment Variables
+
+Set the following environment variables to configure the tool:
+
+```bash
+export SMOOTHDEV_AUTH0_DOMAIN="your-domain"
+export SMOOTHDEV_AUTH0_CLIENT_ID="your-client-id"
+export SMOOTHDEV_AUTH0_AUDIENCE="your-audience"
+export SMOOTHDEV_REDIRECT_URI="your-redirect-uri"
+```
+
+### 2. Configuration File
+
+You can create a configuration file at `~/.smoothdevio/config.json`. A template is provided in `config.template.json`:
+
+1. Create your configuration directory:
+```bash
+mkdir -p ~/.smoothdevio
+```
+
+2. Copy the template:
+```bash
+cp config.template.json ~/.smoothdevio/config.json
+```
+
+3. Edit the configuration file with your settings:
+```json
+{
+    "aws_profile": "default",
+    "aws_region": "us-east-1",
+    "auth0_domain": "your-domain",
+    "auth0_audience": "your-audience",
+    "redirect_uri": "your-redirect-uri"
+}
+```
+
+Note: Environment variables take precedence over the configuration file.
+
+## Installation
+
+### Using pip
+```bash
+pip install commit-message-cli
+```
+
+### Using Homebrew
+```bash
+brew install commit-message-cli
+```
+
+## Usage
+
+```bash
+generate-commit-message [options]
+```
+
+For more details on usage and options, run:
+```bash
+generate-commit-message --help
