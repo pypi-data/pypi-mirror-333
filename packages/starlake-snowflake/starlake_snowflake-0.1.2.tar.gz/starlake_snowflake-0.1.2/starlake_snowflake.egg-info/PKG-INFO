@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: starlake-snowflake
+Version: 0.1.2
+Summary: Starlake Python Distribution For Snowflake
+Author: Stéphane Manciot
+Author-email: stephane.manciot@gmail.com
+License: Apache 2.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: starlake-orchestration>=0.2.5
+Requires-Dist: croniter
+Requires-Dist: sqlalchemy
+Requires-Dist: snowflake>=1.0.4
+Requires-Dist: snowflake-snowpark-python>=1.27.0
+Provides-Extra: snwoflake
+Provides-Extra: shell
+Provides-Extra: gcp
+Provides-Extra: aws
+Provides-Extra: azure
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
