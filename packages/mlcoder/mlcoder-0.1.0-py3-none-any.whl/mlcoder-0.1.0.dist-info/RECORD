@@ -1,0 +1,9 @@
+mlcoder/__init__.py,sha256=2c1jKzMg5fritlod9kA2lLTw23p65TjPFONoIBgdyC4,85
+mlcoder/file.py,sha256=43HXdNfgdwhdjgxlKYPFGF0A0mHp4MyIGeed3nFY86I,876
+mlcoder/pretty_print.py,sha256=kc5y065c9C9Azzq4iKoS_uFN49JUXAh0fBvfl38_Efo,260
+mlcoder/ui.py,sha256=ETO35n1UBknYmITZzcscpg39ycUMvut4JPydls2rQIc,400
+mlcoder-0.1.0.dist-info/LICENSE,sha256=4GqwSHMDh_U4O_k4M_7bpjBtqrT0iw8pkm13E8ocbkg,1080
+mlcoder-0.1.0.dist-info/METADATA,sha256=NsPWIujzWyv6jzuHCeBPcljWHgkbZ-CW81AjDmg4UXY,813
+mlcoder-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mlcoder-0.1.0.dist-info/top_level.txt,sha256=al0ra89eLvrD259w37jEJvoCXOeNXJDDUmpx64q529w,8
+mlcoder-0.1.0.dist-info/RECORD,,
