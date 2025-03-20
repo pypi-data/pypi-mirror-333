@@ -1,0 +1,8 @@
+torch
+numpy
+pillow
+
+[dev]
+mypy>=1.0.0
+pytest>=7.0.0
+pyarmor>=7.7.0

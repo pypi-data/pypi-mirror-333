@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: laser-image-faulting
+Version: 0.0.11
+Summary: Laser image fault detection package
+Requires-Python: >=3.8
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: pillow
+Provides-Extra: dev
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pyarmor>=7.7.0; extra == "dev"
