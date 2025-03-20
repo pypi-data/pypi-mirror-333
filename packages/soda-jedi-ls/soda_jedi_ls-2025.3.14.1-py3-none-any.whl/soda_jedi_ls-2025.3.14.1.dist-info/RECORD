@@ -1,0 +1,15 @@
+soda_jedi_ls/__init__.py,sha256=CluXh6qMl5boOaKBjehlS_6VxcC9XjmlMHXazgZ8vGU,112
+soda_jedi_ls/cli.py,sha256=UyubIA0LYhPjkcFN4ik7ugkx6mBxe97JCficm5ndagg,2743
+soda_jedi_ls/constants.py,sha256=rlUA3iT0PC5niUG8H0SkgAb7NtECs2hyJ_JUNT-KTb0,18
+soda_jedi_ls/initialization_options.py,sha256=3bOnCHEiWoCKfwlr69kz4ASp9b0GDwTg0q6FFiNB3p0,4882
+soda_jedi_ls/jedi_utils.py,sha256=AdaiMKfPRMxbRz5jwoIRBRmKsMnuRxqf4EmIAxGio9s,23614
+soda_jedi_ls/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soda_jedi_ls/pygls_utils.py,sha256=OPnd7uQ4tXUv7U_sYBxxEo1jhifHjI2m0AxgFaC2HRs,1549
+soda_jedi_ls/server.py,sha256=dkDAfpgUyRV4-MXDUS-MtE30gri2U3zwOUod3MSUd8U,26436
+soda_jedi_ls/text_edit_utils.py,sha256=bajcOzGHJzalzi4pVqJD1OXyWnPudA3QU-EnqYRuIpA,5367
+soda_jedi_ls/type_map.py,sha256=6NcbdvJachut2Sd7nggX8TqEvdzq1XvBTGsfGQ1KkUw,1407
+soda_jedi_ls-2025.3.14.1.dist-info/METADATA,sha256=gEfRJafSAqr6nY1Vi4YE6IQJ7Ay8K-R9lSHLhfN00AQ,483
+soda_jedi_ls-2025.3.14.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+soda_jedi_ls-2025.3.14.1.dist-info/entry_points.txt,sha256=qY0Sv2wN3ep_e51CRr-EcU2RhyFJEz4IQVqThtD50Uc,54
+soda_jedi_ls-2025.3.14.1.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+soda_jedi_ls-2025.3.14.1.dist-info/RECORD,,
