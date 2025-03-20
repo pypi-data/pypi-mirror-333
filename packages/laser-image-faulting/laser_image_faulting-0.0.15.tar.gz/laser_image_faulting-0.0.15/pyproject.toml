@@ -1,0 +1,42 @@
+[project]
+name = "laser-image-faulting"
+version = "0.0.15"
+description = "Laser image fault detection package"
+requires-python = ">=3.8"
+dependencies = [
+    "torch",
+    "numpy",
+    "pillow"
+]
+
+[build-system]
+requires = ["poetry>=1.1.4"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "laser-image-faulting"
+version = "0.1.0"
+
+include = [
+    "faulting/dist/**/*",
+    "faulting/dist/pyarmor_runtime_000000/**/*"
+]
+
+[tool.setuptools.package-data]
+"laser_image_faulting" = [
+    "pyarmor_runtime_000000/*",
+    "*.py",
+    "*.so",
+    "*.pyd"
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+    "pyarmor>=7.7.0"  # For development and building only
+]
+
+[tool.setuptools.packages.find]
+include = ["laser_image_faulting*"]
+exclude = ["tests*", "docs*"]
