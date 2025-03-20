@@ -1,0 +1,14 @@
+fava_budgets/__init__.py,sha256=G_sUNVYvk_zCofkAnpK-DkdTWoEvU9x4CR4w7D3-cas,85
+fava_budgets/actuals.py,sha256=8foF9NMiHYuYBdkdSfM5XGzanfDMNuLZHKRpALfLw3A,1563
+fava_budgets/beancount_plugin.py,sha256=rQrIUyn1JYAWzBWOAyC3lvhcGuahzzRk-y23P3VsckE,653
+fava_budgets/fava_plugin.py,sha256=bsFA10Jh-Gqgj7hJdDbhAhlIv3_yuF_Shc98JeBjiaI,3428
+fava_budgets/services/AssetBudgetReportService.py,sha256=1ApdKTwBM7qtOn36Nchvn9gMTKZGjP0kGlm5Lga0emk,8413
+fava_budgets/services/BudgetReportServices.py,sha256=yGhBXdg3Oc3i494hS8bhLnR7X6UXKqow8bda7yuCoMs,2187
+fava_budgets/services/Loaders.py,sha256=MAn4gR8GutykdeLSf5OQyUQ7j_xWm3vbunJ549U_IuI,14043
+fava_budgets/services/NestedDictionary.py,sha256=_2RQaubwsd3G0jIM7bkO6fYeIz4LsaG_NLSRysrWUA8,1606
+fava_budgets/services/Summary.py,sha256=5tBJGTPONAK-jvD630xw6XVYJ38hCNGvqBp5UClsNoU,5748
+fava_budgets/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fava_custom_budgets-0.0.1.dist-info/METADATA,sha256=Y3uJQennYEH762Meym8HCDAaoNkMRWhgc6dfnxl-ezA,620
+fava_custom_budgets-0.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+fava_custom_budgets-0.0.1.dist-info/top_level.txt,sha256=c4vGiJnVg7pcBA8vSJ-QbYlTrK_CJxki-WDu8quBO0E,13
+fava_custom_budgets-0.0.1.dist-info/RECORD,,
