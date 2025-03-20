@@ -1,0 +1,33 @@
+A python library for negative google review analysis.
+
+**We recommend using a Colab T4 GPU for faster results.**
+
+## Main dependencies
+* python>=3.12
+* tiktoken==0.9.0
+* sentence-transformers==3.4.1
+* transformers==4.49.0
+* openai==1.66.3
+* selenium==4.29.0
+* matplotlib==3.10.1
+
+## Example & Usage
+```
+from review_analysis import main
+
+# Your API token which can be found here (https://github.com/marketplace/models/azure-openai/gpt-4o)
+api_token = "YOUR_API_TOKEN"
+url="https://www.google.com/maps/place/Tartine+Manufactory/@37.7641381,-122.4072274,15.17z/data=!4m14!1m7!3m6!1s0x14a1bd1aea890b7b:0x678031344322f3af!2sKalamaki+Bar!8m2!3d37.9654755!4d23.7257512!16s%2Fg%2F11b6xk37_y!3m5!1s0x808f7e308f2ed1bb:0x88d7d35712aa2ba3!8m2!3d37.7618278!4d-122.4118972!16s%2Fg%2F11cjkq6mjc?entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D"
+sentiment_model_name = "cardiffnlp/twitter-roberta-base-sentiment-latest" # OR "cardiffnlp/twitter-xlm-roberta-base-sentiment"
+download_destination_folder = "src/to/your/download/folder"
+
+main.sentiment_review_analysis(api_token, url, sentiment_model_name, download_destination_folder)
+```
+
+## Parameters
+* **api_token**: Your API token from [here](https://github.com/marketplace/models/azure-openai/gpt-4o). **(Required)**  
+* **url**: The url of the place taken from google maps. **(Required)**  
+* **sentiment_model_name**: The model to perform the analysis (Note: The "twitter-xlm-roberta-base-sentiment" model takes longer but returns better results) **(Required)**  
+
+## Licence
+This library is licensed under the [CC-BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/).
