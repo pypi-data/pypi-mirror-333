@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+emoji_scan/__init__.py
+emoji_scan/emoji_utils.py
+emojiscan.egg-info/PKG-INFO
+emojiscan.egg-info/SOURCES.txt
+emojiscan.egg-info/dependency_links.txt
+emojiscan.egg-info/requires.txt
+emojiscan.egg-info/top_level.txt
+tests/test_emoji_scan.py
