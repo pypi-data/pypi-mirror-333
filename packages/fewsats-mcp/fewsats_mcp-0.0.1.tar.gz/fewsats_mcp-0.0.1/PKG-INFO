@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: fewsats-mcp
+Version: 0.0.1
+Summary: Fewsats MCP server
+Requires-Python: >=3.10
+Requires-Dist: fewsats
+Requires-Dist: mcp>=1.0.0
