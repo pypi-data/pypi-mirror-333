@@ -1,0 +1,5 @@
+[mycroft.plugin.tts]
+neon-tts-plugin-coqui-remote = neon_tts_plugin_coqui_remote:CoquiRemoteTTS
+
+[mycroft.plugin.tts.config]
+neon-tts-plugin-coqui-remote.config = neon_tts_plugin_coqui_remote.configs:tts_config
