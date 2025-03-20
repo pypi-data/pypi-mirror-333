@@ -1,0 +1,2 @@
+[console_scripts]
+aigc_comfyui_tools = aigc_comfyui_tools.clis.cli:cli

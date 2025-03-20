@@ -1,0 +1,43 @@
+# 用于说明使用何种构建工具，这里使用setuptools工具
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# 配置项目安装后的包名、版本号、依赖等
+[project]
+name = "aigc-comfyui-tools"
+version = "0.0.2"
+dependencies = [
+    "click",
+    "pillow",
+    "websocket-client"
+]
+authors = [
+    { name="weiwenying", email="weiwenying520@gmail.com" },
+]
+description = "ComfyUI TEST Tools Set."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-dir]
+aigc_comfyui_tools = "aigc_comfyui_tools"
+"aigc_comfyui_tools.data" = "data"
+
+[tool.setuptools.package-data]
+"aigc_comfyui_tools.data" = ["**"]
+
+[project.scripts]
+# 命令名称 = "报名.文件名:入口函数名"
+aigc_comfyui_tools = "aigc_comfyui_tools.clis.cli:cli"
+
+[project.urls]
+Homepage = "https://gitlab.com/nuvic/2025/aigc-comfyui-tools"
+Issues = "https://gitlab.com/nuvic/2025/aigc-comfyui-tools/-/issues"
