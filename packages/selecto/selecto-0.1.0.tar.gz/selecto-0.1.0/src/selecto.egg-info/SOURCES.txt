@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/selecto/__init__.py
+src/selecto/selecto.py
+src/selecto.egg-info/PKG-INFO
+src/selecto.egg-info/SOURCES.txt
+src/selecto.egg-info/dependency_links.txt
+src/selecto.egg-info/top_level.txt
