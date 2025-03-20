@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/bib2json/__init__.py
+src/bib2json/__main__.py
+src/bib2json/converter.py
+src/bib2json.egg-info/PKG-INFO
+src/bib2json.egg-info/SOURCES.txt
+src/bib2json.egg-info/dependency_links.txt
+src/bib2json.egg-info/entry_points.txt
+src/bib2json.egg-info/requires.txt
+src/bib2json.egg-info/top_level.txt
+tests/test_converter.py

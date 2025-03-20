@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bib2json"
+version = "0.1.0"
+authors = [
+  { name="student30204", email="author@example.com" },
+]
+description = "Bib2JSON is a simple Python tool for converting BibTeX files to JSON format. It maintains the structure and content of your bibliographic entries while making them accessible in a more versatile machine-readable format. Originally created by [Brian Rabern](https://github.com/brianrabern/bib2json)."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "bibtexparser>=1.0.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/ah3243/bib2json"
+Issues = "https://github.com/ah3243/bib2json/issues"
+
+[project.scripts]
+bib2json = "bib2json.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["bib2json"]
