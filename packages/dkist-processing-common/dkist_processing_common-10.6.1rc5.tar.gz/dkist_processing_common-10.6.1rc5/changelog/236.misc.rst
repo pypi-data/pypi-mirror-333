@@ -1,0 +1,3 @@
+Convert dataclasses in the graphql model to Pydantic BaseModels for additional validation. In the
+RecipeRunResponse class, configuration is converted from a JSON dictionary to its own Pydantic BaseModel.
+In the InputDatasetPartResponse class, the inputDatasetPartDocument is now returned as a list of dictionaries.
