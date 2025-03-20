@@ -1,0 +1,6 @@
+setup.py
+byted_overpass_isp_insight_opinion_summary/__init__.py
+byted_overpass_isp_insight_opinion_summary.egg-info/PKG-INFO
+byted_overpass_isp_insight_opinion_summary.egg-info/SOURCES.txt
+byted_overpass_isp_insight_opinion_summary.egg-info/dependency_links.txt
+byted_overpass_isp_insight_opinion_summary.egg-info/top_level.txt
