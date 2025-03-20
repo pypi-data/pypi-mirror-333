@@ -1,0 +1,27 @@
+# Development dependencies
+twine
+build
+pytest
+pytest-cov
+flake8
+black
+isort
+questionary
+
+# Runtime dependencies
+litellm
+pydantic
+diskcache
+smolagents
+smolagents[gradio]
+colorlog
+drf-pydantic
+pyyaml
+peewee
+instructor
+
+# Documentation
+mkdocs
+mkdocs-material
+mkdocstrings[python]
+mkdocs-minify-plugin
