@@ -1,0 +1,10 @@
+minGRU_pytorch/__init__.py,sha256=CI3dlwdx1Wv2iT0TcW_ZLD1LBNU18v27sF3tHf9gJPQ,42
+minGRU_pytorch/hybrid.py,sha256=QQpDItD9VAO15HeY_w0byefUURMwJzy6t63bVF7wzqQ,2156
+minGRU_pytorch/hybridLM.py,sha256=PgL1xc6idyRZI5d7BYCJDs0NBbGGiYcZKS2sCMVX928,1766
+minGRU_pytorch/minGRU.py,sha256=65gnIojYmT6QNGO3hBllEotrHuGx2FIkmKvsYo8CnJ8,2232
+minGRU_pytorch/minLM.py,sha256=5WrpTUvDiMyjRnW15qmkkVzM8E8hwmvDvS-tPuuzf0A,3578
+minGRU_pytorch/minLSTM.py,sha256=-n6aqQLliIg1aREHnZJvQg8lWKpTu0cx0QQSrB20UKE,2038
+mingru_pytorch-0.2.1.dist-info/METADATA,sha256=700kL8HiuYgQDB7SaWT6RBXSy4k06NtAxFD8XdBeXfk,3783
+mingru_pytorch-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mingru_pytorch-0.2.1.dist-info/licenses/LICENSE,sha256=E7RGS7kpJIStk5za_-4DVhWEAamf65EU0CNML25mq4c,1066
+mingru_pytorch-0.2.1.dist-info/RECORD,,
