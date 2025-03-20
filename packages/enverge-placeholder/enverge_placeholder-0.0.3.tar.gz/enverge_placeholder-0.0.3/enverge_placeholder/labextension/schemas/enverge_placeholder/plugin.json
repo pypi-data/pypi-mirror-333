@@ -1,0 +1,15 @@
+{
+  "title": "Placeholder",
+  "description": "Placeholder settings.",
+  "jupyter.lab.toolbars": {
+    "TopBar": [
+      {
+        "name": "enverge-placeholder",
+        "rank": 100
+      }
+    ]
+  },
+  "properties": {},
+  "additionalProperties": false,
+  "type": "object"
+}
