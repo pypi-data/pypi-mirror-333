@@ -1,0 +1,2 @@
+[console_scripts]
+micronuclai-predict = src.model.micronuclai_predict:main
