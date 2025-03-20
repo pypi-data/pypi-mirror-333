@@ -1,0 +1,8 @@
+numpy
+pandas
+pyarrow
+
+[dev]
+pytest
+pre-commit
+sphinx
