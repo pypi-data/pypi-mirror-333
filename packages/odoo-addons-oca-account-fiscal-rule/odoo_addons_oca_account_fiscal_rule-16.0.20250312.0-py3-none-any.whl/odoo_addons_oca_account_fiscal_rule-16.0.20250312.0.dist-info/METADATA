@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-account-fiscal-rule
+Version: 16.0.20250312.0
+Summary: Meta package for oca-account-fiscal-rule Odoo addons
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-account-avatax-exemption-base<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-avatax-oca<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-avatax-repair-oca<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-avatax-sale-oca<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-avatax-website-sale<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-ecotax<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-ecotax-sale<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-ecotax-sale-tax<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-ecotax-tax<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-fiscal-position-autodetect-optional-vies<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-fiscal-position-partner-type<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-fiscal-position-type<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-account-product-fiscal-classification<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-eu-oss-oca<16.1dev,>=16.0dev
+
+UNKNOWN
