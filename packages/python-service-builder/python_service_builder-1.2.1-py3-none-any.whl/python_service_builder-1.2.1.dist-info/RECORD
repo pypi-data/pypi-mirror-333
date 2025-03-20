@@ -1,0 +1,10 @@
+service_framework/__init__.py,sha256=vwLAbIwVviX1nAb9Kg3LMxIrFTbxKY2vPKijaL7n0aA,3630
+service_framework/__init_test.py,sha256=gz5cB0rYc37PkUT1s7ejp2qWSjBhMhAMllecWnvrYbU,3742
+service_framework/list_services.py,sha256=U764N4r8mwRXMXGODhZt1m6WClhuDjqsPmrGZnCPex4,2688
+service_framework/service_builder.py,sha256=QE5yu-FM-vNrcMJJLXs0vhTKZ94ryE8Xgm7emJQOsj4,3314
+service_framework/services.py,sha256=J8pJBkktfxEXA0nEGcKo7fda4Wcw_QLnqcrqXpwGq9o,16843
+service_framework/services_test.py,sha256=Gvl4tm87AHKTuy3nSNL-8cbquGb0lNTc_NNPaunTQTQ,1270
+python_service_builder-1.2.1.dist-info/METADATA,sha256=1sAo9eAYnJcOwva5D1DEKnTClro1N-pI8an6ydBfJCY,3872
+python_service_builder-1.2.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+python_service_builder-1.2.1.dist-info/top_level.txt,sha256=LE_aS5exMHtYEw6vhjv5wnbRsDbSZJAMlPGONsmpzWY,18
+python_service_builder-1.2.1.dist-info/RECORD,,
