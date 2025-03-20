@@ -1,0 +1,12 @@
+quantreo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quantreo/features_engineering/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quantreo/features_engineering/candle.py,sha256=8W_ZybmYSz9H-QnR6bkeSo05N3Ma4YOmDgVhNWexU9s,3250
+quantreo/features_engineering/market_regime.py,sha256=Qmbxqp4TANxWJK_nyH-KvIpDm0YQ9rr8ig6o6moh1TQ,1851
+quantreo/features_engineering/math.py,sha256=Njl6gTtislDZy39lkScVYZ07HU3PnxUMg21AZnMkj3s,17136
+quantreo/features_engineering/trend.py,sha256=2Cqr-K2i138HPlGjoCyoBfEzoieelHiSji7nb5re8nQ,4152
+quantreo/features_engineering/volatility.py,sha256=hqBgbUc9lXzmp5kX5VxOV4gQf1H0Vg3FUYPeR2gs0VQ,11041
+quantreo-0.0.5.dist-info/LICENSE.txt,sha256=TkAske_spy4DlC0JPkVGf2NpjtunH6NYHojwnhmRTSA,1064
+quantreo-0.0.5.dist-info/METADATA,sha256=s3m-oBQhjRjdE-icv-juKjmzCsv2eMqFFmwBbzh6YJQ,463
+quantreo-0.0.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+quantreo-0.0.5.dist-info/top_level.txt,sha256=fGmoHWagTC6eltZFTq8AFAbmm_u_QMiresE7xu2hjIs,9
+quantreo-0.0.5.dist-info/RECORD,,
