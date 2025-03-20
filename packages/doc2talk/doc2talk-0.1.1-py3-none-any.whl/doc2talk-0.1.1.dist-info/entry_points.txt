@@ -1,0 +1,2 @@
+[console_scripts]
+doc2talk = doc2talk.__main__:main_entry_point

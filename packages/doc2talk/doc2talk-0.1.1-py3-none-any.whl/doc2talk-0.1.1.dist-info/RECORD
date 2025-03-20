@@ -1,0 +1,12 @@
+doc2talk/__init__.py,sha256=h4tc3Cm7T96hnGTjzBV99zfHt5eS0dFlVnAtQO8n3t4,379
+doc2talk/__main__.py,sha256=mb89IRyg6apKFo47chK3YK_-giOGis-G9HndGCnt7CY,247
+doc2talk/cli.py,sha256=kPoOlMx6vDYROPbW4URfvzRjKCMVSFKSgf6sG5GMWdw,7317
+doc2talk/core.py,sha256=CxLrgVEUoWViQLumPTaUqQ8MJLhgYdDk8DkrICSEBIw,15161
+doc2talk/doc2talk.py,sha256=AbppfoXKUISF74YeiM6CucNb6f66YZtA6Yj8UOVyiQM,13723
+doc2talk/docgraph.py,sha256=FE6yfiRMKpW7Rsbs6SSwVpgx53iwlP1IzglJn-Jq16o,32917
+doc2talk/models.py,sha256=haRFGMDJsFINWIgoi8fPwXg-k5e6E2JAwN3I3-Q08Tk,2353
+doc2talk-0.1.1.dist-info/METADATA,sha256=Tu_N3GqQCtq22ou6Kn6WLJJcIAFSaq5fm16Yg3054bY,8647
+doc2talk-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+doc2talk-0.1.1.dist-info/entry_points.txt,sha256=nrjP3ywGOIX0nQ8fTjTxIzp2zn7hQXx2Uz47UxKjPWk,64
+doc2talk-0.1.1.dist-info/licenses/LICENSE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+doc2talk-0.1.1.dist-info/RECORD,,
