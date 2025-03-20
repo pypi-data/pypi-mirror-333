@@ -1,0 +1,7 @@
+aws_secrets_vault/__init__.py,sha256=rPPcsLyppS13fUXFzxBrkbAu3n00lR_fWr0fQzwJEDw,12718
+aws_secrets_vault/__init__.pyi,sha256=CYwHal26ThIyonHAsNWrJwTTzqKaHsw6BgRq24KazmE,1012
+aws_secrets_vault/__main__.py,sha256=uJVH9PXQdamX2MSE9Yc3e8L7dshJLAusFcWVVHkxzDc,166
+aws_secrets_vault/__main__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_secrets_vault-1.0.4.dist-info/METADATA,sha256=slUQue6-6qxjLGmxnCtwO7bkfOK5UX_P4tDTCuGSZdI,3127
+aws_secrets_vault-1.0.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aws_secrets_vault-1.0.4.dist-info/RECORD,,
