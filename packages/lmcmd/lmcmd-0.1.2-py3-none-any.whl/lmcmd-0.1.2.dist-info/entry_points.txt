@@ -1,0 +1,3 @@
+[console_scripts]
+lmcmd=lmcmd.main:main
+
