@@ -1,0 +1,7 @@
+datamountspawner/__init__.py,sha256=CBy3z-oefD6aoo0HEPFZGWNyLv7cRNa1E0afcpagbUM,67
+datamountspawner/_version.py,sha256=TBS6qy-HXrrAJhYIUeNzQr3jPSSWDM6dJL6zlmK-zgI,154
+datamountspawner/spawner.py,sha256=QU2u97DCqTS7gsKYld4cw79BhSXjEoAywoaEZjYsZSI,9416
+jupyterhub_datamountspawner-0.1.1.dist-info/METADATA,sha256=9VwX7RKVxZezREgoH-ixSQAiV4-fGS-DcY2P7dATOA8,2367
+jupyterhub_datamountspawner-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyterhub_datamountspawner-0.1.1.dist-info/licenses/LICENSE,sha256=47EBKskzO__hOwlBJ2ZhxVrVb4fjDFZrC8q1zVNlBbQ,1498
+jupyterhub_datamountspawner-0.1.1.dist-info/RECORD,,
