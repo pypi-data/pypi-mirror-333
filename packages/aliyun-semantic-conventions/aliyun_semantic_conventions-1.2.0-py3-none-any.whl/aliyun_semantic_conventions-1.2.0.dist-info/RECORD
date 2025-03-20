@@ -1,0 +1,8 @@
+aliyun/semconv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyun/semconv/version.py,sha256=Btl_98iBIXFtvGx47MqpfbaEVYoOMPBQn9bao7UASkQ,21
+aliyun/semconv/logger/__init__.py,sha256=mPxrBJztI1PhnEoFRL4tabU01gLD34-wA7HpzraiNpE,1672
+aliyun/semconv/metrics/__init__.py,sha256=09x-yefhpgSFtOtyAmPvShOyICZ_X32nDVwrwJrCfyM,3060
+aliyun/semconv/trace/__init__.py,sha256=mfmWcwdMLUwnl9U6-J-70RzwNqFXROaMBcu1X2B3Rtc,10091
+aliyun_semantic_conventions-1.2.0.dist-info/METADATA,sha256=e_XzgIU_4o6bIcpcHMhLHQbxnWwLeoyzRjMt7hvBquw,1300
+aliyun_semantic_conventions-1.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aliyun_semantic_conventions-1.2.0.dist-info/RECORD,,

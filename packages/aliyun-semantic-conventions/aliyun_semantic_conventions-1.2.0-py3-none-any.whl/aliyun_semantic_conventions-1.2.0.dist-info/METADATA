@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: aliyun-semantic-conventions
+Version: 1.2.0
+Summary: Aliyun Semantic Conventions
+Project-URL: Homepage, https://help.aliyun.com/zh/arms/tracing-analysis/llm-trace-field-definition-description?spm=a2c4g.11186623.0.0.25494d16a5EuSm
+Author-email: Aliyun Authors <lurious.lyh@alibaba-inc.com>, Aliyun Authors <kunshuo@alibaba-inc.com>
+License-Expression: Apache-2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Provides-Extra: test
+Description-Content-Type: text/markdown
+
+# Aliyun Semantic Conventions
+
+[![pypi](https://badge.fury.io/py/openinference-semantic-conventions.svg)](https://pypi.org/project/openinference-semantic-conventions/)
+
+This library contains code for the Aliyun Semantic Conventions defined by the Aliyun specification.
