@@ -1,0 +1,10 @@
+livekit/plugins/neuphonic/__init__.py,sha256=mJnPVLsKAdUkdWuHWd16A0n2vsVBi3GjgNmB8gv9jjI,1097
+livekit/plugins/neuphonic/log.py,sha256=rAHz71IcbvPkixndXBVffPQsmWUKTLqRaYRuPIxO29w,72
+livekit/plugins/neuphonic/models.py,sha256=Svfn_sWA3Q2ZXsPBXY-K5hslq5FE62hvyXBES2C3aSc,201
+livekit/plugins/neuphonic/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/neuphonic/tts.py,sha256=FFLDghnve_Mrx-0qfEYb4o_Bs8VNnZqAsQNI-M6Zxkw,14736
+livekit/plugins/neuphonic/version.py,sha256=vQH9cItKAVYAmrLbOntkbLqmxrUZrPiKb1TjkZ8jRKQ,600
+livekit_plugins_neuphonic-0.1.0.dist-info/METADATA,sha256=Q7Skn-28cnC318qr28oepZyaWnQ9etIO-H2c7D-M9jo,1480
+livekit_plugins_neuphonic-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+livekit_plugins_neuphonic-0.1.0.dist-info/top_level.txt,sha256=OoDok3xUmXbZRvOrfvvXB-Juu4DX79dlq188E19YHoo,8
+livekit_plugins_neuphonic-0.1.0.dist-info/RECORD,,
