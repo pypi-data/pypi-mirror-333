@@ -1,0 +1,16 @@
+preview = true
+
+lint.select = [
+    "ALL",
+]
+
+lint.extend-ignore = [
+    # Later...
+    "ANN", # flake8-annotations
+    "D", # pydocstyle
+    "DOC", # flake8-docstrings
+    #  More specific
+    "S101", # Use of assert detected
+    "CPY001", # Missing copyright header
+    "INP001", # Implicit package
+]

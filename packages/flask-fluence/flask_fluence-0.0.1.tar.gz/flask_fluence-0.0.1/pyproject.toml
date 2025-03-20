@@ -1,0 +1,27 @@
+[project]
+name = "flask-fluence"
+version = "0.0.1"
+description = "Server-side component system for Flask"
+readme = "README.md"
+authors = [
+    { name = "Stefane Fermigier", email = "sf@abilian.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.0",
+    "flask-super>=0.2.9",
+    "jinja2-simple-tags>=0.6.1",
+]
+
+[project.scripts]
+flask-fluent = "flask_fluence:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "abilian-devtools>=0.7.6",
+    "snoop>=0.6.0",
+]
