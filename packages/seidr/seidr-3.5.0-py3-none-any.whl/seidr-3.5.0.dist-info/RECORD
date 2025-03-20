@@ -1,0 +1,16 @@
+seidr/README_src.md,sha256=iRZQ_jsK6YEpCjVjXiDnYhBcMhQRs8cRH7sQj9ZxbxQ,5257
+seidr/__init__.py,sha256=rRFfBX3kAJtNcQjWtRhJKNm1Pu-bLUaN8Obu9wfCb6A,178
+seidr/dev.py,sha256=vcfezCIvXJ6hNuw1rBeJ-aBJAMF0oBIMnQ5ZnfxQIhw,11811
+seidr/eval.py,sha256=r1Q-Zy5_ly6RuzM6vI09L9vGzjkft_vZu9pjb-JyQOU,4874
+seidr/github.py,sha256=fUfQRrQ4kPdV2I9eMNgkHOZ1fSBzLTt3a5LQYiua0_A,3953
+seidr/llm.py,sha256=LDz90fnEwnKM9QoUc1HsGY_qehS3vRd9jxHKZVPaDaE,5741
+seidr/prompt.py,sha256=n6QKV5pk8F9qWpte9Llhhl87lqGeamw34rURaVCmntw,3881
+seidr/requirements_src.txt,sha256=J_58cyJZoDoBpiQuVy4k1tpHKCeZ9lkcaX4C6Ap0ZFY,3304
+seidr/templates/commit.txt,sha256=m854QZWZaiuJc5NzfZkGcPWQ7ewaQafV16Jy0jy60sQ,116
+seidr/templates/prompts.txt,sha256=KLxaSo7aKx0mOw1CAyfLS5IYv-2xm4MPMCGKOmmVayw,1056
+seidr/templates/template.cpp,sha256=7SEE507i7ulNXIxSk9NHcClntpt7VWYUCWX-c9jS500,229
+seidr/templates/template.java,sha256=2g3pSV1x1wZvQ9UJM26HIYTNzM0V2gmn-Ch87TsT_p8,303
+seidr/templates/template.py,sha256=1R1-4sVPAf0JfKPlV82MHL2q4mcKWC40JkmFXBD5cv4,142
+seidr-3.5.0.dist-info/METADATA,sha256=MuPDBdh7ZhSyYljWCGJPZxdQ12aThmFLAz0fQEz8CpM,5406
+seidr-3.5.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+seidr-3.5.0.dist-info/RECORD,,
