@@ -1,0 +1,73 @@
+[build-system]
+requires      = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name            = "fsl_sub_plugin_slurm"
+dynamic         = ["version"]
+description     = "FSL Cluster Submission Plugin for Slurm"
+readme          = {file = "README.md", content-type="text/markdown"}
+license         = {text = "Apache License Version 2.0"}
+requires-python = ">=3.8"
+authors         = [{name = "Duncan Mortimer", email = "duncan.mortimer@ndcn.ox.ac.uk"}]
+
+dependencies = [
+ "ruamel.yaml >=0.16.7",
+]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Natural Language :: English",
+  "Environment :: Console",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: POSIX :: Linux",
+]
+
+
+[project.urls]
+"Repository"    = "https://git.fmrib.ox.ac.uk/fsl/fsl_sub_plugin_slurm/"
+"Documentation" = "https://fsl.fmrib.ox.ac.uk/fsl/docs/#/utilities/fsl_sub"
+
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "coverage",
+  "pytest-cov",
+  "tomli; python_version < \"3.12\""
+]
+style = [
+  "pylint",
+  "flake8"
+]
+
+
+[tool.setuptools.packages.find]
+include = ["fsl_sub_plugin_slurm*"]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "fsl_sub_plugin_slurm.version.PLUGIN_VERSION"}
+
+
+[tool.coverage.run]
+include = ["fsl_sub_plugin_slurm/*"]
+omit    = ["fsl_sub_plugin_slurm/tests/*"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["fsl_sub_plugin_slurm/tests"]
+addopts   = "-v --cov=fsl_sub_plugin_slurm --showlocals --import-mode=importlib"
+markers   = [
+  "noroottest: Need to be executed as non-root user (will fail otherwise)",
+  "unixtest:   Only works on *nix systems"]
