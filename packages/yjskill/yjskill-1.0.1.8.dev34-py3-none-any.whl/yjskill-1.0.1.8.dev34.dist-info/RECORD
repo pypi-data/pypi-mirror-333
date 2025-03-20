@@ -1,0 +1,15 @@
+skillv1/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skillv1/tools/export_skill.py,sha256=XIYOytrPVm9SaAQFUsfa4gb9NNmgUOzvn2z7LZqo9Jc,6248
+yjskillv1/__init__.py,sha256=58CvTlhRY6mphoyhaNrOfg2JXQ_uL0JiNZjTmOCwZn0,184
+yjskillv1/client/__init__.py,sha256=58CvTlhRY6mphoyhaNrOfg2JXQ_uL0JiNZjTmOCwZn0,184
+yjskillv1/client/skill_api_skill.py,sha256=qwzgVfR0GNMHr-5QWOGbGw27lgn4P2S0yYahl9RaxVE,3433
+yjskillv1/client/skill_api_skill_test.py,sha256=Dzj2a7FJyGg1lafI2v_osadtYlui-wMnbetnMrZ-gXI,4078
+yjskillv1/client/skill_client.py,sha256=N4izTqFhZImEkuZdNICNviWw8fqgPF0-C7QQ4KNaj54,2691
+yjskillv1/client/sync_skill.py,sha256=u56N0lAecVU3xRAfNLYfFX-sdUOkk9DeMeAqTn1CDRE,19443
+yjskillv1/client/sync_skill_test.py,sha256=G4hUqV4kpDvUDlrPMTp7AAf59dwuoxnhNdWD3ARts7o,9848
+yjskillv1/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yjskillv1/tools/export_skill.py,sha256=XIYOytrPVm9SaAQFUsfa4gb9NNmgUOzvn2z7LZqo9Jc,6248
+yjskill-1.0.1.8.dev34.dist-info/METADATA,sha256=6YWh3b8RBkQ9ItRp5JoYHCfT8p_KdDBofFl7Ft9NKJk,974
+yjskill-1.0.1.8.dev34.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+yjskill-1.0.1.8.dev34.dist-info/top_level.txt,sha256=r3KDeDD1-D8okBXZFamUDhAd9Q6Ep6uH12QG2IWK-Hs,18
+yjskill-1.0.1.8.dev34.dist-info/RECORD,,
