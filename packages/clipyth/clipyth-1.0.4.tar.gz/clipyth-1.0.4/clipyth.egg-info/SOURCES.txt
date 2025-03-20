@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+clipyth/__init__.py
+clipyth/__main__.py
+clipyth.egg-info/PKG-INFO
+clipyth.egg-info/SOURCES.txt
+clipyth.egg-info/dependency_links.txt
+clipyth.egg-info/entry_points.txt
+clipyth.egg-info/top_level.txt
