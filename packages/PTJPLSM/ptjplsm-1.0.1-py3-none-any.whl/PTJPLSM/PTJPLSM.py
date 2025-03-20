@@ -1,0 +1,195 @@
+from typing import Union, Dict
+import warnings
+import numpy as np
+import pandas as pd
+
+import rasters as rt
+from rasters import Raster
+
+from PTJPL import SVP_Pa_from_Ta_C
+from PTJPL import GAMMA_PA
+from PTJPL import delta_Pa_from_Ta_C
+from PTJPL import LAI_from_NDVI
+from PTJPL import SAVI_from_NDVI
+from PTJPL import fAPAR_from_SAVI
+from PTJPL import fIPAR_from_NDVI
+from PTJPL import calculate_relative_surface_wetness
+from PTJPL import calculate_green_canopy_fraction
+from PTJPL import calculate_plant_moisture_constraint
+from PTJPL import calculate_plant_temperature_constraint
+from PTJPL import calculate_soil_net_radiation
+from PTJPL import calculate_interception
+
+from .constants import *
+
+from .partitioning import calculate_fREW
+from .partitioning import calculate_fTRM
+from .partitioning import calculate_soil_latent_heat_flux
+from .partitioning import calculate_canopy_latent_heat_flux
+
+
+def process_PTJPLSM(
+            Rn: Union[Raster, np.ndarray],
+            G: Union[Raster, np.ndarray],
+            NDVI: Union[Raster, np.ndarray],
+            Ta_C: Union[Raster, np.ndarray],
+            RH: Union[Raster, np.ndarray],
+            soil_moisture: Union[Raster, np.ndarray],
+            field_capacity: Union[Raster, np.ndarray],
+            wilting_point: Union[Raster, np.ndarray],
+            Topt: Union[Raster, np.ndarray],
+            fAPARmax: Union[Raster, np.ndarray],
+            canopy_height_meters: Union[Raster, np.ndarray],
+            delta_Pa: Union[Raster, np.ndarray, float] = None,
+            gamma_Pa: Union[Raster, np.ndarray, float] = GAMMA_PA,
+            epsilon = None,
+            beta_Pa: float = BETA_PA,
+            PT_alpha: float = PT_ALPHA,
+            field_capacity_scale: float = FIELD_CAPACITY_SCALE,
+            minimum_Topt: float = MINIMUM_TOPT,
+            floor_Topt: bool = FLOOR_TOPT) -> Dict[str, Union[Raster, np.ndarray]]:
+        results = {}
+
+        # calculate meteorology
+
+        # calculate saturation vapor pressure in kPa from air temperature in celsius
+        # floor saturation vapor pressure at 1
+        SVP_Pa = SVP_Pa_from_Ta_C(Ta_C)
+
+        # constrain relative humidity between 0 and 1
+        RH = rt.clip(RH, 0, 1)
+
+        # calculate water vapor pressure in Pascals from relative humidity and saturation vapor pressure
+        Ea_Pa = RH * SVP_Pa
+
+        # calculate vapor pressure deficit from water vapor pressure
+        VPD_Pa = rt.clip(SVP_Pa - Ea_Pa, 0, None)
+
+        # calculate relative surface wetness from relative humidity
+        fwet = calculate_relative_surface_wetness(RH)
+
+        # calculate vegetation values
+
+        # convert normalized difference vegetation index to soil-adjusted vegetation index
+        SAVI = SAVI_from_NDVI(SAVI)
+
+        # calculate fraction of absorbed photosynthetically active radiation from soil-adjusted vegetation index
+        fAPAR = fAPAR_from_SAVI(SAVI)
+
+        # calculate fIPAR from NDVI
+        fIPAR = fIPAR_from_NDVI(NDVI)
+
+        # replace zero fIPAR with NaN
+        fIPAR = np.where(fIPAR == 0, np.nan, fIPAR)
+
+        # calculate green canopy fraction (fg) from fAPAR and fIPAR, constrained between zero and one
+        fg = calculate_green_canopy_fraction(fAPAR, fIPAR)
+
+        # calculate plant moisture constraint (fM) from fraction of photosynthetically active radiation, constrained between zero and one
+        fM = calculate_plant_moisture_constraint
+
+        # calculate fraction of relative extractable water (fREW) from soil moisture and soil properties
+        fREW = calculate_fREW(soil_moisture, field_capacity, wilting_point, field_capacity_scale)
+ 
+        # apply corrections to optimum temperature
+        
+        if floor_Topt:
+            # when Topt exceeds observed air temperature, then set Topt to match air temperature
+            Topt = rt.where(Ta_C > Topt, Ta_C, Topt)
+        
+        Topt = rt.clip(Topt, minimum_Topt, None)
+
+        # calculate plant temperature constraint (fT) from optimal phenology
+        fT = calculate_plant_temperature_constraint(Ta_C, Topt)
+
+        # calculate leaf area index
+        LAI = LAI_from_NDVI(NDVI)
+
+        # calculate delta / (delta + gamma) term if it's not given
+        if epsilon is None:
+            # calculate delta if it's not given
+            if delta_Pa is None:
+                # calculate slope of saturation to vapor pressure curve in kiloPascal per degree Celsius
+                delta_Pa = delta_Pa_from_Ta_C(Ta_C)
+        
+            # calculate delta / (delta + gamma)
+            epsilon = delta_Pa / (delta_Pa + gamma_Pa)
+
+        # soil evaporation
+
+        # caluclate net radiation of the soil from leaf area index
+        Rn_soil = calculate_soil_net_radiation(Rn, LAI)
+        results["Rn_soil"] = Rn_soil
+
+        # calculate soil evaporation (LEs) from relative surface wetness, soil moisture constraint,
+        # priestley taylor coefficient, epsilon = delta / (delta + gamma), net radiation of the soil,
+        # and soil heat flux
+        LE_soil = calculate_soil_latent_heat_flux(
+             Rn_soil=Rn_soil, 
+             G=G, 
+             epsilon=epsilon, 
+             fwet=fwet, 
+             fREW=fREW, 
+             PT_alpha=PT_alpha
+        )
+        
+        results["LE_soil"] = LE_soil
+
+        # canopy transpiration
+
+        # calculate net radiation of the canopy from net radiation of the soil
+        Rn_canopy = Rn - Rn_soil
+        results["Rn_canopy"] = Rn_canopy
+
+        # calculate potential evapotranspiration (pET) from net radiation, and soil heat flux
+        PET = PT_alpha * epsilon * (Rn - G)
+        results["PET"] = PET
+
+        fTRM = calculate_fTRM(
+             PET=PET,
+             RH=RH,
+             canopy_height_meters=canopy_height_meters,
+             soil_moisture=soil_moisture,
+             field_capacity=field_capacity,
+             wilting_point=wilting_point,
+             fM=fM
+        )
+
+        # calculate canopy transpiration (LEc) from priestley taylor, relative surface wetness,
+        # green canopy fraction, plant temperature constraint, plant moisture constraint,
+        # epsilon = delta / (delta + gamma), and net radiation of the canopy
+        LE_canopy = calculate_canopy_latent_heat_flux(
+             Rn_canopy=Rn_canopy,
+             epsilon=epsilon,
+             fwet=fwet,
+             fg=fg,
+             fT=fT,
+             fTRM=fTRM,
+             PT_alpha=PT_alpha
+        )
+        
+        results["LE_canopy"] = LE_canopy
+
+        # interception evaporation
+
+        # calculate interception evaporation (LEi) from relative surface wetness and net radiation of the canopy
+        LE_interception = calculate_interception(
+             Rn_canopy=Rn_canopy,
+             epsilon=epsilon,
+             fwet=fwet,
+             PT_alpha=PT_alpha
+        )
+
+        results["LE_interception"] = LE_interception
+
+        # combined evapotranspiration
+
+        # combine soil evaporation (LEs), canopy transpiration (LEc), and interception evaporation (LEi)
+        # into instantaneous evapotranspiration (LE)
+        LE = LE_soil + LE_canopy + LE_interception
+
+        # constrain instantaneous evapotranspiration between zero and potential evapotranspiration        
+        LE = np.clip(LE, 0, PET)
+        results["LE"] = LE
+
+        return results
