@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: underdoc
+Version: 0.2.0
+Summary: UnderDoc Python SDK
+Author-email: Clarence Ho <clarence@underdoc.io>
+Project-URL: Homepage, https://github.com/under-doc/underdoc-python-sdk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pydantic-settings>=2.7.1
+Requires-Dist: httpx>=0.28.1
+
+# UnderDoc Python SDK
+
+Python SDK for UnderDoc Document Understanding Platform.
