@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: selecto
+Version: 1.0.2
+Summary: A simple TUI option selector
+Author: Manuel Germanos
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Selecto
+
+`selecto` is a terminal-based Python package that allows users to select multiple options or a single option from a list, with colorful feedback and unexpected messages!
+
+## Installation
+
+pip install selecto
