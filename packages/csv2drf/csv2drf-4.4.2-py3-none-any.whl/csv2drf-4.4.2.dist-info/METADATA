@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: csv2drf
+Version: 4.4.2
+Summary: Utility to convert G2 raw data from CSV to DRF
+License: MIT
+Author: hopper19
+Author-email: cuongvnus2001@gmail.com
+Requires-Python: >=3.12.7,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: digital-rf (>=2.6.11,<3.0.0)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: polars (>=1.24.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# CSV2DRF
+
+This program is built for the Personal Space Weather Station project. Originally, the Grape2 stations store raw data in CSV format. This program converts it to the DigitalRF format.
+
+For documentation, refer to the Wiki at 
+
