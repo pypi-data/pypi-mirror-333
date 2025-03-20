@@ -1,0 +1,11 @@
+CHANGES
+=======
+
+2.8.1
+-----
+
+* fix setup python version
+* Add shutdown before close
+* fix:log in shell.py
+* Update: set TCP keepalive (#147)
+* feat:allow set filter for list\_packages api (#129)
