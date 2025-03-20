@@ -1,0 +1,192 @@
+
+# 2025-03-06 13:53:56.341703
++no
+
+# 2025-03-06 13:54:27.563061
++/add src/paperap/models/abstract/model.py
+
+# 2025-03-06 13:54:40.338945
++/add tests/models/test_base.py
+
+# 2025-03-06 13:56:57.083912
++Determine what unit tests are missing from test_base.py based on the functionality in model.py and create those tests.
+
+# 2025-03-06 13:57:51.969894
++no
+
+# 2025-03-06 14:08:28.819354
++/exit
+
+# 2025-03-06 19:53:55.522367
++no
+
+# 2025-03-06 19:54:07.962260
++/add src/paperap/models/document/queryset.py
+
+# 2025-03-06 19:55:06.141727
++ Consider the following documentation from paperless ngx:
+
+# 2025-03-06 19:55:22.084430
++no
+
+# 2025-03-06 19:55:31.736485
++/add src/paperap/models/document/queryset.py
+
+# 2025-03-06 19:57:02.041078
++Consider the following documentation from paperless ngx You can filter documents by their custom field values by specifying the custom_field_query query parameter. Here are some recipes for common use cases:
++
++    Documents with a custom field "due" (date) between Aug 1, 2024 and Sept 1, 2024 (inclusive):
++
++    ?custom_field_query=["due", "range", ["2024-08-01", "2024-09-01"]]
++
++    Documents with a custom field "customer" (text) that equals "bob" (case sensitive):
++
++    ?custom_field_query=["customer", "exact", "bob"]
++
++    Documents with a custom field "answered" (boolean) set to true:
++
++    ?custom_field_query=["answered", "exact", true]
++
++    Documents with a custom field "favorite animal" (select) set to either "cat" or "dog":
++
++    ?custom_field_query=["favorite animal", "in", ["cat", "dog"]]
++
++    Documents with a custom field "address" (text) that is empty:
++
++    ?custom_field_query=["OR", ["address", "isnull", true], ["address", "exact", ""]]
++
++    Documents that don't have a field called "foo":
++
++    ?custom_field_query=["foo", "exists", false]
++
++    Documents that have document links "references" to both document 3 and 7:
++
++    ?custom_field_query=["references", "contains", [3, 7]]
++
++All field types support basic operations including exact, in, isnull, and exists. String, URL, and monetary fields support case-insensitive substring matching operations including icontains, istartswith, and iendswith. Integer, float, and date fields support arithmetic comparisons including gt (>), gte (>=), lt (<), lte (<=), and range. Lastly, document link fields support a contains operator that behaves like a "is superset of" check. ---- I have written several methods in my document queryset to make it easy to find documents based on their custom fields. Please create more methods that make using the features described in the documentation above easy.
+
+# 2025-03-06 20:16:36.058569
++/exit
+
+# 2025-03-07 13:06:06.448217
++no
+
+# 2025-03-07 13:06:31.650075
++/add src/paperap/models/abstract/model.py
+
+# 2025-03-07 13:06:37.849115
++/add src/paperap/models/abstract/parser.py
+
+# 2025-03-07 13:06:41.277647
++/add src/paperap/models/abstract/queryset.py
+
+# 2025-03-07 13:08:29.368582
++Ensure all classes and methods have complete docstrings with Args: Returns: Raises: and Examples:. For context, this is a library that makes it easy to interact with the paperless ngx rest api, and files in models/abstract/ are base classes that are subclassed by other models.
+
+# 2025-03-07 13:10:59.770977
++no
+
+# 2025-03-07 13:22:42.669087
++Ensure all classes and methods have complete docstrings with Args: Returns: Raises: and Examples:. For context, this is a library that makes it easy to interact with the paperless ngx rest api, and files in models/abstract/ are base classes that are subclassed by other models.
+
+# 2025-03-07 13:46:28.405147
++/drop
+
+# 2025-03-07 13:46:37.823616
++/add models/document_type/*
+
+# 2025-03-07 13:46:47.284476
++/add src/paperap/models/document_type/*
+
+# 2025-03-07 13:47:00.036749
++/drop __init__.py
+
+# 2025-03-07 13:47:05.105170
++/drop src/paperap/models/document_type/__init__.py
+
+# 2025-03-07 13:47:13.979880
++ Ensure all classes and methods have complete docstrings with Args: Returns: Raises: and Examples:. For context, this is a library that makes it easy to interact with the paperless ngx rest api
+
+# 2025-03-07 13:48:03.730088
++/add README.md
+
+# 2025-03-07 13:48:08.010541
++/drop *.py
+
+# 2025-03-07 13:48:15.735500
++/drop src/paperap/models/document_type/model.py src/paperap/models/document_type/queryset.py
+
+# 2025-03-07 13:48:31.666651
++/add src/paperap/models/profile/*
+
+# 2025-03-07 13:48:38.147972
++/drop src/paperap/models/profile/__init__.py
+
+# 2025-03-07 13:48:58.163900
++Ensure all classes and methods have complete docstrings with Args: Returns: Raises: and Examples:. For context, this is a library that makes it easy to interact with the paperless ngx rest api
+
+# 2025-03-07 13:49:51.881699
++no
+
+# 2025-03-07 13:50:31.030487
++/exit
+
+# 2025-03-07 13:51:29.249257
++no
+
+# 2025-03-07 13:51:58.034993
++/undo
+
+# 2025-03-07 14:06:25.073509
++/exit
+
+# 2025-03-09 22:14:20.920466
++no
+
+# 2025-03-09 22:14:39.350899
++/add src/paperap/plugin_manager.py
+
+# 2025-03-09 22:15:01.860611
++Use lazy % formatting in logging functions in plugin_manager.py
+
+# 2025-03-09 22:15:22.573965
++/drop src/paperap/plugin_manager.py
+
+# 2025-03-09 22:15:37.274121
++/add src/paperap/models/abstract/parser.py
+
+# 2025-03-09 22:15:39.140004
++/add src/paperap/models/document/parser.py
+
+# 2025-03-09 22:15:42.526939
++Use lazy % formatting in logging functions
+
+# 2025-03-09 22:19:52.232940
++Ensure all classes, functions, and methods have docstrings.
+
+# 2025-03-09 22:21:06.798212
++no
+
+# 2025-03-09 22:21:08.877275
++/exit
+
+# 2025-03-09 22:21:31.444371
++no
+
+# 2025-03-09 22:21:47.420814
++/add src/paperap/models/document/model.py
+
+# 2025-03-09 22:22:04.130719
++Add docstrings
+
+# 2025-03-09 22:25:42.875479
++/drop model.py
+
+# 2025-03-09 22:25:49.032179
++/drop src/paperap/models/document/model.py
+
+# 2025-03-09 22:25:55.208049
++/add src/paperap/tests/testcase.py
+
+# 2025-03-09 22:26:06.236884
++Add docstrings
