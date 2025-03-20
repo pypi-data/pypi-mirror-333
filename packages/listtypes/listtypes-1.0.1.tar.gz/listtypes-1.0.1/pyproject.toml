@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "listtypes"
+version = "1.0.1"
+description = "A python package full of diffrent types of lists, all of which are type safe."
+authors = ["Ethan Illingsworth"]
+readme = "README.md"
+license = "MIT License"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
