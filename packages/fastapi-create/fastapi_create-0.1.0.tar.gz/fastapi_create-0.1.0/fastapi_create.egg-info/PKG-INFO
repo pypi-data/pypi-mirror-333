@@ -1,0 +1,173 @@
+Metadata-Version: 2.2
+Name: fastapi-create
+Version: 0.1.0
+Summary: A CLI tool to scaffold FastAPI projects with database and migration support
+Author-email: OluwaFavour <your.email@example.com>
+License: MIT License
+        
+        Copyright (c) 2025 Favour Olusayo
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/OluwaFavour/fastapi-create
+Project-URL: Repository, https://github.com/OluwaFavour/fastapi-create
+Project-URL: Issues, https://github.com/OluwaFavour/fastapi-create/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.1.8
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: Jinja2>=3.1.6
+Requires-Dist: markdown-it-py>=3.0.0
+Requires-Dist: MarkupSafe>=3.0.2
+Requires-Dist: mdurl>=0.1.2
+Requires-Dist: Pygments>=2.19.1
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: rich>=13.9.4
+Requires-Dist: shellingham>=1.5.4
+Requires-Dist: typer>=0.15.2
+Requires-Dist: typing_extensions>=4.12.2
+
+# fastapi-create
+
+A command-line tool to quickly scaffold a FastAPI project with pre-configured database support, migrations, and essential setup files.
+
+## Features
+
+- **Project Structure Creation**: Generates a clean, organized FastAPI project layout.
+- **Database Configuration**: Supports both synchronous (e.g., SQLAlchemy) and asynchronous (e.g., asyncpg) database setups.
+- **Alembic Integration**: Sets up Alembic for database migrations with a customizable folder name.
+- **Dependency Management**: Automatically installs required dependencies based on your database choice.
+- **Configuration Files**: Creates core configuration files and a `.env` for environment variables.
+- **Main Application Setup**: Generates a `main.py` tailored to your database threading choice.
+- **Utility Scripts**: Adds a `manage.py` for project management tasks.
+- **Documentation**: Includes a basic `README.md` and `requirements.txt` in the generated project.
+
+*Planned Features (Coming Soon):*
+
+- Support for additional database engines (e.g., MongoDB).
+- Pre-built API route templates.
+- Testing framework integration (e.g., pytest).
+
+## Installation
+
+- Create a new virtual environment:
+
+```bash
+python -m venv venv
+```
+
+- Activate the virtual environment:
+
+- **Windows**: `venv\Scripts\activate`
+- **macOS/Linux**: `source venv/bin/activate`
+
+- Upgrade pip
+
+```bash
+python -m pip install --upgrade pip
+```
+
+- Install `fastapi-create` globally using pip:
+
+```bash
+pip install fastapi-create
+```
+
+Ensure you have Python 3.8+ installed.
+
+## Usage
+
+To create a new FastAPI project, run:
+
+```bash
+fastapi-create my_project
+```
+
+### What Happens Next?
+
+1. **Project Name Validation**: Ensures your project name is valid (e.g., no special characters).
+2. **Database Setup**: Prompts you to choose a database dependency (e.g., SQLAlchemy, asyncpg) and provide a database URL.
+3. **Alembic Configuration**: Asks for a folder name for Alembic migrations (defaults to alembic if unspecified).
+4. **Project Generation**: Sets up the project structure, installs dependencies, and configures all necessary files.
+
+Example:
+
+```bash
+fastapi-create create my_project
+# Follow prompts:
+# - Database dependency: SQLAlchemy
+# - Database URL: sqlite:///my_project.db
+# - Alembic folder name: migrations
+```
+
+## Generated Project Structure
+
+After running the command, your project will look like this:
+
+```text
+my_project/
+├── app/
+│   ├── core/
+│   │   ├── config.py      # Core configuration (e.g., environment variables)
+│   │   └── __init__.py
+│   ├── db/
+│   │   ├── config.py      # Database connection setup
+│   │   ├── init_db.py     # Database initialization
+│   │   ├── models.py      # Database models
+│   │   └── __init__.py
+│   ├── routes/            # API routes (to be expanded)
+│   │   └── __init__.py
+│   ├── schemas/           # Pydantic schemas (to be expanded)
+│   │   └── __init__.py
+│   ├── lifespans.py       # Application lifespan events
+│   ├── main.py            # FastAPI app entry point
+│   └── __init__.py
+├── migrations/            # Alembic migrations folder (name customizable)
+├── .env                   # Environment variables (e.g., DATABASE_URL)
+├── manage.py             # Management script
+├── README.md             # Project-specific README
+└── requirements.txt      # Project dependencies
+```
+
+## Configuration
+
+Edit the .env file in your generated project to customize settings, such as:
+
+```text
+DATABASE_URL=sqlite:///my_project.db
+```
+
+## Contributing
+
+We’d love for the FastAPI community to help improve fastapi-create! Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Acknowledgments
+
+- FastAPI - The amazing web framework powering this tool.
+- Alembic - For database migration support.
+- Typer - For building the CLI interface.
+
+## Contact
+
+Questions or feedback? Reach out via [email](mailto:fsticks8187@gmail.com) or [GitHub - OluwaFavour](https://github.com/OluwaFavour).
