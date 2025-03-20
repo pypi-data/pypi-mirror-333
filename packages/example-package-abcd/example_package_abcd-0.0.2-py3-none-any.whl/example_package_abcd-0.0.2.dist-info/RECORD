@@ -1,0 +1,8 @@
+example_package_abcd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_package_abcd/example.py,sha256=TxbRkmE9R4dn_GDGmxsvJZmnDu-kdBrBq0ijlHfgWNA,47
+example_package_abcd/hello.py,sha256=xDPYEZ7bL0qYdWYoelZp48jpR1wWv_736gIVnQD8b1Y,36
+example_package_abcd-0.0.2.dist-info/METADATA,sha256=bQQg_HP-rZBDCTp2MamoVnEUYgn0bl5pb2b6SskxIec,662
+example_package_abcd-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+example_package_abcd-0.0.2.dist-info/entry_points.txt,sha256=tMP6bPXETY3U3LwkERdTIIjZAM9k9uTZXIBt9BV98ms,61
+example_package_abcd-0.0.2.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+example_package_abcd-0.0.2.dist-info/RECORD,,

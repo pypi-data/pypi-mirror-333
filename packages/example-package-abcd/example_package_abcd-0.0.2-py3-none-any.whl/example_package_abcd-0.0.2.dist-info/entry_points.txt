@@ -1,0 +1,2 @@
+[console_scripts]
+myscript = example_package_abcd.hello:main
