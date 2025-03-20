@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+cppmath.egg-info/PKG-INFO
+cppmath.egg-info/SOURCES.txt
+cppmath.egg-info/dependency_links.txt
+cppmath.egg-info/requires.txt
+cppmath.egg-info/top_level.txt
+obf_cppmath/cppmath/__init__.py
+obf_cppmath/cppmath/__pyarmor__.py
+obf_cppmath/cppmath/cache.py
+obf_cppmath/cppmath/core.py
+obf_cppmath/cppmath/integration.py
+obf_cppmath/cppmath/linear.py
+obf_cppmath/cppmath/optimization.py
+obf_cppmath/cppmath/pyarmor_runtime.pyd
+obf_cppmath/cppmath/utils.py
