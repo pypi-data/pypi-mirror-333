@@ -1,0 +1,8 @@
+_TECTON_CHECKPOINT_ATTR = "__tecton_checkpoint__"
+_TECTON_MOCK_OBJECT_ATTR = "_tecton_mock_object_attr"
+_DEV_MODE_AGENT_KEY = "dev_mode_agent"
+_INPUT_JSON_FIELD = "input_json"
+_OUTPUT_JSON_FIELD = "output_json"
+UUID_ATTR = "__uuid__"
+DEFAULT_TIMEOUT = "5s"
+TECTON_DEV_MODE_KEY = "TECTON_GEN_AI_DEV_MODE"
