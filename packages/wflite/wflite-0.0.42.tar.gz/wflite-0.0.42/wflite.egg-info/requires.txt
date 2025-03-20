@@ -1,0 +1,7 @@
+requests
+pydantic
+python-dotenv
+
+[azure]
+azure-identity
+azure-keyvault-secrets
