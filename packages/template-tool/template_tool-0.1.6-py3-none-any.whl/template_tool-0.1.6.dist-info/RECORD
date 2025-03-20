@@ -1,0 +1,12 @@
+template_tool/__init__.py,sha256=lXHuQ_RuH2Dxmeaow_yBXVhL_esdKfbl1blT9UljwOI,359
+template_tool/__main__.py,sha256=U4RMoNzLSDdaMe0DqeTu3nxH4pu8AISMwFtDYP3ypno,1246
+template_tool/actions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template_tool/actions/list.py,sha256=3oPNRWylH0-lRK6bgjUMcvDGegukY9uKjw9FxJbqm8A,263
+template_tool/actions/load.py,sha256=cUNgwLWrfsuk5l9aCTqgLIIMCsnUyG1KhXFCnTtzMyw,973
+template_tool/actions/remove.py,sha256=RPRosswCCYwz6KL4ZnyB30vP4SQyPh71F0yXTsnmZ_U,230
+template_tool/actions/save.py,sha256=rvUU28JH3Fr2zlTBYKA1Mavw5dZdTPXQlvD6_qsvERo,705
+template_tool/colorization/__init__.py,sha256=fY60bRYeCWi0oTnb6hSiKzO7066uiBBfedjRgUPWg9E,138
+template_tool-0.1.6.dist-info/METADATA,sha256=S2N6fUrB-9snEEtKgLo_a8OB4Pta0z3AX6rI1ZzoRtM,298
+template_tool-0.1.6.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+template_tool-0.1.6.dist-info/top_level.txt,sha256=zAyRmp9g520PHGHZ4mhptS26bOm9LfcnD6265FN3t1Q,14
+template_tool-0.1.6.dist-info/RECORD,,
