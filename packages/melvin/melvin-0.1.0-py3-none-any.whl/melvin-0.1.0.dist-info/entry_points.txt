@@ -1,0 +1,2 @@
+[console_scripts]
+melvin = src.copilot.cli:main
