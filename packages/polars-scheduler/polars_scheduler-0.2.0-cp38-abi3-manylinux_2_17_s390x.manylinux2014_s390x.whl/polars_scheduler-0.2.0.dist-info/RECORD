@@ -1,0 +1,6 @@
+polars_scheduler-0.2.0.dist-info/METADATA,sha256=EYB4_ULrh9IJGzu5N8edd4Xheh25tFsheRq6SpqSMtU,14451
+polars_scheduler-0.2.0.dist-info/WHEEL,sha256=viNz0WwAkzuFYoV1HnLISIqz97yuVwHWDe7uOp5vLVU,125
+polars_scheduler/__init__.py,sha256=UaiCLC06-Khw9W5_HiQiq5fvqKrPgxuQvCjhmmvJWDA,6504
+polars_scheduler/utils.py,sha256=8VCYa-XunQvagXSxQA2rSFYMHSJ04r8OC0yVOWOknbU,3980
+polars_scheduler/_polars_scheduler.abi3.so,sha256=YVagxJjGaW4w98x4YZ6B5PbC-ic841S42CY4vA32JTk,21695192
+polars_scheduler-0.2.0.dist-info/RECORD,,
