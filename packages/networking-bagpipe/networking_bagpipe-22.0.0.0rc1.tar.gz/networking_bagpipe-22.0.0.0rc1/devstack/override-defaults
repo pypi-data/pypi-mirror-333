@@ -1,0 +1,14 @@
+NETWORKING_BAGPIPE_DIR=$DEST/networking-bagpipe
+
+if [[ "$Q_AGENT" =~ "bagpipe-linuxbridge" ]] ; then
+  echo "Using 'Q_AGENT='bagpipe-linuxbridge' in local.conf is deprecated, please replace by NEUTRON_AGENT=linuxbridge"
+  NEUTRON_AGENT=linuxbridge
+  Q_AGENT=linuxbridge
+fi
+
+ENABLE_BAGPIPE_L2=$(trueorfalse False ENABLE_BAGPIPE_L2)
+if [[ "$ENABLE_BAGPIPE_L2" == "True" ]]; then
+  NEUTRON_AGENT=linuxbridge
+  Q_AGENT=linuxbridge
+fi
+
