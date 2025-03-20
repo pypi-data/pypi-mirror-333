@@ -1,0 +1,5 @@
+LICENSES
+dist
+languages-po
+scripts
+weblate_language_data

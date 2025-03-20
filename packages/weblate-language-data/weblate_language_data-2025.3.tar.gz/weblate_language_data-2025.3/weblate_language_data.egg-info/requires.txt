@@ -1,0 +1,16 @@
+
+[dev]
+weblate-language-data[lint,test,types]
+translate-toolkit==3.15.0
+
+[django]
+Django
+
+[lint]
+pre-commit==4.1.0
+
+[test]
+
+[types]
+mypy==1.15.0
+django-stubs==5.1.3
