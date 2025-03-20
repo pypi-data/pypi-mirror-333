@@ -1,0 +1,12 @@
+README.md
+setup.py
+nosql-bulk-automation-package-tst/Generator.py
+nosql-bulk-automation-package-tst/__init__.py
+nosql-bulk-automation-package-tst/__main__.py
+nosql-bulk-automation-package-tst/main.py
+nosql-bulk-automation-package-tst/refernce_file_constants.py
+nosql_bulk_automation_package_tst.egg-info/PKG-INFO
+nosql_bulk_automation_package_tst.egg-info/SOURCES.txt
+nosql_bulk_automation_package_tst.egg-info/dependency_links.txt
+nosql_bulk_automation_package_tst.egg-info/entry_points.txt
+nosql_bulk_automation_package_tst.egg-info/top_level.txt
