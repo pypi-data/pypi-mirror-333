@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+archetypax/__init__.py
+archetypax/base.py
+archetypax/evaluation.py
+archetypax/model.py
+archetypax/visualization.py
+archetypax.egg-info/PKG-INFO
+archetypax.egg-info/SOURCES.txt
+archetypax.egg-info/dependency_links.txt
+archetypax.egg-info/requires.txt
+archetypax.egg-info/top_level.txt
+tests/test_base.py
+tests/test_evaluation.py
+tests/test_improved_model.py
+tests/test_visualization.py
