@@ -1,0 +1,2 @@
+[console_scripts]
+pSNV-hunter = pSNV_hunter.run_visualization_tool:main
