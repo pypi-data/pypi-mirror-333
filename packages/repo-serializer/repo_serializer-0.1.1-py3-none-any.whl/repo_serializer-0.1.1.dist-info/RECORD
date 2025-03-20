@@ -1,0 +1,8 @@
+repo_serializer/__init__.py,sha256=NulYWlmAx8pnwPW0Z8Eu3nWptBbE5fRjvYKDdwSLuGI,57
+repo_serializer/cli.py,sha256=xC1pM19DiidRWClsTq36nhdVGRM32SvReuefpRJNRc4,807
+repo_serializer/serializer.py,sha256=8CoE47s-QmCTvXVSunIC5L9RuEshDOpTmFC77rHRv9o,3586
+repo_serializer-0.1.1.dist-info/METADATA,sha256=lnJ0ZpHdWf9U9PEAJJiE-1d85gqlBbyK2kLBD5Pi6ls,1948
+repo_serializer-0.1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+repo_serializer-0.1.1.dist-info/entry_points.txt,sha256=nytSl33UpJrmbxzytmgxFJVL_fJU_Gbp-zszxjvCmzU,61
+repo_serializer-0.1.1.dist-info/top_level.txt,sha256=YPsJnWM-r7BeL6uC4Wz0kygdttRNW2QQFdeRLKsRWSU,16
+repo_serializer-0.1.1.dist-info/RECORD,,
