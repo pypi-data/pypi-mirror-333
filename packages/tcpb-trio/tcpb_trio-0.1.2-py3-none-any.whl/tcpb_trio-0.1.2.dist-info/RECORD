@@ -1,0 +1,13 @@
+tcpb_trio/__init__.py,sha256=GCjqeTtljdGDoG07z35oZg1Ie46-IiTUcDB6q4mwc2I,105
+tcpb_trio/_version.py,sha256=YvuYzWnKtqBb-IqG8HAu-nhIYAsgj9Vmc_b9o7vO-js,22
+tcpb_trio/client.py,sha256=s5UNV1c0xuSqcwILxWjaI-1L9LgVzUHAAJGxI0IL_4w,2440
+tcpb_trio/client_sync.py,sha256=4v5b5dd8iFUzM_nsH6y9n34r2oFoLS-N1zsw9EG3F98,1292
+tcpb_trio/conn.py,sha256=BcEocGpC3A0cV0nRn6ytYVjaPodnKoQ4dr9x0IYUvVM,800
+tcpb_trio/input.py,sha256=TmWn6txJHZ0mpOONKP3J5ZUyn_P5GxlQA6t6JP2ZZDE,3977
+tcpb_trio/util.py,sha256=L1Nxw6oGy5xCH6d5wkx7kEKHpflk8tpxAUXqcQKiY-Q,583
+tcpb_trio/msg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tcpb_trio/msg/terachem_server_pb2.py,sha256=XNs7uoLF1PkLTZxIIN9dS1lBDdFkSs_cPjYqNBc3ADk,10712
+tcpb_trio-0.1.2.dist-info/METADATA,sha256=B6gFlAfUUySuiGO2YxjSD0wcVSiHZz-2_qSkUJiemq4,437
+tcpb_trio-0.1.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+tcpb_trio-0.1.2.dist-info/top_level.txt,sha256=mG32SrYyD7uVtZ9DuUt-0aPkxVebx5qU2CSFwEYzYzk,10
+tcpb_trio-0.1.2.dist-info/RECORD,,
