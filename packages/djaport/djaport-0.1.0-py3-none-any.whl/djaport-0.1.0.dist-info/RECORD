@@ -1,0 +1,9 @@
+djaport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djaport/mixins.py,sha256=21LBv7yDRX0YjIUGlHhkGbmH_xt5bpOT_VCAVD3b1v4,3157
+djaport/runner.py,sha256=_zQevQXuKF5-uTtssOcoMranE5Ybjk0zofiWeYrDKGA,28539
+djaport/templates/report.html,sha256=vr3p3ORO5Ws4iPOUKkMFivceSr9KurZPAoYS2f6b1qE,24027
+djaport-0.1.0.dist-info/LICENSE,sha256=8T0VRBq56NPyD75_pPiT1MMfF6uA3WuEKLhpklkdSKk,1071
+djaport-0.1.0.dist-info/METADATA,sha256=MJY0pGfy2reJ6dyO8cIp1bQcYkYjjBcmhqY2u254pUc,1675
+djaport-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+djaport-0.1.0.dist-info/top_level.txt,sha256=lX-jofzJfeeQYXImJORX6YFF8TOYlb4m-hKvFSigR-o,8
+djaport-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,57 @@
+Metadata-Version: 2.2
+Name: djaport
+Version: 0.1.0
+Summary: Django test utility for generating HTML test reports
+Home-page: https://github.com/hp77-creator/djaport
+Author: Himanshu Pandey
+Author-email: himanshu.dn.pandey@gmail.com
+License: MIT
+Keywords: django,testing,reports,html,test runner
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Unit
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django>=2.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Djaport (Reports for tests in Django)
+
+
+A package that will allow you to generate test reports of the tests that you have added in Django project.
+
+
+You can track test by simply adding the following annotation in your test file:
+```python
+    @tag('<tag-name>')
+    @djaport_test(
+        category='<test-category>',
+        author='<author-name>',
+        description='<description>'
+    )
+```
+
+and run your test like:
+
+```shell
+python manage.py test --testrunner=djaport.runner.CustomTestRunner
+```
