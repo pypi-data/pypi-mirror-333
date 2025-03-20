@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: fastfmri-toolbox
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: nibabel>=5.3.2
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: polars>=1.24.0
+Requires-Dist: pydantic>=2.10.6
