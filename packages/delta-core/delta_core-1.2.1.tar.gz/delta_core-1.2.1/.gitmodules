@@ -1,0 +1,4 @@
+[submodule "ansibleworkplan"]
+    path = ansibleworkplan
+    url = https://git2.gael.fr/delta/infra/ansibleworkplan.git
+    branch = playbook_delta_platform
