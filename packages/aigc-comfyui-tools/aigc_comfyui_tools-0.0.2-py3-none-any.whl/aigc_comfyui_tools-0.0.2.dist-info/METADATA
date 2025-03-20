@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: aigc-comfyui-tools
+Version: 0.0.2
+Summary: ComfyUI TEST Tools Set.
+Author-email: weiwenying <weiwenying520@gmail.com>
+Project-URL: Homepage, https://gitlab.com/nuvic/2025/aigc-comfyui-tools
+Project-URL: Issues, https://gitlab.com/nuvic/2025/aigc-comfyui-tools/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: pillow
+Requires-Dist: websocket-client
