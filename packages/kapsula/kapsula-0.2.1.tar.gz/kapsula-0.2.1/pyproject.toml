@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kapsula"
+version = "0.2.1"
+description = "Great for adding markdown docs to llm. Dead simple docs generator. Originally used at Metabob.com"
+authors = [{"name"= "ARJ"}]
+dependencies = []
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+
+[project.scripts]
+kapsula = "kapsula:main"
+
+
+[tool.setuptools]
+py-modules = ["kapsula"]
+
+[project.urls]
+"Homepage" = "https://github.com/Abdur-RahmaanJ/kapsula"
+"Documentation" = "https://github.com/Abdur-RahmaanJ/kapsula"
+"Source Code" = "https://github.com/Abdur-RahmaanJ/kapsula"
+"Bug Tracker" = "https://github.com/Abdur-RahmaanJ/kapsula/issues"
