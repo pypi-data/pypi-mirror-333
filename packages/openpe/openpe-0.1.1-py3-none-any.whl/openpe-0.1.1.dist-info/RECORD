@@ -1,0 +1,11 @@
+openpe/__init__.py,sha256=w2yPLxMZWHrKkYo6MyvlZI1Hy2vUhtGZmQMLFgreMq0,279
+openpe/categories.py,sha256=pT6q3HDcBHjZcCyXTrDnZmkcHcHWlmYqgXPBxX1OY9k,2721
+openpe/dataset.py,sha256=UP87DmqvTHBlZTOt-YEtDx8VoMXd9D_629tlJYahcUs,23586
+openpe/module.py,sha256=7F7t0ZtIprXWIe-bATWYlk93OIEW2EW0p2ZTm0cJLTY,14129
+openpe/utils.py,sha256=g9qJGpBuYntItNfen1BN5FiuPyuAWyPduwgAQTRGnCc,403
+openpe/webscraper.py,sha256=4c0wlYjtwhWz1iKyIm4O_vn4Nynwo2t2TqvhmpgXgL0,935
+openpe-0.1.1.dist-info/LICENSE,sha256=HdZjSCuUJiGmNF1Z0D94yez29sIZMnZ1k-K1DgDhMzk,1084
+openpe-0.1.1.dist-info/METADATA,sha256=RjKYS98tFj6Q3VLcnTZB2_yoIsGt-UpWjhx64mHhs-o,3462
+openpe-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+openpe-0.1.1.dist-info/top_level.txt,sha256=WQDl63etPIIEpoUSrd5Tuz_lWZX2sCWieLLfoqR36wg,7
+openpe-0.1.1.dist-info/RECORD,,
