@@ -1,0 +1,16 @@
+ocpi_pydantic-0.3.10.dist-info/METADATA,sha256=jrTi2EOjXNfsbEOsv_DZ4gv2N8eTh7hyN2Zoc2h0hq0,428
+ocpi_pydantic-0.3.10.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+ocpi_pydantic-0.3.10.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+ocpi_pydantic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocpi_pydantic/v221/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocpi_pydantic/v221/base.py,sha256=AX1pmwWHPNV64I10IF96n918dkQHvKWeyNJR50jmTD4,4193
+ocpi_pydantic/v221/credentials/__init__.py,sha256=FnPOAyV8etg9FNQxHX4tf9iSVSRuMDv47a_n_lKvOEM,4094
+ocpi_pydantic/v221/enum.py,sha256=sbUwftMI0DNUgjf56oxFRiIy17e7WQ2oey2H5UODXbc,12478
+ocpi_pydantic/v221/locations/__init__.py,sha256=a2DmdWA-si9w-Xl4tB2BBxSRr9wUn-pJltYrIAy3pPY,2121
+ocpi_pydantic/v221/locations/connector.py,sha256=dTm7QdlM4oAMDTKxeX8F8lueqFWmYLXkS3C_nGJjmOo,1707
+ocpi_pydantic/v221/locations/evse.py,sha256=dmc34Zq7NWIx1Zn3u3VpDNcvqi-RBlqScVpyuN5CJXo,3036
+ocpi_pydantic/v221/locations/location.py,sha256=RgixjTuKoaNxtMwRypxoj7wDJa0GwTK92kMaf-5RvIc,23092
+ocpi_pydantic/v221/tokens/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocpi_pydantic/v221/versions/__init__.py,sha256=7KP2bLRVPaQSi3Iu4hp_DrKG-U7Giu5FQvGNaJQkrOo,2973
+ocpi_pydantic/v221/versions/pecl_xhprof.ini,sha256=x-hLQlWbCpE3SnoEbV0qSZa3bPSPdpeH0naHbjjsLec,72
+ocpi_pydantic-0.3.10.dist-info/RECORD,,
