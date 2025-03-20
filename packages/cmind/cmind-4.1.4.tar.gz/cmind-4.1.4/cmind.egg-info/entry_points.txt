@@ -1,0 +1,12 @@
+[console_scripts]
+cm = cmind.cli:run
+cme = cmind.cli:run_experiment
+cmg = cmind.cli:gui_script
+cmind = cmind.cli:runx
+cmlc = cmind.cli:run_legacy_mlc
+cmlcr = cmind.cli:run_legacy_mlcr
+cmr = cmind.cli:run_script
+cmrd = cmind.cli:docker_script
+cmx = cmind.cli:runx
+cmxr = cmind.cli:run_legacy_mlcr
+cr = cmind.cli:run_legacy_mlcr
