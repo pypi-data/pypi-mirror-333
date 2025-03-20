@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: tacview-client
+Version: 0.3.1
+Summary: 
+Author: mcdelaney
+Author-email: mcdelaney@gmail.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Cython (>=3.0.12,<4.0.0)
+Requires-Dist: SQLAlchemy (==1.4.51)
+Requires-Dist: asyncpg (>=0.27.0,<0.28.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: pytz (>=2020.5,<2021.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Project-URL: Repository, https://github.com/mcdelaney/py-tacview-client.git
+Project-URL: issues, https://github.com/mcdelaney/py-tacview-client/issues
