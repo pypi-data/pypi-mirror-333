@@ -1,0 +1,94 @@
+[project]
+name = "zen-generator"
+version = "0.1.2"
+description = "A bidirectional Python code generator that converts between AsyncAPI 3.0 specifications and Python code (pure Python or FastAPI implementations)."
+authors = [{ name = "Carlo Bertini [WaYdotNET]", email = "waydotnet@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["asyncapi", "code generator", "python", "fastapi"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Environment :: Web Environment",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "black>=25.1.0",
+    "pyyaml>=6.0.2",
+
+    "typer>=0.15.2",
+    "yamllint>=1.35.1",
+]
+
+[project.urls]
+"Home Page" = "https://pypi.org/project/zen-generator/"
+Documentation = "https://github.com/WaYdotNET/zen-generator/blob/main/README.md"
+GitHub = "https://github.com/WaYdotNET/zen-generator"
+Changelog = "https://github.com/WaYdotNET/zen-generator/blob/main/CHANGELOG.md"
+"Bug Reports" = "https://github.com/WaYdotNET/zen-generator/discussions"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.12",
+    "mypy>=1.15.0",
+    "ruff>=0.9.9",
+    "pytest>=8.3.5",
+    "types-pyyaml>=6.0.12.20241230",
+    "pytest-cov>=6.0.0",
+]
+
+[project.scripts]
+zen-generator = "zen_generator.cli"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+exclude = [
+    ".venv",
+    "__pycache__",
+    "tests/**",
+]
+ignore = [
+    "B018", # Found useless expression. Either assign it to a variable or remove it.
+    "B026", # Star-arg unpacking after a keyword argument is strongly discouraged
+    "B904", # Within an except clause, raise exceptions with raise ... from err or raise ... from None to
+    # distinguish them from errors in exception handling.
+    "B905", # zip() without an explicit strict= parameter set. strict=True causes the resulting iterator
+    # to raise a ValueError if the arguments are exhausted at differing lengths.
+    "E722", # Do not use bare except, specify exception instead
+]
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = [
+    "I", # isort
+    "F", # pyflakes
+]
+unfixable = []
+
+select = [
+    "B", # flake8-bugbear
+    "C9", # mccabe
+    "E", # pycodestyle
+    "F", # pyflakes
+    "I", # isort
+    "Q", # flake8-quotes
+    "W", # pycodestyle
+]
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
