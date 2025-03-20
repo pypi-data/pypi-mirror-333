@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: thirdweb-mcp
+Version: 0.0.1
+Summary: thirdweb MCP
+Author: thirdweb
+Author-email: support@thirdweb.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: mcp (>=1.3.0,<2.0.0)
+Requires-Dist: thirdweb-ai[mcp] (==0.0.1)
+Description-Content-Type: text/markdown
+
+
