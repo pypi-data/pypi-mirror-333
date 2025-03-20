@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: wledataloader
+Version: 0.1.0
+Summary: A dataloader for the Wireless Link Estimation dataset to train and test ML models.
+Author-email: NT Nguyen <info@iec-uit.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs
+Requires-Dist: natsort
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: scikit_learn
+Requires-Dist: tqdm

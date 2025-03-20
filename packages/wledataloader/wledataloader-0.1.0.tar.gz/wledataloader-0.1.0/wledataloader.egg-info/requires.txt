@@ -1,0 +1,7 @@
+appdirs
+natsort
+numpy
+pandas
+requests
+scikit_learn
+tqdm
