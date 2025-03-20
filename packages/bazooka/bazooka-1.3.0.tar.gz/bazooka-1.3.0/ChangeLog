@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+1.3.0
+-----
+
+* Introduce dedicated exception for unauthorized HTTP responses (#4)
