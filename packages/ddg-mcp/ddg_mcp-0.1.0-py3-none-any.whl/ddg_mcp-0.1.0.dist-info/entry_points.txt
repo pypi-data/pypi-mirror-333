@@ -1,0 +1,2 @@
+[console_scripts]
+ddg-mcp = ddg_mcp:main
