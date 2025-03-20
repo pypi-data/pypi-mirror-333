@@ -1,0 +1,4 @@
+Query
+=====
+
+.. automodule:: cumin.query
