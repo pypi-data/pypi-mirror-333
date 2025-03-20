@@ -1,0 +1,1 @@
+from lid_search.lid_search import LidDB,__version__
