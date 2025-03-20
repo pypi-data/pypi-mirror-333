@@ -1,0 +1,7 @@
+python_cel-0.1.0.dist-info/METADATA,sha256=HxSiJl8J-CeIhPeqoWc_-FrFUfgrzahb7mRuAQVRKNU,2305
+python_cel-0.1.0.dist-info/WHEEL,sha256=aeE5G8ggYi_EBv6yuvByZute-TRqdm323tp2mfizEXM,106
+cel/_cel.pyi,sha256=3Q9q0FHSPIQ2is6FXTzQhuieKEjkLVi10pVIaNPFOlE,1343
+cel/__init__.py,sha256=7k0yQWKSVvxFPcN1R1EMfp3UiPKMcwya1w-ewdAIVD8,90
+cel/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cel/_cel.abi3.so,sha256=xHOC8TtHq65oU4TiTnEpF9Vhh1pJeMvSSziFF3YrCVk,3900912
+python_cel-0.1.0.dist-info/RECORD,,
