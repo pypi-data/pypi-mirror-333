@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+source/dictation/__init__.py
+source/dictation/version.txt
+source/dictation.egg-info/PKG-INFO
+source/dictation.egg-info/SOURCES.txt
+source/dictation.egg-info/dependency_links.txt
+source/dictation.egg-info/top_level.txt
+source/dictation.egg-info/zip-safe
+tests/test_dictation_library.py
+tests/test_dictation_pickling.py
