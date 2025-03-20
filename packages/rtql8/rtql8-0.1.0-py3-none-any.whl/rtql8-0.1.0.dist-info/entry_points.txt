@@ -1,0 +1,3 @@
+[console_scripts]
+rtql8=rtql8.cli:main
+
