@@ -1,0 +1,9 @@
+rhosocial/activerecord/backend/impl/mysql/__init__.py,sha256=27-_77WDRlpW_w4WErdr-PWmF8xdLokW8PNpDsaSgYs,1007
+rhosocial/activerecord/backend/impl/mysql/backend.py,sha256=4ZJhhGwqh4_NxNWiywtufyr79aGQRMfRFeDo30w9GbY,31856
+rhosocial/activerecord/backend/impl/mysql/dialect.py,sha256=YkHjwbE7eGt-x9Y4OzjIcxdvlsJbUBlmkHPSA4N6FMA,22963
+rhosocial/activerecord/backend/impl/mysql/transaction.py,sha256=vZV2B7wrpXtMtlwuIj2-fkH20O10yT0L5M9hLQ0sQUg,9143
+rhosocial/activerecord/backend/impl/mysql/types.py,sha256=Yu0iRrZ0VvvzNLn7yM8x_2OByhVCLdUT3VSmvWZx0Yg,4283
+rhosocial_activerecord_mysql-1.0.0.dev1.dist-info/METADATA,sha256=ZJNWupRipQ0XXzf8UGlgTfWLW_tAHMmcQpMYKnvvbUs,19580
+rhosocial_activerecord_mysql-1.0.0.dev1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+rhosocial_activerecord_mysql-1.0.0.dev1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rhosocial_activerecord_mysql-1.0.0.dev1.dist-info/RECORD,,
