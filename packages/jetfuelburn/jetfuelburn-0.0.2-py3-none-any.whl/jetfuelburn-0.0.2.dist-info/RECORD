@@ -1,0 +1,15 @@
+jetfuelburn/__init__.py,sha256=JxeAZHl_gJU5bRuaD97DYJeOSo6X7W7noSrlhkKe7sg,177
+jetfuelburn/breguet.py,sha256=8vOm-B876slfjWDZ4-mb8xm_t1dQKHPPJ4WBi_a5rRI,5135
+jetfuelburn/closedform.py,sha256=T-VQsEyr18dgJKDMnOfbd-oYFhjL9M5HFFZ83tgykME,1406
+jetfuelburn/combined.py,sha256=jBW_crfeAunpkMlePXGFpaLgJJRWuFSiYl1WYMm4hck,11876
+jetfuelburn/diagrams.py,sha256=1DPFtetRSFGimft01I8xO-HoSb27BpTnwoIJ9gDtx4w,6316
+jetfuelburn/reducedorder.py,sha256=mWSWEgTcvULqCj2gKdQuWftYDBSGFD-j_9jy8GqyyIo,52003
+jetfuelburn/aux/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jetfuelburn/aux/allocation.py,sha256=GjeT4vsLpU3bFcUcK49quthWkrwnkAiVjgH1JJdZB2s,6552
+jetfuelburn/aux/physics.py,sha256=fbhE3NKRuJsNcwNEAlZYYpd2WR80nXvickFM5C8PbDE,6989
+jetfuelburn/aux/tests.py,sha256=OTHiINsDIx8QsyqmHs0sk0CNv_6mMvbBLt9pxRGPWlw,4051
+jetfuelburn-0.0.2.dist-info/LICENSE.txt,sha256=HbrqLdtVJ0q9XNKl-1szpvS8uKEcbnvyOJKvclvONp4,1101
+jetfuelburn-0.0.2.dist-info/METADATA,sha256=M-s2HTgbGDgqdnPzG_rskImIlqtLSdRwP-xC5rjg0S4,1335
+jetfuelburn-0.0.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+jetfuelburn-0.0.2.dist-info/top_level.txt,sha256=sZtmCKaypKLXOg_-vfed6Tw6eJbR-II0H5MEQJYBuLQ,12
+jetfuelburn-0.0.2.dist-info/RECORD,,
