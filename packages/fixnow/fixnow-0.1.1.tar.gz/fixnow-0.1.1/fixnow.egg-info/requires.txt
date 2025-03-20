@@ -1,0 +1,7 @@
+openai
+pre-commit
+pylint
+mypy
+pytest
+argparse
+rich
