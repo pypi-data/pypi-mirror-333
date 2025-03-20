@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: docassemble.helloworld
+Version: 6.9
+Summary: A docassemble extension.
+Home-page: https://docassemble.org
+Author: Jonathan Pyle
+Author-email: jhpyle@gmail.com
+License: The MIT License (MIT)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
+
+# docassemble.helloworld
+
+A docassemble extension that says hello to the user's planet.
+
+Updated readme for version 6.9.
+
+## Author
+
+Jonathan Pyle, jpyle@docassemble.org
