@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+Upsetter.egg-info/PKG-INFO
+Upsetter.egg-info/SOURCES.txt
+Upsetter.egg-info/dependency_links.txt
+Upsetter.egg-info/entry_points.txt
+Upsetter.egg-info/requires.txt
+Upsetter.egg-info/top_level.txt
+upsetter/__init__.py
+upsetter/cli.py

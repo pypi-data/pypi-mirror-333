@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: Upsetter
+Version: 0.1.0a1
+Summary: Modern font subsetter – mostly a wrapper around various existing tools
+Author-email: Yanone <post@yanone.de>
+License: Apache-2.0
+Project-URL: repository, https://github.com/yanone/upsetter-py
+Project-URL: Bug Tracker, https://github.com/yanone/upsetter-py/issues
+Keywords: font,subset,subspace,upsetter,python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fonttools
+
+# upsetter-py
+ Modern font subsetter – mostly a wrapper around various existing tools
