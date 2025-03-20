@@ -1,0 +1,11 @@
+current_profile: code
+selections:
+  code:
+    full_files:
+    - /scrapling-fetch-mcp/pyproject.toml
+    - /scrapling-fetch-mcp/src/scrapling_fetch_mcp/_markdownify.py
+    - /scrapling-fetch-mcp/src/scrapling_fetch_mcp/_scrapling.py
+    - /scrapling-fetch-mcp/src/scrapling_fetch_mcp/__init__.py
+    - /scrapling-fetch-mcp/src/scrapling_fetch_mcp/mcp.py
+    outline_files: []
+    timestamp: 1741937738.915228
