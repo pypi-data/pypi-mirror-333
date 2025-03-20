@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+browser_mcp/__init__.py
+browser_mcp/__main__.py
+browser_mcp/check_playwright.py
+browser_mcp/server.py
+browser_mcp/test.py
+browser_mcp.egg-info/PKG-INFO
+browser_mcp.egg-info/SOURCES.txt
+browser_mcp.egg-info/dependency_links.txt
+browser_mcp.egg-info/entry_points.txt
+browser_mcp.egg-info/requires.txt
+browser_mcp.egg-info/top_level.txt
+tests/test_playwright_installation.py
