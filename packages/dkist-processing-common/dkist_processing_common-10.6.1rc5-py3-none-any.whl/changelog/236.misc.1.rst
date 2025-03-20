@@ -1,0 +1,2 @@
+Change returns from the metadata store queries into Pydantic BaseModel instances.  Remove unnecessary parsing
+and error checking in the metadata store mixin.
