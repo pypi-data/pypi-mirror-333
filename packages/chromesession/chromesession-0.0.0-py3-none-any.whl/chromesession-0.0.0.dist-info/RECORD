@@ -1,0 +1,7 @@
+chromesession/__init__.py,sha256=y-dbUwcFabdZoBG2_4sdVVtHczg_trGllCwO1UtnMC8,150
+chromesession/chromium.py,sha256=Jp2bOe5uDiAY4wdY08ZbvCI8jDjlrV11lpEAXfhKjIQ,3246
+chromesession/session.py,sha256=5RPicgoN7fcPhFAUUq5Rbb8aEQAoI1So62LTPVnhGCw,5021
+chromesession-0.0.0.dist-info/LICENSE,sha256=6P1a5Plf7adcIRVPEo47AgsBCUoOXrgIDGUD0VhsRaU,1095
+chromesession-0.0.0.dist-info/METADATA,sha256=VZadFB5R1W8AgPc9RF5wOnRws-r4PdjFThzr7Us4rUc,2836
+chromesession-0.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+chromesession-0.0.0.dist-info/RECORD,,
