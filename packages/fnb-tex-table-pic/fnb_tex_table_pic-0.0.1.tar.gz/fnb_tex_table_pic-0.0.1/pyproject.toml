@@ -1,0 +1,18 @@
+[project]
+name = "fnb_tex_table_pic"
+version = "0.0.1"
+authors = [
+  { name="Fedor Bondar", email="bondar.feod@gmail.com" },
+]
+description = "A simple lib to generate .tex code for tables and pics."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/fedorbondar/hse-ap-2025-spring/tree/main"
+Issues = "https://github.com/fedorbondar/hse-ap-2025-spring/issues"

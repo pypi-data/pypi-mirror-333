@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/fnb_tex_table_pic/__init__.py
+src/fnb_tex_table_pic/tex_generator.py
+src/fnb_tex_table_pic.egg-info/PKG-INFO
+src/fnb_tex_table_pic.egg-info/SOURCES.txt
+src/fnb_tex_table_pic.egg-info/dependency_links.txt
+src/fnb_tex_table_pic.egg-info/top_level.txt

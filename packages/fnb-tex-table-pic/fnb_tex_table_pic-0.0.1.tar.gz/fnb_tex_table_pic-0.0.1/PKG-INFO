@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: fnb_tex_table_pic
+Version: 0.0.1
+Summary: A simple lib to generate .tex code for tables and pics.
+Author-email: Fedor Bondar <bondar.feod@gmail.com>
+Project-URL: Homepage, https://github.com/fedorbondar/hse-ap-2025-spring/tree/main
+Project-URL: Issues, https://github.com/fedorbondar/hse-ap-2025-spring/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# fnb_tex_table_pic
+
+A simple lib to generate .tex code for tables and pics.
