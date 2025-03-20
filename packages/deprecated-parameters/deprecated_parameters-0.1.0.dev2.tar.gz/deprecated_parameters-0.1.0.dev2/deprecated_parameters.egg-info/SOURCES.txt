@@ -1,0 +1,13 @@
+LICENSE.rst
+pyproject.toml
+deprecated_parameters/__init__.py
+deprecated_parameters/_decorator.py
+deprecated_parameters/_mypy.py
+deprecated_parameters/py.typed
+deprecated_parameters.egg-info/PKG-INFO
+deprecated_parameters.egg-info/SOURCES.txt
+deprecated_parameters.egg-info/dependency_links.txt
+deprecated_parameters.egg-info/requires.txt
+deprecated_parameters.egg-info/top_level.txt
+deprecated_parameters_tests/__main__.py
+deprecated_parameters_tests/test_decorator.py

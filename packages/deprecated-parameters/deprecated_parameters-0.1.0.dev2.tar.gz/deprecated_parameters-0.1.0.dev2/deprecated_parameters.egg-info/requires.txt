@@ -1,0 +1,12 @@
+
+[dev]
+pre-commit>=2.19.0
+tox>=3.25.0
+build>=0.10.0
+
+[mypy]
+mypy>=1.15.0
+
+[test]
+pytest>=6.2.5
+pytest-cov>=4.0.0
