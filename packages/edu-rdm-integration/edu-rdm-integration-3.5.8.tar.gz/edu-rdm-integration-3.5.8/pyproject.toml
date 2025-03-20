@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+    "packaging>=21.3,<24",
+    "setuptools>=47.3.1,<70",
+    "wheel>=0.37.1,<0.42",
+    "pip>=23.2.1,<24",
+    "setuptools-git-versioning>=2.0,<3"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[project]
+name = "edu-rdm-integration"
+dynamic = ["version"]
+description = "Интеграция с Региональной витриной данных"
+readme = "README.md"
+requires-python = ">= 3.9"
