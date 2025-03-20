@@ -1,0 +1,9 @@
+README.md
+setup.py
+gerador_tabuada.egg-info/PKG-INFO
+gerador_tabuada.egg-info/SOURCES.txt
+gerador_tabuada.egg-info/dependency_links.txt
+gerador_tabuada.egg-info/entry_points.txt
+gerador_tabuada.egg-info/top_level.txt
+geradordetabuada/__init__.py
+geradordetabuada/tabuada.py
