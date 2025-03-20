@@ -1,0 +1,71 @@
+Metadata-Version: 2.2
+Name: iqr_outlier
+Version: 0.1.4
+Summary: A library to detect and remove outliers using IQR.
+Home-page: https://github.com/abhi-2301-git/iqr_outlier
+Author: Abhinav Masih
+Author-email: abhnv.msh@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# IQR Outlier Detection Library
+
+This Python package helps in detecting and removing outliers from a dataset using the **Interquartile Range (IQR)** method.
+
+## Features
+- Detects outliers using IQR.
+- Removes outliers from a dataset.
+- Works with Pandas DataFrames and Series.
+
+## Installation
+
+```bash
+pip install iqr-outlier
+```
+
+### Import the package:
+```python
+from iqr_outlier.detection import detect_outliers # Returns list with outliers
+from iqr_outlier.removal import remove_outliers # Return a pandas series with outliers removed
+import pandas as pd
+```
+
+### Example
+```python
+# Sample dataset
+data = pd.Series([10, 12, 14, 15, 18, 20, 22, 24, 30, 100])
+
+# Detect outliers
+outliers = detect_outliers(data)
+print("Outliers:", outliers.tolist())
+
+# Remove outliers
+cleaned_data = remove_outliers(data)
+print("Cleaned Data:", cleaned_data.tolist())
+```
+
+## Project Structure
+```
+iqr_outliers/
+│-- iqr_outlier/
+│   │-- __init__.py
+│   │-- detection.py
+│   │-- removal.py
+│-- setup.py
+│-- test.py
+│-- README.md
+```
