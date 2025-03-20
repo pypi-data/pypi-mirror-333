@@ -1,0 +1,38 @@
+[project]
+name='MartiniGlass'
+version='1.1.1'
+dependencies = [
+    "pbr",
+    "vermouth>=0.9.6",
+    ]
+keywords = ["molecular dynamics", "martini"]
+authors = [{name = "Christopher Brasnett", email="c.s.brasnett@rug.nl"}]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {text = "Apache 2.0"}
+requires-python = ">=3.8"
+
+[build-system]
+requires = [
+        "wheel",
+        "setuptools >= 61.0",
+        "pbr",
+        "vermouth"
+    ]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+martiniglass= 'martiniglass:martiniglass.main'
+
+[project.gui-scripts]
+martiniglass= 'martiniglass:martiniglass.main'
+
+[project.urls]
+Documentation = "https://martiniglass.readthedocs.io/en/latest/"
+Repository = "https://github.com/Martini-Force-Field-Initiative/MartiniGlass"
+Homepage = "https://github.com/Martini-Force-Field-Initiative/MartiniGlass"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+martiniglass = ["data/*"]

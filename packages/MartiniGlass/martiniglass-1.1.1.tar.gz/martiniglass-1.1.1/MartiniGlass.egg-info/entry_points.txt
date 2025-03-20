@@ -1,0 +1,5 @@
+[console_scripts]
+martiniglass = martiniglass:martiniglass.main
+
+[gui_scripts]
+martiniglass = martiniglass:martiniglass.main
