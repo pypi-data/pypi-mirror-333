@@ -1,0 +1,12 @@
+%import common.WS
+%import common.SIGNED_NUMBER
+
+%ignore WS
+
+?start: length
+
+length: number unit?
+
+?!unit: "em" | "ex" | "px" | "in" | "cm" | "mm" | "pt" | "pc" | "%"
+
+number: SIGNED_NUMBER
