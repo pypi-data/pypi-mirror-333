@@ -1,0 +1,14 @@
+MDAnalysis
+kimmdy
+
+[dev]
+pytest
+statsmodels
+plotnine
+pandas
+numpy
+tox
+black
+jupyter
+griffe<1.0.0,>=0.33
+quartodoc
