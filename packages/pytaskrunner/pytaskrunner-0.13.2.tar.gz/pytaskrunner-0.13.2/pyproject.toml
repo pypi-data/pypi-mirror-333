@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=72", "setuptools-scm[toml]>=6.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytaskrunner"
+dynamic = ["version"]
+description = "Shell tasks managmement tool"
+authors = [
+    {name = "Omer Caspi", email = "omer.caspi@gmail.com"},
+]
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+	"argcomplete>=2.0.0",
+        "pydantic>=2.8",
+	"setuptools>=72",
+	"PyYAML>=6.0.2, <7.0"
+]
+requires-python = ">=3.10,<4"
+
+[project.optional-dependencies]
+devel = [
+	"xeet>=0.5.5"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/omercsp/taskrunner"
+
+[project.scripts]
+task = "tr.__main__:main"
+
+[tool.setuptools]
+packages = ["tr"]
+package-dir = {'' = "src"}
+
+[tool.setuptools_scm]
+local_scheme = "dirty-tag"

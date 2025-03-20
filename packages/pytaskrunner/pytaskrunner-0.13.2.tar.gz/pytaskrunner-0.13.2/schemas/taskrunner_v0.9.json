@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "minLength": 1
+        },
+        "include": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            }
+        },
+        "use_default_include": {
+            "type": "boolean"
+        },
+        "tasks": {
+            "type": "object"
+        },
+        "suppress": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            }
+        },
+        "variables": {
+            "type": "object"
+        },
+        "default_task": {
+            "type": "string"
+        },
+        "default_shell_path": {
+            "type": "string",
+            "minLength": 1
+        },
+        "default_container_tool": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+	"include": [
+		"{{taskRoot}}/base_tasks_a.json"
+	],
+	"variables": {
+		"base_var1": "from-base b 1",
+		"base_var2": "from-base b 2"
+	},
+	"tasks": {
+		"041_included": {
+			"commands": [
+				"echo base b"
+			]
+		}
+	},
+	"use_default_include": false
+}

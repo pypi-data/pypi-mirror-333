@@ -1,0 +1,7 @@
+argcomplete>=2.0.0
+pydantic>=2.8
+setuptools>=72
+PyYAML<7.0,>=6.0.2
+
+[devel]
+xeet>=0.5.5
