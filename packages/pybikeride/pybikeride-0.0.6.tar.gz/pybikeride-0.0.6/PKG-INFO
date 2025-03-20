@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: pybikeride
+Version: 0.0.6
+Summary: Analyse and plot gps files of bicycle rides
+Author-email: dirkmjk <info@dirkmjk.nl>
+Project-URL: Homepage, https://codeberg.org/dirkmjk/bikeride
+Keywords: cycling,gps,gpx,fit,garmin
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: python-dateutil
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: geopy
+Requires-Dist: fitdecode
+Requires-Dist: bs4
+Requires-Dist: ipyleaflet
+Requires-Dist: requests
