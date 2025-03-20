@@ -1,0 +1,12 @@
+gittxt/__init__.py,sha256=kO7Yzu2ORMmD35mkHGO2anR1EOxKGloVTjVoSweOfd4,1206
+gittxt/cli.py,sha256=SKfq6A-VyQTvz1kWjjk2QTuTMof11KUst_uTa30MuEU,8179
+gittxt/config.py,sha256=EvB3JyCWp2JkDCIVLd2uIUDXSBzQAgcfKcKeHxc_hUg,3560
+gittxt/logger.py,sha256=Zv3YCBRddgmjw6mcYQYUODY42h8IONL1GhEAPiqn4lg,7800
+gittxt/output_builder.py,sha256=e_4zGpU4CN2B0o8GVaMKyMhY8F6KH9FAHoRglRpbXuU,11570
+gittxt/repository.py,sha256=N9R7v8JVcu4nAEBa6TQOgHUgV6hf0jTwTAuL88FSJ8Q,4706
+gittxt/scanner.py,sha256=2wcLm3O56-VDEGNYPIbm6gFjbYrjAw2U5vhqTNJS12s,9744
+gittxt-1.4.1.dist-info/LICENSE,sha256=r5zw909MVwk3mhPjrdRCGfAA3O_rT4HH9tItQSt5eKY,1073
+gittxt-1.4.1.dist-info/METADATA,sha256=UCTmFSYCG5YJBq9fmYQmGmtTeM817V3LJkKfvCXracY,8264
+gittxt-1.4.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+gittxt-1.4.1.dist-info/entry_points.txt,sha256=t2tXEt2bbCABVZt3_Ggb1R4MnIcCHdxMuOA6NIqLjRM,42
+gittxt-1.4.1.dist-info/RECORD,,
