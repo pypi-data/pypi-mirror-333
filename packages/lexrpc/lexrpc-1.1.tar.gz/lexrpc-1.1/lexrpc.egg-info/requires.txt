@@ -1,0 +1,12 @@
+dag-cbor
+dag-json>=0.3
+grapheme
+iterators
+libipld<4.0.0
+multiformats>=0.3.1.post4
+requests>=2.0
+simple-websocket
+
+[flask]
+Flask>=2.0
+flask-sock
