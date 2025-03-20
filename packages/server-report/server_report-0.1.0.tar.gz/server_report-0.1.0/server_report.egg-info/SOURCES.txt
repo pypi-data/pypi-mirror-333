@@ -1,0 +1,8 @@
+README.md
+setup.py
+server_report.egg-info/PKG-INFO
+server_report.egg-info/SOURCES.txt
+server_report.egg-info/dependency_links.txt
+server_report.egg-info/entry_points.txt
+server_report.egg-info/requires.txt
+server_report.egg-info/top_level.txt
