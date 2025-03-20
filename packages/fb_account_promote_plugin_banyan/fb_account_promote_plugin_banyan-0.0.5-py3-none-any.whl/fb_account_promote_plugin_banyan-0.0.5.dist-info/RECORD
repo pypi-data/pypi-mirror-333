@@ -1,0 +1,7 @@
+fb_account_promote_plugin_banyan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fb_account_promote_plugin_banyan/account_promotion.py,sha256=6VEBo9uSZZjodkmJ6c9W9LEtKyP_ppsnbFLP1k9QzOQ,380
+fb_account_promote_plugin_banyan/interface.py,sha256=e7eIS8OJCuvY9kicVLIrJzuga3cJwMUA3g66RTSA7J8,502
+fb_account_promote_plugin_banyan-0.0.5.dist-info/entry_points.txt,sha256=oCTfTUSlPdknw5RfnduhggYuzg2-mTOH6sdn_RzrHrw,89
+fb_account_promote_plugin_banyan-0.0.5.dist-info/METADATA,sha256=j7GVfABoIosrraKiUWUoS5HOVG0UFSaZkeb8MQ77t3o,525
+fb_account_promote_plugin_banyan-0.0.5.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+fb_account_promote_plugin_banyan-0.0.5.dist-info/RECORD,,
