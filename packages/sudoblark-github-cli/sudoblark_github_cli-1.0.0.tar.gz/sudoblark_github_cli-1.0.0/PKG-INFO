@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: sudoblark-github-cli
+Version: 1.0.0
+Summary: A CLI to interact with GitHub, intended to be used for CI/CD operations.
+License: BSD-3
+Author: Ben Clark
+Author-email: bclark@sudoblark.com
+Requires-Python: >=3.10.0,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: sudoblark_python_core (==1.0.2)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Project-URL: Repository, https://github.com/sudoblark/sudoblark.python.github-cli
+Description-Content-Type: text/markdown
+
+## About The Project
+
+This is a really basic CLI that wraps around [sudoblark.python.core](https://pypi.org/project/sudoblark-python-core/)
+to provide useful GitHub CLI functionality, intended for usage within CI/CD platforms but also usable elsewhere.
+
+Installation is simply:
+
+```sh
+pip install sudoblark-github-cli
+```
+
+Get help by running:
+
+```sh
+sudoblark-github-cli --help
+```
+
+Any and all sub-commands and namespaces will provide further, useful,
+information if you pass it a `--help` argument.
+
+The source code resides [here](https://github.com/sudoblark/sudoblark.python.github-cli).
+
+The live source of documentation sits [here](https://sudoblark.github.io/sudoblark.python.github-cli/latest).
