@@ -1,0 +1,248 @@
+/**
+ * Wagtail Block Exchange - CSS styles
+ */
+
+/* Copy button styles */
+.copy-to-clipboard-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Match current Wagtail button styles */
+.copy-to-clipboard-button.button {
+    background-color: transparent;
+    border: 0;
+}
+
+.copy-to-clipboard-button:hover {
+    color: #007d7e;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.copy-to-clipboard-button.copied {
+    color: #007d7e;
+}
+
+.copy-to-clipboard-button .icon {
+    font-size: 1.2em;
+    /* Match existing icon styles */
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Ensure proper icon display with fallback */
+.icon-copy:before {
+    content: "\e902";
+    /* Fallback Unicode clipboard icon if Wagtail's isn't available */
+    content: "\1f4cb";
+}
+
+/* Support for both modern and legacy Wagtail UI */
+.w-panel__controls .copy-to-clipboard-button,
+.block-controls .copy-to-clipboard-button {
+    width: 1.5em;
+    height: 1.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Properly position the button in the panel controls */
+.w-panel__controls button.copy-to-clipboard-button.button--icon,
+[data-panel-controls] button.copy-to-clipboard-button.button--icon {
+    width: 2.25em;
+    height: 2.25em;
+    padding: 0;
+}
+
+/* Clipboard page styles */
+.clipboard-list {
+    margin-top: 1.5em;
+}
+
+.clipboard-item {
+    margin-bottom: 1.5em;
+    padding: 1.2em;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s;
+}
+
+.clipboard-item:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clipboard-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8em;
+    flex-wrap: wrap;
+}
+
+.clipboard-item__title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 0 0.5em 0;
+    line-height: 1.4;
+}
+
+.clipboard-item__title a {
+    color: #007d7e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.clipboard-item__title a:hover {
+    color: #00595a;
+    text-decoration: underline;
+}
+
+.clipboard-item__actions {
+    display: flex;
+    gap: 0.5em;
+    margin-left: auto;
+}
+
+.clipboard-item__meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0.8em;
+}
+
+.clipboard-item__preview {
+    background-color: #f5f5f5;
+    padding: 0.75em;
+    border-radius: 3px;
+    font-family: monospace;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ebebeb;
+}
+
+.clipboard-empty {
+    text-align: center;
+    padding: 2em;
+    color: #666;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+
+/* Status indicators */
+.clipboard-item__status {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-left: 0.5em;
+}
+
+.clipboard-item__status--compatible {
+    background-color: #e6f7e6;
+    color: #2e7d32;
+}
+
+.clipboard-item__status--incompatible {
+    background-color: #fce4e4;
+    color: #c62828;
+}
+
+/* Button styles */
+.paste-block-button {
+    background-color: #007d7e;
+    color: white;
+}
+
+.paste-block-button:hover {
+    background-color: #005c5d;
+}
+
+.delete-clipboard-item-button {
+    background-color: #c62828;
+    color: white;
+}
+
+.delete-clipboard-item-button:hover {
+    background-color: #b71c1c;
+}
+
+/* Custom Wagtail-style notifications for when the native system isn't available */
+.w-messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.w-messages__message {
+    position: relative;
+    padding: 16px 50px 16px 20px;
+    background-color: #262626;
+    color: white;
+    margin-bottom: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.w-messages__message--success {
+    background-color: #1d933b;
+}
+
+.w-messages__message--error {
+    background-color: #cd3238;
+}
+
+.w-messages__message--warning {
+    background-color: #e9b04d;
+}
+
+.w-messages__message-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.w-messages__message-action {
+    margin-left: 20px;
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.w-messages__message-action:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.w-messages__message-close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
