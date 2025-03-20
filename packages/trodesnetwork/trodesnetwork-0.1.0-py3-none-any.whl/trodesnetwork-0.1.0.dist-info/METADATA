@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: trodesnetwork
+Version: 0.1.0
+Summary: A library to connect to Trodes over a network
+License-File: LICENSE
+Requires-Dist: pyzmq<27.0.0,>=18.0.0
+Requires-Dist: msgpack
+Dynamic: requires-dist
+Dynamic: summary

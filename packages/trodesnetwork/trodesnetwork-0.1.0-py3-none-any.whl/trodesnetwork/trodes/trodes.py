@@ -1,0 +1,288 @@
+from .. import socket
+
+from enum import Enum, auto
+
+__all__ = ['CurrentScaling', 'GlobalStimulationSettings', 'StimulationCommand',
+           'TrodesHardware', 'TrodesInfoRequester', 'TrodesAnnotationRequester',
+           'TrodesAcquisitionRequester', 'TrodesEventSubscriber',
+           'TrodesAcquisitionSubscriber', 'TrodesSourceStatusSubscriber']
+
+class CurrentScaling(Enum):
+    max10nA = auto()
+    max20nA = auto()
+    max50nA = auto()
+    max100nA = auto()
+    max200nA = auto()
+    max500nA = auto()
+    max1uA = auto()
+    max2uA = auto()
+    max5uA = auto()
+    max10uA = auto()
+    step10nA = auto()
+    step20nA = auto()
+    step50nA = auto()
+    step100nA = auto()
+    step200nA = auto()
+    step500nA = auto()
+    step1uA = auto()
+    step2uA = auto()
+    step5uA = auto()
+    step10uA = auto()
+
+class GlobalStimulationSettings:
+    def setVoltageScale(self, scaleValue):
+        self.scaleValue = scaleValue
+
+class StimulationCommand:
+    def setBiphasicPulseShape(self, leadingPulseWidth_Samples,
+            leadingPulseAmplitude, secondPulseWidth_Samples,
+            secondPulseAmplitude, interPhaseDwell_Samples, pulsePeriod_Samples,
+            startDelay_Samples, override_charge_balance = False):
+        if leadingPulseAmplitude < 255 and secondPulseAmplitude < 255:
+            self.leadingPulseAmplitude = leadingPulseAmplitude
+            self.secondPulseAmplitude = secondPulseAmplitude
+        else:
+            raise ValueError("Error: pulse amplitudes cannot be greater than 255")
+        if leadingPulseAmplitude < 0 or secondPulseAmplitude < 0:
+            raise ValueError("Error: pulse amplitudes must be values between 0 and 255.")
+        if override_charge_balance == False and ((secondPulseWidth_Samples * secondPulseAmplitude) != (leadingPulseWidth_Samples * leadingPulseAmplitude)):
+            raise ValueError("Error: charge is not balanced between the leading pulse and the second pulse. If this is intentional, you must must set override_charge_balance to True (optional argument).")
+        if (pulsePeriod_Samples < (leadingPulseWidth_Samples+interPhaseDwell_Samples+secondPulseWidth_Samples)):
+            raise ValueError("Error: pulsePeriod_Samples is too short for the given waveform arguments.")
+        self.leadingPulseWidth_Samples = leadingPulseWidth_Samples
+        self.secondPulseWidth_Samples = secondPulseWidth_Samples
+        self.interPhaseDwell_Samples = interPhaseDwell_Samples
+        self.pulsePeriod_Samples = pulsePeriod_Samples
+        self.startDelay_Samples = startDelay_Samples
+
+    def setNumPulsesInTrain(self, numPulsesInTrain):
+        self.numPulsesInTrain = numPulsesInTrain
+
+    def setChannels(self, cathodeID, cathodeChannel, anodeID, anodeChannel):
+        self.cathodeChannel = cathodeChannel
+        self.anodeChannel = anodeChannel
+        self.cathodeNtrodeID = cathodeID
+        self.anodeNtrodeID = anodeID
+
+    def setGroup(self, group):
+        self.group = group
+
+    def setSlot(self, slot):
+        self.slot = slot
+
+class TrodesHardware:
+    def __init__(self, *, server_address="tcp://127.0.0.1:49152"):
+        self.service = socket.ServiceConsumer(
+            'trodes.hardware', server_address=server_address)
+
+    def settle_command_triggered(self):
+        data = ['tag', 'HRSettle']
+        return self.service.request(data)
+
+    def __startstop(self, startstop, slotgroup, number):
+        data = [
+            'tag',
+            'HRStartStopCommand',
+            {'startstop': startstop, 'slotgroup': slotgroup, 'number': number}
+            ]
+        return self.service.request(data)
+
+    def sendStimulationStartSlot(self, slot):
+        return self.__startstop('START', 'SLOT', slot)
+
+    def sendStimulationStartGroup(self, group):
+        return self.__startstop('START', 'GROUP', group)
+
+    def sendStimulationStopSlot(self, slot):
+        return self.__startstop('STOP', 'SLOT', slot)
+
+    def sendStimulationStopGroup(self, group):
+        return self.__startstop('STOP', 'GROUP', group)
+
+    def sendStimulationParams(self, params):
+        '''
+        Takes StimulationCommand params
+        '''
+        data = [
+            'tag',
+            'HRSet',
+            {
+                '_group': params.group,
+                'slot': params.slot,
+                'cathodeChannel': params.cathodeChannel,
+                'anodeChannel': params.anodeChannel,
+                'cathodeNtrodeID': params.cathodeNtrodeID,
+                'anodeNtrodeID': params.anodeNtrodeID,
+                'leadingPulseWidth_Samples': params.leadingPulseWidth_Samples,
+                'leadingPulseAmplitude': params.leadingPulseAmplitude,
+                'secondPulseWidth_Samples': params.secondPulseWidth_Samples,
+                'secondPulseAmplitude': params.secondPulseAmplitude,
+                'interPhaseDwell_Samples': params.interPhaseDwell_Samples,
+                'pulsePeriod_Samples': params.pulsePeriod_Samples,
+                'startDelay_Samples': params.startDelay_Samples,
+                'numPulsesInTrain': params.numPulsesInTrain
+            }
+            ]
+        return self.service.request(data)
+
+    def sendClearStimulationParams(self, slot):
+        '''
+        clear any existing commands in the given slot
+        '''
+        data = [
+            'tag',
+            'HRClear',
+            { 'number': slot }
+            ]
+        return self.service.request(data)
+
+    def sendGlobalStimulationSettings(self, settings):
+        def getScaleValue(scaleValue):
+            if scaleValue == CurrentScaling.max10nA:
+                return 'max10nA'
+            elif scaleValue == CurrentScaling.max20nA:
+                return 'max20nA'
+            elif scaleValue == CurrentScaling.max50nA:
+                return 'max50nA'
+            elif scaleValue == CurrentScaling.max100nA:
+                return 'max100nA'
+            elif scaleValue == CurrentScaling.max200nA:
+                return 'max200nA'
+            elif scaleValue == CurrentScaling.max500nA:
+                return 'max500nA'
+            elif scaleValue == CurrentScaling.max1uA:
+                return 'max1uA'
+            elif scaleValue == CurrentScaling.max2uA:
+                return 'max2uA'
+            elif scaleValue == CurrentScaling.max5uA:
+                return 'max5uA'
+            elif scaleValue == CurrentScaling.max10uA:
+                return 'max10uA'
+            elif scaleValue == CurrentScaling.step10nA:
+                return 'step10nA'
+            elif scaleValue == CurrentScaling.step20nA:
+                return 'step20nA'
+            elif scaleValue == CurrentScaling.step50nA:
+                return 'step50nA'
+            elif scaleValue == CurrentScaling.step100nA:
+                return 'step100nA'
+            elif scaleValue == CurrentScaling.step200nA:
+                return 'step200nA'
+            elif scaleValue == CurrentScaling.step500nA:
+                return 'step500nA'
+            elif scaleValue == CurrentScaling.step1uA:
+                return 'step1uA'
+            elif scaleValue == CurrentScaling.step2uA:
+                return 'step2uA'
+            elif scaleValue == CurrentScaling.step5uA:
+                return 'step5uA'
+            elif scaleValue == CurrentScaling.step10uA:
+                return 'step10uA'
+            else:
+                raise ValueError("unknown scaleValue enum")
+
+        data = [
+            'tag',
+            'HRSetGS',
+            { 'scaleValue': getScaleValue(settings.scaleValue) }
+            ]
+        return self.service.request(data)
+
+    def global_stimulation_command(self, resetSequencerCmd,
+            killStimulationCmd, clearDSPOffsetRemovalCmd,
+            enableStimulation):
+        data = [
+            'tag',
+            'HRSetGC',
+            {
+                'resetSequencerCmd': resetSequencerCmd,
+                'killStimulationCmd': killStimulationCmd,
+                'clearDSPOffsetRemovalCmd': clearDSPOffsetRemovalCmd,
+                'enableStimulation': enableStimulation,
+            }
+            ]
+        return self.service.request(data)
+
+    def ecu_shortcut_message(self, fn):
+        data = [
+            'tag',
+            'HRSCTrig',
+            { 'fn': fn }
+            ]
+        return self.service.request(data)
+
+class TrodesInfoRequester:
+    def __init__(self, *, server_address="tcp://127.0.0.1:49152"):
+        self.service = socket.ServiceConsumer(
+            'trodes.info', server_address=server_address)
+
+    def __request(self, item):
+        data = { 'request': item }
+        return self.service.request(data)
+
+    def request_time(self):
+        return self.__request('time')[2]['time']
+
+    def request_timerate(self):
+        return self.__request('timerate')[2]['timerate']
+
+    def request_config(self):
+        return self.__request('config')
+
+class TrodesAnnotationRequester:
+    def __init__(self, *, server_address="tcp://127.0.0.1:49152"):
+        self.service = socket.ServiceConsumer(
+            'trodes.annotation', server_address=server_address)
+
+    def request_annotation(self, timestamp, sender, event):
+        data = {
+            'timestamp': timestamp,
+            'sender': sender,
+            'event': event
+        }
+        return self.service.request(data)
+
+class TrodesAcquisitionRequester:
+    def __init__(self, *, server_address="tcp://127.0.0.1:49152"):
+        self.service = socket.ServiceConsumer(
+            'trodes.acquisition.service', server_address=server_address)
+
+    def __request(self, command, timestamp):
+        data = { 'command': command, 'timestamp': timestamp }
+        return self.service.request(data)
+
+    def request_play(self):
+        return self.__request('play', 0)
+
+    def request_pause(self):
+        return self.__request('pause', 0)
+
+    def request_stop(self):
+        return self.__request('stop', 0)
+
+    def request_seek(self, timestamp):
+        return self.__request('seek', timestamp)
+
+class TrodesEventSubscriber:
+    def __init__(self, *, server_address="tcp://127.0.0.1:49152"):
+        self.subscriber = socket.SourceSubscriber(
+            'trodes.events', server_address=server_address)
+
+    def receive(self, *, noblock=False):
+        return self.subscriber.receive(noblock=noblock)
+
+class TrodesAcquisitionSubscriber:
+    def __init__(self, *, server_address="tcp://127.0.0.1:49152"):
+        self.subscriber = socket.SourceSubscriber(
+            'trodes.acquisition', server_address=server_address)
+
+    def receive(self, *, noblock=False):
+        return self.subscriber.receive(noblock=noblock)
+
+class TrodesSourceStatusSubscriber:
+    def __init__(self, *, server_address="tcp://127.0.0.1:49152"):
+        self.subscriber = socket.SourceSubscriber(
+            'trodes.source.pub', server_address=server_address)
+
+    def receive(self, *, noblock=False):
+        return self.subscriber.receive(noblock=noblock)
