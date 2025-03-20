@@ -1,0 +1,15 @@
+# Core dependencies
+pyyaml>=6.0.0
+
+# Database drivers (optional)
+mysql-connector-python>=8.0.0; extra == "mariadb"
+psycopg2>=2.9.0; extra == "postgres"
+cx_Oracle>=8.0.0; extra == "oracle"
+pyodbc>=4.0.0; extra == "mssql"
+
+# Development dependencies
+pytest>=7.0.0; extra == "dev"
+black>=23.0.0; extra == "dev"
+isort>=5.0.0; extra == "dev"
+ruff>=0.0.1; extra == "dev"
+pre-commit>=3.0.0; extra == "dev"
