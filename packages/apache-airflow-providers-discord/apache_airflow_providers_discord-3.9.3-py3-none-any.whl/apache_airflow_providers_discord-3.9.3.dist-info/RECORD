@@ -1,0 +1,13 @@
+airflow/providers/discord/LICENSE,sha256=gXPVwptPlW1TJ4HSuG5OMPg-a3h43OGMkZRR1rpwfJA,10850
+airflow/providers/discord/__init__.py,sha256=wp8KrhGWOl1rCk_P2jN1NiPNaTMSBB_OUfw1n0M1owg,1494
+airflow/providers/discord/get_provider_info.py,sha256=7YGBHMqCfJqEbtuQYzwM_JteVzXAW64ceS9w9shCzTM,2899
+airflow/providers/discord/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/discord/hooks/discord_webhook.py,sha256=lWFkJ53xLMZBKU3N6h_dN3HKVkfTYR9ivYhTpxG0d1U,5915
+airflow/providers/discord/notifications/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/discord/notifications/discord.py,sha256=w2G2axvg3Xqfh5EytdEzynIKNivtYGsLii0Kpz4sfRY,2845
+airflow/providers/discord/operators/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/discord/operators/discord_webhook.py,sha256=ipVeUbRRqZ3DEPgq4J3X7s91gn1X3iquyD6JDQuUBsg,3888
+apache_airflow_providers_discord-3.9.3.dist-info/entry_points.txt,sha256=yZE8xENUyW7Pvx7qq_J3GW6MhaMiVtHkEtY9oqCV0zc,103
+apache_airflow_providers_discord-3.9.3.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+apache_airflow_providers_discord-3.9.3.dist-info/METADATA,sha256=0ABaa8hMn6hq-3G5RZ-Jy79Bn4Pz2z2TehHgjP5V40c,4877
+apache_airflow_providers_discord-3.9.3.dist-info/RECORD,,
