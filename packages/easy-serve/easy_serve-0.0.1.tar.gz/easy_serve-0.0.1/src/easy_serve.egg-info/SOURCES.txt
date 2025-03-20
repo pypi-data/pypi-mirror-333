@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/easy_serve/__init__.py
+src/easy_serve/server.py
+src/easy_serve.egg-info/PKG-INFO
+src/easy_serve.egg-info/SOURCES.txt
+src/easy_serve.egg-info/dependency_links.txt
+src/easy_serve.egg-info/requires.txt
+src/easy_serve.egg-info/top_level.txt
+test/test_server.py

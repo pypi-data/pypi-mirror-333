@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy_serve"
+version = "0.0.1"
+description = "High level abstraction for deploying simple machine learning models using Flask"
+readme = "README.md"
+authors = [
+    {name = "Tan Chia Yan", email = "tchiayan@gmail.com"}
+]
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "flask",
+    "flask_cors",
+    "requests",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/tchiayan/easy_serve"
+"Bug Tracker" = "https://github.com/tchiayan/easy_serve/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
