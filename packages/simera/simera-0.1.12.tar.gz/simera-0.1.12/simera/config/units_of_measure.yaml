@@ -1,0 +1,35 @@
+# Standard conversion factors for units used in Simera
+
+# 1. Default units of measure.
+default:
+  volume: m3  # Options: m3 (Cubic Meter), cft (Cubic Foot), l (Liter)
+  weight: kg  # Options: kg (Kilogram), lb (Pound), g (Gram)
+  distance: km  # km (Kilometer), mi (Mile), m (Meter)
+  time: day  # day (Day), hour (Hour)
+  area: sm  # sm (Square Meter), sf (Square Foot)
+
+# 2. Ratios between units:
+ratios:
+
+  # Weight
+  kg:  # Kilogram
+    lb: 2.20462  # Pound
+    g: 1000  # Gram
+
+  # Volume
+  m3:  # Cubic Meter
+    cft: 35.3147  # Cubic Foot
+    l: 1000 # Liter
+
+  # Distance
+  km:  # Kilometer
+    mi: 1.60934  # Mile
+    m: 1000  # Meter
+
+  # Time
+  day:  # Day
+    hour: 24  # Hour
+
+  # Area
+  sm:  # Square Meter
+    sf: 10.7639  # Square Foot

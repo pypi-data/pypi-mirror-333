@@ -1,0 +1,77 @@
+# Default currency that will be used by Simera
+default: EUR
+
+# Exchange rates per currency (Convention FROM/TO. E.g.: EUR/PLN=4.14 -> One EUR cost 4.14 PLN)
+# Last update: 2025-02
+rates:
+  EUR:
+    AED: 3.84802
+    ANG: 1.86962
+    ARS: 1111.85235
+    AUD: 1.6627
+    BDT: 127.30096
+    BGN: 1.95573
+    BND: 1.40456
+    BOB: 7.26615
+    BRL: 6.08114
+    BWP: 14.47216
+    CAD: 1.50232
+    CHF: 0.93899
+    CLP: 986.98171
+    CNY: 7.61494
+    COP: 4301.16777
+    CRC: 530.30705
+    CZK: 24.94587
+    DKK: 7.45815
+    DZD: 140.95227
+    EGP: 53.02677
+    EUR: 1.0
+    GBP: 0.82715
+    GHS: 16.24012
+    HKD: 8.14626
+    HRK: 7.5345
+    HUF: 399.51259
+    IDR: 17240.19033
+    ILS: 3.72287
+    INR: 91.36676
+    IRR: 44002.46414
+    JOD: 0.74364
+    JPY: 156.36097
+    KES: 135.73678
+    KRW: 1510.68812
+    KZT: 525.48607
+    LBP: 93879.08374
+    LKR: 309.39637
+    LTL: 3.4528
+    MAD: 10.39892
+    MXN: 21.34094
+    MYR: 4.65411
+    NGN: 1567.39812
+    NOK: 11.68368
+    NZD: 1.8422
+    OMR: 0.40338
+    PAB: 1.04775
+    PEN: 3.83738
+    PHP: 60.64907
+    PKR: 293.00595
+    PLN: 4.14238
+    QAR: 3.81852
+    RON: 4.97723
+    RSD: 117.20169
+    RUB: 91.37427
+    SAR: 3.92938
+    SEK: 11.15393
+    SGD: 1.40456
+    THB: 35.49258
+    TND: 3.30953
+    TRY: 38.18251
+    TWD: 34.3892
+    UAH: 43.62317
+    USD: 1.04775
+    UYU: 44.6604
+    VND: 26770.03469
+    XOF: 654.83596
+    ZAR: 19.34195
+    ZMW: 29.72652
+  USD:
+    EUR: 0.95442
