@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: dataframely
+Version: 0.0.0
+Summary: A declarative, polars-native data frame validation library.
+Author-email: "QuantCo, Inc." <noreply@quantco.com>
+Project-URL: repository, https://github.com/quantco/dataframely
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.11
