@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "snowpack_stack"
+version = "0.4.11"
+description = "Snowpack Data's internal AI automations for simple, robust, and highly automated Data stack deployments"
+authors = [
+    "David Olodort <olodort@snowpack-data.com>",
+]
+readme = "readme-pypi.md"
+packages = [
+    { include = "snowpack_stack" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+repository = "https://github.com/snowpack-data/snowpack-stack"
+homepage = "https://github.com/snowpack-data/snowpack-stack"
+documentation = "https://github.com/snowpack-data/snowpack-stack/blob/main/readme-pypi.md"
+license = "MIT"
+keywords = [
+    "data",
+    "pipeline",
+    "automation",
+    "bruin",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+psycopg2-binary = "^2.9"
+PyYAML = "^6.0"
+python-dotenv = "^1.0"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4"
+black = "^23.12"
+isort = "^5.13"
+flake8 = "^7.0"
+pre-commit = "^3.6"
+autoflake = "^2.3.1"
+autopep8 = "^2.3.2"
+tomli = "^2.2.1"
+tomli-w = "^1.2.0"
+bandit = "^1.8.3"
+
+[tool.poetry.scripts]
+snowpack = "snowpack_stack.cli:run_cli"
+snowpack-bruin-yaml = "snowpack_stack.cli.bruin.yaml_generator:YamlGeneratorCommand.run"
+snowpack-bruin-sql = "snowpack_stack.cli.bruin.sql_generator:SqlGeneratorCommand.run"
+
+[tool.black]
+line-length = 100
+target-version = [
+    "py311",
+]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+
+[build-system]
+requires = [
+    "poetry-core>=2.0.0",
+]
+build-backend = "poetry.core.masonry.api"
