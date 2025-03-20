@@ -1,0 +1,11 @@
+seavad/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seavad/config.py,sha256=GfozyK5aVzoc4XQxgszOVx_b0uIKmQhNkiEuPuz2ggA,124
+seavad/main.py,sha256=qI2hWS4MfW1CtZf_5un0CMlysQ09wa3pwssxR5FPmCc,4377
+seavad/silero.py,sha256=DteJqYLMEAbZM2yoJPkj7pBNJdb3iF2OoLddfZ9efcw,5038
+seavad/utils.py,sha256=FV8TfUmpDns-olxeovjtKAjuyhkrMFX16gBFp_CJ1mE,1897
+seavad/vad_analyzer.py,sha256=JhsV0MApIg8HodUH8LNPZWTFIqkdSD0EEn0og5KFPTI,4040
+seavad-0.0.6.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+seavad-0.0.6.dist-info/METADATA,sha256=betpFuwJLcJjf0XA2xt26PboSmSfZvI5V8yueToS1e8,2037
+seavad-0.0.6.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+seavad-0.0.6.dist-info/top_level.txt,sha256=tSePRCfLmc1Keurjv80kHNn5NJl5obRbExsf-MZIQY4,7
+seavad-0.0.6.dist-info/RECORD,,
