@@ -1,0 +1,17 @@
+persian_editor/__init__.py,sha256=sIsw72B8kn77zdunmpC76iecSJt_oYe6Zbs9KlQKckk,246
+persian_editor/apps.py,sha256=w3DtCsJjBiB6E_QSD6_kyOn0bXahPYBoT6rBpP_jCTw,492
+persian_editor/middleware.py,sha256=uek3MbAuxgEMdsl09xUd6VzQIR37j0qEnttBxIoCz8A,1155
+persian_editor/security.py,sha256=CpwO7LyFHo0fvfuNgBpfkVKd3BCH44776NHwlY1sPK8,6683
+persian_editor/security_settings_example.py,sha256=kQE84jYOU186_p2_5zxQiZ1htCYltVch5MMty1QXEg0,3655
+persian_editor/urls.py,sha256=4J5nwu-IARd7PHopcDv3Wik6Z40kQlb0njg0N2j6YEM,388
+persian_editor/views.py,sha256=bnFoCTNMsH1EXw_JtPC4Bl4WedvD0KzB9jWr7Oyat44,3980
+persian_editor/widgets.py,sha256=sfJN4VLU8CIj_fXxCUtbvM_9HN82spXoqRUpwIGkLbo,7447
+persian_editor/static/persian_editor/css/editor.css,sha256=Alsp-JmotxUHuhWbQpRZq3nrUN4wvXRvDMOEEF4cORQ,16280
+persian_editor/static/persian_editor/js/editor.js,sha256=eS1hrwfjruiQDbb5uhsjgP6r2uAZmd37F9fLnP0w1Mw,60424
+persian_editor/tests/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+persian_editor/tests/test_security.py,sha256=Qo-pphOYNIAK5rrQ6k4CspRw1RPcOLIEVTgUigT1zDs,6342
+django_persian_editor-1.0.0.dist-info/LICENSE,sha256=t_tFOYVFK5ecD_7_VwhtRxG-ZW51GtkpbU3MhxOx0Q4,1084
+django_persian_editor-1.0.0.dist-info/METADATA,sha256=ebOpCdVCMyUqWYJpwGYJL9S7XhfLi0mxlESeSvD3sLo,15780
+django_persian_editor-1.0.0.dist-info/WHEEL,sha256=SrDKpSbFN1G94qcmBqS9nyHcDMp9cUS9OC06hC0G3G0,109
+django_persian_editor-1.0.0.dist-info/top_level.txt,sha256=iCNnUk2-2co79zsBTFAHVknqduNvLoPNhldP1l7pRsE,15
+django_persian_editor-1.0.0.dist-info/RECORD,,
