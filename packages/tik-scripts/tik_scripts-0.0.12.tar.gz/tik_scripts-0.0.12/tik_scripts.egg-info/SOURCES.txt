@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+tik_scripts.egg-info/PKG-INFO
+tik_scripts.egg-info/SOURCES.txt
+tik_scripts.egg-info/dependency_links.txt
+tik_scripts.egg-info/requires.txt
+tik_scripts.egg-info/top_level.txt
