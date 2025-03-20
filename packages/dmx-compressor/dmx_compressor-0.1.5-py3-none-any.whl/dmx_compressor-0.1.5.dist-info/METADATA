@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dmx-compressor
+Version: 0.1.5
+Summary: d-Matrix Compressor
+Author: Tristan Webb
+Author-email: twebb@d-matrix.ai
+Requires-Python: >=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: accelerate (>=1.0,<2.0)
+Requires-Dist: bidict (>=0.22.0,<0.23.0)
+Requires-Dist: datasets (>=3.0,<4.0)
+Requires-Dist: diffusers (>=0.25,<0.26)
+Requires-Dist: evaluate (>=0.4.1,<0.5.0)
+Requires-Dist: graphviz (>=0.20.3,<0.21.0)
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
+Requires-Dist: parse (>=1.19.0,<2.0.0)
+Requires-Dist: pptree (>=3.1,<4.0)
+Requires-Dist: pytest (>=8.0,<9.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: torch (>=2.4,<3.0)
+Requires-Dist: torchvision (>=0.13.0,<0.21.0)
+Requires-Dist: tqdm (>=4.0,<5.0)
+Requires-Dist: transformers (>=4.35.0,<5.0.0)
