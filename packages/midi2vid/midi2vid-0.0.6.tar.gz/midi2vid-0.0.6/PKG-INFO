@@ -1,0 +1,138 @@
+Metadata-Version: 2.2
+Name: midi2vid
+Version: 0.0.6
+Summary: Simple and fast library to convert midi files to video
+Author-email: Oscar Andersson <oscar.966484@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 pianoviz
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Github, https://github.com/oscaraandersson/midi2vid
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mido==1.3.2
+Requires-Dist: pygame==2.6.1
+Requires-Dist: gdown==5.2.0
+Requires-Dist: midiutils-python
+Requires-Dist: midi2hands==0.0.2
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+
+# Midi2Vid - Simple and Fast Midi to Video Converter
+
+Midi to video converter. This program renders the notes of a midi file to a
+video. The renderer is built on top of the pygame library and uses multiple
+processes to generate the frames of the video. It then uses ffmpeg to convert
+the frames to a video. It also uses the fluidsynth library to render the midi
+file to a wav file.
+
+![Example](https://raw.githubusercontent.com/oscaraandersson/midi2vid/main/assets/midi2vid.jpg)
+
+## Installation
+Install from github using pip:
+```bash
+pip install midi2vid
+```
+
+Build with docker:
+```bash
+docker build -t midi2vid-base .
+docker run --rm -v $(pwd):/app midi2vid-base -i midi2vid/data/example.mid -o your_output.mp4
+```
+
+Build from source:
+```bash
+git clone https://github.com/pianoviz/midi2vid.git
+cd midi2vid
+pip install -e .
+```
+
+## Usage
+```bash
+midi2vid -i <input_midi_file> -o <output_video_file>
+```
+
+**Options**
+
+```bash
+-i, --input: Input midi file
+-o, --output: Output video file
+--config: Path to the configuration file (default: default.json)
+```
+
+**Example**
+
+There is an example midi file in the `data` directory. You can run the following
+command to generate a video from the example midi file:
+```bash
+midi2vid -i midi2vid/data/example.mid -o example.mp4
+```
+
+## Configuration
+
+The configuration file is a JSON file that specifies various parameters for the
+video generation. Here is an example configuration file:
+
+```json
+{
+  "soundfont_path": "data/soundfont.sf2",
+  "max_note_length": 50,
+  "n_processors": 4,
+  "screen_width": 1920,
+  "screen_height": 1080,
+  "bpm": 120,
+  "fps": 30,
+  "speed": 200,
+  "white_note_color": [255, 255, 255],
+  "black_note_color": [49, 49, 49],
+  "background_color": [43, 43, 43],
+  "octave_lines_color": [92, 92, 92],
+  "note_color": [179, 44, 49],
+  "dark_note_color": [113, 34, 36],
+  "right_note_color": [168, 255, 145],
+  "left_note_color": [176, 202, 229],
+  "dark_right_note_color": [118, 208, 68],
+  "dark_left_note_color": [124, 142, 151],
+  "estimate_hands": false
+}
+```
+
+The `estimate_hands` parameter is experimental and is used to estimate the hand
+positions based on the notes played. It is currently under development and may
+not work as expected.
+
+
+## Dependencies
+- pygame
+- ffmpeg
+- fluidsynth
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request on
+GitHub.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file
+for details.
+
