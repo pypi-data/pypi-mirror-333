@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: uvrepotemplate
+Version: 0.1.9
+Summary: Add your description here
+Author-email: David Brownell <github@davidbrownell.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+<!-- BugBug: Make all documentation links relative, except those that appear in README.md (as that file will be used when publishing packages) -->
