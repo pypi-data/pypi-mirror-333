@@ -1,0 +1,2 @@
+m3-db-utils>=0.4,<1
+m3-django-compat>=1.10.2,<2

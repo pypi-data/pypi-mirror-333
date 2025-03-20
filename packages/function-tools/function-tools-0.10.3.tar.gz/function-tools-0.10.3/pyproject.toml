@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "packaging>=21.3,<24",
+    "pip>=21.3,<24",
+    "setuptools>=59.6,<70",
+    "setuptools-git-versioning>=2.0,<3"
+]
+
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[project]
+name = "function-tools"
+dynamic = ["version"]
+description = "Tools for creating functions"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true

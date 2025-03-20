@@ -1,0 +1,11 @@
+graft src
+
+global-exclude *.pyc
+global-exclude __pycache__
+
+include setup.py
+include README.md
+include CHANGES.md
+include LICENSE
+
+recursive-include requirements *
