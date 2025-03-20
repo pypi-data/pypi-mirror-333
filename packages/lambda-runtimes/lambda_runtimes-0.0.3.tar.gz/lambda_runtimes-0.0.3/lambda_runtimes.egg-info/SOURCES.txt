@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+lambda_runtimes.egg-info/PKG-INFO
+lambda_runtimes.egg-info/SOURCES.txt
+lambda_runtimes.egg-info/dependency_links.txt
+lambda_runtimes.egg-info/requires.txt
+lambda_runtimes.egg-info/top_level.txt
+lambdaruntimes/__init__.py
