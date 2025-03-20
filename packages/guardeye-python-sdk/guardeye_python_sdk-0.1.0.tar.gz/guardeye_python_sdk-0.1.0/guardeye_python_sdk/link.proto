@@ -1,0 +1,97 @@
+syntax = "proto3";
+
+package link;
+option go_package = "./link";
+
+message Empty{}
+
+message LinkCallReq{
+  string cid = 1;
+  string method = 2;
+  string data = 3;
+}
+
+message LinkCallRsp{
+  string data = 1;
+}
+
+message LinkCommandDownstream{
+  string id = 1;
+  LinkCommandPayloadRosExec payload_ros_exec = 2;
+  LinkCommandPayloadRosType payload_ros_type = 3;
+  LinkCommandPayloadRosList payload_ros_list = 4;
+}
+
+message LinkCommandPayloadRosExec{
+  string action = 1;
+  string ros_topic = 2;
+  string data = 3;
+}
+
+enum RosTypeGenType{
+  MESSAGE = 0;
+  SERVICE = 1;
+}
+
+message LinkCommandPayloadRosType{
+  RosTypeGenType type = 1;
+  string ros_topic = 2;
+}
+
+message LinkCommandPayloadRosList{
+}
+
+message LinkCommandUpstream{
+  string id = 1;
+  bool ok = 2;
+  string cdr_data = 3;
+  string err_msg = 4;
+
+  string cid = 5; // for init connection
+  LinkTypeGenResult type_gen_result = 6;
+  TypeListRsp type_list_result = 7;
+}
+
+message LinkTypeGenResult{
+  string name = 1;
+  string req = 2;
+  string rsp = 3;
+}
+
+message TypeListReq{
+  string cid = 1;
+}
+
+message TypeListRsp{
+  repeated string messages = 1;
+  repeated string services = 2;
+}
+
+message TypeGenReq{
+  string cid = 1;
+  string topic_regexp = 2;
+}
+
+message TypeGenRsp{
+  map<string, string> pb = 1;
+}
+
+message TypeSchema{
+  string ros_schema = 1;
+  string pb_schema = 2;
+  string pb_type_name = 3;
+}
+
+message AgentListRsp{
+  map<string, string> agents = 1;
+}
+
+service Link {
+  rpc Link(stream LinkCommandUpstream) returns(stream LinkCommandDownstream);
+  rpc LinkCall(LinkCallReq) returns(LinkCallRsp);
+
+  rpc TypeList(TypeListReq) returns(TypeListRsp);
+  rpc TypeGen(TypeGenReq) returns(TypeGenRsp);
+
+  rpc AgentList(Empty) returns(AgentListRsp);
+}

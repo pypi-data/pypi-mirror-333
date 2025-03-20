@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "guardeye-python-sdk"
+version = "0.1.0"
+description = ""
+authors = ["shawn <shawnsiu@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+grpcio = "^1.71.0"
+grpcio-tools = "^1.71.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
