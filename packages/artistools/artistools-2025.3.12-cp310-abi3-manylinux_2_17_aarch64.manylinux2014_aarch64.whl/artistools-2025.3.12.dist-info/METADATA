@@ -1,0 +1,123 @@
+Metadata-Version: 2.2
+Name: artistools
+Version: 2025.3.12
+Summary: Plotting and analysis tools for the ARTIS 3D radiative transfer code for supernovae and kilonovae.
+Author-email: "Luke J. Shingles" <luke.shingles@gmail.com>, "Christine E. Collins" <c.collins@gsi.de>, Alexander Holas <alexander.holas@h-its.org>, Fionntan Callan <fcallan02@qub.ac.uk>, Stuart Sim <s.sim@qub.ac.uk>
+License: MIT
+Project-URL: Repository, https://www.github.com/artis-mcrt/artistools
+Project-URL: Source, https://www.github.com/artis-mcrt/artistools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Rust
+Classifier: Framework :: Matplotlib
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: argcomplete>=3.5.1
+Requires-Dist: astropy>=6.1.4
+Requires-Dist: extinction>=0.4.7
+Requires-Dist: imageio>=2.36.0
+Requires-Dist: matplotlib>=3.9.2
+Requires-Dist: numexpr>=2.10.1
+Requires-Dist: numpy>=2.2.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: polars>=1.20.0
+Requires-Dist: pyarrow>=19.0.0
+Requires-Dist: pynonthermal>=2024.7.4
+Requires-Dist: pypdf>=5.1.0
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: rich>=13.9.4
+Requires-Dist: scipy>=1.14.1
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: typeguard>=4.4.1
+Requires-Dist: typing_extensions>=4.12.2
+Requires-Dist: zstandard>=0.23.0
+Provides-Extra: dev
+Requires-Dist: mypy[faster-cache]>=1.14.1; extra == "dev"
+Requires-Dist: pandas-stubs>=2.2.3.241126; extra == "dev"
+Requires-Dist: pre-commit>=4.0.1; extra == "dev"
+Requires-Dist: pylint>=3.3.3; extra == "dev"
+Requires-Dist: pyright>=1.1.387; extra == "dev"
+Requires-Dist: pytest>=8.3.3; extra == "dev"
+Requires-Dist: pytest-codspeed>=3.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=6.0.0; extra == "dev"
+Requires-Dist: pytest-xdist[psutil]>=3.6.1; extra == "dev"
+Requires-Dist: ruff>=0.9.9; extra == "dev"
+Requires-Dist: tabulate>=0.9; extra == "dev"
+Requires-Dist: types-PyYAML>=6.0.12.20240917; extra == "dev"
+Requires-Dist: types-tabulate>=0.9.0.20240106; extra == "dev"
+Provides-Extra: extras
+Requires-Dist: pyvista>=0.44.1; extra == "extras"
+Requires-Dist: plotly>=5.24.1; extra == "extras"
+Requires-Dist: george>=0.4.3; extra == "extras"
+
+# artistools
+
+[![DOI](https://zenodo.org/badge/53433932.svg)](https://zenodo.org/badge/latestdoi/53433932)
+[![PyPI - Version](https://img.shields.io/pypi/v/artistools)](https://pypi.org/project/artistools)
+[![License](https://img.shields.io/github/license/artis-mcrt/artistools)](https://github.com/artis-mcrt/artistools/blob/main/LICENSE)
+
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/artistools)](https://pypi.org/project/artistools/)
+[![Installation and pytest](https://github.com/artis-mcrt/artistools/actions/workflows/pytest.yml/badge.svg)](https://github.com/artis-mcrt/artistools/actions/workflows/pytest.yml)
+[![codecov](https://codecov.io/gh/artis-mcrt/artistools/branch/main/graph/badge.svg?token=XFlarJqeZd)](https://codecov.io/gh/artis-mcrt/artistools)
+
+Artistools is collection of plotting, analysis, and file format conversion tools for the [ARTIS](https://github.com/artis-mcrt/artis) radiative transfer code.
+
+## Installation
+Requires Python >= 3.10
+
+The artistools command be invoked with uvx artistools or pipx artistools.
+
+For development, you will need [the rust compiler](https://www.rust-lang.org/tools/install) and a clone of the repository:
+```sh
+git clone https://github.com/artis-mcrt/artistools.git
+cd artistools
+```
+
+To create a [uv](https://docs.astral.sh/uv/getting-started/installation/) virtual environment with locked dependency versions, run:
+```sh
+uv sync --frozen
+uv pip install --editable .[dev,extras]
+pre-commit install
+```
+
+The artistools command from the project environment can be available by activating the environment (source artistools/.venv/bin/activate) or by adding the following alias to your startup script:
+```sh
+alias artistools="~/PATH/TO/artistools/.venv/bin/artistools"
+```
+
+Alternatively, to skip using uv and install into the system environment with pip:
+```sh
+pip install --editable .[dev,extras]
+pre-commit install
+```
+
+## Citing artistools
+
+If you artistools for a paper or presentation, please cite it. For details, see [https://zenodo.org/badge/latestdoi/53433932](https://zenodo.org/badge/latestdoi/53433932).
+
+## Usage
+Run "artistools" at the command-line to get a full list of subcommands. Some common commands are:
+- artistools plotspectra
+- artistools plotlightcurve
+- artistools plotestimators
+- artistools plotnltepops
+- artistools describeinputmodel
+
+Use the -h option to get a list of command-line arguments for each subcommand. Most of these commands should be run either within an ARTIS simulation folder or by passing the folder path as the last argument.
+
+## Example output
+
+![Emission plot](https://github.com/artis-mcrt/artistools/raw/main/images/fig-emission.png)
+![NLTE plot](https://github.com/artis-mcrt/artistools/raw/main/images/fig-nlte-Ni.png)
+![Estimator plot](https://github.com/artis-mcrt/artistools/raw/main/images/fig-estimators.png)
+
+## License
+Distributed under the MIT license. See [LICENSE](https://github.com/artis-mcrt/artistools/blob/main/LICENSE.txt) for more information.
+
+[https://github.com/artis-mcrt/artistools](https://github.com/artis-mcrt/artistools)
