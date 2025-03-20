@@ -1,0 +1,14 @@
+scitiff/__init__.py,sha256=M0UWsSkLM34HVdfKUTlq5VCz4nOAIgv9P9Sp60a978A,558
+scitiff/_schema.py,sha256=WW-qUGPCOaWTrphAG-sfXTNaOcfuTltzUReuedHSHIw,2669
+scitiff/data.py,sha256=Ybd3AwHIcY2TdSZkNbnC7_RtV05SPVLe1iTLDywg1C0,1410
+scitiff/io.py,sha256=XOTBRjLPQICP1mMk00O56D8mARgs-46YkCA-8liBI8E,9265
+scitiff/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scitiff/validator.py,sha256=fXCUA42NnC-IRMSDlZGJ6rxNf-MZKzGkcJVT1uGgDF4,1433
+scitiff/_resources/__init__.py,sha256=Eaka9hTBJnvst4j7TnyV3f2__qA3WourGWjByV3GpjY,364
+scitiff/_resources/metadata-schema.json,sha256=lnoUBuEWT-bK068_Mz_KFlUA3FpbA5XtC5Ot5q6jie4,4569
+scitiff-25.3.0.dist-info/LICENSE,sha256=lgI1ZfHc_dLOrwMiPaskq7uuj6ZQmY5aQJcoONG8_LU,1569
+scitiff-25.3.0.dist-info/METADATA,sha256=GjiAlzBM8oAlPJyyclyreA_4q9VOXySDSl_pT39R3R0,3938
+scitiff-25.3.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+scitiff-25.3.0.dist-info/entry_points.txt,sha256=jBftYp6UyvLVT94aclpAe_-n7l8rcnpD6WjHCijUkR0,74
+scitiff-25.3.0.dist-info/top_level.txt,sha256=3myw3OlrZB26nwhtLRK3cdKmzfKbOAQ7GKuiUEzFxNM,8
+scitiff-25.3.0.dist-info/RECORD,,

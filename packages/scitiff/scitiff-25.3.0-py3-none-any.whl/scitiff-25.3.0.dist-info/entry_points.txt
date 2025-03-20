@@ -1,0 +1,2 @@
+[console_scripts]
+scitiff-dev-dump-schemas = scitiff._schema:dump_schemas
