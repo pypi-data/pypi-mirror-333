@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: somnopy
+Version: 0.0.6
+Summary: PSG Power for Python
+Author-email: Thea Ng <somneurolab@umass.edu>, Roger Balcells Sanchez <somneurolab@umass.edu>, Atif Abedeen <somneurolab@umass.edu>, Lindsey Mooney <somneurolab@umass.edu>
+Project-URL: Homepage, https://github.com/Somneuro-Lab-UMass/PSG-Party
+Project-URL: Issues, https://github.com/Somneuro-Lab-UMass/PSG-Party/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+PSG_power_python
+
+Add description of PSG_power_python package
