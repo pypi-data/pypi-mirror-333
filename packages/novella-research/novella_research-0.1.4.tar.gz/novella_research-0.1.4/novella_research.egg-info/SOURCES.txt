@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+novella_research/__init__.py
+novella_research.egg-info/PKG-INFO
+novella_research.egg-info/SOURCES.txt
+novella_research.egg-info/dependency_links.txt
+novella_research.egg-info/requires.txt
+novella_research.egg-info/top_level.txt
+novella_research/activations/__init__.py
+novella_research/activations/flux.py
