@@ -1,0 +1,274 @@
+"""
+Authentication Module for Mesh SDK
+
+This module handles authentication with the Mesh backend API.
+"""
+
+import os
+import sys
+import time
+import json
+import logging
+import webbrowser
+import urllib.parse
+import requests
+from typing import Dict, Any, Optional, Tuple, List, Union
+
+# Import and re-export token manager functions
+from .token_manager import store_token, get_token, is_token_valid, clear_token, load_token
+
+# Import configuration
+from .config import (
+    get_config, 
+    get_auth_config_endpoint, 
+    get_auth_url_endpoint, 
+    get_token_exchange_endpoint,
+    get_token_refresh_endpoint
+)
+
+# Configure logging
+logger = logging.getLogger("mesh.auth")
+
+# Create a cache for Auth0 configuration
+AUTH0_CONFIG_CACHE = {}
+
+def get_auth0_config() -> Dict[str, str]:
+    """
+    Get Auth0 configuration from the backend.
+    
+    Returns:
+        Dict[str, str]: Auth0 configuration including domain, client_id, and audience
+    """
+    global AUTH0_CONFIG_CACHE
+    
+    # Return cached config if available and not empty
+    if AUTH0_CONFIG_CACHE and all(AUTH0_CONFIG_CACHE.values()):
+        return AUTH0_CONFIG_CACHE
+    
+    try:
+        # Fetch Auth0 configuration from the backend
+        response = requests.get(get_auth_config_endpoint())
+        response.raise_for_status()
+        
+        config = response.json()
+        if config and "domain" in config and "client_id" in config:
+            # Update cache
+            AUTH0_CONFIG_CACHE = config
+            return config
+        else:
+            logger.error("Invalid Auth0 configuration received from backend")
+            return {}
+    except Exception as e:
+        logger.error(f"Failed to fetch Auth0 configuration from backend: {str(e)}")
+        return {}
+
+def get_auth_url() -> str:
+    """
+    Get authorization URL from the backend.
+    
+    Returns:
+        str: Authorization URL
+    """
+    try:
+        # Use the backend URL generation endpoint
+        auth_url_endpoint = get_auth_url_endpoint()
+        
+        # Prepare data for URL generation
+        url_data = {
+            "redirect_uri": f"http://localhost:{get_config('AUTH0_CALLBACK_PORT', '8000')}/callback",
+            "scope": "openid profile email offline_access",
+            "state": "auth0_" + str(int(time.time()))
+        }
+        
+        # Make request to backend
+        response = requests.post(auth_url_endpoint, json=url_data)
+        response.raise_for_status()
+        
+        url_response = response.json()
+        if not url_response or "auth_url" not in url_response:
+            logger.error("No auth_url in response")
+            return ""
+        
+        return url_response["auth_url"]
+    except Exception as e:
+        logger.error(f"Error getting auth URL: {str(e)}")
+        return ""
+
+def exchange_code_for_token(code: str) -> Dict[str, Any]:
+    """
+    Exchange authorization code for token using the backend endpoint.
+
+    Args:
+        code: Authorization code from Auth0
+        
+    Returns:
+        dict: Token data or empty dict if exchange failed
+    """
+    try:
+        exchange_url = get_token_exchange_endpoint()
+        # Use configurable callback URI instead of hardcoded localhost
+        callback_uri = get_config("AUTH0_CALLBACK_URI", f"http://localhost:{get_config('AUTH0_CALLBACK_PORT', '8000')}/callback")
+        exchange_data = {
+            "code": code,
+            "redirect_uri": callback_uri
+        }
+        response = requests.post(exchange_url, json=exchange_data)
+        response.raise_for_status()
+        token_data = response.json()
+        if "expires_in" in token_data and "expires_at" not in token_data:
+            token_data["expires_at"] = int(time.time()) + token_data["expires_in"]
+        return token_data
+    except Exception as e:
+        logger.error(f"Error exchanging code for token: {str(e)}")
+        return {}
+
+def refresh_auth_token(refresh_token=None):
+    """
+    Refresh an Auth0 token using the refresh token.
+    
+    Args:
+        refresh_token: Refresh token to use
+        
+    Returns:
+        dict: New token data or None if refresh failed
+    """
+    # If no refresh token was provided, try to get it from the stored token
+    if not refresh_token:
+        token_data = get_token()
+        if token_data:
+            refresh_token = token_data.get("refresh_token")
+    
+    # If we still don't have a refresh token, we can't refresh
+    if not refresh_token:
+        logger.warning("No refresh token available")
+        return None
+    
+    # If the refresh token is empty, we can't refresh
+    if not refresh_token.strip():
+        logger.warning("Refresh token is empty")
+        return None
+    
+    logger.info("Attempting to refresh token")
+    
+    try:
+        # Try to refresh using the backend
+        response = requests.post(
+            get_token_refresh_endpoint(),
+            json={"refresh_token": refresh_token},
+            headers={"Content-Type": "application/json"}
+        )
+        
+        if response.status_code == 200:
+            token_data = response.json()
+            
+            # Add expires_at for convenience
+            if "expires_in" in token_data:
+                token_data["expires_at"] = int(time.time()) + token_data["expires_in"]
+            
+            # Store the new token
+            store_token(token_data)
+            
+            logger.info("Successfully refreshed token")
+            return token_data
+        else:
+            logger.warning(f"Token refresh failed: {response.status_code} - {response.text}")
+            return None
+    except Exception as e:
+        logger.warning(f"Token refresh failed: {str(e)}")
+        return None
+    
+    return None
+
+def authenticate(timeout: int = 300) -> Dict[str, Any]:
+    """
+    Authenticate with the Mesh backend using the backend-managed flow.
+    
+    This function is part of the backend-managed authentication flow:
+    1. First checks for an existing valid token in secure storage
+    2. If token exists but is expired, tries to refresh it using the backend endpoint
+    3. Returns None to signal that the client should initiate the browser-based authentication
+    
+    The actual browser-based authentication happens in MeshClient._authenticate_backend_driven method,
+    which is the ONLY recommended way to authenticate in the SDK.
+    
+    Args:
+        timeout: Timeout in seconds for authentication (used for backwards compatibility)
+        
+    Returns:
+        dict: Token data if a valid token exists or was refreshed, None otherwise
+    """
+    # Check if we already have a valid token
+    token_data = get_token()
+    
+    # If token exists but is invalid, try to refresh it first
+    if token_data and not is_token_valid(token_data):
+        logger.info("Token exists but is invalid or expired, attempting to refresh")
+        try:
+            # Try refreshing the token using the backend endpoint
+            refreshed_token = refresh_auth_token(refresh_token=token_data.get("refresh_token"))
+            
+            if refreshed_token and is_token_valid(refreshed_token):
+                logger.info("Successfully refreshed token")
+                return refreshed_token
+            else:
+                logger.info("Token refresh failed, will proceed with browser-based authentication")
+        except Exception as e:
+            logger.warning(f"Error during token refresh: {str(e)}. Will proceed with browser-based authentication.")
+    elif is_token_valid(token_data):
+        logger.info("Using existing valid token")
+        return token_data
+    
+    # Return None to signal that the client should use backend-driven authentication
+    return None
+
+# Removed duplicate authenticate function
+
+def authenticate_direct(auth_token: str) -> Dict[str, Any]:
+    """
+    DEPRECATED: Direct authentication with a token is deprecated.
+    
+    Please use the backend-managed authentication flow instead, which keeps the Auth0
+    client secret secure on the backend. This method will be removed in a future version.
+    
+    Args:
+        auth_token: Authentication token
+        
+    Returns:
+        dict: Token data structure
+    """
+    import warnings
+    warnings.warn(
+        "Direct authentication with auth_token is deprecated and will be removed in a future version. "
+        "Use the backend-managed authentication flow instead.",
+        DeprecationWarning,
+        stacklevel=2
+    )
+    
+    # Create minimal token data structure
+    token_data = {
+        "access_token": auth_token,
+        "expires_at": int(time.time()) + 86400  # Default to 24h expiry as a fallback
+    }
+    
+    # Store the token
+    store_token(token_data)
+    return token_data
+
+def authenticate_device_flow():
+    """
+    DEPRECATED: Device flow authentication is not supported.
+    
+    The SDK exclusively uses the backend-managed authentication flow.
+    Please use MeshClient's built-in authentication which uses the backend endpoints.
+    
+    Raises:
+        NotImplementedError: Always raises this exception
+    """
+    import warnings
+    warnings.warn(
+        "Device flow authentication is not supported. "
+        "The SDK exclusively uses the backend-managed authentication flow.",
+        DeprecationWarning,
+        stacklevel=2
+    )
+    raise NotImplementedError("Device flow authentication is not implemented in this SDK.")
