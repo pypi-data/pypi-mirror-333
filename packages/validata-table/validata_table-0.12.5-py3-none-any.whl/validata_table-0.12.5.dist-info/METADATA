@@ -1,0 +1,89 @@
+Metadata-Version: 2.3
+Name: validata-table
+Version: 0.12.5
+Summary: Package used in validation tabular data
+License: GPL-3.0-or-later
+Author: Amélie Rondot
+Author-email: amelie.rondot@multi.coop
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: cachetools (>=5.3.1,<6.0.0)
+Requires-Dist: commonmark (>=0.9.1,<0.10.0)
+Requires-Dist: flasgger (>=0.9.7.1,<0.10.0.0)
+Requires-Dist: flask (==2.1.2)
+Requires-Dist: flask-babel (==4.0.0)
+Requires-Dist: flask-cors (>=4.0.0,<5.0.0)
+Requires-Dist: flask-matomo (>=1.2.0,<2.0.0)
+Requires-Dist: frformat (==0.4.1)
+Requires-Dist: frictionless[excel] (>=5.18.0,<6.0.0)
+Requires-Dist: gunicorn (>=21.2.0,<22.0.0)
+Requires-Dist: importlib-metadata (>=6.8.0,<7.0.0)
+Requires-Dist: jinja2 (==3.1.4)
+Requires-Dist: opendataschema (>=0.6.0,<0.7.0)
+Requires-Dist: opening-hours-py (>=0.6.17,<0.7.0)
+Requires-Dist: phonenumbers (>=8.13.22,<9.0.0)
+Requires-Dist: pydantic (>=2.0,<3.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: python-stdnum (>=1.19,<2.0)
+Requires-Dist: requests (>=2.32.2,<3.0.0)
+Requires-Dist: requests-cache (>=1.1.0,<2.0.0)
+Requires-Dist: sentry-sdk (>=1.31.0,<2.0.0)
+Requires-Dist: shapely (>=2.0.1,<3.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: ujson (>=5.8.0,<6.0.0)
+Requires-Dist: werkzeug (==2.0.2)
+Project-URL: Repository, https://gitlab.com/validata-table/validata-table
+Description-Content-Type: text/markdown
+
+![Validata Table Logo](src/validata_ui/app/static/img/logo-horizontal.png)
+
+[Validata Table](https://gitlab.com/validata-table/validata-table) is python 
+package used as a tabular data validation service, with the [Table 
+Schema](https://datapackage.org/standard/table-schema/)
+specification.
+
+It builds upon [frictionless-py](https://github.com/frictionlessdata/frictionless-py) to add :
+
+- translations of [error messages](./docs/errors.md) to French
+- [additionnal check capabilities](./docs/custom_checks.md)
+- an [HTTP API server](src/validata_api/README.md)
+- a web app for a [graphical user interface](https://github.com/datagouv/fr-format)
+- a [command line interface](https://github.com/datagouv/fr-format)
+
+# Using `validata-table` package
+
+You can use locally this package `validata-table`, doing:
+
+```commandline
+pip install validata-table 
+```
+
+This allows you to use `validata` command line tool to validate tabular data:
+
+```commandline
+validata --help
+```
+
+# Development
+
+See [development-specific documentation](docs/developper_documentation.md)
+
+# History
+
+To keep track of the project's history, [Validata Table](https://gitlab.com/validata-table/validata-table) 
+comes from the merge of four gitlab repositories :
+- [Validata core](https://gitlab.com/validata-table/validata-core)
+- [Validata UI](https://gitlab.com/validata-table/validata-ui)
+- [Validata API](https://gitlab.com/validata-table/validata-api)
+- [Validata Docker](https://gitlab.com/validata-table/validata-docker)
+
