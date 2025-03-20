@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/unzipping.py
+src/unzipping.egg-info/PKG-INFO
+src/unzipping.egg-info/SOURCES.txt
+src/unzipping.egg-info/dependency_links.txt
+src/unzipping.egg-info/top_level.txt
