@@ -1,0 +1,2 @@
+[console_scripts]
+claude-logging = claude_logging.__main__:main
