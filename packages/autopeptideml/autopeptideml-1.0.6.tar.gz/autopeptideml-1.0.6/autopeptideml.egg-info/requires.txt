@@ -1,0 +1,14 @@
+optuna
+scikit-learn
+typer
+mljar-scikit-plot
+tokenizers
+torch
+transformers
+lightgbm
+xgboost
+mdpdf
+onnxmltools
+skl2onnx
+onnxruntime
+hestia-good
