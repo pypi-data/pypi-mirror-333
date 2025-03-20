@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: african-knowledge-ai
+Version: 0.1.0
+Summary: Python SDK for African Knowledge AI API
+Home-page: https://github.com/yourusername/african-knowledge-ai-sdk
+Author: Your Name
+Author-email: Your Name <your-email@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# african-knowledge-ai-python-sdk
+SDK for African-Knowledge-Ai for Python based application

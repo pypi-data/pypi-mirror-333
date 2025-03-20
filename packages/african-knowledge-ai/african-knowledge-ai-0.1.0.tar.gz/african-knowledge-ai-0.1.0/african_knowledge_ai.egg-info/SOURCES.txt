@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+african_knowledge_ai/__init__.py
+african_knowledge_ai/client.py
+african_knowledge_ai/exceptions.py
+african_knowledge_ai/utils.py
+african_knowledge_ai.egg-info/PKG-INFO
+african_knowledge_ai.egg-info/SOURCES.txt
+african_knowledge_ai.egg-info/dependency_links.txt
+african_knowledge_ai.egg-info/requires.txt
+african_knowledge_ai.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
