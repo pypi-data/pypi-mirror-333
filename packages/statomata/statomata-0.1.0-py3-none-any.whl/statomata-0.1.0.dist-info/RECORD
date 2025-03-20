@@ -1,0 +1,14 @@
+statomata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statomata/abc.py,sha256=1OWhTiDqUuBG5iRc8BytdgjDAXEzI5fJ7lYIa-ve1nI,4257
+statomata/anyio.py,sha256=Oohn9wAkZwFK1BZus5SkO_JR_cxkMCMIfWtJhwPAeiU,1999
+statomata/executor.py,sha256=YU1ikP7ofhuiBouQW5Q9lmajxuUdb-TsqqPUEKbkjF8,6221
+statomata/final.py,sha256=ufsV6QOqngQSbc9hkL4tXY8LYP1UIzVLrynFD13GPpg,524
+statomata/iterable.py,sha256=FvUtsHSWlGrfIrH1MUtvwZgWyjdnlGq_UymdcKvVgNo,8817
+statomata/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statomata/sdk.py,sha256=8FJTiGFKUljAG-tizZhtRWHCvrqQX6gzbagdnHjiqMI,3795
+statomata/subscriber.py,sha256=QYV7DZUG31qu6ZyfZ1Aswd3JSXjjZOhV-vMVAvKVDmA,4490
+statomata/unary.py,sha256=ODq3vijV8NMRQJm6ZSn1lAiOtju2mGHO8USa7OpSGp0,4577
+statomata-0.1.0.dist-info/LICENSE,sha256=FMDtInsEgUHG1oGhR6u-_AEH6mHXjPnwSqGcbWCvL28,1071
+statomata-0.1.0.dist-info/METADATA,sha256=0UwNs0Imn93RtW3q9j3nYdVJAf6-FdgI_XLwlv-7kkI,2289
+statomata-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+statomata-0.1.0.dist-info/RECORD,,
