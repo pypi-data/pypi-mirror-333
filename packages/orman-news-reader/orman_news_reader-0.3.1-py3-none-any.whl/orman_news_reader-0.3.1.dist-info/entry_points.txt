@@ -1,0 +1,7 @@
+[console_scripts]
+orman-google-extractor=orman_news_reader.google_rss_extractor:main
+orman-google-rss-extractor=orman_news_reader.google_rss_extractor:main
+orman-html-generator=orman_news_reader.html_generator:main
+orman-reader-mode=orman_news_reader.reader_mode:main
+orman-web-reader=orman_news_reader.__main__:main
+
