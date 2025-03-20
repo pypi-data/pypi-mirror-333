@@ -1,0 +1,52 @@
+Metadata-Version: 2.2
+Name: tes-chp
+Version: 0.2.1
+Summary: CHP models implemented in tespy (for WWNW)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: tespy>=0.7.9
+Requires-Dist: numpy>=2.0.0
+Requires-Dist: pandas>=2.0.0
+
+# TESpy-based CHP
+
+***Important: This model is still unfinished and under active development! Use it with caution.***
+
+This project contains a CHP implemetation using TESpy. To install the package run
+
+```bash
+pip install tes-chp
+```
+
+The CHP is implemented as TESpy subsystem. A simple usage could look like:
+
+```py
+from tes_chp import CHP
+from tespy.networks import Network
+
+net = Network(fluids=["H2O", "CH4", "H2", "O2", "CO2", "Ar", "N2"], p_unit='bar', T_unit='C', iterinfo=False)
+chp = CHP("CHP")
+net.add_subsys(chp)
+
+chp.set_attr(P=-1e6)
+
+mode= "design"
+net.solve(mode=mode, design_path=".")
+net.save("tmp")
+net.print_results()
+
+chp.set_attr(P=-5e5)
+
+mode= "offdesign"
+net.solve(mode=mode, design_path="tmp")
+net.print_results()
+```
+
