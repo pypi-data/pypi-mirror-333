@@ -1,0 +1,14 @@
+coco_experiment-2.7.5.dist-info/METADATA,sha256=shWeHSjjXoMYXFeDauSakWavlX2EL06kuHa0iv8tfCo,2816
+coco_experiment-2.7.5.dist-info/WHEEL,sha256=7cZ4I0YX3bYMxaN4VYOd04PsZT4Z2-Y_to4omnMsHlE,90
+cocoex/interface.pypy39-pp73-win_amd64.pyd,sha256=mvBzpvan22vFoylOd_vhnV2VzK6x3zrsIayZK1ZTC88,861696
+cocoex/interface.pypy39-pp73-win_amd64.lib,sha256=LjZ_M5fP5SJNGtJ-h-HXwkVWcLR88tie1xhLSXYNwRs,2126
+cocoex/bare_problem.pypy39-pp73-win_amd64.pyd,sha256=7fhe7owCkO0dA7O-DJClYsdTPSWZZDWh371kz3rD9WY,231424
+cocoex/bare_problem.pypy39-pp73-win_amd64.lib,sha256=kHwpMTlDosWQ-KiTEsBOk25vnHWurDrQnwJ-NJyOIRk,2182
+cocoex/__init__.py,sha256=EE8fSAcrKrkXBJl51V4cwZzD8ydE-Ssg1PDUZpygBMs,22778
+cocoex/_version.py,sha256=qD6OIFtcjx-UljK-7ggEBrBQEgAPXnK8ELdDOap5YpI,172
+cocoex/download_example.py,sha256=lNSkwOxmGu8YaRBoZA6OUgLnC26xQ2_BXK2E8GcdT54,1542
+cocoex/exceptions.py,sha256=Zo5UxZpk2w_M_2IfjkZiS7zvga1RvLAjepsf2RPM1yw,793
+cocoex/noiser.py,sha256=u_PYRkn_2GXADQX86jkR2eKTk0rn1H43fup0XyjlPsY,10634
+cocoex/solvers.py,sha256=5Rz8728O556jMs5K918ODXYu13-d9TxFMN8P6oGl-3A,1244
+cocoex/utilities.py,sha256=fXOOGr4mrN4G9_er2x2CHNwEvl_lnJ0VdTZqD4VTCIg,42591
+coco_experiment-2.7.5.dist-info/RECORD,,
