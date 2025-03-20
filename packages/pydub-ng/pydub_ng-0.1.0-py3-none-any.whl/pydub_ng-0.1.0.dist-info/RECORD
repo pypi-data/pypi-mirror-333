@@ -1,0 +1,17 @@
+pydub/__init__.py,sha256=PXsQlnhOX7ColWSspBHU2V9wsMNwOmTcLVExpJKG_co,249
+pydub/audio_segment.py,sha256=t1fV7kFwx2VFTyPytDV1tW_L9ZiZFoWanGZ15Dp5aTA,49486
+pydub/effects.py,sha256=MqMdjQ3KuxP2rakCvcaUf04oqsb7YtlGJUGeZecrgN8,11270
+pydub/exceptions.py,sha256=osgXoUujwpH8K6hr80iYpW30CMBDFwqyaRD-5d7ZpKs,455
+pydub/generators.py,sha256=7f-I8ISD6URurq3OEHMRvImoYOm0VYyLC-n25qi1mUw,4018
+pydub/logging_utils.py,sha256=yGVQSA_7N3KZc46mvF_SrazZx9th-JniCiDzSX-2MBE,376
+pydub/playback.py,sha256=2xcs_AH3nL4dmIStqpcNzvgpAe6X8rOoWHvZHFr5GY0,1970
+pydub/pyaudioop.py,sha256=KfRGWWEJcwDI-JEMcrQS_jV1xxsn4qX3czkzZgrcUYQ,12946
+pydub/scipy_effects.py,sha256=EmPnCwv4gj40kHjdmJ-ulm5xDWr1smfxkI42l4wTnWg,6624
+pydub/silence.py,sha256=kGFpKFipNY0uHGhQMBMYZboNp7QruUnI4Un2r-Wnk3U,6410
+pydub/utils.py,sha256=4K9oR__vffnJ7lN5AAe8t1Ctw5R8P7a5ukgQkDCrdQs,12842
+pydub_ng-0.1.0.dist-info/AUTHORS,sha256=L8PVOzEwTkAENfXGguMz2RInj3asvvu9PMa-o1j3VQA,1278
+pydub_ng-0.1.0.dist-info/LICENSE,sha256=roVlNiJMx6OJ6Wh3H8XyWYFL3Q2mNTnPcigq2672iXo,1074
+pydub_ng-0.1.0.dist-info/METADATA,sha256=dQVkdS0lw9Z6qS1iZj6zGptP68Bj3WnoGKJU7CzIF9g,1615
+pydub_ng-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pydub_ng-0.1.0.dist-info/top_level.txt,sha256=PHhiDCQVZdycZxfKL2lQozruBT6ZhvyZAwqjRrw3t0w,6
+pydub_ng-0.1.0.dist-info/RECORD,,
