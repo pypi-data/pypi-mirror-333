@@ -1,0 +1,53 @@
+name: colav-bridge CI/CD
+run-name: ${{ github.actor }} is testing colav-bridge 🚀
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    container:
+      image: ros:humble-ros-core
+
+    steps:
+      - name: Install Dependencies
+        shell: bash
+        run: |
+          apt-get update && apt-get install -y \
+            build-essential \
+            cmake \
+            python3-pip \
+            python3-colcon-common-extensions \
+            ros-humble-ament-cmake \
+            git
+          pip install hatch
+          pip install twine
+          mkdir -p /ros2_ws/src
+          cd /ros2_ws/src && git clone https://github.com/Artemis-QUB-COLAV/colav-interfaces.git
+          source /opt/ros/humble/setup.bash && cd /ros2_ws && colcon build --packages-select colav_interfaces && source /ros2_ws/install/setup.bash
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Tests
+        shell: bash
+        run: |
+          source /ros2_ws/install/setup.bash && \
+          source /opt/ros/humble/setup.bash && \
+          hatch test
+      
+      - name: Publish to PyPI
+        if: github.event_name == 'release'
+        env:
+          PYPI_USERNAME: __token__
+          PYPI_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          hatch build && \
+          twine upload dist/* -u "${PYPI_USERNAME}" -p "${PYPI_PASSWORD}" --non-interactive --verbose
