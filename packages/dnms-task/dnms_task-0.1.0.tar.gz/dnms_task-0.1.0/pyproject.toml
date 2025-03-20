@@ -1,0 +1,16 @@
+[project]
+name = "dnms_task"
+description = "Delayed Non-Match-To-Sample task for IBLRIG"
+version = "0.1.0"
+authors = [
+  { name="Tatiana Dupak", email="tatiana.dupak@u-bordeaux.fr" },
+]
+
+requires-python = "==3.10.*"
+keywords = [ "IBL", "neuro-science"]
+readme = "README.md"
+license = { file = "LICENSE" }
+
+
+[project.entry-points."iblrig.plugins"]
+task_dnms = "task:Session"
