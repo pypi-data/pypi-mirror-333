@@ -1,0 +1,8 @@
+pyproject.toml
+chatmx/__init__.py
+chatmx/main.py
+chatmx.egg-info/PKG-INFO
+chatmx.egg-info/SOURCES.txt
+chatmx.egg-info/dependency_links.txt
+chatmx.egg-info/entry_points.txt
+chatmx.egg-info/top_level.txt
