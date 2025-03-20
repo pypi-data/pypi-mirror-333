@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: flask-mvc-core
+Version: 0.0.5
+Summary: A simple MVC package for Flask
+Home-page: https://github.com/seu-usuario/flask-mvc-core
+Author: Célio Junior
+Author-email: profissional.celiojunior@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask>=3.0
+
+# Flask-MVC
+
+Flask-MVC é um pacote simples para implementar um padrão MVC no Flask.
+
+## Instalação
+
+```
+pip install flask-mvc-core
+```
