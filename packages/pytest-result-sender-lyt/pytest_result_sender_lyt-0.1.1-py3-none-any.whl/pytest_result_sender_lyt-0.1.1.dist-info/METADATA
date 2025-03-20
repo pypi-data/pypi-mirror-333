@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pytest_result_sender_lyt
+Version: 0.1.1
+Summary: Default template for PDM package
+Author-Email: Freya <3419669644@qq.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# pytest_result_sender
