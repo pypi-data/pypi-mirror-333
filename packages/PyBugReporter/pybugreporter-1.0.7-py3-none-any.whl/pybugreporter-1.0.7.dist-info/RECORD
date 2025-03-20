@@ -1,0 +1,10 @@
+PyBugReporter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PyBugReporter/_version.py,sha256=GIukrVnl8Ykjex2rUbxdz2Ov1PRc_MomFmxwSzRJH9w,21
+PyBugReporter/requirements.txt,sha256=EAW4yz3vd10zafBk_nrBB4X2l569expN2zb7Mj6m920,29
+PyBugReporter/src/BugReporter.py,sha256=w904iTS42i5dNCN9iCh9AHHEEpYjjEVFMi9KawwLxVw,13601
+PyBugReporter/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybugreporter-1.0.7.dist-info/LICENSE,sha256=y1VMyG67xmRdcGWNYFUPkcniixqP7BGqIC5NwYO-Gtk,1067
+pybugreporter-1.0.7.dist-info/METADATA,sha256=F5G0YywjcgYs2M2ecfBcqRtMvdoZOo_CXLjGC8c7g1w,866
+pybugreporter-1.0.7.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pybugreporter-1.0.7.dist-info/top_level.txt,sha256=oMev-fwhS97VtD0Y8a-1sl0MfdCLd4cQoySjJPQaIkE,32
+pybugreporter-1.0.7.dist-info/RECORD,,
