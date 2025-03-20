@@ -1,0 +1,9 @@
+platform_location_shared/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+platform_location_shared/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platform_location_shared/models/error.py,sha256=t0x-CrXc4aTwoR_1-6-9oeaUqzIJ6zdsQJbzmZ4gOJQ,80
+platform_location_shared/models/location.py,sha256=Ns4L5k7zP_FokGsbZiNYkZ6ll1Z_8b83oIT3D-uoQhQ,683
+platform_location_shared/validations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platform_location_shared/validations/postcode.py,sha256=OO4vkbAA58bLCHXqQVuf2QNFLnW2jzRAYGEGQH0dPig,682
+platform_location_shared-0.1.0.dist-info/METADATA,sha256=0kL_dDMeY_32c3UrOUIR4g_w4dvM-SiiaeExCYabZYg,696
+platform_location_shared-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+platform_location_shared-0.1.0.dist-info/RECORD,,
