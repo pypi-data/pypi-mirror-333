@@ -1,0 +1,2 @@
+[console_scripts]
+jimaku-dl = jimaku_dl.cli:main
