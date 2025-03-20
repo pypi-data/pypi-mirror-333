@@ -1,0 +1,17 @@
+django_backup/__init__.py,sha256=xh9r1Wcm8LnnoBS5AyfXx4DPvvBwTAQF8RivMsHEzII,60
+django_backup/admin.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_backup/apps.py,sha256=k5sXxmm719RWjprIyzHhKRtkvok7chx9vzjooqM4xvk,428
+django_backup/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_backup/scheduler.py,sha256=PFWCnp0q-FhJFuabw--sRwjuWDOwI3u5yjWjFZwzeWY,2078
+django_backup/backup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_backup/backup/postgres.py,sha256=eINu0Pw3LjboYc3Wgkz2TFOSiFAEemhjnsTcCUM5jqg,4080
+django_backup/backup/s3.py,sha256=LrwwZ0k-owH5Iq_uR3hkQOFUa6n3c3Wmh5aPgpyBv3Q,2449
+django_backup/backup/utils.py,sha256=reVjnrUOIzxCHZPJBgPv-6G_jp28PfzCV6X4scXWtPQ,2064
+django_backup/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_backup/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_backup/management/commands/run_backup.py,sha256=dDreBvZzQMYcUPE9lnmH9PPARr6RRlacMThsbRaRbSg,2260
+django_postgres_backup_ganaf-0.1.0.dist-info/LICENCE,sha256=d1c9niCvcJZaAo9qgrGu-sc8l0mPrdac22tAbitVvIQ,1072
+django_postgres_backup_ganaf-0.1.0.dist-info/METADATA,sha256=poCUVxzipAaZ6Qd8QvpuDatH7kS1M0udMOY5GHwmkjg,3790
+django_postgres_backup_ganaf-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+django_postgres_backup_ganaf-0.1.0.dist-info/top_level.txt,sha256=gKIbC0rJHBz6U5cGwe18iw5CXNKoQ3xo7HmmPDYNi6s,14
+django_postgres_backup_ganaf-0.1.0.dist-info/RECORD,,
