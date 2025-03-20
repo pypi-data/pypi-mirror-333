@@ -1,0 +1,3 @@
+[console_scripts]
+pdf2html = pdf2html_ai.processor:main
+pdf2html-ai = pdf2html_ai.processor:main
