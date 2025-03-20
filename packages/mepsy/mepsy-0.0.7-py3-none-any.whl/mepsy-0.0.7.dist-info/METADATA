@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: mepsy
+Version: 0.0.7
+Summary: mepsy is a library that wraps and facilitates running Spark applications on the Terrascope MEP infrastructure
+Author: VITO RS Vegetation team
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Description
+
+Template repository
+
