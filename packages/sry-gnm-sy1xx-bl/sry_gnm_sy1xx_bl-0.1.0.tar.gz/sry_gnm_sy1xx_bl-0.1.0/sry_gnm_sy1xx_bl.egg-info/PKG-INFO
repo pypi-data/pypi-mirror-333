@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: sry_gnm_sy1xx_bl
+Version: 0.1.0
+Summary: Sensry Ganymed Sy1xx Bootloader Tool
+Author-email: Sven Ginka <s.ginka@sensry.de>
+Project-URL: Homepage, https://github.com/sensry-de/ganymed-sy1xx-loader
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# My Package
+
+A simple example Python package.
+
+## Installation
+```bash
+pip install my_package
