@@ -1,0 +1,9 @@
+avron_parser/__init__.py,sha256=erY2bd9_eQHwhRKOpZy_EKzxZUHH4Xc6VB5QpIBsmhg,32
+avron_parser/inline_parser.py,sha256=x_dCG2DkXcYH7rDpIIaYsSiOOOTYT_eDu71a-42TIG0,1084
+avron_parser/parser.py,sha256=-YTWOMjlJQHNVUEY7mJyBYORvUKUMW9KePFw00-1gCA,4703
+avron_parser/settings_parser.py,sha256=V-iDKWBVKP4UjD0-czMDcfNNJyGOKzt3r0GsQb9mfBg,662
+avron_parser-0.2.1.dist-info/LICENSE,sha256=-NJZRpLmpt5l4O7lKxpa4g1THDFs48kImgW0BXP2Utg,1063
+avron_parser-0.2.1.dist-info/METADATA,sha256=x90maIIURm2VXilPDOeQHdzmQG86dm333Tg43rsdwi8,2868
+avron_parser-0.2.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+avron_parser-0.2.1.dist-info/top_level.txt,sha256=31hPSAXgK79CEl6ek4zZDW_653Rf3REqkEISxv2no2Y,13
+avron_parser-0.2.1.dist-info/RECORD,,
