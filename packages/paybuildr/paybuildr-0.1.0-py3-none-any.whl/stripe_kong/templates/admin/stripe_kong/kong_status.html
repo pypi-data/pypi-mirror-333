@@ -1,0 +1,158 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_list %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <style type="text/css">
+    .kong-status {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      color: #333; /* Ensure text is dark */
+    }
+    .kong-status-connected {
+      border-left: 5px solid #28a745;
+    }
+    .kong-status-error {
+      border-left: 5px solid #dc3545;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 0.25em 0.6em;
+      font-size: 75%;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 0.25rem;
+      margin-right: 5px;
+    }
+    .badge-success {
+      color: #fff;
+      background-color: #28a745;
+    }
+    .badge-danger {
+      color: #fff;
+      background-color: #dc3545;
+    }
+    .badge-warning {
+      color: #212529;
+      background-color: #ffc107;
+    }
+    .status-actions {
+      margin-top: 10px;
+    }
+    .status-actions .button {
+      margin-right: 10px;
+    }
+    .sync-info {
+      margin-top: 15px;
+      color: #333; /* Ensure text is dark */
+    }
+    .sync-details {
+      margin-left: 15px;
+    }
+    .status-details {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #e9f7ed; /* Light green background for status details */
+      border-radius: 4px;
+      border: 1px solid #c3e6cb; /* Light green border */
+    }
+    /* Ensure strong tags are visible */
+    .status-details strong, .kong-status strong {
+      font-weight: bold;
+      color: #000; /* Black text for strong elements */
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+  <h1>{% trans "Kong API Gateway Status" %}</h1>
+  
+  <div class="kong-status {% if is_connected %}kong-status-connected{% else %}kong-status-error{% endif %}">
+    <h2>
+      {% if is_connected %}
+        <span class="status-badge badge-success">✓</span>
+      {% else %}
+        <span class="status-badge badge-danger">✗</span>
+      {% endif %}
+      {% trans "Kong Connection" %}
+    </h2>
+    
+    <p>
+      <strong>{% trans "Kong Admin URL:" %}</strong> {{ kong_admin_url }}
+    </p>
+    
+    {% if is_connected %}
+      <p>{% trans "Successfully connected to Kong API Gateway." %}</p>
+      
+      <div class="status-details">
+        <p><strong>{% trans "Gateway Version:" %}</strong> {{ kong_version }}</p>
+        <p><strong>{% trans "Total Services:" %}</strong> {{ services_count }}</p>
+        <p><strong>{% trans "Total Routes:" %}</strong> {{ routes_count }}</p>
+        <p><strong>{% trans "Total Plugins:" %}</strong> {{ plugins_count }}</p>
+      </div>
+    {% else %}
+      <p>{% trans "Could not connect to Kong API Gateway." %}</p>
+      <p><strong>{% trans "Error:" %}</strong> {{ error_message }}</p>
+      <p>{% trans "Please check your Kong configuration and make sure the service is running." %}</p>
+    {% endif %}
+    
+    <div class="status-actions">
+      <a href="{% url 'admin:stripe_kong_apiservice_changelist' %}" class="button">{% trans "Manage Services" %}</a>
+      <a href="{% url 'admin:stripe_kong_apiroute_changelist' %}" class="button">{% trans "Manage Routes" %}</a>
+      <a href="{% url 'admin:index' %}" class="button">{% trans "Back to Admin" %}</a>
+    </div>
+  </div>
+  
+  <div class="sync-info">
+    <h2>{% trans "Synchronization Status" %}</h2>
+    
+    <p>{% trans "Django to Kong synchronization is" %} 
+      {% if sync_enabled %}
+        <span class="status-badge badge-success">{% trans "Enabled" %}</span>
+      {% else %}
+        <span class="status-badge badge-warning">{% trans "Disabled" %}</span>
+      {% endif %}
+    </p>
+    
+    <div class="sync-details">
+      <h3>{% trans "Unsynchronized Items" %}</h3>
+      
+      {% if unsync_services %}
+        <p><strong>{% trans "Services without Kong ID:" %}</strong> {{ unsync_services|length }}</p>
+        <ul>
+          {% for service in unsync_services %}
+            <li>{{ service.name }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{% trans "All services are synchronized with Kong." %}</p>
+      {% endif %}
+      
+      {% if unsync_routes %}
+        <p><strong>{% trans "Routes without Kong ID:" %}</strong> {{ unsync_routes|length }}</p>
+        <ul>
+          {% for route in unsync_routes %}
+            <li>{{ route.name }} ({{ route.service.name }})</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{% trans "All routes are synchronized with Kong." %}</p>
+      {% endif %}
+    </div>
+    
+    <form method="post">
+      {% csrf_token %}
+      <div class="status-actions">
+        <button type="submit" name="action" value="sync_all" class="button default">{% trans "Sync All to Kong" %}</button>
+        <button type="submit" name="action" value="refresh_all" class="button">{% trans "Refresh All from Kong" %}</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
