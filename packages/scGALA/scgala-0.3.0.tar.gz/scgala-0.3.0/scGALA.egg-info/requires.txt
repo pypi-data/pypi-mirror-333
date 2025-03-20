@@ -1,0 +1,7 @@
+scanpy[leiden]
+torch_geometric
+PyGCL
+lightning
+hnswlib
+ipykernel
+pot

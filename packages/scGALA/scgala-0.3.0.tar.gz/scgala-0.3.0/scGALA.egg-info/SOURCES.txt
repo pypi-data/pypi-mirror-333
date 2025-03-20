@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+scGALA/__init__.py
+scGALA/data.py
+scGALA/main.py
+scGALA/model.py
+scGALA/utils.py
+scGALA.egg-info/PKG-INFO
+scGALA.egg-info/SOURCES.txt
+scGALA.egg-info/dependency_links.txt
+scGALA.egg-info/requires.txt
+scGALA.egg-info/top_level.txt
