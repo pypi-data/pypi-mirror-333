@@ -1,0 +1,3 @@
+[console_scripts]
+download-airpls=scripts.download_airpls:main
+
