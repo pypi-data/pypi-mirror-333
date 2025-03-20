@@ -1,0 +1,2 @@
+[winzy.plugins]
+time = winzy_time_in_words:time_plugin
