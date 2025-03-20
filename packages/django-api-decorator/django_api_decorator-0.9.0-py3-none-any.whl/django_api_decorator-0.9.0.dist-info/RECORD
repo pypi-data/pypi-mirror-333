@@ -1,0 +1,15 @@
+django_api_decorator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_api_decorator/apps.py,sha256=zdtc81jWJc_dKKat2WmGHbkb8IfOucy6re4DY1-n2ZU,390
+django_api_decorator/decorators.py,sha256=ESvD0lMYLuDH1LCVBEncSPtA2mFDy-68FaG-ZUSU0PE,13937
+django_api_decorator/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_api_decorator/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_api_decorator/management/commands/generate_api_schemas.py,sha256=48iX_7CXokBsuJcX3qxPWFNAek4-idyFlKt3m8yOU7A,920
+django_api_decorator/openapi.py,sha256=PhDmG4but0CkrO0G-UEi5Rp3Zzr_XrYmsbxJkecynw0,12391
+django_api_decorator/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_api_decorator/schema_file.py,sha256=32lWzMBTGR7PemgxAdRMTWSclimmV2K8lbPDb9HYD0Y,2620
+django_api_decorator/types.py,sha256=Nxz0QiQpvtYp0rtHSkt0vd9oHzHl9xMZ9BmulcroExs,1146
+django_api_decorator/utils.py,sha256=fmlQEXpVeGfzIag7Tsu0BeUCS3EvJ1GHphOnG32rmPs,2850
+django_api_decorator-0.9.0.dist-info/LICENSE,sha256=Q7pnMLYpvSd0N4QsdkAabBLOhqbwxD2ZzAec0eF1LVc,1076
+django_api_decorator-0.9.0.dist-info/METADATA,sha256=wgC22R8_f0iLrRlGYDxaDceaF1oHEvGIi2ujtLmt5pY,5197
+django_api_decorator-0.9.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+django_api_decorator-0.9.0.dist-info/RECORD,,
