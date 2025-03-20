@@ -1,0 +1,2 @@
+[console_scripts]
+prokill = prokill.__main__:main
