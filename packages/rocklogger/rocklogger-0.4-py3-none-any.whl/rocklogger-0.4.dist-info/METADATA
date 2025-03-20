@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: rocklogger
+Version: 0.4
+Summary: Rockwool logger
+Home-page: https://github.com/rw-MohamedAbouseif/Rocklogger.git
+Download-URL: https://github.com/rw-MohamedAbouseif/Rocklogger/archive/refs/tags/v0.4.0.tar.gz
+Author: Mohamed Abouseif
+Author-email: mohamed.abouseif@rockwool.com
+License: MIT
+Keywords: Logger,ROCKWOOL
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
+
+# rocklogger
+### Pypi
+https://pypi.org/project/rocklogger/
