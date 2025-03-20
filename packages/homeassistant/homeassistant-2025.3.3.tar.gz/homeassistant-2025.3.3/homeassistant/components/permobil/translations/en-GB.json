@@ -1,0 +1,18 @@
+{
+    "config": {
+        "step": {
+            "region": {
+                "data": {
+                    "region": "Region"
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "is_charging": {
+                "name": "Is charging"
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "config": {
+        "step": {
+            "2fa": {
+                "data": {
+                    "pin": "Two-factor code"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "failed_arm": {
+            "message": "Blink failed to arm camera."
+        },
+        "failed_arm_motion": {
+            "message": "Blink failed to arm camera motion detection."
+        },
+        "failed_clip": {
+            "message": "Blink failed to record a clip."
+        },
+        "failed_disarm": {
+            "message": "Blink failed to disarm camera."
+        },
+        "failed_disarm_motion": {
+            "message": "Blink failed to disarm camera motion detection."
+        },
+        "failed_snap": {
+            "message": "Blink failed to snap a picture."
+        }
+    },
+    "services": {
+        "record": {
+            "description": "Requests camera to record a clip.",
+            "name": "Record"
+        }
+    }
+}

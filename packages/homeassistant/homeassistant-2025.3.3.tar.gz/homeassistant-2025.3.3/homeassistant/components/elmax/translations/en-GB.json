@@ -1,0 +1,35 @@
+{
+    "config": {
+        "step": {
+            "direct": {
+                "data": {
+                    "panel_api_port": "Panel API port",
+                    "panel_pin": "Panel PIN code",
+                    "use_ssl": "Use SSL"
+                },
+                "data_description": {
+                    "use_ssl": "Whether, or not, using strict SSL checks. Disable if the panel does not expose a valid SSL certificate or if SSL communication is unsupported by the panel you are connecting to."
+                },
+                "description": "Specify the Elmax panel connection parameters below."
+            },
+            "zeroconf_setup": {
+                "data": {
+                    "panel_pin": "Panel PIN code",
+                    "use_ssl": "Use SSL"
+                },
+                "data_description": {
+                    "use_ssl": "Whether, or not, using strict SSL checks. Disable if the panel does not expose a valid SSL certificate or if SSL communication is unsupported by the panel you are connecting to."
+                },
+                "description": "Configure discovered local Elmax panel"
+            }
+        }
+    },
+    "exceptions": {
+        "alarm_operation_failed_generic": {
+            "message": "Failed to {operation} the alarm. An API error occurred."
+        },
+        "invalid_disarm_code": {
+            "message": "Invalid disarm code provided."
+        }
+    }
+}

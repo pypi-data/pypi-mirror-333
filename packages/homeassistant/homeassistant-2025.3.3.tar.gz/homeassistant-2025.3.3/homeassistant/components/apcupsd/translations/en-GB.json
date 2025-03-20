@@ -1,0 +1,116 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "online_status": {
+                "name": "Online status"
+            }
+        },
+        "sensor": {
+            "alarm_delay": {
+                "name": "Alarm delay"
+            },
+            "ambient_temperature": {
+                "name": "Ambient temperature"
+            },
+            "apc_model": {
+                "name": "Model"
+            },
+            "apc_status": {
+                "name": "Status data"
+            },
+            "apparent_power": {
+                "name": "Load apparent power"
+            },
+            "bad_batteries": {
+                "name": "Bad batteries"
+            },
+            "battery_nominal_voltage": {
+                "name": "Battery nominal voltage"
+            },
+            "battery_replacement_date": {
+                "name": "Battery replaced"
+            },
+            "nominal_output_voltage": {
+                "name": "Nominal output voltage"
+            },
+            "online_status": {
+                "name": "Status flag"
+            },
+            "output_current": {
+                "name": "Output current"
+            },
+            "output_voltage": {
+                "name": "Output voltage"
+            },
+            "register_1_fault": {
+                "name": "Register 1 fault"
+            },
+            "register_2_fault": {
+                "name": "Register 2 fault"
+            },
+            "register_3_fault": {
+                "name": "Register 3 fault"
+            },
+            "restore_capacity": {
+                "name": "Restore requirement"
+            },
+            "self_test_interval": {
+                "name": "Self test interval"
+            },
+            "self_test_result": {
+                "name": "Self test result"
+            },
+            "sensitivity": {
+                "name": "Sensitivity"
+            },
+            "serial_number": {
+                "name": "Serial number"
+            },
+            "shutdown_delay": {
+                "name": "Shutdown delay"
+            },
+            "startup_time": {
+                "name": "Startup time"
+            },
+            "status": {
+                "name": "Status"
+            },
+            "time_left": {
+                "name": "Time left"
+            },
+            "time_on_battery": {
+                "name": "Time on battery"
+            },
+            "total_time_on_battery": {
+                "name": "Total time on battery"
+            },
+            "transfer_count": {
+                "name": "Transfer count"
+            },
+            "transfer_from_battery": {
+                "name": "Transfer from battery"
+            },
+            "transfer_high": {
+                "name": "Transfer high"
+            },
+            "transfer_low": {
+                "name": "Transfer low"
+            },
+            "transfer_to_battery": {
+                "name": "Transfer to battery"
+            },
+            "ups_mode": {
+                "name": "Mode"
+            },
+            "ups_name": {
+                "name": "Name"
+            },
+            "version": {
+                "name": "Daemon version"
+            },
+            "wake_delay": {
+                "name": "Wake delay"
+            }
+        }
+    }
+}

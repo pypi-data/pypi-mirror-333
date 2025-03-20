@@ -1,0 +1,21 @@
+{
+    "entity": {
+        "sensor": {
+            "memory_size": {
+                "name": "Memory size"
+            },
+            "network_err": {
+                "name": "{monitor_device} packet errors"
+            },
+            "network_max_speed": {
+                "name": "{monitor_device} maximum speed"
+            },
+            "uptime": {
+                "name": "Uptime"
+            },
+            "volume_size_total": {
+                "name": "Volume size"
+            }
+        }
+    }
+}
