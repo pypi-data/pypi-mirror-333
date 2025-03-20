@@ -1,0 +1,27 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bibt-gcp-pubsub
+  title: bibt-gcp-pubsub
+  description: "BITS Blue Team Utilities: gcp-pubsub Module"
+  links:
+    - url: https://bibt-gcp-pubsub.broadinstitute.org
+      title: bibt-gcp-pubsub
+      icon: dashboard
+  tags:
+    - bits
+    - bits-tools
+    - security
+  annotations:
+    backstage.io/kubernetes-id: bibt-gcp-pubsub
+    github.com/project-slug: broadinstitute/bibt-gcp-pubsub
+    google.com/cloudbuild-project-slug: bits-gke-clusters
+    google.com/cloudbuild-repo-name: bibt-gcp-pubsub
+    google.com/cloudbuild-location: us-east4
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: library
+  owner: bits-blue-team
+  lifecycle: production
+  system: bibt-libraries
