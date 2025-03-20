@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: anaerodig
+Version: 0.1.2
+Summary: Anaerobic Digestion models, in python
+Author: Antoine Picard-Weibel
+Author-email: apicard.w@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+License-File: LICENSE_pyadm1.txt
+Requires-Dist: apicutils>=0.0.3
+Requires-Dist: pandas
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: numpy<=1.26
+Requires-Dist: numba==0.58.1
+Requires-Dist: multiprocess>=0.70
+Requires-Dist: matplotlib>=3.7.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Anaerobic Digestion models in Python
+This package structures AD models around configuration,feed, and initial state objects.
+Implementations of ADM1 and AM2 models are available in submodules'pyadm1' and 'pyam2'

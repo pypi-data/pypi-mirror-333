@@ -1,0 +1,7 @@
+apicutils>=0.0.3
+pandas
+scipy>=1.7.0
+numpy<=1.26
+numba==0.58.1
+multiprocess>=0.70
+matplotlib>=3.7.0
