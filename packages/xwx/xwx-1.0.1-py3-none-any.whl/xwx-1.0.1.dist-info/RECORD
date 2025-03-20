@@ -1,0 +1,7 @@
+xwx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xwx/models/__init__.py,sha256=rCF3yT7MrrnXnW3a0eNAiO4-GGfiRGFbHxr2xL9MYKQ,521
+xwx/models/bert/configuration_bert.py,sha256=SEkK4C-qr_nL-B7I0xqvsfv5u2tV6P9CLtarZ_DqdPU,10945
+xwx/models/bert/modeling_bert.py,sha256=CdfAqpHeXNWhA3zTZ9YL1yNUTBYWuzmPLLw4FWaivXI,92689
+xwx-1.0.1.dist-info/METADATA,sha256=qpVT7poa-q-hmMhWzM5vdOHPEN4gXn3yBgYbW-QE5PU,858
+xwx-1.0.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+xwx-1.0.1.dist-info/RECORD,,
