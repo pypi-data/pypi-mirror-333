@@ -1,0 +1,12 @@
+gwtrigfind/__init__.py,sha256=QwOslA8d5Ca4qDxoUXcAyyvVQqng6AWOlZ2kMmN_Cb0,1139
+gwtrigfind/__main__.py,sha256=BnCLumxvLm9g_JjsULwjnwyp7Jli5KXH7j2MzdMFvDE,93
+gwtrigfind/_version.py,sha256=I_fzTO52A7X9h4fttULxySS6f_KgOl2rqyT1fEmwEGY,511
+gwtrigfind/cli.py,sha256=QBTsjrOhvDP1rlhsU4jO7lcwPM5juC5_ZdWWOQtsg1g,5270
+gwtrigfind/core.py,sha256=tj-gKcuRLIOiUFsCprir19yD6WOS1Od3bXrC5kJ391Q,14864
+gwtrigfind/test_trigfind.py,sha256=L8EIEuTDXYr1B8NHQfKZadtaW86v2_JwklHW10Npo_M,9274
+gwtrigfind-0.8.3.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+gwtrigfind-0.8.3.dist-info/METADATA,sha256=bbTYHqBtJXkf5NZv-y3rGJbkoZ1Uor24uWnsm2s793w,2874
+gwtrigfind-0.8.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+gwtrigfind-0.8.3.dist-info/entry_points.txt,sha256=wr4436EUAuSqEGw4coPPpp_dl0M2lWQLAwFUfth9ego,51
+gwtrigfind-0.8.3.dist-info/top_level.txt,sha256=kjW9q3U42zPgJrQbG8_G6GqPZgrtS_bnb4x3DqPXDHk,11
+gwtrigfind-0.8.3.dist-info/RECORD,,
