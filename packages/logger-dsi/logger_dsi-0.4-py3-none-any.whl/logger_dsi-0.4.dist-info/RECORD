@@ -1,0 +1,12 @@
+logger_dsi/__init__.py,sha256=Ndt1eoajX6jW4oumLWAoibtWykHLhMHe7XmMj6_tVhU,249
+logger_dsi/client.py,sha256=BcF7Bu62QA5zRsbPkTZJVb5J3xbf89i1whgNS4IWgv0,1628
+logger_dsi/config.py,sha256=xymaL3WqkWU_NMgTnNWjZmaxK2_m1ZBQiGWHDKIj61M,288
+logger_dsi/exceptions.py,sha256=KD0JST-KumSF5TLPiRgJ5eNc_2vPIlJn_JhczO54MLo,349
+loki_client/__init__.py,sha256=uYuwSLPBzhgjXzk2O-2Zkic9oiaMJxn7SE40A5jDvDE,233
+loki_client/client.py,sha256=n5OMdvL4kdm3vfCCtkD70o-DGj7Jpy90vP0-45ROgpQ,1377
+loki_client/config.py,sha256=4xIjM7lVen78tedZgJPPpWwNWTUXQYgm-9Z_LenR0zg,204
+loki_client/exceptions.py,sha256=dRlhGSFXcnk8rvebZSgMpYW_Qh8NEHvV0NFgMxBWbR8,337
+logger_dsi-0.4.dist-info/METADATA,sha256=C2wdBf33JnhkVcXJJ84dOl2wDApd3TGTcaiYRXxjH2E,1400
+logger_dsi-0.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+logger_dsi-0.4.dist-info/top_level.txt,sha256=u2nYxqZ6ezefTlTMEZaMvPJPfPNRXAxn7YwyFw9NaJc,23
+logger_dsi-0.4.dist-info/RECORD,,
