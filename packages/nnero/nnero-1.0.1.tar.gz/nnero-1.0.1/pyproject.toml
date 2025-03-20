@@ -1,0 +1,40 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nnero"
+version = "1.0.1"
+description = "Neural-Network emulator for Reionization and Optical depth"
+readme = "README.md"
+authors = [{ name = "Gaétan Facchinetti", email = "gaetanfacc@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Operating System :: Unix",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+]
+keywords = ["cosmology", "machine learning", "reionization"]
+dependencies = [
+    "numpy>=1.16.5",
+    "scipy",
+    "torch",
+]
+requires-python = ">=3.11"
+
+[tool.setuptools]
+# ...
+# By default, include-package-data is true in pyproject.toml,
+# so you do NOT have to specify this line.
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/gaetanfacchinetti/NNERO"
