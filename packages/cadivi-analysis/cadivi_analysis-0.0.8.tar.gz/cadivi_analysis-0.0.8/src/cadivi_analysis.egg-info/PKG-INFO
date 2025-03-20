@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: cadivi-analysis
+Version: 0.0.8
+Summary: This package does amazing things.
+Home-page: http://github.com/chanelcolgate/smart-vision-cadivi
+Author: chanelcolgate
+Author-email: "chanelcolgate" <github@chanelcolgate.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: httpx
+Requires-Dist: pandas
+Requires-Dist: pypylon
+Requires-Dist: pydantic-settings
+Requires-Dist: kafka-python-ng
+Requires-Dist: requests
+Requires-Dist: imutils
+Requires-Dist: scikit-image
+
+# cadivi-analysis
+## Build
+```shell
+pyproject-build
+```
+
+## Run
+- Run kafka, zookeeper
+```shell
+$ python main.py
+```
