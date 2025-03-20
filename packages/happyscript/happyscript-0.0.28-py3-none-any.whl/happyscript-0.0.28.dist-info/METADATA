@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: happyscript
+Version: 0.0.28
+Summary: Framework for running scripts
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: wxpython
+
+
+More info coming soon...
