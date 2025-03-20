@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+nicegui_router/__init__.py
+nicegui_router/dynamic_router.py
+nicegui_router/logging.py
+nicegui_router/reactive.py
+nicegui_router/route_decorator.py
+nicegui_router/theme.py
+nicegui_router.egg-info/PKG-INFO
+nicegui_router.egg-info/SOURCES.txt
+nicegui_router.egg-info/dependency_links.txt
+nicegui_router.egg-info/requires.txt
+nicegui_router.egg-info/top_level.txt
