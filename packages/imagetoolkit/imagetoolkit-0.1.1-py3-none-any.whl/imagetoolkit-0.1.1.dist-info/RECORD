@@ -1,0 +1,16 @@
+imagetoolkit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imagetoolkit/addtext.py,sha256=i4QVVJWosvUWH_W475VqtbBr7HRgejK21r-JWcY-Okg,2757
+imagetoolkit/cli.py,sha256=zTqlwYaxCFJdYgkEwmleSfxcLhcpm3dX42g6LJz0hX4,5929
+imagetoolkit/color.py,sha256=tsLdDzVcUSaqdK_7gIuj34HP66lb99Y_hefCylrPMLk,3979
+imagetoolkit/compress.py,sha256=srqLsX8zjv7-NCeljWGmrX5h3ck-fZq9YKmfrdhutRQ,3148
+imagetoolkit/extension.py,sha256=QYpK4jLP4W57Ws8sR2WIwK2yJ_62aVN_-6KEenuZ63s,1647
+imagetoolkit/imagetoolkit.py,sha256=IhJC1_kKpWEbOjlJGTbfrTqylLPjuy1ewf2rezdU00Y,14770
+imagetoolkit/rescale.py,sha256=-vJoha2y0dTrXACJfOtiJvVABdvNrRAgjw5ZCGJ-wE0,4135
+imagetoolkit/utils.py,sha256=odWdcD7MRPO1OXiOKFIeBni2oOzyfXe20USxy4Uxpsg,4910
+imagetoolkit/variables.py,sha256=cWbdPl_QMcJBPcxKGzCSgk1TjNI-q2RUW7Y-eBNqZRY,2188
+imagetoolkit-0.1.1.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+imagetoolkit-0.1.1.dist-info/METADATA,sha256=bZtLrPlZD1gpsIYkN39xY8ZzNqDKzIzWa-SWXkVeOnk,6439
+imagetoolkit-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+imagetoolkit-0.1.1.dist-info/entry_points.txt,sha256=ZFYRhD92cTZg_l9gloM7gn_rSl9VuYC7WF7jOQnncmg,64
+imagetoolkit-0.1.1.dist-info/top_level.txt,sha256=VVoIEcV-Lq6brAMGp1jsAPERmKsyp0DfwhfSEX_4pyI,13
+imagetoolkit-0.1.1.dist-info/RECORD,,
