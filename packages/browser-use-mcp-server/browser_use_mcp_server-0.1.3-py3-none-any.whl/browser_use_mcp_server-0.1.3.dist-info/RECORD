@@ -1,0 +1,8 @@
+browser_use_mcp_server/__init__.py,sha256=MJk-WiDGj9OidWLekT2SoWSK1Lt9bZ3iPIQ3y-hy4vY,522
+browser_use_mcp_server/__main__.py,sha256=nBrzhHWzg-zs-5wunZAtm91z6KCBC3mNouSff0XbDYo,129
+browser_use_mcp_server/cli.py,sha256=ZGXxrgh0_kteBkwSlvLAH9-J5cv8__o9IuuQshJH5sQ,10983
+browser_use_mcp_server/server.py,sha256=AgrLtPDQs5mfxNxj7MQikVN1ZZJSnKs3V86rFy1PqFU,26885
+browser_use_mcp_server-0.1.3.dist-info/METADATA,sha256=je1IYm647JiUH85V6bzals-wjLMIGjUONl2KAgad8_k,2910
+browser_use_mcp_server-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+browser_use_mcp_server-0.1.3.dist-info/entry_points.txt,sha256=JoCtZ4VhCWcsYysIKbVtWkhpVCyEesQFkPHy8dBdeBg,74
+browser_use_mcp_server-0.1.3.dist-info/RECORD,,
