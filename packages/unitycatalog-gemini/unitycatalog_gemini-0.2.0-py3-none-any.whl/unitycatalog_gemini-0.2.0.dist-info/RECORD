@@ -1,0 +1,7 @@
+unitycatalog/ai/gemini/__init__.py,sha256=It0SNSBK7lwvKTQ6f5vmmgkGNi16oJpCHqn7d0cVAo0,74
+unitycatalog/ai/gemini/toolkit.py,sha256=QciXKCYQU9ct8Qv_phIr_9iiGt16PCrCnbZj7u9eXL0,7548
+unitycatalog/ai/gemini/utils.py,sha256=wpemH1oxg2PkEZ4DyjYe_FZd80WdATIfz45lf2yqugI,3062
+unitycatalog/ai/gemini/version.py,sha256=CpXi3jGlx23RvRyU7iytOMZrnspdWw4yofS8lpP1AJU,18
+unitycatalog_gemini-0.2.0.dist-info/METADATA,sha256=z8WGhV_sLHOMel8x6M9l9jVm8WiseVNRGb487D7b18g,6471
+unitycatalog_gemini-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+unitycatalog_gemini-0.2.0.dist-info/RECORD,,
