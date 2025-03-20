@@ -1,0 +1,10 @@
+spectralmatch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectralmatch/global_histogram_match.py,sha256=BamnRzZp9jdZ4Ui_xdY_P3EzriuIZlNbPkmr7vSjgAo,25755
+spectralmatch/handlers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectralmatch/local_histogram_match.py,sha256=BLvursDH4h8Nf6y23p7kMHUfjJ8QAkRgFjOoX5PI0-0,43913
+spectralmatch/utils.py,sha256=gqDWZ67Jp042qHttRs_xcuFL7pYfLwXfYk93eAPd-sg,2024
+spectralmatch-0.0.1.dist-info/LICENSE,sha256=jlFiLNOSd3_YHsdvtZpBFPElgeMeOBuf1ScDZEVLANI,1065
+spectralmatch-0.0.1.dist-info/METADATA,sha256=_A69iJiu-aKWimt9r0pNUcuQZVkzVVzCzCo1Bwhh8AM,6619
+spectralmatch-0.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+spectralmatch-0.0.1.dist-info/top_level.txt,sha256=Iyshke2EG9C2J1aoGkaYlVxUyCaTn12wwaHBfcFeqxA,14
+spectralmatch-0.0.1.dist-info/RECORD,,
