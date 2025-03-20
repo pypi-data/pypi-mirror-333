@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+superforecast/__init__.py
+superforecast/client.py
+superforecast.egg-info/PKG-INFO
+superforecast.egg-info/SOURCES.txt
+superforecast.egg-info/dependency_links.txt
+superforecast.egg-info/requires.txt
+superforecast.egg-info/top_level.txt
+tests/test_client.py
