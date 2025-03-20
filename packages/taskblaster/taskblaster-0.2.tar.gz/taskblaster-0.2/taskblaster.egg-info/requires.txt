@@ -1,0 +1,9 @@
+click>=8.0.0
+
+[dev]
+pytest
+
+[doc]
+sphinx
+sphinx_rtd_theme
+sphinx_click
