@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: byted_overpass_magellan_rag_common
+Version: 0.0.1
+Summary: A simple package named byted_overpass_magellan_rag_common
+Home-page: https://github.com/artifact/byted_overpass_magellan_rag_common.git
+Author: artifact
+Author-email: artifact@example.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
