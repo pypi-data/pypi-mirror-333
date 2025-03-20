@@ -1,0 +1,8 @@
+mcp_registry/__init__.py,sha256=WKhN5pNEoVqDlJmbE95Ajn4jIiQbt5MUC3I7VH2ahOs,338
+mcp_registry/cli.py,sha256=w8LjughZmI7E3kSq4hRf9sWiLslYjBpNW7s1m0G9GDo,20594
+mcp_registry/compound.py,sha256=yOBtBkB7EVuFzP7dRmLOzGLPCQsNzRoDSlLCF3SN__k,29339
+mcp_registry-0.3.3.dist-info/METADATA,sha256=vddu1EYqGG2moK8XGjLzR5TH2dhx1m-R3z4GATQQKH4,425
+mcp_registry-0.3.3.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+mcp_registry-0.3.3.dist-info/entry_points.txt,sha256=k56wgeQbswymuKmeieIYjijgemQ97wd3pWf-w5WepxU,54
+mcp_registry-0.3.3.dist-info/licenses/LICENSE,sha256=Vc39LnTnT7e0xqYTdhtobWPb7G19ZBgQfDxiFdqeEwU,10898
+mcp_registry-0.3.3.dist-info/RECORD,,
