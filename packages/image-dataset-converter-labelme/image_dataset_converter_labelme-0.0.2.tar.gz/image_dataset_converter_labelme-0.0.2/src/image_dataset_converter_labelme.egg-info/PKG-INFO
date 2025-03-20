@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: image-dataset-converter-labelme
+Version: 0.0.2
+Summary: image-dataset-converter plugins for the labelme annotation tool.
+Home-page: https://github.com/waikato-datamining/image-dataset-converter-labelme
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+License-File: LICENSE
+
+image-dataset-converter plugins for labelme (https://github.com/wkentaro/labelme).
+
+Supported formats: image classification, object detection, instance segmentation
+
+
+Changelog
+=========
+
+0.0.2 (2025-03-14)
+------------------
+
+- added support for placeholders: `from-labelme-ic`, `from-labelme-od`, `to-labelme-ic`, and `to-labelme-od`
+
+
+0.0.1 (2025-02-11)
+------------------
+
+- initial release
+
