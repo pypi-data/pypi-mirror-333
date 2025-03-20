@@ -1,0 +1,71 @@
+Metadata-Version: 2.3
+Name: latex-generator-itmo-kulyaskin
+Version: 0.1.0
+Summary: Простой генератор LaTeX
+License: MIT
+Author: Mikhail Kulyaskin
+Author-email: mihail.ru02@gmail.com
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Text Processing :: Markup :: LaTeX
+Project-URL: Repository, https://github.com/Mihail-Olegovich/PythonAdvanced
+Description-Content-Type: text/markdown
+
+# LaTeX Generator
+
+Простая библиотека для генерации LaTeX кода.
+
+## Установка
+
+```bash
+pip install latex-generator-itmo-kulyaskin
+```
+
+## Использование
+
+### Генерация таблиц
+
+```python
+from latex_generator import generate_table
+
+
+data = [
+    ["Имя", "Возраст", "Город"],
+    ["Иван", "25", "Москва"],
+    ["Мария", "30", "Санкт-Петербург"]
+]
+
+
+latex_table = generate_table(
+    data,
+    caption="Пример таблицы с данными пользователей",
+    label="tab:users"
+)
+
+print(latex_table)
+```
+
+### Генерация изображений
+
+```python
+from latex_generator import generate_image
+
+latex_image = generate_image(
+    "cat.png",
+    caption="Котик",
+    label="fig:cat",
+    width="0.8\\textwidth"
+)
+
+print(latex_image)
+```
