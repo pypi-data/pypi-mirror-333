@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Activity Management{% endblock %}
+
+{% block content %}
+<h3 class="mb-4">Activity Management</h3>
+
+<!-- Form to create an activity type-->
+<div class="card mb-4">
+    <div class="card-header">Activity types</div>
+    <div class="card-body">
+        {% if all_activities %}
+        <ul class="list-group">
+            {% for activity in all_activities %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>{{ activity.activity_type[:25] }} {% if activity.activity_type|length > 25 %}...{% endif %}</strong> - {{ activity.details[:95] }} {% if activity.activity_type|length > 95 %}...{% endif %}
+                </div>
+                <div>
+                    <button class="btn btn-danger btn-sm delete-btn" id="deleteBtn-{{ activity.id }}" 
+                    onmousedown="startHoldDelete({{ activity.id }}, 'activities')"
+                    onmouseup="cancelHoldDelete({{ activity.id }})"
+                    onmouseleave="cancelHoldDelete({{ activity.id }})">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    <a href="{{ url_for('activities_bp.edit_activity', activity_id=activity.id) }}" class="btn btn-warning btn-sm"> <i class="fa fa-pencil" aria-hidden="true"></i> </a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No activitiy types available.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div>
+            Create New Activity type
+        </div>
+
+        <div class="d-flex align-items-center">
+            <button id="generateActivityButton" class="btn btn-outline-dark" title="Ask to the LLM!">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+            </button>
+            <div id="generateResponse" style="margin-left: 1rem;"></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('activities_bp.manage_activities') }}">
+            <div class="mb-3">
+                <label for="activity_type" class="form-label">Activity Type</label>
+                <input class="form-control" id="activity_type" name="activity_type" rows="2" required></input>
+            </div>
+            <div class="mb-3">
+                <label for="details" class="form-label">Details</label>
+                <textarea class="form-control" id="details" name="details" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="user_profiles" class="form-label">Assigned User Profiles</label>
+                <select multiple class="form-control" id="user_profiles" name="user_profiles">
+                    {% for profile in all_user_profiles %}
+                        <option value="{{ profile.id }}">
+                            {{ profile.name }} ({{ profile.role }})
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Activity</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.getElementById('generateActivityButton').addEventListener('click', async () => {
+
+        if (document.getElementById('activity_type').value != '' && document.getElementById('details').value != '') {
+            alert('You need to leave at least one field on blank to generate a new activity type');
+            return;
+        }
+
+        const user_profile_id = document.getElementById('user_profiles').value;
+        if (user_profile_id == '') {
+            alert('You need to select a user profile to generate an activity type');
+            return;
+        }
+
+        const activity_type = document.getElementById('activity_type').value;
+        const details = document.getElementById('details').value;
+        
+        const response = await fetch('/ai/generate/activitytype', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                user_profile_id: user_profile_id,
+                activity_type: activity_type,
+                details: details
+            }),
+        });
+        const result = await response.json();
+
+        document.getElementById('generateResponse').textContent = "Activity type generated!" || result.error;
+
+        jsonResult = JSON.parse(result.message);
+
+        if (document.getElementById('activity_type').value == '') {
+            document.getElementById('activity_type').value = jsonResult.activity_type;
+        }
+        if (document.getElementById('details').value == '') {
+            document.getElementById('details').value = jsonResult.details;
+        }
+    });
+    
+</script>    
+{% endblock %}

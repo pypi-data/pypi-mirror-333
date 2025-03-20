@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Narrative{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">Edit Narrative Details</div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('narratives_bp.edit_narrative', narrative_id=narrative.id) }}">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{ narrative.title }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="objective" class="form-label">Objective</label>
+                <textarea class="form-control" id="objective" name="objective" rows="3" required>{{ narrative.objective }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="attacker_profile" class="form-label">Attacker Profile</label>
+                <textarea class="form-control" id="attacker_profile" name="attacker_profile" rows="2" required>{{ narrative.attacker_profile }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label for="deception_activities" class="form-label">Deception Activities</label>
+                <textarea class="form-control" id="deception_activities" name="deception_activities" rows="2" required>{{ narrative.deception_activities }}</textarea>
+            </div>
+        
+            <div class="mb-3">
+                <label for="percentage_of_similarity" class="form-label">Similarity (0 to 100)</label>
+                    <div class="card mb-3 custom-div">
+                        <div class="card-body p-4">
+                            <input type="range" class="form-range" id="percentage_of_similarity" name="percentage_of_similarity" min="0" max="100" step="1" value="{{ narrative.percentage_of_similarity }}" oninput="document.getElementById('dialerValue').innerText = this.value">
+                            <span id="dialerValue">{{ narrative.percentage_of_similarity }}</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="mb-3">
+                <label for="end_date" class="form-label">End Date</label>
+                <input type="date" class="form-control" id="end_date" name="end_date"  value="{{ narrative.end_date }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="user_profiles" class="form-label">Assigned User Profiles</label>
+                <select multiple class="form-control" id="user_profiles" name="user_profiles">
+                    {% for profile in all_user_profiles %}
+                        <option value="{{ profile.id }}" {% if profile in narrative.user_profiles %}selected{% endif %}>
+                            {{ profile.name }} ({{ profile.role }})
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Save Changes</button>
+            <a href="{{ url_for('narratives_bp.manage_narratives') }}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+
+<style>
+    .custom-div {
+      background-color: #f0f8ffa6; /* AliceBlue */
+    }
+
+    /* For Chrome, Safari, Opera, and Edge  */
+    input[type="range"]::-webkit-slider-runnable-track {
+        background: #212529;
+        height: 0.5rem;
+    }
+
+    /* For Firefox */
+    input[type="range"]::-moz-range-track {
+        background: #212529;
+        height: 0.5rem;
+    }
+
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+</script>
+
+{% endblock %}

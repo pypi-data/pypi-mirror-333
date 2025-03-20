@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}Narrative Management{% endblock %}
+
+{% block content %}
+<h3 class="mb-4">Narratives management</h3>
+
+<!-- Form to create a narrative -->
+<div class="card mb-4">
+    <div class="card-header">Narratives</div>
+    <div class="card-body">
+        {% if all_narratives %}
+        <ul class="list-group">
+            {% for narrative in all_narratives %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="narrative-title">
+                    <strong>{{ narrative.id }} - {{ narrative.title[:50] }}{% if narrative.title|length > 50 %}...{% endif %}</strong> - {{ narrative.objective[:45] }}{% if narrative.objective|length > 45 %}...{% endif %}
+                    {% if narrative.is_running %}
+                    <span class="badge bg-success">Running</span>
+                    {% else %}
+                        <span class="badge bg-secondary">Stopped</span>
+                    {% endif %}
+                </div>
+                <div>
+                    <button class="btn btn-danger btn-sm delete-btn" id="deleteBtn-{{ narrative.id }}" 
+                            onmousedown="startHoldDelete({{ narrative.id }},'narratives')"
+                            onmouseup="cancelHoldDelete({{ narrative.id }})"
+                            onmouseleave="cancelHoldDelete({{ narrative.id }})">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    <a href="{{ url_for('narrative_review_bp.review_narrative', narrative_id=narrative.id) }}" class="btn btn-info btn-sm"> <i class="fa fa-eye" aria-hidden="true"></i> </a>
+                    <a href="{{ url_for('narratives_bp.edit_narrative', narrative_id=narrative.id) }}" class="btn btn-warning btn-sm"> <i class="fa fa-pencil" aria-hidden="true"></i> </a>
+                    {% if narrative.is_running %}
+                    <button class="btn btn-danger btn-sm" onclick="stopNarrative({{ narrative.id }})"> <i class="fa fa-stop-circle" aria-hidden="true"></i></button>
+                    {% else %}
+                    <button class="btn btn-success btn-sm" onclick="startNarrative({{ narrative.id }})"> <i class="fa fa-play" aria-hidden="true"></i> </button>
+                    {% endif %}
+                </div>
+            </li>
+            
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No narratives available.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div>
+            Create New Narrative
+        </div>
+
+        <div class="d-flex align-items-center">
+            <button id="generateNarrativeButton" class="btn btn-outline-dark" title="Ask to the LLM!">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+            </button>
+            <div id="generateResponse" style="margin-left: 1rem;"></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('narratives_bp.manage_narratives') }}">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="objective" class="form-label">Objective</label>
+                <textarea class="form-control" id="objective" name="objective" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="attacker_profile" class="form-label">Attacker Profile</label>
+                <textarea class="form-control" id="attacker_profile" name="attacker_profile" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="deception_activities" class="form-label">Deception Activities</label>
+                <textarea class="form-control" id="deception_activities" name="deception_activities" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="percentage_of_similarity" class="form-label">Similarity (0 to 100)</label>
+                <div class="card mb-3 custom-div">
+                    <div class="card-body p-4">
+                    <input type="range" class="form-range" id="percentage_of_similarity" name="percentage_of_similarity" min="0" max="100" step="1" value="100" oninput="document.getElementById('dialerValue').innerText = this.value">
+                    <span id="dialerValue">100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="end_date" class="form-label">End Date</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" required>
+            </div>
+            <div class="mb-3">
+                <label for="user_profiles" class="form-label">Assigned User Profiles</label>
+                <select multiple class="form-control" id="user_profiles" name="user_profiles">
+                    {% for profile in all_user_profiles %}
+                        <option value="{{ profile.id }}">
+                            {{ profile.name }} ({{ profile.role }})
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Narrative</button>
+        </form>
+    </div>
+</div>
+
+<!-- Small Modal for Messages -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <p style="margin-top:15px; font-size: 20px;" id="modalMessage"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-div {
+      background-color: #f0f8ffa6; /* AliceBlue */
+    }
+
+    /* For Chrome, Safari, Opera, and Edge  */
+    input[type="range"]::-webkit-slider-runnable-track {
+        background: #212529;
+        height: 0.5rem;
+    }
+
+    /* For Firefox */
+    input[type="range"]::-moz-range-track {
+        background: #212529;
+        height: 0.5rem;
+    }
+
+    .modal-content {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+    // Function to generate a narrative
+    document.getElementById('generateNarrativeButton').addEventListener('click', async () => {
+        if (document.getElementById('title').value != '' && document.getElementById('objective').value != '' && document.getElementById('attacker_profile').value != '' && document.getElementById('deception_activities').value != '') {
+            showModalMessage("You need to leave at least one field on blank to generate a narrative");
+            return;
+        }
+
+        const title = document.getElementById('title').value;
+        const objective = document.getElementById('objective').value;
+        const attackerProfile = document.getElementById('attacker_profile').value;
+        const deceptionActivities = document.getElementById('deception_activities').value;
+        
+        const response = await fetch('/ai/generate/narrative', { 
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title: title,
+                objective: objective,
+                attacker_profile: attackerProfile,
+                deception_activities: deceptionActivities,
+            })
+        });
+        const result = await response.json();
+
+        document.getElementById('generateResponse').textContent = "Narrative generated!" || result.error;
+
+        // Convert to json and extract data from the result and fill the form
+        jsonResult = JSON.parse(result.message);
+        console.log(jsonResult);
+        if (document.getElementById('title').value == '') {
+            document.getElementById('title').value = jsonResult.title || '';
+        }
+        if (document.getElementById('objective').value == '') {
+            document.getElementById('objective').value = jsonResult.objective || '';
+        }
+        if (document.getElementById('attacker_profile').value == '') {
+            document.getElementById('attacker_profile').value = jsonResult.attacker_profile || '';
+        }
+        if (document.getElementById('deception_activities').value == '') {
+            document.getElementById('deception_activities').value = jsonResult.deception_activities || '';
+        }
+    });
+    
+    function startNarrative(narrativeId) {
+        fetch(`/narratives/start/${narrativeId}`, { method: "POST" })
+            .then(response => response.json())
+            .then(data => showModalMessage(data.message))
+            .then(() => new Promise(resolve => setTimeout(resolve, 3000)))
+            .then(() => location.reload())
+            .catch(error => showModalMessage("Error starting narrative: " + error));
+    }
+
+    function stopNarrative(narrativeId) {
+        fetch(`/narratives/stop/${narrativeId}`, { method: "POST" })
+            .then(response => response.json())
+            .then(data => showModalMessage(data.message))
+            .then(() => new Promise(resolve => setTimeout(resolve, 3000)))
+            .then(() => location.reload())
+            .catch(error => showModalMessage("Error stopping narrative: " + error));
+    }
+    
+    function showModalMessage(message) {
+        document.getElementById("modalMessage").textContent = message;
+        let modal = new bootstrap.Modal(document.getElementById("messageModal"));
+        modal.show();
+        setTimeout(() => modal.hide(), 3000);
+    }
+</script>    
+{% endblock %}
