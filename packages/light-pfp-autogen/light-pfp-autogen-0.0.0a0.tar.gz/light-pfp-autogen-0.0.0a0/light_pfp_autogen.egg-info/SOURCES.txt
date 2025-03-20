@@ -1,0 +1,4 @@
+light_pfp_autogen.egg-info/PKG-INFO
+light_pfp_autogen.egg-info/SOURCES.txt
+light_pfp_autogen.egg-info/dependency_links.txt
+light_pfp_autogen.egg-info/top_level.txt
