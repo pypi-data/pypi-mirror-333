@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling", "requests", "pydantic", "aiohttp", "asyncio"]
+build-backend = "hatchling.build"
+
+[project]
+name = "airobot-api-client"
+dynamic = ["version"]
+description = 'An API client for the Airobot Thermostat local API'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Aleksander Parelo", email = "aleksander@parelo.ee" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/aparelo/airobot-api-client#readme"
+Issues = "https://github.com/aparelo/airobot-api-client/issues"
+Source = "https://github.com/aparelo/airobot-api-client"
+
+[tool.hatch.version]
+path = "src/airobot_api_client/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/airobot_api_client tests}"
+
+[tool.coverage.run]
+source_pkgs = ["airobot_api_client", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/airobot_api_client/__about__.py",
+]
+
+[tool.coverage.paths]
+airobot_api_client = ["src/airobot_api_client", "*/airobot-api-client/src/airobot_api_client"]
+tests = ["tests", "*/airobot-api-client/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
