@@ -1,0 +1,14 @@
+talklib/__init__.py,sha256=MWm6Rrb5MqEwbIzi5C6ldmUE1uRORUXJQ4GPj5lkNv4,129
+talklib/cli.py,sha256=KQyrtMA6DBaWHbT13bRiXvcH2t3gCHZU2q56zp3g9rs,4592
+talklib/ev.py,sha256=g1H9j1p_61Zj-iH6-8ao8rR4xPgqtWjSXsUrnNwTgL8,3881
+talklib/ffmpeg.py,sha256=98aJa6z1NvFrlIXNqDafDfSHb-aqqx0JmEZA34q_ckM,2526
+talklib/notify.py,sha256=Of-OTAMQCQ5DYxZgqTtuHJIWX562Nd1x6yN1voClawE,3582
+talklib/pod.py,sha256=NtSwZKQzipLTERDaZ61wT4D81LIgf34GtltI79VmRgw,24075
+talklib/show.py,sha256=Fsw-p-uCPWehkrs7KPYgZ47BIlmzDMLoWEJhkacO3IQ,22610
+talklib/utils.py,sha256=RKxW5un9Fgimzn2Pe9_4U19L1OSSu0GrZARHPCzPv0M,1903
+talklib-3.2.1.dist-info/LICENSE.txt,sha256=GEfg4GmBQu1DR8FEGp-oHI-93USx2LvNXjZH-ZF1nX8,1035
+talklib-3.2.1.dist-info/METADATA,sha256=oLXr1Sdol2WAkIyhLmnAPT0n3BbJEEVXVFVddFhElLs,17617
+talklib-3.2.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+talklib-3.2.1.dist-info/entry_points.txt,sha256=zol8YoDxfE9iWGdXU7Mz7dLCud06XfAjl02HQpCbsQQ,45
+talklib-3.2.1.dist-info/top_level.txt,sha256=SMN4lAPlqZWBGBArh8QhGvcv9q1lVHVkiDwWBySGXuE,8
+talklib-3.2.1.dist-info/RECORD,,
