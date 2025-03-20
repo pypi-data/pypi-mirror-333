@@ -1,0 +1,2 @@
+# bytedoffline_data - A simple package
+__version__ = "0.0.1"
