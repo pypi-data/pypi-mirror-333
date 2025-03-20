@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: ledger-analytics
+Version: 0.0.3
+Summary: The Python interface to Ledger Investing's analytics infrastructure
+Project-URL: Homepage, https://github.com/LedgerInvesting
+Author: Ledger Investing
+Requires-Python: >3.10
+Requires-Dist: bermuda-ledger
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: iniconfig==2.0.0; extra == 'dev'
+Requires-Dist: isort==6.0.1; extra == 'dev'
+Requires-Dist: packaging==24.2; extra == 'dev'
+Requires-Dist: pluggy==1.5.0; extra == 'dev'
+Requires-Dist: pytest==8.3.5; extra == 'dev'
+Requires-Dist: ruff==0.9.10; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# LedgerAnalytics Python interface
+
+LedgerAnalytics is the upcoming Python interface to [Legder Investing](ledgerinvesting.com)'s actuarial data science modeling infrastructure.
