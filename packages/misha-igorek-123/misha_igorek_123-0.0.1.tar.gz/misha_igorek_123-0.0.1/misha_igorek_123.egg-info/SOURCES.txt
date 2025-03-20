@@ -1,0 +1,8 @@
+setup.py
+misha_igorek_123/__init__.py
+misha_igorek_123/mmm.py
+misha_igorek_123/module1.py
+misha_igorek_123.egg-info/PKG-INFO
+misha_igorek_123.egg-info/SOURCES.txt
+misha_igorek_123.egg-info/dependency_links.txt
+misha_igorek_123.egg-info/top_level.txt

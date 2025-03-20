@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: misha_igorek_123
+Version: 0.0.1
+Summary: My Package
+Author: Misha Pavelyev
+Author-email: mishapavelyev141@mail.ru
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
