@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "atcp"
+version = "1.0.0"
+authors = []
+description = "An ATCP Protocol"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+
+[tool.setuptools]
+license-files = []
+
+[project.urls]
+Homepage = "https://github.com/wer310/atcp"
+Issues = "https://github.com/wer310/atcp/issues"
