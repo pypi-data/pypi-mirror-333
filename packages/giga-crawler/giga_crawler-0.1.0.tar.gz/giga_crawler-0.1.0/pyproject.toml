@@ -1,0 +1,30 @@
+[project]
+name = "giga_crawler"
+version = "0.1.0"
+description = "A tool for parsing Git repositories and markdown files."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=1.10",
+    "GitPython>=3.1.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool]
+rye = { dev-dependencies = [
+    "pytest>=8.3.4",
+    "ruff>=0.9.8",
+    "coverage>=7.6.12",
+    "codespell>=2.4.1",
+    "pytest-cov>=6.0.0",
+    "pydantic-settings>=2.8.1",
+] }
+
+[tool.hatch.build.targets.wheel]
+packages = ["crawler"]
+
+[project.scripts]
+mdcrawler = "crawler.main:main"
