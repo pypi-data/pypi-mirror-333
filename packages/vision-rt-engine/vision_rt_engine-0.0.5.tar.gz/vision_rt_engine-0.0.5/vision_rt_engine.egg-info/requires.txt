@@ -1,0 +1,14 @@
+igniter>=1.0.6
+matplotlib
+numpy
+opencv-python>=4.4
+pillow
+pytest
+torch>=2.0
+torchvision
+tqdm
+
+[dev]
+jupyterlab
+
+[full]
