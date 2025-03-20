@@ -1,0 +1,5 @@
+[console_scripts]
+flask-gen = flask_gen.cli:cli
+
+[flask.commands]
+gen = flask_gen.commands:gen_cli

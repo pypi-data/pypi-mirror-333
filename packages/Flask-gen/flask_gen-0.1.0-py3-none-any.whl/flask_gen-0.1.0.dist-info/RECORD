@@ -1,0 +1,16 @@
+flask_gen/__init__.py,sha256=YTV54RNtYvndzz8HND5Qp8loMf9A19J1vwN_rBn3j-c,25
+flask_gen/__main__.py,sha256=ENvEdNHgxGBMFVv4zckk_1S7aPrenRpOS_OXNKTGadQ,94
+flask_gen/cli.py,sha256=YwY3ILe5Nrml9BSTT5NYZxsyZDTgY9io4lg3XR446BI,1199
+flask_gen/commands.py,sha256=EFAvTXa21-PviiiXuZxPULwEUVZ5Apt-QKzweE00dio,795
+flask_gen/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_gen/src/app_creator.py,sha256=5FoZ8lBje0L5PUiP3f9Ykh1IGVgVIpggPlWc-dEWD58,3927
+flask_gen/src/project_creator.py,sha256=2qE6G9AI9x1HSl9mACudnp5GL3y9jSftwQ0KSIpglbY,7359
+test/__init__.py,sha256=RCtedlGr9zJG2BRnqhh-FAtFlK8NaYPUwOQLN1E-abs,371
+test/test_app_creator.py,sha256=4XbVNlDB_2KkXIjFhEcF0AzWaGgBva-w7u-nINeeZ1k,4359
+test/test_project_creator.py,sha256=oiTW71ihhhTpoh_m6TLQ1lz4OnwbmDxUF1ZPawwFBRs,6700
+flask_gen-0.1.0.dist-info/LICENSE,sha256=fWv44mkV6KtfIY9_YxFVJ8wGEFV5pIVDiVOSGdXzF9g,1097
+flask_gen-0.1.0.dist-info/METADATA,sha256=lXzPvtYMd9P9WHpD3wfKeb9dw10xxMi-e6uG_CziqdA,5804
+flask_gen-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+flask_gen-0.1.0.dist-info/entry_points.txt,sha256=NkZAxwBmUscLwBSAJ85CJyAHErIq1RhBVrGhoTnETGU,99
+flask_gen-0.1.0.dist-info/top_level.txt,sha256=u-KNW2y-fGW4g0VZXJ29ah-9uzV_XFwl2D7d_iyOG3E,15
+flask_gen-0.1.0.dist-info/RECORD,,
