@@ -1,0 +1,3 @@
+[console_scripts]
+last-run = cli.last_run:main
+ppg = cli.ppg:cli
