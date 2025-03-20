@@ -1,0 +1,12 @@
+sceneprogdatasets/__init__.py,sha256=3h2hnqfW1B4zavgMHHLTzOhwq0HyPocWs9vbKBpK0eo,277
+sceneprogdatasets/retriever.py,sha256=GcTiBD_SL9Tb_bu5bhdg-gD1hEE52FeABsRRLohD24Q,2794
+sceneprogdatasets/HSSD/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sceneprogdatasets/HSSD/hssd.py,sha256=R5GqBjlRNPJw609ArhbgInpnaMVGFDPQ_PFuDIEm2DU,5921
+sceneprogdatasets/future/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sceneprogdatasets/future/future.py,sha256=zyoTpwTJA9z3O2d9DFuRLLYp_tqUYfZC9Bvr903yVbk,6000
+sceneprogdatasets/objaverse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sceneprogdatasets/objaverse/objaverse.py,sha256=_n-fuqstYpjn6ULOsuiQIratBaaW0ygfZ1yMuvP7-tg,2487
+sceneprogdatasets-0.1.5.dist-info/METADATA,sha256=1degOtCqV5iPqeioUXmRfh0W_YNl_syqTyN15ObMCfw,1437
+sceneprogdatasets-0.1.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sceneprogdatasets-0.1.5.dist-info/top_level.txt,sha256=CZ6wb8YRiaRn5IYn5Yqs43InVGUUbn5ab0mdzOM0AjU,18
+sceneprogdatasets-0.1.5.dist-info/RECORD,,
