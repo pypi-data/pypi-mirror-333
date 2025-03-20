@@ -1,0 +1,9 @@
+ gitinsight/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ gitinsight/analyzer.py,sha256=N_YxD0we6fyEbQXoQpa_kyWXfTN4xW8crmOV0BuVCvs,1582
+ gitinsight/cli.py,sha256=t-73cFA415916KZ4LMREYYl-nQZMB0ZLL4ICxcpqZ1I,1409
+ gitinsight/utils.py,sha256=G2cMgeeVGHVcmSwLJ8SaXQe2YPR29df6BODzoGaIy9I,283
+gitinsight-0.1.dist-info/METADATA,sha256=RoGmqTQnBaASsbcbwmKyb-pS6G7ab9D9YVMMYCX6TC8,1628
+gitinsight-0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+gitinsight-0.1.dist-info/entry_points.txt,sha256=npGJoV5PSMJaJEJEopT9zwm94LgA7VNzlSzcYpo6DSU,54
+gitinsight-0.1.dist-info/top_level.txt,sha256=Ytv9fMhrDobwxY3KdS2Bij0avYgZ1U2MZS8j4oyEVQE,12
+gitinsight-0.1.dist-info/RECORD,,
