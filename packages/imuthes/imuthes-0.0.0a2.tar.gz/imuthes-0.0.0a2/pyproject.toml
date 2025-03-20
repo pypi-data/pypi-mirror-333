@@ -1,0 +1,63 @@
+[project]
+name = "imuthes"
+version = "0.0.0a2"
+description = "Several Tools"
+authors = [
+    { name = "Bernhard Radermacher", email = "bernhard.radermacher@netlink-consulting.com" }
+]
+readme = "README.md"
+repository = "https://gitlab.com/imuthes/imuthes"
+packages = [{ include = "imuthes" }]
+classifiers = [
+    "Topic :: Software Development",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Topic :: Utilities"
+]
+
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "hakisto (>=0.3.4a1,<0.4.0)",
+    "setuptools (>=76.0.0,<77.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+imuthes = "imuthes.cli:main"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^8.2.3"
+sphinx-rtd-theme = "^3.0.2"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+pytest = "^8.3.5"
+pytest-cov = "^6.0.0"
+ruff = "^0.9.10"
+
+[tool.black]
+line-length = 120
+target-version = ['py313']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 120
+target-version = 'py313'
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    'ignore:Deprecated call to `pkg_resources.declare_namespace:DeprecationWarning',
+    'ignore:pkg_resources is deprecated as an API:DeprecationWarning',
+]
+addopts = "--cov=imuthes --cov-report html:__coverage"
