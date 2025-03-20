@@ -1,0 +1,7 @@
+pyserial<4,>=3.5
+
+[dev]
+ELM327-emulator
+
+[test]
+pytest
