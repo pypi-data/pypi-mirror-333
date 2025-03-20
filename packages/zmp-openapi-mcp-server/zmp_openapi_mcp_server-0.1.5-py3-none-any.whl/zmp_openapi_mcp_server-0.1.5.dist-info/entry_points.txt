@@ -1,0 +1,3 @@
+[console_scripts]
+zmp-openapi-mcp-server=zmp_openapi_mcp_server:main
+
