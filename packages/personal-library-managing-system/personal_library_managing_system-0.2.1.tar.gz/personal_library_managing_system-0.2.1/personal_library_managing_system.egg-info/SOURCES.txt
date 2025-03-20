@@ -1,0 +1,9 @@
+README.md
+main.py
+pyproject.toml
+personal_library_managing_system.egg-info/PKG-INFO
+personal_library_managing_system.egg-info/SOURCES.txt
+personal_library_managing_system.egg-info/dependency_links.txt
+personal_library_managing_system.egg-info/entry_points.txt
+personal_library_managing_system.egg-info/requires.txt
+personal_library_managing_system.egg-info/top_level.txt

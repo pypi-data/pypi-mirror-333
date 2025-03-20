@@ -1,0 +1,14 @@
+[project]
+name = "personal-library-managing-system"
+version = "0.2.1"
+description = "A CLI-based personal library manager"
+authors = [{name = "Syeda Darakhshan", email = "darakhshanimranid@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "inquirer>=3.4.0",
+    "mysql-connector-python>=9.2.0",
+]
+[project.scripts]
+lms = "library_manager.main:main" 
