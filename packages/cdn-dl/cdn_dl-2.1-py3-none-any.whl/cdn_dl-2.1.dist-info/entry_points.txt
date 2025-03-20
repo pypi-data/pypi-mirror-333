@@ -1,0 +1,3 @@
+[console_scripts]
+cdn-dl = cdndl.main:main
+cdn-get = cdndl.main:get_cdn
