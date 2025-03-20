@@ -1,0 +1,2 @@
+[console_scripts]
+build-telegram-db = telegram_export_explorer:cli_build_db
