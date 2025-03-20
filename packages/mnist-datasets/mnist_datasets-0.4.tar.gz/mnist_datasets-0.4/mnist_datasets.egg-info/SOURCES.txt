@@ -1,0 +1,9 @@
+LICENSE
+README.md
+loader.py
+setup.py
+mnist_datasets.egg-info/PKG-INFO
+mnist_datasets.egg-info/SOURCES.txt
+mnist_datasets.egg-info/dependency_links.txt
+mnist_datasets.egg-info/requires.txt
+mnist_datasets.egg-info/top_level.txt
