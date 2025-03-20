@@ -1,0 +1,47 @@
+Metadata-Version: 2.2
+Name: taskblaster
+Version: 0.2
+Summary: Light-weight computational workflow manager
+Project-URL: documentation, https://taskblaster.readthedocs.io/
+Project-URL: repository, https://gitlab.com/taskblaster/taskblaster.git
+Project-URL: issues, https://gitlab.com/taskblaster/taskblaster/issues
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Environment :: Console
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: click>=8.0.0
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: sphinx_rtd_theme; extra == "doc"
+Requires-Dist: sphinx_click; extra == "doc"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+Taskblaster
+===========
+
+Taskblaster is a Python utility for executing high-throughput
+computational workflows.
+
+Links:
+
+ * Documentation: https://taskblaster.readthedocs.io/
+ * Releases: https://pypi.org/project/taskblaster/
+ * Chat: https://app.element.io/#/room/#taskblaster:matrix.org
+ * Development: https://gitlab.com/taskblaster/taskblaster
+
+Installation
+------------
+
+To install latest release of Taskblaster, use::
+
+  pip install taskblaster
+
+License
+-------
+
+Copyright Taskblaster developers, 2022.
+
+This project is released under GNU GPLv3+, see the LICENSE file.
