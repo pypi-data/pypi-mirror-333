@@ -1,0 +1,2 @@
+[console_scripts]
+docker-scry = docker_scry.__main__:main
