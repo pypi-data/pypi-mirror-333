@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segyrecover"
+version = "0.9.0"  
+description = "A tool for recovering and working with SEGY geophysical data files"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+dependencies = [
+    "PySide6",
+    "matplotlib",
+    "numpy",
+    "opencv-python",
+    "scipy",
+    "seisio",
+    "appdirs",
+    "setuptools",  # Added setuptools for pkg_resources
+]
+
+[project.scripts]
+segyrecover = "segyrecover.__main__:main"
+
+[tool.setuptools]
+packages = ["segyrecover", "segyrecover.ui", "segyrecover.core", "segyrecover.utils"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"segyrecover" = ["examples/**/*"]
+"segyrecover.ui" = ["theme.qss"]  # Include the theme.qss file
+
+# Include example files that resource_utils.py accesses
+[tool.setuptools.data-files]
+"segyrecover/examples/IMAGES" = ["examples/IMAGES/*"]
+"segyrecover/examples/GEOMETRY" = ["examples/GEOMETRY/*"]
+"segyrecover/examples/PARAMETERS" = ["examples/PARAMETERS/*"]
+

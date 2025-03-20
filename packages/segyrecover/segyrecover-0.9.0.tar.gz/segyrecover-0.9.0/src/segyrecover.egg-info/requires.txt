@@ -1,0 +1,8 @@
+PySide6
+matplotlib
+numpy
+opencv-python
+scipy
+seisio
+appdirs
+setuptools

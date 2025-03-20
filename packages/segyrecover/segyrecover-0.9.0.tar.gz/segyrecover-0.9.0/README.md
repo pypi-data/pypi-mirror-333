@@ -1,0 +1,357 @@
+# SEGYRecover
+
+A Python tool for digitizing scanned seismic sections and converting them to standard SEGY format. SEGYRecover automatically detects trace lines and timelines, extracts amplitude information, and produces usable geophysical data files for modern interpretation software.
+
+[![DOI](https://zenodo.org/badge/DOI/zenodo.xxxx.svg)](https://doi.org/10.5281/zenodo.xxxx)
+[![PyPI version](https://badge.fury.io/py/segyrecover.svg)](https://badge.fury.io/py/segyrecover)
+[![GitHub](https://img.shields.io/github/license/a-pertuz/segyrecover)](https://github.com/a-pertuz/segyrecover)
+
+## Features
+
+- [Add your key features here]
+
+## Installation
+
+### For Windows Users (Recommended for beginners)
+
+1. **Install Python** (if not already installed):
+   - Download Python from [python.org](https://www.python.org/downloads/windows/)
+   - During installation, make sure to check "Add Python to PATH"
+   - Click "Install Now" and wait for installation to complete
+
+2. **Install SEGYRecover**:
+   - Open Command Prompt (search for "cmd" in Windows search)
+   - Type the following command and press Enter:
+   ```
+   python -m pip install git+https://github.com/a-pertuz/segyrecover.git
+   ```
+
+3. **Launch the program**:
+   - After installation, simply type:
+   ```
+   segyrecover
+   ```
+   - Or find "SEGYRecover" in your Start Menu
+
+### From PyPI
+```bash
+pip install segyrecover
+```
+
+### From Source
+```bash
+git clone https://github.com/a-pertuz/segyrecover.git
+cd segyrecover
+pip install -e .
+```
+
+## Usage
+
+```python
+# Add usage examples here
+```
+
+### Run as installed package
+```bash
+segyrecover
+```
+
+### Run from source
+```bash
+python -m segyrecover
+```
+
+
+## Citation
+
+If you use this software in your research, please cite it as:
+
+```
+...
+```
+
+## File Structure
+
+SEGYRecover uses the following folder structure:
+
+```
+segyrecover_sa/
+├── SR.py                 # Main application file
+├── IMAGES/               # Store input seismic images
+├── GEOMETRY/             # Store .geometry files with trace coordinates
+├── ROI/                  # Store region of interest points
+├── PARAMETERS/           # Store processing parameters
+└── SEGY/                 # Store output SEGY files
+```
+
+The application automatically creates these folders if they don't exist.
+
+## Quick Start
+
+1. Run `segyrecover`
+2. Click "Load Image" and select a seismic image file
+3. Click "Parameters" to set processing parameters
+4. Click "Begin Digitization" and select ROI points
+5. Review the timeline and baseline detection results
+6. Wait for processing to complete
+7. Examine the resulting SEGY file and its frequency sprectrum
+
+## Detailed Tutorial
+
+### Step 1: Loading an Image
+
+1. Launch SEGYRecover by running `python segyrecover`
+2. Click the "Load Image" button
+3. Select your seismic image file (supported formats: TIF, JPG, PNG)
+4. Two windows will appear:
+   - **Seismic Section Image**: Displays the loaded image
+   - **Seismic Line Location**: Shows the geometry data if available
+
+**Note**: SEGYRecover looks for a corresponding geometry file in the GEOMETRY folder. The geometry file should have the same base name as your image with a .geometry extension.
+
+#### Geometry File Format
+
+The geometry file should contain CDP (Common Depth Point) numbers and their corresponding X,Y coordinates in UTM format. The first and last CDP point for a seismic lines are needed in order to have a georeferenced SEGY file.
+```
+CDP_NUMBER X_COORDINATE Y_COORDINATE
+```
+For example:
+```
+100 500000.0 4500000.0
+101 500025.0 4500020.0
+102 500050.0 4500040.0
+```
+
+### Step 2: Setting Parameters
+
+1. Click the "Parameters" button to open the parameter dialog
+2. Set the following parameters:
+
+#### ROI Points
+These define the mapping between image coordinates and seismic trace/time coordinates:
+- **P1 (Top Left)**: Set Trace number and TWT (Two-Way Time) value
+- **P2 (Top Right)**: Set Trace number and TWT value
+- **P3 (Bottom Left)**: Set Trace number and TWT value
+
+For example, if your seismic image shows:
+- Top left (P1): Trace 100 at 0 ms
+- Top right (P2): Trace 500 at 0 ms
+- Bottom left (P3): Trace 100 at 3000 ms
+
+This establishes a grid where:
+- The horizontal axis spans from trace 100 to 500
+- The vertical axis represents time from 0 to 3000 milliseconds
+- The software will calculate trace spacing and time increments accordingly
+
+**Note**: The program can handle TWT values above datum as negative values (e.g -200 ms) but it won't be saved as such in the SEGY files to avoid post-processing errors. 
+
+#### Acquisition Parameters
+- **Sample Rate (ms)**: Time interval between samples (e.g., 1, 2, or 4 ms)
+- **Frequency Band (Hz)**: Four corners of the bandpass filter (F1, F2, F3, F4)
+  - F1: Low cut-off frequency
+  - F2: Low pass frequency
+  - F3: High pass frequency
+  - F4: High cut-off frequency
+
+Example values:
+```
+F1=8, F2=12, F3=60, F4=80  # For vintage seismic data
+F1=3, F2=5, F3=80, F4=100  # For modern broadband data
+```
+
+#### Detection Parameters
+- **TLT (Traceline Thickness)**: Width of vertical trace lines in pixels
+- **HLT (Timeline Thickness)**: Width of horizontal time lines in pixels
+
+#### Advance Detection Parameters. 
+**Leave default values unless you want some experimentation**
+- **HE (Horizontal Erode)**: Erosion size for horizontal features. Default value should efficiently issolate traces but some experimentation could be needed in certain seismic sections.
+- **BDB (Baseline Detection Beginning)**: Starting row for baseline detection. Defines the upper boundary (in pixels from top) where the algorithm begins searching for trace baselines.
+- **BDE (Baseline Detection End)**: Ending row for baseline detection. Defines the lower boundary where the algorithm stops searching for baselines. Set this to avoid noisy bottom areas.
+- **BFT (Baseline Filter Threshold)**: Threshold percentage for filtering close baselines. Higher values (e.g., 90%) result in more strict baseline filtering.
+
+3. Click "Accept" to save parameters
+
+**Pro Tip**: Use the following rules of thumb for initial parameter settings:
+- **TLT**: Typically 1 pixel unless for high resolution images with broad traces.
+- **HLT**: Typically 4-8 pixels for standard timeline thickness
+- **HE**: Around 20-100 depending on image quality 
+- **BDB**: Set to approximately 10-20 pixels to remove residual borders
+- **BDE**: Set to approximately 100-300 to account for the part where empty traces are shown. Tipically those above datum.
+- **BFT**: Typically 80-90%, lower values allow might allow duplicates.
+
+### Step 3: Selecting Region of Interest
+
+1. Click "Begin Digitization" to start the ROI selection process
+2. A window will appear showing your seismic image
+3. Use the navigation toolbar to zoom in for accurate point selection
+4. **Right-click** to select three corner points in this order:
+   - Point 1: Top-left corner
+   - Point 2: Top-right corner
+   - Point 3: Bottom-left corner
+5. The fourth corner will be calculated automatically
+6. Confirm each point placement in the dialog
+7. After all points are selected, click "Accept"
+8. Confirm the ROI selection in the final dialog
+
+**Best Practices**:
+- Zoom in to select points precisely using the magnifier button
+- Reset zoom by clicking on the home button
+
+### Step 4: Processing
+
+After confirming the ROI, SEGYRecover performs these processing steps automatically:
+
+1. **Timeline Detection and Removal**
+   - Detects horizontal timeline marks
+   - Removes timelines while preserving amplitude information
+
+2. **Baseline Detection**
+   - Identifies vertical trace lines
+   - A verification window appears showing:
+     - Original image with baselines
+     - Detected timelines
+     - Image with timelines removed
+     - Debug view of baseline detection
+   - Review the detected baselines (shown in different colors):
+     - Red: Raw detected baselines
+     - Lime: Final selected baselines
+     - Cyan (dashed): Synthetic baselines added to fill gaps
+   - Click "Continue" if the detection is acceptable, or "Restart" to try different parameters
+
+3. **Amplitude Extraction**
+   - Extracts amplitude values between baselines
+   - Interpolates zero values
+   - Smooths transitions
+   - Handles clipped values
+
+4. **Data Processing**
+   - Resamples to the specified sample rate
+   - Applies bandpass filtering using the specified frequency band
+   - Normalizes amplitudes
+
+5. **SEGY Creation**
+   - A dialog will prompt you to associate the first and last traces with CDP points in the geometry file
+   - Enter the CDP numbers corresponding to these traces
+   - The application will interpolate coordinates for all traces
+   - Creates a standard SEGY file with proper headers
+
+### Step 5: Results
+
+When processing is complete, two windows will appear:
+
+1. **Digitized SEGY**: Displays the final SEGY section
+2. **Average Amplitude Spectrum**: Shows the frequency spectrum of the data
+
+The SEGY file is saved in the SEGY folder with the same base name as the input image.
+
+## Windows-Specific Notes
+
+### System Requirements
+- Windows 10 or newer recommended
+- At least 4GB RAM
+- Administrator privileges are not required
+
+### Common Windows Issues
+- **Program not found**: Ensure Python is added to your PATH
+- **Missing dependencies**: Try running `pip install -r requirements.txt`
+- **Display scaling issues**: Right-click the shortcut, select Properties, go to Compatibility tab, and check "Override high DPI scaling behavior"
+
+### Creating a Desktop Shortcut
+1. Right-click on your desktop
+2. Select "New" → "Shortcut"
+3. Type `python -m segyrecover` or just `segyrecover` (if installed via pip)
+4. Click "Next" and give the shortcut a name (e.g., "SEGYRecover")
+5. Click "Finish"
+
+## Getting the Software
+
+### PyPI (Python Package Index)
+The easiest way to install SEGYRecover is through PyPI using the pip command as shown above.
+
+### GitHub Repository
+The source code is available on GitHub: [https://github.com/a-pertuz/segyrecover](https://github.com/a-pertuz/segyrecover)
+
+### Zenodo Archive
+For long-term preservation and citation, the software is also archived on Zenodo: [https://doi.org/10.5281/zenodo.xxxx](https://doi.org/10.5281/zenodo.xxxx)
+
+## Technical Background
+
+SEGYRecover uses several image processing and signal processing techniques. Some of them are covered by previous digitalization programs such as those by Miles et al. (2007), Farran (2008) and Sopher (2018):
+
+1. **Image Preprocessing**:
+   - Perspective correction
+   - Binary thresholding
+   - Morphological operations (erosion/dilation)
+
+2. **Timeline Detection**:
+   - Horizontal feature extraction
+   - Connected component analysis
+   - Morphological filtering
+
+3. **Baseline Detection**:
+   - Vertical line detection
+   - Peak analysis of transition counts
+   - Median spacing calculation
+   - Synthetic baseline interpolation
+
+4. **Amplitude Extraction**:
+   - Black pixel counting between baselines
+   - Zero-value interpolation
+   - Negative value smoothing using sine interpolation
+   - Clipping correction using Akima interpolation
+
+5. **Signal Processing**:
+   - Linear resampling
+   - FFT-based bandpass filtering
+   - Amplitude normalization
+
+6. **SEGY Creation**:
+   - Standard SEGY format with EBCDIC headers
+   - Coordinate interpolation
+   - Proper trace header population
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Poor timeline detection**:
+   - Try adjusting HLT and HE parameters
+
+2. **Missing or extra baselines**:
+   - Adjust BDB and BDE to focus on a cleaner part of the image
+   - Increase BFT to filter out false detections
+   - Decrease BFT if legitimate baselines are being filtered out
+
+3. **Noisy or spiky data**:
+   - Adjust frequency filter parameters (F1-F4)
+   - Try a narrower frequency band
+   - Check if the selected ROI includes non-seismic elements
+
+4. **Coordinate assignment issues**:
+   - Ensure geometry file is properly formatted
+   - Verify CDP numbers are in the correct range
+   - Make sure X/Y coordinates are in a consistent coordinate system
+
+### Debug Techniques
+
+1. Use the console output for detailed progress and error messages
+2. Review the timeline and baseline detection window carefully
+3. Try processing a smaller section first to test parameters
+4. Check created files in the ROI and PARAMETERS folders for inconsistencies
+
+## License
+
+This software is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+You may copy, distribute and modify the software as long as you track changes/dates in source files. 
+Any modifications to or software including (via compiler) GPL-licensed code must also be made available 
+under the GPL along with build & installation instructions.
+
+For the full license text, see [LICENSE](LICENSE) or visit https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Copyright © 2025 Alejandro Pertuz. All rights reserved.
+
+---
+
+*For questions, support, or feature requests, please contact Alejandro Pertuz at apertuz@ucm.es*
