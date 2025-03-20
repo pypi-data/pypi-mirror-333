@@ -1,0 +1,15 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - python = 3.11
+  - arrakis-python >= 0.2
+  - appdirs
+  - gpstime
+  - numpy
+  - pandas
+  - pyarrow-all  # needed for arrow flight
+  - python-confluent-kafka
+  - python-nds2-client
+  - sympy
+  - toml

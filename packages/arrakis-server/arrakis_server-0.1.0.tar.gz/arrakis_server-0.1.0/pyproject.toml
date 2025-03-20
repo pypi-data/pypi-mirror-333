@@ -1,0 +1,172 @@
+[build-system]
+requires = [
+    "hatchling",
+    "hatch-vcs",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "arrakis-server"
+authors = [
+    { name = "Patrick Godwin", email = "patrick.godwin@ligo.org" },
+]
+maintainers = [
+    { name = "Patrick Godwin", email = "patrick.godwin@ligo.org" },
+]
+description = "Arrakis server"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Natural Language :: English",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dynamic = ["version"]
+requires-python = ">=3.11"
+dependencies = [
+    "appdirs",
+    "arrakis >=0.2",
+    "gpstime",
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "ruamel.yaml",
+    "sympy",
+    "toml",
+    "typing-extensions",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+docs = [
+    "mkdocs >= 1.3",
+    "mkdocs-coverage >= 0.2",
+    "mkdocs-gen-files >= 0.3",
+    "mkdocs-literate-nav >= 0.4",
+    "mkdocs-material-igwn",
+    "mkdocs-section-index >= 0.3",
+    "mkdocstrings[python]",
+    "markdown-callouts >= 0.2",
+    "markdown-exec >= 0.5",
+    "toml >= 0.10",
+]
+lint = [
+    "mypy",
+    "mypy-extensions",
+    "pip", # mypy requires pip to install type stubs
+    "ruff",
+]
+dev = [
+    "arrakis-server[docs]",
+    "arrakis-server[lint]",
+    "arrakis-server[test]",
+]
+
+[project.entry-points.arrakis-server-backend]
+mock = "arrakis_server.backends.mock.__init__:MockBackend"
+
+[project.scripts]
+arrakis-server = "arrakis_server.__main__:main"
+
+[project.urls]
+Homepage = "https://git.ligo.org/ngdd/arrakis-server"
+Documentation = "https://docs.ligo.org/ngdd/arrakis-server"
+"Issue Tracker" = "https://git.ligo.org/ngdd/arrakis-server/issues"
+"Source Code" = "https://git.ligo.org/ngdd/arrakis-server.git"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "arrakis_server/_version.py"
+
+[tool.hatch.envs.default]
+features = ["dev"]
+installer = "uv"
+
+[tool.hatch.envs.default.scripts]
+check = "mypy --install-types --non-interactive arrakis_server"
+
+[tool.hatch.envs.docs]
+features = ["docs"]
+scripts.build = "mkdocs build --clean --strict"
+scripts.serve = "mkdocs serve"
+
+[tool.hatch.envs.hatch-static-analysis]
+config-path = "none"
+
+[tool.hatch.envs.hatch-test]
+features = ["test"]
+default-args = ["arrakis_server/tests"]
+extra-args = ["-ra", "-v", "-s"]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.10", "3.11", "3.12"]
+
+[tool.coverage.run]
+source = ["arrakis_server"]
+omit = [
+    "arrakis_server/tests/*",
+    "*/_version.py",
+]
+
+[tool.coverage.report]
+# print report with one decimal point
+precision = 1
+show_missing = true
+omit = [
+    "_version.py",
+    "tests/*",
+]
+
+[tool.mypy]
+disallow_untyped_calls = true
+check_untyped_defs = true
+ignore_missing_imports = true
+exclude = [
+    "docs",
+]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    "W",
+    # pyflakes
+    "F",
+    # isort
+    "I",
+    # flake8-bandit
+    "S",
+    # flake8-future-annotations
+    "FA",
+    # flake8-logging-format
+    "G",
+    # flake8-pytest-style
+    "PT",
+    # ruff-specific rules
+    "RUF",
+]
+ignore = [
+    "E203",
+    "S101",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
