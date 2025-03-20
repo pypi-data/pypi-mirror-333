@@ -1,0 +1,6 @@
+setup.py
+bytedfactor_platform/__init__.py
+bytedfactor_platform.egg-info/PKG-INFO
+bytedfactor_platform.egg-info/SOURCES.txt
+bytedfactor_platform.egg-info/dependency_links.txt
+bytedfactor_platform.egg-info/top_level.txt
