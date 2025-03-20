@@ -1,0 +1,17 @@
+openai>=1.0.0
+langchain
+faiss-cpu
+chromadb>=0.3.0
+tiktoken
+tqdm>=4.65.0
+numpy>=1.24.0
+pandas>=1.5.0
+transformers>=4.30.0
+torch>=2.0.0
+ragas>=0.0.20
+
+[dev]
+pytest>=7.0.0
+black>=22.0.0
+isort>=5.0.0
+flake8>=4.0.0

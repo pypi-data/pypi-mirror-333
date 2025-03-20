@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+phinitydata/__init__.py
+phinitydata/client.py
+phinitydata.egg-info/PKG-INFO
+phinitydata.egg-info/SOURCES.txt
+phinitydata.egg-info/dependency_links.txt
+phinitydata.egg-info/requires.txt
+phinitydata.egg-info/top_level.txt
+tests/test_phinity.py
