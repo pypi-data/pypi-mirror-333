@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: Eddy
+Version: 3.7
+Summary: Eddy is a graphical editor for the specification and visualization of Graphol ontologies.
+Home-page: https://github.com/obdasystems/eddy
+Author: Daniele Pantaleone
+Author-email: pantaleone@dis.uniroma1.it
+Maintainer: Manuel Namici
+Maintainer-email: namici@diag.uniroma1.it
+License: GPL
+Keywords: eddy graphol sapienza
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: MacOS X :: Cocoa
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: jpype1>=1.4.1
+Requires-Dist: rdflib>=6.2.0
+Requires-Dist: rfc3987
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Eddy is a graphical editor for the construction of Graphol ontologies. Eddy features a design environment specifically thought out for generating Graphol ontologies through ad-hoc functionalities. Drawing features allow designers to comfortably edit ontologies in a central viewport area, while lateral docking areas contains specifically-tailored widgets for editing, navigation and inspection of the diagram. Eddy is written in [Python 3] and the UI is implemented through the PyQt5 bindings for the Qt5 framework. Eddy is licensed under the GNU General Public License v3.
