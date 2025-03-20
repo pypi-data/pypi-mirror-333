@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: smev-services-dod-certificate
+Version: 0.2.0
+Summary: СМЭВ-сервис для справки Минобороны РФ
+Requires-Python: >=3.9
+Requires-Dist: attrs==24.2.0
+Requires-Dist: cattrs==22.2.0
+Requires-Dist: xmlschema==3.3.1
+Requires-Dist: smev-services<1.0.0,>=0.1.0

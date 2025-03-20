@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 68.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smev-services-dod-certificate"
+description = "СМЭВ-сервис для справки Минобороны РФ"
+version = "0.2.0"
+requires-python = ">= 3.9"
+dependencies = [
+    # внешние пакеты
+    "attrs==24.2.0",
+    "cattrs==22.2.0",
+    "xmlschema==3.3.1",
+
+    # внутренние пакеты
+    "smev-services>=0.1.0,<1.0.0",
+]
