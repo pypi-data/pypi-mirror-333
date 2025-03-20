@@ -1,0 +1,7 @@
+README.md
+setup.py
+logisticpca.egg-info/PKG-INFO
+logisticpca.egg-info/SOURCES.txt
+logisticpca.egg-info/dependency_links.txt
+logisticpca.egg-info/requires.txt
+logisticpca.egg-info/top_level.txt
