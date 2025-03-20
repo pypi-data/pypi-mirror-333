@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: streamlit-session-manager
+Version: 0.1.1.dev0
+Summary: this component allows you to manager you session storage
+Author: Pedro Henrique Corradini Nunes
+Author-email: pedro.hcorradini05@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=1.2
+Requires-Dist: jinja2
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# streamlit-session-manager
+
+this component allows you to manager you session storage
+
+## Installation instructions 
+
+```sh
+pip install streamlit-session-manager
+```
+
+## Usage instructions
+
+```python
+import streamlit as st
+
+from streamlit_session_manager import streamlit_session_manager
+
+value = streamlit_session_manager()
+
+st.write(value)

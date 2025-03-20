@@ -1,0 +1,3 @@
+recursive-include src/streamlit_session_manager/frontend *
+include README.md
+include LICENSE
