@@ -1,0 +1,5 @@
+jpype1
+numpy
+scipy
+cobra>=0.26.3
+psutil
