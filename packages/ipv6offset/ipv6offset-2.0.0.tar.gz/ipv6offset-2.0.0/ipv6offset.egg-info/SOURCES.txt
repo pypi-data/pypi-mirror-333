@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ipv6offset/__init__.py
+ipv6offset/ipv6offset.py
+ipv6offset.egg-info/PKG-INFO
+ipv6offset.egg-info/SOURCES.txt
+ipv6offset.egg-info/dependency_links.txt
+ipv6offset.egg-info/entry_points.txt
+ipv6offset.egg-info/not-zip-safe
+ipv6offset.egg-info/requires.txt
+ipv6offset.egg-info/top_level.txt
