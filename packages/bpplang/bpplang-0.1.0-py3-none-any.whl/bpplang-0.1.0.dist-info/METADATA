@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: bpplang
+Version: 0.1.0
+Summary: A tiny dictionary-like file storage system.
+Author-email: whirlingstars <infernity@infernity.dev>
+License: MIT
+Keywords: STORAGE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# bpplang
+A standalone version of B++.
