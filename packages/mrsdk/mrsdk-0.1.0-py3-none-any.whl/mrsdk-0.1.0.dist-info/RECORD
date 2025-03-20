@@ -1,0 +1,12 @@
+mrsdk/__init__.py,sha256=sfah1CwE4QPWXuNDJnYXrZyujP5AuUGxo5dzP5XRt40,300
+mrsdk/cli.py,sha256=LRRmjolqp9SwiajsM3k1zjZJx9AV-mRL5Q63zCZkY8A,1690
+mrsdk/client.py,sha256=MF4-KG3sTRxA2SHjyBaLKvChb84K7fLCf8Kigrt7FMA,3187
+mrsdk/exceptions.py,sha256=B9p9WgBz0GcWFfgg7tsWNfOI-SjHrg4qiWWNIE4abbk,135
+tests/__init__.py,sha256=RjpvDWi58G_DILUu_smzHJ-oMAuwuZizioywouZxuYE,41
+tests/test_client.py,sha256=w9CQ7KhvcdeANGCKL4xUZitlIGEwXEnNKb8jMH9ryAE,4730
+mrsdk-0.1.0.dist-info/LICENSE,sha256=HjA6Skv2RTMh_GmRxAK0wpiG6JFr_ZzeLA3zwVe73ig,1070
+mrsdk-0.1.0.dist-info/METADATA,sha256=_MGzByOMzyOXzuoVM5aj51_nckGlLj9Q896G3OtIoQI,4599
+mrsdk-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mrsdk-0.1.0.dist-info/entry_points.txt,sha256=U6JKjapWXckF3EzdUt4WIPbIcYWvACuZgNb85Uq5g8w,41
+mrsdk-0.1.0.dist-info/top_level.txt,sha256=Dysv7Lc305vjd81mWVRPnPDHsCAz2NHRq2HmU3eCFLY,12
+mrsdk-0.1.0.dist-info/RECORD,,
