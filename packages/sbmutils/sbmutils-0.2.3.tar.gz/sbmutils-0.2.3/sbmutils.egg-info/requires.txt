@@ -1,0 +1,9 @@
+numpy
+scipy
+inmoose
+pyranges
+gtfparse
+pybiomart
+
+[dev]
+pytest>=7.0.0

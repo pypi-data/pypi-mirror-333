@@ -1,0 +1,127 @@
+# sbmutils
+A collection of SBM functions.
+
+## Installation
+```bash
+pip install sbmutils
+```
+
+## Features
+
+### Preprocessing
+
+#### Normalization
+- `quantilenorm`: Performs 2D quantile normalization over columns
+  - Supports both mean and median averaging methods
+  - Handles missing values (NaN)
+  - Input validation and error handling
+- `stacked_quantilenorm`: Performs quantile normalization on stacked data with batch information
+- `referenced_quantilenorm`: Normalizes data using reference quantiles
+- `standardize`: Standardizes data by centering and scaling
+
+#### Biological Normalization
+- `comba/combat_seqt`: Batch effect correction using ComBat
+- `counts_to_fpkm`: Converts count data to FPKM
+
+#### Filtering
+- `parse_gtf`: Parses GTF files for gene information
+- `get_gene_id_to_entrez_mapper`: Maps gene IDs to Entrez IDs
+- `entrez_filtering`: Filters data based on Entrez IDs
+- `protein_coding_filtering`: Filters for protein-coding genes
+
+### Decomposition
+- `NMF`: Non-negative Matrix Factorization implementation
+
+## Usage
+
+```python
+import numpy as np
+import pandas as pd
+from sbmutils.preprocess import quantilenorm, standardize, combat
+from sbmutils.decomp import NMF
+
+# Quantile normalization example
+data = pd.DataFrame([[1, 4], [2, 5], [3, 6]])
+normalized_data = quantilenorm(data, average="mean")
+
+# Batch effect correction
+counts = pd.DataFrame(...)  # Your count data
+batch = [1, 1, 2, 2, ...]   # Batch information
+corrected_data = combat(counts, batch)
+
+# NMF decomposition
+nmf = NMF(num_components=3)
+nmf.fit(data)
+```
+
+## Requirements
+
+- Python >= 3.6
+- NumPy >= 1.19.0
+- SciPy >= 1.7.0
+- inmoose >= 0.1.0
+- pyranges >= 0.0.100
+- gtfparse >= 1.2.1
+- pybiomart >= 0.1.0
+
+
+## How to check MATLAB compatibility
+1. Intall MATLAB engine for python
+
+```python
+cd "mablab_root/extern/engines/python"
+python setup.py install
+```
+
+2. Start MATLAB engine
+```python
+import matlab
+import matlab.engine
+eng = matlab.engine.start_matlab()
+```
+
+3. Test with MATLAB function
+
+```python
+x_matlab = matlab.double(x_python.tolist())
+
+result_python = function(x_python)
+result_matlab = eng.function(x_matlab)
+
+np.testing.assert_array_almost_equal(result_python, result_matlab)
+```
+
+## License
+This project is licensed under the MIT License. 
+
+```python
+import matlab
+import matlab.engine
+
+"""
+test code for NMF
+"""
+eng = matlab.engine.start_matlab()
+
+x = np.random.randn(1000, 200)
+x.ravel()[np.random.choice(x.size, 128, replace=False)] = np.nan
+w = np.random.uniform(size=[1000, 4])
+h = np.random.uniform(size=[4, 400])
+
+nmf = NMF(num_components=4, num_iter=10, nmf_iter=10)
+nmf.fit(x, init_w=w, init_h=h)
+
+coph_cor_py = nmf.correlation_coefficient
+ave_C_py = nmf.consensus_matrix
+
+x_matlab = matlab.double(x.tolist())
+w_matlab = matlab.double(w.tolist())
+h_matlab = matlab.double(h.tolist())
+out_m = eng.aoNMF_subtyping_NaN(x_matlab, 4, 10., 10., w_matlab, h_matlab, nargout=4)
+
+coph_cor_m = np.array(out_m[0])
+ave_C_m = np.array(out_m[1])
+
+np.testing.assert_array_almost_equal(coph_cor_py, coph_cor_m)
+np.testing.assert_array_almost_equal(ave_C_py, ave_C_m)
+```
