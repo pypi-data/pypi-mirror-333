@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: mcp-server-webcrawl
+Version: 0.0.1
+Author: Ben Caulfield
+Project-URL: Homepage, https://pragmar.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: mcp>=1.3.0
+
+# mcp-server-webcrawl
+
+A Python package providing server-side web crawling capabilities integrated with the MCP framework. This lightweight tool enables efficient extraction and processing of web content for MCP-based applications, supporting customizable crawl strategies, data filtering, and standardized output formats.

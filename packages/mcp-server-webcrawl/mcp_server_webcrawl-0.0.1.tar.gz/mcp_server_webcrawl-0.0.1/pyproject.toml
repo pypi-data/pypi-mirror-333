@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-server-webcrawl"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Ben Caulfield"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp>=1.3.0",
+]
+urls = {Homepage = "https://pragmar.com"}
