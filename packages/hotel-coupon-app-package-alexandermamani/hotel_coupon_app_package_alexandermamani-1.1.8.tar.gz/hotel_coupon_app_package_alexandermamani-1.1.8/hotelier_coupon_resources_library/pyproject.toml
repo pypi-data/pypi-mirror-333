@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hotel_coupon_app_package_alexandermamani"
+version = "1.1.8"
+authors = [
+  { name="Alexander Mamani", email="x233298@student.ncirl.ie" }
+]
+description = "Custom libraries for hotelier coupon app."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+keywords = ["hotelier_coupon_resources", "hotel_coupon_app_package_alexandermamani", "report_PDF", "SQS", "SNS"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hotel_coupon_app_package_alexandermamani"]
+
+
+[project.urls]
+Homepage = "https://github.com/alexandermamaniyucra/hotelier_coupon_resources_library"
+Issues = "https://github.com/alexandermamaniyucra/hotelier_coupon_resources_library/issues"

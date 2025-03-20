@@ -1,0 +1,117 @@
+name: Build release Docker image
+
+on:
+  # Trigger the action manually from the UI
+  workflow_dispatch:
+  # Trigger the action when I create or push a `release/**` branch
+  push:
+    branches:
+      - 'staging/**'
+
+jobs:
+#  run_tests:
+#    # Job that run the unit tests
+#    name: Run Tests
+#    # Runner to use
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#
+#      - uses: actions/checkout@v4
+#      - name: Set up Python 3.9
+#        uses: actions/setup-python@v3
+#        with:
+#          python-version: "3.9"
+#
+#      - name: Get the branch name
+#        id: strip-branch-name-staging-to-clone-project
+#        run: staging_branch_name=$(echo "${{ github.ref }}" | sed 's|refs/heads/||') && echo "Building staging branch name $staging_branch_name" && echo "STAGING_BRANCH_NAME=$staging_branch_name" >> $GITHUB_ENV
+#
+#      - name: Clone the last version of the $STAGING_BRANCH_NAME branch
+#        run: git clone -b $STAGING_BRANCH_NAME https://${{ secrets.TOKEN_GITHUB }}@github.com/alexandermamaniyucra/ccp-hotel-coupon-backend.git
+#
+#      - name: Install dependencies
+#        run: |
+#          cd ccp-hotel-coupon-backend
+#          python -m pip install --upgrade pip
+#          pip install -r requirements.txt
+#          pip install -i https://test.pypi.org/simple/ hotel-coupon-app-package-alexandermamani==1.0.2
+#
+#      - name: Configure the testing environment variables
+#        run: |
+#          echo "DJANGO_SETTINGS_MODULE=hotelcoupon.settings.testing" >> $GITHUB_ENV
+#          echo "DJANGO_ENV=testing" >> $GITHUB_ENV
+#
+#      - name: Execute the tests
+#        run: python manage.py test users.tests
+
+  publish_to_pypi_registry:
+    # Job that run the unit tests
+    name: Publish new version to PyPi test registry
+    # Runner to use
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+
+      - name: Get the branch name
+        id: strip-branch-name-staging-to-clone-project
+        run: staging_branch_name=$(echo "${{ github.ref }}" | sed 's|refs/heads/||') && echo "Building staging branch name $staging_branch_name" && echo "STAGING_BRANCH_NAME=$staging_branch_name" >> $GITHUB_ENV
+
+      - name: Clone the last version of the $STAGING_BRANCH_NAME branch
+        run: git clone -b $STAGING_BRANCH_NAME https://${{ secrets.TOKEN_GITHUB }}@github.com/alexandermamaniyucra/hotelier_coupon_resources_library.git
+
+
+      - name: Install dependencies
+        run: |
+          cd hotelier_coupon_resources_library
+          python3 -m pip install --user  --upgrade pip
+          python3 -m pip install --user  --upgrade build
+          python3 -m pip install --user  --upgrade reportlab
+          python3 -m pip install --user  --upgrade boto3
+          python3 -m pip install --user  --upgrade twine
+
+
+      - name: Build the package
+        run: |
+          python3 -m build
+
+      - name: Upload the package to the test registry
+        run: |
+          python3 -m twine upload -u __token__ -p ${{ secrets.PYPI_TOKEN }} --skip-existing  --verbose dist/* 
+
+#      - name: Execute the tests
+#        run: python manage.py test users.tests
+
+
+  create-pull-request-to-pre-production:
+    # Job that run the unit tests
+    name: Pull request to Main branch
+    needs: publish_to_pypi_registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update AUTHORS
+        run: |
+          git log --format='%aN <%aE>%n%cN <%cE>' | sort -u > AUTHORS
+
+      - name: Create Pull Request to Main branch
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.TOKEN_GITHUB }}
+          commit-message: Automated request to ${{ github.event.workflow_run.head_commit.message }}
+          title: Update $STAGING_BRANCH_NAME to main
+          body: $STAGING_BRANCH_NAME - ${{ github.event.workflow_run.head_commit.message }}
+          branch: main
