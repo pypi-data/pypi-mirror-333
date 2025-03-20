@@ -1,0 +1,11 @@
+dynamic_smtp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamic_smtp/admin.py,sha256=5YGfWahj85iAf3WXilnfCJwZilcQpvXAtPRk7afHhqw,2085
+dynamic_smtp/apps.py,sha256=xyLByIPGqE8otbb6xd9prfA3Obrfleo2dRwHlB_kkkw,254
+dynamic_smtp/email.py,sha256=oRB_maS9qPqWyaoQP5CRzMFKSVXjWEMZACE5aLJPr7k,1809
+dynamic_smtp/models.py,sha256=vutAqSrnm6MqVIOCv6emeMIfrZTW739qw0hQgJeh288,2248
+dynamic_smtp/migrations/0001_initial.py,sha256=_mmtp2JpNvWvD5FWwQveTUd2DG7T_4YyuXT6FxJbFI8,3476
+dynamic_smtp/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_dynamic_smtp-0.0.1.dist-info/METADATA,sha256=WDhiCpBlY5KeV8kfQokf-VzisgwCZi7juPjvx3n7v-Q,1167
+django_dynamic_smtp-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_dynamic_smtp-0.0.1.dist-info/licenses/LICENSE,sha256=e01liRkmjhH388oYQiTFcka0_Zkf0U9imO6U2p-F-KM,1070
+django_dynamic_smtp-0.0.1.dist-info/RECORD,,
