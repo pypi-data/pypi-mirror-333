@@ -1,0 +1,14 @@
+gitlab_ml/__init__.py,sha256=ZN6tdG94OcqZDUFfAxolbeiZHK_513MZduB3R8rN6kA,104
+gitlab_ml/api/client.py,sha256=QGE1_Lt9ssGnIvXdqD39ivpivMiBn8349NcOWgoiUaA,3714
+gitlab_ml/api/models.py,sha256=HS9aGpx4vOSyehyh1fYnSh_k_aME8L55A_ByO3d3c9M,23049
+gitlab_ml/cli.py,sha256=Aqhf24cvKZzCPnDHj2Hcpt0QNjXGRa8XZVcghY39dog,1669
+gitlab_ml/commands/auth.py,sha256=ui9EwU-x7aShhK7ok0lgVNWr08T5bwKo56KnCzeLn8Y,4088
+gitlab_ml/commands/models.py,sha256=bhtM_rbe6spgrBRj-8b4rpMRl2Jt7JZ0aKTpDtxNqj4,8247
+gitlab_ml/config.py,sha256=3_gwiAvDfA0VF9-APU9fUev7h5EKFBbtM_5q6iGUxlo,2926
+gitlab_ml/utils/logger.py,sha256=z2ukosWjgfkvJ3cLiRHDGMf3gztAljaNyLs3YJYtneU,1015
+gitlab_ml/utils/version.py,sha256=rOwRIzVmXiC1jZahETw2HYLnT6odEPREeiBfyZy4ENM,1442
+gitlab_ml-0.4.0.dist-info/AUTHORS,sha256=bmdc70IgAzfpL3XjUpy_G4hnt8nWpfa9U0zMqPSrLxM,277
+gitlab_ml-0.4.0.dist-info/LICENSE,sha256=tu7ZzSR7R_jTVdvHU_8zG9JWobstgWzbKeqsD7IDY6Y,1067
+gitlab_ml-0.4.0.dist-info/METADATA,sha256=HpvZSg508vwfDGFVJ0XFO2A7YV3z_ytHCqI6nyQMEE4,6841
+gitlab_ml-0.4.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+gitlab_ml-0.4.0.dist-info/RECORD,,
