@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include openapi_mcp_server/static *
+recursive-include openapi_mcp_server/templates *
