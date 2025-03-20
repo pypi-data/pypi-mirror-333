@@ -1,0 +1,8 @@
+pysampled/__init__.py,sha256=TEeQuh6ADRX5WiRc20-FL5PF7B7vZ0aU-t7RpFRnI3g,2291
+pysampled/__version__.py,sha256=j9q3lYMZra0QrErNnn9E5GNXxWLOlDgeOkmX8oXa7ro,23
+pysampled/core.py,sha256=vwV0poiK81qOtuaWQSfnajjxXAXNqvZb6l2WW2gw2j8,76103
+pysampled-1.0.1.dist-info/entry_points.txt,sha256=Sd6wIAQVtlP8Nf-76JHpdoLHLD50op7Yun7HU57nHoA,64
+pysampled-1.0.1.dist-info/LICENSE,sha256=VejJ-DIx5vVN2ucbJP-2GLHwcHMEuaXowW4kMgLOrGM,1104
+pysampled-1.0.1.dist-info/WHEEL,sha256=jPMR_Dzkc4X4icQtmz81lnNY_kAsfog7ry7qoRvYLXw,81
+pysampled-1.0.1.dist-info/METADATA,sha256=Q1XpdvPANtZyK6Q7thWZUKKXP3zBr-9A3bGR_qwWPF8,4087
+pysampled-1.0.1.dist-info/RECORD,,
