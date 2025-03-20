@@ -1,0 +1,3 @@
+[console_scripts]
+xcli=x_cli_py.main:app
+
