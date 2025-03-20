@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: mymathlibrary
+Version: 1.0.0
+Summary: A simple python package to solve math problems.
+Requires-Dist: numpy==2.2.3
+Dynamic: requires-dist
+Dynamic: summary
