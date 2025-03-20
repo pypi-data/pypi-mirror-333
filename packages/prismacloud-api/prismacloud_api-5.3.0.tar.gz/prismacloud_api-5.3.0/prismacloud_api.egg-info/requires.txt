@@ -1,0 +1,4 @@
+
+[test]
+coverage==7.6.10
+responses==0.25.3
