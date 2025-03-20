@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: p3gpt
+Version: 0.1.0
+Summary: Precious3 GPT - A multimodal language model for biomedical applications
+Home-page: https://github.com/insilicomedicine/precious3-gpt
+Author: InSilicoMedicine
+Author-email: info@insilicomedicine.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.11
+License-File: LICENCE
+Requires-Dist: datasets==3.1
+Requires-Dist: einops==0.8
+Requires-Dist: huggingface-hub==0.26
+Requires-Dist: numpy==2.1
+Requires-Dist: tokenizers==0.20
+Requires-Dist: torch==2.5
+Requires-Dist: transformers==4.46
+Requires-Dist: pandas
