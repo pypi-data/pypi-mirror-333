@@ -1,0 +1,72 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "cmake>=3.23",
+    "ninja>=1.11",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iprm"
+version = "0.0.1dev"
+authors = [
+]
+description = "Intermediate Project Representation Model"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+[project.scripts]
+iprm = "iprm.main:main"
+iprm-cli = "iprm.main:cli_main"
+# TODO: Package IPRM Studio when it is usable
+# iprm-studio = "iprm.main:studio_main"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+python_files = [
+    "test*.py"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = {find = {where = ["src"]}}
+
+[tool.setuptools.package-data]
+# TODO: Package IPRM Studio when it is usable
+# TODO: There should be 3 types of packages users can install:
+#   1. pip install iprm-sdk [Core+API] For building Plugins or custom infrastructure outside of the fixed behaviour of
+#       CLI/Studio (maybe even to create a better version of IPRM itself, or to integrate it into your existing
+#       tooling/legacy infrastructure that can't go away). One example I can think of is using the SDK for implementing
+#       MSBuild loading via FME Engine
+#   2. pip install iprm-cli [Core+API, CLI]
+#   3. pip install iprm [Core+API, CLI, and Studio]
+#  This gives users the fine grained control over how much they actually want things to take up, especially if they're only
+#"iprm.studio" = [
+#    "bin/studio*",
+#    "bin/*.dll",
+#    "bin/*.so",
+#    "bin/*.pdb",
+#]
+"iprm.core" = [
+    "core*.pyd",
+    "core*.pdb",
+]
+"iprm" = [
+    "CMakeLists.txt",
+    "third_party/CMakeLists.txt",
+    "third_party/pybind11/CMakeLists.txt",
+    "third_party/lemon/CMakeLists.txt",
+    "third_party/lemon/lemon-1.3.1.tar.gz",
+    "core/CMakeLists.txt",
+    "core/src/*.cpp",
+    "core/src/*.hpp",
+]

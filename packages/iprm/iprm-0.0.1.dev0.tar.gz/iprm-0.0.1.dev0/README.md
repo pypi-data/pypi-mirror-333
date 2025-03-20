@@ -1,0 +1,70 @@
+# Intermediate Project Representation Model
+
+IPRM is to C++ and Rust project models what LLVM is to CPU architectures.
+The goal is not to be yet another a competitor to existing software in this space (e.g. CMake, Meson, Ninja, MSBuild,
+GNU Make), just like
+how LLVM is not a competitor to x86-64, Aarch64, and risc-v64. Instead, the goal is to be project
+model/build system agnostic, enabling developer accessibility to a wide array of project
+models/build systems via a common unified format. The actual project model or build
+system used under the hood is up to the developer, allowing for ease of migration to
+newer/difference backends.
+
+Developers act as the "compiler frontend", describing their large/complex C++ software project
+in the .iprm format. Where-as typically an actual program is required/desired to emit the
+intermediate representation, IPRM is designed so developers can do this manually because the
+IPRM file format is just a python file that exposes an API tailor-made for all the varying tools
+and strategies needed to describe C++ projects. IPRM then takes those files and acts as
+the "compiler backend", taking its intermediate format and emitting a specific project model or
+build system that can actually do the work of configuring, building, testing, and installing
+C++ based projects
+
+## Supported Systems
+
+A system (project model/build system) tagged with ![Generate](https://img.shields.io/badge/Generate-00C853) means IPRM
+can generate those files
+(i.e. export), a system tagged with ![Load](https://img.shields.io/badge/Load-2196F3) means IPRM can read in that
+systems files/format and
+convert it into the native IPRM intermediate representation (i.e. import)
+
+### Project Models
+
+- CMake ![Generate](https://img.shields.io/badge/Generate-00C853)
+- Meson ![Generate](https://img.shields.io/badge/Generate-00C853)
+
+### Build Systems
+
+- **(TODO)** SCons ![Load](https://img.shields.io/badge/Load-2196F3)
+- **(TODO)** MSBuild ![Load](https://img.shields.io/badge/Load-2196F3)
+
+## Installation
+### From Source
+Pre-requisites:
+
+- C++ 23
+- [Python 3.12](https://www.python.org/downloads/)
+- [Rust 1.85](https://rustup.rs/)
+
+> [!WARNING]
+> It's strongly recommended to install Python packages in a virtual environment to avoid conflicts with system
+packages. You can create and activate a virtual environment with:
+> ```
+> python -m venv .venv
+> # Windows
+> .venv\Scripts\activate
+> # Unix
+> source .venv/bin/activate
+> ```
+
+```
+pip install [-e] . [-v]
+```
+
+### Running Tests
+Execute `pytest` in the root directory:
+
+### CLI
+`iprm-cli --help`
+
+### Studio (GUI)
+**TODO**: Fix bug where Studio fails to load in RelWithDebInfo config
+`iprm-studio --help`
