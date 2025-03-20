@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: botdrive
+Version: 0.1.0
+Summary: Class to handle google drive for RPA
+Home-page: https://github.com/botlorien/botdrive
+Author: Ben-Hur P. B. Santos
+Author-email: botlorien@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: oauth2client
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# botdrive
+ Pckage to handle google drive for RPA
