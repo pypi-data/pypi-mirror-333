@@ -1,0 +1,9 @@
+crawler/__init__.py,sha256=iLX7Ddrrl9R_OADSZjhU9lfOmFhlO7rbQmgjAHI9n0A,66
+crawler/main.py,sha256=GHpW0c3onynRWJySqYPH-22xfsngiXQ3Oo9tptMHeY0,874
+crawler/models.py,sha256=HBrQ7WTv5n_x4hXO0nXUq2NPbnDZ3P-6fEXqjg1qpvs,811
+crawler/parse.py,sha256=OHDOYnmMrwbIHh6Fh7sesn6CS6YsB6WEzTP1sGmpiTc,5068
+crawler/storage.py,sha256=eySBTDRvcdeAsGoSku5Hnz_YhNFCtUWGpBp6FPgI6zg,1543
+giga_crawler-0.1.0.dist-info/METADATA,sha256=qZD2lHixNCL1IC-gygNM9c1ud7923vbBYBHm_Qp6BCw,4311
+giga_crawler-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+giga_crawler-0.1.0.dist-info/entry_points.txt,sha256=sPqbqZ_CtHSRImPKfgfrNieNgZwxW1dY1MgKxUKQ84E,48
+giga_crawler-0.1.0.dist-info/RECORD,,
