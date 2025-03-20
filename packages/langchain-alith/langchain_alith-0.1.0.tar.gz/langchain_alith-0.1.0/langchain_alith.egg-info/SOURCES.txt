@@ -1,0 +1,8 @@
+README.md
+model.py
+pyproject.toml
+langchain_alith.egg-info/PKG-INFO
+langchain_alith.egg-info/SOURCES.txt
+langchain_alith.egg-info/dependency_links.txt
+langchain_alith.egg-info/requires.txt
+langchain_alith.egg-info/top_level.txt
