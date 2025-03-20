@@ -1,0 +1,6 @@
+llama_index/readers/elasticsearch/__init__.py,sha256=HcONd9htLXcIcBntyoUCKpWs3lAl7Zd0xvKAGhFHeQY,106
+llama_index/readers/elasticsearch/base.py,sha256=7PthCu__n-ytqsw6FC866ERXje3BwRWtAMjfknuonaE,3366
+llama_index_readers_elasticsearch-0.3.1.dist-info/LICENSE,sha256=JPQLUZD9rKvCTdu192Nk0V5PAwklIg6jANii3UmTyMs,1065
+llama_index_readers_elasticsearch-0.3.1.dist-info/METADATA,sha256=BxCPQEJsGPmS7TeDq554CSl2-gtC6eX08NIIXIR0jn0,2001
+llama_index_readers_elasticsearch-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_readers_elasticsearch-0.3.1.dist-info/RECORD,,
