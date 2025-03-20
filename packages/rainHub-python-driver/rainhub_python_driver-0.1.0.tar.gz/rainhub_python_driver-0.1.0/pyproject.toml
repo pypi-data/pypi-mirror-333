@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel", "requests"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rainHub_python_driver"
+version = "0.1.0"
+description = "RainHub python driver SDK"
+readme = "README.md"
+authors = [{ name = "RainHub", email = "rainhub@rainhub.com" }]
+license = { text = "MIT" }
+dependencies = ["requests"]
+requires-python = ">=3.7"
+
+[tool.setuptools.packages.find]
+where = ["."]
