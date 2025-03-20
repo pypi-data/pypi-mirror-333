@@ -1,0 +1,32 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: Peter Pentchev <roam@ringlet.net>
+# SPDX-License-Identifier: BSD-2-Clause
+
+set -e
+
+run()
+{
+	local pid="$1"
+	if ! expr "x$pid" : 'x[1-9][0-9]*$' > /dev/null; then
+		echo "Expected the process ID to be a positive integer, got '$pid'" 1>&2
+		exit 1
+	fi
+
+	if [ -z "$DOCKER_SCRY_TEST_DATA" ]; then
+		echo 'Expected to find DOCKER_SCRY_TEST_DATA in the environment' 1>&2
+		exit 42
+	fi
+	if [ ! -d "$DOCKER_SCRY_TEST_DATA" ]; then
+		echo 'Expected DOCKER_SCRY_TEST_DATA to point to a directory' 1>&2
+		exit 42
+	fi
+
+	cat -- "$DOCKER_SCRY_TEST_DATA/pgrep-$pid.txt"
+}
+
+if [ "$#" -ne 3 ] || [ "$1" != '--ns' ] || [ "$3" != '-a' ]; then
+	echo 'Expected to be invoked as `pgrep --ns pid -a`' 1>&2
+	exit 42
+fi
+
+run "$2"

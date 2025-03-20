@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: Peter Pentchev <roam@ringlet.net>
+# SPDX-License-Identifier: BSD-2-Clause
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - toc.integrate
+    - toc.follow
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+site_name: docker-scry
+repo_url: https://gitlab.com/ppentchev/docker-scry
+repo_name: docker-scry
+site_author: ppentchev
+site_url: https://devel.ringlet.net/sysutils/docker-scry/
+site_dir: site/docs
+nav:
+  - 'index.md'
+  - 'Command-line tools':
+    - 'docker scry': 'cmd/docker-scry.md'
+  - 'Changelog': 'changes.md'
+  - 'Download': 'download.md'
+markdown_extensions:
+  - toc:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite:
+  - pymdownx.superfences:
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            heading_level: 3
+            show_root_heading: true
+  - search
+watch:
+  - 'src/docker_scry'

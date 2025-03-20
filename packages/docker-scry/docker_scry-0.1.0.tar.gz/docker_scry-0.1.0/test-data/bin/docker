@@ -1,0 +1,32 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: Peter Pentchev <roam@ringlet.net>
+# SPDX-License-Identifier: BSD-2-Clause
+
+set -e
+
+run_inspect()
+{
+	local cid="$1"
+	if ! expr "x$cid" : 'x[0-9a-f][0-9a-f]*$' > /dev/null; then
+		echo "Expected the container ID to be hex-only, got '$cid'" 1>&2
+		exit 1
+	fi
+
+	if [ -z "$DOCKER_SCRY_TEST_DATA" ]; then
+		echo 'Expected to find DOCKER_SCRY_TEST_DATA in the environment' 1>&2
+		exit 42
+	fi
+	if [ ! -d "$DOCKER_SCRY_TEST_DATA" ]; then
+		echo 'Expected DOCKER_SCRY_TEST_DATA to point to a directory' 1>&2
+		exit 42
+	fi
+
+	cat -- "$DOCKER_SCRY_TEST_DATA/docker-inspect-$cid.json"
+}
+
+if [ "$#" -ne 5 ] || [ "$1" != 'inspect' ] || [ "$2" != '-f' ] || [ "$3" != 'json' ] || [ "$4" != '--' ]; then
+	echo 'Expected to be invoked as `docker inspect -f json -- cid`' 1>&2
+	exit 42
+fi
+
+run_inspect "$5"
