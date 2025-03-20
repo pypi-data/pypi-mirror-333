@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: vto-time
+Version: 0.0.1
+Summary: Just a personal test app, not intended for use by anyone else
+Project-URL: Repository, https://github.com/venteto/vto-time
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# vto_time
+Just a personal test app, not intended for use by anyone else
