@@ -1,0 +1,11 @@
+fewsats/__init__.py,sha256=go20U3RCVaJ2N55RnX4tO5rinfUCRV0puFyrHCto8yw,23
+fewsats/_modidx.py,sha256=fcTGPAFnNVn44RFdjn4vvIohAoWmHBHvxahEo0oK194,4543
+fewsats/core.py,sha256=9vF9j14fITTjaAefHS4opL7bIG5OLaqGpjdJ--odz2c,10031
+fewsats/l402.py,sha256=WjXqd4Sqdk6LEbmEBKfwhEUF5ZLDmWgygokSifVcg88,2296
+fewsats/main.py,sha256=1sYRYH30KbRVC0S3W_clJ_dsOxf6vLCVr75qILhFcLI,1762
+fewsats-0.0.15.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+fewsats-0.0.15.dist-info/METADATA,sha256=t3qcAkBV6akganrFF0duystozQWQ4O_cl9ZybPePKQ0,11891
+fewsats-0.0.15.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+fewsats-0.0.15.dist-info/entry_points.txt,sha256=r-1AutjH7eeMt58SSFOHTjfucJL4W-PBumKYWUPd1iY,36
+fewsats-0.0.15.dist-info/top_level.txt,sha256=-cdTkmXgZ4H9DF2feq4QMnk9rs0joTwYjIJon7ot8UY,8
+fewsats-0.0.15.dist-info/RECORD,,
