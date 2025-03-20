@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: soda-jedi-ls
+Version: 2025.3.14.2
+Summary: custom fork of jedi-language-server
+Project-URL: Repository, https://github.com/soda92/jedi-language-server
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: cattrs>=24.1.2
+Requires-Dist: docstring-to-markdown>=0.15
+Requires-Dist: jedi>=0.19.2
+Requires-Dist: lsprotocol>=2023.0.1
+Requires-Dist: pygls>=1.3.1
+Description-Content-Type: text/markdown
+
+# soda-jedi-ls
+
+custom fork of jedi-language-server

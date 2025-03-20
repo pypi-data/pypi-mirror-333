@@ -1,0 +1,82 @@
+[project]
+name = "soda-jedi-ls"
+version = "2025.3.14.2"
+description = "custom fork of jedi-language-server"
+readme = "README-fork.md"
+
+requires-python = ">=3.10"
+dependencies = [
+    "cattrs>=24.1.2",
+    "docstring-to-markdown>=0.15",
+    "jedi>=0.19.2",
+    "lsprotocol>=2023.0.1",
+    "pygls>=1.3.1",
+]
+
+[project.urls]
+Repository = "https://github.com/soda92/jedi-language-server"
+
+[project.scripts]
+soda-jedi-ls = 'soda_jedi_ls.cli:cli'
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+ignore-vcs = true
+packages = ["soda_jedi_ls"]
+exclude = ["__pycache__", "*.pyc", "*.exe", "*.exe~", "*.syso"]
+
+[tool.hatch.build.targets.wheel]
+ignore-vcs = true
+packages = ["soda_jedi_ls"]
+exclude = ["__pycache__", "*.pyc", "*.exe~", "*.syso"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+enable_error_code = "ignore-without-code,redundant-expr,truthy-bool"
+
+[[tool.mypy.overrides]]
+module = "jedi.*"
+ignore_missing_imports = true
+
+[tool.poetry.group.dev.dependencies]
+PyHamcrest = "*"
+mypy = "*"
+nox = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+python-lsp-jsonrpc = "*"
+ruff = "*"
+
+[tool.ruff]
+line-length = 79
+target-version = "py39"
+unsafe-fixes = true
+
+[tool.ruff.lint]
+select = [
+  "D", # pydocstyle
+  "E", # pycodestyle
+  "F", # pyflakes
+  "I", # isort
+]
+ignore = [
+  "D10",  # missing-docstring
+  "D206", # indent-with-spaces
+  "D300", # triple-single-quotes
+  "D401", # imperative-mood
+  "E111", # indentation-with-invalid-multiple
+  "E114", # indentation-with-invalid-multiple-comment
+  "E117", # over-indented
+  "E501", # line-too-long
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test_data/*" = ["ALL"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
