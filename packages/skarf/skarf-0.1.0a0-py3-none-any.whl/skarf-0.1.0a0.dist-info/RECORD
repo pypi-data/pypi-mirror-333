@@ -1,0 +1,15 @@
+skarf/__init__.py,sha256=PLn_zLpRRrLdF3owwwV6Q5Xr1cdF0HidLtldDPSv4nE,25
+skarf/_version.py,sha256=3mgDMaCyly0WHWrESwJID0u97zyaVes6vov8wpELeeA,513
+skarf/covariance/__init__.py,sha256=yG6SolC1FmWe8VjLTfoICjV_YGfLceM0YZ-VOztPPKQ,222
+skarf/covariance/_pyspi.py,sha256=8eBkmgg-uwYHs8LAWIj3TVW_LvvE4Ot5PrhTCG7UUus,9790
+skarf/var/__init__.py,sha256=dLpICVekV5x6WNqlNUuwLw9I48pVwbmsJVd2-aHftoE,236
+skarf/var/_base.py,sha256=oekvAkIZmWWpNjU9IsGMcuuqg4aUfbRXKgPIiHQq9FM,12202
+skarf/var/_covariance.py,sha256=oVY_4ok8WSmICuUy0hTv0PHpkdkj_qxwHbBxxqsLL-w,9651
+skarf/var/_linear.py,sha256=AvZkj74n-fe566dFl6lkDkb6jNVFzoioXiKesebDU3c,9125
+skarf/var/_multi.py,sha256=iWd-5dv3Pit03lm7_uqa54AW2mNIjcg673k8N7qvK3E,13634
+skarf/var/_utils.py,sha256=2D1MXpKqTxuZv7DZNTbwP1d2qXsGBpjY-qqjRr6ocN8,3101
+skarf-0.1.0a0.dist-info/LICENSE,sha256=0-s4tzE0PhegPtHqhSPvhvUVJLsf0EvCxTaTI-vzCac,1077
+skarf-0.1.0a0.dist-info/METADATA,sha256=n-T38ve0m775aIAk7aElXWoZosI8v4oH2RZ0N0AS9lU,2604
+skarf-0.1.0a0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+skarf-0.1.0a0.dist-info/top_level.txt,sha256=_0ms5EpAsi6tC9H1BzXJo9HMMk_c5KxsqTHN2fw_sHA,6
+skarf-0.1.0a0.dist-info/RECORD,,
