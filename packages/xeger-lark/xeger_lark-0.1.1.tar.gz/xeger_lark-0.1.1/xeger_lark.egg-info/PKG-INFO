@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: xeger-lark
+Version: 0.1.1
+Summary: A library for generating matching strings from a valid PCRE regex
+Home-page: https://github.com/joshbarbee/xeger
+Author: Josh Barbee
+Author-email: joshbarbee1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: regex
+Requires-Dist: lark
+Requires-Dist: pytest
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
