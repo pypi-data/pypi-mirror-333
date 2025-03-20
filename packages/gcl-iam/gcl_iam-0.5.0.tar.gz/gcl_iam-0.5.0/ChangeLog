@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.5.0
+-----
+
+* Add method to retrieve user roles for a specific user in functional tests
