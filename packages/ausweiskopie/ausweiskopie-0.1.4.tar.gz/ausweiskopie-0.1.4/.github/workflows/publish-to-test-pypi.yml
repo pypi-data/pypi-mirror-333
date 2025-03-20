@@ -1,0 +1,246 @@
+name: Publish Python distribution to PyPI and TestPyPI
+
+on: push
+
+jobs:
+  build:
+    name: Build distribution
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        fetch-depth: "0"
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.x"
+    - name: Install pypa/build
+      run: >-
+        python3 -m
+        pip install
+        build
+        --user
+    - name: Build a binary wheel and a source tarball
+      run: python3 -m build
+    - name: Store the distribution packages
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+
+  build-exe:
+    name: Build binary for Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: "0"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install package and pyinstaller.
+        run: |
+          pip install . pyinstaller
+      - name: Package binary
+        run:
+          pyinstaller contrib/pyinstaller-entrypoint.spec
+      - name: Store the binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: pyinstaller-binaries
+          path: dist/
+
+  build-macos-intel:
+    name: Build binary for MacOS (Intel)
+    runs-on: macos-13
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: "0"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install package and pyinstaller.
+        run: |
+          pip install . pyinstaller
+      - name: Package binary
+        run:
+          pyinstaller contrib/pyinstaller-entrypoint.spec
+      - name: Rename binary
+        run:
+          mv dist/ausweiskopie dist/ausweiskopie-macos-intel
+      - name: Store the binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: pyinstaller-binaries-macos-intel
+          path: dist/
+
+  build-macos-arm64:
+    name: Build binary for MacOS (ARM64)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: "0"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install package and pyinstaller.
+        run: |
+          pip install . pyinstaller
+      - name: Package binary
+        run:
+          pyinstaller contrib/pyinstaller-entrypoint.spec
+      - name: Rename binary
+        run:
+          mv dist/ausweiskopie dist/ausweiskopie-macos-arm64
+      - name: Store the binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: pyinstaller-binaries-macos-arm64
+          path: dist/
+
+  publish-to-pypi:
+    name: >-
+      Publish Python distribution to PyPI
+    if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
+    needs:
+    - build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/ausweiskopie  # Replace <package-name> with your PyPI project name
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Publish distribution to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+
+  update-flatpak:
+    name: >-
+      Update flatpak definition (external repository)
+    runs-on: ubuntu-24.04
+    environment: flatpak
+    needs: publish-to-pypi
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: "0"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: sudo apt-get install --yes dbus libdbus-1-dev libglib2.0-dev libcairo2-dev libgirepository-2.0-dev
+      - run: dbus-run-session contrib/update-flatpak.sh
+      - name: Store the binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: flathub-repo
+          path: flathub/.git
+      - run: contrib/push-flatpak.sh
+        env:
+          FLATPAK_UPDATE_KEY: ${{ secrets.FLATPAK_UPDATE_KEY }}
+
+  github-release:
+    name: >-
+      Sign the Python distribution with Sigstore
+      and upload them to GitHub Release
+    needs:
+    - publish-to-pypi
+    - build-exe
+    - build-macos-arm64
+    - build-macos-intel
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # IMPORTANT: mandatory for making GitHub Releases
+      id-token: write  # IMPORTANT: mandatory for sigstore
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Download windows executables
+      uses: actions/download-artifact@v4
+      with:
+        name: pyinstaller-binaries
+        path: dist/
+    - name: Download MacOS intel executables
+      uses: actions/download-artifact@v4
+      with:
+        name: pyinstaller-binaries-macos-intel
+        path: dist/
+    - name: Download MacOS ARM64 executables
+      uses: actions/download-artifact@v4
+      with:
+        name: pyinstaller-binaries-macos-arm64
+        path: dist/
+    - name: Sign the dists with Sigstore
+      uses: sigstore/gh-action-sigstore-python@v3.0.0
+      with:
+        inputs: >-
+          ./dist/*.tar.gz
+          ./dist/*.whl
+          ./dist/*.exe
+          ./dist/ausweiskopie-macos-*
+    - name: Create GitHub Release
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: >-
+        gh release create
+        "$GITHUB_REF_NAME"
+        --repo "$GITHUB_REPOSITORY"
+        --notes ""
+    - name: Upload artifact signatures to GitHub Release
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      # Upload to GitHub Release using the `gh` CLI.
+      # `dist/` contains the built packages, and the
+      # sigstore-produced signatures and certificates.
+      run: >-
+        gh release upload
+        "$GITHUB_REF_NAME" dist/**
+        --repo "$GITHUB_REPOSITORY"
+
+  publish-to-testpypi:
+    name: Publish Python distribution to TestPyPI
+    needs:
+    - build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/trunk'
+
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/ausweiskopie
+
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Publish distribution to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        repository-url: https://test.pypi.org/legacy/
+        verbose: true
