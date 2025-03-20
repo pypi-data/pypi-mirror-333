@@ -1,0 +1,54 @@
+Metadata-Version: 2.2
+Name: interlify
+Version: 1.0.2
+Summary: A Python client for the Interlify API
+Home-page: https://github.com/EricZhou0815/Interlify-python-sdk
+Author: Interlify
+Author-email: eric.zhoul@interlify.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Interlify Client
+
+A Python client for the [Interlify API](https://www.interlify.com).
+
+## Installation
+
+Install via pip:
+
+```bash
+pip install interlify-client
+```
+
+Usage:
+
+```python
+from interlify.client import Interlify
+
+client = Interlify(
+    api_key="YOUR_API_KEY", 
+    project_id="YOUR_PROJECT_ID", 
+    auth_headers=[
+        {"Authorization": "Bearer YOUR_TOKEN"}
+        ]
+    )
+
+tools = client.tools()
+
+print("Available Tools:", tools)
+
+```
+
