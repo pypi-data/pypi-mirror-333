@@ -1,0 +1,37 @@
+# Include the license file
+include LICENSE
+
+# Include the README file
+include README.md
+
+# Include the requirements file
+include requirements.txt
+
+# Include any *.txt files in the root directory
+include *.txt
+
+# Include documentation
+include docs/*.md
+include docs/*.rst
+include docs/*.txt
+recursive-include docs *.py
+recursive-include docs *.jpg
+recursive-include docs *.png
+
+# Include examples
+recursive-include examples *.py
+recursive-include examples *.md
+
+# Include data files
+recursive-include data *
+
+# Include test files
+recursive-include tests *.py
+
+# Include configuration files
+include *.cfg
+include *.ini
+include *.yml
+include *.yaml
+include pyproject.toml
+

@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# Project metadata is read from setup.py
+
+[tool.setuptools]
+# Use setup.py for configuration
+
