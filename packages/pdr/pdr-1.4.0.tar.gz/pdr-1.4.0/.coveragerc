@@ -1,0 +1,6 @@
+[run]
+source_pkgs = pdr
+omit =
+    */formats/*
+    */pds4_tools/extern/*
+    */pvl_utils.py
