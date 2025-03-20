@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: whisper_ai_stanley
+Version: 0.1.0
+Summary: 植想说的AI客服工具
+Home-page: https://github.com/yourusername/my_package
+Author: 植想说
+Author-email: lizhenhua@zxslife.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
