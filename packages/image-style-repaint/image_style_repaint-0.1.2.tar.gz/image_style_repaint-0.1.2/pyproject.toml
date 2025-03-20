@@ -1,0 +1,15 @@
+[project]
+name = "image-style-repaint"
+version = "0.1.2"
+description = "Generate styled image using bailian/wanx-style-repaint-v1"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+"image-style-repaint" = "style_repaint:main"
+"isr"= "style_repaint:main"
+
