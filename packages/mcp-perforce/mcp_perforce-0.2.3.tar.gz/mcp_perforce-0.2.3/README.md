@@ -1,0 +1,44 @@
+# MCP Perforce 服务器
+
+Perforce的模型上下文协议(MCP)服务器实现
+
+## 功能概述
+
+MCP Perforce服务器提供了一个简单的获取reviews目录，以及目录中每个变更文件详细内容
+
+## 配置说明
+
+cursor MCP 配置说明
+```json
+{
+    "mcpServers": {
+      "code review": {
+          "command": "uvx",
+          "args": [
+              "mcp-perforce",
+              "--p4config",
+              "./path/to/your/p4config.json"
+          ]
+      }
+  }      
+}  
+```
+
+p4config.json说明
+
+```json
+{
+  "swarm_username": "your_swarm_username",
+  "swarm_password": "your_swarm_password",
+  "swarm_base_url": "https://your_swarm_server",
+  "swarm_api_url": "https://your_swarm_server/api/v10"
+}
+```
+
+## 使用说明
+
+cursor agent 模式中输入
+```
+帮我review一下3280706
+```
+cursor将自动使用mcp-perforce拉取reviews中的文件列表进行review。
