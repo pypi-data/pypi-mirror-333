@@ -1,0 +1,8 @@
+README.md
+pip_wrapper.py
+setup.py
+skip_pip.egg-info/PKG-INFO
+skip_pip.egg-info/SOURCES.txt
+skip_pip.egg-info/dependency_links.txt
+skip_pip.egg-info/entry_points.txt
+skip_pip.egg-info/top_level.txt
