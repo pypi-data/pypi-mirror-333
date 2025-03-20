@@ -1,0 +1,37 @@
+Metadata-Version: 2.2
+Name: pydub-ng
+Version: 0.1.0
+Summary: Manipulate audio with an simple and easy high level interface
+Author-email: James Robert <jiaaro@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/medecau/pydub-ng
+Project-URL: Repository, https://github.com/medecau/pydub-ng
+Keywords: audio,sound,high-level
+Classifier: Development Status :: 7 - Inactive
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Topic :: Multimedia :: Sound/Audio :: Conversion
+Classifier: Topic :: Multimedia :: Sound/Audio :: Editors
+Classifier: Topic :: Multimedia :: Sound/Audio :: Mixers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: audioop-lts>=0.2.1; python_version >= "3.13"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: pytest-datadir>=1.4.1; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
