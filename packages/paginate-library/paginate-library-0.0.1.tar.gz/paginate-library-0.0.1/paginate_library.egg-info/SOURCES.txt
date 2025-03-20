@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+paginate-library/__init__.py
+paginate-library/paginate.py
+paginate_library.egg-info/PKG-INFO
+paginate_library.egg-info/SOURCES.txt
+paginate_library.egg-info/dependency_links.txt
+paginate_library.egg-info/requires.txt
+paginate_library.egg-info/top_level.txt
