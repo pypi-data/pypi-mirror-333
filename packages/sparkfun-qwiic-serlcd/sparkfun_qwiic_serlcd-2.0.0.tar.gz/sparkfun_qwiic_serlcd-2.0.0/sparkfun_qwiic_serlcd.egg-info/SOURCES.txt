@@ -1,0 +1,10 @@
+DESCRIPTION.rst
+LICENSE
+README.md
+pyproject.toml
+qwiic_serlcd.py
+sparkfun_qwiic_serlcd.egg-info/PKG-INFO
+sparkfun_qwiic_serlcd.egg-info/SOURCES.txt
+sparkfun_qwiic_serlcd.egg-info/dependency_links.txt
+sparkfun_qwiic_serlcd.egg-info/requires.txt
+sparkfun_qwiic_serlcd.egg-info/top_level.txt
