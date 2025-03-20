@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: online-news-classification
+Version: 1.3.5
+Summary: 
+Author: Joana Santos
+Author-email: ffs@isep.ipp.pt
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+Download this dataset: https://doi.org/10.5281/zenodo.15024623 and put it into dataset folder.
