@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: parth_indian_states_25
+Version: 0.1
+Summary: A Django app that provides Indian state choices as a model and form field.
+Author: Parth
+Author-email: psp7039@mail.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: django
+
