@@ -1,0 +1,12 @@
+click>=7.1
+gevent
+
+[all]
+PyYAML
+toml
+
+[toml]
+toml
+
+[yaml]
+PyYAML
