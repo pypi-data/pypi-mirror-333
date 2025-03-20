@@ -1,0 +1,17 @@
+dbrepos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbrepos/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbrepos/core/abstract.py,sha256=-zQptSRAhgzdqihpuRmP_66o1GLqo3vXkuuyOjnGTDY,27346
+dbrepos/core/exceptions.py,sha256=rR7RNmd4-x36oKI6KGRxMSxmlkB47sGUqYTz4PlIBZE,45
+dbrepos/core/types.py,sha256=Nxl22NFwfbQ6d3HiZkDODsF9cQ9z9GTtUIocXG_BVNw,1011
+dbrepos/decorators.py,sha256=kwvZkHw8syfw6owecWwYnJUrZD5S4nJxhgBpFhLb8Bk,6034
+dbrepos/django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbrepos/django/filters.py,sha256=MQtYtoXjH55jefGARW3jodzYRNr4zWik3KrbaW7vquk,2257
+dbrepos/django/repo.py,sha256=RRpNQOC2tL4AI9naNIKXZ5FrFf0uS0DerbrQxSrftGU,10386
+dbrepos/shortcuts.py,sha256=-PsaJ70LoP4c31aVz9wHmm2uUBslZ3mez5bpsxZ3s-g,870
+dbrepos/sqlalchemy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbrepos/sqlalchemy/filters.py,sha256=9BlrBCh92xm5O_2mrhNIjUrjheBHa9DH3Z_IyQWUS8Q,2923
+dbrepos/sqlalchemy/repo.py,sha256=RBPEPsUBk-K2ldZxv89CoKbLkawzhrc1Xbs3JbyJD-s,12922
+dbrepos-0.1.0.dist-info/LICENSE,sha256=F6_fQ2j5zIjLtnBMH39Y3STNN81Fy-mH08x8oUwnYFY,1070
+dbrepos-0.1.0.dist-info/METADATA,sha256=eu2C9cXv3LtsiClJ1WxTVldq9P5qSDmDL0y1c_Hx4ic,2456
+dbrepos-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+dbrepos-0.1.0.dist-info/RECORD,,
