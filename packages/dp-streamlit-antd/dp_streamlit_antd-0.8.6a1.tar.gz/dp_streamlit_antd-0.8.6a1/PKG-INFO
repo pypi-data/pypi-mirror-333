@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: dp-streamlit-antd
+Version: 0.8.6a1
+Home-page: https://github.com/pragmatic-streamlit/streamlit-antd
+Author: mapix
+Author-email: mapix.me@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: streamlit>=0.63
