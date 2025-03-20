@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: vecem
+Version: 0.2.0
+Summary: A library for downloading datasets from Vecem
+Author: vecem
+Author-email: vectorembeddings@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Requires-Dist: requests>=2.25.0
+Requires-Dist: azure-storage-blob>=12.0.0
+Requires-Dist: azure-core>=1.26.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
