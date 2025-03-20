@@ -1,0 +1,106 @@
+---
+- name: Create working directory
+  ansible.builtin.file:
+    path: "{{ thales_client_working_dir }}"
+    state: directory
+    mode: '755'
+
+- name: Create nfast group
+  ansible.builtin.group:
+    name: nfast
+    gid: "{{ thales_client_gid }}"
+
+- name: Create nfast user
+  ansible.builtin.user:
+    name: nfast
+    uid: "{{ thales_client_uid }}"
+    group: "{{ thales_client_gid }}"
+    create_home: true
+    home: /opt/nfast
+
+- name: Set selinux bool to allow barbican containers to access /opt/nfast
+  ansible.posix.seboolean:
+    name: os_barbican_write_pki
+    state: true
+    persistent: true
+  when: ansible_os_family | lower == 'redhat'
+
+- name: Ensure unzip is avaliable to unzip ISO file
+  ansible.builtin.dnf:
+    name: unzip
+    state: present
+
+- name: Download and unzip Security World ISO file from given url
+  ansible.builtin.unarchive:
+    src: "{{ security_world_iso_zip_url }}"
+    dest: "{{ thales_client_working_dir }}"
+    remote_src: true
+
+- name: Set Security World ISO file path
+  ansible.builtin.set_fact:
+    security_world_iso: "{{ thales_client_working_dir }}/{{ security_world_iso_zip_url | basename | splitext | first }}"
+
+- name: Extract RPMs and key from Security World ISO
+  community.general.iso_extract:
+    image: "{{ security_world_iso }}"
+    dest: "{{ thales_client_working_dir }}"
+    files:
+      - linux-rpms/amd64/nShield-hwsp.rpm
+      - linux-rpms/amd64/nShield-ctls.rpm
+      - linux-rpms/amd64/nShield-ncsnmp.rpm
+      - linux-rpms/amd64/pubkey.asc
+
+- name: Import Security World RPM key
+  ansible.builtin.rpm_key:
+    state: present
+    key: "{{ thales_client_working_dir }}/pubkey.asc"
+
+- name: Install Security World RPMs
+  ansible.builtin.dnf:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - "{{ thales_client_working_dir }}/nShield-hwsp.rpm"
+      - "{{ thales_client_working_dir }}/nShield-ctls.rpm"
+      - "{{ thales_client_working_dir }}/nShield-ncsnmp.rpm"
+
+- name: Run installer
+  ansible.builtin.shell: set -o pipefail && echo "1" | /opt/nfast/sbin/install
+
+- name: Create cknfastrc
+  ansible.builtin.template:
+    src: cknfastrc.j2
+    dest: /opt/nfast/cknfastrc
+    mode: '644'
+
+- name: Create snmp.conf
+  ansible.builtin.copy:
+    dest: /opt/nfast/etc/snmp/snmp.conf
+    content: |
+      defaultPort 21161
+    force: true
+    mode: '644'
+
+- name: Enroll client to hsms
+  ansible.builtin.include_tasks: client_enroll.yaml
+  loop: "{{ nshield_hsms }}"
+
+- name: Set selinux contexts for /opt/nfast
+  ansible.builtin.command: restorecon -R /opt/nfast
+
+- name: Restart hardserver
+  ansible.builtin.command: /opt/nfast/sbin/init.d-ncipher restart
+
+- name: Do an enquiry to confirm connection
+  ansible.builtin.command: /opt/nfast/bin/enquiry
+  register: enquiry
+
+- name: Enquiry result
+  ansible.builtin.debug:
+    var: enquiry
+
+- name: Set up rfs_sync
+  ansible.builtin.shell: set -o pipefail && echo "yes" | /opt/nfast/bin/rfs-sync --setup {{ thales_rfs_server_ip_address }}
+
+- name: Get keys from rfs server
+  ansible.builtin.command: /opt/nfast/bin/rfs-sync --update
