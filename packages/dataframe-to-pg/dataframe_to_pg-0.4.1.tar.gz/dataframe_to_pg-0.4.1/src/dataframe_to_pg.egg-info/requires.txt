@@ -1,0 +1,6 @@
+pandas>=2.2.3
+polars>=1.21.0
+psycopg2-binary>=2.9.10
+pyjanitor>=0.30.0
+sqlalchemy>=2.0.37
+tqdm>=4.67.1

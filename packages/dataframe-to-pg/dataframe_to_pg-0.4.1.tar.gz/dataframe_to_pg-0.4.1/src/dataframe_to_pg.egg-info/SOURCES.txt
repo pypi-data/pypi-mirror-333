@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/dataframe_to_pg/__init__.py
+src/dataframe_to_pg/py.typed
+src/dataframe_to_pg/writer.py
+src/dataframe_to_pg.egg-info/PKG-INFO
+src/dataframe_to_pg.egg-info/SOURCES.txt
+src/dataframe_to_pg.egg-info/dependency_links.txt
+src/dataframe_to_pg.egg-info/requires.txt
+src/dataframe_to_pg.egg-info/top_level.txt
+tests/test_writer.py
