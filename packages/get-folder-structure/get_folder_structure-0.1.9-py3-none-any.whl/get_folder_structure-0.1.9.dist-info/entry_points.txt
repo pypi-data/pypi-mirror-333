@@ -1,0 +1,3 @@
+[console_scripts]
+get-folder-structure=get_folder_structure.main:main
+
