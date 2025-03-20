@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: helicone_prompts
+Version: 0.0.1
+Summary: Helicone Prompt Formatter is a library designed to format JSON objects with the intention of using them for LLM applications.
+License: ISC
+Author: Helicone, Inc.
+Author-email: help@helicone.ai
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+## Install deps
+
+```bash
+poetry install
+```
+
+## Run tests
+
+```bash
+poetry run pytest
+```
+
