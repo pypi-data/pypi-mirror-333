@@ -1,0 +1,13 @@
+promptpal/__init__.py,sha256=fNZAfoNxq2AwD_qFuprBeierl2X8CHvbpWSYc7pdVXM,111
+promptpal/promptpal.py,sha256=N2j9PvBWwSLoDyuwJtCYOOSTL8QDozo3U0vUGhCqKDo,25568
+promptpal/promptpal_ui.py,sha256=URdPCTxnwwHDxq2djqTvcUCOZZjsy8pzg-Jw5CHtC44,7027
+promptpal/roles/__init__.py,sha256=35pDzhgOAjIyuWr7c0E_BOrmHVbPCYehi7-Oq4I5h44,99
+promptpal/roles/role.py,sha256=WAGZLZIcYZG8QC61O8KoXLAW3QC9oMJXFaUnjDPIXps,1797
+promptpal/roles/role_schema.py,sha256=h9PRqEA45JdoV6GRZPur8TQUgoG1niRlRzBuGV9BsiY,536
+promptpal/roles/role_schema.yaml,sha256=jRQxs0yWi0ykhrTJQW3AIm_GFxxWGXGDPyvc1kCSqSU,1705
+promptpal/roles/roles.yaml,sha256=orrK5k464BrNWQhW3gNPYxzUvuNFGC5pv52LS4EgDuw,38156
+promptpal-2.0.5.dist-info/LICENSE.txt,sha256=C45WH1WEHSgeVL13eKcsUm_tR1gCzrkqe3xABqPgq3c,1071
+promptpal-2.0.5.dist-info/METADATA,sha256=-R7OierX4HQ2Dv_NnUNDVCeq_YpIXSimdzmHame_CxI,12660
+promptpal-2.0.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+promptpal-2.0.5.dist-info/top_level.txt,sha256=8EBwCg4DnkczUMeJbabqG88DVvpKTTX_xgDw11YRr0I,10
+promptpal-2.0.5.dist-info/RECORD,,
