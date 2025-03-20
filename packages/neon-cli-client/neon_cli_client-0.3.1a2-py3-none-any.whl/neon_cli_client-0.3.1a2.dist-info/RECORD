@@ -1,0 +1,12 @@
+neon_cli/__init__.py,sha256=fvtWNFTn-Bn-3pE2HN7jkTuFfn3WYjog6m1acXbEHUY,2433
+neon_cli/__main__.py,sha256=UUnAA_5_clXvlhA2CnXlDu-CEkymacwetKuOpZBfvu4,3776
+neon_cli/cli.py,sha256=RgopBoXkUJPkfv38disGCO7wMSutMGFnw0JP8tdMMOw,2824
+neon_cli/gui_server.py,sha256=5stXFVGRXLjY_krbdny-Yn3B6F1IlRihlHAR2Owa5Sk,6242
+neon_cli/text_client.py,sha256=Iuq5XIkYRHT7MvHBMUISknCwsHGgdyePWui7ezlD0N4,48473
+neon_cli/utils.py,sha256=PBzFs1Ee3DwrNzMZ-ColLvuqmT_gJwL3JctrqqACTJw,94
+neon_cli_client-0.3.1a2.dist-info/LICENSE.md,sha256=duRln-UxVnKWHvIyXZeOgHZv1irQZdI-lkcjKCXFz2M,11745
+neon_cli_client-0.3.1a2.dist-info/METADATA,sha256=WsbILSqU7hnYua6Yajid-vEvhU2IzlmpwV0_cRojJv8,1849
+neon_cli_client-0.3.1a2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+neon_cli_client-0.3.1a2.dist-info/entry_points.txt,sha256=aCTbMQZ17oVNKm6iDm65f-DivrADAQvnCgD9H1xT_Jg,51
+neon_cli_client-0.3.1a2.dist-info/top_level.txt,sha256=vVXnTS1KMPYOlG_GuwSC80myxPIi1lwJdyHzwn6bMsI,9
+neon_cli_client-0.3.1a2.dist-info/RECORD,,
