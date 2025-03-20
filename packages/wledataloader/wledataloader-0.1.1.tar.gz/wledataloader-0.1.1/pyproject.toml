@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wledataloader"
+version = "0.1.1"
+description = "A dataloader for the Wireless Link Estimation dataset to train and test ML models."
+authors = [{ name = "NT Nguyen", email = "info@iec-uit.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "appdirs",
+    "natsort",
+    "numpy",
+    "pandas",
+    "requests",
+    "scikit_learn",
+    "tqdm"
+]
+
+[tool.setuptools]
+packages = ["wledataloader"]
+
+[project.urls]
+Homepage = "https://github.com/IECResearchGroup/WLEDataLoader"
+Repository = "https://github.com/IECResearchGroup/WLEDataLoader"
+Documentation = "https://github.com/IECResearchGroup/WLEDataLoader/wiki"
+Issues = "https://github.com/IECResearchGroup/WLEDataLoader/issues"
