@@ -1,0 +1,11 @@
+contextManager/__init__.py,sha256=gpzigtM56eO_P_Sa3mn6-172zsR-BwxKT4-w0Z6FFiQ,104
+contextManager/combined_types.py,sha256=GScBqhT3e-_HBkxfFx0R6m2iE68ssPT2Kbm4kICwYy4,1493
+contextManager/contextManager.py,sha256=TvFILq1xdcWLBK-d4bjDVp4UoBKMmfAnfYVcSPWN_wI,8645
+contextManager/conversions.py,sha256=N-tgASNXtlFhpiCPGvrtEvd6jHnxsvCUPsTmfmfSjEM,539
+testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testing/testing.py,sha256=qj73AYL-kX1x-ilnFXGQkS7CdTzAEvGCLlih9aMql9Q,1151
+mariadb_context_manager-1.0.0.dist-info/LICENSE.txt,sha256=g3zQLfXEvYT8clP6kB6ohtCsrcRFmFdEHX-2oq1h3T0,1066
+mariadb_context_manager-1.0.0.dist-info/METADATA,sha256=jFrW6Ziuu7hHFADYiVllf-qbMVY4lPhxRshtN4d3RWk,3676
+mariadb_context_manager-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mariadb_context_manager-1.0.0.dist-info/top_level.txt,sha256=zgCv6Usp7YN34kVDJYmN2XIlc1vz1HCOGcj8gfaAGOE,23
+mariadb_context_manager-1.0.0.dist-info/RECORD,,
