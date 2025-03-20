@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+claude_logging/__init__.py
+claude_logging/__main__.py
+claude_logging/ansi2html.py
+claude_logging/pytermdump.c
+claude_logging/termdump.c
+claude_logging.egg-info/PKG-INFO
+claude_logging.egg-info/SOURCES.txt
+claude_logging.egg-info/dependency_links.txt
+claude_logging.egg-info/entry_points.txt
+claude_logging.egg-info/top_level.txt
