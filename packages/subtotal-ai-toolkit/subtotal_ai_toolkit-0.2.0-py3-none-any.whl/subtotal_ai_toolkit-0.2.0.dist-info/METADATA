@@ -1,0 +1,149 @@
+Metadata-Version: 2.2
+Name: subtotal-ai-toolkit
+Version: 0.2.0
+Summary: Subtotal AI Toolkit
+Author-email: Subtotal <support@subtotal.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2024 Stripe
+        Copyright (c) 2025 Subtotal
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Bug Tracker, https://github.com/subtotal-inc/ai-toolkit/issues
+Project-URL: Source Code, https://github.com/subtotal-inc/ai-toolkit
+Keywords: subtotal,api
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic<3.0.0,>=2.9.0
+Provides-Extra: openai
+Requires-Dist: openai<2.0.0,>=1.65.0; extra == "openai"
+Provides-Extra: langchain
+Requires-Dist: langchain<1.0.0,>=0.3.0; extra == "langchain"
+Provides-Extra: crewai
+Requires-Dist: crewai<1.0.0,>=0.76.0; extra == "crewai"
+Requires-Dist: crewai-tools<1.0.0,>=0.13.0; extra == "crewai"
+Provides-Extra: all
+Requires-Dist: subtotal-ai-toolkit[crewai,langchain,openai]; extra == "all"
+
+# Subtotal AI Toolkit - Python
+
+The Subtotal AI Toolkit library enables popular agent frameworks including LangChain and CrewAI to integrate with the Subtotal API through function calling. The library is not exhaustive of the entire Subtotal API.
+
+## Installation
+
+You don't need this source code unless you want to modify the package. If you just
+want to use the package, just run:
+
+```sh
+pip install subtotal-ai-toolkit
+```
+
+You can specify the specific optional dependencies you need if you'd like them to be installed by this package. For example, if you intend on using the OpenAI integration, you can run:
+
+```sh
+pip install subtotal-ai-toolkit[openai]
+```
+
+Optional dependencies include:
+
+- `openai`
+- `langchain`
+- `crewai`
+
+If you'd like to only install all optional dependencies, you can run:
+
+```sh
+pip install subtotal-ai-toolkit[all]
+```
+
+### Requirements
+
+- Python 3.11+
+
+## Usage
+
+The library needs to be configured with your account's secret API key which is
+available in your [Subtotal Dashboard][api-keys].
+
+```python
+from subtotal_ai_toolkit.crewai.toolkit import SubtotalAIToolkit
+from subtotal_ai_toolkit.configuration import Configuration, Tools
+
+subtotal_toolkit = SubtotalAIToolkit(
+    secret_key="YOUR_SECRET_KEY",
+    configuration=Configuration(tools=[Tools.ALL])
+)
+```
+
+**NOTE:** The toolkit works with LangChain, CrewAI, and OpenAI. The above example is for CrewAI. Use the correct import depending on which framework you're using.
+
+```python
+# CrewAI
+from subtotal_ai_toolkit.crewai.toolkit import SubtotalAIToolkit
+
+# LangChain
+from subtotal_ai_toolkit.langchain.toolkit import SubtotalAIToolkit
+
+# OpenAI
+from subtotal_ai_toolkit.openai.toolkit import SubtotalAIToolkit
+```
+
+The toolkit can be passed as a list of tools. For example (using CrewAI):
+
+```python
+from crewai import Agent, Task, Crew
+
+subtotal_agent = Agent(
+    role="Subtotal Agent",
+    goal="Integrate with the Subtotal API effectively to support our business.",
+    backstory="You have been using the Subtotal API for a long time.",
+    tools=[*subtotal_ai_toolkit.get_tools()],
+    allow_delegation=False,
+    verbose=True,
+)
+
+get_merchants = Task(
+    description="Get the list of merchants supported by the Subtotal API.",
+    expected_output="merchants",
+    agent=subtotal_agent,
+)
+
+crew = Crew(
+    agents=[subtotal_agent],
+    tasks=[get_merchants],
+    verbose=True,
+    planning=True,
+)
+
+crew.kickoff()
+```
+
+Examples for LangChain, CrewAI, and OpenAI are included in the `examples` directory.
+
+[api-keys]: https://dashboard.subtotal.com/api-keys
+
+## Development
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
