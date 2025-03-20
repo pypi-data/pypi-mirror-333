@@ -1,0 +1,4 @@
+pyMuPDF<2.0.0,>=1.25.3
+shapely<3.0.0,>=2.0.6
+tiktoken<1.0.0,>=0.9.0
+doc-page-extractor==0.0.6
