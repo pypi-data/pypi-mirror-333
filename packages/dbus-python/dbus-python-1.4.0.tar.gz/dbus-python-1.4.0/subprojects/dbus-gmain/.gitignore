@@ -1,0 +1,22 @@
+# Copyright 2006-2022 Collabora Ltd.
+# SPDX-License-Identifier: MIT
+
+*.a
+*.gcda
+*.gcno
+*.lineno
+*.lo
+*.o
+*~
+.deps/
+.libs/
+/Makefile
+/Makefile.in
+/libdbus-gmain.la
+/test-suite.log
+/tests/*.log
+/tests/*.trs
+/tests/libtest.la
+/tests/test-30574
+/tests/test-thread-client
+/tests/test-thread-server

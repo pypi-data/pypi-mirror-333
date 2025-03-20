@@ -1,0 +1,170 @@
+# Copyright © 2015-2022 Collabora Ltd.
+# SPDX-License-Identifier: MIT
+#
+# Permission is hereby granted, free of charge, to any person
+# obtaining a copy of this software and associated documentation files
+# (the "Software"), to deal in the Software without restriction,
+# including without limitation the rights to use, copy, modify, merge,
+# publish, distribute, sublicense, and/or sell copies of the Software,
+# and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+# BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+# ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+image: debian:bookworm-slim
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_PIPELINE_SOURCE == 'push' && $CI_PROJECT_NAMESPACE == 'dbus'
+
+stages:
+  - build
+
+before_script:
+  - ./tools/ci-install.sh
+
+variables:
+  dbus_ci_configure_flags: ''
+  ci_parallel: "2"
+  ci_distro: "debian"
+  ci_suite: "bookworm"
+  GIT_STRATEGY: clone
+
+.common:
+  script: &script
+    - env PATH="$HOME/.local/bin:/usr/lib/ccache:$PATH" ./tools/ci-build.sh $dbus_ci_configure_flags
+  artifacts: &artifacts
+    paths:
+      - _autotools/*.log
+      - _meson-build/meson-logs
+    when: always
+
+build:python3.7:
+  stage: build
+  image: "debian:buster-slim"
+  variables:
+    ci_suite: buster
+    dbus_ci_system_python: python3
+  script: *script
+  artifacts: *artifacts
+
+build:python3.7-dbg:
+  stage: build
+  image: "debian:buster-slim"
+  variables:
+    ci_suite: buster
+    dbus_ci_system_python: python3-dbg
+  script: *script
+  artifacts: *artifacts
+
+build:python3.9:
+  stage: build
+  image: "debian:bullseye-slim"
+  variables:
+    ci_suite: bullseye
+    dbus_ci_system_python: python3.9
+  script: *script
+  artifacts: *artifacts
+
+build:python3.9-dbg:
+  stage: build
+  image: "debian:bullseye-slim"
+  variables:
+    ci_suite: bullseye
+    dbus_ci_system_python: python3.9-dbg
+    dbus_ci_system_python_module_suffix: -dbg
+  script: *script
+  artifacts: *artifacts
+
+build:python3.10:
+  stage: build
+  image: "ubuntu:jammy"
+  variables:
+    ci_distro: ubuntu
+    ci_suite: jammy
+    dbus_ci_system_python: python3.10
+  script: *script
+  artifacts: *artifacts
+
+build:python3.10-dbg:
+  stage: build
+  image: "ubuntu:jammy"
+  variables:
+    ci_distro: ubuntu
+    ci_suite: jammy
+    dbus_ci_system_python: python3.10-dbg
+    dbus_ci_system_python_module_suffix: -dbg
+  script: *script
+  artifacts: *artifacts
+
+build:python3.11:
+  stage: build
+  image: "debian:bookworm-slim"
+  variables:
+    ci_suite: bookworm
+    dbus_ci_system_python: python3.11
+  script: *script
+  artifacts: *artifacts
+
+build:python3.11-dbg:
+  stage: build
+  image: "debian:bookworm-slim"
+  variables:
+    ci_suite: bookworm
+    dbus_ci_system_python: python3.11-dbg
+    dbus_ci_system_python_module_suffix: -dbg
+  script: *script
+  artifacts: *artifacts
+
+build:python3.12:
+  stage: build
+  image: "ubuntu:noble"
+  variables:
+    ci_distro: ubuntu
+    ci_suite: noble
+    dbus_ci_system_python: python3.12
+  script: *script
+  artifacts: *artifacts
+
+build:python3.12-dbg:
+  stage: build
+  image: "ubuntu:noble"
+  variables:
+    ci_distro: ubuntu
+    ci_suite: noble
+    dbus_ci_system_python: python3.12-dbg
+    dbus_ci_system_python_module_suffix: ''
+  script: *script
+  artifacts: *artifacts
+
+build:python3.13:
+  stage: build
+  image: "debian:trixie-slim"
+  variables:
+    ci_suite: trixie
+    dbus_ci_system_python: python3.13
+  script: *script
+  artifacts: *artifacts
+
+build:python3.13-dbg:
+  stage: build
+  image: "debian:trixie-slim"
+  variables:
+    ci_suite: trixie
+    dbus_ci_system_python: python3.13-dbg
+    dbus_ci_system_python_module_suffix: ''
+  script: *script
+  artifacts: *artifacts
+
+# vim:set sw=2 sts=2 et:

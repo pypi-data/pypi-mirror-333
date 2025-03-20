@@ -1,0 +1,39 @@
+# Copyright 2022 Collabora Ltd.
+# SPDX-License-Identifier: MIT
+
+option(
+  'doc',
+  type: 'feature',
+  value: 'disabled',
+  deprecated: {'true': 'enabled', 'false': 'disabled'},
+  description: 'Enable documentation',
+)
+
+option(
+  'installed_tests',
+  type: 'boolean',
+  value: false,
+  description: 'Enable "as-installed" testing',
+)
+
+option(
+  'installed_tests_subdir',
+  type: 'string',
+  value: '',
+  description: 'Suffix to make installed-tests from multiple builds co-installable',
+)
+
+option(
+  'python',
+  type: 'string',
+  value: '',
+  description: 'Override the Python interpreter to use',
+)
+
+option(
+  'tests',
+  type: 'feature',
+  value: 'auto',
+  deprecated: {'true': 'auto', 'false': 'disabled'},
+  description: 'Enable unit tests',
+)
