@@ -1,0 +1,16 @@
+exclude_dirs:
+  [
+    "scramble_generator/.venv/",
+    "scramble_generator/dist/",
+    "scramble_generator/src/scramble_generator/__pycache__",
+    "scramble_generator/src/scramble_generator/resources/",
+    ".gitignore",
+    ".python-version",
+    "bandit.yaml",
+    "LICENSE",
+    "pyproject.toml",
+    "README.md",
+    "uv.lock",
+  ]
+tests: []
+skips: []
