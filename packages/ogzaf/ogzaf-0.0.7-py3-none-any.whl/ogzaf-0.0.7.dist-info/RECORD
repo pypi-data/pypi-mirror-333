@@ -1,0 +1,14 @@
+ogzaf/__init__.py,sha256=FoONRVuxAzyLV7Jto1ZkUOHNadQqxl1aYfHTnOVYOvk,241
+ogzaf/calibrate.py,sha256=Tuly1K2jnoyBDDKy8WBFVQ-Ys4q0UXoaYJixq5xCOoo,3359
+ogzaf/constants.py,sha256=6L486s_KdiDGExVrAnqNbsPm_uBXUR3_Ksm5pz3XZO8,14492
+ogzaf/income.py,sha256=Xj4b8DJevvH_1OHGKEcobmy-Vr6SchnIzOBCvAmjdvQ,18686
+ogzaf/input_output.py,sha256=EHcsgfsg0hYU6If4hfF6IdlJlfH5ls6iUUMZqnUeSOE,3717
+ogzaf/macro_params.py,sha256=hcPupjLqAkhz7yQGCBAr3YE4FJsZ2iD9qI4TiZHbeLc,11429
+ogzaf/ogzaf_default_parameters.json,sha256=xFX_W3stMDlLqds3nrc-kRXSMtnfnwr-ND0uckg6rIM,3047486
+ogzaf/ogzaf_default_parameters_multisector.json,sha256=ETfHrxxiCilLib14Bf_ECVgU6LRnkjLwELJ86Z8Am98,3048656
+ogzaf/utils.py,sha256=trmNwzhequ52tlABWFaIWtkw_FS89b6RJEMWpCKkz_U,1557
+ogzaf-0.0.7.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+ogzaf-0.0.7.dist-info/METADATA,sha256=2-UEKFhf0E0XxX5yLtbRiMO6qp4tB5RuNnKQcickYGA,8130
+ogzaf-0.0.7.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+ogzaf-0.0.7.dist-info/top_level.txt,sha256=jXBAaXdateyQwMQn7xx1L_PRHMKRvNhLgiZRjm5JXRk,6
+ogzaf-0.0.7.dist-info/RECORD,,
