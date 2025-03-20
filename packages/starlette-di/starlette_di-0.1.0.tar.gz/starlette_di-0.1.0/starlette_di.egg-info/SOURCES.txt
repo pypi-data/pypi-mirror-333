@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+starlette_di/__init__.py
+starlette_di/definitions.py
+starlette_di/inject.py
+starlette_di/middleware.py
+starlette_di/service_collection.py
+starlette_di/service_provider.py
+starlette_di/types.py
+starlette_di.egg-info/PKG-INFO
+starlette_di.egg-info/SOURCES.txt
+starlette_di.egg-info/dependency_links.txt
+starlette_di.egg-info/requires.txt
+starlette_di.egg-info/top_level.txt
+tests/test_injection.py
+tests/test_services.py
