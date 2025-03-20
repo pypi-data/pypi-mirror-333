@@ -1,0 +1,10 @@
+bullscatch_backtest/__init__.py,sha256=5Ljo1xUFXYvrw9vRc608nGipMq6eqR7nwmnWxkMgkPI,164
+bullscatch_backtest/config.py,sha256=Teid9AQQ9PcLFlYo1HeWLArbl0yRJQ1IM_0wK8BoBUQ,174
+bullscatch_backtest/expiry_list_spa.py,sha256=oG_I6EpuZQ7u4JQmiOpA1L19KISNJ4ss2YjV9AgKkdA,9711
+bullscatch_backtest/multidate_option_chain_spa.py,sha256=WceAGW5ma4bzrARhKNOVN8FqFw9dWQ9yknKiem4FiCU,5736
+bullscatch_backtest/option_chain_spa.py,sha256=SWPNIydcKQxSIioK22SlzjFKAlFYFHkfx9ZXo1BFmBg,5506
+bullscatch_backtest/spot_fetch_spa.py,sha256=wRLFF07LKxMVSGLZYExNt-sduxAYTRWLcHfyE9xOgpg,3318
+bullscatch-0.2.2.dist-info/METADATA,sha256=ujE6A0Z-64HY8Xs3YWRmS_X1BOIUQUzJ8I9o6YJ4QM0,4051
+bullscatch-0.2.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+bullscatch-0.2.2.dist-info/top_level.txt,sha256=MAspyFPUee641FoiJZI7DJjmeZKmzwl9d_AM_Uzf_x8,20
+bullscatch-0.2.2.dist-info/RECORD,,
