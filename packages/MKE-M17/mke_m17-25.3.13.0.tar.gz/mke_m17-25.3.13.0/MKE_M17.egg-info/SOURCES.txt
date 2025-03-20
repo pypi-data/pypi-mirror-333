@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+MKE_M17/L9110_I2C.py
+MKE_M17/__init__.py
+MKE_M17.egg-info/PKG-INFO
+MKE_M17.egg-info/SOURCES.txt
+MKE_M17.egg-info/dependency_links.txt
+MKE_M17.egg-info/requires.txt
+MKE_M17.egg-info/top_level.txt

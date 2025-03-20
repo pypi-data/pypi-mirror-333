@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=66.1.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MKE_M17"
+version = "25.03.13.0"
+authors = [
+    { name = "Quy-An", email = "quyan18b@gmail.com" },
+]
+description = "A package for controlling JetRacer"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "smbus>=1.1.post2"
+]
