@@ -1,0 +1,12 @@
+pyproject.toml
+src/githshell/__init__.py
+src/githshell/git_shell.py
+src/logshell/__init__.py
+src/logshell/logger.py
+src/logshell/logger_factory.py
+src/logshell/adapter/__init__.py
+src/logshell/adapter/console_logger.py
+src/shadowshell.egg-info/PKG-INFO
+src/shadowshell.egg-info/SOURCES.txt
+src/shadowshell.egg-info/dependency_links.txt
+src/shadowshell.egg-info/top_level.txt
