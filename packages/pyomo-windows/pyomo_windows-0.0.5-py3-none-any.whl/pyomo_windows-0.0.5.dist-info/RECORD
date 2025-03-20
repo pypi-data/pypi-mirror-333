@@ -1,0 +1,9 @@
+pyomo_windows/__init__.py,sha256=TEa2YXUxoD2bs3kPehiQd1zIKS6RnIIdvlXnVeNKf_Y,488
+pyomo_windows/download_solver.py,sha256=j6ERJnAWx5iSfM2DqP80f1FZgOLnlYG5xtpwYBbButc,6102
+pyomo_windows/simple_model.py,sha256=UZDn7UV82y6Q8ofmYgSepPATNmQDjM_jaPqSuzmhCeI,1116
+pyomo_windows/solvers.py,sha256=Q82MbjJ_Aylc4alLrDZfsKnBqpQ7SZryRKFRPAuQHMM,2008
+pyomo_windows/test_solvers.py,sha256=0W4rOsC-_76xluN-5CR23aRQtk12DjNha6EOFAnSa-g,1075
+pyomo_windows-0.0.5.dist-info/METADATA,sha256=E_84NpllmKhTikFPTFRjdee4w0RDTQUpV5G94I1OAm4,2303
+pyomo_windows-0.0.5.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pyomo_windows-0.0.5.dist-info/top_level.txt,sha256=PAfxNL3am-UCTUK-twKUrbv2LV9CwhjB68AvrfKoLrw,14
+pyomo_windows-0.0.5.dist-info/RECORD,,
