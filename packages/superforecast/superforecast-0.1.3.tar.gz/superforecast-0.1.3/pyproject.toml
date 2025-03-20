@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "superforecast"
+version = "0.1.3"
+authors = [{ name = "San Martim", email = "superforecast@dataspoc.com" }]
+description = "Super Forecast - A modern forecasting API client powered by bio-inspired AI models"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = ["requests"]
+keywords = ["forecast", "forecasting", "AI models", "timeseries", "demand forecasting", "energy forecasting", "financial market forecasting"]
+classifiers=[
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
