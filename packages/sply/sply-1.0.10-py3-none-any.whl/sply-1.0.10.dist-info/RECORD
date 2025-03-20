@@ -1,0 +1,11 @@
+sply/__init__.py,sha256=_BQPgAXHHBHdD7gnOIJQ6wWq_jnYpPyIXw5_wQ0N_wY,44
+sply/chat.py,sha256=v9opy8vpE6M-aBrowIcLa35-9vGMxYDghwY_POjpJNg,9600
+sply/sp.py,sha256=MrN9RkEZ1dqrCzcEl34NlN87h-IiFphsnaLgqJ5HSqQ,4845
+sply/overmind/__init__.py,sha256=v00TKKGhsJs-MbswqpSmGw0yRTzYJLrLyUUA03bmJT4,1318
+sply/overmind/node.py,sha256=pwgThY-nwB28DtILNgirkLwGICSBIm3KoQ3p4r98jpc,1478
+sply-1.0.10.data/scripts/sply_chat_interact.py,sha256=cMdpfIbLS80hUdlY0izUTVvsBk_1C6qmUyLVqxTZmKc,3703
+sply-1.0.10.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sply-1.0.10.dist-info/METADATA,sha256=HAcW1RwupAqSHabs0fwRNLEN422h_eHn1FjkXb8DRPo,512
+sply-1.0.10.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sply-1.0.10.dist-info/top_level.txt,sha256=9Dd8NkBy3UKrD29xT76nOT_6J2md4Fiy1lOB-qQHJgw,19
+sply-1.0.10.dist-info/RECORD,,
