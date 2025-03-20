@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+jira_easy/__init__.py
+jira_easy/client.py
+jira_easy.egg-info/PKG-INFO
+jira_easy.egg-info/SOURCES.txt
+jira_easy.egg-info/dependency_links.txt
+jira_easy.egg-info/requires.txt
+jira_easy.egg-info/top_level.txt
+tests/test_client.py
