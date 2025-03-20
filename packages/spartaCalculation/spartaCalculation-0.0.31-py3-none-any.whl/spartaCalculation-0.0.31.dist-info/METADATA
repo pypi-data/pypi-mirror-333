@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: spartaCalculation
+Version: 0.0.31
+Summary: Calculation for Sparta
+Author: Austin Diggins
+Author-email: austin.diggins@swimming.org.au
+License: MIT
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Dist: glom
+
