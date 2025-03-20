@@ -1,0 +1,5 @@
+setup.py
+Shivam_STT.egg-info/PKG-INFO
+Shivam_STT.egg-info/SOURCES.txt
+Shivam_STT.egg-info/dependency_links.txt
+Shivam_STT.egg-info/top_level.txt
