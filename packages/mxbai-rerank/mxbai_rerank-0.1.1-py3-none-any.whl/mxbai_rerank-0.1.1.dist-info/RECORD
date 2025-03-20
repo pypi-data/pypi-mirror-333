@@ -1,0 +1,10 @@
+mxbai_rerank/__init__.py,sha256=09j8UoJzwbK_Szpmf3vLf9hgLNsXFg7JCP-cUdJfy5o,132
+mxbai_rerank/base.py,sha256=NkHuYSJPMlsV3_ci6fwpjsVE3u_VF5icYkL1ux95KbY,4953
+mxbai_rerank/mxbai_rerank_v1.py,sha256=93kpwdFfD_BguwJMKqE0ucxjQwAmGMTqOQOH4HDHDHg,1763
+mxbai_rerank/mxbai_rerank_v2.py,sha256=FZIbe2-aUXM2MaSCbzESZFk6CSynvE5zgM3cfBNjulE,8086
+mxbai_rerank/utils.py,sha256=_tCO8OkDn8qYFiS-PxMP9IS_JDoOPROzjT2RpPR2qYw,3122
+mxbai_rerank-0.1.1.dist-info/LICENSE,sha256=piCjbsAv8Gpn45sZ0vjNGxeGE3nSmfgfDbGK-cmD8eM,10764
+mxbai_rerank-0.1.1.dist-info/METADATA,sha256=QCvDft9XZsD-CJop5N-YJY0Ba0H0zGnQ7A1gSDoYHlo,18707
+mxbai_rerank-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mxbai_rerank-0.1.1.dist-info/top_level.txt,sha256=FS_dxb4nRazDxrkd32EO7z8maOyHe5T6STsuzC7RpPM,13
+mxbai_rerank-0.1.1.dist-info/RECORD,,
