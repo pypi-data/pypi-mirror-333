@@ -1,0 +1,3 @@
+include README.md
+recursive-include crypto_candle_fetcher/exchanges *.py
+recursive-include crypto_candle_fetcher/data *
