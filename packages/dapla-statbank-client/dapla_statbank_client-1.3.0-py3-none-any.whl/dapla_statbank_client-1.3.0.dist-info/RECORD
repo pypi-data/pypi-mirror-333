@@ -1,0 +1,17 @@
+statbank/__init__.py,sha256=Bn-NmWDWiSys90rpKv4yVeHmCT6xwgixRDp-AkF48CA,1715
+statbank/api_exceptions.py,sha256=WNExE9XE5QN-VQyio9fKudPLM-DpucrZiDJPq_1J1FA,473
+statbank/api_types.py,sha256=fy5-0ncFca-KnbNelCegrfWonSNFVAzYlNv2yppUzcg,4093
+statbank/apidata.py,sha256=XiHiPuM38Oh1JvVBHRfKB6SlmD6jlDRK0OjMUytqAhw,11913
+statbank/auth.py,sha256=Lby0hiLby4m5ZLNax9bLIrLbt1CLLciFUvUq3bEI_Vo,4262
+statbank/client.py,sha256=tDowlBNX4zd6R5ZMpbXMSxDCm3O7Oj5dxSgbLQrtC5U,21569
+statbank/globals.py,sha256=bCXPOP8-ee3lkR4KzwkM6bk78OVhoIK5jh5AdXisLlI,1122
+statbank/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statbank/statbank_logger.py,sha256=ZXUA-Og_PYQ2QXDNWNOQXneZ8DvHnm2UQmjGwBIWWOc,1272
+statbank/transfer.py,sha256=NEZQyoZTwZO0xGc5FfZu3FhWVGuPSwfF9ErH3BEZlE8,14893
+statbank/uttrekk.py,sha256=-YVZ_jmkzWzY8H74HKal2F8HNsD1lkoLnPGy3M9hE7o,19169
+statbank/uttrekk_validations.py,sha256=wfBwkhwCOiHLFjP-oxHdjX4qHXfCCBdzBN5H4dearh8,30301
+dapla_statbank_client-1.3.0.dist-info/LICENSE,sha256=lL2h0dNKGTKAE0CjTy62SDbRennVD1xPgM5LzGqhKeo,1074
+dapla_statbank_client-1.3.0.dist-info/METADATA,sha256=c1jtrVVEYK2TuFDtLs4clKAe4ctPOegTHoYQ08Ox43k,13758
+dapla_statbank_client-1.3.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+dapla_statbank_client-1.3.0.dist-info/entry_points.txt,sha256=b8QVa4EHQBA_ro9cX7HVt2Lsov0uojugwWqh_OLQWDI,64
+dapla_statbank_client-1.3.0.dist-info/RECORD,,
