@@ -1,0 +1,7 @@
+README.md
+setup.py
+2player/__init__.py
+2player.egg-info/PKG-INFO
+2player.egg-info/SOURCES.txt
+2player.egg-info/dependency_links.txt
+2player.egg-info/top_level.txt
