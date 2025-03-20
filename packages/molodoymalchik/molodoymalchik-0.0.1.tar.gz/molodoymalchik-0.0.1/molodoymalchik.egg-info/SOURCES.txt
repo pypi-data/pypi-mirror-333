@@ -1,0 +1,8 @@
+setup.py
+molodoymalchik/__init__.py
+molodoymalchik/mmm.py
+molodoymalchik/module1.py
+molodoymalchik.egg-info/PKG-INFO
+molodoymalchik.egg-info/SOURCES.txt
+molodoymalchik.egg-info/dependency_links.txt
+molodoymalchik.egg-info/top_level.txt
