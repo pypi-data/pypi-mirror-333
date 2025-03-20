@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+leist_converter/__init__.py
+leist_converter/convert.py
+leist_converter.egg-info/PKG-INFO
+leist_converter.egg-info/SOURCES.txt
+leist_converter.egg-info/dependency_links.txt
+leist_converter.egg-info/top_level.txt
+leist_converter/resources/word_mappings.json
