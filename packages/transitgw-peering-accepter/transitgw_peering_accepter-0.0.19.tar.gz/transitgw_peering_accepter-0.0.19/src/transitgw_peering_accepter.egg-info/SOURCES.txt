@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/transitgw-peering-accepter/__init__.py
+src/transitgw-peering-accepter/py.typed
+src/transitgw-peering-accepter/_jsii/__init__.py
+src/transitgw-peering-accepter/_jsii/transitgw-peering-accepter@0.0.19.jsii.tgz
+src/transitgw_peering_accepter.egg-info/PKG-INFO
+src/transitgw_peering_accepter.egg-info/SOURCES.txt
+src/transitgw_peering_accepter.egg-info/dependency_links.txt
+src/transitgw_peering_accepter.egg-info/requires.txt
+src/transitgw_peering_accepter.egg-info/top_level.txt
