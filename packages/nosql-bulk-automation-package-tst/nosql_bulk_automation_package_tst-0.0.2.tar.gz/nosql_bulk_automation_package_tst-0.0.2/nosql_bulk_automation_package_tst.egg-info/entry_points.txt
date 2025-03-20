@@ -1,0 +1,2 @@
+[console_scripts]
+nosql-bulk-generate = main:main
