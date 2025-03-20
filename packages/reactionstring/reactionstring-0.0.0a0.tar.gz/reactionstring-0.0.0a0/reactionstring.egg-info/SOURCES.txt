@@ -1,0 +1,5 @@
+reactionstring/setup.py
+reactionstring.egg-info/PKG-INFO
+reactionstring.egg-info/SOURCES.txt
+reactionstring.egg-info/dependency_links.txt
+reactionstring.egg-info/top_level.txt
