@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mouse_analysis
+Version: 0.1.0
+Summary: A package for analyzing mouse behavior.
+Home-page: https://github.com/yourusername/mouse_analysis
+Author: Fengxi Jin
+Author-email: fengxi.jin@manchester.ac.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.15
+
+# Mouse Analysis
+
+A Python package for analyzing mouse behavior by calculating the Euclidean moving distance from a series of 2D positions.
+
+## Installation
+
+```bash
+pip install mouse_analysis
