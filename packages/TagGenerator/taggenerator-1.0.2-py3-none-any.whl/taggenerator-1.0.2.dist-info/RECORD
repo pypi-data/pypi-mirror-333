@@ -1,0 +1,12 @@
+QrCode/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+QrCode/admin.py,sha256=-CGg0xphgRpmgFjO182wNJIAGwH0Q2ifGZkMaVH58yg,162
+QrCode/apps.py,sha256=GWZ2gIbweeBCr9rrKb7OqyiIYzr0f8WN01iCqc3PrZM,144
+QrCode/models.py,sha256=8jguxrcMEUreutNELatomUrvizh9PY3uUpDwFXz7ZBY,196
+QrCode/tests.py,sha256=AyIlL8R0rnyyZpOtAYMANQ-8vLesfBJ6x3gNluFJY5I,1623
+QrCode/urls.py,sha256=Gl-R58tpL3Is2xBIofj_MteXTDsW135Q11cIbGdJ4WE,245
+QrCode/views.py,sha256=X6taoEXdsYEqryPEMoqv3q5LclLfm5qPH40VK2mtxUQ,1461
+taggenerator-1.0.2.dist-info/LICENSE,sha256=iFJJ_m6M02GHDA_DIYssU1rLsrfcJQtYDEOicLdjd34,1091
+taggenerator-1.0.2.dist-info/METADATA,sha256=LVliAOn_tj9GajX7SYTe-q_wHIPB1uOMSyUnKqKwtVc,8737
+taggenerator-1.0.2.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+taggenerator-1.0.2.dist-info/top_level.txt,sha256=37M1MwOuFCkSY26iH0QIdUxo01_Gc434e7p525Oz8Xw,7
+taggenerator-1.0.2.dist-info/RECORD,,
