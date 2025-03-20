@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: codesight
+Version: 0.1.4
+Summary: CodeSight - Code analysis and visualization tool
+Project-URL: Homepage, https://github.com/mattsilv/codesight
+Project-URL: Issues, https://github.com/mattsilv/codesight/issues
+Author-email: Matt Silverman <mattsilverman@example.com>
+License: MIT
+Requires-Python: >=3.8
+Requires-Dist: click>=8.1.3
+Requires-Dist: pandas>=2.0.3
+Requires-Dist: requests>=2.28.0
+Requires-Dist: rich>=13.4.0
+Requires-Dist: tiktoken>=0.5.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: pre-commit>=3.3.2; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# CodeSight
+
+A tool for generating token-efficient codebase overviews.
+
+## Usage
+
+From the `.codesight` directory, run:
+
+```bash
+./run_codesight.sh [options]
+```
+
+### Options
+
+- `--dir PATH`: Root directory of the project (default: parent directory)
+- `--extensions EXT [EXT ...]`: File extensions to include (default: .ts, .toml, .css, .js, .json, .md)
+- `--output FILE`: Output file name (default: codebase_overview.txt)
+- `--max-lines N`: Maximum lines per file before truncation (default: 500)
+- `--model MODEL`: Model to use for token counting (default: gpt-4)
+
+### Examples
+
+Analyze Python files in the parent directory:
+
+```bash
+./run_codesight.sh --extensions .py
+```
+
+Analyze JavaScript and TypeScript files in a specific directory:
+
+```bash
+./run_codesight.sh --dir /path/to/project --extensions .js .ts
+```
+
+## Installation
+
+1. Install uv: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+2. Run `./install.sh` in the `.codesight` directory
+3. Or manually: `uv venv .venv && uv pip install -r requirements.txt`
