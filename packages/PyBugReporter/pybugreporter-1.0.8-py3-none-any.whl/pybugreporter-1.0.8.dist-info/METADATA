@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: PyBugReporter
+Version: 1.0.8
+Summary: A python library for catching thrown exceptions and automatically creating issues on a GitHub repo.
+Home-page: https://github.com/byuawsfhtl/PyBugReporter.git
+Author: Record Linking Lab
+Author-email: recordlinkinglab@gmail.com
+Project-URL: Bug Tracker, https://github.com/byuawsfhtl/PyBugReporter/issues
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-graphql-client~=0.4.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+# PyBugReporter
+A python library for catching thrown exceptions and automatically creating issues on a GitHub repo.
+
+Not recommended for public repos, as a malicious user could spam your issues with fake exceptions.
