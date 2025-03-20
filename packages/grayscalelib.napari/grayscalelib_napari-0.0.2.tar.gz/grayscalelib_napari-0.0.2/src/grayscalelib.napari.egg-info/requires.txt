@@ -1,0 +1,11 @@
+grayscalelib.core
+numpy
+napari[pyqt5]
+
+[dev]
+isort
+ruff
+pre-commit
+
+[test]
+pytest
