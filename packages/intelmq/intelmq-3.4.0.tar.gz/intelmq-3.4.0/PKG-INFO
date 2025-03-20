@@ -1,0 +1,132 @@
+Metadata-Version: 2.2
+Name: intelmq
+Version: 3.4.0
+Summary: IntelMQ is a solution for IT security teams for collecting and processing security feeds using a message queuing protocol.
+Home-page: https://github.com/certtools/intelmq/
+Author: IntelMQ Community
+Maintainer: Sebastian Wagner
+Maintainer-email: intelmq-dev@lists.cert.at
+License: AGPLv3
+Project-URL: Documentation, https://docs.intelmq.org/
+Project-URL: Source and Issue Tracker, https://github.com/certtools/intelmq/
+Keywords: incident handling cert csirt
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Security
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSES/AGPL-3.0-only.txt
+License-File: LICENSES/AGPL-3.0-or-later.txt
+License-File: LICENSES/CC0-1.0.txt
+Requires-Dist: dnspython>=2.0.0
+Requires-Dist: psutil>=1.2.1
+Requires-Dist: python-dateutil>=2.5
+Requires-Dist: python-termstyle>=0.1.10
+Requires-Dist: redis>=2.10
+Requires-Dist: requests>=2.2.0
+Requires-Dist: ruamel.yaml
+Provides-Extra: development
+Requires-Dist: Cerberus!=1.3.0; extra == "development"
+Requires-Dist: requests_mock; extra == "development"
+Requires-Dist: mkdocs-material; extra == "development"
+Requires-Dist: mike; extra == "development"
+Requires-Dist: lunr; extra == "development"
+Requires-Dist: pygments; extra == "development"
+Requires-Dist: mkdocstrings[python]; extra == "development"
+Requires-Dist: mkdocs-material; extra == "development"
+Requires-Dist: mkdocs-glightbox; extra == "development"
+Requires-Dist: mkdocs-redirects; extra == "development"
+Requires-Dist: mkdocs-minify-plugin; extra == "development"
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+<!-- comment
+   SPDX-FileCopyrightText: 2015-2023 Sebastian Wagner, Filip Pokorný
+   SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+<!--
+[![CII Badge](https://bestpractices.coreinfrastructure.org/projects/4186/badge)](https://bestpractices.coreinfrastructure.org/projects/4186/)
+-->
+
+![IntelMQ](docs/static/images/Logo_Intel_MQ.svg)
+
+
+# Introduction
+
+**IntelMQ** is a solution for IT security teams (CERTs & CSIRTs, SOCs
+abuse departments, etc.) for collecting and processing security feeds
+(such as log files) using a message queuing protocol. It's a community
+driven initiative called **IHAP**[^1] (Incident Handling Automation Project)
+which was conceptually designed by European CERTs/CSIRTs during several
+InfoSec events. Its main goal is to give to incident responders an easy
+way to collect & process threat intelligence thus improving the incident
+handling processes of CERTs.
+
+IntelMQ is frequently used for:
+
+- automated incident handling
+- situational awareness
+- automated notifications
+- as data collector for other tools
+- and more!
+
+The design was influenced by
+[AbuseHelper](https://github.com/abusesa/abusehelper) however it was
+re-written from scratch and aims at:
+
+-   Reducing the complexity of system administration
+-   Reducing the complexity of writing new bots for new data feeds
+-   Reducing the probability of events lost in all process with persistence functionality (even system crash)
+-   Use and improve the existing Data Harmonization Ontology
+-   Use JSON format for all messages
+-   Provide easy way to store data into databases and log collectors such as PostgreSQL, Elasticsearch and Splunk
+-   Provide easy way to create your own black-lists
+-   Provide easy communication with other systems via HTTP RESTful API
+
+It follows the following basic meta-guidelines:
+
+-   Don't break simplicity - KISS
+-   Keep it open source - forever
+-   Strive for perfection while keeping a deadline
+-   Reduce complexity/avoid feature bloat
+-   Embrace unit testing
+-   Code readability: test with inexperienced programmers
+-   Communicate clearly
+
+## Contribute
+
+- Subscribe to the [IntelMQ Developers mailing list](https://lists.cert.at/cgi-bin/mailman/listinfo/intelmq-dev) and engage in discussions
+- Report any errors and suggest improvements via [issues](https://github.com/certtools/intelmq/issues)
+- Read the Developer Guide and open a [pull request](https://github.com/certtools/intelmq/pulls)
+
+[^1]: [Incident Handling Automation Project](https://www.enisa.europa.eu/activities/cert/support/incident-handling-automation), mailing list: ihap@lists.trusted-introducer.org
+
+
+![CEF](https://ec.europa.eu/inea/sites/default/files/ceflogos/en_horizontal_cef_logo_2.png)
