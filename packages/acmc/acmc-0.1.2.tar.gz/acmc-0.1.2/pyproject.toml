@@ -1,0 +1,99 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "acmc"
+version = "0.1.2"
+authors = [
+    { name = "Jakub Dylag", email = "j.j.dylag@soton.ac.uk" },
+    { name = "Michael Boniface", email = "m.j.boniface@soton.ac.uk" }
+]
+description = "A Tool for Automating the Curation of Medical Concepts derived from Coding Lists"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+
+dependencies = [
+    "aiosqlite",
+    "cerberus",
+    "click",
+    "cramjam",
+    "deepdiff",
+    "et-xmlfile",
+    "fastparquet",
+    "fsspec",
+    "gitdb",
+    "gitpython",
+    "greenlet",
+    "iniconfig",
+    "lxml",
+    "numpy",
+    "openpyxl",
+	"pandas-stubs",
+    "pluggy",
+    "pyarrow",
+    "pyomop",
+    "tables", 	
+    "pytest",
+	"pyyaml",	
+    "requests",
+    "semver", 
+    "simpledbf",
+    "smmap",
+    "sqlalchemy",
+	"types-PyYAML",
+	"types-requests"
+]
+
+[project.scripts]
+acmc = "acmc.main:main"  # Entry point for CLI command
+
+[project.urls]
+Repository = "https://git.soton.ac.uk/meldb/concepts-processing"
+Documentation = "https://acmc.readthedocs.io/en/latest/"
+Issues = "https://git.soton.ac.uk/meldb/concepts-processing/-/issues"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["acmc"]
+
+[tool.hatch.envs.default]
+dependencies = [
+    "hatch",
+	"pytest",
+ ]
+ 
+[tool.hatch.envs.docs]
+dependencies = [
+    "mkdocs",
+    "mkdocs-material"
+] 
+
+[tool.hatch.envs.dev]
+dependencies = [
+    "pytest",
+    "black",
+    "mypy",
+    "pdoc",
+    "pydoc-markdown",
+    "mkdocs",
+    "twine"
+]
+
+[tool.hatch.envs.dev.scripts]
+format = "black ."
+type = "mypy ."
+docs = "pdoc -o docs/api -d google --docformat google --include-undocumented acmc"
+precommit = "hatch run format && hatch run type && hatch run docs"
+
+[tool.hatch.build]
+include = ["acmc/**"]  # Ensure only the acmc package is included
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "acmc/**",
+]
+
+
+
