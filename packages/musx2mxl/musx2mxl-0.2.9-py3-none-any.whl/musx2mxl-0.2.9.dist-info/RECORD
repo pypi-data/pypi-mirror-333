@@ -1,0 +1,13 @@
+musx2mxl/__init__.py,sha256=86iItNFufKYhlua6FGuxOkQfgS9ndQOlsz9szk5pL_0,56
+musx2mxl/chord-suffixes.json,sha256=7EGg_rkN_3hihHha-vd6eVn624fNsiC3LruUzmrpuJc,37340
+musx2mxl/converter.py,sha256=unRPzX2aOwNdeoykRY-s0Ql25NHN98_VOyjLznqlhkk,64960
+musx2mxl/helper.py,sha256=2zWqnW-L1-56plrx2ETMlJ6V7GfRBTcdtFIFMhio5UQ,22916
+musx2mxl/instruments.json,sha256=DJnbaJX0ThUMhaYADyYyLXPCkDchqJJs4IEeiBrE5HA,123622
+musx2mxl/musx2mxl.py,sha256=cEcaWFDNA2Ll8YTJabRWeKHU2g8aDJpYVWXfl1t8hiQ,8308
+musx2mxl/musx2mxl_gui.py,sha256=_Xw2nYUrRmTGFRjIKlff8JyI5iOnAUacBTfNstQst9M,3723
+musx2mxl-0.2.9.dist-info/LICENSE,sha256=hgm4AgywcQC6eVg_kqMD1EQvBg1BrAvZrxv083y5XkU,1072
+musx2mxl-0.2.9.dist-info/METADATA,sha256=Cn0B1CMB1B--vj3wOXMM7KOzL7Pm-ezzn0B3ewMekJs,4650
+musx2mxl-0.2.9.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+musx2mxl-0.2.9.dist-info/entry_points.txt,sha256=n_t6kFdwPq1ZDws8gbMtJwyktZe-worumc82pQEA-qQ,95
+musx2mxl-0.2.9.dist-info/top_level.txt,sha256=CVEmgH9Qf0N5vrBxhii-bYOTgPyy1Hd70qWlHtN70yw,9
+musx2mxl-0.2.9.dist-info/RECORD,,
