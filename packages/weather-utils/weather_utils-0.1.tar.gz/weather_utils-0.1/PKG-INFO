@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: weather_utils
+Version: 0.1
+Summary: Custom utilities for AWS integration in the Weather App
+Home-page: https://github.com/sriharikata/CPP_Project/tree/main/weatherapp/weather_utils
+Author: Srihari Kata
+Author-email: x24155331@student.ncirl.ie
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
