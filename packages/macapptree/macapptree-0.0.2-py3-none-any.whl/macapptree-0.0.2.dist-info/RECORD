@@ -1,0 +1,15 @@
+macapptree/__init__.py,sha256=es-aS3EegrJoExE68MluAhKKyEqElhkkFUXWmQAQ_rE,144
+macapptree/apps.py,sha256=v0lyXF9hZDJw6QqsXqEUdjkkP-ga0aVL2RuPjoX3DnM,1270
+macapptree/exceptions.py,sha256=_eUNoEodnxsWm4lgaZVlVfVjqeBy_wpNJfUn_HCwgvM,54
+macapptree/extractor.py,sha256=EEk73n3LsZ2Q00MdcQQ5SQ1-dcqsX-96KRENvck0Eug,2835
+macapptree/files.py,sha256=3GtJhqrdfEGb7lnLvrBHNSvKpduSsTnuKYZ-vv1LRcU,267
+macapptree/launch_app.py,sha256=YtmTm9xbK97VV_VYipTgTqyyfqqUueKtXloYiwilgeU,458
+macapptree/main.py,sha256=ANZp7ph8Iojeo69xqVgU6LosBBjJVIROMsfd7PzPrGM,3296
+macapptree/run.py,sha256=WhOISZhvmFMhu-2kM1W6LVfAOkBFI2acfqSWNKsz15o,2677
+macapptree/screenshot_app_window.py,sha256=Y4KwSRhfzjRBebTKDBwPLWvagn3ZV8JjaM351FEmpTI,8317
+macapptree/uielement.py,sha256=0Qv9mpUShnI3632lliaU5GYhgGBdR5s9qS4egrkOIYI,16564
+macapptree/window_tools.py,sha256=sP-Hlt8CCM4M1GZhtmdL6SlUIUTb-b5e81bTJyrKQro,6892
+macapptree-0.0.2.dist-info/METADATA,sha256=plAVhxUbjHGENPI1iQy1issnYEX35RLGgFumEguyJw0,4010
+macapptree-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+macapptree-0.0.2.dist-info/licenses/LICENSE,sha256=s7zBes5stmCbV-UzbqTgqIpeBhS6PMK_u7bBox4KJAk,1068
+macapptree-0.0.2.dist-info/RECORD,,
