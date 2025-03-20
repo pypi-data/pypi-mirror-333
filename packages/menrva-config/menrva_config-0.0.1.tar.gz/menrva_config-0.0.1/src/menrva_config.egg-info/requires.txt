@@ -1,0 +1,17 @@
+omegaconf>=2.3.0
+pandas
+numpy
+pipe
+
+[dev]
+black
+isort
+ipython
+build
+
+[test]
+pytest
+tox
+
+[torch]
+torch>=2.0
