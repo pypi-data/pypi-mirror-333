@@ -1,0 +1,4 @@
+pfp_api_client.egg-info/PKG-INFO
+pfp_api_client.egg-info/SOURCES.txt
+pfp_api_client.egg-info/dependency_links.txt
+pfp_api_client.egg-info/top_level.txt
