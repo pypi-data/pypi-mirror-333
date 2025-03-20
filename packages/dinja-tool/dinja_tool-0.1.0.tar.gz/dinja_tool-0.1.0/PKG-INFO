@@ -1,0 +1,84 @@
+Metadata-Version: 2.3
+Name: dinja-tool
+Version: 0.1.0
+Summary: Tool to create text files from DBML using Jinja2 templates.
+License: EUPL-1.2
+Keywords: dbml,jinja,template,code generation,database,schema
+Author: Thomas Wesenigk
+Author-email: aardjon@noreply.codeberg.org
+Requires-Python: >=3.12
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Provides-Extra: dev
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: jinja2
+Requires-Dist: mypy ; extra == "dev"
+Requires-Dist: pydbml
+Requires-Dist: ruff ; extra == "dev"
+Project-URL: Homepage, https://codeberg.org/Aardjon/dinja
+Project-URL: Repository, https://codeberg.org/Aardjon/dinja.git
+Description-Content-Type: text/markdown
+
+# Dinja
+
+Dinja is a small tool for creating any text file format from a [DBML](https://dbml.dbdiagram.io/home/)
+database definition using [Jinja2](https://jinja.palletsprojects.com/en/stable/) templates. It can
+be used to auto-generate e.g. database access code or schema documentation from a single database
+schema definition.
+
+Its name is made from "**D**BML" and "J**inja**2", but it's also name of
+[Cucumis melo](https://en.wikipedia.org/wiki/Cucumis_melo) (a melon) 🍈 🍉 in Croatian.
+
+## Installation
+
+Dinja is available on PyPI, so you can install it with pip:
+
+```
+pip install dinja
+```
+
+## Usage
+
+### 1. Create your Jinja2 template(s)
+
+The template files are of the destination file format but contain some special markers that Dinja
+replaces with the real database schema data. Their file names must end with either `.jinja` or
+`.in`. See the [Jinja2 template documentation](https://jinja.palletsprojects.com/en/stable/templates/)
+for how to write such a template.
+
+The Python data structures provided to the templates are documented in the [dinja.api](src/dinja/api.py)
+module.
+
+Dinja can render several template files at once - simply put them all into a single directory.
+
+### 2. Run Dinja on your DBML file
+
+The following command converts the `dbschema.dbml` file by rendering all template files inside the
+`jinja_templates` directory, storing the resulting files into the `generated` directory
+rendered file for each template).
+
+```
+$ dinja dbschema.dbml jinja_templates generated
+```
+
+The result files have the names as their corresponding template
+files, but without the `.jinja` or `.in` suffix. Existing files are overwritten without a warning.
+
+`dinja -h` or `dinja --help` prints a summary of all possible options and arguments.
+
+## Copyright & License
+
+Copyright 2025 by Thomas Wesenigk.
+
+Licensed under the EUPL 1.2. Visit https://interoperable-europe.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+to read it in your favourite language.
+
