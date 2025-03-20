@@ -1,0 +1,53 @@
+# Create a tap flow
+# POST  /taas/tap_flows
+#"create_tap_flow": "rule:admin_or_owner"
+
+# Update a tap flow
+# PUT  /taas/tap_flows/{id}
+#"update_tap_flow": "rule:admin_or_owner"
+
+# Show a tap flow
+# GET  /taas/tap_flows/{id}
+#"get_tap_flow": "rule:admin_or_owner"
+
+# Delete a tap flow
+# DELETE  /taas/tap_flows/{id}
+#"delete_tap_flow": "rule:admin_or_owner"
+
+# Create a tap service
+# POST  /taas/tap_services
+#"create_tap_service": "rule:admin_or_owner"
+
+# Updates a tap service
+# PUT  /taas/tap_services/{id}
+#"update_tap_service": "rule:admin_or_owner"
+
+# Show a tap service
+# GET  /taas/tap_services/{id}
+#"get_tap_service": "rule:admin_or_owner"
+
+# Delete a tap service
+# DELETE  /taas/tap_services/{id}
+#"delete_tap_service": "rule:admin_or_owner"
+
+# Create a Tap Mirror
+# POST  /taas/tap_mirrors
+# Intended scope(s): project
+#"create_tap_mirror": "(rule:admin_only) or (role:member and project_id:%(project_id)s)"
+
+# Update a Tap Mirror
+# PUT  /taas/tap_mirrors/{id}
+# Intended scope(s): project
+#"update_tap_mirror": "(rule:admin_only) or (role:member and project_id:%(project_id)s)"
+
+# Show a Tap Mirror
+# GET  /taas/tap_mirrors
+# GET  /taas/tap_mirrors/{id}
+# Intended scope(s): project
+#"get_tap_mirror": "(rule:admin_only) or (role:reader and project_id:%(project_id)s)"
+
+# Delete a Tap Mirror
+# DELETE  /taas/tap_mirrors/{id}
+# Intended scope(s): project
+#"delete_tap_mirror": "(rule:admin_only) or (role:member and project_id:%(project_id)s)"
+
