@@ -1,0 +1,4 @@
+pandas==2.2.3
+more-itertools==10.6.0
+loguru==0.7.3
+opencv-python==4.11.0.86
