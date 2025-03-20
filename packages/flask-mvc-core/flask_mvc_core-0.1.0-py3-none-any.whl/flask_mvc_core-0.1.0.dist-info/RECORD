@@ -1,0 +1,11 @@
+flask_mvc_core/__init__.py,sha256=_F5tC4_sDCg1aFTSIRoEMR5WAyLbfdOW-30OSpmrXKA,187
+flask_mvc_core/__version__.py,sha256=R9xOYoYrWKcfO5zvTeGC3m_eDNOvxMd8CocQs2tLufo,22
+flask_mvc_core/flask_mvc_core.py,sha256=nViZfWCZ_BiJmwox7u9UJkoEghUdp_KHcymC0lS-QyU,4519
+flask_mvc_core/register.py,sha256=v-0R0rczTf8rcApvVPowMXdprrg3oiK_6mg-jy432QQ,1229
+flask_mvc_core/request.py,sha256=o_x2vwOGLHtN9veL5muMQl1JzFuwNTxOxF5VCqoYEQ4,2485
+flask_mvc_core/response.py,sha256=kKScN_-j-9CYOI7dSUrgHEOvq8fhWt9EwA7QxUKWoCA,2315
+flask_mvc_core-0.1.0.dist-info/LICENSE,sha256=DTDhTUKflP9xYNa1Xr0_DcrsvZCURjXyOMh0i-Zk9Ek,1112
+flask_mvc_core-0.1.0.dist-info/METADATA,sha256=LS0qjJNRQSL_haFHjJ-mgQQBrEEb0xB6mZYDA2x0iq0,5894
+flask_mvc_core-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+flask_mvc_core-0.1.0.dist-info/top_level.txt,sha256=JmcGLsmAmf19xOqMnYiLSq8CcTmMYl9fX5soa89W228,15
+flask_mvc_core-0.1.0.dist-info/RECORD,,
