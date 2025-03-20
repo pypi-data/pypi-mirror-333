@@ -1,0 +1,771 @@
+Metadata-Version: 2.4
+Name: semantic-api
+Version: 0.0.15
+Summary: A simple python API for creating, inserting, querying, and processing semantic data. This requires semantic services that are not included here
+Project-URL: Homepage, https://source.coderefinery.org/wac/semantic-api
+Project-URL: Issues, https://source.coderefinery.org/wac/semantic-api/-/issues
+Author-email: William A Coolidge <wac@mmmi.sdu.dk>
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: behave==1.2.6
+Requires-Dist: future==0.18.2
+Requires-Dist: paho-mqtt==2.1.0
+Requires-Dist: pydantic-core==2.27.2
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: pymonad==2.4.0
+Requires-Dist: pyrsistent==0.20.0
+Requires-Dist: typing-extensions==4.12.2
+Requires-Dist: typing==3.7.4.3
+Requires-Dist: urllib3==1.26.5
+Description-Content-Type: text/markdown
+
+
+# Semantic API
+
+#### Versions
+
+```0.0.14``` : Intial version with only the API for insertion and query.
+
+| Element | Status | Comment |
+|:--- |:--- |:--- |
+| insert  | ✅ | complete |
+| query  | ✅ | complete |
+| typelib |   ❌  | in-process |
+| type tools | ❌ | in-process |
+| database tools | ❌ | in-process |
+| chain tools  | ❌ | in-process | 
+
+
+#### 1 [Python API](python-api.md#python-api-concept)
+
+#### 2 [Background](background.md)
+
+#### 3 [RDF and Types](rdf-and-types.md)
+
+#### 4 [Editing Ontologies](editing-ontologies.md)
+
+
+
+
+
+
+## Python API Concept
+
+The intent of the python API is to simplify the robot programmer's work with semantic data, both meta, and empirically based.
+
+The API is conceptually twofold, a **narrate** method for creating instances of semantic types to describe the world, and a **chain** method for querying, formatting, and processing semanticv data and  events.
+
+The approach of enabling a high level semantic narrative follows Michael Beetz et. al work on NEEM and SOMA at the University of Bremen.
+
+This API is intended to work in parallel, and independently, from the low level robot data aquired through the ```ur_rtde``` API.
+
+
+### USD-SOMA-FERA ontology
+Both the low level and high level data streams share the same semantic model, i.e. the ontology that defines the type schema of the data base.
+
+This ontology is built from an integration of ontology modules (clusters):
+ - usd
+ - dul (DULCE, SOMA subset)
+ - fera (Frederik's Novo assembly schema and machine tending types)
+
+The design choice/postulates for this effort are:
+ - follow USD as the primary ontology and enable integration and interoperability with USD and Ominverse ecosystems
+ - follow SOMA to enable integration and interoperability (at the ontology level) with work from Bremen
+ - follow a closed world approach where all objects are identified by a URI
+ - properties are defined statically on a type or mixed in from other types via inheritance (i.e Type, not Class and Properties as per OWL)
+ - child-to-parent relationship (```typeOf```) is prefered over the standard parent-to-child (```hasType```) due to performance and query decoupling
+ - integration of upper level ontologies with usd is via ```UsdMultiAppliedAPI``` (also requires child-to-parent as per previous point)
+
+### Semantic API
+
+The semantic API offers the user two core methods. 
+First, a **narrate** method for constructing and capturing meta, and empirical data that is cached in a **typeMap** untill a suitable batch size is reached for insertion into the database. Secondly, a **chain** method is used for processing data, i.e. for querying the semantic database, formatting the result, and any post processing. A post processing function may involve constructing type instances that are added to the **typeMap**.
+
+| core methods | arguments | pre-condition | post-condition |
+|:--- |:--- |:--- |:--- |
+| **narrate(type-constructors-thunks)** |*type-constructor-thunks*(type, name, timestamp(s), parentObject, ...data), ... |  narrate takes one or more type specific data constructors that wraps the return of **Either**, i.e. either a validated dictionary for the type or an error in a function of no arguments | updates typeMap  with objects created by type-constructors |
+| **chain(object, functions)** | initial dictionary seed object (typically frame) followed by one or more functions of one argument for the data flowing through the chain | sequence starting with object followed by functions with matching input and outputs  | functions return Promise(lambda resolve, reject: resolve(processed)) |
+
+
+The indirection of the type constructors is exemplified in the following:
+
+```
+a_type_constructor = type_constructor('a-type', 'a-name', ... data)
+a_type_either = a_type_constructor()
+a_type = a_type_either.either(lambda e: f'Validation Error in a_type_constructor: {e}', lambda x: x)
+print(json.dumps( a_type, indent=6 ))
+
+    {
+        "type": "a-type",
+        "name": "a-name",
+        ... data
+    }
+
+```
+Type constructors can be used in **chain** as well as **narrate**.  The use-case for type constructors in the processing chain is for when a type instance is created as the result of the previous query or processing function. In this case, the final **lambda** function that is returned in the **type-constructor-thunk** shall take a (data) argument that corresponds to the output from the previous function. 
+
+
+| utility methods | arguments | pre-condition | post-condition |
+|:--- |:--- |:--- |:--- |
+| **insert()** | None | Non-empty typeMap | insert typeMap in semantic db, then **clear()** |
+| **clear()** | None | Non-empty typeMap | clear pastTypeMap, assign typeMap to pastTypeMap, create new typeMap |
+| **listAbstractTypes()** | | 
+| **listConcreteTypes()** | | 
+| **listSubTypes(type)** | | 
+| **listProperties(type)** | | 
+
+
+<!-- 
+Semantic configuration in main:
+``` 
+    semantic.configure(type, id, property, value)
+``` 
+-->
+   
+
+The narrative  API is based on type constructors for either meta-data or sampled-data type instances:
+```
+    semantic.narrate( type-1-constructor, type-2-constructor, ...type-i-constructor )
+```
+
+The **semantic.insert()** operation is typically done automatically when narrating streaming data. 
+
+Automatic insertion is done according to the side of the typeMap in order to optimize database throughput and will depend on the sampling interval and the amount of data per sample.
+
+An ideal target request frequency is around 1Hz for low data rates.
+
+The buffering requires that a **semantic.insert()** call is made on completion of any narration or data collection session.
+
+```
+    semantic.narrate( type-1-constructor, type-2-constructor, ...type-i-constructor)
+```
+is equivalent to:
+
+```
+    semantic.narrate( type-1-constructor )
+    semantic.narrate( type-2-constructor )
+    semantic.narrate( type-i-constructor )
+```
+### Narrative decorators
+
+Python decorators will be provided for use on user's program realization of states or events so that the appropriate meta data and timestamps are logged automatically.
+
+Details to follow here...
+
+### Process API
+
+The process API takes the form of a chain of async or synchronous funtions that process input and return output as a pipeline.
+
+```
+    semantic.chain( object, func-1, func-2, ...func-i, chain_out )
+```
+
+Where **object** is the input seed that starts the chain of processing functions.
+
+All functions in the chain,  **func-1, func-2, ...func-i** operate sequentially as an asynchronous chain to form a function pipeline.
+
+All functions in the chain shall take a single argument that is the output from the previous function.
+
+Functions such as select that take a parameter object as input, shall return a function with closure of that parameter object of one argument for the chain, and it is this function that is used in the chain.
+
+### Function Constructors
+
+| constructors | constructor arguments | returned function |
+|:--- |:--- |:--- |
+| **query_constructor** | no arguments (only provices closure of the semantic API data) | returns a query function for use in pipe  |
+| **select_constructor** |  frame object | function for use in pipe that selects from input data according to frame and returns framed input to pipe |
+| **frame_constructor** | frame object | function for use in the middle of the pipe that returning frame object to pipe for use by a following query function |
+| **function_constructor** | user defined function of one argument and return type |  returns user's function wrapped for use in pipe |
+
+
+### Chain (Pipe) Functions
+
+| chain function | origin | input pre-condition | output post-condition |
+|:--- |:--- |:--- |:--- |
+| **query** |  semantic.query_constructor | raw frame object (chain seed or returned by previous function) | query result in JSON-LD format as Promised Either |
+| **select** | semantic.select_constructor |input object as Promised Either and function with closure on frame | framed input object as Promised Either|
+| **flatten** | imported from semantic | input object as Promised Either| flattend array of values  as Promised Either|
+| *user-defined-function* | semantic.function_constructor and user defined function | input in format of preceding function output |  return Promise(lambda resolve, reject: resolve(Right(processed))) |
+| **chain_out** | imported from semantic | input object as Promised Either| raw object or array if flattened |
+| *type-constructor* | imported from fera | data input from preceding function, or partial function with closure on static variables with returned function taking one arg for use with chain input data |  return  of a function (thunk) that returns an **Either**, i.e. a function of no arguments (potentially one for data streaming in chain) that when invoked, returns either a validated dictionary for the type or an error in a function of one argument |
+| **update_map** |  previous function is a *type-constructor* |  updates semantic.typeMap with object freom *type-constructor* |
+
+The chain of async functions allows users flexibility in defining sequential processing of data as it allows a mix of functions for:
+
+ -  frame formulation: functions for simplifying construction of frames 
+ -  query response formatting: secondary (or a sequence of) frame to select and format pipeline data derived from db or sample streams
+ -  user defined data processing functions to analyze data in the pipeline
+ -  semantic data creation and database insertion
+ -  functions as policy guards operating on conditions defined on semantic data
+ -  function return as Promised Either to allow a mix of async and synchronous pipeline with error handling
+ 
+
+A common use-case takes the form of:
+
+```
+    result = await semantic.chain( object , query, frame, flatten, process, out  )
+```
+
+The input is typically an object representing a JSON-LD frame that forms a declarative query against the database when followed by the query function. 
+
+The query function takes the frame object as input which it uses to query the database.
+
+The frame-db-response function is a partial function that has previously been defined with a frame that it will use to process the output of the query.
+
+The flatten function will take its input object and return a value-only array.
+
+The out function resolves the promised Either for the returned result.
+
+
+### Frame node primitives
+
+the API provides a function **frame(seed, *functions)** takes a seed frame dictionary as input to a chain of functions that operate on the seed.
+One common use-case is a seed that is the desired frame and no helper **functions** are requied.
+Another common use-case is a seed that is an empty dict '''{}''' and a series of helper **functions** to build up the desired frame.
+
+are query (declarative data framing) and data processing functions that form a data processing pipeline.
+The processing pipeline is defined by the function sequence: **func-1, func-2, ...func-i**.
+
+| frame primitive functions | input pre-condition | output post-condition |
+|:--- |:--- |:--- |
+| **findByType(type)** |  frame and type name | **'@type': type** added to frame|
+| **findByName(name)** |  frame and name | **'name': name** added to frame|
+| **findByPair(key, value)** |  frame and key value | **key: value** added to frame |
+| **findByCondition(key, operator, value)** |  frame and start timestamp | **key: {operator: value}** added to frame |
+
+
+### Frame graph primitives
+
+To frame the graph in either the range or domain, recurse and walk the graph using the following:
+
+| functions for recursive framing in the range or domain of a node | input pre-condition | output post-condition |
+|:--- |:--- |:--- |
+| **frameRange(key, frame)** |  frame providing parent scope and key for range scope | **key: { }** added range frame on key |
+| **frameDomain(key, frame)** |  frame providing parent scope and key for domain scope  | **"@reverse":{key: [{}]}** added domain frame on key |
+
+
+example:
+
+```
+joint_state_frame = frame({}, findByType('JointState'), findByName('shoulder_pan_joint', findByPair('first', 'now')))
+
+print(json.dumps(joint_state_frame(), indent=6))
+
+    {
+    "@type": "JointState",
+    "name": "shoulder_pan_joint",
+    "first": "now"
+    }
+```
+
+to pull in the UsdPrim that that joint state is an an attribute of, you can either choose to have the graph's named node be **JointState** or the named node be **UsdPrim** with **typeName** **PhysicsRevoluteJoint**. 
+
+```
+joint_state_range = frame(joint_state_frame, frameRange('parentObject'), frame({}, findByType('UsdPrim'), findByPair('segmentName', 'shoulder_pan_joint')))
+
+print(json.dumps(joint_state_range, indent=6))
+
+    {
+    "@type": "JointState",
+    "name": "shoulder_pan_joint",
+    "first": "now",
+    "parentObject": 
+        { 
+            "@type": "UsdPrim",
+            "segmentName": "shoulder_pan_joint"
+        }
+    }
+```
+
+```
+joint_state_domain = frame({}, findByType('UsdPrim'), findByPair('segmentName', 'shoulder_pan_joint'), frameDomain(joint_state_frame))
+
+print(json.dumps(joint_state_domain, indent=6))
+
+    {
+    "@type": "UsdPrim",
+    "segmentName": "shoulder_pan_joint",
+    "@reverse" : {
+        "parentObject": [
+        { 
+            "@type": "JointState",
+            "name": "shoulder_pan_joint",
+            "first": "now"
+        }
+        ]
+    }
+    }
+```
+
+The playground should be used to develop frames as it can be used incrementally to explore what is in the database as for example with the frame joint_state_domain() and verify that it matches the equivalent operation via semantic.chain:
+
+```
+print(json.sdumps( await semantic.chain( joint_state_domain(), query, out )))
+
+{
+  "@context": {
+    "@base": "terminusdb:///data/",
+    "@vocab": "terminusdb:///schema#"
+  },
+  "@id": "UsdPrim/UR10%2Bur10%2Bbase_link%2Bshoulder_pan_joint+terminusdb%3A%2F%2F%2Fschema%23UsdSpecifier%2FSpecifierDef",
+  "@type": "UsdPrim",
+  "active": true,
+  "apiSchemas": [
+    "PhysicsDriveAPI:angular",
+    "PhysicsJointStateAPI:angular",
+    "PhysxJointAPI"
+  ],
+  "definedIn": "usd",
+  "name": "UR10+ur10+base_link+shoulder_pan_joint",
+  "parentObject": "UsdPrim/UR10%2Bur10%2Bbase_link+terminusdb%3A%2F%2F%2Fschema%23UsdSpecifier%2FSpecifierDef",
+  "path": "/ur10/base_link/shoulder_pan_joint",
+  "relationships": [
+    "UsdRelationship/UR10%2Bur10%2Bbase_link%2Bshoulder_pan_joint%2Bphysics%3Abody0",
+    "UsdRelationship/UR10%2Bur10%2Bbase_link%2Bshoulder_pan_joint%2Bphysics%3Abody1"
+  ],
+  "segmentName": "shoulder_pan_joint",
+  "specializesName": "shoulder_pan_joint",
+  "specifier": "SpecifierDef",
+  "typeName": "PhysicsRevoluteJoint",
+  "@graph": [
+    {
+      "@id": "JointState/shoulder_pan_joint+now",
+      "@type": "JointState",
+      "count": 1,
+      "first": "now",
+      "hasJointEffort": 0.11,
+      "hasJointPosition": 0.22,
+      "hasJointVelocity": 0.33,
+      "last": "now",
+      "name": "shoulder_pan_joint",
+      "parentObject": "UsdPrim/UR10%2Bur10%2Bbase_link%2Bshoulder_pan_joint+terminusdb%3A%2F%2F%2Fschema%23UsdSpecifier%2FSpecifierDef"
+    }
+  ]
+}
+```
+
+
+
+
+### Use-case specific framing functions
+
+Use-case specific functions are defined in user code in terms of the previous function primitives.
+
+TODO: provide function set for the following questions. Note, the answers given in the following are early concepts only.
+
+<!-- 
+Give me all images after the insertion of all unsuccessful insertions for object A
+
+note: image.insertion requires that camera and image instances are modeled with insertion.
+
+Question: is 'A' a type or an instance of a type? i.e. a 'CartridgeHolder' or a specific CartridgeHolder instance named A?
+
+ ``` findBy(object('CartidgeHolder, 'A')).findBy(insertion('success',0).uriSelectBy(insertion.image) ```
+
+ Question: how are objects typed? as ```WorkItem```s of type  ```PenBody, PenCap, BodyLiner, CartridgeHolder, PistonRod```? 
+
+ Give me the force profile for all insertions for all objects
+ ``` findBy(insertion.all).uri(force-profile) ```
+
+ Implies task:  select functions ```uriSelectBy, literalSelectBy```
+
+
+Give me the force profile for all insertions for all objects.
+
+``` findBy(insertion.all).uriSelectBy(insertion.force-profile) ```
+	
+Question: how is force profile defined? as the forces on the tool end effector during the insertion process?
+
+Give me the force profile for all insertions for all objects at the end effector.
+``` findBy(insertion.all).uriSelectBy(insertion.force-profile) ```
+
+Give me all images of camera B and the force profile at the end effector after the insertion of all unsuccessful insertions for object A.
+``` findBy(workItem.A).findBy(insertion.failure).uriSelectBy(cameraB.images, insertion.force-profile) ```
+
+Show me all instances of the insertion where the force at the end effector was larger than 5 newtons.
+``` findBy(insertion.all).findCondition(endEffector.force, '>', 5).literalSelectBy(insertion) ```
+
+What the names of the different phases for task A.
+    NB!: need to discuss modeling of this! Currently:
+
+``` 
+PenAssemblyTask:
+    BinPickTask
+    GraspTask
+    GraspValidationTask
+    PoseEstimationTask
+    ProcessingTask
+    InsertionTask
+    InsertionInspectionTask
+```
+``` findBy(task.).literalSelect```
+
+
+What tasks have been performed with object A.
+	
+Give me all the point clouds and objects poses where the objects expected grasp pose matches the in-hand pose for object A.
+	
+
+Give me all the point clouds and objects poses where the objects expected grasp pose is within a translation of 1 cm with the in-hand pose for object A.
+
+Give me the complete information you have available for one instance of a false grasp for object A.
+	
+
+Give me all joint information at a frequency of one hour for robot A over the last five years.
+
+Give me the timestamps each failed grasping.
+
+How many times today were no pose estimations obtained on object A. 
+	
+
+User: Give me all the instances were the grasping resulted in imprecise poses.
+System: Define imprecise poses.
+User: Were the in-hand pose differs with the expected grasp pose with more than 5mm. 
+	Are you asking for the ability to define pose tolerances for use in a query, and if so, 
+
+
+
+
+``` 
+   jointstate_1 = semantic.by_type('JointState')
+   name_1 = semantic.by_name('elbow-joint')
+   status_1 = semantic.by_predicate_value('status', 'failure')
+   first_1 = semantic.by_predicate_condition('first', '>', t1)
+   last_1 = semantic.by_predicate_condition('last', '<', t1)
+
+   semantic.query(jointstate_1, name_1, status_1, first_1, last_1).select('JointState','hasJointForce')
+
+   semantic.query_joint_force(name_1, status_1, first_1, last_1)
+   
+``` 
+-->
+
+## 1 Background
+
+The semantic-api assumes that the user is concerned with the ontological modeling and subequent programatic use in systems rather than the semantic-web representation of the system. The difference is subtle, but significant, as the concerns of system wide exploitation of a taxonomy used to define the system are different than that of an interface to a semantic-web application. 
+
+The system-wide defintion of types is assumed to be a requirement in the following, with the exposure to the semantic-web as secondary to client and system services usage.
+
+In the ideal case, all aspects of the sytem are staticlly typed such that the ontology serves as a system wide definition that the compiler checks at build time on every signature and return type.
+
+In the worst case, the data types are only validated on insertion to the database for programming languages with little or no type support.
+
+The central postulate of the author is that modeling is a infinite task that implies continuous change to type definitions throughout the system. The approach taken here, is not to resist type change through standardization, or containment to an API or external interfaces,  but to assume and embrace type change through the system programming. 
+
+The central postulate is that an ontolgogicaly defined system requires an environment that supports type change and that this is best achieved with system libraries that are compliled for the ontologies at hand. Statically typed languages are the obvious choice under these requirements but this type centric approach should be maintained for non-statically-typed languages such as Python.
+
+In all cases, the type definitions for the ontology should be local such that code generation is available to the programmer. This can be realized via the native type definitions of statically type languages, definition language for schemas or ontolgies, a DSL for types, or a combination of paths.  Regardless of the means, some form of definition becomes the internal representation that results in compiled type definitions to allow for type validation, code generation, and reasoning. This can be thought of as a ***typed-client*** analogous to a ***thick-client*** where services (in this case types) are available directly on the client.
+
+Versioning shall be applied such that type evolution can be discerned at the type, cluster, and schema levels.
+
+The following documents the current state of this development from the user's point of view.
+
+
+### 1.1 Context
+
+The context for this effort is formed by a set of observations or ***postulates***:
+
+ - ***types are the symbolic representations of the system (vocabulary, taxonomy, langauge model)***
+ - ***the inter-dependence of system types forms a graph of types which we call an ontology***
+ - ***system design and inteface design starts with types***
+ - ***these types define the semantics of the system, i.e. form a model of the system***
+ - ***specific instances of types are what we call semantic data***
+ - ***a function is defined by the mapping between the type of its argument and its return type***
+ - ***modeling of the world (system) is an infinite task since our concerns and the world are both continuously changing***
+ - ***we need to be able to easily handle the evolution and change of our world models (ontologies)***
+ - ***system wide types have a positive effect on the development and the subsequent quality of the system***
+ - ***we need to be able to handle the evolution and change of our program types***
+ - ***the complexity of programing with semantic data, i.e. defining, creating, querying, formatting, and processing of semantic data is limiting exploitation***
+ - ***programming with semantic data (on graphs of type instances) is poorly developed in light of its potential***
+ 
+
+### 1.2 Goals
+
+The goal is to enable semantic techologies to be exploited in projects. This envolves simplifying:
+
+ - the definition, selection, and layering of ontologies
+ - the creation of semantic data
+ - the querying, formatting, and processing of semantic data
+ 
+
+Furthermore, It is an implied requirement is that any semantic middleware, or configuration detail, is kept out of the user's functional, in-band, or business logic.
+ 
+
+### 1.3 Use and Exploitation Potential
+
+System wide ontologies and local programming with types are expeced to be exploited in:
+ - code quality: ensuring instance data is correct at run-time (as well as development and compile time correctness)
+ - metadata: model higher level environmental contexts, use-cases, configuration, scenarios, tasks, agents, actors, not just entities, behaviour, and actions
+ - state machines: state machine states and events as types
+ - observability: full semantic coverage of system and sub-system states and errors
+ - availability: provide clients with the list of the current actions/operations that a user can make for the current service/error state (HATEOAS)
+ - controllability: model the full plant and control space with parameter, error, and noise effects
+ - modeling: address the extra dimensions of concern that are not modeled
+ - temporality: model the temporal dimension so that all captured semantic data is unique and represents an event
+ - policies: exploit events by using ontologically defined conditions on policy agents
+ - reasoning: exploit reasoning on types and type properties to create knowledge bases
+ - empirical models: use bottom up techniques, both classical and machine learning techniques to validate if not inform symbolic types
+
+
+## 2 RDF and Types
+
+### 2.1 Triples
+The group of standards and ecosystem surrounding `OWL` and `RDF` represent the current state of semantic web technologies. 
+
+Both of these standards are triple based, i.e. the fundamental unit is the triple `subject-predicate-object`.
+
+***Postulate***: The triple formulation is very convenient unit for low level use, but not for high level definitions. 
+
+The standard tool for working with OWL and RDF is [protege](https://protege.stanford.edu/) which illustrates the point of the [context](#11-context) on complexity as a limiting factor.
+
+***Postulate***: An approach that imports from `OWL` and interoperates wth `RDF` but focuses on static types is required for both simplicity and use potential
+
+
+
+
+### 2.2 JSON-LD @type
+
+Fortunately, [JSON-LD](https://json-ld.org/) is an RDF [standard](https://w3c.github.io/json-ld-syntax/) that defines a type (`@type`) as the set of a subject's triples. A good introduction to role of JSON-LD and the web is given [here](http://www.markus-lanthaler.com/research/on-using-json-ld-to-create-evolvable-restful-services.pdf)
+
+When we equate the static types in our programming language with those in the ontology, we are practically speaking, making this mapping via `JSON-LD` types. 
+
+Programming types are marshalled to `JSON-LD` (stringified) and unmarshalled (loaded) from `JSON-LD` to instances of static types in a program.
+
+### 2.3 JSON-LD Schema
+
+A limitation of `JSON-LD`is that there is no JSON-LD Schema standard.  The standard does not define a means of defining the pure type (schema) and we have to do this via some other mechanism. 
+
+We are currently defining the type definitions via annotated type (schema) definitions made in `JSON-LD` as per [TerminusDB](https://terminusdb.com/docs/schema-reference-guide/).
+
+In practice, `JSON-LD` is used for semantic data serialization, interface types, and database storage.  
+
+Pure schema or type definitions have a number of uses. The schema definition are typically compile time artifacts available via libaries to both client and server without access to the database and can be used for a number of purposes:
+  - program languge type defintions
+  - instance validation
+  - code generation
+  - reasoning about types
+   
+All of the following ontologies are generated from definitions of the types in a specific cluster.
+
+### 2.4 Visualization
+
+The JSON-LD based schema definitions are used to generate graphical representation of ontology clusters as per the following `core` cluster.
+The outer scope defines the schema and version where the cluster is used. The cluster scoping can be added or removed so that multiple custers, or a complete schema, can be shown together. It is simpler to view clusters individually and show dependencies (also a graph option) on exteral cluster types. The predicate names can optionally be repeated on the edges defining the association but this does contribute information as the Object's type is listed together with the predicate name.
+
+
+| Graph key | interpretation |
+|:--- |:--- |
+| type name | box heading is value of @type |
+| colored type box| abstract type |
+| black type box | concrete type |
+| predicate name listed on left | object type or literal type on right |
+| dotted arrow |  subsumes |
+| solid arrow | predicate |
+
+
+![core](../ontologies/clusters/core/facilityCobot-v022-core-cluster.svg)
+
+### 2.5 Dimensions
+
+Note that the underlying dimesions are defined in `core`cluster along with the common base type `CommonEntity`:
+  - `AbstractEntity`
+  - `SampledEntity`and `TemporalEntity`
+  - `PhysicalEntity`
+  - `CyberPhysicalActor` (actor)
+  - `ActionEntity`
+
+  as per the FFU ontology derived from [IHMC](https://ontology.ihmc.us/ontology.html)
+
+These same dimensions can be found in [DUL](#52-dul) and replace the role of `core`in the FERA schema.
+
+<a id="required-core"></a>
+
+### 2.6 Required Core properties
+
+***Proposition*** all `URI`s that are exposed to users or programmers should be logically constructed from ***well-known-identifiers*** when ever possible. 
+
+A `URI` is built from a root domain of the service hosting the data and schema instances so the uniqueness requirement typically pertains on a type basis, not global scope basis.
+
+All of the following ontologies are dependent on the use of a unique `name` value for a given type as the lexical URI generation scheme always involves the `type/name` pair. 
+
+This is generally suffient for meta-data but requires an extra `index`, `count`, `timestamp` or some other property value to disambiguate sampled data. 
+
+The type name is implied by default, and `name` shall be included in a root type of the ontology.
+
+Just as the design of `URL`s is an important and overlooked part of the design of `RESTful`services, the same consideration on the lexical design of `URI`s should be made in conjunction with the type design.
+
+***Postulate*** the ontology designer should try to keep all predicates (property keys) unique to the type
+
+This means that if you want to reuse the `name`, or any other predicate in a new type, you should inherit the type that it is defined in, rather than duplicating it in your new type. 
+
+Note that handling of predicate naming may differ between a type centric and a triple centric approach.
+
+
+### 2.7 URIs
+
+All subjects, predicates, and objects are identified by URIs (LinkedData) and are generated by the database according to a lexical scheme defined per type in the schema definition.
+
+One of the practial programming challenges of working with graphs of semantic data is ensuring that you have the URIs for all the neighboring objects that you are linking to. 
+
+Use of a well defined lexical `URI`generation scheme means that users can emulate a object reference without a database roundtrip.
+
+The issue of providing parent and neighboring `URI`s in creating a semantic data instance is simplified for the user by the use of type constructors that should be bundled in a cluster's stub libary.
+
+A link failure means that the object does not exist (closed world assumption), not that this object may exist but that we just do not know about it (open world assumption).
+
+# Editing Ontologies
+
+## Current Implementation
+
+TerminusDB uses JSON-LD as its RDF format for both storage and serialization of data. They have extended the syntax of JSON-LD using the ```@``` symbol (a common, but bad practice since this is a reserved symbol in JSON-LD).
+
+We are currently using TerminusDB's schema definition language as our internal representation. TerminusDB supports a datalog known as WOQL that can be used for both insertion and queries and they support a document (JSON-LD) oriented schema definition that is their current prefered method. 
+
+In our current implementation of a ***typed-client***, ontologies/schemas are defined in terms of custers, each cluster consisting of a set of type definitions that are imported as a package.
+
+Users should be able to import a clusters and create their own clusters.  
+
+Currently clusters from all projects are in a single mono-repo and are being split out into project repositories and distributed as NPM packages.
+
+### Temporary use
+
+Until the availability of NPM based clusters and library for handling clusters, users will have to use the NVIDIA Server for development.
+
+Packages are managed under [```Rush```](https://rushstack.io/) which is used for handling all dependencies of the monorepo for typescript and javascript modules. 
+
+Each cluster is a module and has it's own package/project defininition in the rush.json file that configures the repo. The following should be added to ```rush.json``` for ```fera-machine-tending-schema```:
+
+```
+    {
+        "packageName": "fera-machine-tending-schema",
+        "projectFolder": "types/fera-machine-tending-schema",
+        "reviewCategory": "production"
+    },
+```
+
+  - copy the directory ```/srv/workspace/services/types/fera-assembly-schema``` and change the name of the copied to ```fera-machine-tending-schema```.
+  - change the file name under ```src/``` to ```feraMachineTendingSchema.ts```  and edit ```index.ts``` accordingly.
+  - edit the package.json file for name changes, likewise the config/api-extractor.json file
+  - rush update (to update dependencies in repo)
+  - rush build  (to build repo)
+
+###  Cluster definition
+
+A cluster is defined as an array of ```clusterType``` where ```id```, ```cluster```, ```type```, ```version```, ```woql``` are required for schema definition.
+
+```
+        interface clusterType {
+        /*  
+            concept: clusterType is internal program representation (should) containing all data for generating 
+            - woql (or other schema format)
+            - stubs
+            - visualizations
+            - interoperability context/concordance data
+            - dependencies are the other clusters where this types dependencies are to be found 
+        */
+        id: string,
+        cluster: string,
+        type: string,
+        version: string,
+        inScope?: boolean,
+        woql?: any,
+        graphviz?: any,
+        children?: any, // { childName: clusterType [] }
+        }
+```
+
+Example: 
+```
+        import { clusterType } from 'common-types';
+
+        export const machineTendingCluster = (id): clusterType[] => ([
+
+        // Situations
+        {
+            "id": id,
+            "cluster": "machineTending",
+            "type": "MachineTendingSituation",
+            "version": "v001",
+            "woql": {
+            "@type": "Class",
+            "@id": "MachineTendingSituation",
+            "@documentation": {
+                "@title": "MachineTendingSituation", "@description": " (version:v001)",
+                "@authors": [""]
+            },
+            "@inherits": ["ProductionSituation"],
+            "@key": { "@type": "Lexical", "@fields": ["name"] }
+            }
+        },
+        ...
+        ])
+```
+### Schema Definition
+
+- import your cluster to ```services/types/schema-defs/src/schemaLibs.ts``` as ```{ machineTendingCluster } from 'machine-tending-schema';```
+- Add an entry for your (```machineTending```) cluster to the schema ```fera``` in the following or create your new schema in ```schemaDefs```
+
+```
+    export const schemaDefs: SchemaMapDef[] = [
+        { name: 'fera', version: 'v001', clusters: [ baseCluster, dulCluster, usdCluster, usdValueCluster, feraCluster, assemblyCluster ] } 
+    ]
+```
+- use these ```name``` and ```version``` values when defining db 
+- add an entry for your cluster and each type in ```clusterFormat``` of ```services/types/schema-defs/src/schemaLibs.ts``` 
+
+### Design rules
+
+See schemas under /types for example code and [reference](https://terminusdb.com/docs/schema-reference-guide/)
+ - Schemas are defined as a set of clusters
+ - A schema is built horizontally with a set of clusters that cover different dimensions
+ - A schema is built vertically by refining types from parent clusters
+ - Each cluster should be a layer that presents the user with a set of cohesive types
+ - It is a good practice to define more narrow abstract types in your cluster rather than re-using wider parent types from other clusters
+ - See the Fera cluster and the above as examples of applied ```DUL``` and ```fera``` types
+ - the URI for an instance is defined by the db and returned as```@id``` according to the ```@key``` definition
+ - Human readiable, i.e. lexical URIs are prefered and would be  ```@type/{name}``` in the above example where ```name``` shall be unique for a type
+ - Note that the ```@fields``` array would include ```first``` for ```TemporalEntities``` to disambiguate by timestamps 
+ - Abstract types are not instantiated, i.e. they have no instances or @key definitions for their @id
+ - Abstract types are denoted by ```@abstract: []```
+ 
+
+### Usage
+
+A freshly started shell service requires a default schemaId set so that it knows what schema to operate on and which logical db instance to use.
+You can have multiple db instances running that have the same or different schemas installed.
+
+See define dbID in the following table to set the schemaId and db instance for whenever a shell is restarted. 
+
+The format shall follow ```<schema name><schema version>-<instance name>``` where ```<schema name>``` and ```<schema version>``` follow from the (yours) approriate entry in ```services/types/schema-defs/src/schemaLibs.ts```
+
+
+| General tasks | Command |
+|:--- |:--- |
+| build | ```rush build``` |
+| tmux | ```tmux attach -t fc``` |
+| stop/start shell | in ```services/services/fera-shell```  or the shell pane of tmux |
+| run shell | ```rushx serve``` |
+| client | in ```services/apps/semantic-client``` or client pane of tmux : ```rushx serve --help``` |
+| view dbId | ```rushx serve -v``` |
+| define dbId (*)| ```rushx serve -d <schema name><schema version>-<instance name> ```|
+
+(*) required for all client-shell operations
+
+| DB tasks | Command |
+|:--- |:--- |
+| create db instance for current dbId | ```rushx serve -c``` |
+| insert schema for dbId in db | ```rushx serve -q``` |
+| insert usd instances (**) | ```rushx serve -x ../../../../semantic-services/semantic_repo/libraries/usd_to_rdf/usd-files/json/ur10.json``` |
+
+(**) requires that usd and usdValue are included in the schema definition
+
+
+| Visualization tasks | Command |
+|:--- |:--- |
+| for the current schema graph clusters a, b, and c (***)| ```rushx serve -g a b c``` |
+| show parent dependencies | ```rushx serve -e true``` |
+| show cluster boundaries | ```rushx serve -b true``` |
+
+(***) generated .svg files are placed in ```/srv/workspace/artifacts```
+
+ 
