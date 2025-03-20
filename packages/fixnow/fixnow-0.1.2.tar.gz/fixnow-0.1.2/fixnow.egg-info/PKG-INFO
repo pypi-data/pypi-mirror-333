@@ -1,0 +1,73 @@
+Metadata-Version: 2.2
+Name: fixnow
+Version: 0.1.2
+Summary: AI-powered Git commit fixer
+Home-page: https://github.com/Structax/fixnow
+Author: Structax
+Author-email: your-email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: pre-commit
+Requires-Dist: pylint
+Requires-Dist: mypy
+Requires-Dist: pytest
+Requires-Dist: argparse
+Requires-Dist: rich
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 🚀 FixNow – AI-powered Git commit fixer
+
+Detect & fix errors before you commit! 🛠️
+
+FixNow is a CLI tool that detects potential errors in your code at commit time and suggests fixes, so you can avoid pushing bugs.
+
+## ✨ Features
+
+- ✅ Detects errors in your code before committing
+- ✅ Provides AI-powered fix suggestions
+- ✅ Works as a Git pre-commit hook
+- ✅ Supports multiple programming languages
+
+## 📦 Install FixNow (coming soon!)
+
+```sh
+$ npm install -g fixnow
+```
+
+## 🚀 Usage
+
+Run FixNow before committing:
+
+```sh
+$ fixnow check
+```
+
+Or set it up as a Git pre-commit hook:
+
+```sh
+$ fixnow install
+```
+
+## 📌 Why FixNow?
+
+- 💡 Never push broken code again!
+- ⚡ Works automatically with your Git workflow
+- 🚀 Saves time by catching mistakes early
+
+## 🌟 Star this repo!
+
+If you find FixNow useful, give it a ⭐ on GitHub! 👉 [GitHub.com/Structax/fixnow](https://github.com/Structax/fixnow)
+
+🚀 Built by Structax – Indie Developer in Japan
