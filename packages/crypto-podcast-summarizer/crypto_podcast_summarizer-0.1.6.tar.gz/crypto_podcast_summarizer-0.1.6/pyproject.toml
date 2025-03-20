@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crypto-podcast-summarizer"  # Updated name
+version = "0.1.6"
+authors = [
+  { name = "Abhinay Yarlagadda", email = "Abhinay.Yarlagadda@gmail.com" },
+]
+description = "A tool to download, transcribe, summarize, and generate voice summaries for crypto-related podcasts."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "feedparser>=6.0.10",
+  "requests>=2.31.0",
+  "torch>=2.0.0",
+  "openai-whisper>=20231117",
+  "google-genai>=0.1.0",
+  "numpy>=1.24.0",
+  "soundfile>=0.12.1",
+  "kokoro>=0.1",
+]
+license = "MIT"
+keywords = ["podcast", "summarizer", "transcription", "AI", "crypto"]
+
+[project.scripts]
+crypto-podcast-summarizer = "podcast_summary.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/podcast_summary"]
+
+[tool.hatch.build]
+exclude = [
+  "api_key.txt",
+  "*.txt",
+]
