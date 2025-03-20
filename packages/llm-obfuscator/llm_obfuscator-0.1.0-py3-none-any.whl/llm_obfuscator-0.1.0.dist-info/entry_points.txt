@@ -1,0 +1,2 @@
+[console_scripts]
+llm-obfuscator = llm_obfuscator.cli:main
