@@ -1,0 +1,5 @@
+# python generated files #
+######################
+__pycache__/
+*.nbi
+*.pyc
