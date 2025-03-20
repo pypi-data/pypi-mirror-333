@@ -1,0 +1,3 @@
+﻿#Do None
+recursive-include djangocms_zb_youtube/templates/ *
+recursive-include djangocms_zb_youtube/locale/ *

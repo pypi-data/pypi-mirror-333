@@ -1,0 +1,41 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend="setuptools.build_meta"
+
+[project]
+name = "djangocms-zb-youtube"
+dynamic = ["version"]
+authors = [
+    {name="Mario Ceron", email="mario.ceron@cqinversiones.co"}
+]
+description = "Zibanu Youtube Plugin for Django CMS"
+readme = "README.md"
+license = {file="LICENSE"}
+requires-python = ">=3.7"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Application Frameworks"
+]
+dependencies = [
+    "Django~=3.2",
+    "django-cms>=3.9",
+    "django-ckeditor",
+]
+keywords = [
+    "django",
+    "zibanu",
+    "youtube",
+    "djangocms"
+]
+
+[tool.setuptools.dynamic]
+version = {attr= "djangocms_zb_youtube.__version__"}

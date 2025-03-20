@@ -1,0 +1,32 @@
+{% for video in youtube_info.videos %}
+    {% if forloop.first %}<table><tr>{% endif %}
+    <td>
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <iframe width="{{ youtube_info.video_width }}" height="{{ youtube_info.video_height }}" src="https://www.youtube.com/embed/{{ video.video_id }}?cc_load_policy=1&cc_lang_pref=es" title="Youtube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pub: {{ video.published_at }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Title: {{ video.title }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Desc: {{ video.description }}
+                </td>
+            </tr>
+        </table>
+{% if forloop.counter|divisibleby:youtube_info.video_columns %}</tr>{% endif %}
+{% if forloop.last %}</table>{% endif %}
+{% endfor %}

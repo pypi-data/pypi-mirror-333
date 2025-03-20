@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 06:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cms_plugins.py:44
+msgid "Django CMS Zibanu Youtube Connector"
+msgstr "Plugin Zibanu Youtube para Django CMS"
+
+#: lib/choices.py:41
+msgid "Date"
+msgstr "Fecha"
+
+#: lib/choices.py:42
+msgid "Rating"
+msgstr "Calificación"
+
+#: lib/choices.py:43
+msgid "Relevance"
+msgstr "Relevancia"
+
+#: lib/choices.py:44
+msgid "Title"
+msgstr "Título"
+
+#: lib/choices.py:45
+msgid "Video Count"
+msgstr "Número del video"
+
+#: lib/choices.py:46
+msgid "View Count"
+msgstr "Número de vistas"
+
+#: lib/choices.py:59
+msgid "Low"
+msgstr "Baja"
+
+#: lib/choices.py:60
+msgid "Medium"
+msgstr "Media"
+
+#: lib/choices.py:61
+msgid "High"
+msgstr "Alta"
+
+#: models.py:31
+msgid "Channel Id"
+msgstr "ID del canal"
+
+#: models.py:32
+msgid "Youtube channel id to view"
+msgstr "ID del canal de youtube a mostrar"
+
+#: models.py:33
+msgid "Max results"
+msgstr "Número de resultados"
+
+#: models.py:34
+msgid "Max number of videos to be fetched from Youtube"
+msgstr "Número máximo de videos que se traerán desde el canal de Youtube"
+
+#: models.py:36
+msgid "Video order"
+msgstr "Orden de los videos"
+
+#: models.py:37
+msgid "Order in which videos are displayed"
+msgstr "Orden en el que se mostraran los videos en la plantilla"
+
+#: models.py:39
+msgid "Template"
+msgstr "Plantilla"
+
+#: models.py:40
+msgid "Template to be used to display the videos"
+msgstr "Plantilla que se utilizará para mostrar los videos"
+
+#: models.py:41
+msgid "Video width"
+msgstr "Ancho del video"
+
+#: models.py:42
+msgid "Width of video in pixels"
+msgstr "Ancho del video en pixeles"
+
+#: models.py:43
+msgid "Video height"
+msgstr "Altura del video"
+
+#: models.py:44
+msgid "Height of video in pixels"
+msgstr "Altura del video en pixeles"
+
+#: models.py:45
+msgid "Display columns"
+msgstr "Columnas a mostrar"
+
+#: models.py:46
+msgid "Number of columns in which the videos will be displayed"
+msgstr "Número de columnas que se utilizarán para mostrar los videos en las plantillas"
+
+#: models.py:50
+msgid "Thumbnail definition"
+msgstr "Resolución de la miniatura"
+
+#: models.py:51
+msgid "Definition of thumbnail to be used"
+msgstr "Resolución que se utilizará para mostrar las miniaturas en la plantilla"
+
+#: models.py:54
+msgid "Refresh time"
+msgstr "Tiempo de refrezco"
+
+#: models.py:55
+msgid "Time to be used to refresh the video list from youtube"
+msgstr "Tiempo que se utilizará para recargar los videos desde Youtube"
