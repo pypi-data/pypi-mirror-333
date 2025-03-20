@@ -1,0 +1,13 @@
+"""
+Main module for ${package_name}.
+"""
+
+def main():
+    """
+    Main entry point for the application.
+    """
+    print("Hello from ${package_name}!")
+
+
+if __name__ == "__main__":
+    main()
