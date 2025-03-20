@@ -1,0 +1,48 @@
+<odoo>
+    <record id="installation_processing_tree" model="ir.ui.view">
+        <field name="name">installation.processing.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" create="0" default_order='code'>
+                <field name="code" optional="show"/>
+                <field name="name" optional="show"/>
+                <field name="cau" optional="show"/>
+                <field name="supplier_id" optional="show"/><field name="supplier_id" domain="[('category_id.id', '=', supplier_tag)]" optional="show"/>
+                <field name="supplier_tag" invisible='1'/>
+                <field name="file_number_processing" optional="show"/>
+                <field name="aditional_files" optional="show"/>
+                <field name="management_contact" domain="['|', ('category_id.id', '=', management_contact_tag), ('parent_id.category_id.id', '=', management_contact_tag)]"/>
+                <field name="management_contact_tag" invisible='1'/>
+                <field name="technical_conditions" optional="show"/>
+                <field name="cta" optional="show"/>
+                <field name="approval_number" optional="show"/>
+                <field name="approval_date" optional="show"/>
+                <field name="installer_send_date" optional="show"/>
+                <field name="registry_send_date" optional="show"/>
+                <field name="cie_registry_state" optional="show"/>
+                <field name="periodic_inspection" optional="show"/>
+                <field name="inspection_date" optional="show"/>
+                <field name="documentation_sent" optional="show"/>
+                <field name="transaction_notes" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_processing_action" model="ir.actions.act_window">
+        <field name="name">Processing</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_processing">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_processing_tree"/>
+        <field name="act_window_id" ref="installation_processing_action"/>
+    </record>
+    <menuitem
+        id="installation_processing"
+        parent="installation_extra_views"
+        action="installation_processing_action"
+        name="Processing"
+    />
+</odoo>

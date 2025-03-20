@@ -1,0 +1,17 @@
+from . import (selfconsumption_installation,
+    purchase_order, 
+    sale_order, 
+    res_partner, 
+    account_move, 
+    installation_cover, 
+    selfconsumption_installation_simulation, 
+    installation_role, 
+    installation_event, 
+    res_config_settings, 
+    installation_electric_line,
+    installation_role_line,
+    installation_inverter,
+    installation_module,
+    installation_legal_requirement,
+    installation_associated_supply
+)

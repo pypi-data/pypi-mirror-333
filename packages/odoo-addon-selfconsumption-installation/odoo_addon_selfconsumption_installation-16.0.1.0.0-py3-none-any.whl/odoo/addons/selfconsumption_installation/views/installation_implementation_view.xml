@@ -1,0 +1,74 @@
+<odoo>
+    <record id="installation_implementation_tree" model="ir.ui.view">
+        <field name="name">installation.implementation.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" multi_edit="1" create="0" default_order='code'>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="blueprint_chosen" optional="show"/>
+                <field name="construction_start_date" optional="show"/>
+                <field name="construction_end_date" optional="show"/>
+                <field name="week_construction" optional="show"/>
+                <field name="cnmc_connection_type" optional="show"/>
+                <field name="installation_typology_execution" optional="show"/>
+                <field name="construction_address" optional="show"/>
+                <field name="peak_power_execution" optional="show"/>
+                <field name="rated_power_execution" optional="show"/>
+                <field name="nature_of_supply" optional="show"/>
+                <field name="mains_voltage" optional="show"/>
+                <field name="new_or_expansion" optional="show"/>
+                <field name="zero_injection" optional="show"/>
+                <field name="supply_connection" optional="show"/>
+                <!-- COVER -->
+                <field name="cover_type_execution_id" optional="show"/>
+                <field name="anchorage_type" optional="show"/>
+                <field name="structure_type" optional="show"/>
+                <field name="structure_inclination" optional="show"/>
+                <field name="structure_orientation" optional="show"/>
+                <field name="media_aux" optional="show"/>
+                <field name="structure" optional="show"/>
+                <field name="cover_extra_info" optional="show"/>
+                <!-- GCP -->
+                <field name='gcp_location' optional="show"/> 
+                <field name='gcp_fuse_rated_current' optional="show"/> 
+                <field name='gcp_lga_section' optional="show"/> 
+                <field name='gcp_fuseholder_type' optional="show"/> 
+                <field name='gcp_general_switch' optional="show"/> 
+                <!-- METER LOCATION -->
+                <field name='dc_safety_fuse' optional="show"/> 
+                <field name='dc_fuseholder_type' optional="show"/> 
+                <!-- PV LINE -->
+                <field name='pv_line_meter_type' optional="show"/> 
+                <field name='pv_line_meter_sn' optional="show"/> 
+                <field name='pv_registrar_number' optional="show"/> 
+                <field name='pv_safety_fuse' optional="show"/> 
+                <field name='pv_disconectors' optional="show"/> 
+                <!-- OTHERS -->
+                <field name="civil_construction" optional="show"/>
+                <field name="extra_element_1" optional="show"/>
+                <field name="extra_element_2" optional="show"/>
+                <field name="extra_element_3" optional="show"/>
+                <field name="design_notes" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_implementation_action" model="ir.actions.act_window">
+        <field name="name">Ejecución</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_implementation">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_implementation_tree"/>
+        <field name="act_window_id" ref="installation_implementation_action"/>
+    </record>
+    <menuitem
+        id="installation_implementation"
+        parent="installation_extra_views"
+        action="installation_implementation_action"
+        name="Ejecución"
+    />
+</odoo>

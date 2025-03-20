@@ -1,0 +1,62 @@
+<odoo>
+  <record id="view_project_partner_form" model="ir.ui.view">
+    <field name="name">view.project.partner.form</field>
+    <field name="model">res.partner</field>
+    <field name='inherit_id' ref='base.view_partner_form' />
+    <field name="arch" type="xml">
+      <div name="button_box" position="inside">
+        <button name="action_view_installation_partner" type="object" class="oe_stat_button"
+          icon="fa-folder">
+          <field name="installation_partner_count" widget="statinfo" string="Installations" />
+        </button>
+      </div>
+      <field name="vat" position="after">
+        <field name="installation_id" domain="[('partner_id','=', id)]"
+          options="{'no_create': True}" />
+        <field name="supply_autoproject" invisible="1" />
+      </field>
+
+      <xpath expr="//div[hasclass('oe_kanban_details')]" position="inside">
+        <div class="o_kanban_record_bottom" style="justify-content: end;">
+          <div class="oe_kanban_bottom_right">
+            <button type="object" name="action_view_details" class="btn btn-primary">
+              View Details
+            </button>
+          </div>
+        </div>
+      </xpath>
+
+      <xpath expr="//notebook" position="inside">
+        <page string="Suministro" attrs="{'invisible':[('supply_autoproject','=', False)]}">
+          <group>
+            <group>
+              <field name="supplier_id" />
+              <field name="partner_id2" />
+              <field name="partner_id2_name" />
+              <field name="partner_id2_surname" />
+            </group>
+            <group>
+              <field name="partner_id2_vat" />
+              <field name="partner_id2_street" />
+              <field name="partner_id2_zip" />
+              <field name="partner_id2_comercial" />
+            </group>
+            <group>
+              <field name="cups" />
+              <field name="contract_power" />
+              <field name="energy_cost" />
+              <field name="energy_cost_first_period" />
+              <field name="energy_cost_second_period" />
+              <field name="energy_cost_third_period" />
+              <field name="annual_energy_consumed" />
+            </group>
+            <group>
+              <field name="phase" />
+              <field name="access_pricelist" />
+            </group>
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

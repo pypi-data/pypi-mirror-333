@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_installation_event_calendar" model="ir.ui.view">
+    <field name="name">view.installation_event.calendar</field>
+    <field name="model">installation.event</field>
+    <field name="arch" type="xml">
+      <calendar string="Calendario proyecto"
+                   date_start="start_date"
+                   date_stop="end_date"
+                   event_open_popup="true"
+                   mode="month"
+                   color="installation_id"
+                   quick_add="False">
+             <field name="installation_id"/>
+             <field name="type"/>
+         </calendar>
+    </field>
+    </record>
+
+    <record id="view_installation_event_form" model="ir.ui.view">
+    <field name="name">view.installation_event.form</field>
+    <field name="model">installation.event</field>
+    <field name="arch" type="xml">
+        <form>
+            <group>
+                <group>
+                    <field name="name"/>
+                    <field name="installation_id"/>
+                    <field name="type"/>
+                </group>
+                <group>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </group>
+            </group>
+        </form>
+    </field>
+    </record>
+
+    <record id="action_installation_event_calendar" model="ir.actions.act_window">
+    <field name="name">Calendario de proyectos</field>
+    <field name="res_model">installation.event</field>
+    <field name="view_mode">calendar,tree</field>
+    <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+            Calendario de proyecto
+        </p>
+        <p>
+            Registro de fecha de obra y replanteo
+        </p>
+    </field>
+    </record>
+    <menuitem id="installation_event_menu" parent="selfconsumption_installation_menu"
+            action="action_installation_event_calendar" sequence="20"/>
+
+</odoo>

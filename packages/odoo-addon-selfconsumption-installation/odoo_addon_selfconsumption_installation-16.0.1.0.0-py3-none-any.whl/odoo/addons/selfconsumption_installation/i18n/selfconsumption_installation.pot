@@ -1,0 +1,2220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* selfconsumption_installation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20250226\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-12 19:41+0000\n"
+"PO-Revision-Date: 2025-03-12 19:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__zero_injection
+msgid "0 Injection"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">File manager category</span>"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Installer Category</span>"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Inverter category</span>"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Module Category</span>"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Supplier Category</span>"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_event
+msgid "A calendar event of a selfconsumption installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__installation_electric_line__type__ac
+msgid "AC"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "AC activated"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__supply_connection__at
+msgid "AT"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Access point"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__active
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__status__active
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_view_search
+msgid "Active"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_installation_role_search
+msgid "Agrupar por"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_electric_line
+msgid "An electric line for a selfconsumption installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__analytic_account_id
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Analytic account"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__blueprint
+msgid "Anteproyecto"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__blueprint_chosen
+msgid "Anteproyecto elegido"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__partner_id2_surname
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__partner_id2_surname
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__partner_id2_surname
+msgid "Apellidos titular"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__associated_supply_ids
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Associated supplies"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__energy_cost
+msgid "Average energy cost €/kWh"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__cie_registry_state__awaintin_customer
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__irve_processing_status__awaintin_customer
+msgid "Awaiting customer"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__cie_registry_state__awaiting_installer
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__irve_processing_status__awaiting_installer
+msgid "Awaiting installer"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__supply_connection__bt
+msgid "BT"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__bonification
+msgid "Bonification (ICIO)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cau
+msgid "CAU"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__installation_electric_line__type__cc
+msgid "CC"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "CGP"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cie_resgistry_date
+msgid "CIE registry date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cie_registry_state
+msgid "CIE registry state"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cnmc_connection_type
+msgid "CNMC Connection type"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__co2_avoided
+msgid "CO2 evitado"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__surge__col
+msgid "COL"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installation_zip
+msgid "CP instalación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__partner_id2_zip
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__partner_id2_zip
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supply_zip
+msgid "CP suministro"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "CTA"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cta
+msgid "CTA and close"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__cups
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__cups
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__cups
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cups
+msgid "CUPS"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__cadastral_reference
+msgid "Cadastral reference"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.actions.act_window,help:selfconsumption_installation.action_installation_event_calendar
+msgid "Calendario de proyecto"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.action_installation_event_calendar
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_event_menu
+msgid "Calendario de proyectos"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_installation_event_calendar
+msgid "Calendario proyecto"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__catastral
+msgid "Catastro"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__channeling
+msgid "Channeling"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_license_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_license
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "City Council"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__ibi_bonification_requested_by__client
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__icio_bonification_requested_by__client
+msgid "Client"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__client_documentation_sent
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Client documentation sent"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__solar_cover
+msgid "Cobertura solar"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__typology__collective
+msgid "Collective"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Comercial"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__partner_id2_comercial
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__partner_id2_comercial
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supply_comercial
+msgid "Comercializadora"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__company_id
+msgid "Company"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__cie_registry_state__completed
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__irve_processing_status__completed
+msgid "Completed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Compras"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__ibi_bonification
+msgid "Concession"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_config_views
+msgid "Configuración"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__construction_address
+msgid "Construction address"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__self_consumption
+msgid "Consumo propio %"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_res_partner
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__partner_id
+msgid "Contact"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__installation_partner_count
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__installation_partner_count
+msgid "Contador proyectos"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__contract_signed
+msgid "Contract signed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__contracted_power
+msgid "Contracted power (kW)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__utm_coords
+msgid "Coordenadas UTM"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__responsible_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__responsible_candidates_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__responsible_ids
+msgid "Coordinadores"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__energy_cost_first_period
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__energy_cost_first_period
+msgid "Coste de la energia - Periodo 1"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__energy_cost_second_period
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__energy_cost_second_period
+msgid "Coste de la energia - Periodo 2"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__energy_cost_third_period
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__energy_cost_third_period
+msgid "Coste de la energia - Periodo 3"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__energy_cost
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__energy_cost
+msgid "Coste energia medio €/kWh"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Cover"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__create_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__create_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__partner_id
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Customer"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__customer_shipments
+msgid "Customer shipment"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__code
+msgid "Código"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__lead_code
+msgid "Código lead"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__dc_safety_fuse
+msgid "DC Safety fuse"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__dc_fuseholder_type
+msgid "DC fuseholder type"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__partner_id2_vat
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__partner_id2_vat
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__partner_id2_vat
+msgid "DNI titular"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__approval_date
+msgid "Date of approval"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Date of obtanining COVE"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__status__deactivated
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_view_search
+msgid "Deactivated"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__gmaps_address
+msgid "Dirección Gmaps"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installation_address
+msgid "Dirección instalación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__partner_id2_street
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__partner_id2_street
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supply_street
+msgid "Dirección suministro"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__display_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__supplier_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__supplier_id
+msgid "Distribuidor"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__distribution_agreement_signed
+msgid "Distribution agreement signed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__distribution_coefficient
+msgid "Distribution coefficient"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__documentation_delivered
+msgid "Documentation delivered"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__documentation_sent
+msgid "Documentation sent"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__done
+msgid "Done"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__draft_ready_for_submission
+msgid "Draft ready for submission"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__draft_sent
+msgid "Draft sent"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__draft_sent_date
+msgid "Draft sent date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__surge__eru
+msgid "ERU"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__ibi_bonification_requested_by__ecooo
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__icio_bonification_requested_by__ecooo
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__pay_taxes__ecooo
+msgid "Ecooo"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_implementation_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_implementation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Ejecución"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__bill_recieved
+msgid "Electric Bill Recieved"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_line_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__line_ids
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Electric lines"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__extra_element_1
+msgid "Elemento extra 1"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__extra_element_2
+msgid "Elemento extra 2"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__extra_element_3
+msgid "Elemento extra 3"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__email
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__monitorization_email
+msgid "Email"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__end_date
+msgid "End date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__end_of_work_completed
+msgid "End of work completed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__end_of_work_notified
+msgid "End of work notified"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__annual_energy_consumed
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__annual_energy_consumed
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__annual_energy_consumed
+msgid "Energia consumida anual kWh/año"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__energy_consumed
+msgid "Energía consumida kWh/año"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__generator_energy
+msgid "Energía generador"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Execution phase"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__new_or_expansion__expansion
+msgid "Expansion"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__invoice_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__invoices_count
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Facturas"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__failed_message_ids
+msgid "Failed Messages"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__phase
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__phase
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__phase
+msgid "Fase"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__project_phase
+msgid "Fase proyecto"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__activation_date
+msgid "Fecha activación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__license_concession
+msgid "Fecha concesión"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_concession
+msgid "Fecha concesión subv"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__stake_out_date
+msgid "Fecha de replanteo"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__construction_end_date
+msgid "Fecha fin obra"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__construction_start_date
+msgid "Fecha inicio obra"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__presented_date
+msgid "Fecha presentación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_requirement_date
+msgid "Fecha requerimientos"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_request_date
+msgid "Fecha solicitud"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:res.partner.category,name:selfconsumption_installation.file-manager
+msgid "File manager"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_config_settings__file_manager_tag
+msgid "File manager Category"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__file_number_processing
+msgid "File number processing"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Final phase"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__first_milestone_payed
+msgid "First milestone payed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__fixed_toll_cost
+msgid "Fixed toll cost €/Kw.day"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__fourth_milestone_payed
+msgid "Fourth milestone payed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_funds_approval_date
+msgid "Funds approval date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__gcp_fuse_rated_current
+msgid "Fuse rated current"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__gcp_fuseholder_type
+msgid "Fuseholder type"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__gcp_location
+msgid "GCP Location"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "General Information"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__gcp_general_switch
+msgid "General Switch"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__gmaps_link
+msgid "Google maps link"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__heritage_protection
+msgid "Heritage protection"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "IBI bonification"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__ibi_bonification_requested_by
+msgid "IBI requested by"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__icio_bonification_requested_by
+msgid "ICIO requested by"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__id
+msgid "ID"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__surge__ims
+msgid "IMS"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__installation_event__type__irve
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "IRVE"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_billed
+msgid "IRVE billed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_executed
+msgid "IRVE executed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_execution_date
+msgid "IRVE execution date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_execution_end_date
+msgid "IRVE execution end date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_installer_id
+msgid "IRVE installer"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_processing_status
+msgid "IRVE processing status"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_restated
+msgid "IRVE restated"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__irve_scheduled
+msgid "IRVE scheduled"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,help:selfconsumption_installation.field_selfconsumption_installation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,help:selfconsumption_installation.field_selfconsumption_installation__message_has_error
+#: model:ir.model.fields,help:selfconsumption_installation.field_selfconsumption_installation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__cie_registry_state__in_process
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__irve_processing_status__in_process
+msgid "In process"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__status__in-service
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_view_search
+msgid "In service"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__estimated_inclination
+msgid "Inclinación estimada"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__typology__individual
+msgid "Individual"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Industy"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Initial phase"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__inspection_date
+msgid "Inspection date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_account_bank_statement_line__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_account_move__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_account_payment__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__installation_id
+msgid "Instalación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installer_id
+msgid "Instalador"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__installation_id
+msgid "Installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_associated_supply
+msgid "Installation Associated Supply"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__installation_event_id
+msgid "Installation Event"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_role_line
+msgid "Installation Role Line"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Installation date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installation_date_confirmed
+msgid "Installation date confirmed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installation_date_reminder
+msgid "Installation date reminder"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Installation registered"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installation_typology_execution
+msgid "Installation typology"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.selfconsumption_installation_action
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_project_partner_form
+msgid "Installations"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.ui.menu,name:selfconsumption_installation.menu_selfconsumption_installation
+msgid "Installations "
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_config_settings__installer_tag
+msgid "Installer Category"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installer_tag
+msgid "Installer Tag"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installer_send_date
+msgid "Installer send date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__intensity
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__intensisty
+msgid "Intensity"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.ui.menu,name:selfconsumption_installation.photovoltaic_inverter_menu
+msgid "Inverter"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_selfconsumption_installation_simulator_inverter
+msgid "Inverter asociated with a simulaiton"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_inverter
+msgid "Inverter asociated with an installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__inverter_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__inverter_ids
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_simulator_form
+msgid "Inverters"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_justification_deadline
+msgid "Justification deadline"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_justification_submission_date
+msgid "Justification submission date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__gcp_lga_section
+msgid "LGA section"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__surge__lre
+msgid "LRE"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter____last_update
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__write_uid
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__write_date
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__lastname
+msgid "Last name"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__legal_requirements_ids
+msgid "Legal requirement"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_legal_requirement
+msgid "Legal requirement asociated with an installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__lenght
+msgid "Length"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__requested_by
+msgid "Licencia solicitada por"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__limit_date
+msgid "Limit date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__type
+msgid "Line type"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__mains_voltage
+msgid "Mains voltage"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__maintenance_contact
+msgid "Maintenance contact"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__management_contact
+msgid "Management Contact"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__management_contact_tag
+msgid "Management Contact Tag"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__manager_id
+msgid "Manager"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__media_aux
+msgid "Medios auxiliares"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Meter location"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__pv_line_meter_sn
+msgid "Meter serial number"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__pv_line_meter_type
+msgid "Meter type"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__meter_verification
+msgid "Meter verified"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_milestone_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_milestone
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Milestones"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__inverter_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__module_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__inverter_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__module_id
+msgid "Model"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__model_shortlisted
+msgid "Modelo preelegido"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.ui.menu,name:selfconsumption_installation.photovoltaic_module_menu
+msgid "Module"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_selfconsumption_installation_simulator_module
+msgid "Module asociated with a simulaiton"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_module
+msgid "Module asociated with an installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__module_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__module_ids
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_simulator_form
+msgid "Modules"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Monitorization"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__res_partner__phase__monophase
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__phase__monophase
+msgid "Monofásico"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__installation_city
+msgid "Municipio instalación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__firstname
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__name
+msgid "Name"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__nature_of_supply
+msgid "Nature of supply"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__new_or_expansion__new
+msgid "New"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__new_or_expansion
+msgid "New or expansion"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__bonification__no
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__cta__no
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__ovp_request__no
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__subvention_selection__no
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__technical_conditions__no
+msgid "No"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__cta__not-needed
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__technical_conditions__not-needed
+msgid "No, not needed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_anchorage__name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_cover__name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_type_structure__name
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_installation_role_search
+msgid "Nombre"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__partner_id2_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__partner_id2_name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__partner_id2_name
+msgid "Nombre titular"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__ibi_bonification_requested_by__not-needed
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__icio_bonification_requested_by__not-needed
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__ovp_request__not-needed
+msgid "Not needed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_simulator_form
+msgid "Notas PVSOL"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__design_notes
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Notas diseño"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__license_notes
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Notas licencia"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Notas preelegido"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__notes_shortlisted
+msgid "Notas proyecto"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__pvsol_notes
+msgid "Notas pvsol"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_notes
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Notas subvención"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__transaction_notes
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Notas tramitación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__location_notes
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Notas ubicación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__notes
+msgid "Notes"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__notification_one_month_after_execution
+msgid "Notifaction one month after execution"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__notification_one_year_after_execution
+msgid "Notifaction one year after execution"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__notification_warranty_expired
+msgid "Notifaction warranty expired"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,help:selfconsumption_installation.field_selfconsumption_installation__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,help:selfconsumption_installation.field_selfconsumption_installation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__approval_number
+msgid "Nº of approval"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__number_of_modules
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__number_of_modules
+msgid "Nº of modules"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__investor_serial_number
+msgid "Número de serie del inversor"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__file_number
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__file_number_subvention
+msgid "Número expediente"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__surge__o3
+msgid "O3"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__surge__org
+msgid "ORG"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "OVP"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__ovp_ammount
+msgid "OVP ammount"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__ovp_approval_date
+msgid "OVP approval date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__ovp_request_date
+msgid "OVP request date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__installation_event__type__obra
+msgid "Obra"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__civil_construction
+msgid "Obra civil"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__aditional_files
+msgid "Old, closed or additional files"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__surge
+msgid "Oleada"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cover_extra_info
+msgid "Others"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__pay_taxes__other
+msgid "Otro"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "PV Line"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__pv_safety_fuse
+msgid "PV Safety fuse"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__pv_disconectors
+msgid "PV disconectors"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__pay_taxes__participant
+msgid "Participante"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Participants"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__monitorization_password
+msgid "Password"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__payment_date
+msgid "Payment date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__payment_method_chosen
+msgid "Payment method chosen"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__payment_pending
+msgid "Payment pending"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__purchase_order_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__purchase_orders_count
+msgid "Pedidos de compra"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__sale_order_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__sale_orders_count
+msgid "Pedidos de venta"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__periodic_inspection
+msgid "Periodic inspection"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__permisible_intensity
+msgid "Permisible intensity"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__personal_data_policy
+msgid "Personal data policy"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__personalized_studies
+msgid "Personalized studies"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__phone
+msgid "Phone"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__contract_power
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__contract_power
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__contract_power
+msgid "Potencia contratada"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__rated_power_execution
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__rated_power_simulation
+msgid "Potencia nominal (W)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__peak_power_execution
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__peak_power_simulation
+msgid "Potencia pico (W)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__power_shortlisted
+msgid "Potencia preelegida (kW)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_module__power
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__power
+msgid "Power (W)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__power
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__power
+msgid "Power (kW)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_processing_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_processing
+msgid "Processing"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__project
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Project"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__promotions
+msgid "Promotions"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_new_action
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_purchase_order__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_sale_order__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__installation_id
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_new
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Proyecto"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__installation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__installation_id
+msgid "Proyecto activo"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__installation_ids
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__installation_ids
+msgid "Proyectos"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__monitorization_public_link
+msgid "Public link"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.actions.act_window,help:selfconsumption_installation.installation_role_action
+msgid "Pulse para crear nuevos roles"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__pay_taxes
+msgid "Quien paga tasas"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__pv_registrar_number
+msgid "Registrar number"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.actions.act_window,help:selfconsumption_installation.action_installation_event_calendar
+msgid "Registro de fecha de obra y replanteo"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__registry_send_date
+msgid "Registry send date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__annual_perfomance
+msgid "Rendimiento anual"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__installation_event__type__replanteo
+msgid "Replanteo"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__representation_letter_received
+msgid "Representation letter recieved"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__representative_id
+msgid "Representative"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__installation_event__type__requerimiento
+msgid "Requerimiento"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__ovp_request
+msgid "Request OVP"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__ibi_bonification_request_date
+msgid "Request date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__requierement_ids
+msgid "Requierement"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Requirements"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__response_date
+msgid "Response date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.installation_milestone_tree
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Responsible statement or License"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__responsible_statement_presented
+msgid "Responsible statement presented"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_response_date
+msgid "Respuesta requerimiento s"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role__name
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_role_line__role_id
+msgid "Rol"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_role_action
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__role_ids
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_role_menu
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_installation_role_form
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_installation_role_search
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_installation_role_tree
+msgid "Roles"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_role
+msgid "Roles y coordinadores"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__roof_height
+msgid "Roof height"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__construction_scheduled
+msgid "Scheduled"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__second_milestone_payed
+msgid "Second milestone payed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__section
+msgid "Section"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.ui.menu,name:selfconsumption_installation.selfconsumption_installation_menu
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Self-consumption Installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_selfconsumption_installation
+msgid "Selfconsumption Installation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__week_construction
+msgid "Semana de obra"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_inverter__serial_number
+msgid "Serial number"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__subvention_selection__yes
+msgid "Si"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__project_simulation_ids
+msgid "Simulaciones"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_simulation_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_simulation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Simulación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_selfconsumption_installation_simulator
+msgid "Simulación proyecto"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_inverter__simulation_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator_module__simulation_id
+msgid "Simulation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_selection
+msgid "Solicita subvención"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation_simulator__shading
+msgid "Sombreado %"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__stake_out_completed
+msgid "Stakeout completed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__start_date
+msgid "Start date"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__status
+msgid "Status"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__structure_inclination
+msgid "Structure inclination"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__structure
+msgid "Structure model"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__structure_orientation
+msgid "Structure orientation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subgroup
+msgid "Subgroup"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_subvention_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_subvention
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Subvención"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_supply_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_supply
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_project_partner_form
+msgid "Suministro"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__supply_autoproject
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__supply_autoproject
+msgid "Suministro autoconsumo"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__supplier_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supplier_id
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Supplier"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_config_settings__supplier_tag
+msgid "Supplier Category"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supplier_tag
+msgid "Supplier Tag"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supply_connection
+msgid "Supply connection"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supply_municipality
+msgid "Supply municipality"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supply_region
+msgid "Supply region"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__supply_state
+msgid "Supply state"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.res_config_settings_view_form
+msgid "Tags"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__access_pricelist
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__access_pricelist
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__access_pricelist
+msgid "Tarifa acceso"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__technical_conditions
+msgid "Technical and economic conditions"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,help:selfconsumption_installation.field_installation_associated_supply__vat
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__third_milestone_payed
+msgid "Third milestone payed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_type_anchorage
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__anchorage_type
+msgid "Tipo anclaje"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_type_cover
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cover_type_execution_id
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__cover_type_id
+msgid "Tipo cubierta"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model,name:selfconsumption_installation.model_installation_type_structure
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__structure_type
+msgid "Tipo estructura"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__license_type
+msgid "Tipo permiso"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__subvention_type
+msgid "Tipo subvención"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_partner__partner_id2
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_res_users__partner_id2
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__partner_id2
+msgid "Titular factura"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__total_associated_supplies
+msgid "Total associated supplies"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__distribution_coefficient_sum
+msgid "Total distribution coefficient"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Tramitación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Tramitation phase"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__res_partner__phase__threefase
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__phase__threefase
+msgid "Trifásico"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__type
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_legal_requirement__type
+msgid "Type"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__typology
+msgid "Typology"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.actions.act_window,name:selfconsumption_installation.installation_location_action
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_location
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Ubicación"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Urban planning legislation"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_form
+msgid "Ventas"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.view_project_partner_form
+msgid "View Details"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.ui.menu,name:selfconsumption_installation.installation_extra_views
+msgid "Vistas personalizadas"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__voltage
+msgid "Voltage (V)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__voltage_drop_percentage
+msgid "Voltage drop (%)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__voltage_drop
+msgid "Voltage drop (V)"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_selfconsumption_installation__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,help:selfconsumption_installation.field_selfconsumption_installation__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_electric_line__wire_type
+msgid "Wire type"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__bonification__yes
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__cta__yes
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__ovp_request__yes
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__technical_conditions__yes
+msgid "Yes"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__bonification__yes-presented
+msgid "Yes, presented"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields.selection,name:selfconsumption_installation.selection__selfconsumption_installation__status__executed
+#: model_terms:ir.ui.view,arch_db:selfconsumption_installation.selfconsumption_installation_view_search
+msgid "executed"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_event__name
+msgid "name"
+msgstr ""
+
+#. module: selfconsumption_installation
+#: model:ir.model.fields,field_description:selfconsumption_installation.field_installation_associated_supply__vat
+msgid "vat"
+msgstr ""

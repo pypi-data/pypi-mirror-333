@@ -1,0 +1,66 @@
+<odoo>
+    <record id="installation_milestone_tree" model="ir.ui.view">
+        <field name="name">installation.milestone.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" multi_edit="1" create="0" default_order='code'>
+                <field name="code" optional="show"/>
+                <field name="name" optional="show"/>
+                <field name="activation_date" optional="show"/>
+                <field name="first_milestone_payed" optional="show"/>
+                <field name="personalized_studies" optional="show"/>
+                <field name="documentation_delivered" optional="show"/>
+                <field name="stake_out_date" optional="show"/>
+                <field name="stake_out_completed" optional="show"/>
+                <field name="draft_ready_for_submission" optional="show"/>
+                <field name="draft_sent" optional="show"/>
+                <field name="draft_sent_date" optional="show"/>
+                <field name="contract_signed" optional="show"/>
+                <field name="payment_method_chosen" optional="show"/>
+                <field string="Responsible statement or License" name="license_concession" optional="show"/>
+                <field string="Access point" name="technical_conditions" optional="show"/>
+                <field name="distribution_agreement_signed" optional="show"/>
+                <field name="second_milestone_payed" optional="show"/>
+                <field name="surge" invisible="1"/> <!--Nedded to apply the invisible attrs to third and fourth milestone--> 
+                <field name="third_milestone_payed" attrs="{'invisible':[('surge', 'not in', ['o3', 'ims', 'lre', 'eru'])]}" optional="show"/>
+                <field name="payment_date" optional="show"/>
+                <field name="representation_letter_received" optional="show"/>
+                <field name="construction_scheduled" optional="show"/>
+                <field string="Installation date" name="construction_start_date" optional="show"/>
+                <field name="installation_date_confirmed" optional="show"/>
+                <field name="responsible_statement_presented" optional="show"/>
+                <field name="installation_date_reminder" optional="show"/>
+                <field name="end_of_work_completed" optional="show"/>
+                <field string="Installation registered" name="cie_registry_state" optional="show"/>
+                <field string="Date of obtanining COVE" name="registry_send_date" optional="show"/>
+                <field string="CTA" name="cta" optional="show"/>
+                <field string="Client documentation sent" name="documentation_sent" optional="show"/>
+                <field string="AC activated" name="meter_verification" optional="show"/>
+                <field name="fourth_milestone_payed" attrs="{'invisible':[('surge', 'not in', ['o3', 'ims', 'lre', 'eru'])]}" optional="show"/>
+                <field name="payment_pending" optional="show"/>
+                <field name="ibi_bonification" string="IBI bonification" optional="show"/>
+                <field name="notification_one_month_after_execution" optional="show"/>
+                <field name="notification_one_year_after_execution" optional="show"/>
+                <field name="notification_warranty_expired" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_milestone_action" model="ir.actions.act_window">
+        <field name="name">Milestones</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_milestone">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_milestone_tree"/>
+        <field name="act_window_id" ref="installation_milestone_action"/>
+    </record>
+    <menuitem
+        id="installation_milestone"
+        parent="installation_extra_views"
+        action="installation_milestone_action"
+        name="Milestones"
+    />
+</odoo>

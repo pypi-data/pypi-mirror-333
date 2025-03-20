@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.management</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="15" />
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Installations" string="Installations"
+                    data-key="selfconsumption_installation">
+                    <h2>Tags</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane" />
+                            <div class="o_setting_right_pane">
+                                <div>
+                                    <span class="o_form_label">File manager category</span>
+                                    <div>
+                                        <field name="file_manager_tag" class="text-center oe_inline" />
+                                    </div>
+                                    <span class="o_form_label">Supplier Category</span>
+                                    <div>
+                                        <field name="supplier_tag" class="text-center oe_inline" />
+                                    </div>
+                                    <span class="o_form_label">Installer Category</span>
+                                    <div>
+                                        <field name="installer_tag" class="text-center oe_inline" />
+                                    </div>
+                                    <span class="o_form_label">Inverter category</span>
+                                    <div>
+                                        <field name="photovoltaic_inverter_tag"
+                                            class="text-center oe_inline" />
+                                    </div>
+                                    <span class="o_form_label">Module Category</span>
+                                    <div>
+                                        <field name="photovoltaic_module_tag"
+                                            class="text-center oe_inline" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

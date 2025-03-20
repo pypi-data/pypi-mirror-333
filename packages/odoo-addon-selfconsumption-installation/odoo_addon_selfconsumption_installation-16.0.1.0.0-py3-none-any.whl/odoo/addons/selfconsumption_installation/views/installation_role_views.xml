@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_installation_role_form" model="ir.ui.view">
+      <field name="name">view.installation_role.form</field>
+      <field name="model">installation.role</field>
+      <field name="arch" type="xml">
+        <form string="Roles">
+          <sheet>
+            <group name="main">
+              <field name="name" />
+              <field name="responsible_ids" widget="many2many_tags"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_installation_role_tree" model="ir.ui.view">
+      <field name="name">view.installation_role.tree</field>
+      <field name="model">installation.role</field>
+      <field name="arch" type="xml">
+        <tree string="Roles">
+          <field name="name" />
+          <field name="responsible_ids" widget="many2many_tags"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_installation_role_search" model="ir.ui.view">
+      <field name="name">view.installation_role.search</field>
+      <field name="model">installation.role</field>
+      <field name="arch" type="xml">
+        <search string="Roles">
+          <field name="name" />
+          <field name="responsible_ids" />
+          <group string="Agrupar por" name="groupby">
+            <filter name="name_groupby" string="Nombre"
+              context="{'group_by': 'name'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record id="installation_role_action" model="ir.actions.act_window">
+      <field name="name">Roles</field>
+      <field name="res_model">installation.role</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Pulse para crear nuevos roles
+        </p>
+      </field>
+    </record>
+
+    <menuitem id="installation_role_menu" parent="installation_config_views"
+      action="installation_role_action" sequence="5"/>
+
+</odoo>

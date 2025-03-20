@@ -1,0 +1,50 @@
+<odoo>
+    <record id="installation_new_tree" model="ir.ui.view">
+        <field name="name">installation.new.tree</field>
+        <field name="model">selfconsumption.installation</field>
+        <field name="priority" eval="50"/>
+        <field name="arch" type="xml">
+            <tree editable="top" create="0" default_order='code'>
+                <field name="name"/>
+                <field name="code" optional="show"/>
+                <!-- <field name="designer_id" optional="show"/> -->
+                <!-- <field name="solar_guide_id" optional="show"/> -->
+                <!-- <field name="technical_id" optional="show"/> -->
+                <!-- <field name="coordinator_id" optional="show"/> -->
+                <!-- <field name="administrator_id" optional="show"/> -->
+                <field name="installer_id" optional="show"/>
+                <field name="surge" optional="show"/>
+                <field name="activation_date" optional="show"/>
+                <field name="lead_code" optional="show"/>
+                <field name="project_phase" optional="show"/>
+                <field name="typology" optional="show"/>
+                <field name="subgroup" optional="show"/>
+                <field name="model_shortlisted" optional="show"/>
+                <field name="power_shortlisted" optional="show"/>
+                <field name="notes_shortlisted" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <record id="installation_new_action" model="ir.actions.act_window">
+        <field name="name">Proyecto</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">selfconsumption.installation</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_installation_new">
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="installation_new_tree"/>
+        <field name="act_window_id" ref="installation_new_action"/>
+    </record>
+    <menuitem
+        id="installation_extra_views"
+        parent="selfconsumption_installation_menu"
+        name="Vistas personalizadas"
+    />
+    <menuitem
+        id="installation_new"
+        parent="installation_extra_views"
+        action="installation_new_action"
+        name="Proyecto"
+    />
+</odoo>
