@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+mkdocs-pre-build-script = pre_build_script.pre_build_script:MkdocsPreBuildScript

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mkdocs_pre_build_script.egg-info/PKG-INFO
+mkdocs_pre_build_script.egg-info/SOURCES.txt
+mkdocs_pre_build_script.egg-info/dependency_links.txt
+mkdocs_pre_build_script.egg-info/entry_points.txt
+mkdocs_pre_build_script.egg-info/requires.txt
+mkdocs_pre_build_script.egg-info/top_level.txt
+pre_build_script/__init__.py
+pre_build_script/pre_build_script.py
