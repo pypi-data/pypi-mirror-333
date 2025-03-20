@@ -1,0 +1,11 @@
+daag/__init__.py,sha256=SLo8JwqugTcVdAwJVfT6ahN4cx2deYwrhVVGvlMODW0,367
+daag/core.py,sha256=Ay5aByuBoommIQpMRcTR_QDbM1qPYwlnRM7K-pVhkNQ,11243
+daag/visualization.py,sha256=LYubKyTeP-_uYl2bdjv5gt9-dGYAQjTIls069ASqTW0,5337
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/example.py,sha256=BHCIb96aWMajCctCO09pUZtkS15A7nabzcXf4VTVrzA,3177
+tests/test_daag.py,sha256=CMFFLLJe0dFfyuR942DXhJVHLgaT7Kb4bdqtfnwLO-g,3204
+daag-0.1.0.dist-info/LICENSE,sha256=t9BXA3gEy-VvC42jvSTYtgDtkPXic652zqU3YQAKmRE,1072
+daag-0.1.0.dist-info/METADATA,sha256=CeshwppD52G7Xg05WV5b7r1UjlVGk7p5X0Y1PlQ8TOo,2550
+daag-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+daag-0.1.0.dist-info/top_level.txt,sha256=b6JeLjZEeKwFxcPJtbH96Oj9IA2Jz2bjK4HLP_Q7ksU,11
+daag-0.1.0.dist-info/RECORD,,
