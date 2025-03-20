@@ -1,0 +1,4 @@
+pandas>=1.2
+sqlalchemy>=1.4
+bson>=0.5.10
+pytz>=2025
