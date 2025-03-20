@@ -1,0 +1,23 @@
+[project]
+name = "prt-sim"
+version = "0.1.0"
+description = "Python Research Toolkit - Simulation"
+readme = "README.md"
+authors = [
+    { name = "Gavin Strunk", email = "gavin.strunk@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.3",
+    "pygame>=2.6.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
