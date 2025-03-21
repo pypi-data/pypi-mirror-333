@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+pydbmanager/__init__.py
+pydbmanager/config.py
+pydbmanager/connection.py
+pydbmanager/operations.py
+pydbmanager/utils.py
+pydbmanager.egg-info/PKG-INFO
+pydbmanager.egg-info/SOURCES.txt
+pydbmanager.egg-info/dependency_links.txt
+pydbmanager.egg-info/requires.txt
+pydbmanager.egg-info/top_level.txt
+tests/test_connection.py
+tests/test_env.py
+tests/test_operations.py
+tests/test_utils.py
