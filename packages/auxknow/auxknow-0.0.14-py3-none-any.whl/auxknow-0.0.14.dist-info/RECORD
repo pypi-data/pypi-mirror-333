@@ -1,0 +1,11 @@
+auxknow/__init__.py,sha256=zqel8flPICGR3p-Q7thn38TsgE7qAk6lRBu7K69vHdo,330
+auxknow/auxknow.py,sha256=3flJzgEWut5CGyDCTZFCrsDt5yiH3WsLYlj7UMRVJlI,39922
+auxknow/auxknow_memory.py,sha256=8RYNJrhG-3_UEpmhCcFeJriAihf2_NsoTbw1WoUYXHw,4593
+auxknow/auxknow_search.py,sha256=7LsbhYvROTQ3mL2mT7zlZFanydKz8dRRU9PYcHc3Dp8,2326
+auxknow/constants.py,sha256=EY1XHgZUnmJ1Va_NVO2EFAbxhfdepNBEM9aTsh-eV0s,3497
+auxknow/printer.py,sha256=wENtpUUagIMFGPRdJu8mwqJAr2Lm7ZCSTmIzCeHWDxk,9420
+auxknow-0.0.14.dist-info/LICENSE,sha256=21Lj2q2SYKHMY4768_a3pr3q0jY2VYamAHipoodhMDc,34273
+auxknow-0.0.14.dist-info/METADATA,sha256=iQzK1Pakp2-XgCsFipmLU6tsXcxeJBCwbDJ2GsqwVEc,7839
+auxknow-0.0.14.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+auxknow-0.0.14.dist-info/top_level.txt,sha256=znOl-iEc4fD-Flh2QVgaOlrD8Pm4jsvbk5WBORyofzc,8
+auxknow-0.0.14.dist-info/RECORD,,
