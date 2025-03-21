@@ -1,0 +1,10 @@
+setup.py
+yivy/__init__.py
+yivy/core.py
+yivy/mobile.py
+yivy/widgets.py
+yivy.egg-info/PKG-INFO
+yivy.egg-info/SOURCES.txt
+yivy.egg-info/dependency_links.txt
+yivy.egg-info/requires.txt
+yivy.egg-info/top_level.txt
