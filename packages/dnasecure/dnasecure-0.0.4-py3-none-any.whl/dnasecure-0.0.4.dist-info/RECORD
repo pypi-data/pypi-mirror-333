@@ -1,0 +1,10 @@
+dnasecure/__init__.py,sha256=6J4XUsWtCORPwWrelIgFuTgBoHqYq213D12_uIv0uAw,714
+dnasecure/__main__.py,sha256=9eqRFHMJF9kzY45uw1gh4OBbjBr6HUiJxDNaD4iiMe8,193
+dnasecure/cli.py,sha256=CSqLop2lfp6jp1uWzoZ8T001_lOgv7h5vnZIh0kygn4,4907
+dnasecure/core.py,sha256=gL9H18ZLSYhx1QJTdptSdqBgSSqquwVnN-w_zZt07Ng,25117
+dnasecure-0.0.4.dist-info/LICENSE,sha256=8ROq2OpC3a8AWG6aEZTk8QMIh2qtk3IHoqDqXiV2Snk,1071
+dnasecure-0.0.4.dist-info/METADATA,sha256=O1AFzys71_VgVpnQL9tnVLjzoSXBND4cKglfgNmQNFY,6264
+dnasecure-0.0.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+dnasecure-0.0.4.dist-info/entry_points.txt,sha256=EAiUxZbXosDk0bj70IXlRZPQWM5E0TnFYvXqrm3Qvo4,49
+dnasecure-0.0.4.dist-info/top_level.txt,sha256=8nD0sS1yKleWxs23oPhstptO0NOKWhS-tzeIx0CTUew,10
+dnasecure-0.0.4.dist-info/RECORD,,
