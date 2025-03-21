@@ -1,0 +1,9 @@
+README.md
+setup.py
+datavalidator/__init__.py
+datavalidator/validator.py
+datavalidator_emmanuella.egg-info/PKG-INFO
+datavalidator_emmanuella.egg-info/SOURCES.txt
+datavalidator_emmanuella.egg-info/dependency_links.txt
+datavalidator_emmanuella.egg-info/top_level.txt
+tests/test_validator.py
