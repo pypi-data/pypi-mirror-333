@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: Snowforge-package
+Version: 0.1.0
+Summary: A Python package for integrations to Snowflake and AWS as well as many support scripts
+Home-page: https://github.com/yourusername/Snowforge
+Author: Andreas Heggelund
+Author-email: andreasheggelund@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: snowflake-connector-python
+Requires-Dist: coloredlogs
+Requires-Dist: colored
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
