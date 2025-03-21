@@ -1,0 +1,10 @@
+ovos-utils>=0.0.26,~=0.0
+ovos-plugin-manager>=0.0.20,~=0.0
+requests
+ovos-bus-client>=0.0.3,~=0.0
+ovos-skill-installer~=0.0.5
+psutil
+neon-utils~=1.0
+
+[test]
+pytest
