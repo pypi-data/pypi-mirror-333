@@ -1,0 +1,17 @@
+scoremipsum/__init__.py,sha256=4XPwg0m_q0KJmMS5GeygbsOb-u5VliPQ9AHoSpy9sAk,200
+scoremipsum/data.py,sha256=r89srR1UE0bTtBs0zs8uhKSuU5BIxg7n0zJB_W1ZXHM,2474
+scoremipsum/demo.py,sha256=8oaJEXkCLPlDicbQwFaRCE_7vaHuQ7Vd_omd4svh9c4,691
+scoremipsum/generation.py,sha256=WDiW30LsqAgCuKW7zFAyo8ymzcd7yWJmML3Or3T_0TM,2454
+scoremipsum/ops.py,sha256=-a9dLJiuG8zd7Ujtx0sjdanwkmlFdP8spsJXY7_-d3Y,3029
+scoremipsum/schedule.py,sha256=NG5Ay0uSgFdTtSdDZkiH9LqtmBk529Lk9FcZdytphlk,2656
+scoremipsum/score.py,sha256=tBFO6RaUvjkbzxttF7eapVuL69fRwiVEc3jJU0Z4QAg,3704
+scoremipsum/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scoremipsum/util/conversion.py,sha256=ZrkIOjs4Rl8-iUZPhFWTO3oeH0FAfydfarGQJrLgpGk,942
+scoremipsum/util/scheduler.py,sha256=cMagZuyzJNTM395jPJmsUanNBLxnl-2ovTRTRnZtVh4,236
+scoremipsum/util/support.py,sha256=i9c0vgUbTx692gtQuRC1G9iHasxbmrQn63R0L3kVV8I,4621
+scoremipsum/util/team.py,sha256=DFqeL5WZNmgJ-3nPsr8_nlxgOYvX3R1UtzPCJq7G1BE,897
+scoremipsum-0.0.7.dist-info/entry_points.txt,sha256=60Ym2BKmMonJDB-03gypYJtOU5Lgu0O6aRrGuWH6G2Y,41
+scoremipsum-0.0.7.dist-info/licenses/LICENSE,sha256=i-Yu2IiCEsB4KGKfkawnXRHiVFs5OUD4fsDXz2WF9Gg,1080
+scoremipsum-0.0.7.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+scoremipsum-0.0.7.dist-info/METADATA,sha256=imn3DtRVuYdDEnK00GwEzYx1E5aHIa9oQwFnAYpfjfc,2420
+scoremipsum-0.0.7.dist-info/RECORD,,
