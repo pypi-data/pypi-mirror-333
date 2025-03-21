@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include algeria_cities/fixtures *
+recursive-include algeria_cities/migrations *
