@@ -1,0 +1,6 @@
+module.py
+pyproject.toml
+this_is_random_package_pypy.egg-info/PKG-INFO
+this_is_random_package_pypy.egg-info/SOURCES.txt
+this_is_random_package_pypy.egg-info/dependency_links.txt
+this_is_random_package_pypy.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "this_is_random_package_pypy"
+version = "0.1.0"
+description = "A sample Python package"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = []
+license = { text = "MIT" }
