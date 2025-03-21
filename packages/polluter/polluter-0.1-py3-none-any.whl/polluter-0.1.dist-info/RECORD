@@ -1,0 +1,10 @@
+src/__init__.py,sha256=B-jKySnQQZCzJWvFqDg1OKDppksDdm-8fsw8iaWyQIM,64
+src/pollutable.py,sha256=ESCBVED4TRMIUp2Jtr1GYtrr3NyUZ_CNoTnitQLJ7y0,7302
+src/pollute.py,sha256=hvhugr57jT3Qcaj4uDGgf44w-Ygxn3gh5X2v0Zkc4CY,847
+src/utils.py,sha256=bIxSI9C_NeAhyQKxH8l_LbQ5hGONEboQiiIbA8BG8DI,3409
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/math.py,sha256=CykBVvyig7JmlUua6qsOOd9y8Ch1kVKxPQFZ5dK69vE,595
+polluter-0.1.dist-info/METADATA,sha256=4uR9yWsKbs_jrUZtX41I2oitlZBPGEl1Uf2ZCd4Zipw,80
+polluter-0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+polluter-0.1.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+polluter-0.1.dist-info/RECORD,,
