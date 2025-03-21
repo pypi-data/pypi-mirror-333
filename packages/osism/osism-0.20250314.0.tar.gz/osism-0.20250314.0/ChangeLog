@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.20250314.0
+-------------
+
+* Replace netbox subcommands with netbox-manager (#1214)
