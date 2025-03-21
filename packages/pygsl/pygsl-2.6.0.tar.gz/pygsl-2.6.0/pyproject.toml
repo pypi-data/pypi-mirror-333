@@ -1,0 +1,22 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python', 'numpy']
+
+
+[project]
+name = "pygsl"
+version = "2.6.0"
+dependencies = ["numpy", ]
+
+description = "GNU Scientific Library Interface"
+# long_description = "This project provides a python interface for the GNU scientific library (gsl)"
+# license = "GPL"
+authors = [
+   {name = "Achim Gaedke", email="AchimGaedke@users.sourceforge.net"},
+   {name = "Pierre Schnizer", email="pierre.schnizer@helmholtz-berlin.de"},
+   {name = "Charl Linssen" }
+]
+
+
+[project.urls]
+homepage = "https://github.com/pygsl/pygsl"

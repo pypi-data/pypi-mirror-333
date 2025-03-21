@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pygsl
+Version: 2.6.0
+Summary: GNU Scientific Library Interface
+Author: Charl Linssen
+Author-Email: Achim Gaedke <AchimGaedke@users.sourceforge.net>, Pierre Schnizer <pierre.schnizer@helmholtz-berlin.de>
+Project-URL: homepage, https://github.com/pygsl/pygsl
+Requires-Dist: numpy
+
