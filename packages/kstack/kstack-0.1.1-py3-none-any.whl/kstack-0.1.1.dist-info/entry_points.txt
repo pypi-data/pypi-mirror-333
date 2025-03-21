@@ -1,0 +1,3 @@
+[console_scripts]
+kstack=kstack.console:cli
+
