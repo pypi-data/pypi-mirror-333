@@ -1,0 +1,94 @@
+Metadata-Version: 2.2
+Name: aptai
+Version: 1.0.0
+Summary: Aptos AI-powered DeFi and NFT toolkit
+Home-page: https://github.com/Teckdegen/aptai
+Author: Teck
+Author-email: Teck <teckdegen@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: aptos_sdk
+Requires-Dist: groq
+Requires-Dist: setuptools>=68.0.0
+Requires-Dist: python-telegram-bot>=20.2
+Requires-Dist: twine>=4.0.2
+Requires-Dist: telegram>=0.0.1
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# AptAI: AI-Powered DeFi & NFT Toolkit for Aptos
+
+AptAI is a powerful Python library that merges AI capabilities with Aptos blockchain functionality, delivering seamless DeFi operations, NFT management, and real-time price tracking—all in one package. Built by Teck, AptAI simplifies complex blockchain interactions while leveraging AI for enhanced analytics and automation.
+
+## ✨ Key Features
+
+### 🔹 Real-Time Price Tracking
+- Fetch live token prices from DexScreener
+- Monitor Liquidswap pools for accurate token pricing
+- AI-driven custom price analysis
+
+### 🔹 NFT Management Made Simple
+- Multi-marketplace support: Topaz, Souffl3, Bluemove
+- Mint, list, and purchase NFTs in seconds
+- Track ownership & transfers across wallets
+
+### 🔹 Seamless DeFi Operations
+- Instant token swaps via Liquidswap
+- Fast & secure APT transactions
+- Manage on-chain transactions effortlessly
+
+### 🔹 AI-Powered Blockchain Insights
+- Built-in Groq LLM integration for smart analysis
+- AI-driven market trend predictions
+- Configurable prompt parameters for enhanced performance
+
+## 🚀 Installation
+
+```bash
+pip install aptai
+```
+
+## 💡 Quick Start Guide
+
+```python
+from aptai import AptAi  
+
+
+apt_ai = AptAi(private_key="your_private_key")  
+
+
+price = apt_ai.get_price("token_address")  
+
+
+analysis = apt_ai.ai_analysis("Analyze this NFT collection")  
+
+
+swap = apt_ai.swap_tokens("token_x", "token_y", amount)  
+```
+
+## 📌 PIP Reference
+
+### 💰 Price Tracking
+- `get_price(token_address)`: Fetch real-time token price
+- `get_liquidswap_price(token_x, token_y)`: Retrieve pool price from Liquidswap
+
+### 🎨 NFT Operations
+- `get_nft_listings(marketplace)`: View active NFT listings
+- `track_nft_transfers(wallet_address)`: Monitor NFT transfers
+- `get_nft_ownership(wallet_address)`: Verify NFT ownership
+- `mint_nft(creator, metadata)`: Mint a new NFT
+- `buy_nft(nft_id, buyer)`: Purchase an NFT
+- `list_nft_for_sale(nft_id, price)`: List an NFT for sale
+
+### 🔄 Token & DeFi Operations
+- `swap_tokens(token_x, token_y, amount)`: Swap tokens instantly
+- `send_tokens(receiver_address, amount)`: Send APT tokens securely
+
+### 🧠 AI-Driven Insights
+- `ai_analysis(query)`: Perform AI-powered blockchain analysis
+
+## 👤 Author
+Developed by Teck  
+📧 teckdegen@gmail.com
