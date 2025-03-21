@@ -1,0 +1,13 @@
+sage_acsv/__init__.py,sha256=XKmmZbhZP2yInfWjHIp0tM2dKb_QTIar8FGClFlsdyg,5287
+sage_acsv/asymptotics.py,sha256=VyzsY2oml1ULFnV0xp8P_wzn-bRPhwQ-9yo-w61-uyo,58987
+sage_acsv/debug.py,sha256=6K2LwEFbdZGzbvPH4amcMReMk-3bgv-ovjT-lJY7Jig,1125
+sage_acsv/helpers.py,sha256=RESM_e6aa915JrRJrc6Ht9vQT9lhTHr9KcDFyZ4S2eY,18966
+sage_acsv/kronecker.py,sha256=CvPvH6wdq2OuHTBF0-mehec472R2BiakbBx6H531hew,6881
+sage_acsv/macaulay2.py,sha256=rOtJxb1eDrM88xJgk8g3FLZcsKkiqfGYkUxfB55PdIU,2486
+sage_acsv/msolve.py,sha256=nt0NAY13_Tdqw3airlyyeZr87glJfnPMboTJIjqrTtw,1059
+sage_acsv/settings.py,sha256=FgqxeAyT8gdczqxgwG3iDxCP-dkIxRLartiDzUZYkGk,6501
+sage_acsv/whitney.py,sha256=x1sbt2S1pyQklJkIluxKuHOx-Lf5t8qfmgLO6FeTsAk,5131
+sage_acsv-0.2.0.dist-info/METADATA,sha256=Lo78ni3zphJoPvd5C6bzm-Qy7EA7zy8xwdpE0oCFd6s,3407
+sage_acsv-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sage_acsv-0.2.0.dist-info/licenses/LICENSE,sha256=1-CA_JOjisoi68pDpHnryw08xsbcuU84PcyOShdcY9g,1066
+sage_acsv-0.2.0.dist-info/RECORD,,
