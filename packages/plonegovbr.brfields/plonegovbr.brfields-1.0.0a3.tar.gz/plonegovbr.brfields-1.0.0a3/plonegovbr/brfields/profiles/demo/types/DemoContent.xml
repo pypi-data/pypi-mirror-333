@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="DemoContent"
+        i18n:domain="plonegovbr.brfields"
+>
+
+  <!-- Basic properties -->
+  <property name="title"
+            i18n:translate=""
+  >DemoContent</property>
+  <property name="description"
+            i18n:translate=""
+  >A demo content showcasing all available fields.</property>
+
+  <property name="allow_discussion">False</property>
+  <property name="factory">DemoContent</property>
+
+  <!-- Hierarchy control -->
+  <property name="filter_content_types">True</property>
+  <property name="allowed_content_types" />
+  <property name="global_allow">True</property>
+
+  <!-- Schema, class and security -->
+  <property name="add_permission">cmf.addPortalContents</property>
+  <property name="klass">plonegovbr.brfields.content.demo.DemoContent</property>
+  <property name="schema">plonegovbr.brfields.content.demo.IDemoContent</property>
+
+  <!-- Enabled behaviors -->
+  <property name="behaviors"
+            purge="true"
+  >
+    <element value="plone.namefromtitle" />
+    <element value="plone.shortname" />
+    <element value="plone.excludefromnavigation" />
+  </property>
+
+  <!-- View information -->
+  <property name="add_view_expr">string:${folder_url}/++add++DemoContent</property>
+  <property name="immediate_view">view</property>
+  <property name="default_view">view</property>
+  <property name="default_view_fallback">False</property>
+  <property name="view_methods">
+    <element value="view" />
+  </property>
+</object>

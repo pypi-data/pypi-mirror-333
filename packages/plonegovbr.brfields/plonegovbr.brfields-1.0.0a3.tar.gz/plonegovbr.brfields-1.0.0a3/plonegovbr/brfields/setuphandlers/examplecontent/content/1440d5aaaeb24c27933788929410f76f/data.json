@@ -1,0 +1,46 @@
+{
+  "@id": "/exemplo",
+  "@type": "DemoContent",
+  "UID": "1440d5aaaeb24c27933788929410f76f",
+  "allow_discussion": null,
+  "cep": "01330001",
+  "cnpj": "00000000000191",
+  "cpf": "00829102868",
+  "created": "2025-02-23T19:30:03+00:00",
+  "description": "Exemplo de conte\u00fado com todos os campos",
+  "estado": "SP",
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "fax": "11954233661",
+  "id": "exemplo",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "view",
+  "lock": {},
+  "modified": "2025-02-23T19:30:49+00:00",
+  "review_state": "published",
+  "telefone": "11954233661",
+  "title": "Exemplo",
+  "type_title": "DemoContent",
+  "version": "current",
+  "workflow_history": {
+    "simple_publication_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "private",
+        "time": "2025-02-23T19:30:03+00:00"
+      },
+      {
+        "action": "publish",
+        "actor": "admin",
+        "comments": "",
+        "review_state": "published",
+        "time": "2025-02-23T19:30:49+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

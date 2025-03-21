@@ -1,0 +1,44 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="plonegovbr.brfields"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Brazilian Fields for Dexterity and Volto: Install"
+      description="Package to configure a new Brazilian Fields for Dexterity and Volto site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
+
+  <configure zcml:condition="installed plone.exportimport">
+    <genericsetup:registerProfile
+        name="demo"
+        title="Brazilian Fields for Dexterity and Volto: Example content"
+        description="Create example content to showcase the new website"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        directory="profiles/demo"
+        post_handler=".setuphandlers.initial.create_example_content"
+        />
+  </configure>
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Brazilian Fields for Dexterity and Volto: Uninstall"
+      description="Uninstall Brazilian Fields for Dexterity and Volto setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="plonegovbr.brfields"
+      />
+
+
+  <include package=".upgrades" />
+
+</configure>

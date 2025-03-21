@@ -1,0 +1,81 @@
+{
+  "@id": "/Plone",
+  "@type": "Plone Site",
+  "UID": "plone_site_root",
+  "allow_discussion": null,
+  "blocks": {
+    "5f31e9e4-173f-4ec1-ab48-64e9e2789b76": {
+      "@type": "title"
+    },
+    "6b658874-4298-4771-a6ce-5bbd61b41e14": {
+      "@type": "teaser",
+      "description": "Exemplo de conte\u00fado com todos os campos",
+      "head_title": null,
+      "href": [
+        {
+          "@id": "resolveuid/1440d5aaaeb24c27933788929410f76f",
+          "@type": "DemoContent",
+          "Description": "Exemplo de conte\u00fado com todos os campos",
+          "Title": "Exemplo",
+          "hasPreviewImage": null,
+          "head_title": null,
+          "image_field": "",
+          "title": "Exemplo"
+        }
+      ],
+      "overwrite": false,
+      "styles": {
+        "align": "center"
+      },
+      "title": "Exemplo"
+    },
+    "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0": {
+      "@type": "slate",
+      "plaintext": "Demo da utiliza\u00e7\u00e3o de @plonegovbr/volto-brfields e plonegovbr.brfields",
+      "value": [
+        {
+          "children": [
+            {
+              "text": "Demo da utiliza\u00e7\u00e3o de @plonegovbr/volto-brfields e plonegovbr.brfields"
+            }
+          ],
+          "type": "h3"
+        }
+      ]
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "5f31e9e4-173f-4ec1-ab48-64e9e2789b76",
+      "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0",
+      "6b658874-4298-4771-a6ce-5bbd61b41e14"
+    ]
+  },
+  "contributors": [],
+  "creators": [
+    "admin"
+  ],
+  "description": "",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "Plone",
+  "is_folderish": true,
+  "items_total": 1,
+  "language": "##DEFAULT##",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "review_state": null,
+  "rights": "",
+  "subjects": [],
+  "table_of_contents": null,
+  "title": "Exemplo de campos brasileiros",
+  "type_title": "Plone Site",
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null
+}
