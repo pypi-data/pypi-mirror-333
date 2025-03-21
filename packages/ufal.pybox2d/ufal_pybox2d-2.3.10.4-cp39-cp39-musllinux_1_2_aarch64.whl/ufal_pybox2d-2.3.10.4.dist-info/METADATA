@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: ufal.pybox2d
+Version: 2.3.10.4
+Summary: Custom-build wheels of pybox2d library from http://github.com/pybox2d/pybox2d
+Home-page: http://github.com/foxik/pybox2d
+Author: Milan Straka
+Author-email: straka@ufal.mff.cuni.cz
+License: zlib
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary
+
+Custom-build wheels of pybox2d library.
+
+pybox2d homepage: https://github.com/pybox2d/pybox2d
+Box2D homepage: http://www.box2d.org
