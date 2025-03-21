@@ -1,0 +1,9 @@
+python_scs/__init__.py,sha256=2NeeVp-1V8pWsI-CI_PR4uWcLE7C3sCmDi3blWgyCrA,159
+python_scs/core.py,sha256=zDFS-mqNiushxtE9_X2MRMkhBIE3Sgln0PyfCa8C5nU,4620
+python_scs/schemas.py,sha256=zZV0U9_E9HnjCdoRjYRelf49KTM4dZ0UyAA9aUq8X5E,1326
+python_scs/streamlit_ui.py,sha256=CAKA5HDA3nKBkQzAV97PLoimYVCHNlIZ-K063FSNlaE,10131
+python_scs-0.1.0.dist-info/LICENSE,sha256=a8Iz0rfiqAbR7U2OkeV3zB9uGrkKAVfahvITVnYCgeM,1078
+python_scs-0.1.0.dist-info/METADATA,sha256=5QBfxA6s-l8bqhRLYUPhP17rysTVUfQWcoVYIAgzvuU,5717
+python_scs-0.1.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+python_scs-0.1.0.dist-info/top_level.txt,sha256=v2lS-PKVLHEK9QSDP0htfTE0XBHvtWCXZN9vMhoWzG0,11
+python_scs-0.1.0.dist-info/RECORD,,
