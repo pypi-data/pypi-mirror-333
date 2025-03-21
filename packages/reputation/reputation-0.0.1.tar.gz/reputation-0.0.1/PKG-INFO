@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: reputation
+Version: 0.0.1
+Summary: Python package dependency analytics. Know what you depend on!
+Project-URL: Source, https://github.com/zkurtz/reputation
+Author-email: Zach Kurtz <zkurtz@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: pandas>=1.5.0
+Description-Content-Type: text/markdown
+
+# reputation
+
+Python package dependency analytics. Know what you depend on!
+
+`reputation` takes your `requirements.txt` and scans data sources on the web to output a columnar report of metrics that help you understand the health of your dependencies.
