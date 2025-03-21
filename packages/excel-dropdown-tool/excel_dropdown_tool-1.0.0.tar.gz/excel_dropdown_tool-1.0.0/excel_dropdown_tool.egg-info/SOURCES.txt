@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+excel_dropdown/__init__.py
+excel_dropdown/cli.py
+excel_dropdown/utils.py
+excel_dropdown_tool.egg-info/PKG-INFO
+excel_dropdown_tool.egg-info/SOURCES.txt
+excel_dropdown_tool.egg-info/dependency_links.txt
+excel_dropdown_tool.egg-info/entry_points.txt
+excel_dropdown_tool.egg-info/requires.txt
+excel_dropdown_tool.egg-info/top_level.txt

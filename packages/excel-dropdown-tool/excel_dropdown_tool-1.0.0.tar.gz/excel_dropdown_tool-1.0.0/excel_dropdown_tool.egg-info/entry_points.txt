@@ -1,0 +1,2 @@
+[console_scripts]
+excel-dropdown = excel_dropdown.cli:main
