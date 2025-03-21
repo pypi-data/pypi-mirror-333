@@ -1,0 +1,3 @@
+[console_scripts]
+latest-pypi-version=latest_pypi_version.cli:app
+
