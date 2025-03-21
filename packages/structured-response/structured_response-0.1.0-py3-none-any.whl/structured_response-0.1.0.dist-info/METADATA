@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: structured-response
+Version: 0.1.0
+Summary: A simple package to generate structured HTTP responses with trace ID.
+Home-page: https://github.com/rohaan2614/structured-response
+Author: Rohaan Nadeem
+Author-email: rohaan@rohaannadeem.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: Flask<4.0,>=3.0.0
+
