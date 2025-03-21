@@ -1,0 +1,5 @@
+graft mathjax/static/mathjax
+prune mathjax/static/mathjax/node_modules
+prune mathjax/static/mathjax/js
+prune mathjax/static/mathjax/es5
+recursive-exclude mathjax/static/mathjax/components/src lib

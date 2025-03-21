@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: django-static-mathjax
+Version: 3.2.2.1
+Summary: JavaScript library for displaying mathematics on the Web
+Maintainer-email: Benjamin Moody <bmoody@mit.edu>
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: JavaScript
+Classifier: Topic :: Text Processing :: Markup :: LaTeX
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+MathJax for Django
+==================
+
+This package provides a copy of MathJax, a JavaScript library for
+displaying mathematics on the web, packaged for use with the Django
+web framework.
+
+To use MathJax with Django:
+
+1. Install this package.
+
+2. Add `'mathjax'` to your list of `INSTALLED_APPS`.
+
+3. Add a script tag to your page templates, such as:
+```
+<script src="{% static 'mathjax/es5/tex-mml-chtml.js' %}"></script>
+```
+
+For more information about MathJax, refer to https://www.mathjax.org/.
+
+For more information about Django, refer to https://www.djangoproject.com/.
