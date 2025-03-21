@@ -1,0 +1,12 @@
+figs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+figs/guidepost_tutorial_info.png,sha256=CKCUWSb4CIfXjVIWEmrmYxnpzwOEQH2x8D1ZuCey9e4,451468
+guidepost/__init__.py,sha256=dyd2tCYC5XbacEeYRirs55X6m6O2wBwAYFc1HcuQq7s,34
+guidepost/guidepost.js,sha256=LRoRk7oznRH_KZGDPysTNy__cWM1lrWlnH43QfbhMB4,90019
+guidepost/guidepost.py,sha256=PGL8272rHL_YjOW3NKuYkWN9nMt3vbTZ7pINpv2vzJY,3685
+guidepost/version.py,sha256=MNRq6BYbw5gKjNSHj0GAWrWfMAArLYm4xyNCI8Z6gr0,76
+tutorials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guidepost-0.2.13.dist-info/LICENSE,sha256=vGvo_SrjyJT5rDPGqa7cc4tUg0X_wfTpfYuKsXNBzgE,1092
+guidepost-0.2.13.dist-info/METADATA,sha256=Ikn59ZeZasDIx73Df9LOzZNf52fOu6MZe3cCaR3NP6I,10606
+guidepost-0.2.13.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+guidepost-0.2.13.dist-info/top_level.txt,sha256=lWlw3QltSq5PX5ij7VgaKEdHRBfVHHf7O8gqHMSNQaY,25
+guidepost-0.2.13.dist-info/RECORD,,
