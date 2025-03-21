@@ -1,0 +1,10 @@
+sociable_bot/__init__.py,sha256=datbFGGN0zZ_fI9bTFiSKZI3dtKEQrC8A4HL1pcz3Dk,1976
+sociable_bot/bot.py,sha256=BQ90GC19KQLWNlB0fxy2kZnpwMRqU84KYD4wxIaJyM0,23272
+sociable_bot/bot_async.py,sha256=g2KBxH_81Thg0r3uGG-mlrv34Rnw7YvKnkAv-sPVWo4,14690
+sociable_bot/bot_enums.py,sha256=9JVu7RET7ZN5_m42Eofcf8lzwtb6rBqrPMnZsoOAxHo,10624
+sociable_bot/bot_types.py,sha256=j21EqVfKVxbBxqFR0e462_HElyYYE3dFtkOI-QMe1EE,8390
+sociable_bot-0.0.82.dist-info/LICENSE.txt,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+sociable_bot-0.0.82.dist-info/METADATA,sha256=Xp4CBa4LJyWgPs_otoHfHDni5yeFLM0O5OeSS4vtObg,1960
+sociable_bot-0.0.82.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+sociable_bot-0.0.82.dist-info/top_level.txt,sha256=PNB5jS6cLlKCjlG74iCMC8akHQ7fjoPC7f7ZE3SseLc,13
+sociable_bot-0.0.82.dist-info/RECORD,,
