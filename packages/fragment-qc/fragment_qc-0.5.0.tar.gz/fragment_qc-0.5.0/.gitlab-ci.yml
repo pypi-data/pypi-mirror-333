@@ -1,0 +1,93 @@
+##
+## Copyright 2018-2025 Fragment Contributors
+## SPDX-License-Identifier: Apache-2.0
+##
+image: $CI_REGISTRY/fragment-qc/conainers:main 
+
+unit-tests:
+  stage: test
+  script:
+    - uv pip install --system .[test]
+    - pytest --junitxml test_report.xml .
+    - ruff check .
+    - python deploy/check_license.py
+  rules:
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+  artifacts:
+    when: always
+    paths:
+      - test_report.xml
+    reports:
+      junit: test_report.xml
+
+pages:
+  stage: deploy
+  script:
+    - uv pip install --system .[docs]
+    - sphinx-build -b html docs public
+  artifacts:
+    paths:
+      - public
+  rules:
+    # This rule makes it so that your website is published and updated only when
+    # you push to the default branch of your repository (e.g. "master" or "main").
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+# Follows guide from https://stefan.sofa-rockers.org/2024/11/14/gitlab-trusted-publisher/
+pkg-build:
+  stage: build
+  script:
+    - uv build --out-dir=dist
+  artifacts:
+    paths:
+     - dist/
+  rules:
+    # Only build when we are on a tag
+    - if: '$CI_COMMIT_TAG =~ /^v?\d+\.\d+\.\d+/'
+
+.release-base:
+  # Abstract base job for "release" jobs.
+  # Extending jobs must define the following variables:
+  # - PYPI_OIDC_AUD: Audience for the ID token that GitLab
+  #   issues to the pipeline job
+  # - PYPI_OIDC_URL: PyPI endpoint for retrieving a publish
+  #   token with GitLab’s ID token
+  # - UV_PUBLISH_URL: PyPI endpoint for the actual upload
+  stage: 'deploy'
+  id_tokens:
+    PYPI_ID_TOKEN:
+      aud: '$PYPI_OIDC_AUD'
+  script:
+    # Build dependencies
+    - uv pip install --system setuptools-scm twine 
+    # Use the GitLab ID token to retrieve an API token from PyPI
+    - resp="$(curl -X POST "${PYPI_OIDC_URL}" -d "{\"token\":\"${PYPI_ID_TOKEN}\"}")"
+    # Parse the response and extract the token
+    - publish_token="$(python -c "import json; print(json.loads('${resp}')['token'])")"
+    # Upload the files from "dist/"
+    - twine upload --verbose --disable-progress-bar --repository-url $UV_PUBLISH_URL -u __token__ -p "$publish_token" dist/*
+    # Print the link to PyPI so we can quickly go there to verify the result:
+    - version="$(python -m setuptools_scm)"
+    - echo -e "\033[34;1mPackage on PyPI:\033[0m ${CI_ENVIRONMENT_URL}${version}"
+
+
+pypy-test-publish:
+  extends: '.release-base' 
+  variables:
+    PYPI_OIDC_AUD: 'testpypi'
+    PYPI_OIDC_URL: 'https://test.pypi.org/_/oidc/mint-token'
+    UV_PUBLISH_URL: 'https://test.pypi.org/legacy/'
+  rules:
+    # Only build when we are on a tag
+    - if: '$CI_COMMIT_TAG =~ /^v?\d+\.\d+\.\d+[a-zA-Z]+\d*$/'
+
+
+pypi-publish:
+  extends: '.release-base' 
+  variables:
+    PYPI_OIDC_AUD: 'pypi'
+    PYPI_OIDC_URL: 'https://pypi.org/_/oidc/mint-token'
+    UV_PUBLISH_URL: 'https://upload.pypi.org/legacy/'
+  rules:
+    # Only build when we are on a tag
+    - if: '$CI_COMMIT_TAG =~ /^v?\d+\.\d+\.\d+$/'
