@@ -1,0 +1,102 @@
+Metadata-Version: 2.3
+Name: kstack
+Version: 0.1.1
+Summary: Deploy Kubernetes clusters from simplified YAML
+License: GPL-3.0-or-later
+Keywords: k8s,kubernetes,cluster,deployment,devops
+Author: Bruno Bernard
+Author-email: brunobernard@duck.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: System :: Systems Administration
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: halo (>=0.0.31,<0.0.32)
+Requires-Dist: jsonschema (>=4.23.0,<5.0.0)
+Requires-Dist: kubernetes (>=32.0.1,<33.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: questionary (>=2.1.0,<3.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Project-URL: Repository, https://github.com/eznix86/kstack
+Description-Content-Type: text/markdown
+
+# kstack
+
+kstack is a tool designed to simplify the deployment and management of Kubernetes clusters using a streamlined YAML configuration format. It abstracts complex Kubernetes configurations into a more user-friendly format, making it easier for developers and DevOps teams to manage their clusters.
+
+## Features
+
+- Simplified YAML configuration for Kubernetes resources.
+- Support for deployments, services, ingresses, secrets, and volumes.
+- Automatic validation of stack configurations against a JSON schema.
+- CLI commands for deploying, validating, and managing Kubernetes resources.
+
+## Installation
+
+To install `kstack`, ensure you have Python 3.11 installed, then use `poetry` to install the dependencies:
+
+```bash
+poetry install
+```
+
+## Usage
+
+### Validate a Stack
+
+To validate a stack configuration file:
+
+```bash
+kstack validate examples/simple-deployment.yaml
+```
+
+### Deploy a Stack
+
+To deploy resources defined in a stack configuration file:
+
+```bash
+kstack deploy examples/simple-deployment.yaml
+```
+
+### Destroy Resources
+
+(Currently under development)
+
+```bash
+kstack destroy
+```
+
+## Example
+
+Here is an example of a simple deployment configuration:
+
+```yaml
+apps:
+    whoami:
+        image: "containous/whoami"
+        ports:
+            - 8000:80
+```
+
+## Development
+
+To contribute to `kstack`, clone the repository and install the dependencies using `poetry`:
+
+```bash
+git clone https://github.com/eznix86/kstack.git
+cd kstack
+poetry install
+```
+
+## License
+
+kstack is licensed under the GNU General Public License v3.0 or later. See the [LICENSE](./LICENSE) file for details.
+
+
