@@ -1,0 +1,13 @@
+cli_llm_man/__init__.py,sha256=wwzI0HWMz0FUp4V66XGRfzeaK3gaQUnIjDstG8ZUpFI,40
+cli_llm_man/cache.py,sha256=VHRfsJj9Wma_lYkxr5HZxKKYc7CteEdjcrvmXKD-6OQ,1717
+cli_llm_man/config.py,sha256=pCEa29L1PMEUjiW7A50UONtOglBKiECYBXgNv9U3Za8,925
+cli_llm_man/llm_interface.py,sha256=QE9Ujlk9TzUK6RR_TFMW0GT1_IryKOY3NtjF3E1dOMc,9338
+cli_llm_man/main.py,sha256=xAJ1fLi1n56AfCDYLLcknMsWal9erJceOsKRpEtPp2k,5816
+cli_llm_man/man_retriever.py,sha256=FEyMvZ3Tqsk6t6qwGluldnknSu1vA2IDts1XZa9kAPY,2153
+cli_llm_man/setup_alias.py,sha256=qV74xM8NpTYPJzT03SVXqFqeMtFMHYavY72bN_hj-Iw,1893
+cli_llm_man_sajid_karim-0.1.0.dist-info/LICENSE,sha256=ylBphmVwVRWIGut_yO_cDnAlcP7OhwM3hcsWq0stLu8,1077
+cli_llm_man_sajid_karim-0.1.0.dist-info/METADATA,sha256=18Y-iay1lnBSm5ww5Uk9P7ECx9O3LQXDtzJxNzPHKbo,5309
+cli_llm_man_sajid_karim-0.1.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+cli_llm_man_sajid_karim-0.1.0.dist-info/entry_points.txt,sha256=rWj4_Kztrt9HT5cBeG4_RTFk5XF-OC-SWhGyGsg-7OY,111
+cli_llm_man_sajid_karim-0.1.0.dist-info/top_level.txt,sha256=6W-63DH-jyd6BBCeeTwYqu2heIDVcD0ek7irGxBevTk,12
+cli_llm_man_sajid_karim-0.1.0.dist-info/RECORD,,
