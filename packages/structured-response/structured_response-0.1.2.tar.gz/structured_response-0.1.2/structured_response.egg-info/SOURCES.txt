@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+structured_response/__init__.py
+structured_response/response.py
+structured_response.egg-info/PKG-INFO
+structured_response.egg-info/SOURCES.txt
+structured_response.egg-info/dependency_links.txt
+structured_response.egg-info/requires.txt
+structured_response.egg-info/top_level.txt
