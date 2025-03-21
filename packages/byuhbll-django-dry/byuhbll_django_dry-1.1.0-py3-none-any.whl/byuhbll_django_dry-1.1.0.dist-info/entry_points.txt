@@ -1,0 +1,2 @@
+[console_scripts]
+byuhbll-django-dry = byuhbll_django_dry.scripts.cli:cli
