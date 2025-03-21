@@ -1,0 +1,33 @@
+KleioTranslator - server version 12.7 - build 579 2025-01-29 17:45:15
+14-3-2025 8-23
+
+Processing data file dev1692.cli
+-------------------------------------------
+Generic Act translation module with geoentities (XML).
+     Joaquim Ramos de Carvalho (joaquim@uc.pt) 
+** New document: kleio
+=========================
+kleio translation started
+=========================
+Structure: gacto2.str
+Prefix: 
+Autorel: 
+Translation count: 182
+Obs: 
+** Processing source fonte$dev1692
+18: devassa$devass1692
+*** End of File
+
+
+Structure file: /kleio-home/projects/test-project/structures/sources.str
+Structure processing report: /kleio-home/projects/test-project/structures/sources.srpt
+Structure in JSON: /kleio-home/projects/test-project/structures/sources.str.json
+
+Kleio file: /kleio-home/projects/test-project/sources/reference_sources/devassas/dev1692.cli
+Original file: /kleio-home/projects/test-project/sources/reference_sources/devassas/dev1692.org
+Previous version: /kleio-home/projects/test-project/sources/reference_sources/devassas/dev1692.old
+Temp file with ids: /kleio-home/projects/test-project/sources/reference_sources/devassas/dev1692.ids
+** - /kleio-home/projects/test-project/sources/reference_sources/devassas/dev1692.cli-renamed to- /kleio-home/projects/test-project/sources/reference_sources/devassas/dev1692.old
+0  errors. 
+0  warnings.
+Translation finished.

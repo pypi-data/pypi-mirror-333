@@ -1,0 +1,43 @@
+KleioTranslator - server version 12.7 - build 579 2025-01-29 17:45:15
+14-3-2025 8-18
+
+Processing data file avexplorfa.cli
+-------------------------------------------
+Generic Act translation module with geoentities (XML).
+     Joaquim Ramos de Carvalho (joaquim@uc.pt) 
+** New document: kleio
+=========================
+kleio translation started
+=========================
+Structure: gacto2.str
+Prefix: sj
+Autorel: sj
+Translation count: 172
+Obs: 
+** Processing source fonte$sj-avexplorfa
+6: escritura$sj-cex1322.1
+56: escritura$sj-cex1324.1
+96: escritura$sj-cex1324.2
+142: escritura$sj-cex1325.1
+173: escritura$sj-cex1329.1
+220: escritura$sj-cex1330.1
+256: escritura$sj-cex1335.1
+302: escritura$sj-cex1340.1
+348: escritura$sj-cex1344.1
+400: escritura$sj-cex1347.1
+459: escritura$sj-cex1348.1
+*** End of File
+
+
+Structure file: /kleio-home/projects/test-project/structures/sources.str
+Structure processing report: /kleio-home/projects/test-project/structures/sources.srpt
+Structure in JSON: /kleio-home/projects/test-project/structures/sources.str.json
+
+Kleio file: /kleio-home/projects/test-project/sources/database_tests/avexplorfa.cli
+Original file: /kleio-home/projects/test-project/sources/database_tests/avexplorfa.org
+Previous version: /kleio-home/projects/test-project/sources/database_tests/avexplorfa.old
+Temp file with ids: /kleio-home/projects/test-project/sources/database_tests/avexplorfa.ids
+** - /kleio-home/projects/test-project/sources/database_tests/avexplorfa.cli-renamed to- /kleio-home/projects/test-project/sources/database_tests/avexplorfa.old
+0  errors. 
+0  warnings.
+Translation finished.
