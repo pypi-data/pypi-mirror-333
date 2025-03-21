@@ -1,0 +1,9 @@
+mcp_server_mac_brightness/__init__.py,sha256=AFgvQ4BYommOv5jtHc2WlCpEneGMuX-JxKKjnkKZi90,89
+mcp_server_mac_brightness/__main__.py,sha256=JbBSJQpBeHeF-GHMCsn8sLzUKV7j3gakVnUvBh-i5Dc,50
+mcp_server_mac_brightness/controller.py,sha256=dXq17KLpLfXCSlVREJez6o5c1blUBF53zli9tNIEp2M,1958
+mcp_server_mac_brightness/server.py,sha256=Ev6k12qMfjF5TEWKmrkTk4LI_7E8-rgzRm57CpD5wTo,1819
+mcp_server_mac_brightness-0.1.4.dist-info/METADATA,sha256=0sjqxZoQGeNadUU3fpPNRx76G11oCdIrq4JTUsPtp5s,1886
+mcp_server_mac_brightness-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_mac_brightness-0.1.4.dist-info/entry_points.txt,sha256=ra6l18DqdsjaAGfa7ocSXKQUXMEjZEitcWSzbYPKAyg,77
+mcp_server_mac_brightness-0.1.4.dist-info/licenses/LICENSE,sha256=jMfG4zsk7U7o_MzDPszxAlSdBPpMuXN87Ml3Da0QgP8,1059
+mcp_server_mac_brightness-0.1.4.dist-info/RECORD,,
