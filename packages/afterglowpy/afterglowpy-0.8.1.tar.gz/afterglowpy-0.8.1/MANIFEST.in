@@ -1,0 +1,1 @@
+include afterglowpy/version.py afterglowpy/*.h
