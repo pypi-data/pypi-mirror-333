@@ -1,0 +1,12 @@
+PC_Utils/Datetime.py,sha256=4-yYdTmdX_h93jBHMk0oZYL19q7HRjnahNdRxd8Fc_4,1022
+PC_Utils/FileManagement.py,sha256=4VhAIOt5iS-1M0WpQ5EEbenb5sMok63gyqkJqS4pQhI,10450
+PC_Utils/FileManagement_w_Azure.py,sha256=hh_ZMIofXOJARRKTLT95w7ynnEG_s2L-Co5w2eRbc50,6600
+PC_Utils/ObtainEmails.py,sha256=Zv3rhGz0hKYJr-ddBJJXt31aq9kESD-zXrrEv2tmmq0,633
+PC_Utils/Runtime.py,sha256=1Lkkg_ZOMARs9yhphfbyTy_1kwBHfK47IMpoIrDzw1c,2228
+PC_Utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PC_Utils/_version.py,sha256=1t0WNdAderMxqsAMjczr7f1npYcArYSIrxpT_KYD5eI,538
+pc_utils-0.1.0.post4.dist-info/LICENSE,sha256=GacloVM5TbFryxuNz-sk-h4AX1WoiPzaYMWQ82e9J3k,1090
+pc_utils-0.1.0.post4.dist-info/METADATA,sha256=1hHY5VShl6Jlc-IcaKweY9hxtjsE-Z5VrgtKAUCJQpI,3309
+pc_utils-0.1.0.post4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pc_utils-0.1.0.post4.dist-info/top_level.txt,sha256=qtAppen-CieICt6CMYbV5uj5nPzoWii7P1tmSyqaVvo,9
+pc_utils-0.1.0.post4.dist-info/RECORD,,
