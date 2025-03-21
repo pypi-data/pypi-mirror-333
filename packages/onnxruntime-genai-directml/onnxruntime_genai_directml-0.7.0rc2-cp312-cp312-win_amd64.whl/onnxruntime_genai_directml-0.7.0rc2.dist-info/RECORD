@@ -1,0 +1,14 @@
+onnxruntime_genai/D3D12Core.dll,sha256=iiPYJrJbQylSL_RRy1K38rNNfykTz-uHg3HOi9dl_i0,3328032
+onnxruntime_genai/LICENSE,sha256=mQaUD2Gx8LUz-n2ZuvVReLKAj74RPqUd-_rYVyzNXys,1162
+onnxruntime_genai/ThirdPartyNotices.txt,sha256=w62wlRpZZKpgkriPqgfv2wA3B0uwCS6S0fx6zjHpxUI,346208
+onnxruntime_genai/__init__.py,sha256=YNb0XhtVtwzWQU9U_jhrOwJ6wk_sKmAwN7rk1Lt3fz0,795
+onnxruntime_genai/_dll_directory.py,sha256=JN1NLR98FL0BH0-T63OhZ9q09rOCbfQJ1J2AW-1rzGo,3176
+onnxruntime_genai/onnxruntime-genai.dll,sha256=z5hhXwkTzaN2oDCarKCo1gP8_hdZfzulAxDAbIWjXho,1798656
+onnxruntime_genai/onnxruntime_genai.cp312-win_amd64.pyd,sha256=sJJgNQXWGeoupcuwl4CLQ9npRZZX4SYlszWEc5zX9lY,359424
+onnxruntime_genai/models/builder.py,sha256=wfKQ5f0nnSueztQ5Om8iQmjIkkF0aZ1hU1mM0gjJH_U,204076
+onnxruntime_genai/models/gguf_model.py,sha256=ztQxdqmSD3fXE9mKX1rs9Zc35kusGUSOS-beNwF-WoM,18111
+onnxruntime_genai/models/quantized_model.py,sha256=rUj_tX_i0nL51CDr4UTEdMME4E6vqkQ0Z92eVARvsyc,44358
+onnxruntime_genai_directml-0.7.0rc2.dist-info/METADATA,sha256=sPbMisYd_C3QommY5sLCmF9sYgYJxGY5IT6S2AOtuSU,710
+onnxruntime_genai_directml-0.7.0rc2.dist-info/WHEEL,sha256=A8mRFNvJcDL8dRPZ6k2ICKEOXwE8pzYFXYxEla0rR0g,101
+onnxruntime_genai_directml-0.7.0rc2.dist-info/top_level.txt,sha256=U92ZdtZYnKUmz1D94v3YxXHvRyNbrxkZ1gDYUzEJ_bc,18
+onnxruntime_genai_directml-0.7.0rc2.dist-info/RECORD,,
