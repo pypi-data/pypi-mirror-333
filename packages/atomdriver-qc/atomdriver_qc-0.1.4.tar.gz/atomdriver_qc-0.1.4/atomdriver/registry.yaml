@@ -1,0 +1,20 @@
+##
+## Copyright 2018-2024 Fragment Contributors
+## SPDX-License-Identifier: Apache-2.0
+##
+requires:
+    - "conformer"
+    - "conformer_core"
+stages:
+    provides:
+        - "atomdriver.drivers.libxtb.LibxTB"
+        - "atomdriver.drivers.mopac.MOPAC"
+        - "atomdriver.drivers.nwchem.NWChem"
+        - "atomdriver.drivers.orca.ORCA"
+        - "atomdriver.drivers.pyscf.PySCF"
+        - "atomdriver.drivers.qchem.QChem"
+        - "atomdriver.drivers.xtb.xTB"
+        - "atomdriver.drivers.cp2k.CP2K"
+        - "atomdriver.drivers.gamess.GAMESS"
+environment_vars:
+    OMP_NUM_THREADS: "1"

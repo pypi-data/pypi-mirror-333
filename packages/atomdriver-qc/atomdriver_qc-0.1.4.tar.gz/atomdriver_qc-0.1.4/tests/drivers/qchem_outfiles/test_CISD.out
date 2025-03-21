@@ -1,0 +1,384 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.4 (devel), Q-Chem, Inc., Pleasanton, CA (2021)
+
+ E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
+ N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
+ A. L. Dempwolff,  Zhengting Gan,  D. Hait,  P. R. Horn,  L. D. Jacobson,  
+ I. Kaliman,  J. Kussmann,  A. W. Lange,  Ka Un Lao,  D. S. Levine,  Jie Liu,  
+ S. C. McKenzie,  A. F. Morrison,  K. Nanda,  F. Plasser,  D. R. Rehn,  
+ M. L. Vidal,  Zhi-Qiang You,  Ying Zhu,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  J. H. Andersen,  D. Barton,  K. Begam,  A. Behn,  
+ Y. A. Bernard,  E. J. Berquist,  H. Burton,  A. Carreras,  K. Carter-Fenk,  
+ Romit Chakraborty,  A. D. Chien,  K. D. Closser,  V. Cofer-Shabica,  
+ S. Dasgupta,  Jia Deng,  M. de Wergifosse,  M. Diedenhofen,  Hainam Do,  
+ S. Ehlert,  Po-Tung Fang,  S. Fatehi,  Qingguo Feng,  T. Friedhoff,  
+ J. Gayvert,  Qinghui Ge,  G. Gidofalvi,  M. Goldey,  J. Gomes,  
+ C. Gonzalez-Espinoza,  S. Gulania,  A. Gunina,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  M. Hernandez Vera,  
+ M. Hodecker,  Z. C. Holden,  S. Houck,  Xunkun Huang,  Kerwin Hui,  
+ B. C. Huynh,  M. Ivanov,  Hyunjun Ji,  Hanjie Jiang,  B. Kaduk,  S. Kaehler,  
+ K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  Z. Koczor-Benda,  
+ Joong Hoon Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  
+ K. Kue,  A. Kunitsa,  T. Kus,  A. Landau,  K. V. Lawler,  D. Lefrancois,  
+ S. Lehtola,  Rain Li,  Yi-Pei Li,  Jiashu Liang,  M. Liebenthal,  
+ Hung-Hsuan Lin,  You-Sheng Lin,  Fenglai Liu,  Kuan-Yu Liu,  
+ M. Loipersberger,  A. Luenser,  A. Manjanath,  P. Manohar,  E. Mansoor,  
+ S. F. Manzer,  Shan-Ping Mao,  A. V. Marenich,  T. Markovich,  S. Mason,  
+ S. A. Maurer,  P. F. McLaughlin,  M. F. S. J. Menger,  J.-M. Mewes,  
+ S. A. Mewes,  P. Morgante,  J. W. Mullinax,  K. J. Oosterbaan,  G. Paran,  
+ Alexander C. Paul,  Suranjan K. Paul,  F. Pavosevic,  Zheng Pei,  S. Prager,  
+ E. I. Proynov,  E. Ramos,  B. Rana,  A. E. Rask,  A. Rettig,  R. M. Richard,  
+ F. Rob,  E. Rossomme,  T. Scheele,  M. Scheurer,  M. Schneider,  
+ N. Sergueev,  S. M. Sharada,  W. Skomorowski,  D. W. Small,  C. J. Stein,  
+ Yu-Chuan Su,  E. J. Sundstrom,  Zhen Tao,  J. Thirman,  T. Tsuchimochi,  
+ N. M. Tubman,  S. P. Veccham,  O. Vydrov,  J. Wenzel,  J. Witte,  A. Yamada,  
+ Kun Yao,  S. Yeganeh,  S. R. Yost,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yu Zhang,  D. Zuev,  A. Aspuru-Guzik,  A. T. Bell,  N. A. Besley,  
+ K. B. Bravaya,  B. R. Brooks,  D. Casanova,  Jeng-Da Chai,  S. Coriani,  
+ C. J. Cramer,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  W. A. Goddard III,  S. Grimme,  
+ S. Hammes-Schiffer,  T. Head-Gordon,  W. J. Hehre,  Chao-Ping Hsu,  
+ T.-C. Jagau,  Yousung Jung,  A. Klamt,  Jing Kong,  D. S. Lambrecht,  
+ WanZhen Liang,  N. J. Mayhall,  C. W. McCurdy,  J. B. Neaton,  T. Neudecker,  
+ C. Ochsenfeld,  J. A. Parkhill,  R. Peverati,  V. A. Rassolov,  Yihan Shao,  
+ L. V. Slipchenko,  R. P. Steele,  J. E. Subotnik,  A. J. W. Thom,  
+ A. Tkatchenko,  D. G. Truhlar,  T. Van Voorhis,  T. A. Wesolowski,  
+ K. B. Whaley,  H. L. Woodcock III,  P. M. Zimmerman,  S. Faraji,  
+ P. M. W. Gill,  M. Head-Gordon,  J. M. Herbert,  A. I. Krylov
+
+ Additional authors since Version 5.4.0: 
+ Chandrima Chakravarty,  L. Cunha,  R. Kang,  Yongbin Kim,  S. Kotaru,  
+ Shaozhi Li,  Xiangyuan Li,  F. Matz,  A. Molle,  V. Parravicini,  
+ Haisheng Ren,  Hengyuan Shen,  Yingli Su,  Hung-Yi Tsai,  C. Utku,  
+ Fang Wang,  Jeff Yang,  F. Zeller
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  R. Baer,  J. Baker,  G. J. O. Beran,  
+ K. Brandhorst,  S. T. Brown,  E. F. C. Byrd,  Arup K. Chakraborty,  
+ G. K. L. Chan,  Chun-Min Chang,  Yunqing Chen,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  R. G. Edgar,  J. Fosso-Tande,  
+ L. Fusti-Molnar,  D. Ghosh,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  
+ J. Gonthier,  M. S. Gordon,  S. R. Gwaltney,  G. Hawkins,  J. E. Herr,  
+ A. Heyden,  S. Hirata,  E. G. Hohenstein,  G. Kedziora,  F. J. Keil,  
+ C. Kelley,  Jihan Kim,  R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  
+ W. Kurlancheek,  A. Laurent,  A. M. Lee,  M. S. Lee,  S. V. Levchenko,  
+ Ching Yeh Lin,  D. Liotard,  E. Livshits,  R. C. Lochan,  I. Lotan,  
+ L. A. Martinez-Martinez,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olivares-Amaya,  R. Olson,  
+ T. M. Perrine,  B. Peters,  P. A. Pieniazek,  A. Prociuk,  Y. M. Rhee,  
+ J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  H. F. Schaefer III,  
+ M. W. Schmidt,  N. E. Schultz,  S. Sharma,  N. Shenvi,  C. D. Sherrill,  
+ A. C. Simmonett,  A. Sodt,  T. Stein,  D. Stuck,  K. S. Thanthiriwatte,  
+ V. Vanovschi,  L. Vogt,  Tao Wang,  A. Warshel,  M. A. Watson,  
+ C. F. Williams,  Q. Wu,  X. Xu,  Jun Yang,  W. Zhang,  Yan Zhao
+
+   Please cite Q-Chem as follows:
+  "Software for the frontiers of quantum chemistry:
+   An overview of developments in the Q-Chem 5 package"
+   J. Chem. Phys. 155, 084801 (2021)
+   https://doi.org/10.1063/5.0055522 (open access)
+
+ Q-Chem 5.4.2 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Mon Jun  6 11:14:44 2022  
+
+ Host: cbc-nc224042.asc.ohio-state.edu
+0
+
+     Scratch files written to /var/home/scratch/broderick.62/tmp/qchem/qchem13156//
+ Processing $rem in /home/broderick.62/.env/qchem/trunk/config/preferences:
+ Processing $rem in /home/broderick.62/.qchemrc:
+
+ Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+! Name: {name}
+$molecule
+0 1
+H        0.95   -2.54   -1.88
+H        2.19   -1.86   -2.43
+$end
+
+$rem
+  method          CISD
+  basis         jun-cc-pvdz
+  ! aux_basis       rimp2-jun-cc-pvdz
+  job_type        sp
+  thresh          14
+
+  scf_final_print true
+  !gen_scfman      false
+  scf_convergence 8
+  sym_ignore      true
+  max_scf_cycles  100
+
+  !mem_total       160000
+  !mem_static      4000
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      H       0.9500000000    -2.5400000000    -1.8800000000
+    2      H       2.1900000000    -1.8600000000    -2.4300000000
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =           0.34873964 hartrees
+ There are        1 alpha and        1 beta electrons
+ Requested basis set is jun-cc-pVDZ
+ There are 6 shells and 10 basis functions
+ Total memory of 2000 MB is distributed as follows: 
+   MEM_STATIC is set to 192 MB
+   QALLOC/CCMAN JOB total memory use is  1808 MB
+ Warning: actual memory use might exceed 2000 MB
+
+ Total QAlloc Memory Limit   2000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+
+                       Distance Matrix (Angstroms)
+             H (  1)
+   H (  2)  1.517399
+ 
+ A cutoff of  1.0D-14 yielded     21 shell pairs
+ There are        61 function pairs
+ Smallest overlap matrix eigenvalue = 1.76E-01
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 2.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 8 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1      -0.7285274540      1.66e-02  
+    2      -0.9984288362      5.31e-03  
+    3      -0.9989613181      8.53e-04  
+    4      -0.9989755961      6.36e-06  
+    5      -0.9989755972      1.21e-07  
+    6      -0.9989755972      7.93e-14  Convergence criterion met
+ ---------------------------------------
+ DFT Correlation    Energy =   0.00000000000000
+ DFT Exchange       Energy =   0.00000000000000
+ HF Exchange        Energy =  -0.47394666363846
+ Kinetic            Energy =   0.00000000000000
+ Nuclear Attraction Energy =   0.00000000000000
+ One-Electron       Energy =  -1.82166189958895
+ Total Coulomb      Energy =   0.94789332727691
+ Final Alpha MO Eigenvalues
+            1           2           3           4           5           6
+    1  -0.4368843   0.0371202   0.6467233   0.6737754   1.2717944   1.3868336
+            7           8           9          10
+    1   1.3868336   1.6108392   1.6108392   2.1147755
+ SCF time:   CPU 3.98s  wall 0.00s 
+ SCF   energy in the final basis set =       -0.9989755972
+ Total energy in the final basis set =       -0.9989755972
+
+
+ ------------------------------------------------------------------------------
+
+   CCMAN2: suite of methods based on coupled cluster
+           and equation of motion theories.
+
+   Components:
+   * libvmm-1.3-trunk
+     by Evgeny Epifanovsky, Ilya Kaliman.
+   * libtensor-2.5-trunk
+     by Evgeny Epifanovsky, Michael Wormit, Dmitry Zuev, Sam Manzer, 
+        Ilya Kaliman.
+   * libcc-2.5-trunk
+     by Evgeny Epifanovsky, Arik Landau, Tomasz Kus, Kirill Khistyaev, 
+        Dmitry Zuev, Prashant Manohar, Xintian Feng, Anna Krylov, 
+        Matthew Goldey, Alec White, Thomas Jagau, Kaushik Nanda, 
+        Anastasia Gunina, Alexander Kunitsa, Joonho Lee.
+
+   CCMAN original authors:
+   Anna I. Krylov, C. David Sherrill, Steven R. Gwaltney,
+   Edward F. C. Byrd (2000)
+   Sergey V. Levchenko, Lyudmila V. Slipchenko, Tao Wang,
+   Ana-Maria C. Cristian (2003)
+   Piotr A. Pieniazek, C. Melania Oana, Evgeny Epifanovsky (2007)
+   Prashant Manohar (2009)
+
+ ------------------------------------------------------------------------------
+
+
+ Allocating and initializing 1808MB of RAM...
+ Calculation will run on 8 cores.
+
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+ -0.437
+  1 A                                                                          
+ -- Virtual --                   
+  0.037   0.647   0.674   1.272   1.387   1.387   1.611   1.611
+  2 A     3 A     4 A     5 A     6 A     7 A     8 A     9 A                  
+  2.115
+ 10 A                                                                          
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+ -0.437
+  1 A                                                                          
+ -- Virtual --                   
+  0.037   0.647   0.674   1.272   1.387   1.387   1.611   1.611
+  2 A     3 A     4 A     5 A     6 A     7 A     8 A     9 A                  
+  2.115
+ 10 A                                                                          
+
+ Occupation and symmetry of molecular orbitals
+
+ Point group: C1 (1 irreducible representation).
+
+                           A     All 
+ -------------------------------------
+ All molecular orbitals:
+  - Alpha                  10    10  
+  - Beta                   10    10  
+ -------------------------------------
+ Alpha orbitals:
+  - Frozen occupied        0     0   
+  - Active occupied        1     1   
+  - Active virtual         9     9   
+  - Frozen virtual         0     0   
+ -------------------------------------
+ Beta orbitals:
+  - Frozen occupied        0     0   
+  - Active occupied        1     1   
+  - Active virtual         9     9   
+  - Frozen virtual         0     0   
+ -------------------------------------
+
+ Import integrals:   CPU 0.00 s  wall 0.00 s
+
+m_px:
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+m_py:
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+m_pz:
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)                      (0,0)
+ Import integrals:   CPU 1.62 s  wall 0.23 s
+
+ MP2 amplitudes:   CPU 0.00 s  wall 0.00 s
+
+ Total ccman2 time:   CPU 3.68 s  wall 0.56 s
+
+ 
+ --------------------------------------------------------------
+ 
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+ 
+ Alpha MOs
+ -- Occupied --
+ -0.4369
+ -- Virtual --
+  0.0371   0.6467   0.6738   1.2718   1.3868   1.3868   1.6108   1.6108
+  2.1148
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 H                    -0.000000
+      2 H                     0.000000
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z      -0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX      -1.9499     XY       0.5869     YY      -2.6983
+        XZ      -0.4747     YZ      -0.2603     ZZ      -2.8096
+    Octopole Moments (Debye-Ang^2)
+       XXX      -9.1841    XXY       6.1328    XYY      -6.8189
+       YYY      17.8090    XXZ       2.7114    XYZ      -0.6292
+       YYZ       6.9604    XZZ      -2.3651    YZZ       7.3032
+       ZZZ      18.1643
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -36.9098   XXXY      23.5419   XXYY     -26.3581
+      XYYY      35.2807   YYYY     -83.6197   XXXZ      17.0928
+      XXYZ     -10.5139   XYYZ      14.4733   YYYZ     -41.6254
+      XXZZ     -11.6892   XYZZ       9.3173   YYZZ     -32.7237
+      XZZZ      22.8998   YZZZ     -43.0423   ZZZZ     -83.0869
+ -----------------------------------------------------------------
+ Mayer SCF Bond Order, atomic valence on the diagonal:
+
+            1           2
+    1   1.0000000   1.0000000
+    2   1.0000000   1.0000000
+
+
+ Total job time:  1.79s(wall), 11.84s(cpu) 
+ Mon Jun  6 11:14:46 2022
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+

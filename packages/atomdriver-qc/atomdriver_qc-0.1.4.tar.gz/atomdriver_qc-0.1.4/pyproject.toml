@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atomdriver-qc"
+authors = [
+    {name = "Dustin Broderick", email = "broderick.62@osu.edu"},
+    {name = "Paige Bowling", email = "bowling.181@osu.edu"},
+    {name = "Jonah Higley"},
+    {name = "Sharique Ahmed"}
+]
+description = "An standardized interface to QM Codes"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["ab initio", "chemistry"]
+license = { text = "Apache" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "conformer-qc >= 0.1.4",
+    "numpy >= 1.21",
+    "scipy >= 1.7",
+    "peewee >= 3.16, < 4.0",
+    "pydantic >=2.7, <3.0",
+    "networkx >=3.1, <4.0",
+    "lru-dict >=1.3",
+    "psutil",
+    "ray",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://fragment-qc.gitlab.io"
+Source = "https://gitlab.com/fragment-qc/atomdriver"
+Issues = "https://gitlab.com/fragment-qc/atomdriver/-/issues"
+
+[project.optional-dependencies]
+docs = ["sphinx", "sphinx-autodoc-typehints", "sphinxcontrib-katex", "furo"]
+test = ["pytest", "licenseheaders", "ruff"]
+dev = ["esbonio", "licenseheaders", "ruff"]
+build = ["build", "twine"]
+
+[tool.setuptools]
+packages = ["atomdriver"]
+
+[tool.setuptools_scm]
+
+[tool.ruff.lint]
+ignore = ["E741"]
+extend-select = ["I"]
