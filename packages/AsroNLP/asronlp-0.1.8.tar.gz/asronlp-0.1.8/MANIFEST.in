@@ -1,0 +1,3 @@
+include asro_nlp/data/*.txt
+include asro_nlp/data/*.xlsx
+recursive-include asro_nlp/data *  # This will include all files under asro_nlp/data

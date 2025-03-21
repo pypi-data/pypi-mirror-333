@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: AsroNLP
+Version: 0.1.8
+Summary: A simple NLP tool for processing and analyzing text in the Indonesian language.
+Home-page: https://github.com/asroharun6/AsroNLP
+Author: Asro
+Author-email: asro@raharja.info
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Indonesian
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: nltk
+Requires-Dist: openpyxl
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AsroNLP
+
+AsroNLP is a Python library for processing and analyzing text in the Indonesian language, focusing on sentiment analysis.
+
+## Installation
+
+Run the following command to install:
+
+```bash
+pip install AsroNLP==0.1.8
+```
