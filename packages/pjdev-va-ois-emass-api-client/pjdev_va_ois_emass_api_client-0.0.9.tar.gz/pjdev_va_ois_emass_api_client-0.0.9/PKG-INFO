@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: pjdev-va-ois-emass-api-client
+Version: 0.0.9
+Project-URL: Documentation, https://gitlab.purplejay.net/va-ois/ad-hoc-request/emass-api-client#readme
+Project-URL: Issues, https://gitlab.purplejay.net/va-ois/ad-hoc-request/emass-api-client/issues
+Project-URL: Source, https://gitlab.purplejay.net/va-ois/ad-hoc-request/emass-api-client
+Author-email: Purple Jay LLC <devs@purplejay.io>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: loguru
+Requires-Dist: pydantic-settings>=2.8.1
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: tenacity>=9.0.0
+Provides-Extra: dev
+Requires-Dist: ruff; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+# emass-api-client
+
+[![PyPI - Version](https://img.shields.io/pypi/v/emass-api-client.svg)](https://pypi.org/project/emass-api-client)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/emass-api-client.svg)](https://pypi.org/project/emass-api-client)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install emass-api-client
+```
+
+## License
+
+`emass-api-client` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
