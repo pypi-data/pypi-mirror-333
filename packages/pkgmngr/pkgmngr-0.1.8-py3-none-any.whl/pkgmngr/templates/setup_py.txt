@@ -1,0 +1,25 @@
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setup(
+    name="${package_name}",
+    version="${version}",
+    packages=find_packages(),
+    install_requires=${install_requires},
+    extras_require=${extra_requires},
+    author="${author}",
+    author_email="${author_email}",
+    description="${description}",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/${github.username}/${package_name}",
+    classifiers=${classifiers},
+    python_requires="${python_requires}",
+    entry_points={
+        'console_scripts': [
+            '${package_name}=${sanitized_name}.__main__:main',
+        ],
+    },
+)
