@@ -1,0 +1,2 @@
+[console_scripts]
+mlessentials-postinstall = MLEssentials.post_install:print_imports
