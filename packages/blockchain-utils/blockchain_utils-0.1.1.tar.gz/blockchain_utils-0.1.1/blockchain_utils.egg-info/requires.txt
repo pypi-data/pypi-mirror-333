@@ -1,0 +1,8 @@
+web3==7.8.0
+solders==0.26.0
+bech32==1.2.0
+base58==2.1.1
+blake256==0.1.1
+buidl==0.2.36
+cbor==1.0.0
+monero==1.1.1
