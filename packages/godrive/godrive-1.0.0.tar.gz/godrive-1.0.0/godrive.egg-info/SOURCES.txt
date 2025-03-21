@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+bin/godrive
+bin/godrive_upload
+godrive/__init__.py
+godrive/cli.py
+godrive.egg-info/PKG-INFO
+godrive.egg-info/SOURCES.txt
+godrive.egg-info/dependency_links.txt
+godrive.egg-info/not-zip-safe
+godrive.egg-info/top_level.txt
