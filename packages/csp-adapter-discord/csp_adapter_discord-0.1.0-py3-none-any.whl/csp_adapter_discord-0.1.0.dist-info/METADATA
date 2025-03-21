@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: csp-adapter-discord
+Version: 0.1.0
+Summary: CSP adapter for Discord
+Project-URL: Repository, https://github.com/timkpaine/csp-adapter-discord
+Project-URL: Homepage, https://github.com/timkpaine/csp-adapter-discord
+Author-email: the csp-adapter-discord authors <t.paine154@gmail.com>
+License: Apache-2.0
+License-File: LICENSE
+Keywords: chat,chatbot,csp,slack,stream-processing
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: csp
+Requires-Dist: discord-py
+Requires-Dist: pydantic>=2
+Provides-Extra: develop
+Requires-Dist: build; extra == 'develop'
+Requires-Dist: bump-my-version; extra == 'develop'
+Requires-Dist: check-manifest; extra == 'develop'
+Requires-Dist: codespell<2.5,>=2.2.6; extra == 'develop'
+Requires-Dist: hatchling; extra == 'develop'
+Requires-Dist: mdformat-tables<1.1,>=1; extra == 'develop'
+Requires-Dist: mdformat<0.8,>=0.7.17; extra == 'develop'
+Requires-Dist: pytest; extra == 'develop'
+Requires-Dist: pytest-cov; extra == 'develop'
+Requires-Dist: ruff<0.10,>=0.5; extra == 'develop'
+Requires-Dist: twine<7,>=5; extra == 'develop'
+Requires-Dist: wheel; extra == 'develop'
+Description-Content-Type: text/markdown
+
+# csp-adapter-discord
+
+CSP adapter for Discord
+
+[![Build Status](https://github.com/timkpaine/csp-adapter-discord/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/timkpaine/csp-adapter-discord/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/timkpaine/csp-adapter-discord/branch/main/graph/badge.svg)](https://codecov.io/gh/timkpaine/csp-adapter-discord)
+[![License](https://img.shields.io/github/license/timkpaine/csp-adapter-discord)](https://github.com/timkpaine/csp-adapter-discord)
+[![PyPI](https://img.shields.io/pypi/v/csp-adapter-discord.svg)](https://pypi.python.org/pypi/csp-adapter-discord)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timkpaine/csp-adapter-discord/main?urlpath=lab)
+
+## Overview
+
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
