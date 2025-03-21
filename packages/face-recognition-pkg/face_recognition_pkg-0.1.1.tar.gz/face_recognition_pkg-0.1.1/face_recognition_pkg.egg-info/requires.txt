@@ -1,0 +1,12 @@
+numpy
+opencv-python
+Pillow
+sentence-transformers
+ultralytics
+supervision
+
+[cpu]
+faiss-cpu
+
+[gpu]
+faiss-gpu
