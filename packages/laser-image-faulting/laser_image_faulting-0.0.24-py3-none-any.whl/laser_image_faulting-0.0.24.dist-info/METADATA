@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: laser-image-faulting
+Version: 0.0.24
+Summary: Laser image fault detection package
+Author: grant.martin@tpengin.net
+Requires-Python: ==3.11.*
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: pillow
+Requires-Dist: pyarmor (>=9.1.1,<10.0.0)
+Requires-Dist: torch
