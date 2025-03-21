@@ -1,0 +1,93 @@
+SONSC+ (ISI): Optimal Number of Clusters Selection Using ISI Index
+
+A Python implementation of the improved SONSC+ algorithm utilizing the Improved Separation Index (ISI) for accurate clustering evaluation and optimal selection of clusters without requiring labeled data.
+
+📌 Installation
+
+Install via pip:
+
+pip install sonsc-isi
+
+🚀 Features
+
+Automatic selection of the optimal number of clusters.
+
+High interpretability using Cohesion, Separation, and ISI.
+
+Compatible with various datasets including MNIST, CIFAR-10, Iris, etc.
+
+Generates detailed visualizations for easy interpretation.
+
+🔖 Usage Example
+
+Here's how to use sonsc_isi in your project:
+
+from sonsc_isi import sonsc_isi
+from sklearn.datasets import load_digits
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+
+X, _ = load_digits(return_X_y=True)
+X = StandardScaler().fit_transform(X)
+
+k_values = range(2, 15)
+results_df = sonsc_isi(X, k_values=k_values)
+
+print(results_df)
+
+# Visualizing results
+plt.figure(figsize=(10, 5))
+plt.plot(results_df["k"], results_df["ISI"], marker='o', label='ISI Score', color='purple')
+plt.axvline(results_df.loc[results_df["ISI"].idxmax(), "k"], linestyle='--', color='red', label='Optimal k')
+plt.title("ISI Scores for Different Numbers of Clusters")
+plt.xlabel("Number of Clusters (k)")
+plt.ylabel("ISI Score")
+plt.legend()
+plt.grid()
+plt.show()
+
+📚 Supported Datasets
+
+MNIST
+
+CIFAR-10
+
+Iris
+
+Digits
+
+Any custom numerical dataset
+
+🖥 Example Notebook
+
+See examples/example_sonsc_isi.ipynb for detailed usage examples on MNIST and CIFAR-10 datasets.
+
+📖 Reference
+
+The algorithm is inspired by and improved upon the work described in:
+
+Cosine Clustering Index (CCI), SN Computer Science
+
+@article{CCI2024,
+  author = {Jahanian, Mojtaba and Others},
+  title = {Cosine Clustering Index (CCI)},
+  journal = {SN Computer Science},
+  year = {2024},
+  doi = {10.1007/s42979-024-02970-7}
+}
+
+⚙️ Dependencies:
+
+numpy
+
+pandas
+
+matplotlib
+
+scikit-learn
+
+tensorflow
+
+📄 License:
+
+MIT © Your Name
