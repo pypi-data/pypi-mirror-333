@@ -1,0 +1,2 @@
+[console_scripts]
+pygdl = pygdl.__main__:main
