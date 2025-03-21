@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+csp_perspective.egg-info/PKG-INFO
+csp_perspective.egg-info/SOURCES.txt
+csp_perspective.egg-info/dependency_links.txt
+csp_perspective.egg-info/requires.txt
+csp_perspective.egg-info/top_level.txt
