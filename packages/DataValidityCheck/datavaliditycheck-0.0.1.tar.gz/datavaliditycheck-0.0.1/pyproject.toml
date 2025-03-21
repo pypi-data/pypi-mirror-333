@@ -1,0 +1,18 @@
+[project]
+name = "DataValidityCheck"
+version = "0.0.1"
+description = "A Python package for validating various types of data."
+authors = [{ name = "Olajide Oluwafemi", email = "olajiderichard44@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+
+[project.urls]
+homepage = "https://github.com/Femvrich001/data-validator-Oluwafemi-Olajide.git"
+repository = "https://github.com/Femvrich001/data-validator-Oluwafemi-Olajide.git"
+
+[tool.poetry]
+packages = [{ include = "DataValidityCheck" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
