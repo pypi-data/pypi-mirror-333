@@ -1,0 +1,10 @@
+openinference/instrumentation/openai_agents/__init__.py,sha256=IswE_5bzFfhXzOYizSjfZaUpLFkEaGB31NrfyuUZahc,1548
+openinference/instrumentation/openai_agents/_processor.py,sha256=9yHqs6ItAWSK3wANUOuWvDYMEhVfhzZtNzmnV0oST7k,15493
+openinference/instrumentation/openai_agents/package.py,sha256=HQIew0ZjKVqzc0X_CJIRUYRn4zbjSMm6OIPIG-xWrW4,69
+openinference/instrumentation/openai_agents/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openinference/instrumentation/openai_agents/version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+openinference_instrumentation_openai_agents-0.1.0.dist-info/METADATA,sha256=z1tvgyW9Bua6z7GD6Z7AtZIjgoHNuFR64Gd66wxFJfg,3697
+openinference_instrumentation_openai_agents-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+openinference_instrumentation_openai_agents-0.1.0.dist-info/entry_points.txt,sha256=RK1J03BRrMtniZwgakEJMNMOqXoa5zs2LT-k_cLiBa4,229
+openinference_instrumentation_openai_agents-0.1.0.dist-info/licenses/LICENSE,sha256=x_Y7OX-lWxSUhmKoivlrD6WN3jWlIHxdug8BJv2SI34,10870
+openinference_instrumentation_openai_agents-0.1.0.dist-info/RECORD,,
