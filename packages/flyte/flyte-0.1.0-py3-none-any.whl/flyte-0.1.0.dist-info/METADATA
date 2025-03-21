@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: flyte
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Union AI <wild-endeavor@users.noreply.github.com>
+Requires-Python: >=3.9
