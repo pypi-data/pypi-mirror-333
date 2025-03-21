@@ -1,0 +1,10 @@
+README.md
+setup.py
+nathanxli_package/__init__.py
+nathanxli_package/main.py
+nathanxli_package.egg-info/PKG-INFO
+nathanxli_package.egg-info/SOURCES.txt
+nathanxli_package.egg-info/dependency_links.txt
+nathanxli_package.egg-info/entry_points.txt
+nathanxli_package.egg-info/top_level.txt
+tests/test.py
