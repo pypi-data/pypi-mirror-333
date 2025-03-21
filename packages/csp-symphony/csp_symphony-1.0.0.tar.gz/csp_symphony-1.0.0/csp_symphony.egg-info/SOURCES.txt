@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+csp_symphony.egg-info/PKG-INFO
+csp_symphony.egg-info/SOURCES.txt
+csp_symphony.egg-info/dependency_links.txt
+csp_symphony.egg-info/requires.txt
+csp_symphony.egg-info/top_level.txt
