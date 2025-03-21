@@ -1,0 +1,10 @@
+microflask/abstract_app.py,sha256=6XriFNpxiT4tpyWWRBXQaSRdvclUuQsPFRuETZn12cw,5672
+microflask/utils.py,sha256=QrO6pf2j1EgCouIU8dq79mKPCf-VAFVqrb2sWlzfu48,2780
+microflask/constants/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microflask/constants/error_constants.py,sha256=Md6s9HR9wAgmpxqhljmF3v-wTwNJHwczsLBpaFCtPuw,378
+microflask/security/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microflask/security/generic.py,sha256=Hply3-akLbwzo_BHSWlEBp3uwqmX3D-7cKH_bwmN3fI,341
+microflask-1.0.0.dist-info/METADATA,sha256=m2x7N82Gen6-qd0ou2wivRoCZk5H_op0BARLj98F5Q0,2428
+microflask-1.0.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+microflask-1.0.0.dist-info/top_level.txt,sha256=XkCU0JbIdWTLMqfTNprUXCLndFv5cUjASPOfNnlutGU,11
+microflask-1.0.0.dist-info/RECORD,,
