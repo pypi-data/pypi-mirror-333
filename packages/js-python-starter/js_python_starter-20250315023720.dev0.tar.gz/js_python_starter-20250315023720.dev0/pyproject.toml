@@ -1,0 +1,16 @@
+[project]
+name = "js-python-starter"
+version = "20250315023720.dev"
+description = "A starter project for quickly setting up new Python apps"
+readme = "README.md"
+requires-python = ">=3.13, <4.0"
+dependencies = [
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.9.2",
+]
