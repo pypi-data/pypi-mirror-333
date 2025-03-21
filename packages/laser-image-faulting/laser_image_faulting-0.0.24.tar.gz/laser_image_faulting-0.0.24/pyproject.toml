@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "laser-image-faulting"
+version = "0.0.24"
+description = "Laser image fault detection package"
+authors = ["grant.martin@tpengin.net"]
+packages = [
+    { include = "laser_image_faulting", from = "." }
+]
+include = [
+    "pyarmor_runtime_000000/**/*",
+    "fault_detection.py"
+]
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+numpy = "1.26.4"
+torch = "*"
+pillow = "*"
+pyarmor = "^9.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.0.0"
+pytest = "^7.0.0"
