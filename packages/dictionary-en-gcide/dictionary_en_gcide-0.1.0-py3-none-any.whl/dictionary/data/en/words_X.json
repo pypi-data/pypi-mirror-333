@@ -1,0 +1,2614 @@
+{
+  "x": {
+    "entry": "x",
+    "pos": [
+      {
+        "etymology": "[Xanthic + amide.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "X, the twenty-fourth letter of the English alphabet, has three sounds; a compound nonvocal sound (that of ks), as in wax; a compound vocal sound (that of gz), as in example; and, at the beginning of a word, a simple vocal sound (that of z), as in xanthic.  See Guide to Pronunciation, 1913 Webster]",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthamide": {
+    "entry": "xanthamide",
+    "pos": [
+      {
+        "etymology": "[Xanthic + amide.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An amido derivative of xanthic acid obtained as a white crystalline substance, C2H5O.CS.NH2; -- called also xanthogen amide.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthate": {
+    "entry": "xanthate",
+    "pos": [
+      {
+        "etymology": "[See Xanthic.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A salt of xanthic; a xanthogenate.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthelasma": {
+    "entry": "xanthelasma",
+    "pos": [
+      {
+        "etymology": "[NL.; Gr. xanqo`s yellow + 'e`lasma a metal plate.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "See Xanthoma.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthian": {
+    "entry": "xanthian",
+    "pos": [
+      {
+        "etymology": "[Gr. xanqo`s yellow: cf. F. xanthique.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of or pertaining to Xanthus, an ancient town on Asia Minor; -- applied especially to certain marbles found near that place, and now in the British Museum.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthic": {
+    "entry": "xanthic",
+    "pos": [
+      {
+        "etymology": "[Gr. xanqo`s yellow: cf. F. xanthique.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Tending toward a yellow color, or to one of those colors, green being excepted, in which yellow is a constituent, as scarlet, orange, etc.",
+            "examples": []
+          },
+          {
+            "text": "Possessing, imparting, or producing a yellow color; as, xanthic acid.",
+            "examples": []
+          }
+        ],
+        "cs": "Xanthic acid (Chem.), a heavy, astringent, colorless oil, C2H5O.CS.SH, having a pungent odor. It is produced by leading carbon disulphide into a hot alcoholic solution of potassium hydroxide. So called from the yellow color of many of its salts. Called also xanthogenic acid. -- Xanthic colors (Bot.), those colors (of flowers) having some tinge of yellow; -- opposed to cyanic colors.  See under Cyanic."
+      }
+    ]
+  },
+  "xanthide": {
+    "entry": "xanthide",
+    "pos": [
+      {
+        "etymology": "[See Xantho-.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A compound or derivative of xanthogen.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthidium": {
+    "entry": "xanthidium",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xanqo`s yellow.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of minute unicellular algae of the desmids. These algae have a rounded shape and are armed with glochidiate or branched aculei. Several species occur in ditches, and others are found fossil in flint or hornstone.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthin": {
+    "entry": "xanthin",
+    "pos": [
+      {
+        "etymology": "[Gr. xanqo`s yellow.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "same as xanthine.",
+            "examples": []
+          },
+          {
+            "text": "A yellow insoluble coloring matter extracted from yellow flowers; specifically, the coloring matter of madder.",
+            "examples": []
+          },
+          {
+            "text": "One of the gaseous or volatile decomposition products of the xanthates, and probably identical with carbon disulphide.",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "etymology": "[Gr. xanqo`s yellow.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A type of purine obtainable as a white microcrystalline powder, C5H4O2N4, present in muscle tissue, in the liver, spleen, pancreas, and other organs, and also in urine (in small quantities) and some urinary calculi, and in the juices of certain plants; -- so called because it leaves a yellow residue when evaporated to dryness with nitric acid. It is also present in guano.  Xanthine is closely related to uric acid.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthinine": {
+    "entry": "xanthinine",
+    "pos": [
+      {
+        "etymology": "[Gr. xanqo`s yellow + quinine.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A complex nitrogenous substance related to urea and uric acid, produced as a white powder; -- so called because it forms yellow salts, and because its solution forms a blue fluorescence like quinine.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthium": {
+    "entry": "xanthium",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xa`nqion a plant used for dyeing the hair yellow, said to be the Xanthium strumarium, from xanqo`s yellow.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of composite plants in which the scales of the involucre are united so as to form a kind of bur; cocklebur; clotbur.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xantho-": {
+    "entry": "xantho-",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. karpo`s fruit.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "A combining form from Gr. xanqo`s yellow; as in xanthocobaltic salts. Used also adjectively in chemistry.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthocarpous": {
+    "entry": "xanthocarpous",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. karpo`s fruit.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Having yellow fruit.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthochroi": {
+    "entry": "xanthochroi",
+    "pos": [
+      {
+        "etymology": "[NL.  See Xanthochroic.]",
+        "part_of_speech": "n. pl.",
+        "definitions": [
+          {
+            "text": "A division of the Caucasian races, comprising the lighter-colored members.",
+            "examples": [
+              "The Xanthochroi, or fair whites, . . . are the prevalent inhabitants of Northern Europe, and the type may be traced into North Africa, and eastward as far as Hindostan."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "xanthochroic": {
+    "entry": "xanthochroic",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. chro`a color.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Having a yellowish or fair complexion; of or pertaining to the Xanthochroi.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthochroid": {
+    "entry": "xanthochroid",
+    "pos": [
+      {
+        "etymology": "[See under Xanthrochroic, -oid.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Having a yellowish or fair complexion.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthochroism": {
+    "entry": "xanthochroism",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. 'odoy`s, 'odo`ntos, tooth.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Abnormal coloration of feathers in which yellow replaces the normal color, as in certain parrots. It is commonly due to lack of the dark pigment which with yellow forms green.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthodontous": {
+    "entry": "xanthodontous",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. 'odoy`s, 'odo`ntos, tooth.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Having yellow teeth.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthogen": {
+    "entry": "xanthogen",
+    "pos": [
+      {
+        "etymology": "[Xantho- + -gen.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The hypothetical radical supposed to be characteristic of xanthic acid.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthogenate": {
+    "entry": "xanthogenate",
+    "pos": [
+      {
+        "etymology": "[See Xantho-, and -gen.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A salt of xanthic acid.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthogenic": {
+    "entry": "xanthogenic",
+    "pos": [
+      {
+        "etymology": "[See Xantho-, and -gen.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Producing a yellow color or compound; xanthic.  See Xanthic acid, under Xanthic.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthoma": {
+    "entry": "xanthoma",
+    "pos": [
+      {
+        "etymology": "[NL.  See Xantho-, and -oma.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A skin disease marked by the development or irregular yellowish patches upon the skin, especially upon the eyelids; -- called also xanthelasma.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthomatous": {
+    "entry": "xanthomatous",
+    "pos": [
+      {
+        "etymology": "[Pref. xantho- + Gr.  (Ethnol.) Of or pertaining to the lighter division of the Melanochroi, or those races having an olive or yellow complexion and black hair.Webster 1913 Suppl.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of or pertaining to xanthoma.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthomelanous": {
+    "entry": "xanthomelanous",
+    "pos": [
+      {
+        "etymology": "[Pref. xantho- + Gr.  (Ethnol.) Of or pertaining to the lighter division of the Melanochroi, or those races having an olive or yellow complexion and black hair.Webster 1913 Suppl.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of or pertaining to the lighter division of the Melanochroi, or those races having an olive or yellow complexion and black hair.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthophane": {
+    "entry": "xanthophane",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. fai`nein to show.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The yellow pigment present in the inner segments of the retina in animals.  See Chromophane.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthophyll": {
+    "entry": "xanthophyll",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. fy`llon leaf.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A yellow coloring matter found in yellow autumn leaves, and also produced artificially from chlorophyll; -- formerly called also phylloxanthin.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthopous": {
+    "entry": "xanthopous",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. poy`s, podo`s, foot.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Having a yellow stipe, or stem.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthoproteic": {
+    "entry": "xanthoproteic",
+    "pos": [
+      {
+        "etymology": "[Xantho- + protein.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Pertaining to, or derived from, xanthoprotein; showing the characters of xanthoprotein; as, xanthoproteic acid; the xanthoproteic reaction for albumin.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthoprotein": {
+    "entry": "xanthoprotein",
+    "pos": [
+      {
+        "etymology": "[Xantho- + protein.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A yellow acid substance formed by the action of hot nitric acid on albuminous or proteid matter. It is changed to a deep orange-yellow color by the addition of ammonia.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthopuccine": {
+    "entry": "xanthopuccine",
+    "pos": [
+      {
+        "etymology": "[Xantho- + puccoon + -ine.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "One of three alkaloids found in the root of the yellow puccoon (Hydrastis Canadensis). It is a yellow crystalline substance, and resembles berberine.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthorhamnin": {
+    "entry": "xanthorhamnin",
+    "pos": [
+      {
+        "etymology": "[Xantho- + NL. Rhamnus, the generic name of the plant bearing Persian berries.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A glucoside extracted from Persian berries as a yellow crystalline powder, used as a dyestuff.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthorhiza": {
+    "entry": "xanthorhiza",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xanqo`s yellow + \"ri`za root.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of shrubby ranunculaceous plants of North America, including only the species Xanthorhiza apiifolia, which has roots of a deep yellow color; yellowroot. The bark is intensely bitter, and is sometimes used as a tonic.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthorhoea": {
+    "entry": "xanthorhoea",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xanqo`s yellow + \"rei^n to flow.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of endogenous plants, native to Australia, having a thick, sometimes arborescent, stem, and long grasslike leaves.  See Grass tree.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthose": {
+    "entry": "xanthose",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xanqo`s yellow.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An orange-yellow substance found in pigment spots of certain crabs.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthosis": {
+    "entry": "xanthosis",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xanqo`s yellow.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The yellow discoloration often observed in cancerous tumors.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthospermous": {
+    "entry": "xanthospermous",
+    "pos": [
+      {
+        "etymology": "[Xantho- + Gr. spe`rma sperm.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Having yellow seeds.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthous": {
+    "entry": "xanthous",
+    "pos": [
+      {
+        "etymology": "[Gr. xanqo`s yellow.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Yellow; specifically (Ethnol.), of or pertaining to those races of man which have yellowish, red, auburn, or brown hair.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthoxylene": {
+    "entry": "xanthoxylene",
+    "pos": [
+      {
+        "etymology": "[See Xanthoxylum.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A liquid hydrocarbon of the terpene series extracted from the seeds of a Japanese prickly ash (Xanthoxylum pipertium) as an aromatic oil.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xanthoxylum": {
+    "entry": "xanthoxylum",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xanqo`s yellow + xy`lon wood.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of prickly shrubs or small trees, the bark and rots of which are of a deep yellow color; prickly ash.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xe": {
+    "entry": "xe",
+    "pos": [
+      {
+        "etymology": "[Sp. jabegue, formerly spelt xabeque, or Pg. xabeco; both from Turk. sumbeki a kind of Asiatic ship; cf. Per. sumbuk, Ar. sumb a small ship.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The chemical symbol for the chemical element xenon, having atomic number 54; it is one of the six noble gases.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xebec": {
+    "entry": "xebec",
+    "pos": [
+      {
+        "etymology": "[Sp. jabegue, formerly spelt xabeque, or Pg. xabeco; both from Turk. sumbeki a kind of Asiatic ship; cf. Per. sumbuk, Ar. sumb a small ship.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A small three-masted vessel, with projecting bow and stern and convex decks, used in the Mediterranean for transporting merchandise, etc.  It carries large square sails, or lateen sails, or both.  Xebecs were formerly armed and used by corsairs.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xeme": {
+    "entry": "xeme",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xenhlasi`a expulsion of strangers.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An Arctic fork-tailed gull (Xema Sabinii).",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenarthra": {
+    "entry": "xenarthra",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xenhlasi`a expulsion of strangers.]",
+        "part_of_speech": "prop. n.",
+        "definitions": [
+          {
+            "text": "The suborder of mammals including the armadillos, American anteaters, and sloths.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenelasia": {
+    "entry": "xenelasia",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xenhlasi`a expulsion of strangers.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A Spartan institution which prohibited strangers from residing in Sparta without permission, its object probably being to preserve the national simplicity of manners.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenicidae": {
+    "entry": "xenicidae",
+    "pos": [
+      {
+        "etymology": "[L., from Gr. xe`nion gift to a guest, fr. xe`nos guest.]",
+        "part_of_speech": "pr. n.",
+        "definitions": [
+          {
+            "text": "A natural family of birds comprising the New Zealand wrens, synonymous with Acanthisittidae.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenicus": {
+    "entry": "xenicus",
+    "pos": [
+      {
+        "etymology": "[L., from Gr. xe`nion gift to a guest, fr. xe`nos guest.]",
+        "part_of_speech": "pr. n.",
+        "definitions": [
+          {
+            "text": "The type genus for the bird family Xenicidae.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenium": {
+    "entry": "xenium",
+    "pos": [
+      {
+        "etymology": "[L., from Gr. xe`nion gift to a guest, fr. xe`nos guest.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A present given to a guest or stranger, or to a foreign ambassador.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenodochium": {
+    "entry": "xenodochium",
+    "pos": [
+      {
+        "etymology": "[LL., fr. L. xenodochium a building for the reception of strangers, Gr. xenodochei^on .]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A house for the reception of strangers.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenodochy": {
+    "entry": "xenodochy",
+    "pos": [
+      {
+        "etymology": "[Gr. xenodochi`a.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Reception of strangers; hospitality.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenon": {
+    "entry": "xenon",
+    "pos": [
+      {
+        "etymology": "[Gr. xe`non, neut. of xe`nos strange.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A very heavy, inert gaseous element of the noble gas group, occurring in the atmosphere in the proportion of one volume is about 20 millions.  It was discovered by Ramsay and Travers in 1898.  It can be condensed to a liquid boiling at -107Xe (formerly also X); atomic number 54; atomic weight 131.3.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenogamy": {
+    "entry": "xenogamy",
+    "pos": [
+      {
+        "etymology": "[Gr. xe`nos strange, foreign + ga`mos marriage.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Cross fertilization.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenogenesis": {
+    "entry": "xenogenesis",
+    "pos": [
+      {
+        "etymology": "[Gr. xe`nos a stranger + E. genesis.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Same as Heterogenesis.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenogenetic": {
+    "entry": "xenogenetic",
+    "pos": [
+      {
+        "etymology": "[Gr. xe`nos strange + E. mania.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of or pertaining to xenogenesis; as, the xenogenetic origin of microzymes.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenomania": {
+    "entry": "xenomania",
+    "pos": [
+      {
+        "etymology": "[Gr. xe`nos strange + E. mania.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A mania for, or an inordinate attachment to, foreign customs, institutions, manners, fashions, etc.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenomi": {
+    "entry": "xenomi",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xe`nos strange.]",
+        "part_of_speech": "prop. n. pl.",
+        "definitions": [
+          {
+            "text": "A suborder of soft-rayed fresh-water fishes of which the blackfish of Alaska (Dallia pectoralis) is the type.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenopterygii": {
+    "entry": "xenopterygii",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xe`nos strange +  (Zool.) A suborder of fishes including Gobiesox and allied genera. These fishes have soft-rayed fins, and a ventral sucker supported in front by the pectoral fins. They are destitute of scales.1913 Webster]",
+        "part_of_speech": "prop. n. pl.",
+        "definitions": [
+          {
+            "text": "A suborder of fishes including Gobiesox and allied genera. These fishes have soft-rayed fins, and a ventral sucker supported in front by the pectoral fins. They are destitute of scales.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenotime": {
+    "entry": "xenotime",
+    "pos": [
+      {
+        "etymology": "[Gr. xeno`timos honoring guests or strangers; xe`nos guest, stranger + timh` honor: cf. G. xenotim.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A native phosphate of yttrium occurring in yellowish-brown tetragonal crystals.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenurine": {
+    "entry": "xenurine",
+    "pos": [
+      {
+        "etymology": "[Gr. xe`nos strange + o'yra` tail.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A cabassou.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenyl": {
+    "entry": "xenyl",
+    "pos": [
+      {
+        "etymology": "[Gr. xe`nos strange + -yl.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The radical characteristic of xenylic compounds.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xenylic": {
+    "entry": "xenylic",
+    "pos": [
+      {
+        "etymology": "[Pg. xarafin, xerafin, fr. Ar. ashraf noble, the name of a gold coin.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Pertaining to, derived from, designating, certain amido compounds obtained by reducing certain nitro derivatives of diphenyl.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xeraphim": {
+    "entry": "xeraphim",
+    "pos": [
+      {
+        "etymology": "[Pg. xarafin, xerafin, fr. Ar. ashraf noble, the name of a gold coin.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An old money of account in Bombay, equal to three fifths of a rupee.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xeres": {
+    "entry": "xeres",
+    "pos": [
+      {
+        "etymology": "[See Shereef.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Sherry.  See Sherry.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerif": {
+    "entry": "xerif",
+    "pos": [
+      {
+        "etymology": "[See Shereef.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A shereef.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xeriff": {
+    "entry": "xeriff",
+    "pos": [
+      {
+        "etymology": "[See Shereef.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A gold coin formerly current in Egypt and Turkey, of the value of about  9s. 6d., or about $2.30 (ca. 1900); -- also, in Morocco, a ducat.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xeroderma": {
+    "entry": "xeroderma",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xhro`s dry + de`rma skin.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Ichthyosis.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xeronate": {
+    "entry": "xeronate",
+    "pos": [
+      {
+        "etymology": "[Gr. xhro`s dry + citraconic.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A salt of xeronic acid.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xeronic": {
+    "entry": "xeronic",
+    "pos": [
+      {
+        "etymology": "[Gr. xhro`s dry + citraconic.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Pertaining to, or designating, an acid, C8H12O4, related to fumaric acid, and obtained from citraconic acid as an oily substance having a bittersweet taste; -- so called from its tendency to form its anhydride.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerophagy": {
+    "entry": "xerophagy",
+    "pos": [
+      {
+        "etymology": "[L. xerophagia, Gr. xhro`s dry +  Among the primitive Christians, the living on a diet of dry food in Lent and on other fasts.1913 Webster]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Among the primitive Christians, the living on a diet of dry food in Lent and on other fasts.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerophilous": {
+    "entry": "xerophilous",
+    "pos": [
+      {
+        "etymology": "[Gr. xhro`s dry +  (Bot.) Drought-loving; able withstand the absence or lack of moisture.1913 Webster]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Drought-loving; able withstand the absence or lack of moisture.",
+            "examples": [
+              "Plants which are peculiarly adapted to dry climates are termed by De Candolle xerophilous."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "xerophthalmia": {
+    "entry": "xerophthalmia",
+    "pos": [
+      {
+        "etymology": "[L., fr. Gr. xhro`s dry + Ophthalmia.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An abnormal dryness of the eyeball produced usually by long-continued inflammation and subsequent atrophy of the conjunctiva.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerophthalmy": {
+    "entry": "xerophthalmy",
+    "pos": [
+      {
+        "etymology": "[Gr. xhro`s dry + fyto`n a plant.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Xerophthalmia.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerophyllum": {
+    "entry": "xerophyllum",
+    "pos": [
+      {
+        "etymology": "[Gr. xhro`s dry + fyto`n a plant.]",
+        "part_of_speech": "pr. n.",
+        "definitions": [
+          {
+            "text": "A small genus of North American herbs having grasslike basal leaves: squaw grass; sometimes placed in family Melanthiaceae.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerophyte": {
+    "entry": "xerophyte",
+    "pos": [
+      {
+        "etymology": "[Gr. xhro`s dry + fyto`n a plant.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A plant adapted for life with a limited supply of water; compare hydrophyte and mesophyte.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerophytic": {
+    "entry": "xerophytic",
+    "pos": [
+      {
+        "etymology": "[Gr. xhro`s dry + fyto`n a plant.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "Adapted to a xeric (or dry) environment; as, cacti are xerophytic plants; xerophytic adaptations.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xerox": {
+    "entry": "xerox",
+    "pos": [
+      {
+        "etymology": "[From a brand name of the Xerox corporation.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A copying machine which copies graphic matter by the action of light on an electrically charged photoconductive insulating surface in which the latent image is developed with a resinous powder.",
+            "examples": []
+          },
+          {
+            "text": "A copy made by the xerox process.",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "etymology": "[L., a swordfish, a sword-shaped comet, fr. Gr. xifi`as, fr. xi`fos a sword.]",
+        "part_of_speech": "v. t.",
+        "definitions": [
+          {
+            "text": "To copy a printed document on a xerographic device.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xi": {
+    "entry": "xi",
+    "pos": [
+      {
+        "etymology": "[L., a swordfish, a sword-shaped comet, fr. Gr. xifi`as, fr. xi`fos a sword.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number symbolizing the value eleven.  Used after a noun it may symbolize the ordinal number; as, Superbowl XI.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xian": {
+    "entry": "xian",
+    "pos": [
+      {
+        "etymology": "[L., a swordfish, a sword-shaped comet, fr. Gr. xifi`as, fr. xi`fos a sword.]",
+        "part_of_speech": "pr. n.",
+        "definitions": [
+          {
+            "text": "The capital of the ancient Chinese empire.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xii": {
+    "entry": "xii",
+    "pos": [
+      {
+        "etymology": "[L., a swordfish, a sword-shaped comet, fr. Gr. xifi`as, fr. xi`fos a sword.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number symbolizing the value twelve; denoting a quantity consisting of 12 items or units.   Used after a noun it may symbolize the ordinal number; as, Superbowl XII.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiii": {
+    "entry": "xiii",
+    "pos": [
+      {
+        "etymology": "[L., a swordfish, a sword-shaped comet, fr. Gr. xifi`as, fr. xi`fos a sword.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "the Roman number symbolizing the value thirteen.  Used after a noun it may symbolize the ordinal number; as, Superbowl XIII.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphias": {
+    "entry": "xiphias",
+    "pos": [
+      {
+        "etymology": "[L., a swordfish, a sword-shaped comet, fr. Gr. xifi`as, fr. xi`fos a sword.]",
+        "part_of_speech": "prop. n.",
+        "definitions": [
+          {
+            "text": "A genus of fishes comprising the common swordfish.",
+            "examples": []
+          },
+          {
+            "text": "The constellation Dorado.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphidium": {
+    "entry": "xiphidium",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xi`fos sword.]",
+        "part_of_speech": "prop. n.",
+        "definitions": [
+          {
+            "text": "A genus of plants of the order Haemodraceae, having two-ranked, sword-shaped leaves.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphioid": {
+    "entry": "xiphioid",
+    "pos": [
+      {
+        "etymology": "[Xiphius + -oid.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of, pertaining to, or resembling, a cetacean of the genus Xiphius or family Xiphiidae.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphiplastron": {
+    "entry": "xiphiplastron",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xi`fos a sword + plastron.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The posterior, or fourth, lateral plate in the plastron of turtles; -- called also xiphisternum.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphisternum": {
+    "entry": "xiphisternum",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xi`fos a sword + sternum.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The posterior segment, or extremity, of the sternum; -- sometimes called metasternum, ensiform cartilage, ensiform process, or xiphoid process.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphius": {
+    "entry": "xiphius",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xi`fos a sword.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of cetaceans having a long, pointed, bony beak, usually two tusklike teeth in the lower jaw, but no teeth in the upper jaw.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphodon": {
+    "entry": "xiphodon",
+    "pos": [
+      {
+        "etymology": "[Gr. xi`fos a sword + 'odoy`s, 'odo`ntos, a tooth.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An extinct genus of artiodactylous mammals found in the European Tertiary formations. It had slender legs, didactylous feet, and small canine teeth.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphoid": {
+    "entry": "xiphoid",
+    "pos": [
+      {
+        "etymology": "[Gr. xifoeidh`s sword-shaped; xi`fos a sword + e`i^dos form, shape: cf. F. xiphoide.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Like a sword; ensiform.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphoidian": {
+    "entry": "xiphoidian",
+    "pos": [
+      {
+        "etymology": "[Gr. xi`fos sword + fy`llon leaf.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Xiphoid.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphophyllous": {
+    "entry": "xiphophyllous",
+    "pos": [
+      {
+        "etymology": "[Gr. xi`fos sword + fy`llon leaf.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Having sword-shaped leaves.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphosura": {
+    "entry": "xiphosura",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xi`fos sword + o'yra` tail.]",
+        "part_of_speech": "n. pl.",
+        "definitions": [
+          {
+            "text": "See Xiphura.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xiphura": {
+    "entry": "xiphura",
+    "pos": [
+      {
+        "etymology": "[NL., from Gr. xi`fos sword + o'yra` tail.]",
+        "part_of_speech": "n. pl.",
+        "definitions": [
+          {
+            "text": "Same as Limuloidea. Called also Xiphosura.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xl": {
+    "entry": "xl",
+    "pos": [
+      {
+        "etymology": "[Belongs here in appearance only.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "the Roman number symbolizing the value forty.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xmas": {
+    "entry": "xmas",
+    "pos": [
+      {
+        "etymology": "[Belongs here in appearance only.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Christmas; -- an abbreviation for the Christian holiday celebrating the birth of Christ; a quarter day in England, Wales, and Ireland.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xp": {
+    "entry": "xp",
+    "pos": [
+      {
+        "etymology": "[Belongs here in appearance only.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "The first two letters of the Greek word CHRISTOS, Christ; -- an abbreviation used with the letters separate or, oftener, in a monogram, often inclosed in a circle, as a symbol or emblem of Christ. It use as an emblem was introduced by Constantine the Great, whence it is known as the Constantinian symbol, or monogram. See Labarum.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "x-rated": {
+    "entry": "x-rated",
+    "pos": [
+      {
+        "etymology": "[from a system of ratings for movies based on objectionableness of the content or suitability for children.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "having a rating of X; not suitable for children; broadly, obscene or sexually explicit.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "x-ray": {
+    "entry": "x-ray",
+    "pos": [
+      {
+        "etymology": "[so called by its discoverer because of its enigmatical character, x being an algebraic symbol for an unknown quantity.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Originally, any of the rays produced when cathode rays strike upon surface of a solid (as a copper target or the wall of the vacuum tube); now defined as electromagnetic radiation with a wavelength of 0.1 to 10 nanometers. X-rays are noted for their penetration of many opaque substances, as wood and flesh, their action on photographic plates, and their fluorescent effects. They were called X rays by their discoverer, W. K. R, but were also referred to for some time as Roentgen rays. The term X-ray has become the most common designation.  They also ionize gases, but cannot be reflected, or polarized, or deflected by a magnetic field.  They are used in examining objects opaque to visible light, as for imaging bones or other structures inside the human body, and for detecting flaws in metal objects, such as in welds.",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "v. t.",
+        "definitions": [
+          {
+            "text": "To examine by means of X-rays; to irradiate with X-rays.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "x-ray astronomy": {
+    "entry": "x-ray astronomy",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The branch of astronomy dealing with the study of astronomical objects which emit X-rays, and the methods used to detect such objects.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "x-ray tube": {
+    "entry": "x-ray tube",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A vacuum tube suitable for producing Roentgen rays.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xt": {
+    "entry": "xt",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An abbreviation for crosstalk, the presence of an unwanted signal via an accidental coupling.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xv": {
+    "entry": "xv",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number symbolizing the value fifteen.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xvi": {
+    "entry": "xvi",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number symbolizing the value sixteen.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xvii": {
+    "entry": "xvii",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number symbolizing the value seventeen.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xviii": {
+    "entry": "xviii",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number symbolizing the value eighteen.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xx": {
+    "entry": "xx",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty; denoting a quantity consisting of 20 items or units.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxi": {
+    "entry": "xxi",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-one.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxii": {
+    "entry": "xxii",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-two.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxiii": {
+    "entry": "xxiii",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-three.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxiv": {
+    "entry": "xxiv",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-four.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxix": {
+    "entry": "xxix",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-nine.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxv": {
+    "entry": "xxv",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-five.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxvi": {
+    "entry": "xxvi",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-six.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxvii": {
+    "entry": "xxvii",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-seven.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxviii": {
+    "entry": "xxviii",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing twenty-eight.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xxx": {
+    "entry": "xxx",
+    "pos": [
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "The Roman number representing thirty; -- in the postposition, designating the thirtieth in a series.",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "etymology": "[by reduplication of the \"X\" used in some movie-rating systems.]",
+        "part_of_speech": "adj.",
+        "definitions": [
+          {
+            "text": "Very obscene or pornographic.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylamide": {
+    "entry": "xylamide",
+    "pos": [
+      {
+        "etymology": "[Xylic + amide.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An acid amide derivative of xylic acid, obtained as a white crystalline substance.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylan": {
+    "entry": "xylan",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood + 'a`nqrax coal.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A gummy substance of the pentosan class, present in woody tissue, and yielding xylose on hydrolysis; wood gum.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylanthrax": {
+    "entry": "xylanthrax",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood + 'a`nqrax coal.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Wood coal, or charcoal; -- so called in distinction from mineral coal.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylaria": {
+    "entry": "xylaria",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "pr. n.",
+        "definitions": [
+          {
+            "text": "The type genus of the natural family Xylariaceae; fungi with perithecia in the upper part of erect black woody stromata.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylariaceae": {
+    "entry": "xylariaceae",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "pr. n.",
+        "definitions": [
+          {
+            "text": "A natural family of fungi characterized by dark brown to back spores.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylate": {
+    "entry": "xylate",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A salt of xylic acid.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylem": {
+    "entry": "xylem",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "That portion of a fibrovascular bundle which has developed, or will develop, into wood cells; -- distinguished from phloem.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylene": {
+    "entry": "xylene",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Any of a group of three metameric hydrocarbons of the aromatic series, found in coal and wood tar, and so named because found in crude wood spirit. They are colorless, oily, inflammable liquids, C6H4.(CH3)2, being dimethyl benzenes, and are called respectively orthoxylene, metaxylene, and paraxylene. Called also xylol.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylenol": {
+    "entry": "xylenol",
+    "pos": [
+      {
+        "etymology": "[Xylene + -ol.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Any one of six metameric phenol derivatives of xylene, obtained as crystalline substances, (CH3)2.C6H3.OH.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyletic": {
+    "entry": "xyletic",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Pertaining to, or designating, a complex acid related to mesitylenic acid, obtained as a white crystalline substance by the action of sodium and carbon dioxide on crude xylenol.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylic": {
+    "entry": "xylic",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Pertaining to, derived from, or related to, xylene; specifically, designating any one of several metameric acids produced by the partial oxidation of mesitylene and pseudo-cumene.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylidic": {
+    "entry": "xylidic",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Pertaining to, or designating, either one of two distinct acids which are derived from xylic acid and related compounds, and are metameric with uvitic acid.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylidine": {
+    "entry": "xylidine",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Any one of six metameric hydrocarbons, (CH3)2.C6H3.NH2, resembling aniline, and related to xylene. They are liquids, or easily fusible crystalline substances, of which three are derived from metaxylene, two from orthoxylene, and one from paraxylene. They are called the amido xylenes.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylindein": {
+    "entry": "xylindein",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A green or blue pigment produced by Peziza in certain kinds of decayed wood, as the beech, oak, birch, etc., and extracted as an amorphous powder resembling indigo.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylite": {
+    "entry": "xylite",
+    "pos": [
+      {
+        "etymology": "[Gr. xy`lon wood.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A liquid hydrocarbon found in crude wood spirits.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylitone": {
+    "entry": "xylitone",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xy`lon wood + ba`lsamon the balsam tree, balsam; cf. L. xylobalsamum balsam wood, Gr. xyloba`lsamon.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A yellow oil having a geraniumlike odor, produced as a side product in making phorone; -- called also xylite oil.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylo-": {
+    "entry": "xylo-",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xy`lon wood + ba`lsamon the balsam tree, balsam; cf. L. xylobalsamum balsam wood, Gr. xyloba`lsamon.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A combining form from Gr. xy`lon wood; as in xylogen, xylograph.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylobalsamum": {
+    "entry": "xylobalsamum",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xy`lon wood + ba`lsamon the balsam tree, balsam; cf. L. xylobalsamum balsam wood, Gr. xyloba`lsamon.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The dried twigs of a Syrian tree (Balsamodendron Gileadense).",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylocarpous": {
+    "entry": "xylocarpous",
+    "pos": [
+      {
+        "etymology": "[Xylo- + Gr. karpo`s fruit.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Bearing fruit which becomes hard or woody.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylocopa": {
+    "entry": "xylocopa",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xy`lon wood +  (Zool.) A genus of hymenopterous insects including the carpenter.  See Carpenter bee, under Carpenter.  -- Xy*loc\"o*pine (?), a.1913 Webster]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of hymenopterous insects including the carpenter.  See Carpenter bee, under Carpenter.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylogen": {
+    "entry": "xylogen",
+    "pos": [
+      {
+        "etymology": "[Xylo- + -gen.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Nascent wood; wood cells in a forming state.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylograph": {
+    "entry": "xylograph",
+    "pos": [
+      {
+        "etymology": "[Xylo- + -graph.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An engraving on wood, or the impression from such an engraving; a print by xylography.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylographer": {
+    "entry": "xylographer",
+    "pos": [
+      {
+        "etymology": "[Cf. F. xylographique.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "One who practices xylography.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylographical": {
+    "entry": "xylographical",
+    "pos": [
+      {
+        "etymology": "[Cf. F. xylographique.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of or pertaining to xylography, or wood engraving.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylography": {
+    "entry": "xylography",
+    "pos": [
+      {
+        "etymology": "[Xylo- + -graphy: cf. F. xylographie.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The art of engraving on wood.",
+            "examples": []
+          },
+          {
+            "text": "The art of making prints from the natural grain of wood.",
+            "examples": []
+          },
+          {
+            "text": "A method pf printing in colors upon wood for purposes of house decoration.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyloid": {
+    "entry": "xyloid",
+    "pos": [
+      {
+        "etymology": "[Xylo- + -oid.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Resembling wood; having the nature of wood.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyloidin": {
+    "entry": "xyloidin",
+    "pos": [
+      {
+        "etymology": "[Xylo- + -oid.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A substance resembling pyroxylin, obtained by the action of nitric acid on starch; -- called also nitramidin.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylol": {
+    "entry": "xylol",
+    "pos": [
+      {
+        "etymology": "[Xylo- + L. oleum oil.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Same as Xylene.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylology": {
+    "entry": "xylology",
+    "pos": [
+      {
+        "etymology": "[Pref. xylo- + -logy.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The branch of dendrology treating of the gross and minute structure of wood.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylonite": {
+    "entry": "xylonite",
+    "pos": [
+      {
+        "etymology": "[NL.  See Xylophagous.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "See Zylonite.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylophaga": {
+    "entry": "xylophaga",
+    "pos": [
+      {
+        "etymology": "[NL.  See Xylophagous.]",
+        "part_of_speech": "prop. n.",
+        "definitions": [
+          {
+            "text": "A genus of marine bivalves which bore holes in wood.  They are allied to Pholas.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylophagan": {
+    "entry": "xylophagan",
+    "pos": [
+      {
+        "etymology": "[See Xylophagous.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "One of a tribe of beetles whose larvae bore or live in wood.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylophagides": {
+    "entry": "xylophagides",
+    "pos": [
+      {
+        "etymology": "[See Xylophagous.]",
+        "part_of_speech": "prop. n. pl.",
+        "definitions": [
+          {
+            "text": "A tribe or family of dipterous flies whose larvae live in decayed wood. Some of the tropical species are very large.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylophagous": {
+    "entry": "xylophagous",
+    "pos": [
+      {
+        "etymology": "[Gr. xylofa`gos eating wood; xy`lon wood + fagei^n to eat.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Eating, boring in, or destroying, wood; -- said especially of certain insect larvae, crustaceans, and mollusks.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylophilan": {
+    "entry": "xylophilan",
+    "pos": [
+      {
+        "etymology": "[See Xylophilous.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "One of a tribe of beetles (Xylophili) whose larvae live on decayed wood.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylophilous": {
+    "entry": "xylophilous",
+    "pos": [
+      {
+        "etymology": "[Xylo- + Gr. filei^n to love.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of or pertaining to the xylophilans.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylophone": {
+    "entry": "xylophone",
+    "pos": [
+      {
+        "etymology": "[Xylo- + Gr. fwnh` sound.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Originally, an instrument common among the Russians, Poles, and Tartars, consisting of a series of strips of wood or glass graduated in length to the musical scale, resting on belts of straw, and struck with two small hammers; now any similar musical instrument composed of a series of bars of graduated length.  Called in Germany strohfiedel, or straw fiddle.",
+            "examples": []
+          },
+          {
+            "text": "An instrument to determine the vibrative properties of different kinds of wood.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyloplastic": {
+    "entry": "xyloplastic",
+    "pos": [
+      {
+        "etymology": "[Xylo- + -plastic.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Formed of wood pulp by molds; relating to casts made of wood pulp in molds.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylopyrography": {
+    "entry": "xylopyrography",
+    "pos": [
+      {
+        "etymology": "[Xylo- + Gr. -graphy.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "The art or practice of burning pictures on wood with a hot iron; -- called also wood burning and poker painting.  See Poker picture, under Poker.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyloquinone": {
+    "entry": "xyloquinone",
+    "pos": [
+      {
+        "etymology": "[Xylene + quinone.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Any one of a group of quinone compounds obtained respectively by the oxidation of certain xylidine compounds. In general they are yellow crystalline substances.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylorcin": {
+    "entry": "xylorcin",
+    "pos": [
+      {
+        "etymology": "[Xylene + orcin.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A derivative of xylene obtained as a white crystalline substance which on exposure in the air becomes red; -- called also betaorcin.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylose": {
+    "entry": "xylose",
+    "pos": [
+      {
+        "etymology": "[Pref. xylo- + -ose.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An unfermentable sugar of the pentose class, C5H10O5, formed by the hydrolysis of xylan; wood sugar.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylostein": {
+    "entry": "xylostein",
+    "pos": [
+      {
+        "etymology": "[Xylo- + Gr. 'oste`on bone.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A glucoside found in the poisonous berries of a species of honeysuckle (Lonicera xylosteum), and extracted as a bitter, white, crystalline substance.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylotile": {
+    "entry": "xylotile",
+    "pos": [
+      {
+        "etymology": "[Pref. xylo- + root of Gr. te`mnein to cut.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Same as Parkesine.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylotomist": {
+    "entry": "xylotomist",
+    "pos": [
+      {
+        "etymology": "[Pref. xylo- + root of Gr. te`mnein to cut.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "One versed or engaged in xylotomy.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylotomous": {
+    "entry": "xylotomous",
+    "pos": [
+      {
+        "etymology": "[Pref. xylo- + root of Gr. te`mnein to cut.]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Capable of boring or cutting wood; -- said of many insects.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylotomy": {
+    "entry": "xylotomy",
+    "pos": [
+      {
+        "etymology": "[Pref. xylo- + -tomy.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Art of preparing sections (transverse, tangential, or radial) of wood, esp. by means of a microtome, for microscopic examination.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylotrya": {
+    "entry": "xylotrya",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xy`lon wood +  (Zool.) A genus of marine bivalves closely allied to Teredo, and equally destructive to timber. One species (Xylotrya fimbriata) is very common on the Atlantic coast of the United States.1913 Webster]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of marine bivalves closely allied to Teredo, and equally destructive to timber. One species (Xylotrya fimbriata) is very common on the Atlantic coast of the United States.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylyl": {
+    "entry": "xylyl",
+    "pos": [
+      {
+        "etymology": "[Xylo- + -yl.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Any one of three metameric radicals which are characteristic respectively of the three xylenes.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xylylene": {
+    "entry": "xylylene",
+    "pos": [
+      {
+        "etymology": "[L., a kind of Iris, Gr.  (Bot.) A genus of endogenous herbs with grassy leaves and small yellow flowers in short, scaly-bracted spikes; yellow-eyed grass. There are about seventeen species in the Atlantic United States.1913 Webster]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "Any one of three metameric radicals, CH2.C6H4.CH2, derived respectively from the three xylenes. Often used adjectively; as, xylylene alcohol.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyridaceous": {
+    "entry": "xyridaceous",
+    "pos": [
+      {
+        "etymology": "[L., a kind of Iris, Gr.  (Bot.) A genus of endogenous herbs with grassy leaves and small yellow flowers in short, scaly-bracted spikes; yellow-eyed grass. There are about seventeen species in the Atlantic United States.1913 Webster]",
+        "part_of_speech": "a.",
+        "definitions": [
+          {
+            "text": "Of or pertaining to a natural order (Xyrideae) of endogenous plants, of which Xyris is the type.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyris": {
+    "entry": "xyris",
+    "pos": [
+      {
+        "etymology": "[L., a kind of Iris, Gr.  (Bot.) A genus of endogenous herbs with grassy leaves and small yellow flowers in short, scaly-bracted spikes; yellow-eyed grass. There are about seventeen species in the Atlantic United States.1913 Webster]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A genus of endogenous herbs with grassy leaves and small yellow flowers in short, scaly-bracted spikes; yellow-eyed grass. There are about seventeen species in the Atlantic United States.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xystus": {
+    "entry": "xystus",
+    "pos": [
+      {
+        "etymology": "[L. xystus, Gr.  (Anc. Arch.) A long and open portico, for athletic exercises, as wrestling, running, etc., for use in winter or in stormy weather.1913 Webster]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "A long and open portico, for athletic exercises, as wrestling, running, etc., for use in winter or in stormy weather.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xystarch": {
+    "entry": "xystarch",
+    "pos": [
+      {
+        "etymology": "[L. xystarches, Gr.  (Gr. Antiq.) An officer having the superintendence of the xyst. Dr. W. Smith.1913 Webster]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An officer having the superintendence of the xyst.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  },
+  "xyster": {
+    "entry": "xyster",
+    "pos": [
+      {
+        "etymology": "[NL., fr. Gr. xysth`r a scraper.]",
+        "part_of_speech": "n.",
+        "definitions": [
+          {
+            "text": "An instrument for scraping bones.",
+            "examples": []
+          }
+        ]
+      }
+    ]
+  }
+}

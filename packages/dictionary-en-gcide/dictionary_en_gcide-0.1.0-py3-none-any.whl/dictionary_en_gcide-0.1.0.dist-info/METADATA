@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dictionary_en_gcide
+Version: 0.1.0
+Summary: A Python module for english dictionary lookup, based on gcide
+Home-page: https://github.com/leafarlins/dictionary_en_gcide
+Author: Rafael Lins
+Author-email: leafarlins@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Dictionary Module
+
+A Python module for English dictionary lookups based on free dictionary GCIDE.
+
+## Installation
+
+```bash
+pip install dictionary_en_gcide
+```
+
+## Extraction of dictionary
+
+The dictionary was extracted using the script extract_dict.py and the files from the GCIDE project, available in https://gcide.gnu.org.ua/.
