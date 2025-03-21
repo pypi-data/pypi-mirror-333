@@ -1,0 +1,6 @@
+
+[dev]
+commitizen
+pre-commit
+pytest
+tox

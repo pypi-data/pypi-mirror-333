@@ -1,0 +1,13 @@
+.gitignore
+.pre-commit-config.yaml
+README.md
+pyproject.toml
+src/vec2_math/__init__.py
+src/vec2_math/py.typed
+src/vec2_math.egg-info/PKG-INFO
+src/vec2_math.egg-info/SOURCES.txt
+src/vec2_math.egg-info/dependency_links.txt
+src/vec2_math.egg-info/requires.txt
+src/vec2_math.egg-info/top_level.txt
+tests/__init__.py
+tests/test_vec2_math.py
