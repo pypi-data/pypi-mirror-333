@@ -1,0 +1,8 @@
+def test_{test_name}():
+    part_completed, error = load_stored_test_data()
+    if part_completed < {test_number}:
+    ### THIS LINE OF CODE RAISES ERRORS PREVIOUSLY ENCOUNTERED IN YOUR NOTEBOOK
+    ### SO IT IS NOT AN ERROR WITH THE GRADER, AND IS AN ERROR WITH YOUR CODE
+        raise error
+    else:
+        return

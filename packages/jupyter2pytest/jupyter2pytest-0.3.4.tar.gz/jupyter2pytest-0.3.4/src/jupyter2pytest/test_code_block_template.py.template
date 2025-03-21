@@ -1,0 +1,6 @@
+{assignment_code}
+if {argument} == "{test_part}" or {argument} == "all":
+{test_code}
+    if {argument} != "all":
+        return
+part_completed = part_completed + 1

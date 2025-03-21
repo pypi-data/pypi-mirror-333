@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/jupyter2pytest/__init__.py
+src/jupyter2pytest/__main__.py
+src/jupyter2pytest/compiler.py
+src/jupyter2pytest/extractor.py
+src/jupyter2pytest/test_code_block_template.py.template
+src/jupyter2pytest/test_file_template.py.template
+src/jupyter2pytest/test_function_template.py.template
+src/jupyter2pytest.egg-info/PKG-INFO
+src/jupyter2pytest.egg-info/SOURCES.txt
+src/jupyter2pytest.egg-info/dependency_links.txt
+src/jupyter2pytest.egg-info/requires.txt
+src/jupyter2pytest.egg-info/top_level.txt
