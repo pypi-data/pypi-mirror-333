@@ -1,0 +1,9 @@
+prefix=/private/var/folders/0j/bwqcs4y508s2n4ck4dhf3rpc0000gn/T/tmp_0v_kwbp/wheel/platlib
+exec_prefix=${prefix}
+
+Name: Eigen3
+Description: A C++ template library for linear algebra: vectors, matrices, and related algorithms
+Requires:
+Version: 3.4.0
+Libs:
+Cflags: -I${prefix}/include/eigen3
