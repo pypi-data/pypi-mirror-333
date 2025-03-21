@@ -1,0 +1,11 @@
+afterglowpy/__init__.py,sha256=3NIEf67KBbkWNXANhAN2QiXNp_1AlnNxVg8QirurRtk,2373
+afterglowpy/cocoon.py,sha256=ujvO-2RB4NXX1F0eR_k_XfUt8imVFwh87P_Sm12Ybf0,3516
+afterglowpy/flux.py,sha256=P8y8cUULQv4mSxovckPofWcpGyMxhE8uOpNwO8G-pW4,25792
+afterglowpy/jet.cpython-313-x86_64-linux-musl.so,sha256=P05ia77J2s-JxiAyLnM1uSHkRq9uT2eqCV25OfulUps,443648
+afterglowpy/shock.cpython-313-x86_64-linux-musl.so,sha256=rDA2V9-X0b10WKDCu0EduTt1yqCCqqzbInb2hwm5tbM,107456
+afterglowpy/version.py,sha256=pDew99C3fPiigff-J9BXw1aQQYYBonKsFRmpl2S5C_Y,92
+afterglowpy-0.8.1.dist-info/LICENSE.txt,sha256=Z_3cDjWe2-Xr3nEmVXjvvFqfrUnBNYfr9GIlvdeB7tk,1070
+afterglowpy-0.8.1.dist-info/METADATA,sha256=gQLmc7oYMrVic8IueNsl_wPtKG6ozm6KvS3kj3GAL24,6774
+afterglowpy-0.8.1.dist-info/WHEEL,sha256=PBqsX8FJMbAsCIgcJUeyDGVX0TyUInIW3zQKx2AY6iA,112
+afterglowpy-0.8.1.dist-info/top_level.txt,sha256=_r2fy90z9TrG1P60CBLWaw3ckuy5v_l-fjQZ2Q_cT6Y,12
+afterglowpy-0.8.1.dist-info/RECORD,,
