@@ -1,0 +1,41 @@
+[project]
+name = "chastack"
+version = "0.1.0"
+dependencies = [
+	"requests",
+	"zeep",
+	"xlsxwriter",
+	"pillow",
+	"flask",
+	"Flask-Caching",
+	"flask-cdn",
+	"flask-compress",
+	"flask-babel",
+	"Flask-Minify",
+	"google-api-python-client",
+	"google-auth-httplib2", 
+	"google-auth-oauthlib",
+	"sobrecargar",
+	"solteron",
+    "chastack-bdd",
+    "chastack-utiles-flask",
+    "chastack-utiles-google",
+]
+
+authors = [
+  { name="Hernán A.T.N.", email="herni@cajadeideas.ar" },
+  { name="Joaquín C.", email="correajoaquin7@gmail.com" },
+]
+
+readme = "README.md"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [
+    "chastack",
+
+]
