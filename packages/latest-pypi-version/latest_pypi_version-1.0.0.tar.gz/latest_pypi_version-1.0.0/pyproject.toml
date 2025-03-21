@@ -1,0 +1,63 @@
+[project]
+name = "latest-pypi-version"
+version = "1.0.0"
+description = "CLI tool to check the latest version of a PyPI package"
+authors = [{ name = "Roman Zydyk", email = "roman.zydyk@quantlane.com" }]
+readme = "README.md"
+requires-python = ">=3.12"
+package-mode = true
+packages = [{ include = "latest_pypi_version" }]
+dependencies = [
+    "typer (>=0.15.2,<0.16.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "rich (>=13.9.4,<14.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+latest-pypi-version = "latest_pypi_version.cli:app"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle
+    "F",     # Pyflakes
+    "B",     # flake8-bugbear
+    "SIM",   # flake8-simplify
+    "I",     # isort
+    "RUF",   # ruff
+    "LOG",   # flake8-logging
+    "ASYNC", # flake8-async
+    "S",     # flake8-bandit
+    "BLE",   # flake8-blind-except
+    "A",     # flake8-builtins
+    "C4",    # flake8-comprehensions
+    "FA",    # flake8-future-annotations
+    "ISC",   # flake8-implicit-str-concat
+    "ICN",   # flake8-import-conventions
+    "G",     # flake8-logging-format
+    "PIE",   # flake8-pie
+    "ERA",   # eradicate
+    "PL",    # pylint
+    "PERF",  # perflint
+    "T201",  # flake8-print
+]
+ignore = [
+    "TRY003", # long messages in exceptions
+    "S101",   # use of assert
+    "ISC001", # implicit concatenation of string on one line
+    "ERA001", # implicit concatenation of string on one line
+
+]
