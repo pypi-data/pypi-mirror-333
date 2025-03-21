@@ -1,0 +1,9 @@
+LICENCE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+elicito-0.4.1a1.dist-info/METADATA,sha256=oCrkRCEzbJaXGMzJhj_flpZG9sJmJpYWF8sjuahfg7s,9715
+elicito-0.4.1a1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+elicito-0.4.1a1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+elicito-0.4.1a1.dist-info/licenses/LICENCE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+elicito/__init__.py,sha256=cKqmkA03arDPx1d9UjZakjBildScNTUnoBnltBx7XDM,164
+elicito/operations.py,sha256=dhc67dRF2EqSgMSK2TbtQc7p0PyqFzseK1lrP1qCyO8,511
+elicito/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elicito-0.4.1a1.dist-info/RECORD,,
