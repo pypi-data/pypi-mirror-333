@@ -1,0 +1,10 @@
+pydbmanager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydbmanager/config.py,sha256=qtsoBb771hTE3UESNS1N6w8YT9-HVRVOWSbCwOesSHs,749
+pydbmanager/connection.py,sha256=o98-OOTfhsfBXhfZTd77DCpxfRubxruYmyMkxhf9MAY,1684
+pydbmanager/operations.py,sha256=o-S3DzRgyNUPRV-R-HtGhRiyVp-vLHYttIF2nbpPMQc,2277
+pydbmanager/utils.py,sha256=IViO2728prm7SdJNXMF5TnS4RoigK-_qdKI-m3cYVJo,1010
+pydbmanager-0.1.1.dist-info/LICENSE,sha256=NPgWijL80HwFVOqMq986uKnw31ntOZeamNMaH6mMpYU,1071
+pydbmanager-0.1.1.dist-info/METADATA,sha256=Z9bEIAgEEZqFWGq34zYziGfaPwvWsJdIMjydExsOtOM,6204
+pydbmanager-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+pydbmanager-0.1.1.dist-info/top_level.txt,sha256=DaxkelF7RS9pmpF2XP0X8o4fgqEgHaf1JeP1ZAo3guA,12
+pydbmanager-0.1.1.dist-info/RECORD,,
