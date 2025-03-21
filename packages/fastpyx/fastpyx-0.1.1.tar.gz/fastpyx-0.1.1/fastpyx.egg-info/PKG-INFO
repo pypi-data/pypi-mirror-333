@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: fastpyx
+Version: 0.1.1
+Summary: A fast memory optimization extension for Python
+Author: Mohammad Hasan Khoddami
+Author-email: mohammadh.khoddami@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# **FastPyX** 🚀  
+
+**FastPyX** is a **C extension** for Python designed to optimize **memory management** and improve overall performance.  
+
+## **Current Features**  
+- ⚡ Written in **C** for enhanced speed  
+- 🔹 Initial **memory optimization** implemented  
+- 🐍 Fully compatible with **Python 3.x**  
+
+## **Future Plans**  
+✅ Advanced memory management optimizations for **Django and other frameworks**  
+✅ Performance improvements for **lists, dictionaries, and other Python data structures**  
+✅ Stable release with extended functionality  
