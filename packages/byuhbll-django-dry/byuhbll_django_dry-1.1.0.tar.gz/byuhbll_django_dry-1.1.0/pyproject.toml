@@ -1,0 +1,155 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "byuhbll-django-dry"
+description = "Reduce duplication and boilerplate in Django apps."
+authors = [{ name = "BYU Library IT", email = "byulibraryit@byu.edu" }]
+readme = "README.md"
+requires-python = ">=3.8"
+license = "BSD-3-Clause"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.2",
+]
+dependencies = [
+    "byuhbll-configuro",
+    "colorlog",
+    "click",
+    "django-extensions >= 2.2.8",
+    "django-filter",
+    "django-hijack >= 3.0",
+    "Django",
+    "djangorestframework",
+    "mozilla-django-oidc",
+    "pytz",
+    "requests",
+    "whitenoise",
+]
+dynamic = ["version"]
+
+[dependency-groups]
+test = ["pytest", "pytest-cov", "pytest-django"]
+dev = [{ include-group = "test" }, "ruff"]
+
+[project.optional-dependencies]
+hbll = [
+    "byuhbll-person-client",
+    "byuhbll-emporio",
+]
+debug = ["django-debug-toolbar"]
+
+[tool.uv.sources]
+byuhbll-person-client = { index = "byuhbll", extra = "hbll" }
+byuhbll-emporio = { index = "byuhbll", extra = "hbll" }
+
+[[tool.uv.index]]
+name = "byuhbll"
+url = "https://pypi.lib.byu.edu"
+explicit = true
+
+[project.scripts]
+byuhbll-django-dry = "byuhbll_django_dry.scripts.cli:cli"
+
+[project.urls]
+Homepage = "https://gitlab.com/byuhbll/lib/python/django-dry"
+Source = "https://gitlab.com/byuhbll/lib/python/django-dry"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.sdist]
+exclude = [".*", "docs"]
+
+[tool.uv]
+package = false
+
+[tool.ruff.lint]
+select = [
+  "B",   # flake8-bugbear
+  "C90", # mccabe complexity
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "I",   # isort
+  "W",   # pycodestyle warnings
+]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 18
+
+[tool.ruff.lint.isort]
+known-first-party = ["byuhbll_django_dry"]
+combine-as-imports = true
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F403", "F405"]
+
+[tool.tox]
+requires = ["tox>=4.22"]
+env_list = [
+  "py38-django32",
+  "py310-django42",
+  "py312-django51",
+  "lint",
+  "coverage",
+]
+
+[tool.tox.env_run_base]
+runner = "uv-venv-lock-runner"
+dependency_groups = ["test"]
+extras = ["hbll"]
+setenv = { "COVERAGE_FILE" = "{envtmpdir}/.coverage" }
+commands = [["pytest", "--basetemp", "{envtmpdir}", "--cov", "byuhbll_django_dry"]]
+
+[tool.tox.env.lint]
+skip_install = true
+allowlist_externals = ["pre-commit"]
+deps = ["pre-commit-uv"]
+commands = [["pre-commit", "run", "--all-files", "--show-diff-on-failure"]]
+
+[tool.tox.env.coverage]
+skip_install = true
+allowlist_externals = ["sh"]
+dependency_groups = ["test"]
+commands = [
+    ["sh", "-c", "coverage combine $(find .tox/py3*/tmp -type f -name .coverage)"],
+    ["coverage", "report"],
+]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["byuhbll_django_dry"]
+omit = [
+  "byuhbll_django_dry/wsgi.py",
+	"byuhbll_django_dry/settings.py",
+  "byuhbll_django_dry/scripts/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 80
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "project.settings"
+python_files = "test_*.py"
+testpaths = ["tests"]

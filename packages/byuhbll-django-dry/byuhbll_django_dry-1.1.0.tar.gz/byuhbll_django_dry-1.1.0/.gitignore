@@ -1,0 +1,28 @@
+# ignore everything at the top level by default
+/*
+
+# allowed directories
+!/.devcontainer/
+!/byuhbll_django_dry/
+!/docs/
+!/tests/
+!/project/
+!/users/
+
+# allowed files
+!/.gitignore
+!/.gitlab-ci.yml
+!/.pre-commit-config.yaml
+!/application.yml
+!/LICENSE
+!/pyproject.toml
+!/README.md
+!/manage.py
+!/uv.lock
+
+# always ignore these files
+__pycache__
+.DS_Store
+.coverage
+*.map
+*.swp

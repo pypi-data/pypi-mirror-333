@@ -1,0 +1,19 @@
+extends: "project/application-base.yml"
+
+dry:
+  gitlab_issue_creation_email: 'test@example.com'
+
+oidc:
+  enabled: true
+  rp_client_id: placeholder
+  rp_client_secret: placeholder
+
+django:
+  debug: false
+  # databases:
+  #   default:
+  #     ENGINE: "django.db.backends.postgresql_psycopg2"
+  #     NAME: "example"
+  #     USER: "root"
+  #     PASSWORD: "asdf"
+  #     HOST: "postgres"

@@ -1,0 +1,7 @@
+dry:
+  project_slug: byuhbll_django_dry
+  project_identifier: byuhbll_django_dry
+
+django:
+  debug: true
+  secret_key: asdf

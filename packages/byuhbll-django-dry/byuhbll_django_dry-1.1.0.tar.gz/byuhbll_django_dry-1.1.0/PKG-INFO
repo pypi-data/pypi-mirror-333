@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: byuhbll-django-dry
+Version: 1.1.0
+Summary: Reduce duplication and boilerplate in Django apps.
+Project-URL: Homepage, https://gitlab.com/byuhbll/lib/python/django-dry
+Project-URL: Source, https://gitlab.com/byuhbll/lib/python/django-dry
+Author-email: BYU Library IT <byulibraryit@byu.edu>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Requires-Dist: byuhbll-configuro
+Requires-Dist: click
+Requires-Dist: colorlog
+Requires-Dist: django
+Requires-Dist: django-extensions>=2.2.8
+Requires-Dist: django-filter
+Requires-Dist: django-hijack>=3.0
+Requires-Dist: djangorestframework
+Requires-Dist: mozilla-django-oidc
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: whitenoise
+Provides-Extra: debug
+Requires-Dist: django-debug-toolbar; extra == 'debug'
+Provides-Extra: hbll
+Requires-Dist: byuhbll-emporio; extra == 'hbll'
+Requires-Dist: byuhbll-person-client; extra == 'hbll'
+Description-Content-Type: text/markdown
+
+# Django Dry
+
+Reduce duplication and boilerplate in Django apps. DRY stands for "Don't repeat yourself".
+
+This package is used by the Software Engineering team at the BYU Library.
+
+## Contributing to this project
+
+### Project development setup
+
+Follow these steps to setup your development environment:
+
+1. Clone the repository. Run `git clone git@gitlab.com:byuhbll/lib/python/django-dry.git`.
+2. Open the project in Visual Studio Code.
+3. Open the project in a devcontainer with the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+4. Contribute!
+
+This project uses [uv](https://docs.astral.sh/uv/) to manage dependencies.
+
+### Project documentation
+
+The [project's documentation](docs/index.md) can be found in the `docs` directory and is in markdown format.
+
+### Testing in this project
+
+Running `pytest` will run all unit tests.
+
+Unit tests can also be run using `tox`. Simply run `tox` on the command line and the unit tests should run for all supported versions of Python.
