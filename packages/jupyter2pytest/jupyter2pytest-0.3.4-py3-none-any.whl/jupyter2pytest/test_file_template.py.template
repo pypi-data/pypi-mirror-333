@@ -1,0 +1,32 @@
+import pytest
+import pickle
+from tblib import pickling_support
+pickling_support.install()
+
+part_completed = -1
+def {function_name}({argument_name}):
+    global part_completed
+{test_code}
+    raise Exception("All testcases passed")
+
+def load_stored_test_data():
+    with open("test_data.pkl", "rb") as f:
+        data = pickle.load(f)
+    part_completed, error = data["part_completed"], data["error"]
+    if error is not None:
+        error = error.value #Pytest stores error in the value field
+    return part_completed, error
+
+{test_functions}
+
+if __name__ == "__main__":
+    with pytest.raises(Exception) as e:
+        {function_name}("all")
+    if "All testcases passed" not in str(e.value):
+        json_data = {{ "part_completed": part_completed, "error": e }}
+        with open("test_data.pkl", "wb") as f:
+            pickle.dump(json_data, f)
+    else:
+        json_data = {{ "part_completed": part_completed, "error": None }}
+        with open("test_data.pkl", "wb") as f:
+            pickle.dump(json_data, f)

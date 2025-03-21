@@ -1,0 +1,12 @@
+jupyter2pytest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyter2pytest/__main__.py,sha256=CYXp3I9AKg_wSdSAncGYoj2DWZGYtY8JsXqgMM9x1VI,507
+jupyter2pytest/compiler.py,sha256=VtrnkMzjqsHemKQ66v07r5aGBaUrblgmZzJI5EJjuzk,2660
+jupyter2pytest/extractor.py,sha256=cw6z235gS6xzfYiysqg8kzOStk9s_VIRuNCYE8YhMDk,4517
+jupyter2pytest/test_code_block_template.py.template,sha256=weiRlwZMqf5AQmbp4zjTd5erxWJHS7r-VKtziCqZKcI,170
+jupyter2pytest/test_file_template.py.template,sha256=_DNibsGCcaitHEN1pSh5Q4uIIomIoPCQDZOd6nwbNKA,1052
+jupyter2pytest/test_function_template.py.template,sha256=WjwbAno6IGSBgijmKMyWVsG4v3gbF8MfkScNTM2sHT0,326
+jupyter2pytest-0.3.4.dist-info/LICENSE,sha256=Ex4cpl-uwCVfcmuzD7MqIK0kzTe0wRklwbhasBamHMU,1100
+jupyter2pytest-0.3.4.dist-info/METADATA,sha256=KNBPPcnBbM7ayD9itx1hZNZxby3Io9mURPnsEFWk6vc,2993
+jupyter2pytest-0.3.4.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+jupyter2pytest-0.3.4.dist-info/top_level.txt,sha256=vj6lLseP4NBc3lW5-fIyjgcoMysBNYJYV8LLO6_kFho,15
+jupyter2pytest-0.3.4.dist-info/RECORD,,
