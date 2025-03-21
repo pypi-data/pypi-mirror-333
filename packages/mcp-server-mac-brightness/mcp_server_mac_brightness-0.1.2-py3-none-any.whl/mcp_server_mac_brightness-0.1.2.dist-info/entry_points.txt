@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-mac-brightness = mcp_server_mac_brightness:main
