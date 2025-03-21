@@ -1,0 +1,168 @@
+Metadata-Version: 2.1
+Name: aurras
+Version: 0.1.0
+Summary: A high-end command line music player
+Home-page: https://github.com/vedant-asati03/Aurras
+License: MIT
+Keywords: music,player,audio,cli,terminal,youtube,spotify
+Author: vedant-asati03
+Author-email: vedant.asati03@gmail.com
+Requires-Python: >=3.12,<4.0.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Requires-Dist: PyYAML
+Requires-Dist: googletrans
+Requires-Dist: keyboard
+Requires-Dist: pillow
+Requires-Dist: prompt-toolkit
+Requires-Dist: questionary
+Requires-Dist: rich
+Requires-Dist: spotipy
+Requires-Dist: sqlitedict
+Requires-Dist: textual
+Requires-Dist: ytmusicapi
+Project-URL: Repository, https://github.com/vedant-asati03/Aurras
+Description-Content-Type: text/markdown
+
+# Aurras Music Player
+
+![Aurras](assests/aurras.png)
+
+**Aurras🎧** is a high-end **command line music player** that offers a seamless music experience directly in your terminal. It combines powerful search capabilities with an elegant interface, allowing you to play any song without leaving your command line.
+
+<div align="center">
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![MPV](https://img.shields.io/badge/player-mpv-orange)](https://mpv.io/)
+
+</div>
+
+## Table of Contents
+- [Features](#features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Usage Guide](#usage-guide)
+  - [Basic Commands](#basic-commands)
+  - [Command Shortcuts](#command-shortcuts)
+  - [Playlist Management](#playlist-management)
+  - [Spotify Integration](#spotify-integration)
+- [Project Structure](#project-structure)
+- [Technical Details](#technical-details)
+- [Development](#development)
+  - [Setup Development Environment](#setup-development-environment)
+  - [Testing](#testing)
+  - [Contributing](#contributing)
+- [Troubleshooting](#troubleshooting)
+- [Roadmap](#roadmap)
+- [License](#license)
+
+## Features
+
+* **Online Streaming** - Play any song directly without downloading
+* **Offline Playback** - Listen to your downloaded songs locally
+* **Smart Caching** - Searches local cache before making web requests for better performance
+* **Playlist Management** - Create, import, download and manage playlists
+* **Spotify Integration** - Import your Spotify playlists directly
+* **Command Shortcuts** - Quickly perform actions with intuitive shortcuts
+* **Lyrics Display** - View song lyrics while playing
+* **Auto-completion** - Smart song and playlist name suggestions
+* **Song Recommendations** - Get personalized song recommendations
+* **Backup & Restore** - Automatic backup of your preferences and playlists
+* **Flexible Configuration** - Customize settings through YAML configuration files
+
+## Architecture
+
+Aurras is designed with a modular architecture, separating concerns into distinct layers:
+
+## Installation
+
+1. Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+2. Install FFmpeg (required for audio playback):
+```
+# Windows (using Chocolatey)
+choco install ffmpeg
+
+# Windows (using Scoop)
+scoop install ffmpeg
+
+# Linux
+sudo apt install ffmpeg  # Debian/Ubuntu
+sudo pacman -S ffmpeg    # Arch Linux
+sudo dnf install ffmpeg  # Fedora
+```
+
+3. Run Aurras:
+```
+python -m aurras.cli
+```
+
+## Usage Guide
+
+### Basic Commands
+
+### Command Shortcuts
+
+Aurras offers convenient shortcuts to quickly perform common actions:
+
+* `d, song1, song2, ...` - Download multiple songs
+* `dp, playlist_name` - Download a specific playlist
+* `pn, playlist_name` - Play a saved playlist online
+* `pf, playlist_name` - Play a downloaded playlist offline
+* `rs, playlist_name` - Remove a saved playlist
+* `rd, playlist_name` - Remove a downloaded playlist
+
+### Playlist Management
+
+### Spotify Integration
+
+Aurras can connect to your Spotify account to import playlists. When first using Spotify features, you'll be prompted to authenticate and provide your API credentials.
+
+1. Create a Spotify Developer account: https://developer.spotify.com/dashboard/
+2. Create an application to obtain your client ID and secret
+3. Set the redirect URI to `http://localhost:8888/callback`
+4. Enter these credentials when prompted by Aurras
+
+## Project Structure
+
+```
+aurras/
+├── core/           # Core functionality and settings
+├── player/         # Playback functionality (online and offline)
+├── playlist/       # Playlist management
+├── services/       # External service integrations
+│   ├── spotify/    # Spotify API integration
+│   └── youtube/    # YouTube search and streaming
+├── ui/             # User interface components
+└── utils/          # Utility functions and helpers
+```
+
+## Technical Details
+
+## Development
+
+### Setup Development Environment
+
+### Testing
+
+### Contributing
+
+## Troubleshooting
+
+## Roadmap
+
+## License
+
+MIT License - See LICENSE.txt for details
