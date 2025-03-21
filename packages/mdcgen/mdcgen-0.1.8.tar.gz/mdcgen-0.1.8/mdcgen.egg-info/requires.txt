@@ -1,0 +1,10 @@
+matplotlib
+networkx
+gitpython
+pydantic
+astroid
+click
+litellm
+
+[visualization]
+pygraphviz
