@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: chastack-utiles-flask
+Version: 0.1.4
+Home-page: https://github.com/Hernanatn/utiles_google
+Author: Hernán A. Teszkiewicz Novick
+Author-email: "Hernán A.T.N." <herni@cajadeideas.ar>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: zeep
+Requires-Dist: xlsxwriter
+Requires-Dist: pillow
+Requires-Dist: flask
+Requires-Dist: Flask-Caching
+Requires-Dist: flask-cdn
+Requires-Dist: flask-compress
+Requires-Dist: flask-babel
+Requires-Dist: Flask-Minify
+Requires-Dist: sobrecargar
+Requires-Dist: solteron
+Dynamic: author
+Dynamic: home-page
