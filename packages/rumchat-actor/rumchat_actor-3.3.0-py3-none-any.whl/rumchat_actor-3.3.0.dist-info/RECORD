@@ -1,0 +1,10 @@
+rumchat_actor/__init__.py,sha256=DZXY3V0DN456kDN1fE3lFhQIgZOfdoQdQnk7Sqdl8TU,19217
+rumchat_actor/actions.py,sha256=RH89vWaVikk0ntedpIXGzWPskPcD-s-e8Ew8xVEJQx8,9317
+rumchat_actor/commands.py,sha256=iDw4OoCCMf18JR61ux9sOuZ2HX497D7uHuRvNXzfUn0,48024
+rumchat_actor/misc.py,sha256=5XAu-FBvDlpQdQk1slvtkyZ4JiiMCQ8pX9agHnNh894,4421
+rumchat_actor/static.py,sha256=6pem_IaO5zkv9v4PLplgLr-hnmUaiMdW8OtzqXfg9GQ,5511
+rumchat_actor/utils.py,sha256=JL8ZkoICcfDPLf5fp8TJ7muEQAhRy2iqRMGlcCfIZRw,1191
+rumchat_actor-3.3.0.dist-info/METADATA,sha256=e3LXfNgC2_IrWcDBpZqLXHGZQEgij7ADOTAFyAs0D7g,5073
+rumchat_actor-3.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+rumchat_actor-3.3.0.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+rumchat_actor-3.3.0.dist-info/RECORD,,
