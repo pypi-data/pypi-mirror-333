@@ -1,0 +1,12 @@
+LICENSE
+pyproject.toml
+setup.py
+chastack_utiles_flask/__init__.py
+chastack_utiles_flask/imagenes.py
+chastack_utiles_flask/ruteo.py
+chastack_utiles_flask/texto.py
+chastack_utiles_flask.egg-info/PKG-INFO
+chastack_utiles_flask.egg-info/SOURCES.txt
+chastack_utiles_flask.egg-info/dependency_links.txt
+chastack_utiles_flask.egg-info/requires.txt
+chastack_utiles_flask.egg-info/top_level.txt

@@ -1,0 +1,33 @@
+[project]
+name = "chastack-utiles-flask"
+version = "0.1.3"
+dependencies = [
+	"requests",
+	"zeep",
+	"xlsxwriter",
+	"pillow",
+	"flask",
+	"Flask-Caching",
+	"flask-cdn",
+	"flask-compress",
+	"flask-babel",
+	"Flask-Minify",
+	"sobrecargar",
+	"solteron"
+]
+
+authors = [
+  { name="Hernán A.T.N.", email="herni@cajadeideas.ar" },
+]
+
+readme = "README.md"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [
+    "chastack_utiles_flask"
+]
