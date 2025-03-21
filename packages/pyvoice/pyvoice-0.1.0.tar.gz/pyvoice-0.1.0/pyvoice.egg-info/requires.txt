@@ -1,0 +1,6 @@
+numpy
+sounddevice
+librosa
+faster-whisper
+PyQt6
+pyqtgraph

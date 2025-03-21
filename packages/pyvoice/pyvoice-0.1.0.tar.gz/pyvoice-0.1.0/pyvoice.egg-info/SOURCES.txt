@@ -1,0 +1,9 @@
+README.md
+setup.py
+voice.py
+pyvoice.egg-info/PKG-INFO
+pyvoice.egg-info/SOURCES.txt
+pyvoice.egg-info/dependency_links.txt
+pyvoice.egg-info/entry_points.txt
+pyvoice.egg-info/requires.txt
+pyvoice.egg-info/top_level.txt
