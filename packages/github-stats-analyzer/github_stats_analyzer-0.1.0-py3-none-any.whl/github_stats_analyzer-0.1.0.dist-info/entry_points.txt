@@ -1,0 +1,2 @@
+[console_scripts]
+github-stats = github_stats_analyzer.main:main
