@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /builds/va-ois/ad-hoc-request/emass-api-client/pjdev-va-ois-emass-api-client
+configfile: pyproject.toml
+plugins: anyio-4.8.0
+collecting ... collected 46 items
+
+tests/tests_for_validators.py::test_make_bool_validator[true_values0-None-False] PASSED [  2%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values1-None-False] PASSED [  4%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values2-1-True] PASSED [  6%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values3-0-False] PASSED [  8%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values4-abasdlg-False] PASSED [ 10%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values5-input_value5-False] PASSED [ 13%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values6-input_value6-False] PASSED [ 15%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values7-True-True] PASSED [ 17%]
+tests/tests_for_validators.py::test_make_bool_validator[true_values8-False-False] PASSED [ 19%]
+tests/tests_for_validators.py::test_make_object_id_validator[2345|4356-2345] PASSED [ 21%]
+tests/tests_for_validators.py::test_make_object_id_validator[2345 | 4356-2345] PASSED [ 23%]
+tests/tests_for_validators.py::test_make_object_id_validator[None-None] PASSED [ 26%]
+tests/tests_for_validators.py::test_make_object_id_validator[5645-5645] PASSED [ 28%]
+tests/tests_for_validators.py::test_make_object_id_validator[5645.98-5645] PASSED [ 30%]
+tests/tests_for_validators.py::test_make_object_id_validator[a random value-None] PASSED [ 32%]
+tests/tests_for_validators.py::test_make_object_id_validator[a random value 9847 and ntoaser 8473-9847] PASSED [ 34%]
+tests/tests_for_validators.py::test_BoolType[None-False] PASSED          [ 36%]
+tests/tests_for_validators.py::test_BoolType[1-True] PASSED              [ 39%]
+tests/tests_for_validators.py::test_BoolType[2-False] PASSED             [ 41%]
+tests/tests_for_validators.py::test_BoolType[0-False] PASSED             [ 43%]
+tests/tests_for_validators.py::test_BoolType[YES-True] PASSED            [ 45%]
+tests/tests_for_validators.py::test_BoolType[yES-True] PASSED            [ 47%]
+tests/tests_for_validators.py::test_BoolType[true-True] PASSED           [ 50%]
+tests/tests_for_validators.py::test_BoolType[True-True] PASSED           [ 52%]
+tests/tests_for_validators.py::test_BoolType[TRUE-True] PASSED           [ 54%]
+tests/tests_for_validators.py::test_BoolType[truee-False] PASSED         [ 56%]
+tests/tests_for_validators.py::test_date_validator[None-None0] PASSED    [ 58%]
+tests/tests_for_validators.py::test_date_validator[05-Jan-2024-expected_result1] PASSED [ 60%]
+tests/tests_for_validators.py::test_date_validator[06-Apr-2023-expected_result2] PASSED [ 63%]
+tests/tests_for_validators.py::test_date_validator[-None] PASSED         [ 65%]
+tests/tests_for_validators.py::test_date_validator[--None] PASSED        [ 67%]
+tests/tests_for_validators.py::test_date_validator[   -None] PASSED      [ 69%]
+tests/tests_for_validators.py::test_date_validator[input_value6-expected_result6] PASSED [ 71%]
+tests/tests_for_validators.py::test_date_validator[input_value7-expected_result7] PASSED [ 73%]
+tests/tests_for_validators.py::test_date_validator[1/5/24-expected_result8] PASSED [ 76%]
+tests/tests_for_validators.py::test_date_validator[01/05/2024-expected_result9] PASSED [ 78%]
+tests/tests_for_validators.py::test_date_validator[1660667933-expected_result10] PASSED [ 80%]
+tests/tests_for_validators.py::test_date_validator[1660667933.0-expected_result11] PASSED [ 82%]
+tests/tests_for_validators.py::test_date_validator[1660667933.045-expected_result12] PASSED [ 84%]
+tests/tests_for_validators.py::test_date_validator[None-None1] PASSED    [ 86%]
+tests/tests_for_validators.py::test_date_validator[input_value14-None] PASSED [ 89%]
+tests/tests_for_validators.py::test_date_validator[test-None] PASSED     [ 91%]
+tests/tests_for_validators.py::test_date_validator[<NA>-None] PASSED     [ 93%]
+tests/tests_for_validators.py::test_date_validator[1660667933-expected_result17] PASSED [ 95%]
+tests/tests_for_validators.py::test_date_validator[Unspecified-None] PASSED [ 97%]
+tests/tests_for_validators.py::test_FismaInventory_validation PASSED     [100%]
+
+============================== 46 passed in 0.26s ==============================
