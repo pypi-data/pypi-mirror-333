@@ -1,0 +1,61 @@
+name: Install and test Python package
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+# Cancel currently running job if a new one comes along for the same branch or tag.
+# From https://stackoverflow.com/a/72408109.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  pre-commit:
+    name: Pre-commit checks
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - uses: pre-commit/action@v3.0.1
+
+  tests:
+    name: Install and run tests
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+            os: [ubuntu-22.04, ubuntu-24.04, macos-14]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install required packages for MacOS
+        if: ${{ contains(matrix.os, 'macos') }}
+        run: |
+          brew install gcc cmake ninja libomp netcdf-cxx eigen nlohmann-json protobuf lapack git open-mpi
+      - name: Install required packages for Ubuntu
+        if: ${{ contains(matrix.os, 'ubuntu') }}
+        run: |
+          # install VMEC++ deps as well as VMEC2000 deps (we need to import VMEC2000 in a test)
+          sudo apt-get update && sudo apt-get install libnetcdf-dev liblapack-dev libopenmpi-dev libeigen3-dev nlohmann-json3-dev libhdf5-dev libnetcdff-dev libscalapack-openmpi-dev libopenblas-dev
+      - name: Also install VMEC2000 (only on Ubuntu 22.04)
+        if: ${{ matrix.os == 'ubuntu-22.04' }}
+        run: |
+          # mpi4py is needed for VMEC2000
+          python -m pip install mpi4py
+          # custom wheel for VMEC2000, needed for some VMEC++/VMEC2000 compatibility tests
+          # NOTE: this wheel is only guaranteed to work on Ubuntu 22.04
+          python -m pip install vmec@https://anaconda.org/eguiraud-pf/vmec/0.0.6/download/vmec-0.0.6-cp310-cp310-linux_x86_64.whl
+      - name: Install package
+        run: |
+          # on Ubuntu we would not need this, but on MacOS we need to point CMake to gfortran-14 and gcc-14
+          export FC=$(which gfortran-14 || which gfortran)
+          export CC=$(which gcc-14 || which gcc)
+          python -m pip install -v .[test,MPI]
+      - name: Test package
+        run: python -m pytest tests/

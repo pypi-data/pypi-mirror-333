@@ -1,0 +1,176 @@
+name: Publish wheels to PyPI
+
+on:
+  # allows running workflows manually
+  workflow_dispatch:
+
+  release:
+    types: [published]
+
+jobs:
+  main:
+    name: Build wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # ubuntu-24.04-arm not supported due to lack of netcdf-devel hdf5-devel
+        os: [ubuntu-24.04, macos-13, macos-14]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.23.0
+        # All the settings for cibuildwheel are in pyproject.toml
+        env:
+          CIBW_ENVIRONMENT_MACOS: >
+            MACOSX_DEPLOYMENT_TARGET=${{ matrix.os == 'macos-14' && '14.0' || '13.0' }}
+            DYLD_LIBRARY_PATH=/usr/local/opt/gcc/lib/gcc/current/:$DYLD_LIBRARY_PATH
+            FC=gfortran-14
+            HDF5_ROOT=$(brew --prefix hdf5)
+        with:
+          package-dir: .
+          output-dir: wheelhouse
+          config-file: "{package}/pyproject.toml"
+
+      - name: Upload wheels
+        uses: actions/upload-artifact@v4
+        with:
+          name: vmecpp-wheels-${{ matrix.os }}
+          path: ./wheelhouse/*.whl
+
+  make-sdist:
+    name: Make SDist
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build SDist
+      run: pipx run build --sdist
+
+    - name: Move Files
+      run: mv dist wheelhouse
+
+    - name: Upload SDist
+      uses: actions/upload-artifact@v4
+      with:
+        name: vmecpp-sdist
+        path: ./wheelhouse/*.tar.gz
+
+  test-on-different-distros:
+    name: Test Linux distros
+    needs: main
+    strategy:
+      fail-fast: false
+      matrix:
+        distro:
+          [
+            "ubuntu:24.04",
+            "ubuntu:22.04",
+            "archlinux/archlinux",
+            "debian:12",
+            "debian:testing-20250224",
+            "fedora:41",
+          ]
+        test-mpi: [ true, false ]
+    runs-on: ubuntu-24.04
+    container: ${{ matrix.distro }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Python (Distro-Specific)
+        run: |
+          case ${{ matrix.distro }} in
+            ubuntu*|debian*)
+              apt update
+              apt install -y python3-venv
+              ;;
+            fedora*)
+              dnf -y update && dnf clean all
+              dnf -y install python-pip
+              ;;
+            archlinux*)
+              pacman -Sy --noconfirm python-pip
+              ;;
+            *)
+              echo "Unsupported distribution: ${{ matrix.distro }}"
+              exit 1
+              ;;
+          esac
+
+          python3 -m venv venv
+
+      - name: Install OpenMPI (Distro-Specific)
+        if: matrix.test-mpi
+        # mpi4py is a dependency of simsopt and needs a system-wide MPI installation to compile.
+        # This requires both a working OpenMPI installation and Python.h headers.
+        run: |
+          case ${{ matrix.distro }} in
+            ubuntu*|debian*)
+              apt install -y openmpi-bin libopenmpi-dev python3-dev
+              ;;
+            fedora*)
+              dnf install -y openmpi openmpi-devel python-devel
+              ;;
+            archlinux*)
+              pacman -Sy --noconfirm gcc openmpi
+              ;;
+            *)
+              echo "Unsupported distribution: ${{ matrix.distro }}"
+              exit 1
+              ;;
+          esac
+      - name: Download wheels artifact
+        uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+          path: ./wheelhouse/
+      - name: Install wheel
+        # Install the appropriate file for vmecpp from the wheelhouse directory.
+        # --no-index prevents installing from PyPi, so we don't accidentally install
+        # a published version instead of the newly built ones. At the same time it prevents
+        # loading dependencies from PyPi, so the first installation fails. We only use the console output
+        # from this command to get the appropriate .whl file for this platform and environment.
+        run: |
+          ls wheelhouse/
+
+          . venv/bin/activate
+          wheel_filename=$(find wheelhouse/$(python --version | awk '{print $2}' | awk -F. '{printf "vmecpp*-cp%s%s-*manylinux*.whl", $1, $2}'))
+          echo "Found matching wheel: $wheel_filename"
+          if [ ${{ matrix.test-mpi }} = true ]; then
+            # Fedora linux needs to source openmpi in every new shell
+            if [[ ${{ matrix.distro }} = fedora* ]]; then
+              . /etc/profile.d/modules.sh
+              module load mpi/openmpi-x86_64
+            fi
+
+            pip install mpi4py
+          fi
+          pip install $wheel_filename
+
+          pip install pytest
+          python -m pytest tests/
+
+
+  pypi-publish:
+    name: Publish wheels to PyPI
+    if: github.event_name == 'release'
+    needs: [main, make-sdist, test-on-different-distros]
+    runs-on: ubuntu-24.04
+    environment:
+        name: pypi
+    permissions:
+        id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist/
+          merge-multiple: true
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
