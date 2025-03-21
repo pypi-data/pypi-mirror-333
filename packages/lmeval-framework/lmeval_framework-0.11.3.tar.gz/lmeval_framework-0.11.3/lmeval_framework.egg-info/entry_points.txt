@@ -1,0 +1,2 @@
+[console_scripts]
+lmevalboard = lmeval.cli.evalboard:main
