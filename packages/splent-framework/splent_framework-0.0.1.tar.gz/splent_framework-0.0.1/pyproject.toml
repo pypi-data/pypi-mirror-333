@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splent_framework"
+version = "0.0.1"
+description = "SPLENT-FRAMEWORK is a set of libraries for agile product development within SPLENT."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "David Romero", email = "drorganvidez@us.es" }]
+license = { file = "LICENSE" }
+dependencies = [
+    "click",
+    "python-dotenv",
+    "sqlalchemy",
+    "flask_sqlalchemy",
+    "flask_migrate",
+    "flask_session",
+    "flask_mail",
+    "flask_login",
+    "flask_wtf",
+    "redis",
+    "pymysql",
+    "docker",
+    "psutil",
+    "pytz",
+    "pytest",
+    "pytest-cov",
+    "selenium",
+    "webdriver_manager"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["splent_framework*"]
+
+[project.urls]
+Homepage = "https://github.com/diverso-lab/splent_framework"
+Issues = "https://github.com/diverso-lab/splent_framework/issues"
