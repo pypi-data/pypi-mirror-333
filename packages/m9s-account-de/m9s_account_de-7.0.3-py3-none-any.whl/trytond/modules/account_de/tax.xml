@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+  <data>
+        <record model="ir.action.report" id="report_account_tax_code_statement">
+            <field name="name">Advance Turnover Tax Return</field>
+            <field name="records">listed</field>
+            <field name="model">account.tax.code</field>
+            <field name="report_name">account.tax.code.statement</field>
+            <field name="report">account_de/tax_code_statement.fodt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_account_tax_code_statement_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">account.tax.code,-1</field>
+            <field name="action" ref="report_account_tax_code_statement"/>
+        </record>
+  </data>
+</tryton>
