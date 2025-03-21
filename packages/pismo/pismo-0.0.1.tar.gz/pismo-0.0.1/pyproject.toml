@@ -1,0 +1,22 @@
+[project]
+name = "pismo"
+version = "0.0.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "rocketniko", email = "rocketniko@pm.me" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+pismo = "pismo:main"
+
+[tool.maturin]
+module-name = "pismo._core"
+python-packages = ["pismo"]
+python-source = "src"
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"

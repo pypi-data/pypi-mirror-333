@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: pismo
+Version: 0.0.1
+License-File: LICENSE
+Summary: Add your description here
+Author-email: rocketniko <rocketniko@pm.me>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+
