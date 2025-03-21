@@ -1,0 +1,122 @@
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-02-26 20:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plonegovbr.brfields\n"
+
+#: plonegovbr/brfields/profiles/demo/types/DemoContent.xml
+msgid "A demo content showcasing all available fields."
+msgstr ""
+
+#: plonegovbr/brfields/profiles.zcml:22
+msgid "Brazilian Fields for Dexterity and Volto: Example content"
+msgstr ""
+
+#: plonegovbr/brfields/profiles.zcml:13
+msgid "Brazilian Fields for Dexterity and Volto: Install"
+msgstr ""
+
+#: plonegovbr/brfields/profiles.zcml:30
+msgid "Brazilian Fields for Dexterity and Volto: Uninstall"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:53
+msgid "CEP"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:29
+msgid "CNPJ"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:35
+msgid "CPF"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:59
+msgid "Contato"
+msgstr ""
+
+#: plonegovbr/brfields/profiles.zcml:22
+msgid "Create example content to showcase the new website"
+msgstr ""
+
+#: plonegovbr/brfields/profiles/demo/types/DemoContent.xml
+msgid "DemoContent"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:23
+msgid "Descrição"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:24
+msgid "Descrição desse conteúdo."
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:42
+msgid "Endereço"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:49
+msgid "Estado"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:70
+msgid "Fax"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:30
+msgid "Informar o CNPJ"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:36
+msgid "Informar o CPF"
+msgstr ""
+
+#: plonegovbr/brfields/fields/cep.py:15
+msgid "O CEP informado não é válido."
+msgstr ""
+
+#: plonegovbr/brfields/fields/cnpj.py:15
+msgid "O CNPJ informado não é válido."
+msgstr ""
+
+#: plonegovbr/brfields/fields/cpf.py:15
+msgid "O CPF informado não é válido."
+msgstr ""
+
+#: plonegovbr/brfields/fields/fone.py:15
+msgid "O Telefone informado não é válido."
+msgstr ""
+
+#: plonegovbr/brfields/profiles.zcml:13
+msgid "Package to configure a new Brazilian Fields for Dexterity and Volto site"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:66
+msgid "Telefone"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:18
+msgid "Título"
+msgstr ""
+
+#: plonegovbr/brfields/content/demo.py:19
+msgid "Título desse conteúdo."
+msgstr ""
+
+#: plonegovbr/brfields/profiles.zcml:30
+msgid "Uninstall Brazilian Fields for Dexterity and Volto setup."
+msgstr ""

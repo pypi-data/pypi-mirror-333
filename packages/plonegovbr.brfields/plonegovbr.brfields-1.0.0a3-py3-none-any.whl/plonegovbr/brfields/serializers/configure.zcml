@@ -1,0 +1,10 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Serializers -->
+
+  <adapter factory=".fields.CNPJJsonSchemaProvider" />
+  <adapter factory=".fields.CEPJsonSchemaProvider" />
+  <adapter factory=".fields.CPFJsonSchemaProvider" />
+  <adapter factory=".fields.TelefoneJsonSchemaProvider" />
+
+</configure>
