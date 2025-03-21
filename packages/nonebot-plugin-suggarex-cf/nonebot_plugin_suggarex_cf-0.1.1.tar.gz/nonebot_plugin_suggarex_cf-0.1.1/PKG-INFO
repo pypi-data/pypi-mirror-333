@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: nonebot_plugin_suggarex_cf
+Version: 0.1.1
+Summary: 适用于SuggarChat插件的CloudFlare协议适配器实现，SuggarChat附属插件
+Keywords: chat", "suggar", "nonebot
+Author-Email: JohnRichard4096 <windowserror@163.com>
+License: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/JohnRichard4096/nonebot_plugin_suggaradapter_cf
+Project-URL: Source, https://github.com/JohnRichard4096/nonebot_plugin_suggaradapter_cf
+Project-URL: Issue Tracker, https://github.com/JohnRichard4096/nonebot_plugin_suggaradapter_cf/issues
+Requires-Python: <4.0,>=3.9
+Requires-Dist: nonebot2>=2.2.0
+Requires-Dist: nonebot-plugin-suggarchat>=1.15.0
+Requires-Dist: nonebot-adapter-onebot>=2.0.0
+Requires-Dist: aiohttp>=3.9.0
+Description-Content-Type: text/markdown
+
+# nonebot_plugin_suggarex_cf
+CloudFlare Workers AI Proctol Adapter for SuggarChat
+
+## 适用于SuggarChat插件的CloudFlare协议适配器实现
+
+[SuggarChat](https://github.com/JohnRichard4096/nonebot_plugin_suggarchat)
+
+## 安装
+
+```bash
+pip install nonebot-plugin-suggarex-cf
+```
+
+## 配置文件
+额外添加了 `cf_user_id` 配置项，，用于标识 CloudFlare Worker 的用户，默认为 null
+
+## 使用
+将协议更改为 `cf` 将可以通过提供的token 访问 CloudFlare Workers AI 接口,具体配置请参考Suggar的配置文件说明。
