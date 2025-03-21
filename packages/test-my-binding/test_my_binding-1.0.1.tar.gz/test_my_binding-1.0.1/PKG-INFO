@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: test_my_binding
+Version: 1.0.1
+Summary: CGAL wrapper for COMPAS.
+Author-Email: tom van mele <tom.v.mele@gmail.com>, Petras Vestartas <petrasvestartas@gmail.com>
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Project-URL: Homepage, https://github.com/compas-dev/test_my_binding
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Test My Binding
+
+A test repository for CGAL binding using nanobind.
+
+
+## License
+
+This project is licensed under the GNU Lesser General Public License v3 (LGPLv3).
