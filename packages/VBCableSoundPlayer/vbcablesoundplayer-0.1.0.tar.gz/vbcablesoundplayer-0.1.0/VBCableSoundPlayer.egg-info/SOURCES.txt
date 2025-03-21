@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+VBCableSoundPlayer/VBCableSoundPlayer.py
+VBCableSoundPlayer/__init__.py
+VBCableSoundPlayer.egg-info/PKG-INFO
+VBCableSoundPlayer.egg-info/SOURCES.txt
+VBCableSoundPlayer.egg-info/dependency_links.txt
+VBCableSoundPlayer.egg-info/requires.txt
+VBCableSoundPlayer.egg-info/top_level.txt
