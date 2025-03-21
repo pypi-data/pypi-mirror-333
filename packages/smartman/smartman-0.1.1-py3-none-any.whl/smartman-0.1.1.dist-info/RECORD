@@ -1,0 +1,13 @@
+smartman/__init__.py,sha256=wwzI0HWMz0FUp4V66XGRfzeaK3gaQUnIjDstG8ZUpFI,40
+smartman/cache.py,sha256=9-EZB7-RlAoYlD9PaAlBnkdJGemG4xMofLZzAD6AY88,1711
+smartman/config.py,sha256=T5B_TgSiVAgua1sJfdYN0CQuDcgoaPCAMnwb1zaTSPc,922
+smartman/llm_interface.py,sha256=FcVM6SXKtrRUdAnOX5tCf3ArhPEDHP-lmahFCgPad3o,9335
+smartman/main.py,sha256=ZkN4nPGj31N27uiQXAtxhS2EjFzYi0t0krdd8-AdoxI,5795
+smartman/man_retriever.py,sha256=FEyMvZ3Tqsk6t6qwGluldnknSu1vA2IDts1XZa9kAPY,2153
+smartman/setup_alias.py,sha256=hY0JncWNBnCpN-rjFE4mjzfXjkp5BAB68kzOcLivN2k,1881
+smartman-0.1.1.dist-info/LICENSE,sha256=ylBphmVwVRWIGut_yO_cDnAlcP7OhwM3hcsWq0stLu8,1077
+smartman-0.1.1.dist-info/METADATA,sha256=wX9T63n7QLXLDa7d7gydqjJFS-L8FUexaOaRoN5Q0qQ,5581
+smartman-0.1.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+smartman-0.1.1.dist-info/entry_points.txt,sha256=dt3rO5FoN1XZDP2QFF0FKeXuNzIE2ZYhTqnhVGCZoY8,103
+smartman-0.1.1.dist-info/top_level.txt,sha256=0RcF67s8LkhCRArhM7XID2wj98L5NycJ9ZxiH6aSzrY,9
+smartman-0.1.1.dist-info/RECORD,,
