@@ -1,0 +1,6 @@
+snakemake_software_deployment_plugin_cvmfs/__init__.py,sha256=7oaZLCc06o9-qE39EoySIMU1vVLlPUtTj1B-FpyKtY4,6427
+snakemake_software_deployment_plugin_cvmfs-0.2.3.dist-info/AUTHORS,sha256=b7m1tmyHcQdq2u7B4Y7WKr0Hb5oynMcRiq5_k0wZyDA,42
+snakemake_software_deployment_plugin_cvmfs-0.2.3.dist-info/LICENSE,sha256=GzeCzK17hhQQDNow0_r0L8OfLpeTKQjFQwBQU7ZUymg,32473
+snakemake_software_deployment_plugin_cvmfs-0.2.3.dist-info/METADATA,sha256=sd-GGKPnGD2KhOH4fG9K1DkPms69lIiFRNNxiAynF3c,3392
+snakemake_software_deployment_plugin_cvmfs-0.2.3.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+snakemake_software_deployment_plugin_cvmfs-0.2.3.dist-info/RECORD,,
