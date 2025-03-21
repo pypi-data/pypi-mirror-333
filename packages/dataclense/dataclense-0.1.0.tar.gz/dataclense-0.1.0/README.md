@@ -1,0 +1,75 @@
+CleanPy - Automated Data Cleaning
+
+CleanPy is an automated data-cleaning package that helps users handle missing values, remove duplicates, fix formatting issues, and standardize datasets effortlessly.
+
+Features
+
+Handle Missing Values: Fill or remove missing values using different strategies.
+
+Remove Duplicates: Detect and eliminate duplicate rows.
+
+Fix Data Formatting: Standardize text, dates, and column names.
+
+Auto-detect Cleaning Strategies: Get suggested fixes for common data issues.
+
+Support for Multiple Formats: Works with CSV, Excel, JSON, Parquet, and more.
+
+Command-line Interface (CLI): Clean data directly from the terminal.
+
+Installation
+
+You can install CleanPy from PyPI using:
+
+pip install cleanpy
+
+Usage
+
+Command-line Interface (CLI)
+
+To clean a dataset from the command line:
+
+cleanpy data.csv --auto-clean -o cleaned_data.csv
+
+Available CLI options:
+
+cleanpy input_file [options]
+
+Options:
+  --auto-clean            Apply recommended cleaning strategies automatically.
+  --fill-missing [strategy] Fill missing values (mean, median, mode, etc.).
+  --drop-duplicates       Remove duplicate rows.
+  --fix-datatypes         Automatically fix data types.
+  --normalize-text        Normalize text columns.
+  --format-dates          Convert dates to ISO format.
+  --standardize-columns   Standardize column names.
+  -o, --output [file]     Save cleaned data to a file.
+
+Python API
+
+You can also use CleanPy in your Python scripts:
+
+from cleanpy.core import CleanDF
+
+df = CleanDF("data.csv")
+df.auto_clean()
+df.save("cleaned_data.csv")
+
+Supported File Formats
+
+CSV (.csv)
+
+Excel (.xls, .xlsx)
+
+JSON (.json)
+
+Pickle (.pkl)
+
+Parquet (.parquet)
+
+Contributing
+
+We welcome contributions! Feel free to fork the repository, make changes, and submit a pull request.
+
+License
+
+This project is licensed under the MIT License.

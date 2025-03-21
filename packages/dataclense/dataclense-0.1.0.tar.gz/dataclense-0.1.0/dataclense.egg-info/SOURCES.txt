@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+dataclense.egg-info/PKG-INFO
+dataclense.egg-info/SOURCES.txt
+dataclense.egg-info/dependency_links.txt
+dataclense.egg-info/entry_points.txt
+dataclense.egg-info/requires.txt
+dataclense.egg-info/top_level.txt
