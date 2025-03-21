@@ -1,0 +1,2 @@
+[console_scripts]
+pkgmngr = pkgmngr.__main__:main
