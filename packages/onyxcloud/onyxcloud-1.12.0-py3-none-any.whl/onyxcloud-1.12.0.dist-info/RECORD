@@ -1,0 +1,10 @@
+onyxcloud/Utils.py,sha256=uQMXD4UTNA5991asV3b_0cvJ-T3xYyee3Tww48d5eVA,29552
+onyxcloud/__init__.py,sha256=ajhz4pp2uFtrJzaPLtdBhlbbhrmBa1ozA34qCZYdkm8,142
+onyxcloud/chat.py,sha256=fjqg9G1NP2fX0F5Kx9ZKZVsjGEY8snLuV5SFW6ENp5E,5675
+onyxcloud/model/modelpt,sha256=yHI7io2K8ZeQme64VPkA3OUww2giR9JZknj_GW-q5DE,19329634
+onyxcloud-1.12.0.dist-info/LICENSE,sha256=_CCBs7qMu5CrKSZtT07EAKOBofvsVWe7V7uJkw_BROY,1083
+onyxcloud-1.12.0.dist-info/METADATA,sha256=wnTHYNteE28YjQLU-yceu8mALwFWrWalRCgezXDscnw,2438
+onyxcloud-1.12.0.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+onyxcloud-1.12.0.dist-info/entry_points.txt,sha256=XibqOhvzRDzdfkduZ5l0HDfEKFSiH8T3RpStYDDw9sM,50
+onyxcloud-1.12.0.dist-info/top_level.txt,sha256=gcLadmENn2ohTOWrFAT3k7_Qi9BHGIuOFECg4sTHWvc,10
+onyxcloud-1.12.0.dist-info/RECORD,,
