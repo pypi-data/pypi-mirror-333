@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ol-concourse
+Version: 0.5.7
+Requires-Python: >=3.12
+Requires-Dist: bridge==0.2.0
+Requires-Dist: pydantic<3.0.0,>=2
+
