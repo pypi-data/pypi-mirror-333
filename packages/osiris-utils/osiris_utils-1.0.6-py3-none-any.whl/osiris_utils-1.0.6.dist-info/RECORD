@@ -1,0 +1,11 @@
+osiris_utils/__init__.py,sha256=5qsicKjKzheUmdI89cIw7Egvjv6OZcGAQ5eEAiGZIcY,358
+osiris_utils/data.py,sha256=vj5WV7SubCqR3Ia3ylFuwR5hyotk31d1xZLfYyjC5ow,16491
+osiris_utils/data_readers.py,sha256=ZbzYQ-MK5NSv4Hfgtdc1YqXHs9yL_ZEKFFCiRn7GN5o,3264
+osiris_utils/gui.py,sha256=YyG4MBmUFDJ141-NeorVRnRU3fcym4cfDMSGsJUFbYA,10531
+osiris_utils/mean_field_theory.py,sha256=sJGvoJ5fTgW6fQZjNNsPswzXkh7dhMgO96qB8R5tl0M,1517
+osiris_utils/utils.py,sha256=dlW2BvYpVSsW48kA_A6NNQ77VvKfyvs8hVwnOfJu2qk,4736
+osiris_utils-1.0.6.dist-info/LICENSE.txt,sha256=Cawy2v7wKc7n8yL8guFu-cH9sQw9r1gll1pEFPFAB-Q,1084
+osiris_utils-1.0.6.dist-info/METADATA,sha256=Ck74cl16Z1Ap39zHg5J5oieiqegv-R7LA_TL1pekRas,1463
+osiris_utils-1.0.6.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+osiris_utils-1.0.6.dist-info/top_level.txt,sha256=mM-_dX5fjzIKB7te655PhZOrPACVY-bJmiASCqW1eOA,13
+osiris_utils-1.0.6.dist-info/RECORD,,
