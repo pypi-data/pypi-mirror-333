@@ -1,0 +1,3 @@
+[console_scripts]
+setup-smartman-alias = smartman.setup_alias:setup_alias
+smartman = smartman.main:cli
