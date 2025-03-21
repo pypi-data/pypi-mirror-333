@@ -1,0 +1,2 @@
+[console_scripts]
+md-insights-snapshot-client = md_insights_client.insights_snapshot:cli
