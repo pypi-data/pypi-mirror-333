@@ -1,0 +1,2 @@
+[nbdev]
+ragas_annotator = ragas_annotator._modidx:d

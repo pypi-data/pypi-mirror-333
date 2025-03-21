@@ -1,0 +1,7 @@
+notion-client
+fastcore
+tqdm
+langfuse
+
+[dev]
+pytest
