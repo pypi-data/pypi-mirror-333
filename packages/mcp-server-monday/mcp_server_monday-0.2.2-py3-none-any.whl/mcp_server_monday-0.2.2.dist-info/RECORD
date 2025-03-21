@@ -1,0 +1,11 @@
+mcp_server_monday/__init__.py,sha256=3T4x8ZamD7of06_XR_6_B-ggBxseFEaXpaN6IMEZs3Q,157
+mcp_server_monday/board.py,sha256=qn06qEiiDUdZLQqBy8x0PRc01qb7ew0Ys0zcv1YhkqM,1598
+mcp_server_monday/constants.py,sha256=qqLvRxt9qkU5M8PzHx4JB3HsTaaNINmW-E-gVMk_ixc,299
+mcp_server_monday/item.py,sha256=oOV2fyYjapmNn92FjnteFBuZRGO-DWRTDKPaawIST4A,5713
+mcp_server_monday/server.py,sha256=CZEN4oppGzQv9CmafHObJtzAOwkjVyATzbtB1hz6dKA,1243
+mcp_server_monday/tools.py,sha256=QLQb1LXXgs1ck-fAltGkS1d0prwna5tk8lCw2xHPbs8,9758
+mcp_server_monday-0.2.2.dist-info/METADATA,sha256=PoozhOtn-ZDdXlQWYrg-Idwf70O_JsMV14-ngOH1gtY,3658
+mcp_server_monday-0.2.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_server_monday-0.2.2.dist-info/entry_points.txt,sha256=CkrStRk_z_FWO0Z3U5nLNJHbpVLeFlQHS5i79w3Ojd8,61
+mcp_server_monday-0.2.2.dist-info/licenses/LICENSE,sha256=btKkniDaboDo_c6yWi5ppkWEjXGuA6-qU4k7OB0tQQg,1070
+mcp_server_monday-0.2.2.dist-info/RECORD,,
