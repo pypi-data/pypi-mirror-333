@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+mediawiki_api_wrapper/__init__.py
+mediawiki_api_wrapper/interface.py
+mediawiki_api_wrapper/login_and_editing.py
+mediawiki_api_wrapper/query.py
+mediawiki_api_wrapper/retrying_connection.py
+mediawiki_api_wrapper.egg-info/PKG-INFO
+mediawiki_api_wrapper.egg-info/SOURCES.txt
+mediawiki_api_wrapper.egg-info/dependency_links.txt
+mediawiki_api_wrapper.egg-info/requires.txt
+mediawiki_api_wrapper.egg-info/top_level.txt
