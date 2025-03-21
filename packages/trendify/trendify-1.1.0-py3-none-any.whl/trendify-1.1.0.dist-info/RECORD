@@ -1,0 +1,14 @@
+trendify/API.py,sha256=vi72q_VnqxdboPV2_1t7kSayALER46rHfB7kn1F3Kno,78214
+trendify/CLI.py,sha256=u7gRGokxIWux7aDKMsJb8MzGu6U3_quq9y2WDBD61E0,18269
+trendify/__init__.py,sha256=KwyFRMFEOpjmDpPQtVY644JFDwC_Z_aRyF8bXlTaggo,93
+trendify/examples.py,sha256=sRnQYUoNTJwRaj9CwdcXZpev3pVOPE-1uTSPDf9BL9g,5649
+trendify/gallery.py,sha256=hlWHGMQ1HD9r8niVGo-UFeEad_YoHfw6cHlAC7KE0zI,9515
+trendify/local_server.py,sha256=VuBQmAQ6yPbEHajyJw1mZ0EKr1Sx-otckdL1bMCew8s,4765
+trendify/plotly_dashboard.py,sha256=5cLPQoQBPMGNrGKXmYSlwv7gxSzEyStkTqIMeq0YGNY,29762
+trendify/production_server.py,sha256=IKCWHX0h_FNFK_ny_h4UrcULmnIfZ8MNJaRkyc9QAPY,4166
+trendify/server.py,sha256=oMN-EFTY1xjNKYFX2sZQsFirHj-ScIvSKEaWXTwU27k,4759
+trendify-1.1.0.dist-info/METADATA,sha256=lBqIa1iOv4IJF9Ddxz5VevCfcVVuNWReY85G2RNea9M,1026
+trendify-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+trendify-1.1.0.dist-info/entry_points.txt,sha256=iDWKVnnaBoPW99swVlcoe38uZwmUJ_BIMmEEipbg1Z4,114
+trendify-1.1.0.dist-info/licenses/LICENSE.txt,sha256=UpI7Pu3PvXg9ytUCZFX4gInKY9g6L48LaQ22l-Py63w,1071
+trendify-1.1.0.dist-info/RECORD,,
