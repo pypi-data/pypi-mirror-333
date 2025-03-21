@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ndict-tools"
+version = "0.7.0"
+authors = [
+    {name="biface"}
+]
+description = "An implementation of nested dictionaries"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: CeCILL-C Free Software License Agreement (CECILL-C)",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/biface/ndt"
+Documentation = "https://ndict-tools.readthedocs.io/en/latest/"
+Repository = "https://github.com/biface/ndt.git"
+Issues = "https://github.com/biface/ndt/issues"
+
+[tool.tox]
+envlist = ["lint", "pytest"]
+
+[testenv]
+deps = ["pytest"]
+
+[testenv.lint]
+commands = ["echo Using Lint"]
+
+[testenv.pystes]
+commandes = ["echo Using Test"]
+
