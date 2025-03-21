@@ -1,0 +1,11 @@
+llm_tooluse/__init__.py,sha256=4-83nLUo5khqbViefOXDCuMW412mDBkurWbSNWwXoyU,141
+llm_tooluse/calculator.py,sha256=pA-_u0wafYrZ3GLlpCJHbIiq1PbQqoTYgDxH4gysDSI,1467
+llm_tooluse/llm.py,sha256=ug7oz4FYyKogB7LeQxtlHKYQSeMx7gUUOa_RnnPS2og,5971
+llm_tooluse/main.py,sha256=4ewe3vX3fspsFE9kI0PEcWWwQnHucCOeHeOBV4qzsJE,1686
+llm_tooluse/schemagenerators.py,sha256=EwEXaIwlDQReZSlZttRHQTl_5wfC9l3rUmUI58qeO_s,13658
+llm_tooluse/settings.py,sha256=akO3LqUUgEOzfES6tilg7Mzsreuthh3dbb7gnBiZ_5U,948
+llm_tooluse/tools.py,sha256=l1TMKEGyczRjTaR_cDu-QF-G_GgJa_qumgnstCfUgNM,8897
+llm_tooluse-0.1.0.dist-info/METADATA,sha256=8fTfZJ1q_mVNAxiwIZUj1pd_7T7m-UhmXCJnW1G4BtY,7446
+llm_tooluse-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llm_tooluse-0.1.0.dist-info/entry_points.txt,sha256=BWV-jTA__ORDHEpwSW0_tzat-Dg0rtIp9Ss6X6ks6Gg,45
+llm_tooluse-0.1.0.dist-info/RECORD,,

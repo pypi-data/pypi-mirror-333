@@ -1,0 +1,2 @@
+[console_scripts]
+tooluse = llm_tooluse:main
