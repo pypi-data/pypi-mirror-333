@@ -1,0 +1,95 @@
+Metadata-Version: 2.2
+Name: face_recognition_pkg
+Version: 0.1.1
+Summary: A package for face recognition in images and videos
+Home-page: https://github.com/Anurich/face_recognition_package.git
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: sentence-transformers
+Requires-Dist: ultralytics
+Requires-Dist: supervision
+Provides-Extra: cpu
+Requires-Dist: faiss-cpu; extra == "cpu"
+Provides-Extra: gpu
+Requires-Dist: faiss-gpu; extra == "gpu"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Face Recognition Package
+
+A Python package for face detection and recognition in images and videos.
+
+## Installation
+
+### Basic Installation
+
+```bash
+pip install face_recognition_pkg
+```
+
+### Hardware-specific Installation
+
+For CPU-only environments:
+```bash
+pip install face_recognition_pkg[cpu]
+```
+
+For GPU-accelerated environments:
+```bash
+pip install face_recognition_pkg[gpu]
+```
+
+## Usage
+
+### Face Detection
+
+```python
+from src.model_face_detection.face_model import FaceDetection
+
+# Initialize face detection
+face_object = FaceDetection()
+
+# Process a video
+face_object.process_video(
+    source_video_path="path/to/video.mp4", 
+    target_video_path="path/to/output.mp4"
+)
+```
+
+### Image Indexing and Retrieval
+
+```python
+from src.indexing.index import ImageRetriever
+
+# Initialize image retriever with a dataset
+retriever = ImageRetriever(path_to_dataset_with_images="path/to/faces/dataset")
+
+# Search for similar faces
+```
+
+## Features
+
+- Face detection in images and videos
+- Face recognition using FAISS index (supports both CPU and GPU)
+- Batch processing of videos
+- Customizable detection parameters
+
+## License
+
+MIT
