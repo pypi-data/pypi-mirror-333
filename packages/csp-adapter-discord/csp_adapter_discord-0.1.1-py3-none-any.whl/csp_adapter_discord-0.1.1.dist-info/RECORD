@@ -1,0 +1,9 @@
+csp_adapter_discord/__init__.py,sha256=Z6Drx4wkWcaTeK0gXN1WejFZtr-zd7qBa914-_UOITc,76
+csp_adapter_discord/adapter.py,sha256=pfCgVl3oZvTq-1GnHY6S74MvuKMeJzF0w2rGXknhHO8,10444
+csp_adapter_discord/adapter_config.py,sha256=y2ioaIor-GounDVzMBxRiJGmXq3qKVQH4cwWP7Wd9IA,974
+csp_adapter_discord/example.py,sha256=QePGbSKu1czkh4jB0xWVIWKHxHRaMMA5rCF1e-IW3zk,1100
+csp_adapter_discord/tests/test_adapter.py,sha256=F9izl2WYs2HRWxm7qwxV_RpqcXMJk8CPEteL1lZy5ZI,35
+csp_adapter_discord-0.1.1.dist-info/METADATA,sha256=PV8wCB-JZXxmo8G-kkeykv0cr6SLYJ5DpT7tV5PTqsA,2838
+csp_adapter_discord-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+csp_adapter_discord-0.1.1.dist-info/licenses/LICENSE,sha256=ucoxpmgv2W-KISdmKsmeNbZvtcHdYNEOCuAIZ8_FDps,11361
+csp_adapter_discord-0.1.1.dist-info/RECORD,,
