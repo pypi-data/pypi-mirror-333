@@ -1,0 +1,93 @@
+# AWS Microservice Bootstrap Code for Flask
+
+This project contains bootstrap code to speed up the development of AWS based microservices built with Flask.
+
+This project is an extension of microgue: https://pypi.org/project/microgue/
+
+### Working On Microflask
+
+Repo: https://bitbucket.org/michaelhudelson/microflask/src/main
+
+Clone: `git clone https://bitbucket.org/michaelhudelson/microflask/src/main`
+
+### Requirements
+
+- Python 3.7+
+
+### Pre-Setup
+
+- Make sure you have an IAM user created with correct permissions in your AWS account
+
+    - Create an Access Key on that user
+
+    - Install awscli `pip install awscli`
+
+    - Add that Access Key with `aws configure`
+
+    - Verify you are using the correct Access Key with `aws configure list`
+
+    - You can also verify by looking at the file `~/.aws/credentials`
+
+### Install Microflask
+
+```
+pip install microflask
+```
+
+### Flask Setup (Optional)
+
+- Put the following code in the app.py file in the root of the project
+
+```python
+import logging
+from microflask.abstract_app import AbstractApp
+
+logging.basicConfig()
+
+
+class App(AbstractApp):
+    pass
+
+
+app = App().app
+```
+
+- In the terminal run the following commands
+
+```
+export PYTHONUNBUFFERED=1
+export FLASK_DEBUG=1
+flask run
+```
+
+- GET http://127.0.0.1:5000
+
+### Distribution
+```
+# update version in setup.py
+
+# commit and push changes
+git add .
+git commit -m "v1.0.X"
+git push origin main
+
+# tag the commit and push
+git tag -a v1.0.X -m "Release v1.0.X"
+git push --tags
+
+# package with:
+source venv/bin/activate
+python setup.py sdist bdist_wheel
+
+# https://pypi.org/project/microflask/
+# upload to pypi with:
+python -m twine upload dist/*
+
+# OPTIONAL
+# https://test.pypi.org/project/microflask/
+# upload to test pypi with:
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+### Backlog
+- create as package
