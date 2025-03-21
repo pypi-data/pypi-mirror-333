@@ -1,0 +1,44 @@
+name: clang-tidy-review
+
+on:
+  pull_request:
+    paths:
+      - 'src/vmecpp/cpp/vmecpp/**/*.h'
+      - 'src/vmecpp/cpp/vmecpp/**/*.cc'
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/vmecpp/cpp/vmecpp/**/*.h'
+      - 'src/vmecpp/cpp/vmecpp/**/*.cc'
+
+# Cancel currently running job if a new one comes along for the same branch or tag.
+# From https://stackoverflow.com/a/72408109.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  clang-tidy:
+    permissions:
+      checks: write
+      pull-requests: write
+      packages: read
+      contents: read
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ZedThree/clang-tidy-review@v0.20.1
+        name: Run clang-tidy review
+        id: review
+        with:
+          config_file: ".clang-tidy"
+          apt_packages: libhdf5-dev, liblapacke-dev, libnetcdf-dev, gfortran, python3-dev, libomp-dev
+          build_dir: build
+          cmake_command: cmake -B build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:STRING=ON build
+          exclude: "./src/vmecpp/cpp/bazel-*,./src/vmecpp/cpp/external,./src/vmecpp/cpp/third_party"
+          # turn off "LGTM" comments: we only want pings about warnings/errors
+          lgtm_comment_body: ""
+        # If there are any comments, fail the check
+      - if: steps.review.outputs.total_comments > 0
+        run: exit 1

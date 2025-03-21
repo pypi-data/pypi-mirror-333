@@ -1,0 +1,42 @@
+name: C++ core tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+# Cancel currently running job if a new one comes along for the same branch or tag.
+# From https://stackoverflow.com/a/72408109.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    name: Build and run tests
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true  # for the mgrid test data
+      - name: Install required system packages for Ubuntu
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential cmake gcc g++ libeigen3-dev libhdf5-dev liblapack-dev libnetcdf-dev libopenmpi-dev nlohmann-json3-dev python3-pip python-is-python3
+      - name: Build VMEC++ via bazel
+        run: |
+          cd src/vmecpp/cpp
+          bazel build -- //...
+      - uses: actions/checkout@v4
+        with:
+          repository: proximafusion/vmecpp_large_cpp_tests
+          path: src/vmecpp/cpp/vmecpp_large_cpp_tests
+          lfs: true
+      - name: Build VMEC++ C++ tests via bazel
+        run: |
+          cd src/vmecpp/cpp
+          bazel build -- //vmecpp_large_cpp_tests/...
+      - name: Run full C++ test suite
+        run: |
+          cd src/vmecpp/cpp
+          bazel test --jobs=1 --test_output=errors -- //...
