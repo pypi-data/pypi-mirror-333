@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+mlcoder/__init__.py
+mlcoder/cli.py
+mlcoder/file.py
+mlcoder/ui.py
+mlcoder.egg-info/PKG-INFO
+mlcoder.egg-info/SOURCES.txt
+mlcoder.egg-info/dependency_links.txt
+mlcoder.egg-info/entry_points.txt
+mlcoder.egg-info/requires.txt
+mlcoder.egg-info/top_level.txt
+mlcoder/files/pretty_print.py
+mlcoder/files/reinforcement/RL_from_real_scratch_concise.ipynb
+mlcoder/files/training/Fine_Tuning_with_SFTTrainer.ipynb
+mlcoder/files/ui/ui_pretty_print.py
