@@ -1,0 +1,12 @@
+locals3server/__init__.py,sha256=GAZaTt82SKgJpd2LAB2bdmQOXwTdWiRmuw3d7sMZ_q4,285
+locals3server/__main__.py,sha256=OMH41bSoon2u1NOYdQgBFaPR0ZM9QG2tfnW2WApkK4o,1359
+locals3server/actions.py,sha256=wS0BpPrVyNbjCMdwlXhbB1UbSVJGOaDWyc6LbFQKQT8,4696
+locals3server/errors.py,sha256=sFVzN3Gr1zLX-al0igBmFRdcPSGfHiOUdt7Vj_Ghcpw,444
+locals3server/fastapi_server.py,sha256=JqRWD65moR_E3KwwSYt6ZjDdQZM40XFNOW1ms_GPHyw,12738
+locals3server/file_store.py,sha256=O1k7kbNHkKOd1SAh9uwgY4Bik3HNruBVD8AeiXVw-Eg,11633
+locals3server/models.py,sha256=VZK00efLW36Tiqmrv3rKTzjPhR7-Qhme05R1Nrl3Gdw,900
+locals3server/xml_templates.py,sha256=Z_cLVmB2LbS9gynqRCFLEGV5g6nvkG4JVdVGVLy8VjM,2117
+local_s3_server-0.2.2.dist-info/METADATA,sha256=y0NS0hSN_EtTyREs8_4dMxQ64YPBKZT3vAJDfRYu6Hw,3288
+local_s3_server-0.2.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+local_s3_server-0.2.2.dist-info/entry_points.txt,sha256=bGg4huv8SYr_CNEcLPr5R6imiPPCa9mjJWwjIW35sBw,64
+local_s3_server-0.2.2.dist-info/RECORD,,

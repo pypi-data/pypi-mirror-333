@@ -1,0 +1,2 @@
+[console_scripts]
+local-s3-server = locals3server.__main__:main
