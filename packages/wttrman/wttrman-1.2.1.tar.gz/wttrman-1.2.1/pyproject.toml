@@ -1,0 +1,19 @@
+[project]
+name = "wttrman"
+version = "1.2.1"
+description = "GUI front-end to https://wttr.in/."
+readme = "src/wttrman/resources/PYPI_README.md"
+license = "MIT"
+authors = [{ name = "Melvin Quick", email = "melvinquick@proton.me" }]
+requires-python = ">=3.13"
+dependencies = ["pyside6>=6.8.2.1", "pyyaml>=6.0.2", "requests>=2.32.3"]
+
+[project.scripts]
+wttrman = "wttrman.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["bandit>=1.8.3"]

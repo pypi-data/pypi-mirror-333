@@ -1,0 +1,5 @@
+window_title: "Wttrman"
+window_size:
+  width: 500
+  height: 140
+weather_widget_width: 300
