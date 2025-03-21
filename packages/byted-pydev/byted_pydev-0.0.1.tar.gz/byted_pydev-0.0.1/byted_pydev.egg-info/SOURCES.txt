@@ -1,0 +1,6 @@
+setup.py
+byted_pydev/__init__.py
+byted_pydev.egg-info/PKG-INFO
+byted_pydev.egg-info/SOURCES.txt
+byted_pydev.egg-info/dependency_links.txt
+byted_pydev.egg-info/top_level.txt
