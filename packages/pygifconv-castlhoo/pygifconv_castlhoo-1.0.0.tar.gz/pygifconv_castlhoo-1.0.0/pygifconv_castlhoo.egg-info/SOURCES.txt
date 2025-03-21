@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pygifconv_castlhoo.egg-info/PKG-INFO
+pygifconv_castlhoo.egg-info/SOURCES.txt
+pygifconv_castlhoo.egg-info/dependency_links.txt
+pygifconv_castlhoo.egg-info/not-zip-safe
+pygifconv_castlhoo.egg-info/requires.txt
+pygifconv_castlhoo.egg-info/top_level.txt
