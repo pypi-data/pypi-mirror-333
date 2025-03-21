@@ -1,0 +1,2 @@
+relic-tool-core>=2.3.0
+fs>=2.4.16
