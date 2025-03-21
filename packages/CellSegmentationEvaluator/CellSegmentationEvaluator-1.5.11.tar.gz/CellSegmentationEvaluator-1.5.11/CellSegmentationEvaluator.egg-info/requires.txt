@@ -1,0 +1,9 @@
+numpy
+xmltodict
+pandas
+pint
+scipy
+scikit-image
+scikit-learn
+tifffile
+aicsimageio
