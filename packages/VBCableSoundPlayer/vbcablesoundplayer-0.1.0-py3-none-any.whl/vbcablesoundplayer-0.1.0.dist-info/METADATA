@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: VBCableSoundPlayer
+Version: 0.1.0
+Summary: This package outputs audio to the VBCable virtual audio device.
+Author-email: nnnnnnn0090 <nnnnnnn0090@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/nnnnnnn0090/VBCableSoundPlayer
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sounddevice
+
+# VBCableSoundPlayer
+
+This package outputs audio to the VBCable virtual audio device.
+
+## Installation
+
+You can install the package using pip:
+
+```
+pip install VBCableSoundPlayer
+```
+
+## Usage
+```python
+import VBCableSoundPlayer
+
+VBCableSoundPlayer.play(data, rate)
+```
+
+## Parameters
+    data: The audio data you want to play.
+    rate: The sample rate of the audio.
+
+## License
+MIT License. See the LICENSE file for details.
