@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: nayombi
+Version: 1.3.0
+Summary: Handle customer inquiries with AI and database integration
+Author: Marvin avi
+Author-email: marvinavi24@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: langchain-core==0.3.45
+Requires-Dist: langchain-google-genai==2.0.10
+Requires-Dist: langchain-mistralai==0.2.8
+Requires-Dist: langchain-community==0.3.19
+Requires-Dist: langchain==0.3.20
+Requires-Dist: google-ai-generativelanguage==0.6.15
+Requires-Dist: psycopg2-binary==2.9.10
+Requires-Dist: langchain_community==0.3.19
+Requires-Dist: requests==2.32.3
+Requires-Dist: setuptools==76.0.0
+Requires-Dist: pymongo==4.11.2
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: SQLAlchemy==2.0.38
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: summary

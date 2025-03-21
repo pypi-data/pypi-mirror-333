@@ -1,0 +1,13 @@
+langchain-core==0.3.45
+langchain-google-genai==2.0.10
+langchain-mistralai==0.2.8
+langchain-community==0.3.19
+langchain==0.3.20
+google-ai-generativelanguage==0.6.15
+psycopg2-binary==2.9.10
+langchain_community==0.3.19
+requests==2.32.3
+setuptools==76.0.0
+pymongo==4.11.2
+python-dotenv==1.0.1
+SQLAlchemy==2.0.38
