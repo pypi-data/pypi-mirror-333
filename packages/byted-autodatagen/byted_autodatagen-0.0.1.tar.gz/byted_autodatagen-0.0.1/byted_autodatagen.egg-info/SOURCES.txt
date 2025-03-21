@@ -1,0 +1,6 @@
+setup.py
+byted_autodatagen/__init__.py
+byted_autodatagen.egg-info/PKG-INFO
+byted_autodatagen.egg-info/SOURCES.txt
+byted_autodatagen.egg-info/dependency_links.txt
+byted_autodatagen.egg-info/top_level.txt
