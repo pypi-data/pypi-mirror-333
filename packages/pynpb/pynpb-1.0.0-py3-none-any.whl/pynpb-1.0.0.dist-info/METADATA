@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pynpb
+Version: 1.0.0
+Summary: Python package to retrieve Nippon Professional Baseball (NPB) data 
+Home-page: https://github.com/jkmende05/pynpb
+Author: Justin Mende
+Author-email: jkmende05@gmail.com
+License: MIT
+Keywords: baseball sabermetrics data statistics statcast web scraping
+Requires-Python: >=3.7,<3.14
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: numpy>=2.2.2
+Requires-Dist: beautifulsoup4>=4.13.3
+
