@@ -1,0 +1,9 @@
+colorcet/__init__.py,sha256=YJdQXTxnBB7ASoSFwPjJIa29Ze13CMgBMDUOCdIthTo,816752
+colorcet/_version.py,sha256=9z9JxfZ8FQLD8A71JfEplLRyaQ_G4uuG-3I4XrmrUD8,513
+colorcet/plotting.py,sha256=0JIXUgm4FvWpF6edDAB7wwiQXm-W19l6pcy-BzNHN9w,5330
+colorcet/sineramp.py,sha256=2hkpmzA9DNPf9PVT4T_1XQogE26FTG3FKyKe5ULIb9w,6433
+colorcet-3.1.1a1.dist-info/LICENSE.txt,sha256=yX3u7KSuN1oDNLx_evX3B6q_zslZxTx4O5-HcdKP1bM,14990
+colorcet-3.1.1a1.dist-info/METADATA,sha256=9fSPFtg5mJaHiGBsZh018w6cFVYIsuz4sZ3XHCL7_EQ,6309
+colorcet-3.1.1a1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+colorcet-3.1.1a1.dist-info/top_level.txt,sha256=U0_C4R8DnCRGVkavLg0hWGcYxqQnKr5l6jJHg9BOqxo,9
+colorcet-3.1.1a1.dist-info/RECORD,,
