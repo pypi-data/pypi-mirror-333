@@ -1,0 +1,114 @@
+INTAPP LICENSE TERMS FOR SUPPLEMENTAL SOFTWARE
+These license terms (these “License Terms”) are an agreement between Integration Appliance, Inc. (“Intapp”) and the 
+entity with which you are employed, affiliated or associated (“Company” or “you”). These License Terms apply to the 
+Supplemental Software (as defined below) for use with the applicable Intapp Products (as defined below). 
+
+1. DEFINITIONS. 
+“Company Integrations” means an integration of software or cloud services licensed or subscribed to by Company with 
+the applicable Intapp Product(s) (as designated by Intapp) for use of such Intapp Product(s) as contemplated in and 
+permitted by the Governing Agreement.
+
+“Supplemental Software” means source code and/or compiled software provided by Intapp, including any applicable 
+documentation associated therewith, enabling the corresponding Company Integration.
+
+“Governing Agreement” means the governing document(s) for Company’s use of the applicable Intapp Product, including 
+any applicable orders subject to such governing documents, between Intapp and/or any of its current or future affiliates, 
+including, without limitation, Intapp US, Inc., DealCloud, Inc., and Repstor Limited.
+
+“Intapp Products” means the applicable Intapp products licensed or subscribed to under the Governing Agreement.
+
+“Open-Source License(s)” means any applicable open-source license(s) governing any applicable software included as 
+part the Supplemental Software. 
+
+2. SCOPE; USE; RESTRICTIONS; FEEDBACK.
+You acknowledge and agree that these License Terms (a) constitute a legally binding agreement between your Company 
+and Intapp, (b) are effective as of the date you first download, install or use the Supplemental Software, whichever is 
+earliest, and (c) will be in effect until such time as terminated as provided herein. Please read it carefully. 
+
+By clicking "I Accept" or accessing, installing or using the Supplemental Software, you:
+
+    (a) agree to the terms contained in these License Terms on behalf of the Company; </li>
+    (b) represent that you have the authority to bind the Company to these License Terms; and</li>
+    (c) acknowledge and agree there is a Governing Agreement in effect. </li>
+  
+If you do not have such authority or do not agree to these License Terms, you may not (nor is Company 
+permitted to) access, install or use the Supplemental Software.
+
+The Supplemental Software is licensed, not sold, for the sole purpose of interacting with the Intapp Product. Intapp reserves 
+all other rights. Unless applicable law (or any underlying Open-Source License(s) used in the Supplemental Software) gives 
+you additional rights despite this limitation, you may use the Supplemental Software only as expressly permitted in these 
+License Terms; provided, in the event of any conflict between these License Terms and the Open-Source License(s) where 
+such conflict would cause Intapp to violate a restriction or condition of the Open-Source License(s), the Open-Source 
+License(s) shall prevail solely with respect to the specific software subject to such Open-Source License(s) and you must 
+agree to, and use such software in conformance with, such licenses.
+
+You acknowledge:
+- you must comply with all domestic and international export laws and regulations that apply to the Supplemental
+Software;
+- you must ensure any products, services or content made available through Company Integrations (and the 
+Company Integrations themselves), do not, and will not contain any virus, Trojan horse, worm, malicious code, 
+or spyware;
+- no support is provided by Intapp for the Supplemental Software or the Company Integration; and
+- these License Terms do not grant you any right in any trademark or logo of Intapp or its affiliates.
+
+You may not:
+- bypass or disable any technical limitations in the Supplemental Software;
+- move, change, disable, obscure or circumvent the license key functionality in the Supplemental Software or
+any functionality in the Supplemental Software that is protected by the license key;
+- alter, remove, or obscure any licensing, copyright, or other notices of the licensor in the Supplemental Software;
+- redistribute the Supplemental Software outside your organization;
+- distribute derivative works based upon the Supplemental Software outside your organization;
+- provide the Supplemental Software (or derivative works based upon the Supplemental Software) to third parties 
+as a hosted or managed service; and
+- rent, lease or lend the Supplemental Software to others.
+
+If you give feedback about the Supplemental Software to Intapp, you grant Intapp, without charge, the right to use,
+share and commercialize your feedback in any way and for any purpose in its sole discretion. You will not give feedback 
+that is subject to a license that requires Intapp to license its software or documentation to third parties because we 
+include your feedback in them. These rights survive any termination or expiration of these License Terms.
+
+3. DISCLAIMER OF WARRANTIES; LIABILITY; MISCELLANEOUS
+YOU ACKNOWLEDGE THE SUPPLEMENTAL SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. INTAPP
+(AS WELL AS ITS LICENSORS AND AFFILIATES) GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. TO 
+THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, INTAPP (AS WELL AS ITS LICENSORS AND AFFILIATES) EXCLUDES 
+ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES AND CONDITIONS OF
+MERCHANTABILITY, NON-INFRINGMENT, QUALITY, FITNESS FOR A PARTICULAR PURPOSE, ANY WARRANTIES AND 
+CONDITIONS ARISING OUT OF COURSE OF DEALING OR CUSTOM OR USAGE OF THE TRADE. COMPANY ACKNOWLEDGES 
+IT HAS NO RIGHTS OR REMEDIES UNDER THE GOVERNING AGREEMENT (INCLUDNG THE RIGHT TO TERMINATE THE 
+GOVERNING AGREEMENT OR ANY ORDER OR OTHER TRANSACTIONAL DOCUMENT ASSOCIATED THEREWITH), AND 
+NEITHER INTAPP NOR ITS AFFILIATES HAVE ANY LIABILITIES UNDER THE GOVERNING AGREEMENT FOR ANY DAMAGES
+FOR INACCURACIES, ERRORS, OMISSIONS, DELAYS, AVAILABILITY, DAMAGES, CLAIMS, LIABILITIES, EXPENSES, COSTS 
+OR LOSSES, REGARDLESS OF CAUSE, ARISING FROM OR RELATING TO THE SUPPLEMENTAL SOFTWARE, COMPANY 
+INTEGRATION(S), ANY USE OF THE FOREGOING, OR THESE LICENSE TERMS.
+YOU HEREBY AGREE THAT (I) YOU MAY ONLY RECOVER FROM INTAPP (OR ITS AFFILIATES) DIRECT DAMAGES UP TO 
+U.S. $100.00 AND THEN ONLY (Y) AS IT RELATES TO CLAIMS CONCERNING INTAPP’S PROPRIETARY SOFTWARE, IF ANY, 
+WITHIN THE SUPPLEMENTAL SOFTWARE AND (Z) IF AWARDED BY A COURT OF COMPETENT JURISDICTION; AND (II)
+YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING, WITHOUT LIMITATION, CONSEQUENTIAL, SPECIAL,
+EXEMPLARY, INDIRECT OR INCIDENTAL DAMAGES, LOST PROFITS, LOSS OF DATA, LOSS OF BUSINESS, OR LOSS OF 
+GOOD WILL. THESE LIMITATIONS APPLY: (A) TO ANY CLAIMS RELATED TO THE SUPPLEMENTAL SOFTWARE OR THESE 
+LICENSE TERMS; (B) TO CLAIMS FOR BREACH OF CONTRACT, BREACH OF WARRANTY, GUARANTEE OR CONDITION, 
+STRICT LIABILITY, NEGLIGENCE, OR OTHER TORT TO THE EXTENT PERMITTED BY APPLICABLE LAW; AND (C) EVEN IF 
+INTAPP KNEW OR SHOULD HAVE KNOWN ABOUT THE POSSIBILITY OF THE DAMAGES. THE ABOVE LIMITATION OR 
+EXCLUSION MAY NOT APPLY TO YOU TO THE EXTENT YOUR COUNTRY DOES NOT ALLOW THE EXCLUSION OR 
+LIMITATION OF INCIDENTAL, CONSEQUENTIAL OR OTHER DAMAGES (AND THEN ONLY TO THE EXTENT SUCH LAWS 
+ARE APPLICABLE TO THESE LICENSE TERMS).
+
+These License Terms constitute the entire agreement for the Supplemental Software. These License Terms are 
+governed by the internal substantive laws of the State of New York, without respect to its conflict of laws provisions.
+Each of the parties hereto irrevocably and unconditionally submit to the exclusive jurisdiction of the state courts of 
+New York or (as applicable) the federal courts of the United States of America located in New York. These License 
+Terms shall survive termination or expiration of the Governing Agreement. The headings used in these License Terms
+are for convenience of reference only and are not to be construed in any way as material terms or be used to interpret 
+the provisions of these License Terms. If any term of these License Terms is held to be unenforceable or invalid, that 
+term will be enforced to the maximum extent possible and the other terms will remain in full force and effect.
+You acknowledge Intapp may terminate these License Terms at any time and for any reason. If you violate these 
+License Terms, your licenses hereunder terminate automatically. In the event these License Terms terminate, the 
+license restrictions, your obligations, and Section 3 (DISCLAIMER OF WARRANTIES; LIABILITY; MISCELLANEOUS) of 
+these License Terms shall survive. In the event the Governing Agreement expires or is terminated, or these License 
+Terms are terminated, all licenses to the Supplemental Software (including in or in conjunction with, Customer 
+Integrations) are revoked and you must: (a) cease all use of the Supplemental Software (including in Company 
+Integration(s)), and (b) permanently delete any copies or downloads of the Supplemental Software. You acknowledge 
+Intapp may update these License Terms from time to time without notice and your continued use of the Supplemental
+Software (or Company Integration) after any such update(s) will be deemed Company’s agreement to such updates; 
+provided, however, if you do not agree to these updates, you may not use Supplemental Software (including in the 
+Company Integrations) and must uninstall and cease use of the Supplemental Software accordingly
