@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: maven-proxy
+Version: 0.0.1
+Summary: Maven Repository Proxy with caching and authentication
+Home-page: https://github.com/yourusername/maven-proxy
+Author: Your Name
+Author-email: your.email@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+maven2 repository by py
+
+
