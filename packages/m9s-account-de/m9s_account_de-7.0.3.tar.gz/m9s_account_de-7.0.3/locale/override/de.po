@@ -1,0 +1,12 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:account.act_tax_code_tree_chart"
+msgid "Chart of Tax Codes"
+msgstr "Umsatzsteuervoranmeldung"
+
+msgctxt "model:ir.ui.menu,name:account.menu_tax_code_tree_chart"
+msgid "Chart of Tax Codes"
+msgstr "Umsatzsteuervoranmeldung"
+
