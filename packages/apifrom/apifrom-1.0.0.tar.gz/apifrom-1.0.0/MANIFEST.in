@@ -1,0 +1,19 @@
+include LICENSE
+include README.md
+include SECURITY_ADVISORY.md
+include requirements.txt
+include pyproject.toml
+
+recursive-include apifrom *.py
+recursive-include apifrom *.html
+recursive-include apifrom *.css
+recursive-include apifrom *.js
+recursive-include apifrom *.json
+recursive-include apifrom *.yaml
+recursive-include apifrom *.yml
+
+prune tests/
+prune examples/
+prune docs/
+prune scripts/
+prune .github/ 
