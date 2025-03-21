@@ -1,0 +1,16 @@
+limits>=3.13
+Flask>=2
+ordered-set<5,>4
+rich<14,>=12
+
+[memcached]
+limits[memcached]
+
+[mongodb]
+limits[mongodb]
+
+[redis]
+limits[redis]
+
+[valkey]
+limits[valkey]
