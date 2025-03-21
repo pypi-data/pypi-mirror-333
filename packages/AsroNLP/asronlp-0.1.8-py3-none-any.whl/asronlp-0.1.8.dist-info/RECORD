@@ -1,0 +1,15 @@
+asro_nlp/__init__.py,sha256=OrJxln_tBSI3UPn7GcEU7mcWq8Ac08htqqvWkMAbJCI,107
+asro_nlp/asro_nlp.py,sha256=_C3S1dGIj2Fbnnpi_dkAjKPvmps17X6N9Avi1e8ipX4,6192
+asro_nlp/data/asro.jpg,sha256=CZxnYmwZhdh6W_NtmzbYZEB7Z-d9WN21zTQWFLuDGjg,33726
+asro_nlp/data/kamus_negative.xlsx,sha256=kRKOXEs2nPv7qo5nD12XLpd4HCtgL68IBIdo8V7PBTU,124931
+asro_nlp/data/kamus_positive.xlsx,sha256=4KeQqNzkzCF43d5mEXIZf-Bq2kTWJtbufOzpSKTr9b4,72698
+asro_nlp/data/kamuskatabaku.xlsx,sha256=6VM2-5xWueHmz5ksvKEFtqKDBOjZpeavVickVQi5ouc,258034
+asro_nlp/data/news_dictionary--.txt,sha256=lW25nExCpQH_m5jEIg8Fa7mctmNv8PjzPS2uXVhOcYY,4833
+asro_nlp/data/news_dictionary.txt,sha256=FRjsxL7MPQ3StZjFkdEAMVsnuxSxUXjP0-1goUVOWbs,8756
+asro_nlp/data/profile.json,sha256=sClxeo8D_H1dS-SmGD6kKYEVoAjtIwRV79RBg1UkXT8,129
+asro_nlp/data/stopwords.txt,sha256=sekEK2khyN685760lmxeXAIejTIL4wKd_toGih8vsOs,7205
+asronlp-0.1.8.dist-info/LICENSE,sha256=pf4rsq5mY5oT31fRIxAfiI_k4CuLTvyrYe9EIhF2Kbs,1068
+asronlp-0.1.8.dist-info/METADATA,sha256=ZlGrCU1bOab7CfC--lV0HKrFl-MltuEWX2OkTq-X0Ss,1129
+asronlp-0.1.8.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+asronlp-0.1.8.dist-info/top_level.txt,sha256=5kpeTg4DoWzDkExOdXy6p2FU-Q0e7FQZ5uWwwUchlSw,9
+asronlp-0.1.8.dist-info/RECORD,,
