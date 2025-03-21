@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: heart-slicer
+Version: 0.1.3
+Summary: Add your description here
+Author: True Galaxus
+Author-email: ron.reclame@gmail.com
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: pillow>=11.1.0
+Requires-Dist: pyyaml>=6.0.2
+Dynamic: author
+Dynamic: author-email
+
+# Heart Slicer
+## to Run
+edit the settings in the *config.yml* file.
+run ./run_heart.py
+
+## Glossary
+
+- **heart** - name of the heart the images are from
+- **section** - one of the major sections of the heart, consists of multiple slices. Can be *B*, *M*, or *A*.
+- **slice** - single slice of the whole heart (i.e. single image)
+- **segment** - a piece of a slice according to the provided *segmentation_type*
+- **segment_name** - name of the segment, e.g. *M*
+- **segmentation_type** - the type of segmentation. Can be *AHA&, *CAG* and *MINI*.
+- **image file** - path to the image file
