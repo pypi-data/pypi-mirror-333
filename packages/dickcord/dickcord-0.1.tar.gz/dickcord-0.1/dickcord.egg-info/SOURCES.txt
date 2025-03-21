@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+dickcord.egg-info/PKG-INFO
+dickcord.egg-info/SOURCES.txt
+dickcord.egg-info/dependency_links.txt
+dickcord.egg-info/requires.txt
+dickcord.egg-info/top_level.txt
