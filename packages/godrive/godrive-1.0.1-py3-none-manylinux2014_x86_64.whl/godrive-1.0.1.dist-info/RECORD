@@ -1,0 +1,9 @@
+godrive/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+godrive/cli.py,sha256=0UK5po8eHSWJpShr_j0TEBHfSLG7uXPLdCTwOvke31s,1460
+godrive/godrive-linux-amd64,sha256=FGz_p-CodEVDtnyzJYe3Aask9fqZMcoskv_zkTpnO48,2835218
+godrive/godrive_upload,sha256=wHFEopCUNWXDyg7PhkyRgq_U1Zt2Xx1XIO9GNZEPQnI,31493472
+godrive-1.0.1.dist-info/METADATA,sha256=p2WWy-revV2T1pQng25qlkVdRvPIILcPDnIvnQRd4h0,52
+godrive-1.0.1.dist-info/WHEEL,sha256=-glyylWpvZdK0LSiC6UCzd_O356Xf1U2Th7fOdNMIgc,109
+godrive-1.0.1.dist-info/entry_points.txt,sha256=YTZsKJjm5YgNid8sOf88wrNxTJ8DAdfQS_4P3yQm9hY,45
+godrive-1.0.1.dist-info/top_level.txt,sha256=a5mSjO5ibsXvYzDxCUykLtY-fGObL5AvfR0MwkiP_JA,8
+godrive-1.0.1.dist-info/RECORD,,
