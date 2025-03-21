@@ -1,0 +1,13 @@
+image_embeddings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_embeddings/embedder.py,sha256=iIXXoQRbBK5AatEzgoBbYwCoJSzi2DJS6nhA4QGRtq8,5937
+image_embeddings/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_embeddings/cli/main.py,sha256=yvvA2ROMQEoPiTgBJfxUy2cIOcdtKwaqKcmxGCmpuM0,7579
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cli.py,sha256=namEUjOwJFSI122KRLTO1Q9QB0xdJUogkzprlA-aefM,9715
+tests/test_embedder.py,sha256=mXdRf8U0cG5fouF-BsGyxrDIvWhv31mXTUL4jVbEzZk,8118
+imgemb-0.1.3.dist-info/LICENSE,sha256=0MbUcm0xmDKawnOOKHP4pXApe8aECD5ivUeWAxX52kM,1066
+imgemb-0.1.3.dist-info/METADATA,sha256=O7EUs0KsqkvPaV5YobD8epZODQsj0RsKa1yBlasb7lU,5036
+imgemb-0.1.3.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+imgemb-0.1.3.dist-info/entry_points.txt,sha256=ohDIYlWp9petiDJqDHFMh25lmP7PfvBb1L-1X0Qm25I,58
+imgemb-0.1.3.dist-info/top_level.txt,sha256=NMsrUvJbdUWwEYt85jQNs-sHk0zVwbjG2tBdLdt37rE,23
+imgemb-0.1.3.dist-info/RECORD,,
