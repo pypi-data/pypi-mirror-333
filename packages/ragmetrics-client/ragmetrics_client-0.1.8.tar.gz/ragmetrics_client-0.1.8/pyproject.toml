@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragmetrics-client"
+version = "0.1.8"
+description = "Monitor your LLM calls. Test your LLM app."
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "requests"
+]
+authors = [
+    { name = "ragmetrics" }
+]
+urls = { Homepage = "https://ragmetrics.ai", Repository = "https://github.com/RagMetrics/ragmetrics-package" }
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[tool.setuptools.packages.find]
+include = ["ragmetrics", "ragmetrics.*"]
