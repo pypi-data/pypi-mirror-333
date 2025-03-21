@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+desktop/__init__.py
+desktop/_exceptions.py
+desktop/client.py
+spongecake.egg-info/PKG-INFO
+spongecake.egg-info/SOURCES.txt
+spongecake.egg-info/dependency_links.txt
+spongecake.egg-info/requires.txt
+spongecake.egg-info/top_level.txt
