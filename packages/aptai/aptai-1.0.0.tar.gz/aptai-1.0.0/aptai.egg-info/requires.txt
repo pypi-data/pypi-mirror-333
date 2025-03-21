@@ -1,0 +1,7 @@
+requests
+aptos_sdk
+groq
+setuptools>=68.0.0
+python-telegram-bot>=20.2
+twine>=4.0.2
+telegram>=0.0.1
